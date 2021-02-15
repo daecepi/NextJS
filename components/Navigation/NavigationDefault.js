@@ -15,6 +15,243 @@ const NavigationDefault = () => {
             setActive('nomenu')
         }
     }
+    const menu = {
+        whyCopper : {
+            render : true,
+            tag:   "whyCopper",
+            name : "Why Copper",
+            dropdownType: "product-nav",
+            url: "",
+            navAd : "Product",
+            dropdown: [
+                {
+                    name:"Organize Contacts",
+                    icon: "/imgs/icons/Productivity-2x.png",
+                    description:"Keep all your relationships in one central place",
+                    url:"/manage-contacts",
+                    tag: '',
+                    colPos: 1,
+                },
+                {
+                    name:"Automate Tasks",
+                    icon: "/imgs/icons/icon-product-implementation@2x.png",
+                    description:"Create recurring tasks and notifications",
+                    url:"/automate-sales",
+                    tag: '',
+                    colPos: 1,
+                },
+                {
+                    name:"Security and Privacy",
+                    icon: "/imgs/icons/icon-product-security@2x.png",
+                    description:"Learn how Copper keeps your data safe",
+                    url:"/security",
+                    tag: '',
+                    colPos: 1,
+                },
+                {
+                    name:"Track Deals",
+                    icon: "/imgs/icons/Insights-2x.png",
+                    description:"Set up the pipeline that works for you",
+                    url:"/track-leads",
+                    tag: '',
+                    colPos: 2,
+                },
+                {
+                    name:"Get Reports",
+                    icon: "/imgs/icons/Collaboration-2x.png",
+                    description:"See how your business is doing with custom reports",
+                    url:"/sales-reporting",
+                    tag: '',
+                    colPos: 2,
+                },
+                {
+                    name: 'Manage Projects',
+                    icon: '/imgs/icons/menu-icon_projects@2x.png',
+                    description: 'Manage your team’s work after the deal is closed',
+                    url: '/project-management-crm',
+                    tag: 'NEW',
+                    colPos: 3,
+                },
+                {
+                    name:"Integrations",
+                    icon: "/imgs/icons/Integration-2x.png",
+                    description:"Save time by connecting Copper to popular apps and tools",
+                    url:"/integrations",
+                    tag: '',
+                    colPos: 3,
+                }
+            ]
+        },
+        industry : {
+            render : true,
+            name: "Industry",
+            tag: "industry",
+            dropdownType: "industries-nav",
+            url: "",
+            navAd : "Product",
+            dropdown: [
+                {
+                    name: "Agencies",
+                    icon: "/imgs/icons/Media-2x.png",
+                    description:"Better client relations for advertising and media agencies.",
+                    url:"/industries/agency-crm",
+                    tag: '',
+                    colPos: 1,
+                },
+                {
+                    name: "Consulting",
+                    icon: "/imgs/icons/Business-2x.png",
+                    description:"Manage clients and deals from one central place.",
+                    url:"/industries/consulting-crm",
+                    tag: '',
+                    colPos: 1,
+                },
+                {
+                    name: "Technology",
+                    icon: "/imgs/icons/Software-2x.png",
+                    description:"Innovate and scale faster with less crm busy work.",
+                    url:"/industries/software-technology-crm",
+                    tag: '',
+                    colPos: 3,
+                },
+                {
+                    name: "Real Estate",
+                    icon: "/imgs/icons/RealState-2x.png",
+                    description:"Real estate professionals manage more listings with Copper.",
+                    url:"/industries/real-estate-crm",
+                    tag: '',
+                    colPos: 2,
+                },
+                {
+                    name: "Corporate Development",
+                    icon: "/imgs/icons/Corp-2x.png",
+                    description:"Track and manage deals in one place with Copper.",
+                    url:"/industries/corporate-development-crm",
+                    tag: '',
+                    colPos: 2,
+                }
+            ]
+            
+        },
+        pricing : {
+            render : true,
+            name: "Pricing",
+            dropdownType: "",
+            url: "/pricing"
+        },
+        demos : {
+            render : true,
+            name: "Demos",
+            dropdownType: "",
+            url: "/demos"
+        },
+        resources : {
+            render : true,
+            name: "Resources",
+            dropdownType: "resources-nav",
+            url: "",
+            navAd : "Resources",
+            dropdown: [
+                {
+                    name: "Library",
+                    icon: "/imgs/icons/icon-resources-events.png",
+                    description:"Books, guides, videos and tools for growing your small business.",
+                    url:"/resources",
+                    tag: '',
+                    colPos: 1,
+                },
+                {
+                    name: "Product Updates",
+                    icon: "/imgs/icons/icon-resources-updates.png",
+                    description:"Get updates on our product, best practices and tips.",
+                    url:"/blog-categories/copper?sc=743",
+                    tag: '',
+                    colPos: 1,
+                },
+                {
+                    name: "Blog",
+                    icon: "/imgs/icons/icon-resources-blog.png",
+                    description:"News, stories and latest thinking on sales, marketing and more.",
+                    url:"/blog",
+                    tag: '',
+                    colPos: 3,
+                },
+                {
+                    name: "Developers",
+                    icon: "/imgs/icons/icon-resources-developers.png",
+                    description:"Use our API to integrate Copper with other apps.",
+                    url:"https://developer.copper.com/",
+                    tag: '',
+                    colPos: 2,
+                },
+                {
+                    name: "Help Center",
+                    icon: "/imgs/icons/icon-resources-help.png",
+                    description:"Browse our knowledge base to find answers.",
+                    url:"https://support.copper.com",
+                    tag: '',
+                    colPos: 2,
+                },
+                {
+                    name: "Webinars",
+                    icon: "/imgs/icons/icon-resources-webinars.png",
+                    description:"Check our schedule and sign up for our online events.",
+                    url:"/webinars",
+                    tag: '',
+                    colPos: 3,
+                }
+            ]
+        },
+        company : {
+            render : false,
+            name: "Company",
+            dropdownType: "company-nav",
+            url: "",
+            navAd : "Company",
+            dropdown: [
+                {
+                    name: "About",
+                    icon: "/imgs/icons/About.png",
+                    description:"Learn about our company.",
+                    url:"/about",
+                    tag: '',
+                    colPos: 1,
+                },
+                {
+                    name: "Contact Us",
+                    icon: "/imgs/icons/contact.png",
+                    description:"Get in touch with the team.",
+                    url:"/contact",
+                    tag: '',
+                    colPos: 1,
+                },
+                {
+                    name: "Careers",
+                    icon: "/imgs/icons/careers.png",
+                    description:"Search our latest job openings",
+                    url:"/about#careers",
+                    tag: '',
+                    colPos: 2,
+                },
+                {
+                    name: "Partners",
+                    icon: "/imgs/icons/Partners.png",
+                    description:"Learn about our partners and how \n to become one.",
+                    url:"/partners",
+                    tag: '',
+                    colPos: 2,
+                },
+                {
+                    name: "Press",
+                    icon: "/imgs/icons/Press.png",
+                    description:"Check out all the Copper press and news.",
+                    url:"/press",
+                    tag: '',
+                    colPos: 3,
+                }
+            ]
+        }
+    }
 
     return (
       <nav className="fixed top-0 items-center justify-between hidden w-full h-3 px-20 py-12 bg-white lg:flex max-w-7xl">
