@@ -13,7 +13,7 @@ export default function Home({res}) {
       </Head>
       {res.map((item) => {
         return(
-          <h1>{item.title}</h1>
+          <h1 key='{item.title}' >{item.title}</h1>
         )
       }
       )}

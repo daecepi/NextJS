@@ -354,7 +354,7 @@ const NavigationDefault = () => {
               </ul>
             </li>
             <li
-              className="mr-4 cursor-pointer"
+              className={`${ active == "industry" ? "border-b-4 border-radicalRed-500 pt-1" : ""} flex items-center h-full mr-4 hover:border-b-4 hover:border-radicalRed-500 hover:pt-1`}
               onClick={() => toggleMenu("industry")}
             >
               Industry
