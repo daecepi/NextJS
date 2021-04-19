@@ -1,16 +1,23 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import { getAllPostsWithSlug } from '../lib/api'
 
 import NavigationDefault from '../components/Navigation/NavigationDefault'
 
-export default function Home() {
+export default function Home({res}) {
   return (
     <div className={styles.container}>
       <Head>
         <title>Copper CRM</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-     
+      {res.map((item) => {
+        return(
+          <h1>{item.title}</h1>
+        )
+      }
+      )}
+         
       <NavigationDefault/>
         
 
@@ -26,4 +33,12 @@ export default function Home() {
       </footer>
     </div>
   )
+}
+export async function getStaticProps(context) {
+  const res = await getAllPostsWithSlug();
+  return {
+    props: {
+      res
+    }, // will be passed to the page component as props
+  }
 }
