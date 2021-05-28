@@ -1,4 +1,4 @@
-
+import { React } from 'React'
 
 const DefaultMSFormBox = () => {
 
@@ -53,21 +53,21 @@ const DefaultMSFormBox = () => {
 
         {{ csrfInput() }}
         {# Default send to plugin action #}
-        <input type="hidden" name="action" value="contact-form/send">
+        <input type="hidden" name="action" value="contact-form/send" />
 
-        <input id="subject" type="hidden" name="subject" value="New lead captured while marketo was offline">
+        <input id="subject" type="hidden" name="subject" value="New lead captured while marketo was offline" />
         {{ message is defined and message ? errorList(message.getErrors('subject')) }}
 
         {# Page saving saving #}
-        <input id="page-origin-field" type="hidden" name="message[PageOrigin]" value="Copper.com/demos">
+        <input id="page-origin-field" type="hidden" name="message[PageOrigin]" value="Copper.com/demos" />
 
         {# Utm hidden fields #}
-        <input id="utm-source-field" type="hidden" name="message[UtmSource]" value="Not defined">
-        <input id="utm-term-field" type="hidden" name="message[UtmTerm]" value="Not defined">
-        <input id="utm-adgroup-field" type="hidden" name="message[UtmAdgroup]" value="Not defined">
-        <input id="utm-medium-field" type="hidden" name="message[UtmMedium]" value="Not defined">
-        <input id="utm-campaign-field" type="hidden" name="message[UtmCampaign]" value="Not defined">
-        <input type="hidden" name="numberofSeats" id="numberofSeats">
+        <input id="utm-source-field" type="hidden" name="message[UtmSource]" value="Not defined" />
+        <input id="utm-term-field" type="hidden" name="message[UtmTerm]" value="Not defined" />
+        <input id="utm-adgroup-field" type="hidden" name="message[UtmAdgroup]" value="Not defined" />
+        <input id="utm-medium-field" type="hidden" name="message[UtmMedium]" value="Not defined" />
+        <input id="utm-campaign-field" type="hidden" name="message[UtmCampaign]" value="Not defined" />
+        <input type="hidden" name="numberofSeats" id="numberofSeats" />
         
         <div class="mktoFormRow"><div class="mktoFieldDescriptor mktoFormCol" style="margin-bottom: 10px;">
           <div class="mktoOffset" style="width: 10px;"></div>
@@ -93,6 +93,9 @@ const DefaultMSFormBox = () => {
         <div class="mktoButtonRow"><span class="mktoButtonWrap mktoSimple" style="margin-left: 120px; text-align: left;">
           <button type="submit" class="c-button mktoButton">Get a demo</button>
         </span></div>
+        </div>
+        </div>
+        </div>
       </form>
       <p class="p-sm no-bottom-margin" style="font-size: 11px; line-height: 18px;">By signing up, I agree to Copper’s <a href="/privacy">privacy policy</a> & <a href="/terms">terms of service</a></p>
     </div>
@@ -100,3 +103,4 @@ const DefaultMSFormBox = () => {
     </div>
   );
 };
+export default DefaultMSFormBox;
