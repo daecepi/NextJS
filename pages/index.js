@@ -1,24 +1,29 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import { getAllPostsWithSlug } from '../lib/api'
+import Head from 'next/head';
+import styles from '../styles/Home.module.css';
+import { getAllPostsWithSlug } from '../lib/api';
+import SectionLayout from '../components/SectionLayout/SectionLayout';
+import VideoCard from '../components/Cards/VideoCard'
 
 import NavigationDefault from '../components/Navigation/NavigationDefault'
 
 export default function Home({res}) {
   return (
-    <div className={styles.container}>
+    <div className='mt-24 '>
       <Head>
         <title>Copper CRM</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {res.map((item) => {
+      {/* {res.map((item) => {
         return(
-          <h1 key='{item.title}' >{item.title}</h1>
+          <h1 className='text-center ' key={item.id} >{item.title}</h1>
         )
       }
-      )}
+      )} */}
          
       <NavigationDefault/>
+      <SectionLayout className=' h-96 bg-midnight-default' sectionId=''>
+        <VideoCard></VideoCard>
+      </SectionLayout>
         
 
       <footer className={styles.footer}>

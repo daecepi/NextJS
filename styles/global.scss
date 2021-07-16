@@ -19,4 +19,21 @@ a {
 * {
   box-sizing: border-box;
 }
+.player-wrapper {
+  position: relative;
+  padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  .wistia_click_to_play img{
+    width: 100%!important;
+    height: auto!important;
+    position: relative!important;
+    left: 0px!important;
+    top: 0px!important;
+  }
+}
 @tailwind  utilities;
