@@ -13,12 +13,12 @@ export default function Home({res}) {
         <title>Copper CRM</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* {res.map((item) => {
+      {res.map((item) => {
         return(
           <h1 className='text-center ' key={item.id} >{item.title}</h1>
         )
       }
-      )} */}
+      )}
          
       <NavigationDefault/>
       <SectionLayout className=' h-96 bg-midnight-default' sectionId=''>
