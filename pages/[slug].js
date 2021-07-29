@@ -8,7 +8,18 @@ const Entry = ({entry}) => {
         {entry.landingBlocks.map((block)=>{
             console.log(block)
             return (
-                <p>{block.typeHandle == 'twoColumn' ? block.typeHandle : "none" }</p>
+                <div>
+                    <p>{block.typeHandle == 'twoColumn' ? block.typeHandle : "none" }</p>
+                    <p>{block.typeHandle == 'threeColumn' ? (
+                        <div className='landing-block__threeCol'>
+                            {block.entries.map((item)=>{
+                                return(
+                                    <h1>{item.title}</h1>
+                                )
+                            })}
+                        </div>
+                    ) : "none" }</p>
+                </div>
             )
             if(block.typeHandle == 'twoColumn'){
                 return (<div>test</div>)
