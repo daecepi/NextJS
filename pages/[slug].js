@@ -1,6 +1,8 @@
 import { getAllPostsWithSlug, getSingleEntry } from '../lib/api';
 import Link from 'next/link';
 import Image from 'next/image';
+import ThreeColBlock from '../components/Blocks/ThreeColBlock';
+import TestimonialBlock from '../components/Blocks/TestimonialBlock';
 
 const Entry = ({entry}) => {
     return (
@@ -10,15 +12,15 @@ const Entry = ({entry}) => {
             return (
                 <div>
                     <p>{block.typeHandle == 'twoColumn' ? block.typeHandle : "none" }</p>
-                    <p>{block.typeHandle == 'threeColumn' ? (
-                        <div className='landing-block__threeCol'>
-                            {block.entries.map((item)=>{
-                                return(
-                                    <h1>{item.title}</h1>
-                                )
-                            })}
-                        </div>
-                    ) : "none" }</p>
+                    <>{block.typeHandle == 'threeColumn' ? (
+                        <ThreeColBlock eyebrow={block.eyebrow} title={block.header} entries={block.entries} />
+                    ) : "none" }</>
+                    <>{block.typeHandle == 'testimonial' ? (
+                        <TestimonialBlock   eyebrow={block.eyebrow} 
+                                            image={block.image} quote={block.quote} 
+                                            author={block.author} 
+                                            jobtitle={block.jobTitle} />
+                    ) : "none" }</>
                 </div>
             )
             if(block.typeHandle == 'twoColumn'){

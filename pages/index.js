@@ -9,6 +9,8 @@ import NavigationDefault from '../components/Navigation/NavigationDefault'
 export default function Home({res}) {
   return (
     <div className='mt-24 '>
+      <NavigationDefault/>
+
       <Head>
         <title>Copper CRM</title>
         <link rel="icon" href="/favicon.ico" />
@@ -20,7 +22,6 @@ export default function Home({res}) {
       }
       )}
          
-      <NavigationDefault/>
       <SectionLayout className=' h-96 bg-midnight-default' sectionId=''>
         <VideoCard></VideoCard>
       </SectionLayout>
