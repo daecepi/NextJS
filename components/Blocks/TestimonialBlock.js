@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const TestimonialBlock = (props) => {
     return(
-        <section className='testimonial-block bg-white'>
+        <section className='testimonial-block bg-white relative'>
             <div className="testimonial__conatiner max-w-7xl m-auto pt-32 pb-32 z-10 relative">
                 <div className="testimonial-eyebrow mb-10 relative z-10 w-1/2 ">
                     <p className='uppercase text-black max-w-sm m-auto text-sm'><span className='eyebrow-big-dash'></span> {props.eyebrow}</p>
