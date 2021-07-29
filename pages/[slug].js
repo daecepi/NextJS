@@ -5,10 +5,10 @@ import Image from 'next/image';
 const Entry = ({entry}) => {
     return (
         <div> {entry.title}
-        {entry.landingBlocks.map((block)=>{
-            console.log(block)
+        {entry.landingBlocks.map((block, index)=>{
+            if(block.typeHandle === 'twoColumn') console.log(block)
             return (
-                <div>
+                <div key={index}>
                     <p>{block.typeHandle == 'twoColumn' ? block.typeHandle : "none" }</p>
                     <p>{block.typeHandle == 'threeColumn' ? (
                         <div className='landing-block__threeCol'>
