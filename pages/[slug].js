@@ -1,29 +1,30 @@
 import { getAllPostsWithSlug, getSingleEntry } from '../lib/api';
+
+// Styles definitions
+import styles from '../styles/Home.module.css';
+
+import TwoColumnComponent from '../components/TwoColumn/TwoColumn'
+
 import Link from 'next/link';
 import Image from 'next/image';
 
 const Entry = ({entry}) => {
+    const returnsTwoColumnComponent = () => {
+
+      return <>
+        <TwoColumnComponent />
+      </>;
+    }
+
     return (
-        <div> {entry.title}
-        {entry.landingBlocks.map((block)=>{
+        <div className="bg-green"> <p>{entry.title}</p>
+        {entry.landingBlocks.map((block, index)=>{
             console.log(block)
             return (
-                <div>
+                <div className="testimonial-block bg-blue relative" key={index}>
                     <p>{block.typeHandle == 'twoColumn' ? block.typeHandle : "none" }</p>
-                    <p>{block.typeHandle == 'threeColumn' ? (
-                        <div className='landing-block__threeCol'>
-                            {block.entries.map((item)=>{
-                                return(
-                                    <h1>{item.title}</h1>
-                                )
-                            })}
-                        </div>
-                    ) : "none" }</p>
                 </div>
             )
-            if(block.typeHandle == 'twoColumn'){
-                return (<div>test</div>)
-            }
         })}
         {/* <Image
             src={entry.image[0].optimizedLandingImages.srcet}
