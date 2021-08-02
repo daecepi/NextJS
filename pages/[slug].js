@@ -7,6 +7,8 @@ import TwoColumnComponent from '../components/TwoColumn/TwoColumn'
 
 import Link from 'next/link';
 import Image from 'next/image';
+import ThreeColBlock from '../components/Blocks/ThreeColBlock';
+import TestimonialBlock from '../components/Blocks/TestimonialBlock';
 
 const Entry = ({entry}) => {
     const returnsTwoColumnComponent = () => {
@@ -23,6 +25,15 @@ const Entry = ({entry}) => {
             return (
                 <div className="testimonial-block bg-blue relative" key={index}>
                     <p>{block.typeHandle == 'twoColumn' ? block.typeHandle : "none" }</p>
+                    <>{block.typeHandle == 'threeColumn' ? (
+                        <ThreeColBlock eyebrow={block.eyebrow} title={block.header} entries={block.entries} />
+                    ) : "none" }</>
+                    <>{block.typeHandle == 'testimonial' ? (
+                        <TestimonialBlock   eyebrow={block.eyebrow} 
+                                            image={block.image} quote={block.quote} 
+                                            author={block.author} 
+                                            jobtitle={block.jobTitle} />
+                    ) : "none" }</>
                 </div>
             )
         })}
