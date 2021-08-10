@@ -3,30 +3,34 @@ import Link from 'next/link';
 import Image from 'next/image';
 import ThreeColBlock from '../components/Blocks/ThreeColBlock';
 import TestimonialBlock from '../components/Blocks/TestimonialBlock';
+import TextLink from '../components/CTAS/TextLink';
 
 const Entry = ({entry}) => {
     return (
-        <div> {entry.title}
-        {entry.landingBlocks.map((block)=>{
-            console.log(block)
-            return (
-                <div>
-                    <p>{block.typeHandle == 'twoColumn' ? block.typeHandle : "none" }</p>
-                    <>{block.typeHandle == 'threeColumn' ? (
-                        <ThreeColBlock eyebrow={block.eyebrow} title={block.header} entries={block.entries} />
-                    ) : "none" }</>
-                    <>{block.typeHandle == 'testimonial' ? (
-                        <TestimonialBlock   eyebrow={block.eyebrow} 
-                                            image={block.image} quote={block.quote} 
-                                            author={block.author} 
-                                            jobtitle={block.jobTitle} />
-                    ) : "none" }</>
-                </div>
-            )
-            if(block.typeHandle == 'twoColumn'){
-                return (<div>test</div>)
-            }
-        })}
+        <div> 
+            {entry.title}
+            <TextLink url='https://google.com' text='test link' />
+            {entry.landingBlocks.map((block)=>{
+                console.log(block)
+                return (
+                    <div>
+                        <>{block.typeHandle == 'twoColumn' ? block.typeHandle : null }</>
+                        <>{block.typeHandle == 'threeColumn' ? (
+                            <ThreeColBlock eyebrow={block.eyebrow} title={block.header} entries={block.entries} />
+                        ) : "none" }</>
+                        <>{block.typeHandle == 'testimonial' ? (
+                            <TestimonialBlock   eyebrow={block.eyebrow} 
+                                                image={block.image} quote={block.quote} 
+                                                author={block.author} 
+                                                jobtitle={block.jobTitle} />
+                        ) : "none" }</>
+                    </div>
+                )
+                if(block.typeHandle == 'twoColumn'){
+                    return (<div>test</div>)
+                }
+            })}
+        
         {/* <Image
             src={entry.image[0].optimizedLandingImages.srcet}
             alt="Picture of the author"
