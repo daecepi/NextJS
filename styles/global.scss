@@ -859,4 +859,12 @@ a {
     height: 2px;
   }
 }
+.text-link{
+  &:hover{
+    &>image{
+      transition: 0.5s;
+      @apply pl-2
+    }
+  }
+}
 @tailwind  utilities;
