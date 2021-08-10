@@ -1,13 +1,22 @@
 import { getAllPostsWithSlug, getSingleEntry } from '../lib/api';
+import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import ThreeColBlock from '../components/Blocks/ThreeColBlock';
 import TestimonialBlock from '../components/Blocks/TestimonialBlock';
 import TextLink from '../components/CTAS/TextLink';
+import NavigationDefault from '../components/Navigation/NavigationDefault'
+import CtaBlock from '../components/Blocks/CtaBlock';
 
 const Entry = ({entry}) => {
     return (
-        <div> 
+        <div className='mt-24 '> 
+            <NavigationDefault/>
+
+            <Head>
+            <title>Copper CRM</title>
+            <link rel="icon" href="/favicon.ico" />
+            </Head>
             {entry.title}
             <TextLink url='https://google.com' text='test link' />
             {entry.landingBlocks.map((block)=>{
@@ -15,6 +24,7 @@ const Entry = ({entry}) => {
                 return (
                     <div>
                         <>{block.typeHandle == 'twoColumn' ? block.typeHandle : null }</>
+
                         <>{block.typeHandle == 'threeColumn' ? (
                             <ThreeColBlock eyebrow={block.eyebrow} title={block.header} entries={block.entries} />
                         ) : "none" }</>
@@ -23,7 +33,13 @@ const Entry = ({entry}) => {
                                                 image={block.image} quote={block.quote} 
                                                 author={block.author} 
                                                 jobtitle={block.jobTitle} />
-                        ) : "none" }</>
+                        ) : null }</>
+
+                        <>{block.typeHandle == 'cta' ? (
+                            <CtaBlock header={block.header} subheader={block.subHeader} ctas={block.cta} />
+                        ) : null }</>
+                        
+
                     </div>
                 )
                 if(block.typeHandle == 'twoColumn'){

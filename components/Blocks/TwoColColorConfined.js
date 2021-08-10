@@ -1,3 +1,5 @@
+import TextLink from "../CTAS/TextLink";
+
 const TwoColColorConfined = (props) => {
     return(
         <div className="two-col-color-confined">
@@ -12,7 +14,7 @@ const TwoColColorConfined = (props) => {
                     <div className="eyebrow">
                         <p>{props.eyebrow}</p>
                         <p>{props.title}</p>
-                        <a class="t-link h-white" href="#">test</a>
+                        <TextLink url={props.ctaUrl} text={ctaText} />
                     </div>
                 </div>
             </div>
