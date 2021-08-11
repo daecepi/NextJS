@@ -5,15 +5,15 @@ module.exports = {
   theme: {
     screens:{
       'sm': {
-        "mim": "0px",
+        "min": "0px",
         "max": '767px'
       },
       'md': {
-        "mim": "768px",
+        "min": "768px",
         "max": '991px'
       },
       'lg': {
-        "mim": "992px",
+        "min": "992px",
         "max": '1399px'
       },
       'xl': '1400px',

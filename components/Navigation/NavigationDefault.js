@@ -257,7 +257,7 @@ const NavigationDefault = () => {
       <nav className="fixed top-0 w-full hidden h-24 lg:flex justify-center">
         <div className=' max-w-7xl bg-white px-20 lg:flex w-full items-center justify-between'>
           <div className="flex items-center w-2/3">
-            <Link href="">
+            <Link href="/">
               <a className="mr-5">
                 <svg
                   width="137px"
