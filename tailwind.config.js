@@ -4,18 +4,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class' or false
   theme: {
     screens:{
-      'sm': {
-        "min": "0px",
-        "max": '767px'
-      },
-      'md': {
-        "min": "768px",
-        "max": '991px'
-      },
-      'lg': {
-        "min": "992px",
-        "max": '1399px'
-      },
+      'sm': "767px",
+      'md': "991px",
+      'lg': "1399px",
       'xl': '1400px',
     },
     extend: {
