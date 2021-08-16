@@ -1,7 +1,7 @@
 /* purgecss start ignore */
 @tailwind  base;
 
-@layer base {
+@layer base 
   $lg: 1260px;
   $md: 960px;
   $sm: 480px;
@@ -734,7 +734,7 @@ z-index: -1;
 position: absolute;
 }
 
-}
+
 
 @tailwind  components;
 /* purgecss end ignore */
@@ -826,25 +826,49 @@ a {
     content: '';
     background-color: #F5F6F6;
     position: absolute;
-    width: 90vw;
+    width: 100%;
     height: 100%;
     top: 0px;
     left: 0px;
+  }
+  @screen sm{
+    &:after{
+      content: '';
+      background-color: #F5F6F6;
+      position: absolute;
+      width: 90vw;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+    }
   }
 }
 .testimonial__conatiner{
   &:after{
     content: '';
+    position: absolute;
     width: 100%;
     height: 100%;
-    height: calc(100% + 40px);
+    height: 30%;
     top: 0px;
-    left: -65%;
-    z-index: 1;
     background: #00E6C3;
-    position: absolute;
+    left: 0;
     z-index: 1;
   }
+  @screen sm{
+    &:after{
+      content: '';
+      width: 100%;
+      height: 100%;
+      height: calc(100% + 40px);
+      top: 0px;
+      left: -65%;
+      z-index: 1;
+      background: #00E6C3;
+      position: absolute;
+      z-index: 1; 
+    }
+  } 
 }
 .eyebrow-big-dash{
   &:before{
@@ -863,8 +887,19 @@ a {
   &:hover{
     &>image{
       transition: 0.5s;
-      @apply pl-2
+      @apply pl-2;
     }
   }
 }
+.two-col__dropLeft{
+  @screen md{
+    @apply order-1;
+  }
+}
+.two-col__right{
+  @screen md{
+    @apply order-2;
+  }
+}
+
 @tailwind  utilities;

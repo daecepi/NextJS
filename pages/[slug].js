@@ -13,6 +13,8 @@ import TestimonialBlock from '../components/Blocks/TestimonialBlock';
 import TextLink from '../components/CTAS/TextLink';
 import NavigationDefault from '../components/Navigation/NavigationDefault'
 import CtaBlock from '../components/Blocks/CtaBlock';
+import TwoColumnSection from '../components/Sections/TwoColumn';
+import TwoColumn from '../components/TwoColumn/TwoColumn';
 
 const Entry = ({entry}) => {
     const returnsTwoColumnComponent = () => {
@@ -30,17 +32,15 @@ const Entry = ({entry}) => {
             <title>Copper CRM</title>
             <link rel="icon" href="/favicon.ico" />
             </Head>
-            {entry.title}
-            <TextLink url='https://google.com' text='test link' />
+            {/* {entry.title}
+            <TextLink url='https://google.com' text='test link' /> */}
             {entry.landingBlocks.map((block)=>{
                 console.log(block)
                 return (
                     <div>
-                        <>{block.typeHandle == 'twoColumn' ? block.typeHandle : null }</>
-
                         <>{block.typeHandle == 'threeColumn' ? (
                             <ThreeColBlock eyebrow={block.eyebrow} title={block.header} entries={block.entries} />
-                        ) : "none" }</>
+                        ) : null }</>
                         <>{block.typeHandle == 'testimonial' ? (
                             <TestimonialBlock   eyebrow={block.eyebrow} 
                                                 image={block.image} quote={block.quote} 
@@ -49,7 +49,21 @@ const Entry = ({entry}) => {
                         ) : null }</>
 
                         <>{block.typeHandle == 'cta' ? (
-                            <CtaBlock header={block.header} subheader={block.subHeader} ctas={block.cta} />
+                            <CtaBlock 
+                              header={block.header} 
+                              subHeader={block.subHeader} 
+                              ctas={block.cta} 
+                            />
+                        ) : null }</>
+
+                        <>{block.typeHandle == 'twoColumn' ? (
+                            <TwoColumn 
+                              title={block.title}
+                              copy={block.copy}
+                              eyebrow={block.eyebrow}
+                              image={block.image}
+                              imageOrientation={block.imageOrientation}
+                            />
                         ) : null }</>
                         
 

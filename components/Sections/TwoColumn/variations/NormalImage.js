@@ -1,5 +1,5 @@
 const NormalImage = (props) => {
-  return(<> </>)
+  return(<> test </>)
 }
 
 export default NormalImage;
