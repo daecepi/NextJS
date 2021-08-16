@@ -1,89 +1,103 @@
-import { getAllPostsWithSlug, getSingleEntry } from '../lib/api';
+import { getAllPostsWithSlug, getSingleEntry } from "../lib/api";
 
 // Styles definitions
-import styles from '../styles/Home.module.css';
+import styles from "../styles/Home.module.css";
 
-import TwoColumnComponent from '../components/TwoColumn/TwoColumn'
+import TwoColumnComponent from "../components/TwoColumn/TwoColumn";
 
-import Head from 'next/head';
-import Link from 'next/link';
-import Image from 'next/image';
-import ThreeColBlock from '../components/Blocks/ThreeColBlock';
-import TestimonialBlock from '../components/Blocks/TestimonialBlock';
-import TextLink from '../components/CTAS/TextLink';
-import NavigationDefault from '../components/Navigation/NavigationDefault'
-import CtaBlock from '../components/Blocks/CtaBlock';
-import TwoColumnSection from '../components/Sections/TwoColumn';
-import TwoColumn from '../components/TwoColumn/TwoColumn';
+import Head from "next/head";
+import Link from "next/link";
+import Image from "next/image";
+import ThreeColBlock from "../components/Blocks/ThreeColBlock";
+import TestimonialBlock from "../components/Blocks/TestimonialBlock";
+import TextLink from "../components/CTAS/TextLink";
+import NavigationDefault from "../components/Navigation/NavigationDefault";
+import CtaBlock from "../components/Blocks/CtaBlock";
+import TwoColumnSection from "../components/Sections/TwoColumn";
+import TwoColumn from "../components/TwoColumn/TwoColumn";
+import FooterLanding from "../components/Footer/FooterLanding";
 
-const Entry = ({entry}) => {
-    const returnsTwoColumnComponent = () => {
-
-      return <>
-        <TwoColumnComponent />
-      </>;
-    }
-
+const Entry = ({ entry }) => {
+  const returnsTwoColumnComponent = () => {
     return (
-        <div className='mt-24 '> 
-            <NavigationDefault/>
+      <>
+        <TwoColumnComponent />
+      </>
+    );
+  };
 
-            <Head>
-            <title>Copper CRM</title>
-            <link rel="icon" href="/favicon.ico" />
-            </Head>
-            {/* {entry.title}
-            <TextLink url='https://google.com' text='test link' /> */}
-            {entry.landingBlocks.map((block)=>{
-                console.log(block)
-                return (
-                    <div>
-                        <>{block.typeHandle == 'threeColumn' ? (
-                            <ThreeColBlock eyebrow={block.eyebrow} title={block.header} entries={block.entries} />
-                        ) : null }</>
-                        <>{block.typeHandle == 'testimonial' ? (
-                            <TestimonialBlock   eyebrow={block.eyebrow} 
-                                                image={block.image} quote={block.quote} 
-                                                author={block.author} 
-                                                jobtitle={block.jobTitle} />
-                        ) : null }</>
+  return (
+    <div className="mt-24 ">
+      <NavigationDefault />
 
-                        <>{block.typeHandle == 'cta' ? (
-                            <CtaBlock 
-                              header={block.header} 
-                              subHeader={block.subHeader} 
-                              ctas={block.cta} 
-                            />
-                        ) : null }</>
+      <Head>
+        <title>Copper CRM</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      
+      {entry.landingBlocks.map((block) => {
+        console.log(block);
+        return (
+          <div>
+            <>
+              {block.typeHandle == "threeColumn" ? (
+                <ThreeColBlock
+                  eyebrow={block.eyebrow}
+                  title={block.header}
+                  entries={block.entries}
+                />
+              ) : null}
+            </>
+            <>
+              {block.typeHandle == "testimonial" ? (
+                <TestimonialBlock
+                  eyebrow={block.eyebrow}
+                  image={block.image}
+                  quote={block.quote}
+                  author={block.author}
+                  jobtitle={block.jobTitle}
+                />
+              ) : null}
+            </>
 
-                        <>{block.typeHandle == 'twoColumn' ? (
-                            <TwoColumn 
-                              title={block.title}
-                              copy={block.copy}
-                              eyebrow={block.eyebrow}
-                              image={block.image}
-                              imageOrientation={block.imageOrientation}
-                            />
-                        ) : null }</>
-                        
+            <>
+              {block.typeHandle == "cta" ? (
+                <CtaBlock
+                  header={block.header}
+                  subHeader={block.subHeader}
+                  ctas={block.cta}
+                />
+              ) : null}
+            </>
 
-                    </div>
-                )
-                if(block.typeHandle == 'twoColumn'){
-                    return (<div>test</div>)
-                }
-            })}
-        
-        {/* <Image
+            <>
+              {block.typeHandle == "twoColumn" ? (
+                <TwoColumn
+                  title={block.title}
+                  copy={block.copy}
+                  eyebrow={block.eyebrow}
+                  image={block.image}
+                  imageOrientation={block.imageOrientation}
+                />
+              ) : null}
+            </>
+          </div>
+        );
+        if (block.typeHandle == "twoColumn") {
+          return <div>test</div>;
+        }
+      })}
+
+      {/* <Image
             src={entry.image[0].optimizedLandingImages.srcet}
             alt="Picture of the author"
             width={500}
             height={500}
         /> */}
-      </div>
-        
-    )
-}
+      <FooterLanding></FooterLanding>
+    </div>
+  );
+};
 
 export default Entry;
 
@@ -108,18 +122,18 @@ export default Entry;
 //     };
 // }
 
-export async function getServerSideProps({params}) {
-    const entry = await getSingleEntry(params);
-  
-    if (!entry) {
-      return {
-        notFound: true,
-      }
-    }
-  
+export async function getServerSideProps({ params }) {
+  const entry = await getSingleEntry(params);
+
+  if (!entry) {
     return {
-      props: {
-          entry
-      }, // will be passed to the page component as props
-    }
+      notFound: true,
+    };
+  }
+
+  return {
+    props: {
+      entry,
+    }, // will be passed to the page component as props
+  };
 }
