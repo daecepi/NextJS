@@ -443,6 +443,7 @@ module.exports = {
   },
   variants: {
     margin: ['responsive'],
+    translate: ['active', 'group-hover'],
     extend: {
       borderWidth:['hover'],
       borderColor:['hover'],
