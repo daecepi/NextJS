@@ -5,6 +5,7 @@ import TestimonialBlock from '../../Blocks/TestimonialBlock';
 import CtaBlock from '../../Blocks/CtaBlock';
 import TwoColumn from '../../TwoColumn/TwoColumn'
 import FooterLanding from '../../Footer/FooterLanding';
+import HeroBlock from '../../Blocks/HeroBlock';
 
 const Products = ({entry}) => {
   return (
@@ -20,6 +21,13 @@ const Products = ({entry}) => {
       {entry.landingBlocks.map((block) => {
         return (
           <div>
+            <>
+              {block.typeHandle == "hero" ? (
+                <HeroBlock
+                  hero={block}
+                />
+              ) : null}
+            </>
             <>
               {block.typeHandle == "threeColumn" ? (
                 <ThreeColBlock

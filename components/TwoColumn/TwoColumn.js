@@ -27,18 +27,6 @@ const TwoColumnComponent = (props) => {
             width={props.image[0].optimizedLandingImages.originalImageWidth}
             height={props.image[0].optimizedLandingImages.originalImageHeight}
           />
-          {/* <picture>
-            <source
-              srcSet={props.image[0].optimizedLandingImages.srcWebp}
-              type="image/webp"
-            ></source>
-            <img
-              src={props.image[0].optimizedLandingImages.src}
-              srcSet={props.image[0].optimizedLandingImages.srcset}
-              width={props.image[0].optimizedLandingImages.originalImageWidth}
-              height={props.image[0].optimizedLandingImages.originalImageHeight}
-            />
-          </picture> */}
         </div>
       </div>
     </section>

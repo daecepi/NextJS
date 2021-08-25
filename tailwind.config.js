@@ -4,10 +4,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class' or false
   theme: {
     screens:{
-      'sm': "767px",
-      'md': "991px",
-      'lg': "1399px",
-      'xl': '1400px',
+      sm: "767px",
+      md: "991px",
+      lg: "1399px",
+      xl: '1400px',
     },
     extend: {
       colors: {
