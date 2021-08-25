@@ -738,46 +738,6 @@ position: absolute;
 
 @tailwind  components;
 /* purgecss end ignore */
-
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-.player-wrapper {
-  position: relative;
-  padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
-}
-
-.react-player {
-  position: absolute;
-  top: 0;
-  left: 0;
-  .wistia_click_to_play img{
-    width: 100%!important;
-    height: auto!important;
-    position: relative!important;
-    left: 0px!important;
-    top: 0px!important;
-  }
-}
-
-// SCSS variable platarations
-// Global Spacing (TO CHANGE AFTER BLOG COMPLETION)
-
-
-// All typography changes
 // Material icons
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,500,700');
@@ -820,6 +780,45 @@ a {
   font-stretch: normal;
 }
 
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+.player-wrapper {
+  position: relative;
+  padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  .wistia_click_to_play img{
+    width: 100%!important;
+    height: auto!important;
+    position: relative!important;
+    left: 0px!important;
+    top: 0px!important;
+  }
+}
+
+// SCSS variable platarations
+// Global Spacing (TO CHANGE AFTER BLOG COMPLETION)
+
+
+// All typography changes
 
 .testimonial-block{
   &:after{
