@@ -10,6 +10,11 @@ module.exports = {
       xl: '1400px',
     },
     extend: {
+      fontFamily: {
+        graphicLight: ['Graphic-Light', 'sans-serif'],
+        graphicRegular: ['Graphik-Regular', 'sans-serif'],
+        graphicMedium: ['Graphik-Medium', 'sans-serif']
+      },
       colors: {
         midnight:{
           default: '#14236E',
