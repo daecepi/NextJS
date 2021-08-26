@@ -6,7 +6,8 @@ import CtaBlock from '../../Blocks/CtaBlock';
 import TwoColumn from '../../TwoColumn/TwoColumn'
 import FooterLanding from '../../Footer/FooterLanding';
 import HeroBlock from '../../Blocks/HeroBlock';
-import TemporalLogoModule from "../../TemporalLogoModule/TemporalLogoModule"
+import TemporalLogoModule from '../../TemporalLogoModule/TemporalLogoModule';
+import PricingPlans from '../../PricingPlans/PricingPlans'
 
 const Products = ({entry}) => {
   return (
@@ -77,6 +78,19 @@ const Products = ({entry}) => {
                     header={block.header}
                     logos={block.logos}
                     sameSpacing={block.sameSpacing} 
+                  />
+                ) : null}
+            </>
+            <>
+                {block.typeHandle == "pricingPlans" ? (
+                  <PricingPlans 
+                    header={block.header}
+                    subHeader={block.subHeader}
+                    pricingPlans={block.pricingPlans}
+                    reducePadding={block.reducePadding}
+                    linkToNav={block.linkToNav}
+                    stickyNavName={block.stickyNavName}
+                    removeCtas={block.removeCtas}
                   />
                 ) : null}
             </>
