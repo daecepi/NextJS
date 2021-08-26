@@ -14,7 +14,7 @@ const HeroBlock = ({hero}) => {
             />
         )
     }
-           
+    return null;
         // {query.name}
 
 }

@@ -6,6 +6,7 @@ import CtaBlock from '../../Blocks/CtaBlock';
 import TwoColumn from '../../TwoColumn/TwoColumn'
 import FooterLanding from '../../Footer/FooterLanding';
 import HeroBlock from '../../Blocks/HeroBlock';
+import TemporalLogoModule from "../../TemporalLogoModule/TemporalLogoModule"
 
 const Products = ({entry}) => {
   return (
@@ -69,6 +70,15 @@ const Products = ({entry}) => {
                   imageOrientation={block.imageOrientation}
                 />
               ) : null}
+            </>
+            <>
+                {block.typeHandle == "temporalLogoModule" ? (
+                  <TemporalLogoModule 
+                    header={block.header}
+                    logos={block.logos}
+                    sameSpacing={block.sameSpacing} 
+                  />
+                ) : null}
             </>
           </div>
         );
