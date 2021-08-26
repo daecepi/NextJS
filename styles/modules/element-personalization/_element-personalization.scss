@@ -1,0 +1,18 @@
+.fb-data-fetched{
+  &.banner{
+    display: none;
+    border-radius: 20px;
+    &.signup-up-show{
+      display: block;
+    }
+
+    .content{
+      
+    }
+  }
+
+
+  &.show{
+    display: block;
+  }
+}

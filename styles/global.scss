@@ -1,9 +1,15 @@
 /* purgecss start ignore */
 @tailwind  base;
 
-@import 'variables';
-@import 'buttons';
-@import 'jumble';
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "animation";
+@import "mixins";
+@import "_variables";
+@import "layout";
+@import "typography";
+@import "modules";
+@import "pages";
+@import "redactor-specializatiions";
 
 
 // H1
@@ -379,7 +385,7 @@ cursor: pointer;
 &.h-white {
   color: $color-white;
   &:after {
-    content: url(https://objects.us1.frbit.com/copper/imgs/right-arrow-white.svg);
+    content: url(/imgs/right-arrow-white.svg);
   }
   &:hover {
     color: $color-white;
@@ -407,7 +413,7 @@ cursor: pointer;
   }
   &:before {
     padding-left: 5px;
-    content: url(https://objects.us1.frbit.com/copper/imgs/left-arrow.svg);
+    content: url(/imgs/left-arrow.svg);
     position: relative;
     top: 1px;
     right: 5px;
@@ -422,7 +428,7 @@ cursor: pointer;
 }
 &:after {
   padding-left: 5px;
-  content: url(https://objects.us1.frbit.com/copper/imgs/right-arrow.svg);
+  content: url(/imgs/right-arrow.svg);
   position: relative;
   top: 1px;
   right: -4px;
@@ -848,26 +854,24 @@ a {
     color: #3C3F40;
     background-color: #e6e8e9;
 }
-.container{
-  max-width: 600px;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-  @screen sm{
-    max-width:600px;
-  }
-  @screen md{
-    max-width:890px;
-  }
-  @screen lg{
-    max-width:1020px;
-  }
-  @screen xl{
-    max-width:1140px;
-  }
-}
-.c-hero__buttons {
- 
-}
+// .container{
+//   max-width: 600px;
+//   padding-right: 15px;
+//   padding-left: 15px;
+//   margin-right: auto;
+//   margin-left: auto;
+//   @screen sm{
+//     max-width:600px;
+//   }
+//   @screen md{
+//     max-width:890px;
+//   }
+//   @screen lg{
+//     max-width:1020px;
+//   }
+//   @screen xl{
+//     max-width:1140px;
+//   }
+// }
+
 @tailwind  utilities;

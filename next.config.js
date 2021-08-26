@@ -1,5 +1,5 @@
 module.exports = {
     images: {
-      domains: ['d2ydtwisqcxv72.cloudfront.net','d3jas8421cca9z.cloudfront.net','copper.objects.frb.io'],
+      domains: ['d2ydtwisqcxv72.cloudfront.net','d3jas8421cca9z.cloudfront.net','copper.objects.frb.io','objects.us1.frbit.com'],
     },
   }
