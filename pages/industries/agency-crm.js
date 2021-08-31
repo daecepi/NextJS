@@ -8,6 +8,7 @@ import CallOut from '../../components/SinglesComponents/CallOut/CallOut';
 import NuumbersSection from '../../components/SinglesComponents/NumbersSection.js/NumbersSection';
 import RelatedContent from '../../components/SinglesComponents/RelatedContent/RelatedContent';
 import FinalPleaHero from '../../components/SinglesComponents/FinalPleadHero/FinalPleaHero';
+import NavigationDefault from '../../components/Navigation/NavigationDefault';
 
 const AgencyCrm = () => {
     return(
@@ -17,6 +18,7 @@ const AgencyCrm = () => {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 //  bootstrap CDN
             </Head>
+            <NavigationDefault></NavigationDefault>
             <HeroSinglePeges pageColorcClass='agency'/>
             <SingleTwoCol 
                 title='900+ digital and creative agencies, big and small, love Copper.'
