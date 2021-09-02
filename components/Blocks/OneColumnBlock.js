@@ -1,8 +1,7 @@
-import { entries } from "cypress/types/lodash";
 import ImageSimple from "./Simples/ImageSimple";
 import VideoSimple from "./Simples/VideosSimple";
 
-const OneColumnBlock = ({}) => {
+const OneColumnBlock = ({header, subText, copy, textRatio, entries, backgroundColor, addBottomPadding, linkToNav, stickyNavName, configurations, ctas}) => {
 
   // Scalable copy ratio selector
   let  copyVariationRatios = {
@@ -14,10 +13,10 @@ const OneColumnBlock = ({}) => {
     }
   }
 
-  let backgroundColor = matrixBlock.backgroundColor[0].slug || 'white';
+  let singleBackgroundColor = backgroundColor[0].slug || 'white';
   return (
 <>
-<section id={ stickyNavName.toLowerCase() || '' } class={`c-single-column ${ addBottomPadding ? 'h-padding-bottom' : '' } ${ backgroundColor }`}>
+<section id={ stickyNavName.toLowerCase() || '' } class={`c-single-column ${ addBottomPadding ? 'h-padding-bottom' : '' } ${ singleBackgroundColor }`}>
   <div class="container">
     {
       header?.length || subText?.length ?

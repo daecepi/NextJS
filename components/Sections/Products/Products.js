@@ -8,6 +8,7 @@ import FooterLanding from '../../Footer/FooterLanding';
 import HeroBlock from '../../Blocks/HeroBlock';
 import TemporalLogoModule from '../../TemporalLogoModule/TemporalLogoModule';
 import PricingPlans from '../../PricingPlans/PricingPlans'
+import OneColumnBlock from '../../Blocks/OneColumnBlock';
 
 const Products = ({entry}) => {
   return (
@@ -57,6 +58,14 @@ const Products = ({entry}) => {
                   header={block.header}
                   subHeader={block.subHeader}
                   ctas={block.cta}
+                />
+              ) : null}
+            </>
+              
+            <>
+              {block.typeHandle == "oneColumn" ? (
+                <OneColumnBlock
+                  {...block}
                 />
               ) : null}
             </>
