@@ -10,6 +10,8 @@ import TemporalLogoModule from '../../TemporalLogoModule/TemporalLogoModule';
 import PricingPlans from '../../PricingPlans/PricingPlans'
 import OneColumnBlock from '../../Blocks/OneColumnBlock';
 import OneColumnSimpleFullScreen from '../../Blocks/OneColumnSimpleFullScreen';
+import SimpleTwoColColorConfined from '../../Blocks/SimpleTwoColColorConfined';
+import SimpleTwoColOrientedTop from '../../Blocks/SimpleTowColOrientedTop';
 
 const Products = ({entry}) => {
   return (
@@ -72,7 +74,7 @@ const Products = ({entry}) => {
             </>
 
             <>
-              {block.typeHandle == "OneColumnSimpleFullScreenImage" ? (
+              {block.typeHandle == "oneColumnSimpleFullScreenImage" ? (
                 <OneColumnSimpleFullScreen
                   backgroundImageClass = {block.backgroundImageClass}
                   copy={block.copy}
@@ -93,6 +95,27 @@ const Products = ({entry}) => {
                 />
               ) : null}
             </>
+
+            <>
+              {block.typeHandle == "simpleTwoColOrientedTop" ? (
+                <SimpleTwoColOrientedTop
+                  image = {block.image}
+                  copy={block.copy}
+                />
+              ) : null}
+            </>
+
+            <>
+              {block.typeHandle == "createSimpleTwoColColorConfined" ? (
+                <SimpleTwoColColorConfined
+                  backgroundImageClass = {block.backgroundImageClass}
+                  copy={block.copy}
+                  ctaText={block.ctaText}
+                  ctaUrl={block.ctaUrl}
+                />
+              ) : null}
+            </>
+
             <>
                 {block.typeHandle == "temporalLogoModule" ? (
                   <TemporalLogoModule 
