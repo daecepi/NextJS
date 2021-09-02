@@ -9,6 +9,7 @@ import HeroBlock from '../../Blocks/HeroBlock';
 import TemporalLogoModule from '../../TemporalLogoModule/TemporalLogoModule';
 import PricingPlans from '../../PricingPlans/PricingPlans'
 import OneColumnBlock from '../../Blocks/OneColumnBlock';
+import OneColumnSimpleFullScreen from '../../Blocks/OneColumnSimpleFullScreen';
 
 const Products = ({entry}) => {
   return (
@@ -66,6 +67,17 @@ const Products = ({entry}) => {
               {block.typeHandle == "oneColumn" ? (
                 <OneColumnBlock
                   {...block}
+                />
+              ) : null}
+            </>
+
+            <>
+              {block.typeHandle == "OneColumnSimpleFullScreenImage" ? (
+                <OneColumnSimpleFullScreen
+                  backgroundImageClass = {block.backgroundImageClass}
+                  copy={block.copy}
+                  ctaText={block.ctaText}
+                  ctaUrl={block.ctaUrl}
                 />
               ) : null}
             </>
