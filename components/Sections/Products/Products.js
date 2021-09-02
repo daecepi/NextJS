@@ -12,6 +12,7 @@ import OneColumnBlock from '../../Blocks/OneColumnBlock';
 import OneColumnSimpleFullScreen from '../../Blocks/OneColumnSimpleFullScreen';
 import SimpleTwoColColorConfined from '../../Blocks/SimpleTwoColColorConfined';
 import SimpleTwoColOrientedTop from '../../Blocks/SimpleTowColOrientedTop';
+import JumbleModule from '../../Blocks/JumbleModule';
 
 const Products = ({entry}) => {
   return (
@@ -108,6 +109,17 @@ const Products = ({entry}) => {
             <>
               {block.typeHandle == "createSimpleTwoColColorConfined" ? (
                 <SimpleTwoColColorConfined
+                  backgroundImageClass = {block.backgroundImageClass}
+                  copy={block.copy}
+                  ctaText={block.ctaText}
+                  ctaUrl={block.ctaUrl}
+                />
+              ) : null}
+            </>
+
+            <>
+              {block.typeHandle == "jumbleModule" ? (
+                <JumbleModule
                   backgroundImageClass = {block.backgroundImageClass}
                   copy={block.copy}
                   ctaText={block.ctaText}
