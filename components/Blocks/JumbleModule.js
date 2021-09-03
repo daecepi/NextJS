@@ -66,4 +66,4 @@ const JumbleModule = ({ eyebrow, copy, ctas, image }) => {
   )
 }
 
-export default jumbleModule
+export default JumbleModule
