@@ -16,25 +16,6 @@ const Quote = () => {
                     </pre>
                     <div className="colorblock--bottom--right colorblock--volt">
                         <Image src='/imgs/industry/industry-agency-customer.jpg' width='676' height='880'></Image>
-                      {/* <picture>
-                        <source
-                          type="image/webp"
-                          srcset="/imgs/industry/industry-agency-customer.webp"
-                          className=""
-                          alt="Customers Testimonial"
-                        />
-                        <source
-                          type="image/png"
-                          srcset="/imgs/industry/industry-agency-customer.jpg"
-                          className=""
-                          alt="Customers Testimonial"
-                        />
-                        <img
-                          className=""
-                          src="/imgs/industry/industry-agency-customer.jpg"
-                          alt="Customers Testimonial"
-                        />
-                      </picture> */}
                     </div>
                   </div>
                   <div className="c-testimonial__quote col-md-5 offset-md-1">
