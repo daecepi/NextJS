@@ -15,6 +15,7 @@ import SimpleTwoColOrientedTop from '../../Blocks/SimpleTowColOrientedTop';
 import JumbleModule from '../../Blocks/JumbleModule';
 import testimonialSlider from '../../Blocks/TestimonialSlider';
 import SpecialTestimonial from '../../Blocks/SpecialTestimonial';
+import Details from '../../Blocks/Details';
 
 const Products = ({entry}) => {
   return (
@@ -147,6 +148,15 @@ const Products = ({entry}) => {
               {block.typeHandle == "specialTestimonial" ? (
                 <SpecialTestimonial
                   text={block.text}
+                />
+              ) : null}
+            </>
+
+            <>
+              {block.typeHandle == "details" ? (
+                <Details
+                  richText={block.richText}
+                  stickyNavName={block.stickyNavName}
                 />
               ) : null}
             </>
