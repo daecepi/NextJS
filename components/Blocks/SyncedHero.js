@@ -4,6 +4,185 @@ import LoadingComponent from "../Loading/Loading"
 
 const SyncedHero = ( { backgroundColor, heroType, displayVideo, copyRatioVariation, defaultEyebrow, eyebrowSettings, defaultCopy, defaultImage, defaultImageContain, defaultVideoEmbedCode, formId, marketoFormCopy, displayVideoOnSuccess, successMessage, successMessageSpecializations, successImage, successVideoEmbedCode } ) => {
   const successVariation = [];
+  
+  //newSuccessVariationInfo|json_encode|replace("&#39;","\'")|replace("\u003C","")|replace("\u003Ch2","")|replace("\u003E","")|raw 
+  let rawScripts = `
+  <script>
+  var syncedFormId = '${ matrixBlock.formId ? matrixBlock.formId : '2157' }';
+   LazyLoad.js(['https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'],function(){
+  // Base appeareance
+  $('#main-form').css('height','0px');
+  $('#main-form').css('min-height','0px');
+  $('#main-form').css('margin-top','0px');
+  $('#main-form').css('overflow','hidden');
+  $('#main-form').css('display','flex');
+
+  var compSize = undefined;
+  
+  // var tyMsgSelect = JSON.parse('{}'); // HERE
+
+  function shDisplayVariationMessage(formValues){
+    $('#defaultVariation').css('display', 'none');
+
+    // Get the number to evaluate from
+    var messageNotFound = true;
+    var messageDisplayed = true;
+    tyMsgSelect.forEach( function (tyVariation){
+      var companySize = formValues['companySize'] || formValues.cBcompanymetricsemployees;
+      var sizes = companySize.replace('+', '').split('-');
+      var maxValue = Math.max(...sizes);
+      var minValue = Math.min(...sizes);
+      if(tyVariation.variationLogic === 'companySize'){
+        if(messageNotFound && tyVariation.variationLogicValue <= maxValue && tyVariation.variationLogicValue >= minValue){ // When we just want to affect the 
+          $('#synced-${tyVariation.variationLogic}${tyVariation.variationLogicValue}').first().removeClass('invisible-start');
+          messageNotFound = false;
+        }else if(messageNotFound && tyVariation.variationLogicComparison.value === 'lessThan' && tyVariation.variationLogicValue >= maxValue){
+          $('#synced-${tyVariation.variationLogic}${tyVariation.variationLogicValue}').first().removeClass('invisible-start');
+          messageNotFound = false;
+        }
+      }
+    });
+    if(messageNotFound){
+      $('#synced-default-thank-you').first().removeClass('invisible-start');
+    }
+    $('#successVariation').css('display', 'block');
+    document.getElementById('successVariation').scrollIntoView( {behavior: 'smooth'} );
+  }
+
+  function intercomCallUpdate(email, name){
+
+    window.intercomSettings.email = email;
+    window.intercomSettings.name = name;
+
+   $.ajax({
+        type: "POST",
+        url: "/proxy/intercom-calendly.php",
+        data: JSON.stringify(window.intercomSettings),
+        contentType: "text/json; charset=utf-8",
+        dataType: "text",
+        success: function (hash) {
+            
+            window.intercomSettings['user_hash'] = hash;
+            //intercomSettings.last_visited_url = "crm-for-real-estate-agents-and-brokers";
+            //intercomSettings.last_request_at = parseInt((new Date()).getTime()/1000);
+
+            //Logic for the upate event
+            Intercom('update', intercomSettings);
+        }
+    });
+
+  }
+  if(false || typeof MktoForms2 === "undefined"){
+  } else {
+    MktoForms2.loadForm("https://app-sj17.marketo.com", "763-DVL-293", '${ matrixBlock.formId ? matrixBlock.formId : '2157' }' , function (form){
+      //Add an onSuccess handler
+      form.onSuccess(function(values, followUpUrl){
+
+        // Preparing intercom fields
+        var heroForm = MktoForms2.getForm('${ matrixBlock.formId ? matrixBlock.formId : '2157' }');
+        var formSubmitted = heroForm.getValues();
+        
+        compSize = formSubmitted['companySize'];
+
+        var name = '${formSubmitted['FirstName']} ${formSubmitted['LastName']}';
+        //window.location.hash = '#thank-you';
+        
+        intercomCallUpdate(formSubmitted.Email, name);
+        ga('send', 'event', 'Get Demo', 'FormFill', '${ matrixBlock.formId ? matrixBlock.formId : '2164' }');
+        //return false to prevent the submission handler from taking the lead to the follow up url.
+
+        shDisplayVariationMessage(formSubmitted);
+        return false;
+      });
+    });
+
+    var syncedFormId = '${ matrixBlock.formId ? matrixBlock.formId : '2157' }';
+
+
+    MktoForms2.whenReady(function (form){
+      $( ".loading-cover" ).each( function () {
+        var star = $(this);
+        star.css('display', 'none');
+      });
+
+      //Test initial manual boot
+      // Intercom('boot');
+
+      $("#email-finder-submit").attr("disabled", false);
+    });
+  }
+})
+
+</script>
+
+<script>
+  function formUpdater(emailValue){
+    $('#Email').each(function () {
+      var star = $(this);
+      star.val(emailValue).change();
+      document.getElementById('Email').dispatchEvent(new Event('input', { bubbles: true }));
+    });
+  }
+  
+  function evalExistance(cent){
+    var data = {};
+    var dataValidate = false;
+    if(0 || typeof MktoForms2 === "undefined"){
+      data = {FirstName: $('input#fromEmail').val(), FirstName: $('input#FirstName').val(), LastName: $('input#LastName').val(), Phone: $('input#Phone').val(), Email: $('input#email').val(), Company: $('input#Company').val(), CompanySize: $('select#companySize').val() };
+    } else {
+      var heroForm = MktoForms2.getForm('${ matrixBlock.formId ? matrixBlock.formId : '2157' }');
+      data = heroForm.getValues();
+      dataValidate = heroForm.validate();
+    }
+    // console.log(dataValidate);
+    // console.log(JSON.stringify(data));
+    if(data['FirstName'] !== undefined){
+      
+      $('#initial-control').css('display', 'none');
+
+      //Check for the validation result of the form
+      if(false || typeof MktoForms2 === "undefined"){
+        document.querySelector('.mktoButtonWrap > .mktoButton').dispatchEvent(new Event('click', { bubbles: true }));
+        Intercom('boot');
+        heroForm.submit();
+      }else{
+        heroPropertyReseter();
+        $('#default-asset-container').fadeOut(500, function (){
+          $('#main-form').fadeIn(300);
+        });
+      }
+    }else if(data['Email'] !== undefined && !cent){
+      // Run common procedure to update email
+      var email = document.getElementById('emailFinder').value;
+      formUpdater(email);
+      evalExistance(true);
+    }
+    
+  }
+  function scrollToElements(hash){
+    document.getElementById(hash).scrollIntoView({ behavior: "smooth" });
+  }
+   LazyLoad.js(['https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'],function(){
+  $("#email-finder-submit").attr("disabled", true);
+  $('#successVariation').css('display', 'none');
+
+  function heroPropertyReseter(){
+    $('#main-form').css('height','fit-content');
+    $('#main-form').css('min-height','1px');
+    $('#main-form').css('margin-top','30px');
+    $('#main-form').css('overflow','visible');
+    $('#main-form').css('display','flex');
+  }
+
+  //Form handling
+  $('#finder-form').submit(function (e) {
+    e.preventDefault();
+    evalExistance(false);
+  });
+
+})
+</script>
+  `
 
   let formId  = `"mktoForm_${formId ? formId : 2157}"`
 
@@ -288,181 +467,7 @@ const SyncedHero = ( { backgroundColor, heroType, displayVideo, copyRatioVariati
   </div>
 </section>
 </div>
-<script>
-  var syncedFormId = `${ matrixBlock.formId ? matrixBlock.formId : '2157' }`;
-   LazyLoad.js(['https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'],function(){
-  // Base appeareance
-  $('#main-form').css('height','0px');
-  $('#main-form').css('min-height','0px');
-  $('#main-form').css('margin-top','0px');
-  $('#main-form').css('overflow','hidden');
-  $('#main-form').css('display','flex');
-
-  var compSize = undefined;
-  
-  // var tyMsgSelect = JSON.parse(`${ newSuccessVariationInfo|json_encode|replace("&#39;","\'")|replace("\u003C","")|replace("\u003Ch2","")|replace("\u003E","")|raw }`);
-
-  function shDisplayVariationMessage(formValues){
-    $('#defaultVariation').css('display', 'none');
-
-    // Get the number to evaluate from
-    var messageNotFound = true;
-    var messageDisplayed = true;
-    tyMsgSelect.forEach( function (tyVariation){
-      var companySize = formValues['companySize'] || formValues.cBcompanymetricsemployees;
-      var sizes = companySize.replace('+', '').split('-');
-      var maxValue = Math.max(...sizes);
-      var minValue = Math.min(...sizes);
-      if(tyVariation.variationLogic === 'companySize'){
-        if(messageNotFound && tyVariation.variationLogicValue <= maxValue && tyVariation.variationLogicValue >= minValue){ // When we just want to affect the 
-          $(`#synced-${tyVariation.variationLogic}${tyVariation.variationLogicValue}`).first().removeClass('invisible-start');
-          messageNotFound = false;
-        }else if(messageNotFound && tyVariation.variationLogicComparison.value === 'lessThan' && tyVariation.variationLogicValue >= maxValue){
-          $(`#synced-${tyVariation.variationLogic}${tyVariation.variationLogicValue}`).first().removeClass('invisible-start');
-          messageNotFound = false;
-        }
-      }
-    });
-    if(messageNotFound){
-      $('#synced-default-thank-you').first().removeClass('invisible-start');
-    }
-    $('#successVariation').css('display', 'block');
-    document.getElementById('successVariation').scrollIntoView( {behavior: 'smooth'} );
-  }
-
-  function intercomCallUpdate(email, name){
-
-    window.intercomSettings.email = email;
-    window.intercomSettings.name = name;
-
-   $.ajax({
-        type: "POST",
-        url: "/proxy/intercom-calendly.php",
-        data: JSON.stringify(window.intercomSettings),
-        contentType: "text/json; charset=utf-8",
-        dataType: "text",
-        success: function (hash) {
-            
-            window.intercomSettings['user_hash'] = hash;
-            //intercomSettings.last_visited_url = "crm-for-real-estate-agents-and-brokers";
-            //intercomSettings.last_request_at = parseInt((new Date()).getTime()/1000);
-
-            //Logic for the upate event
-            Intercom('update', intercomSettings);
-        }
-    });
-
-  }
-  if(false || typeof MktoForms2 === "undefined"){
-  } else {
-    MktoForms2.loadForm("https://app-sj17.marketo.com", "763-DVL-293", `${ matrixBlock.formId ? matrixBlock.formId : '2157' }` , function (form){
-      //Add an onSuccess handler
-      form.onSuccess(function(values, followUpUrl){
-
-        // Preparing intercom fields
-        var heroForm = MktoForms2.getForm(`${ matrixBlock.formId ? matrixBlock.formId : '2157' }`);
-        var formSubmitted = heroForm.getValues();
-        
-        compSize = formSubmitted['companySize'];
-
-        var name = `${formSubmitted['FirstName']} ${formSubmitted['LastName']}`;
-        //window.location.hash = '#thank-you';
-        
-        intercomCallUpdate(formSubmitted.Email, name);
-        ga('send', 'event', 'Get Demo', 'FormFill', `${ matrixBlock.formId ? matrixBlock.formId : '2164' }`);
-        //return false to prevent the submission handler from taking the lead to the follow up url.
-
-        shDisplayVariationMessage(formSubmitted);
-        return false;
-      });
-    });
-
-    var syncedFormId = `${ matrixBlock.formId ? matrixBlock.formId : '2157' }`;
-
-
-    MktoForms2.whenReady(function (form){
-      $( ".loading-cover" ).each( function () {
-        var star = $(this);
-        star.css('display', 'none');
-      });
-
-      //Test initial manual boot
-      // Intercom('boot');
-
-      $("#email-finder-submit").attr("disabled", false);
-    });
-  }
-})
-
-</script>
-
-<script>
-  function formUpdater(emailValue){
-    $('#Email').each(function () {
-      var star = $(this);
-      star.val(emailValue).change();
-      document.getElementById('Email').dispatchEvent(new Event('input', { bubbles: true }));
-    });
-  }
-  
-  function evalExistance(cent){
-    var data = {};
-    var dataValidate = false;
-    if(0 || typeof MktoForms2 === "undefined"){
-      data = {FirstName: $('input#fromEmail').val(), FirstName: $('input#FirstName').val(), LastName: $('input#LastName').val(), Phone: $('input#Phone').val(), Email: $('input#email').val(), Company: $('input#Company').val(), CompanySize: $('select#companySize').val() };
-    } else {
-      var heroForm = MktoForms2.getForm(`${ matrixBlock.formId ? matrixBlock.formId : '2157' }`);
-      data = heroForm.getValues();
-      dataValidate = heroForm.validate();
-    }
-    // console.log(dataValidate);
-    // console.log(JSON.stringify(data));
-    if(data['FirstName'] !== undefined){
-      
-      $('#initial-control').css('display', 'none');
-
-      //Check for the validation result of the form
-      if(false || typeof MktoForms2 === "undefined"){
-        document.querySelector('.mktoButtonWrap > .mktoButton').dispatchEvent(new Event('click', { bubbles: true }));
-        Intercom('boot');
-        heroForm.submit();
-      }else{
-        heroPropertyReseter();
-        $('#default-asset-container').fadeOut(500, function (){
-          $('#main-form').fadeIn(300);
-        });
-      }
-    }else if(data['Email'] !== undefined && !cent){
-      // Run common procedure to update email
-      var email = document.getElementById('emailFinder').value;
-      formUpdater(email);
-      evalExistance(true);
-    }
-    
-  }
-  function scrollToElements(hash){
-    document.getElementById(hash).scrollIntoView({ behavior: "smooth" });
-  }
-   LazyLoad.js(['https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'],function(){
-  $("#email-finder-submit").attr("disabled", true);
-  $('#successVariation').css('display', 'none');
-
-  function heroPropertyReseter(){
-    $('#main-form').css('height','fit-content');
-    $('#main-form').css('min-height','1px');
-    $('#main-form').css('margin-top','30px');
-    $('#main-form').css('overflow','visible');
-    $('#main-form').css('display','flex');
-  }
-
-  //Form handling
-  $('#finder-form').submit(function (e) {
-    e.preventDefault();
-    evalExistance(false);
-  });
-
-})
-</script>
+{}
     </>
   )
 }
