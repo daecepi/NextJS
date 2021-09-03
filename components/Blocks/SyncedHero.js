@@ -101,7 +101,7 @@ const SyncedHero = ( { backgroundColor, heroType, displayVideo, copyRatioVariati
 
                 <div id="main-form"
                       className={`${ ratioSelectedOnBackend && contentRatios[ratioSelectedOnBackend] ? contentRatios[ratioSelectedOnBackend].copy : contentRatios["normal"].copy  } c-valign--middle synced-hero-copy`}
-                      style={{position: 'relative', left: '0px' height: 'fit-content', maxHeight: 'none'}}>
+                      style={{position: 'relative', left: '0px', height: 'fit-content', maxHeight: 'none'}}>
                   <Script src="//app-sj17.marketo.com/js/forms2/js/forms2.min.js" strategy="beforeInteractive"></Script>
                               
                   <div className="c-form ">
@@ -279,30 +279,17 @@ const SyncedHero = ( { backgroundColor, heroType, displayVideo, copyRatioVariati
         :
           defaultImage.length ?
             <div id="final-asset-container" className="col-md-6 offset-md-1 c-valign--middle c-image invert-sm-spacing c-valign--middle" style="position: relative; left: 0px;">
-            {% set image = matrixBlock.image.one() %}
-              <img style="object-fit: initial; height: auto;" className={`${ imageContain ? 'h-image-contain' : '' }`} src={`${ defaultImage[0].url }`} alt={`${ defaultImage[0].altText?.length ? defaultImage[0].altText : defaultImage[0].title }`}>
-            
+              <img style="object-fit: initial; height: auto;" className={`${ imageContain ? 'h-image-contain' : '' }`} src={`${ defaultImage[0].url }`} alt={`${ defaultImage[0].altText?.length ? defaultImage[0].altText : defaultImage[0].title }`} />
             </div>
           :
             <div id="final-asset-container" className="col-md-6 offset-md-1"></div>
       }
-      {% if matrixBlock.displayVideoOnSuccess == "1" %}
-      {% elseif matrixBlock.image|length %}
-        
-      {% else %}
-      {% endif %}
     </div>
   </div>
 </section>
 </div>
-{% set newSuccessVariationInfo = [] %}
-
-{% for tyMessage in successVariationInfo %}
-  {% set newSuccessVariationInfo = newSuccessVariationInfo|merge([{variationLogic: tyMessage.variationLogic, variationLogicComparison: tyMessage.variationLogicComparison, variationLogicValue: tyMessage.variationLogicValue, vSuccessMessage: ''}]) %}
-{% endfor %}
-{# Script that loads marketo form #}
 <script>
-  var syncedFormId = "{{ matrixBlock.formId ? matrixBlock.formId : '2157' }}";
+  var syncedFormId = `${ matrixBlock.formId ? matrixBlock.formId : '2157' }`;
    LazyLoad.js(['https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'],function(){
   // Base appeareance
   $('#main-form').css('height','0px');
@@ -313,7 +300,7 @@ const SyncedHero = ( { backgroundColor, heroType, displayVideo, copyRatioVariati
 
   var compSize = undefined;
   
-  var tyMsgSelect = JSON.parse('{{ newSuccessVariationInfo|json_encode|replace("&#39;","\'")|replace("\u003C","")|replace("\u003Ch2","")|replace("\u003E","")|raw }}');
+  // var tyMsgSelect = JSON.parse(`${ newSuccessVariationInfo|json_encode|replace("&#39;","\'")|replace("\u003C","")|replace("\u003Ch2","")|replace("\u003E","")|raw }`);
 
   function shDisplayVariationMessage(formValues){
     $('#defaultVariation').css('display', 'none');
@@ -366,16 +353,14 @@ const SyncedHero = ( { backgroundColor, heroType, displayVideo, copyRatioVariati
     });
 
   }
-  if({{ marketoConfigurations.replaceMarketoForms ? 1 : 0 }} || typeof MktoForms2 === "undefined"){
-    {% set formId = "mktoForm_#{matrixBlock.formId ? matrixBlock.formId : 2157}" %}
-    {{ localLeadReplacements.lightScriptReplacement(formId, staticAssetsVersion, "SyncedHero", true, true, true) }}
+  if(false || typeof MktoForms2 === "undefined"){
   } else {
-    MktoForms2.loadForm("https://app-sj17.marketo.com", "763-DVL-293", "{{ matrixBlock.formId ? matrixBlock.formId : '2157' }}" , function (form){
+    MktoForms2.loadForm("https://app-sj17.marketo.com", "763-DVL-293", `${ matrixBlock.formId ? matrixBlock.formId : '2157' }` , function (form){
       //Add an onSuccess handler
       form.onSuccess(function(values, followUpUrl){
 
         // Preparing intercom fields
-        var heroForm = MktoForms2.getForm("{{ matrixBlock.formId ? matrixBlock.formId : '2157' }}");
+        var heroForm = MktoForms2.getForm(`${ matrixBlock.formId ? matrixBlock.formId : '2157' }`);
         var formSubmitted = heroForm.getValues();
         
         compSize = formSubmitted['companySize'];
@@ -384,7 +369,7 @@ const SyncedHero = ( { backgroundColor, heroType, displayVideo, copyRatioVariati
         //window.location.hash = '#thank-you';
         
         intercomCallUpdate(formSubmitted.Email, name);
-        ga('send', 'event', 'Get Demo', 'FormFill', '{{ matrixBlock.formId ? matrixBlock.formId : 2164 }}');
+        ga('send', 'event', 'Get Demo', 'FormFill', `${ matrixBlock.formId ? matrixBlock.formId : '2164' }`);
         //return false to prevent the submission handler from taking the lead to the follow up url.
 
         shDisplayVariationMessage(formSubmitted);
@@ -392,7 +377,7 @@ const SyncedHero = ( { backgroundColor, heroType, displayVideo, copyRatioVariati
       });
     });
 
-    var syncedFormId = "{{ matrixBlock.formId ? matrixBlock.formId : '2157' }}";
+    var syncedFormId = `${ matrixBlock.formId ? matrixBlock.formId : '2157' }`;
 
 
     MktoForms2.whenReady(function (form){
@@ -423,10 +408,10 @@ const SyncedHero = ( { backgroundColor, heroType, displayVideo, copyRatioVariati
   function evalExistance(cent){
     var data = {};
     var dataValidate = false;
-    if({{ marketoConfigurations.replaceMarketoForms ? 1 : 0 }} || typeof MktoForms2 === "undefined"){
+    if(0 || typeof MktoForms2 === "undefined"){
       data = {FirstName: $('input#fromEmail').val(), FirstName: $('input#FirstName').val(), LastName: $('input#LastName').val(), Phone: $('input#Phone').val(), Email: $('input#email').val(), Company: $('input#Company').val(), CompanySize: $('select#companySize').val() };
     } else {
-      var heroForm = MktoForms2.getForm("{{ matrixBlock.formId ? matrixBlock.formId : '2157' }}");
+      var heroForm = MktoForms2.getForm(`${ matrixBlock.formId ? matrixBlock.formId : '2157' }`);
       data = heroForm.getValues();
       dataValidate = heroForm.validate();
     }
@@ -437,7 +422,7 @@ const SyncedHero = ( { backgroundColor, heroType, displayVideo, copyRatioVariati
       $('#initial-control').css('display', 'none');
 
       //Check for the validation result of the form
-      if({% if marketoConfigurations.replaceMarketoForms %} false {% else %} heroForm.validate() {% endif %} || typeof MktoForms2 === "undefined"){
+      if(false || typeof MktoForms2 === "undefined"){
         document.querySelector('.mktoButtonWrap > .mktoButton').dispatchEvent(new Event('click', { bubbles: true }));
         Intercom('boot');
         heroForm.submit();
