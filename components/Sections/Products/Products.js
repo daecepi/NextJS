@@ -13,6 +13,7 @@ import OneColumnSimpleFullScreen from '../../Blocks/OneColumnSimpleFullScreen';
 import SimpleTwoColColorConfined from '../../Blocks/SimpleTwoColColorConfined';
 import SimpleTwoColOrientedTop from '../../Blocks/SimpleTowColOrientedTop';
 import JumbleModule from '../../Blocks/JumbleModule';
+import testimonialSlider from '../../Blocks/TestimonialSlider';
 
 const Products = ({entry}) => {
   return (
@@ -41,17 +42,6 @@ const Products = ({entry}) => {
                   eyebrow={block.eyebrow}
                   title={block.header}
                   entries={block.entries}
-                />
-              ) : null}
-            </>
-            <>
-              {block.typeHandle == "testimonial" ? (
-                <TestimonialBlock
-                  eyebrow={block.eyebrow}
-                  image={block.image}
-                  quote={block.quote}
-                  author={block.author}
-                  jobtitle={block.jobTitle}
                 />
               ) : null}
             </>
@@ -124,6 +114,30 @@ const Products = ({entry}) => {
                   copy={block.copy}
                   ctaText={block.ctaText}
                   ctaUrl={block.ctaUrl}
+                />
+              ) : null}
+            </>
+
+
+            <>
+              {block.typeHandle == "testimonial" ? (
+                <TestimonialBlock
+                  eyebrow={block.eyebrow}
+                  image={block.image}
+                  quote={block.quote}
+                  author={block.author}
+                  jobtitle={block.jobTitle}
+                />
+              ) : null}
+            </>
+
+
+            <>
+              {block.typeHandle == "testimonialSlider" ? (
+                <testimonialSlider
+                  eyebrow={block.eyebrow}
+                  contentCopy ={block.contentCopy}
+                  sliderContent={block.sliderContent}
                 />
               ) : null}
             </>
