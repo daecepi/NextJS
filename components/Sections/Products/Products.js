@@ -164,7 +164,7 @@ const Products = ({entry}) => {
               ) : null}
             </>
 
-            <>
+            {/*<>
               {block.typeHandle == "details" ? (
                 <Details
                   slug={entry.slug}
@@ -172,7 +172,7 @@ const Products = ({entry}) => {
                   stickyNavName={block.stickyNavName}
                 />
               ) : null}
-            </>
+              </>*/}
 
             <>
               {block.typeHandle == "embeddedVideo" ? (
