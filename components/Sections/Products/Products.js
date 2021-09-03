@@ -14,6 +14,7 @@ import SimpleTwoColColorConfined from '../../Blocks/SimpleTwoColColorConfined';
 import SimpleTwoColOrientedTop from '../../Blocks/SimpleTowColOrientedTop';
 import JumbleModule from '../../Blocks/JumbleModule';
 import testimonialSlider from '../../Blocks/TestimonialSlider';
+import SpecialTestimonial from '../../Blocks/SpecialTestimonial';
 
 const Products = ({entry}) => {
   return (
@@ -138,6 +139,14 @@ const Products = ({entry}) => {
                   eyebrow={block.eyebrow}
                   contentCopy ={block.contentCopy}
                   sliderContent={block.sliderContent}
+                />
+              ) : null}
+            </>
+
+            <>
+              {block.typeHandle == "specialTestimonial" ? (
+                <SpecialTestimonial
+                  text={block.text}
                 />
               ) : null}
             </>
