@@ -1,5 +1,5 @@
-import PricingCardLarge from "./PricingCardLarge";
-import PricingCardSmall from "./pricingCardSmall";
+import PricingCardLarge from "../PricingPlans/PricingCardLarge";
+import PricingCardSmall from "../PricingPlans/PricingCardSmall";
 
 import { ReactDOM } from "react";
 
