@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import HeroSinglePeges from "../../components/Blocks/HeroTypes/HeroSinglePages";
+import HeroSinglePages from "../../components/Blocks/HeroTypes/HeroSinglePages";
 import SingleTwoCol from "../../components/SinglesComponents/SingleTwoCol/SingleTwoCol";
 import Jumble from "../../components/SinglesComponents/Jumble/Jumble";
 import Footer from '../../components/Footer/Footer';
@@ -19,7 +19,14 @@ const AgencyCrm = () => {
                 //  bootstrap CDN
             </Head>
             <NavigationDefault></NavigationDefault>
-            <HeroSinglePeges pageColorcClass='agency'/>
+            <HeroSinglePages 
+                pageColorcClass='agency'
+                eyebrow='COPPER FOR CREATIVE AGENCIES'
+                title='CRM minus the creative blocks.'
+                copy='Digital and creative agencies get more done and make their clients happier with Copper.'
+                imageUrl='/imgs/industry/industry-agency-hero@2x.jpg'
+
+            />
             <SingleTwoCol 
                 title='900+ digital and creative agencies, big and small, love Copper.'
                 eyebrow={null}
@@ -31,7 +38,15 @@ const AgencyCrm = () => {
                 imageHeigh='686'
                 
             />
-            <Jumble />
+            <Jumble
+                backgroundColor='hot-pink'
+                eyebrow='agency CRM'
+                title='Strengthen your relationships & do your best work.'
+                copy='Copper is a different kind of CRM. It’s elegantly designed for Google Workspace, so fast-moving digital agencies can build the strong relationships that lead to repeat business.'
+                imageUrl='https://copper.objects.frb.io/imgs/industry/agencies-crm/industry-agency-IMG-01@2x.png'
+                ctaText='Learn More'
+                ctaUrl='/g-suite-crm'
+            />
             <SingleTwoCol 
                 title='Every little detail, 100% organized.'
                 eyebrow='CENTRALIZE RELATIONSHIPS'
