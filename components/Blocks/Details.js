@@ -8,8 +8,8 @@ const Details = ({richText, stickyNavName}) => {
   });
 
   const captureDetailPage = useCallback(() => {
-    const features = await getFeaturesLinking();
-    setPages({...pages, features: features});
+    //const features = await getFeaturesLinking();
+    //setPages({...pages, features: features});
     
   },[])
 

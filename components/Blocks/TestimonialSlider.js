@@ -2,6 +2,49 @@ import Generalimage from "./Simples/GeneralImage";
 
 const testimonialSlider = ({ eyebrow, contentCopy, sliderContent }) => {
 
+  const rawScripts = `
+  <script>
+        LazyLoad.js([
+              'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'],function(){
+            jQuery("#testimonial-slider-content .testimonial-slider .buttons-box a").click(function(e){
+            e.preventDefault();
+            var childLength = jQuery("#testimonial-slider-content .testimonial-slider").length;
+            var index = jQuery("#testimonial-slider-content .testimonial-slider.active").index() + 1;
+            var nextIndex = index+1;
+            if( index == childLength ){
+                nextIndex = 1;
+            }
+            jQuery("#testimonial-slider-content .testimonial-slider.active").removeClass("active");
+            jQuery("#testimonial-slider-content .testimonial-slider:nth-child("+ nextIndex +")").addClass("active");
+            jQuery(".testimonial-slider .control-box .check-icon.active").removeClass("active");
+            jQuery(".testimonial-slider .control-box .check-icon:nth-child("+ nextIndex +")").addClass("active");
+        });
+      })
+      </script>
+
+
+      <script type="text/javascript">
+        LazyLoad.js([
+              'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'],function(){
+        //Make the style work
+        var currentIndex;
+        $('.check-icon').each( function(i) {
+          $(this).bind('click', function () {
+            var targetElement = $(this);
+            var targetValue = targetElement.attr('data-target-slide');
+            var targetIndex = targetElement.attr('data-target-index');
+
+            jQuery(".testimonial-slider .control-box .check-icon.active").removeClass("active");
+            jQuery("#testimonial-slider-content .testimonial-slider.active").removeClass("active");
+        
+            $('#${targetValue}').addClass("active");
+            $('.check-icon-${targetIndex}').addClass('active');
+          });
+        });
+      })
+      </script>
+  `
+
   const testimonialSlide = (totalSlides, index, slideInformation) => {
     let slideDots = []
 
@@ -115,47 +158,9 @@ const testimonialSlider = ({ eyebrow, contentCopy, sliderContent }) => {
 
         </div>
       </section>
-
-      <script>
-        LazyLoad.js([
-              'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'],function(){
-            jQuery("#testimonial-slider-content .testimonial-slider .buttons-box a").click(function(e){
-            e.preventDefault();
-            var childLength = jQuery("#testimonial-slider-content .testimonial-slider").length;
-            var index = jQuery("#testimonial-slider-content .testimonial-slider.active").index() + 1;
-            var nextIndex = index+1;
-            if( index == childLength ){
-                nextIndex = 1;
-            }
-            jQuery("#testimonial-slider-content .testimonial-slider.active").removeClass("active");
-            jQuery("#testimonial-slider-content .testimonial-slider:nth-child("+ nextIndex +")").addClass("active");
-            jQuery(".testimonial-slider .control-box .check-icon.active").removeClass("active");
-            jQuery(".testimonial-slider .control-box .check-icon:nth-child("+ nextIndex +")").addClass("active");
-        });
-      })
-      </script>
-
-
-      <script type="text/javascript">
-        LazyLoad.js([
-              'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'],function(){
-        //Make the style work
-        var currentIndex;
-        $('.check-icon').each( function(i) {
-          $(this).bind('click', function () {
-            var targetElement = $(this);
-            var targetValue = targetElement.attr('data-target-slide');
-            var targetIndex = targetElement.attr('data-target-index');
-
-            jQuery(".testimonial-slider .control-box .check-icon.active").removeClass("active");
-            jQuery("#testimonial-slider-content .testimonial-slider.active").removeClass("active");
-        
-            $(`#${targetValue}`).addClass("active");
-            $(`.check-icon-${targetIndex}`).addClass('active');
-          });
-        });
-      })
-      </script>
+      
+      <div dangerouslySetInnerHTML={{ __html: rawScripts }}></div>
+      
     </>
   )
 }
