@@ -2225,7 +2225,7 @@ const PricingPage = ({ res }) => {
         `
 
   return (
-    <div className='mt-24 '>
+    <>
       <NavigationDefault/>
 
       <Head>
@@ -2235,7 +2235,7 @@ const PricingPage = ({ res }) => {
          
       <div dangerouslySetInnerHTML={{ __html: rawHtml }}></div>
 
-    </div>
+    </>
     
   );
 }

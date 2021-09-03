@@ -434,7 +434,7 @@ LazyLoad.js(['https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'
   `;
 
   return (
-<div className='mt-24 '>
+    <>
       <NavigationDefault/>
 
       <Head>
@@ -443,8 +443,7 @@ LazyLoad.js(['https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'
       </Head>
          
       <div dangerouslySetInnerHTML={{ __html: rawHtml }}></div>
-
-    </div>
+    </>
   );
 }
 
