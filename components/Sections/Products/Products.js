@@ -13,9 +13,10 @@ import OneColumnSimpleFullScreen from '../../Blocks/OneColumnSimpleFullScreen';
 import SimpleTwoColColorConfined from '../../Blocks/SimpleTwoColColorConfined';
 import SimpleTwoColOrientedTop from '../../Blocks/SimpleTowColOrientedTop';
 import JumbleModule from '../../Blocks/JumbleModule';
-import testimonialSlider from '../../Blocks/TestimonialSlider';
+import TestimonialSlider from '../../Blocks/TestimonialSlider';
 import SpecialTestimonial from '../../Blocks/SpecialTestimonial';
 import Details from '../../Blocks/Details';
+import EmbeddedVideo from '../../Blocks/EmbeddedVideo';
 
 const Products = ({entry}) => {
   return (
@@ -34,6 +35,7 @@ const Products = ({entry}) => {
             <>
               {block.typeHandle == "hero" ? (
                 <HeroBlock
+                  slug={entry.slug}
                   hero={block}
                 />
               ) : null}
@@ -41,6 +43,7 @@ const Products = ({entry}) => {
             <>
               {block.typeHandle == "threeColumn" ? (
                 <ThreeColBlock
+                  slug={entry.slug}
                   eyebrow={block.eyebrow}
                   title={block.header}
                   entries={block.entries}
@@ -51,6 +54,7 @@ const Products = ({entry}) => {
             <>
               {block.typeHandle == "cta" ? (
                 <CtaBlock
+                  slug={entry.slug}
                   header={block.header}
                   subHeader={block.subHeader}
                   ctas={block.cta}
@@ -61,6 +65,7 @@ const Products = ({entry}) => {
             <>
               {block.typeHandle == "oneColumn" ? (
                 <OneColumnBlock
+                  slug={entry.slug}
                   {...block}
                 />
               ) : null}
@@ -69,6 +74,7 @@ const Products = ({entry}) => {
             <>
               {block.typeHandle == "oneColumnSimpleFullScreenImage" ? (
                 <OneColumnSimpleFullScreen
+                  slug={entry.slug}
                   backgroundImageClass = {block.backgroundImageClass}
                   copy={block.copy}
                   ctaText={block.ctaText}
@@ -80,6 +86,7 @@ const Products = ({entry}) => {
             <>
               {block.typeHandle == "twoColumn" ? (
                 <TwoColumn
+                  slug={entry.slug}
                   title={block.title}
                   copy={block.copy}
                   eyebrow={block.eyebrow}
@@ -92,6 +99,7 @@ const Products = ({entry}) => {
             <>
               {block.typeHandle == "simpleTwoColOrientedTop" ? (
                 <SimpleTwoColOrientedTop
+                  slug={entry.slug}
                   image = {block.image}
                   copy={block.copy}
                 />
@@ -101,6 +109,7 @@ const Products = ({entry}) => {
             <>
               {block.typeHandle == "createSimpleTwoColColorConfined" ? (
                 <SimpleTwoColColorConfined
+                  slug={entry.slug}
                   backgroundImageClass = {block.backgroundImageClass}
                   copy={block.copy}
                   ctaText={block.ctaText}
@@ -112,6 +121,7 @@ const Products = ({entry}) => {
             <>
               {block.typeHandle == "jumbleModule" ? (
                 <JumbleModule
+                  slug={entry.slug}
                   backgroundImageClass = {block.backgroundImageClass}
                   copy={block.copy}
                   ctaText={block.ctaText}
@@ -136,7 +146,8 @@ const Products = ({entry}) => {
 
             <>
               {block.typeHandle == "testimonialSlider" ? (
-                <testimonialSlider
+                <TestimonialSlider
+                  slug={entry.slug}
                   eyebrow={block.eyebrow}
                   contentCopy ={block.contentCopy}
                   sliderContent={block.sliderContent}
@@ -147,6 +158,7 @@ const Products = ({entry}) => {
             <>
               {block.typeHandle == "specialTestimonial" ? (
                 <SpecialTestimonial
+                  slug={entry.slug}
                   text={block.text}
                 />
               ) : null}
@@ -155,7 +167,18 @@ const Products = ({entry}) => {
             <>
               {block.typeHandle == "details" ? (
                 <Details
+                  slug={entry.slug}
                   richText={block.richText}
+                  stickyNavName={block.stickyNavName}
+                />
+              ) : null}
+            </>
+
+            <>
+              {block.typeHandle == "embeddedVideo" ? (
+                <EmbeddedVideo
+                  slug={entry.slug}
+                  embeddedVideoSnippet={block.embeddedVideoSnippet}
                   stickyNavName={block.stickyNavName}
                 />
               ) : null}
@@ -164,6 +187,7 @@ const Products = ({entry}) => {
             <>
                 {block.typeHandle == "temporalLogoModule" ? (
                   <TemporalLogoModule 
+                    slug={entry.slug}
                     header={block.header}
                     logos={block.logos}
                     sameSpacing={block.sameSpacing} 
@@ -173,6 +197,7 @@ const Products = ({entry}) => {
             <>
                 {block.typeHandle == "pricingPlans" ? (
                   <PricingPlans 
+                    slug={entry.slug}
                     header={block.header}
                     subHeader={block.subHeader}
                     pricingPlans={block.pricingPlans}
