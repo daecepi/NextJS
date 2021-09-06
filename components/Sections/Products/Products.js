@@ -18,6 +18,7 @@ import SpecialTestimonial from "../../Blocks/SpecialTestimonial";
 import Details from "../../Blocks/Details";
 import EmbeddedVideo from "../../Blocks/EmbeddedVideo";
 import LogoModule from "../../Blocks/LogoModule";
+import CustomSection from "../../Blocks/CustomSection";
 
 const Products = ({ entry }) => {
 	return (
@@ -203,6 +204,18 @@ const Products = ({ entry }) => {
 								/>
 							) : null}
 						</>
+
+						<>
+							{block.typeHandle == "temporalLogoModule" ? (
+								<CustomSection
+									slug={entry.slug}
+									backgroundColor={block.backgroundColor}
+									settings={block.settings}
+									layout={block.layout}
+								/>
+							) : null}
+						</>
+
 						<>
 							{block.typeHandle == "pricingPlans" ? (
 								<PricingPlans
