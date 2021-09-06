@@ -1,14 +1,15 @@
-
-import NavigationDefault from '../components/Navigation/NavigationDefault';
-import Head from 'next/head';
+import NavigationDefault from "../components/Navigation/NavigationDefault";
+import Head from "next/head";
 
 const PricingPage = ({ res }) => {
-  let priceValidity = new Date((new Date().getTime())+ (12*30*24*60*60*1000));
+	let priceValidity = new Date(
+		new Date().getTime() + 12 * 30 * 24 * 60 * 60 * 1000
+	);
 
-  let rawHtml = `
+	let rawHtml = `
   <body class="ltr pricing">
                 
-  <script src='/js/lazyload.min.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.4.0/dist/lazyload.min.js"></script>
 
     <script>
       //  // Cookie Message For EU Cookie Law
@@ -3786,213 +3787,21 @@ background-image: linear-gradient(to bottom, #75ae4c, #99c47c);
   const auth = firebase.auth();
 </script>
 
+                        </div></body>
+        `;
 
-        
-     
+	return (
+		<>
+			<NavigationDefault />
 
-<div style="display: none; visibility: hidden;"><script type="text/javascript">(function(){function b(){!1===c&&(c=!0,Munchkin.init("763-DVL-293"))}var c=!1,a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="//munchkin.marketo.net/munchkin.js";a.onreadystatechange=function(){"complete"!=this.readyState&&"loaded"!=this.readyState||b()};a.onload=b;document.getElementsByTagName("head")[0].appendChild(a)})();</script></div><div style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon859172245697"><img style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon831088763730" width="0" height="0" alt="" src="https://bat.bing.com/action/0?ti=5709952&amp;tm=gtm002&amp;Ver=2&amp;mid=1cfa9bc8-e973-4ad0-9a6d-fe610edbc1fc&amp;sid=9e3ddab00c2f11eca061b1e5a18dd024&amp;vid=13d54d8f6d3363bcca49fce74399b52d&amp;vids=0&amp;pi=1200101525&amp;lg=en-US&amp;sw=1680&amp;sh=1050&amp;sc=30&amp;tl=Copper%20Pricing%20%26%20Plans%3A%20How%20Much%20Does%20Copper%20Cost%3F&amp;p=https%3A%2F%2Fwww.copper.com%2Fpricing&amp;r=&amp;lt=2623&amp;evt=pageLoad&amp;msclkid=N&amp;sv=1&amp;rn=364367"></div><div id="onetrust-consent-sdk"><div class="onetrust-pc-dark-filter ot-hide ot-fade-in"></div><div id="onetrust-pc-sdk" class="otPcPanel ot-hide ot-fade-in" role="dialog" aria-labelledby="ot-pc-title" aria-modal="true" lang="en"><!-- PC Header --><div class="ot-pc-header"><div class="ot-pc-logo" role="img" aria-label="Company Logo" style="background-image: url(&quot;https://cdn.cookielaw.org/logos/39b0041f-ccd7-491a-8723-346dbdc3b1d1/c18fb1e2-9257-4cf1-9e0f-2e273da36101/4dff8df3-7773-4a34-a85b-c85d53235a53/copper_logo-white.png&quot;)"></div><button id="close-pc-btn-handler" class="ot-close-icon" aria-label="Close"></button></div><div id="ot-pc-content" class="ot-pc-scrollbar"><h3 id="ot-pc-title">Privacy Preference Center</h3><div id="ot-pc-desc">When you visit any website, it may store or retrieve information on your browser, mostly in the form of cookies. This information might be about you, your preferences or your device and is mostly used to make the site work as you expect it to. The information does not usually directly identify you, but it can give you a more personalized web experience. Because we respect your right to privacy, you can choose not to allow some types of cookies. Click on the different category headings to find out more and change our default settings. However, blocking some types of cookies may impact your experience of the site and the services we are able to offer. If you close this banner without changing any settings, you will be considered to have elected to allow cookies in each of the categories listed below to be placed on your device.  For more information, view our Cookie Policy.
-                        <a href="/cookies" class="privacy-notice-link" target="_blank" aria-label="Cookie policy, Opens in a new window">Cookie policy</a></div><button id="accept-recommended-btn-handler">Allow all</button><section class="ot-sdk-row ot-cat-grp"><h3 id="ot-category-title"> Manage Consent Preferences</h3><div class="ot-accordion-layout ot-cat-item" data-optanongroupid="C0001"><input ot-accordion="true" type="checkbox" aria-expanded="false" role="button" aria-controls="ot-desc-id-C0001" aria-labelledby="ot-header-id-C0001"><!-- Accordion header --><div class="ot-acc-hdr ot-always-active-group"><div class="ot-plus-minus"><span></span><span></span></div><h4 class="ot-cat-header" id="ot-header-id-C0001">Strictly Necessary Cookies</h4><div class="ot-always-active">Always Active</div></div><!-- accordion detail --><div class="ot-acc-grpcntr ot-acc-txt"><p class="ot-acc-grpdesc ot-category-desc" id="ot-desc-id-C0001">These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work. These cookies do not store any personally identifiable information.</p></div></div><div class="ot-accordion-layout ot-cat-item" data-optanongroupid="C0003"><input ot-accordion="true" type="checkbox" aria-expanded="false" role="button" aria-controls="ot-desc-id-C0003" aria-labelledby="ot-header-id-C0003"><!-- Accordion header --><div class="ot-acc-hdr"><div class="ot-plus-minus"><span></span><span></span></div><h4 class="ot-cat-header" id="ot-header-id-C0003">Functional Cookies</h4><div class="ot-tgl"><input type="checkbox" name="ot-group-id-C0003" id="ot-group-id-C0003" aria-checked="true" role="switch" class="category-switch-handler" data-optanongroupid="C0003" checked="" aria-labelledby="ot-header-id-C0003"> <label class="ot-switch" for="ot-group-id-C0003"><span class="ot-switch-nob"></span> <span class="ot-label-txt">Functional Cookies</span></label> </div></div><!-- accordion detail --><div class="ot-acc-grpcntr ot-acc-txt"><p class="ot-acc-grpdesc ot-category-desc" id="ot-desc-id-C0003">These cookies enable the website to provide enhanced functionality and personalisation. They may be set by us or by third party providers whose services we have added to our pages. If you do not allow these cookies then some or all of these services may not function properly.</p></div></div><div class="ot-accordion-layout ot-cat-item" data-optanongroupid="C0002"><input ot-accordion="true" type="checkbox" aria-expanded="false" role="button" aria-controls="ot-desc-id-C0002" aria-labelledby="ot-header-id-C0002"><!-- Accordion header --><div class="ot-acc-hdr"><div class="ot-plus-minus"><span></span><span></span></div><h4 class="ot-cat-header" id="ot-header-id-C0002">Performance Cookies</h4><div class="ot-tgl"><input type="checkbox" name="ot-group-id-C0002" id="ot-group-id-C0002" aria-checked="true" role="switch" class="category-switch-handler" data-optanongroupid="C0002" checked="" aria-labelledby="ot-header-id-C0002"> <label class="ot-switch" for="ot-group-id-C0002"><span class="ot-switch-nob"></span> <span class="ot-label-txt">Performance Cookies</span></label> </div></div><!-- accordion detail --><div class="ot-acc-grpcntr ot-acc-txt"><p class="ot-acc-grpdesc ot-category-desc" id="ot-desc-id-C0002">These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us to know which pages are the most and least popular and see how visitors move around the site. All information these cookies collect is aggregated and therefore anonymous. If you do not allow these cookies we will not know when you have visited our site, and will not be able to monitor its performance.</p></div></div><div class="ot-accordion-layout ot-cat-item" data-optanongroupid="C0004"><input ot-accordion="true" type="checkbox" aria-expanded="false" role="button" aria-controls="ot-desc-id-C0004" aria-labelledby="ot-header-id-C0004"><!-- Accordion header --><div class="ot-acc-hdr"><div class="ot-plus-minus"><span></span><span></span></div><h4 class="ot-cat-header" id="ot-header-id-C0004">Targeting Cookies</h4><div class="ot-tgl"><input type="checkbox" name="ot-group-id-C0004" id="ot-group-id-C0004" aria-checked="true" role="switch" class="category-switch-handler" data-optanongroupid="C0004" checked="" aria-labelledby="ot-header-id-C0004"> <label class="ot-switch" for="ot-group-id-C0004"><span class="ot-switch-nob"></span> <span class="ot-label-txt">Targeting Cookies</span></label> </div></div><!-- accordion detail --><div class="ot-acc-grpcntr ot-acc-txt"><p class="ot-acc-grpdesc ot-category-desc" id="ot-desc-id-C0004">These cookies may be set through our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant adverts on other sites. They do not store directly personal information, but are based on uniquely identifying your browser and internet device. If you do not allow these cookies, you will experience less targeted advertising.</p></div></div><!-- Non Accordion Group --><!-- Accordion Group section starts --><!-- Accordion Group section ends --></section></div><section id="ot-pc-lst" class="ot-hide ot-pc-scrollbar"><div id="ot-pc-hdr"><h3 id="ot-lst-title"><a class="back-btn-handler" href="javascript:void(0)" aria-label="Back"><svg id="ot-back-arw" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 444.531 444.531" xml:space="preserve"><title>Back Button</title><g><path fill="#656565" d="M213.13,222.409L351.88,83.653c7.05-7.043,10.567-15.657,10.567-25.841c0-10.183-3.518-18.793-10.567-25.835
-          l-21.409-21.416C323.432,3.521,314.817,0,304.637,0s-18.791,3.521-25.841,10.561L92.649,196.425
-          c-7.044,7.043-10.566,15.656-10.566,25.841s3.521,18.791,10.566,25.837l186.146,185.864c7.05,7.043,15.66,10.564,25.841,10.564
-          s18.795-3.521,25.834-10.564l21.409-21.412c7.05-7.039,10.567-15.604,10.567-25.697c0-10.085-3.518-18.746-10.567-25.978
-          L213.13,222.409z"></path></g></svg> </a><span>Back</span></h3><div class="ot-lst-subhdr"><div class="ot-search-cntr"><label for="vendor-search-handler" class="ot-scrn-rdr">Vendor Search</label> <input id="vendor-search-handler" type="text" placeholder="Search..." name="vendor-search-handler"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 -30 110 110"><title>Search Icon</title><path fill="#2e3644" d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23
-            s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92
-            c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17
-            s-17-7.626-17-17S14.61,6,23.984,6z"></path></svg></div><div class="ot-fltr-cntr"><button id="filter-btn-handler" aria-label="Filter" aria-haspopup="true"><svg role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 402.577 402.577" xml:space="preserve"><title>Filter Icon</title><g><path fill="#fff" d="M400.858,11.427c-3.241-7.421-8.85-11.132-16.854-11.136H18.564c-7.993,0-13.61,3.715-16.846,11.136
-      c-3.234,7.801-1.903,14.467,3.999,19.985l140.757,140.753v138.755c0,4.955,1.809,9.232,5.424,12.854l73.085,73.083
-      c3.429,3.614,7.71,5.428,12.851,5.428c2.282,0,4.66-0.479,7.135-1.43c7.426-3.238,11.14-8.851,11.14-16.845V172.166L396.861,31.413
-      C402.765,25.895,404.093,19.231,400.858,11.427z"></path></g></svg></button></div><div id="ot-anchor"></div><section id="ot-fltr-modal"><div id="ot-fltr-cnt"><button id="clear-filters-handler">Clear</button><div class="ot-fltr-scrlcnt ot-pc-scrollbar"><div class="ot-fltr-opts"><div class="ot-fltr-opt"><div class="ot-chkbox"><input id="chkbox-id" type="checkbox" aria-checked="false" class="category-filter-handler"> <label for="chkbox-id"><span class="ot-label-txt">checkbox label</span></label> <span class="ot-label-status">label</span></div></div></div><div class="ot-fltr-btns"><button id="filter-apply-handler">Apply</button> <button id="filter-cancel-handler">Cancel</button></div></div></div></section></div></div><section id="ot-lst-cnt" class="ot-pc-scrollbar"><div id="ot-sel-blk"><div class="ot-sel-all"><div class="ot-sel-all-hdr"><span class="ot-consent-hdr">Consent</span> <span class="ot-li-hdr">Leg.Interest</span></div><div class="ot-sel-all-chkbox"><div class="ot-chkbox" id="ot-selall-hostcntr"><input id="select-all-hosts-groups-handler" type="checkbox" aria-checked="false"> <label for="select-all-hosts-groups-handler"><span class="ot-label-txt">checkbox label</span></label> <span class="ot-label-status">label</span></div><div class="ot-chkbox" id="ot-selall-vencntr"><input id="select-all-vendor-groups-handler" type="checkbox" aria-checked="false"> <label for="select-all-vendor-groups-handler"><span class="ot-label-txt">checkbox label</span></label> <span class="ot-label-status">label</span></div><div class="ot-chkbox" id="ot-selall-licntr"><input id="select-all-vendor-leg-handler" type="checkbox" aria-checked="false"> <label for="select-all-vendor-leg-handler"><span class="ot-label-txt">checkbox label</span></label> <span class="ot-label-status">label</span></div></div></div></div><div class="ot-sdk-row"><div class="ot-sdk-column"></div></div></section></section><!-- Footer buttons and logo --><div class="ot-pc-footer"><div class="ot-btn-container"> <button class="save-preference-btn-handler onetrust-close-btn-handler">Confirm my choices</button></div><div class="ot-pc-footer-logo"><a href="https://onetrust.com/poweredbyonetrust" target="_blank" rel="noopener noreferrer" aria-label="Powered by Onetrust" style="background-image: url(&quot;https://cdn.cookielaw.org/logos/static/poweredBy_ot_logo.svg&quot;)"></a></div></div><!-- Cookie subgroup container --><!-- Vendor list link --><!-- Cookie lost link --><!-- Toggle HTML element --><!-- Checkbox HTML --><!-- Arrow SVG element --><!-- plus minus--><!-- Accordion basic element --><span class="ot-scrn-rdr" aria-atomic="true" aria-live="polite"></span><iframe class="ot-text-resize" title="onetrust-text-resize" style="position:absolute;top:-50000px;width:100em;" aria-hidden="true"></iframe></div></div><div id="mktoStyleLoaded" style="display: none; border-top-color: rgb(18, 52, 86);"></div><div id="mktoStyleLoaded" style="display: none; border-top-color: rgb(18, 52, 86);"></div><form novalidate="novalidate" class="mktoForm mktoHasWidth mktoLayoutLeft" style="font-family: Helvetica, Arial, sans-serif; font-size: 13px; color: rgb(51, 51, 51); visibility: hidden; position: absolute; top: -500px; left: -1000px; width: 1680px;"></form><form novalidate="novalidate" class="mktoForm mktoHasWidth mktoLayoutLeft" style="font-family: Helvetica, Arial, sans-serif; font-size: 13px; color: rgb(51, 51, 51); visibility: hidden; position: absolute; top: -500px; left: -1000px; width: 1680px;"></form><iframe name="mktoFormsXDIframe0.618012142930149" id="MktoForms2XDIframe" src="https://app-sj17.marketo.com/index.php/form/XDFrame" style="display: none;"></iframe><iframe id="intercom-frame" style="position: absolute !important; opacity: 0 !important; width: 1px !important; height: 1px !important; top: 0 !important; left: 0 !important; border: none !important; display: block !important; z-index: -1 !important; pointer-events: none;" aria-hidden="true" tabindex="-1" title="Intercom"></iframe><div class="intercom-lightweight-app" aria-live="polite"><style id="intercom-lightweight-app-style" type="text/css">
-  @keyframes intercom-lightweight-app-launcher {
-    from {
-      opacity: 0;
-      transform: scale(0.5);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
+			<Head>
+				<title>Copper CRM</title>
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
 
-  @keyframes intercom-lightweight-app-gradient {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+			<div dangerouslySetInnerHTML={{ __html: rawHtml }}></div>
+		</>
+	);
+};
 
-  @keyframes intercom-lightweight-app-messenger {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .intercom-lightweight-app {
-    position: fixed;
-    z-index: 2147483001;
-    width: 0;
-    height: 0;
-    font-family: intercom-font, "Helvetica Neue", "Apple Color Emoji", Helvetica, Arial, sans-serif;
-  }
-
-  .intercom-lightweight-app-gradient {
-    position: fixed;
-    z-index: 2147483002;
-    width: 500px;
-    height: 500px;
-    bottom: 0;
-    right: 0;
-    pointer-events: none;
-    background: radial-gradient(
-      ellipse at bottom right,
-      rgba(29, 39, 54, 0.16) 0%,
-      rgba(29, 39, 54, 0) 72%);
-    animation: intercom-lightweight-app-gradient 200ms ease-out;
-  }
-
-  .intercom-lightweight-app-launcher {
-    position: fixed;
-    z-index: 2147483003;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: #ff3465;
-    cursor: pointer;
-    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.06), 0 2px 32px 0 rgba(0, 0, 0, 0.16);
-    animation: intercom-lightweight-app-launcher 250ms ease;
-  }
-
-  .intercom-lightweight-app-launcher:focus {
-    outline: none;
-    
-  }
-
-  .intercom-lightweight-app-launcher-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60px;
-    height: 60px;
-    transition: transform 100ms linear, opacity 80ms linear;
-  }
-
-  .intercom-lightweight-app-launcher-icon-open {
-    
-        opacity: 1;
-        transform: rotate(0deg) scale(1);
-      
-  }
-
-  .intercom-lightweight-app-launcher-icon-open svg {
-    width: 28px;
-    height: 32px;
-  }
-
-  .intercom-lightweight-app-launcher-icon-open svg path {
-    fill: rgb(255, 255, 255);
-  }
-
-  .intercom-lightweight-app-launcher-icon-self-serve {
-    
-        opacity: 1;
-        transform: rotate(0deg) scale(1);
-      
-  }
-
-  .intercom-lightweight-app-launcher-icon-self-serve svg {
-    height: 56px;
-  }
-
-  .intercom-lightweight-app-launcher-icon-self-serve svg path {
-    fill: rgb(255, 255, 255);
-  }
-
-  .intercom-lightweight-app-launcher-custom-icon-open {
-    max-height: 36px;
-    max-width: 36px;
-    
-        opacity: 1;
-        transform: rotate(0deg) scale(1);
-      
-  }
-
-  .intercom-lightweight-app-launcher-icon-minimize {
-    
-        opacity: 0;
-        transform: rotate(-60deg) scale(0);
-      
-  }
-
-  .intercom-lightweight-app-launcher-icon-minimize svg {
-    width: 16px;
-  }
-
-  .intercom-lightweight-app-launcher-icon-minimize svg path {
-    fill: rgb(255, 255, 255);
-  }
-
-  .intercom-lightweight-app-messenger {
-    position: fixed;
-    z-index: 2147483003;
-    overflow: hidden;
-    background-color: white;
-    animation: intercom-lightweight-app-messenger 250ms ease-out;
-    
-        width: 376px;
-        height: calc(100% - 40px);
-        max-height: 704px;
-        min-height: 250px;
-        right: 20px;
-        bottom: 20px;
-        box-shadow: 0 5px 40px rgba(0,0,0,0.16);
-        border-radius: 8px;
-      
-  }
-
-  .intercom-lightweight-app-messenger-header {
-    height: 75px;
-    background: linear-gradient(
-      135deg,
-      rgb(50, 30, 65) 0%,
-      rgb(0, 0, 0) 100%
-    );
-  }
-
-  @media print {
-    .intercom-lightweight-app {
-      display: none;
-    }
-  }
-</style></div></body>
-        `
-
-  return (
-    <>
-      <NavigationDefault/>
-
-      <Head>
-        <title>Copper CRM</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <div dangerouslySetInnerHTML={{ __html: rawHtml }}></div>
-
-    </>
-    
-  );
-}
-
-
-
-export default PricingPage
+export default PricingPage;
