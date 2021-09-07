@@ -19,6 +19,7 @@ import Details from "../../Blocks/Details";
 import EmbeddedVideo from "../../Blocks/EmbeddedVideo";
 import LogoModule from "../../Blocks/LogoModule";
 import CustomSection from "../../Blocks/CustomSection";
+import LatestWebinarModule from "../../Blocks/LatestWebinarModule";
 
 const Products = ({ entry }) => {
 	return (
@@ -206,12 +207,23 @@ const Products = ({ entry }) => {
 						</>
 
 						<>
-							{block.typeHandle == "temporalLogoModule" ? (
+							{block.typeHandle == "customSection" ? (
 								<CustomSection
 									slug={entry.slug}
 									backgroundColor={block.backgroundColor}
 									settings={block.settings}
 									layout={block.layout}
+								/>
+							) : null}
+						</>
+
+						<>
+							{block.typeHandle == "latestWebinarModule" ? (
+								<LatestWebinarModule
+									slug={entry.slug}
+									header={block.header}
+									removeHeader={block.removeHeader}
+									addPaddingBottom={block.addPaddingBottom}
 								/>
 							) : null}
 						</>
