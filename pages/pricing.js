@@ -2993,8 +2993,6 @@ color:gray;
   </div>
 </section>
     
-
-
     </main>
 
                     <footer class="c-footer footer-about">
