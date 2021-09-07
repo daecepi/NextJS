@@ -182,9 +182,9 @@ const SyncedHero = ( { backgroundColor, heroType, displayVideo, copyRatioVariati
 
 })
 </script>
-  `
+  `;
 
-  let formId  = `"mktoForm_${formId ? formId : 2157}"`
+  let formId  = `mktoForm_${formId ? formId : 2157}`
 
   for(let i = 0; i < successMessageSpecializations.length ; i++){
     success.push({ variationLogic: i.variationLogic.value, variationLogicComparison: i.variationLogicComparison, variationLogicValue: i.variationLogicValue, vSuccessMessage: i.vSuccessMessage} )

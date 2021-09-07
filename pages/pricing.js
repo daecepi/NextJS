@@ -1,4 +1,6 @@
 import NavigationDefault from "../components/Navigation/NavigationDefault";
+
+import Script from "next/script";
 import Head from "next/head";
 
 const PricingPage = ({ res }) => {
@@ -8,7 +10,6 @@ const PricingPage = ({ res }) => {
 
 	let rawHtml = `
   <body class="ltr pricing">
-                
   <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.4.0/dist/lazyload.min.js"></script>
 
     <script>
@@ -2992,110 +2993,6 @@ color:gray;
   </div>
 </section>
     
-<div class="row">
-    <div data-cy="l-modal-overlay" id="l-modal--overlay" style="display: none;">
-      <div class="l-modal--content " id="personalization-base-Modal">
-        <div data-cy="l-modal-content" class="modal-content" style="max-width:513px;">
-          <a class="modal-close" data-dismiss="modal" aria-label="Close" onclick="closeModal(true)">
-            <svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <defs></defs>
-              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <g id="Request-a-demo-modal---no-logo" transform="translate(-233.000000, -225.000000)">
-                  <g id="baseline-close-24px-copy" transform="translate(228.000000, 220.000000)">
-                    <polygon id="Shape" fill="#FF3465" fill-rule="nonzero" points="19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12"></polygon>
-                    <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
-                  </g>
-                </g>
-              </g>
-            </svg>
-          </a>
-          <div class="container">
-
-                                <style>
-  .l-modal--content .modal-content .container {
-    padding: 60px !important;
-    max-height: 100vh !important;
-    overflow-y: auto !important;
-  }
-</style>
-<div id="base-personalization-popup-template">
-  <div class="initial-state">
-    <div class="row extra-bottom-margin--x-small">
-      <div class="col-md-12" style="text-align: center;">
-        <div id="main-image-container" class="c-image">
-          <img src="https://copper.objects.frb.io/imgs/personalization/copper-spin.gif" alt="Image on pop up" style="max-width: 277.75px;max-height:245.52px;box-shadow: 5px 6px 5px #b9b8b8;">
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12 leader-titles" style="text-align: center;">
-        <h4 id="main-title" class="extra-bottom-margin--xx-medium-small">See how Copper can work for you</h4>
-        <p id="main-paragraph" class="p-sm">Try Copper free for 14 days. No credit card needed.</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12 leader-titles" style="text-align: center;">
-        <a id="do-success" class="c-button c-button--hot-pink" href="/signup">Try Free</a>
-        <a id="do-close" class="c-button c-button--outline" href="#">No thanks</a>
-      </div>
-    </div>
-  </div>
-  <script>
-    LazyLoad.js([
-    'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'],
-    function(){
-      $("#do-success").on("click", function(){
-        ga( 'send', 'event', 'FOSP-PopupCTA', 'success-action', deviceId.status.status);
-        // Since calendly is not available this will force an event on the marketo API
-        if(Munchkin){
-          Munchkin.munchkinFunction('clickLink', {
-            'href': '/pricing/requested/1on1'
-          }
-        );
-        }
-
-        // UI changes
-        $(".initial-state").hide()
-        $(".success-state").fadeIn("fast")
-      })
-      $("#do-close").on("click", function(){
-        window.location.hash = "";
-        $("#l-modal--overlay").fadeOut("fast");
-      })
-    })
-  </script>
-  <div class="success-state">
-    <div class="row">
-      <div class="col-md-12" style="text-align: center;">
-        <div class="c-image">
-          <img src="https://d2ydtwisqcxv72.cloudfront.net/landing/copper-logo.png" alt="Copper logo" style="max-width: 100%;">
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12 leader-titles" style="text-align: center;">
-        <h3>Thanks &amp; hang tight!</h3>
-        <p class="p-sm">One of our reps will get in touch with you shortly for a one-on-one demo</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12 leader-titles" style="text-align: center;">
-        <a id="success-close" class="c-button c-button--hot-pink" href="#">Back to Copper</a>
-      </div>
-    </div>
-  </div>
-  <script>
-    $("#success-close").on("click", function(){
-      window.location.hash = "";
-      $("#l-modal--overlay").fadeOut("fast");
-    })
-  </script>
-</div>            
-          </div>
-        </div>          
-      </div>
-    </div>
-  </div>
 
 
     </main>
@@ -3799,6 +3696,7 @@ background-image: linear-gradient(to bottom, #75ae4c, #99c47c);
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
+			<Script src="/js/lazyload.min.js" strategy="beforeInteractive"></Script>
 			<div dangerouslySetInnerHTML={{ __html: rawHtml }}></div>
 		</>
 	);
