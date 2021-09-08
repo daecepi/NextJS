@@ -4,11 +4,13 @@ import LoadingComponent from "../Loading/Loading"
 
 const SyncedHero = ( { backgroundColor, heroType, displayVideo, copyRatioVariation, defaultEyebrow, eyebrowSettings, defaultCopy, defaultImage, defaultImageContain, defaultVideoEmbedCode, formId, marketoFormCopy, displayVideoOnSuccess, successMessage, successMessageSpecializations, successImage, successVideoEmbedCode } ) => {
   const successVariation = [];
+
+  let formIdValue  = formId ? formId : 2157
   
   //newSuccessVariationInfo|json_encode|replace("&#39;","\'")|replace("\u003C","")|replace("\u003Ch2","")|replace("\u003E","")|raw 
   let rawScripts = `
   <script>
-  var syncedFormId = '${ formId ? formId : '2157' }';
+  var syncedFormId = '${ formIdValue }';
    LazyLoad.js(['https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'],function(){
   // Base appeareance
   $('#main-form').css('height','0px');
@@ -74,12 +76,12 @@ const SyncedHero = ( { backgroundColor, heroType, displayVideo, copyRatioVariati
   }
   if(false || typeof MktoForms2 === "undefined"){
   } else {
-    MktoForms2.loadForm("https://app-sj17.marketo.com", "763-DVL-293", '${ formId ? formId : '2157' }' , function (form){
+    MktoForms2.loadForm("https://app-sj17.marketo.com", "763-DVL-293", '${ formIdValue }' , function (form){
       //Add an onSuccess handler
       form.onSuccess(function(values, followUpUrl){
 
         // Preparing intercom fields
-        var heroForm = MktoForms2.getForm('${ formId ? formId : '2157' }');
+        var heroForm = MktoForms2.getForm('${ formIdValue }');
         var formSubmitted = heroForm.getValues();
         
         compSize = formSubmitted['companySize'];
@@ -88,7 +90,7 @@ const SyncedHero = ( { backgroundColor, heroType, displayVideo, copyRatioVariati
         //window.location.hash = '#thank-you';
         
         intercomCallUpdate(formSubmitted.Email, name);
-        ga('send', 'event', 'Get Demo', 'FormFill', '${ formId ? formId : '2164' }');
+        ga('send', 'event', 'Get Demo', 'FormFill', '${ formIdValue }');
         //return false to prevent the submission handler from taking the lead to the follow up url.
 
         shDisplayVariationMessage(formSubmitted);
@@ -96,7 +98,7 @@ const SyncedHero = ( { backgroundColor, heroType, displayVideo, copyRatioVariati
       });
     });
 
-    var syncedFormId = '${ formId ? formId : '2157' }';
+    var syncedFormId = '${ formIdValue }';
 
 
     MktoForms2.whenReady(function (form){
@@ -130,7 +132,7 @@ const SyncedHero = ( { backgroundColor, heroType, displayVideo, copyRatioVariati
     if(0 || typeof MktoForms2 === "undefined"){
       data = {FirstName: $('input#fromEmail').val(), FirstName: $('input#FirstName').val(), LastName: $('input#LastName').val(), Phone: $('input#Phone').val(), Email: $('input#email').val(), Company: $('input#Company').val(), CompanySize: $('select#companySize').val() };
     } else {
-      var heroForm = MktoForms2.getForm('${ formId ? formId : '2157' }');
+      var heroForm = MktoForms2.getForm('${ formIdValue }');
       data = heroForm.getValues();
       dataValidate = heroForm.validate();
     }
@@ -184,7 +186,6 @@ const SyncedHero = ( { backgroundColor, heroType, displayVideo, copyRatioVariati
 </script>
   `;
 
-  let formId  = `mktoForm_${formId ? formId : 2157}`
 
   for(let i = 0; i < successMessageSpecializations.length ; i++){
     success.push({ variationLogic: i.variationLogic.value, variationLogicComparison: i.variationLogicComparison, variationLogicValue: i.variationLogicValue, vSuccessMessage: i.vSuccessMessage} )
@@ -289,7 +290,7 @@ const SyncedHero = ( { backgroundColor, heroType, displayVideo, copyRatioVariati
                     </div>
                     <div className="online-marketo">
                       <LoadingComponent />
-                      <form id={`mktoForm_${ formId }`} data-formId={formId} data-formInstance="one" >
+                      <form id={`mktoForm_${ formIdValue }`} data-formId={formIdValue} data-formInstance="one" >
                         {
                           marketoFormCopy?.length ?
                             <div dangerouslySetInnerHTML={{ __html: marketoFormCopy }}></div>
@@ -383,7 +384,7 @@ const SyncedHero = ( { backgroundColor, heroType, displayVideo, copyRatioVariati
                       </div>
                       <div className="online-marketo">
                         <LoadingComponent />
-                        <form id={`mktoForm_${ formId }`} data-formId={`${ formId }`} data-formInstance="one" >
+                        <form id={`mktoForm_${ formIdValue }`} data-formId={`${ formIdValue }`} data-formInstance="one" >
                           {
                             marketoFormCopy?.length ?
                               <div dangerouslySetInnerHTML={{ __html: marketoFormCopy }}></div>
