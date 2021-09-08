@@ -80,10 +80,76 @@ const AgencyCrm = () => {
                 imageHeigh='1210'
                 imagePosition='left'
             />
-            <Quote></Quote>
-            <CallOut></CallOut>
-            <NuumbersSection></NuumbersSection>
-            <RelatedContent></RelatedContent>
+            <Quote
+                quote='Copper has created transparency that has resonated throughout our entire company.'
+                quoteby='Nicholas Markovitz'
+                quotePosition='Managing Director, Creative Brands'
+                ctaUrl='/blog/creative-brands-case-study'
+                ctaText='See how creative brands did it'
+                imageUrl='/imgs/industry/industry-agency-customer.jpg'
+                imageWidth='676'
+                imageHeight='880'
+                bgColor='graphite'
+            ></Quote>
+            <CallOut 
+                title='Create something awesome, together.'
+            ></CallOut>
+            <NuumbersSection
+                eyebrow='By The Numbers'
+                title='Copper + Digital Agencies'
+                
+            >
+                <div className="row">
+                  
+                  <div className="c-number col-md-5">
+                    <span className="t-numbers">13</span>
+                    <p>hours per user per week saved on manual data entry</p>
+                  </div>
+                  <div className="c-number col-md-5 offset-md-1">
+                    <span className="t-numbers">50%</span>
+                    <p>more accurate reporting</p>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="c-number col-md-5">
+                    <span className="t-numbers">43%</span>
+                    <p>increase in team collaboration when closing deals</p>
+                  </div>
+                  <div className="c-number col-md-5 offset-md-1">
+                    <span className="t-numbers">36%</span>
+                    <p>faster response time to prospects and clients</p>
+                  </div>
+                </div>
+            </NuumbersSection>
+            <RelatedContent 
+                eyebrow='Resources'
+                cards={[
+                    {
+                        eyebrow:'Case Study',
+                        title:'How an NYC Agency Beats the Competition with Automation',
+                        url:'/blog/jump-450-agency-crm-case-study',
+                        image:'/imgs/industry/jump-blog-01.png',
+                        imageWidth:'899',
+                        imageHeight:'581'
+                    },
+                    {
+                        eyebrow:'Copper Blog',
+                        title:'How to Build Long-lasting Client/Agency Relationships',
+                        url:'/blog/agency-client-relationships',
+                        image:'/imgs/industry/industry-agency-blog-02@2x.jpg',
+                        imageWidth:'899',
+                        imageHeight:'581'
+                    },
+                    {
+                        eyebrow:'BEST PRACTICES',
+                        title:'Top 6 Things to Look for in a CRM for Agencies',
+                        url:'/blog/crm-agencies',
+                        image:'/imgs/industry/industry-agency-blog-03@2x.jpg',
+                        imageWidth:'899',
+                        imageHeight:'581'
+                    },
+                ]}
+            ></RelatedContent>
             <FinalPleaHero></FinalPleaHero>
 
             <Footer></Footer>
