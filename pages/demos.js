@@ -1,9 +1,8 @@
-import NavigationDefault from '../components/Navigation/NavigationDefault';
-import Head from 'next/head';
+import NavigationDefault from "../components/Navigation/NavigationDefault";
+import Head from "next/head";
 
 const DemosPage = () => {
-
-  let rawHtml = `
+	let rawHtml = `
   <main id="content" role="main">
       
   <style>
@@ -263,8 +262,8 @@ LazyLoad.js(['https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'
           <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
           <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
           <div class="wistia_embed wistia_async_pmc7iaf2o2 seo=false videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>-->
-          <!-- <script src="https://prosperworks.wistia.com/medias/45dro7cdil" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_pmc7iaf2o2 videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/pmc7iaf2o2/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="Thumbnail card image" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div></div></div></div> -->
-          <script src="https://fast.wistia.com/embed/medias/45dro7cdil.jsonp" async=""></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async=""></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_45dro7cdil videoFoam=true wistia_embed_initialized" style="height:100%;position:relative;width:100%" id="wistia-45dro7cdil-1"><div class="wistia_swatch" style="height: 100%; left: 0px; opacity: 1; overflow: hidden; position: absolute; top: 0px; transition: opacity 200ms ease 0s; width: 100%;"><img src="https://fast.wistia.com/embed/medias/45dro7cdil/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="Thumbnail card image" aria-hidden="true" onload="this.parentNode.style.opacity=1;"></div><div id="wistia_chrome_23" class="w-chrome" tabindex="-1" style="display: inline-block; height: 100%; line-height: normal; margin: 0px; padding: 0px; position: relative; vertical-align: top; width: 100%; zoom: 1; outline: none; overflow: hidden; box-sizing: content-box;"><div id="wistia_grid_29_wrapper" style="display: block;"><div id="wistia_grid_29_above"></div><div id="wistia_grid_29_main"><div id="wistia_grid_29_behind"></div><div id="wistia_grid_29_center"><div class="w-video-wrapper w-css-reset" style="clip: rect(0px, 0px, 0px, 0px); height: 100%; position: absolute; top: 0px; width: 100%; opacity: 1; background-color: rgb(0, 0, 0);"></div><div class="w-ui-container" style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%; opacity: 1;"></div></div><div id="wistia_grid_29_front"></div><div id="wistia_grid_29_top_inside"><div id="wistia_grid_29_top"></div></div><div id="wistia_grid_29_bottom_inside"><div id="wistia_grid_29_bottom"></div></div><div id="wistia_grid_29_left_inside"><div id="wistia_grid_29_left"></div></div><div id="wistia_grid_29_right_inside"><div id="wistia_grid_29_right"></div></div></div><div id="wistia_grid_29_below"></div><style id="wistia_30_style" type="text/css" class="wistia_injected_style">#wistia_grid_29_wrapper{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;font-family:Arial,sans-serif;font-size:14px;height:100%;position:relative;text-align:left;width:100%;}
+          <!-- <script src="https://prosperworks.wistia.com/medias/45dro7cdil" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_pmc7iaf2o2 videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/pmc7iaf2o2/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="Thumbnail card image" aria-hidden="true" onload="" /></div></div></div></div> -->
+          <script src="https://fast.wistia.com/embed/medias/45dro7cdil.jsonp" async=""></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async=""></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_45dro7cdil videoFoam=true wistia_embed_initialized" style="height:100%;position:relative;width:100%" id="wistia-45dro7cdil-1"><div class="wistia_swatch" style="height: 100%; left: 0px; opacity: 1; overflow: hidden; position: absolute; top: 0px; transition: opacity 200ms ease 0s; width: 100%;"><img src="https://fast.wistia.com/embed/medias/45dro7cdil/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="Thumbnail card image" aria-hidden="true" onload=""></div><div id="wistia_chrome_23" class="w-chrome" tabindex="-1" style="display: inline-block; height: 100%; line-height: normal; margin: 0px; padding: 0px; position: relative; vertical-align: top; width: 100%; zoom: 1; outline: none; overflow: hidden; box-sizing: content-box;"><div id="wistia_grid_29_wrapper" style="display: block;"><div id="wistia_grid_29_above"></div><div id="wistia_grid_29_main"><div id="wistia_grid_29_behind"></div><div id="wistia_grid_29_center"><div class="w-video-wrapper w-css-reset" style="clip: rect(0px, 0px, 0px, 0px); height: 100%; position: absolute; top: 0px; width: 100%; opacity: 1; background-color: rgb(0, 0, 0);"></div><div class="w-ui-container" style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%; opacity: 1;"></div></div><div id="wistia_grid_29_front"></div><div id="wistia_grid_29_top_inside"><div id="wistia_grid_29_top"></div></div><div id="wistia_grid_29_bottom_inside"><div id="wistia_grid_29_bottom"></div></div><div id="wistia_grid_29_left_inside"><div id="wistia_grid_29_left"></div></div><div id="wistia_grid_29_right_inside"><div id="wistia_grid_29_right"></div></div></div><div id="wistia_grid_29_below"></div><style id="wistia_30_style" type="text/css" class="wistia_injected_style">#wistia_grid_29_wrapper{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;font-family:Arial,sans-serif;font-size:14px;height:100%;position:relative;text-align:left;width:100%;}
 #wistia_grid_29_wrapper *{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}
 #wistia_grid_29_above{position:relative;}
 #wistia_grid_29_main{display:block;height:100%;position:relative;}
@@ -433,18 +432,18 @@ LazyLoad.js(['https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'
       </main>
   `;
 
-  return (
-    <>
-      <NavigationDefault/>
+	return (
+		<>
+			<NavigationDefault />
 
-      <Head>
-        <title>Copper CRM</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-         
-      <div dangerouslySetInnerHTML={{ __html: rawHtml }}></div>
-    </>
-  );
-}
+			<Head>
+				<title>Copper CRM</title>
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
 
-export default DemosPage
+			<div dangerouslySetInnerHTML={{ __html: rawHtml }}></div>
+		</>
+	);
+};
+
+export default DemosPage;
