@@ -244,9 +244,6 @@ const Products = ({ entry }) => {
 						</>
 					</div>
 				);
-				if (block.typeHandle == "twoColumn") {
-					return <div>test</div>;
-				}
 			})}
 
 			{/* <Image
