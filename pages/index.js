@@ -238,7 +238,7 @@ export default function Home({res}) {
               }}
               
             ></Script>
-            <Script strategy="beforeInteractive" src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js'
+            <Script strategy="lazyOnload" src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js'
             onLoad={() => {
               $(".three-column-slider .container > .container .row").slick({
                 infinite: false,
