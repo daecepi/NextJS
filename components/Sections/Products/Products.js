@@ -20,6 +20,7 @@ import EmbeddedVideo from "../../Blocks/EmbeddedVideo";
 import LogoModule from "../../Blocks/LogoModule";
 import CustomSection from "../../Blocks/CustomSection";
 import LatestWebinarModule from "../../Blocks/LatestWebinarModule";
+import UnderlineNumbers from "../../Blocks/UnderlineNumber";
 
 const Products = ({ entry }) => {
 	return (
@@ -196,17 +197,6 @@ const Products = ({ entry }) => {
 						</>
 
 						<>
-							{block.typeHandle == "temporalLogoModule" ? (
-								<TemporalLogoModule
-									slug={entry.slug}
-									header={block.header}
-									logos={block.logos}
-									sameSpacing={block.sameSpacing}
-								/>
-							) : null}
-						</>
-
-						<>
 							{block.typeHandle == "customSection" ? (
 								<CustomSection
 									slug={entry.slug}
@@ -224,6 +214,29 @@ const Products = ({ entry }) => {
 									header={block.header}
 									removeHeader={block.removeHeader}
 									addPaddingBottom={block.addPaddingBottom}
+								/>
+							) : null}
+						</>
+
+						<>
+							{block.typeHandle == "temporalLogoModule" ? (
+								<TemporalLogoModule
+									slug={entry.slug}
+									header={block.header}
+									logos={block.logos}
+									sameSpacing={block.sameSpacing}
+								/>
+							) : null}
+						</>
+
+						<>
+							{block.typeHandle == "underlineNumbers" ? (
+								<UnderlineNumbers
+									slug={entry.slug}
+									image={block.image}
+									eyebrow={block.eyebrow}
+									copy={block.copy}
+									numbersTable={block.numbersTable}
 								/>
 							) : null}
 						</>
