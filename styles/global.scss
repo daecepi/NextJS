@@ -1117,5 +1117,24 @@ section.animation-two-mobile:before {
 .container-xxl{
   max-width: 1140px!important;
 }
-
+.role-users-edit-button {
+  position: fixed;
+  top: 5%;
+  right: -105px;
+  background: white;
+  padding: 10px 15px;
+  border-radius: 30px;
+  z-index: 99999999;
+  transition:0.5s;
+  border: 1px solid #ff3565;
+}
+.role-users-edit-button:hover{
+right:0px;
+transition:0.5s;
+z-index: 99999999;
+}
+.role-users-edit-button:hover a span {
+transform: rotateY(180deg);
+display: inline-block;
+}
 @tailwind  utilities;
