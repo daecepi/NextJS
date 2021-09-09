@@ -21,6 +21,8 @@ import LogoModule from "../../Blocks/LogoModule";
 import CustomSection from "../../Blocks/CustomSection";
 import LatestWebinarModule from "../../Blocks/LatestWebinarModule";
 import UnderlineNumbers from "../../Blocks/UnderlineNumber";
+import LeadBottomSection from "../../Blocks/LeadBottomSection";
+import ResourcesModule from "../../Blocks/ResourcesModule";
 
 const Products = ({ entry }) => {
 	return (
@@ -258,7 +260,13 @@ const Products = ({ entry }) => {
 
 						<>
 							{block.typeHandle == "resources" ? (
-								<PricingPlans slug={entry.slug} text={block.text} />
+								<ResourcesModule slug={entry.slug} text={block.text} />
+							) : null}
+						</>
+
+						<>
+							{block.typeHandle == "leadBottomSection" ? (
+								<LeadBottomSection slug={entry.slug} copy={block.copy} />
 							) : null}
 						</>
 					</div>
