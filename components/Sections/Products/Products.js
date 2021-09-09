@@ -255,6 +255,12 @@ const Products = ({ entry }) => {
 								/>
 							) : null}
 						</>
+
+						<>
+							{block.typeHandle == "resources" ? (
+								<PricingPlans slug={entry.slug} text={block.text} />
+							) : null}
+						</>
 					</div>
 				);
 			})}
