@@ -1137,4 +1137,10 @@ z-index: 99999999;
 transform: rotateY(180deg);
 display: inline-block;
 }
+@media (max-width: 1199.98px){
+.c-copper-chronicles__top__new {
+    position: unset;
+    top: 0;
+}
+}
 @tailwind  utilities;
