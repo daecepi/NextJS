@@ -23,6 +23,7 @@ import LatestWebinarModule from "../../Blocks/LatestWebinarModule";
 import UnderlineNumbers from "../../Blocks/UnderlineNumber";
 import LeadBottomSection from "../../Blocks/LeadBottomSection";
 import ResourcesModule from "../../Blocks/ResourcesModule";
+import heroFormFlow from "../../Blocks/HeroFormFlow";
 
 const Products = ({ entry }) => {
 	return (
@@ -35,7 +36,7 @@ const Products = ({ entry }) => {
 
 			{/* {entry} */}
 
-			{entry.landingBlocks.map((block) => {
+			{entry.landingBlocks.map((block, id) => {
 				return (
 					<div>
 						<>
@@ -267,6 +268,12 @@ const Products = ({ entry }) => {
 						<>
 							{block.typeHandle == "leadBottomSection" ? (
 								<LeadBottomSection slug={entry.slug} copy={block.copy} />
+							) : null}
+						</>
+
+						<>
+							{block.typeHandle == "heroFormFlow" ? (
+								<heroFormFlow slug={entry.slug} {...block} />
 							) : null}
 						</>
 					</div>
