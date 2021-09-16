@@ -1,21 +1,19 @@
-import { createContext, useContext } from 'react';
+import { createContext, useContext } from "react";
 
 const AppContext = createContext();
 
-
 export function SyncedAppWrapper({ children }) {
-  let sharedState = {
-    pageHeroSynced: false,
-    mainFormReference: undefined
-  }
+	let sharedState = {
+		pageHeroSynced: false,
+		mainFormReference: undefined,
+		generalSignupUrl: "/signup",
+	};
 
-  return (
-    <AppContext.Provider value={sharedState}>
-      {children}
-    </AppContext.Provider>
-  );
+	return (
+		<AppContext.Provider value={sharedState}>{children}</AppContext.Provider>
+	);
 }
 
 export function useSyncContext() {
-  return useContext(AppContext);
+	return useContext(AppContext);
 }
