@@ -1,6 +1,6 @@
 import CtaGroup from "../../Simples/CtaGroup";
 
-import { useSyncContext } from "../../contexts/SyncContext";
+import { useSyncContext } from "../../../../contexts/SyncContext";
 
 const HeroCopy = ({
 	slug,

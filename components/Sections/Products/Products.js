@@ -27,7 +27,7 @@ import heroFormFlow from "../../Blocks/HeroFormFlow";
 
 const Products = ({ entry }) => {
 	return (
-		<div className="mt-24 ">
+		<>
 			<Head>
 				<title>Copper CRM</title>
 				<link rel="icon" href="/favicon.ico" />
@@ -287,7 +287,7 @@ const Products = ({ entry }) => {
             height={500}
         /> */}
 			<FooterLanding></FooterLanding>
-		</div>
+		</>
 	);
 };
 

@@ -85,7 +85,7 @@ const PricingPlans = ({
 				<>
 					<p class="c-pricing-hero__sub mb-0 mt-4">
 						Per user, per month. Billed annually.
-					</p>{" "}
+					</p>
 					<span
 						style={{ display: "none" }}
 						class="c-pricing-hero__sub billed-monthly"
@@ -94,7 +94,7 @@ const PricingPlans = ({
 					</span>
 					<p class="c-pricing-hero__sub mt-0 no-bottom-margin">
 						Or $29/user when billed monthly.
-					</p>{" "}
+					</p>
 					<span
 						style={{ display: "none" }}
 						class="c-pricing-hero__sub billed-monthly"
@@ -123,7 +123,11 @@ const PricingPlans = ({
 	};
 
 	return (
-		<section class="c-pricing-hero--cornflower price-hero {{ matrixBlock.reducePadding ? 'h-reduce-padding' : '' }}">
+		<section
+			class={`c-pricing-hero--cornflower price-hero ${
+				reducePadding ? "h-reduce-padding" : ""
+			}`}
+		>
 			<div
 				class="fb-data-fetched hot-pink banner container extra-bottom-margin--x-small"
 				style={{ display: "none" }}
