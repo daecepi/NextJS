@@ -1,6 +1,6 @@
 const LeadBottomSection = ({ copy }) => {
 	return (
-		<section id="" class="c-cols c-cols pricing-style hot-pink">
+		<section id="" className="c-cols c-cols pricing-style hot-pink">
 			<div
 				style={{
 					position: "absolute",
@@ -11,7 +11,7 @@ const LeadBottomSection = ({ copy }) => {
 				}}
 			>
 				<div
-					class="disappear-mobile"
+					className="disappear-mobile"
 					style={{
 						width: "100%",
 						position: "relative",
@@ -30,7 +30,7 @@ const LeadBottomSection = ({ copy }) => {
 							alt="Bubbles graphic"
 						/>
 						<img
-							class="drop-right__img h-remove-shadow bubbles-raw"
+							className="drop-right__img h-remove-shadow bubbles-raw"
 							style={{
 								maxWidth: "auto",
 								height: "135%",
@@ -58,7 +58,7 @@ const LeadBottomSection = ({ copy }) => {
 							alt="Bubbles graphic"
 						/>
 						<img
-							class="drop-right__img h-remove-shadow bubbles-user"
+							className="drop-right__img h-remove-shadow bubbles-user"
 							style={{
 								maxWidth: "650px",
 								height: "auto",
@@ -77,24 +77,24 @@ const LeadBottomSection = ({ copy }) => {
 				</div>
 			</div>
 			<div
-				class="container c-animation-container"
+				className="container c-animation-container"
 				style={{ position: "static" }}
 			>
 				<h2
-					class="extra-bottom-margin--x-small"
+					className="extra-bottom-margin--x-small"
 					style={{ textAlign: "center" }}
 				></h2>
-				<div class="row column-reverse" style={{ position: "static" }}>
+				<div className="row column-reverse" style={{ position: "static" }}>
 					<div
-						class="col-md-6 d-flex align-items-center order-1 "
+						className="col-md-6 d-flex align-items-center order-1 "
 						style={{ position: "static" }}
 					>
 						<div
-							class="c-image c-image--extended-left c-image--shadow h-remove-shadow"
+							className="c-image c-image--extended-left c-image--shadow h-remove-shadow"
 							style={{ position: "static" }}
 						>
 							<div
-								class="appear-mobile"
+								className="appear-mobile"
 								style={{
 									width: "100%",
 									height: "auto",
@@ -118,7 +118,7 @@ const LeadBottomSection = ({ copy }) => {
 										alt="Bubbles graphic"
 									/>
 									<img
-										class="drop-right__img h-remove-shadow"
+										className="drop-right__img h-remove-shadow"
 										src="https://copper.objects.frb.io/imgs/pricing/pricing_cta-image-mobile@2x-migration-2.png"
 										alt="Bubbles graphic"
 									/>
@@ -126,7 +126,7 @@ const LeadBottomSection = ({ copy }) => {
 							</div>
 						</div>
 					</div>
-					<div class="col-md-6 c-valign--middle order-2">
+					<div className="col-md-6 c-valign--middle order-2">
 						{copy?.length ? (
 							<div dangerouslySetInnerHTML={{ __html: copy }}></div>
 						) : (
@@ -139,9 +139,9 @@ const LeadBottomSection = ({ copy }) => {
 								</p>
 							</>
 						)}
-						<div class="c-hero__buttons" style={{ flexDirection: "row" }}>
+						<div className="c-hero__buttons" style={{ flexDirection: "row" }}>
 							<a
-								class="c-button sendUTMsToAmplitude c-button--white  section-background-flavor"
+								className="c-button sendUTMsToAmplitude c-button--white  section-background-flavor"
 								style={{
 									justifyContent: "center",
 									marginRight: "5px",
@@ -152,7 +152,7 @@ const LeadBottomSection = ({ copy }) => {
 								Try free
 							</a>
 							<a
-								class="c-button c-button--outline  section-background-flavor "
+								className="c-button c-button--outline  section-background-flavor "
 								href="/demos"
 								style={{
 									justifyContent: "center",

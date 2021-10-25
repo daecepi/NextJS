@@ -28,15 +28,15 @@ const TableModule = ({
 				} ${matrixBlock.includeNavigation ? "nav-added" : ""}`}
 			>
 				{includeNavigation ? (
-					<div class="c-pricing-table--cornflower__navigation js-pricing-nav">
-						<div class="c-pricing-table__row--cornflower">
-							<div class="container c-pricing-table--cornflower__navigation--container">
-								<div class="c-pricing-table__info--cornflower md">
+					<div className="c-pricing-table--cornflower__navigation js-pricing-nav">
+						<div className="c-pricing-table__row--cornflower">
+							<div className="container c-pricing-table--cornflower__navigation--container">
+								<div className="c-pricing-table__info--cornflower md">
 									<p></p>
 								</div>
 								{firstHeaderLogoOne.length ? (
 									<>
-										<div class="c-pricing-table__logo__container">
+										<div className="c-pricing-table__logo__container">
 											{logoOneOptimized.length > 0 ? (
 												<picture>
 													{optimizedImages.srcsetWebP() ? (
@@ -54,7 +54,7 @@ const TableModule = ({
 														sizes="100vw"
 														width={logoOneOptimized.originalImageWidth}
 														height={logoOneOptimized.originalImageHeight}
-														class="c-pricing-table__logo"
+														className="c-pricing-table__logo"
 														alt={`${
 															logoOneOptimized?.altText?.length
 																? logoOneOptimized?.altText
@@ -65,7 +65,7 @@ const TableModule = ({
 												</picture>
 											) : (
 												<img
-													class="c-pricing-table__logo"
+													className="c-pricing-table__logo"
 													src={headerLogoOne?.url || ""}
 													alt={`${
 														headerLogoOne?.altText !== undefined &&
@@ -82,7 +82,7 @@ const TableModule = ({
 									""
 								)}
 								{firstHeaderLogoTwo?.length ? (
-									<div class="c-pricing-table__logo__container">
+									<div className="c-pricing-table__logo__container">
 										{logoTwoOptimized?.optimizedImageUrls?.length > 0 ? (
 											<picture>
 												{logoTwoOptimized.srcsetWebP() ? (
@@ -100,7 +100,7 @@ const TableModule = ({
 													sizes="100vw"
 													width={logoTwoOptimized.originalImageWidth}
 													height={logoTwoOptimized.originalImageHeight}
-													class="c-pricing-table__logo"
+													className="c-pricing-table__logo"
 													alt={`${
 														headerLogoTwo.altText !== undefined &&
 														headerLogoTwo.altText.length
@@ -112,7 +112,7 @@ const TableModule = ({
 											</picture>
 										) : (
 											<img
-												class="c-pricing-table__logo"
+												className="c-pricing-table__logo"
 												src={headerLogoTwo.url}
 												alt={
 													headerLogoTwo?.altText?.length
@@ -132,48 +132,48 @@ const TableModule = ({
 				) : (
 					""
 				)}
-				<div class="container">
+				<div className="container">
 					<h4 class={includeNavigation ? "include-nav" : "no-nav"}>
 						{tableTitle}
 					</h4>
-					<div class="c-pricing-table__table--cornflower">
+					<div className="c-pricing-table__table--cornflower">
 						{features.map((feature) => {
-							<div class="c-pricing-table__row--cornflower">
-								<div class="c-pricing-table__info--cornflower md">
+							<div className="c-pricing-table__row--cornflower">
+								<div className="c-pricing-table__info--cornflower md">
 									{feature.description}
 								</div>
-								<div class="c-pricing-table__tier--cornflower">
+								<div className="c-pricing-table__tier--cornflower">
 									{() => {
 										if (feature.copperCheckmark) {
 											return (
-												<i class="notranslate material-icons done">done</i>
+												<i className="notranslate material-icons done">done</i>
 											);
 										} else if (feature.copperText?.length) {
-											return <p class="p-sm">{feature.copperText}</p>;
+											return <p className="p-sm">{feature.copperText}</p>;
 										}
 										return (
-											<i class="notranslate material-icons close">close</i>
+											<i className="notranslate material-icons close">close</i>
 										);
 									}}
 								</div>
-								<div class="c-pricing-table__tier--cornflower">
+								<div className="c-pricing-table__tier--cornflower">
 									{() => {
 										if (feature.copperCheckmark) {
 											return (
-												<i class="notranslate material-icons done">done</i>
+												<i className="notranslate material-icons done">done</i>
 											);
 										} else if (feature.copperText?.length) {
-											return <p class="p-sm">{feature.competitorText}</p>;
+											return <p className="p-sm">{feature.competitorText}</p>;
 										}
 										return (
-											<i class="notranslate material-icons close">close</i>
+											<i className="notranslate material-icons close">close</i>
 										);
 									}}
 								</div>
 							</div>;
 						})}
 						{footnote.length ? (
-							<div class="c-pricing-table__footnote">
+							<div className="c-pricing-table__footnote">
 								{matrixBlock.footnote}
 							</div>
 						) : (
@@ -189,7 +189,9 @@ const TableModule = ({
 		<>
 			{/** WORK TO DO MAKE LINK TO NAV */}
 			{includeNavigation && lastInstance ? (
-				<div class="l-pricing-tables--container">{componentInternals()}</div>
+				<div className="l-pricing-tables--container">
+					{componentInternals()}
+				</div>
 			) : (
 				<>{componentInternals()}</>
 			)}

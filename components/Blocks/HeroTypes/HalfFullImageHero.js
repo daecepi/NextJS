@@ -15,7 +15,7 @@ const HalfFullImageHero = ({
 				backgroundColor[0] ? backgroundColor[0].slug : "hot-pink"
 			} product-page`}
 		>
-			<div class="c-image">
+			<div className="c-image">
 				{optimizedImages?.optimizedImageUrls?.length > 0 ? (
 					<picture>
 						{optimizedImages.srcsetWebP ? (
@@ -45,9 +45,9 @@ const HalfFullImageHero = ({
 					/>
 				)}
 			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 c-valign--middle">
+			<div className="container">
+				<div className="row">
+					<div className="col-md-6 c-valign--middle">
 						<HeroCopy
 							slug={slug}
 							loopIndex={loopIndex}

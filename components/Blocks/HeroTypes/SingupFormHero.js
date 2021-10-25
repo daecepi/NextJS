@@ -208,9 +208,9 @@ const SignupFormHero = ({
 					`}
 				style={sectionStyles}
 			>
-				<div class="container">
-					<div class="row row--no-reverse">
-						<div class="col-md-6 col-margin-inverted c-valign--middle copy-aconditioner {{ backgroundColor ? backgroundColor.slug : 'hot-pink' }}">
+				<div className="container">
+					<div className="row row--no-reverse">
+						<div className="col-md-6 col-margin-inverted c-valign--middle copy-aconditioner {{ backgroundColor ? backgroundColor.slug : 'hot-pink' }}">
 							<HeroCopy
 								slug={slug}
 								loopIndex={loopIndex}
@@ -221,7 +221,7 @@ const SignupFormHero = ({
 								ctas={ctas}
 							/>
 						</div>
-						<div class="col-md-6 c-valign--middle signup-aconditioner {% if heroValues.signupFormType == 'enclosed' %} enclosed-container {% endif %}">
+						<div className="col-md-6 c-valign--middle signup-aconditioner {% if heroValues.signupFormType == 'enclosed' %} enclosed-container {% endif %}">
 							<DefaultSignupWidget
 								title={heroSignupTitle}
 								subTitle={heroSignupDescription}

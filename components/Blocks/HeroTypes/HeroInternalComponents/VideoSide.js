@@ -1,13 +1,13 @@
 const VideoSide = ({ heroVideoUrl }) => {
 	return (
-		<div class="col-md-6 c-valign--middle">
-			<div class="c-video ">
+		<div className="col-md-6 c-valign--middle">
+			<div className="c-video ">
 				<div
-					class="wistia_responsive_padding"
+					className="wistia_responsive_padding"
 					style="padding:56.25% 0 0 0;position:relative;"
 				>
 					<div
-						class="wistia_responsive_wrapper"
+						className="wistia_responsive_wrapper"
 						style="height:100%;left:0;position:absolute;top:0;width:100%;"
 					>
 						<iframe
@@ -16,7 +16,7 @@ const VideoSide = ({ heroVideoUrl }) => {
 							allowtransparency="true"
 							frameborder="0"
 							scrolling="no"
-							class="wistia_embed"
+							className="wistia_embed"
 							name="wistia_embed"
 							allowfullscreen
 							mozallowfullscreen

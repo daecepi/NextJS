@@ -1,16 +1,15 @@
 const VideoSimple = ({ embeddedVideo }) => {
+	return (
+		<>
+			<div className="c-video">
+				{embeddedVideo ? (
+					<div dangerouslySetInnerHTML={{ __html: embeddedVideo }}></div>
+				) : (
+					""
+				)}
+			</div>
+		</>
+	);
+};
 
-
-  return (<>
-    <div class="c-video">
-      {
-        embeddedVideo ?
-          <div dangerouslySetInnerHTML={{ __html: embeddedVideo }}></div>
-        : ''
-      }
-      
-    </div>
-  </>);
-}
-
-export default VideoSimple
+export default VideoSimple;

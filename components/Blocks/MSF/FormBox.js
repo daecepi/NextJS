@@ -23,13 +23,13 @@ const FormBox = (
 			</style>
 
 			<fieldset
-				class="c-form step step-3"
+				className="c-form step step-3"
 				style="box-shadow: none; padding-bottom: 0px;padding-top: 0px;"
 			>
-				<div class="container">
-					<div class="row">
-						<div class="col-md-11 ">
-							<pre class="c-eyebrow" style="text-align: start;">
+				<div className="container">
+					<div className="row">
+						<div className="col-md-11 ">
+							<pre className="c-eyebrow" style="text-align: start;">
 								{eyebrow}
 							</pre>
 							{copyHeader?.length ? (
@@ -40,9 +40,9 @@ const FormBox = (
 								""
 							)}
 							{copy?.length ? (
-								<p class="msf-paragraph-form">
+								<p className="msf-paragraph-form">
 									{copy}
-									<span class="variation-one" style={{ display: "none" }}>
+									<span className="variation-one" style={{ display: "none" }}>
 										{" "}
 										Tell us how best to reach you.
 									</span>
@@ -54,11 +54,11 @@ const FormBox = (
 					</div>
 				</div>
 
-				<div class="online-marketo">
+				<div className="online-marketo">
 					<form
 						data-formId={marketoId | length ? marketoId : 2195}
 						data-formInstance={id == 1 ? "one" : "two"}
-						class="mktoForm yupiii"
+						className="mktoForm yupiii"
 						style={{ padding: "0px" }}
 					></form>
 

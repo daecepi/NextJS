@@ -24,11 +24,11 @@ const FormBase = ({
 				id="c-form--default-hero"
 				class={`c-form c-form-mkto${heroMarketoId ? heroMarketoId : "2157"}`}
 			>
-				<div class="offline-marketo">
+				<div className="offline-marketo">
 					{/*{% set formId = `mktoForm_#${ heroMarketoId ? heroMarketoId : '2157' }` %}
     {{ localLeadReplacements.htmlReplacement(formId, 'Lead', entry.slug) }}*/}
 				</div>
-				<div class="online-marketo">
+				<div className="online-marketo">
 					<LoadingComponent />
 					<form
 						id={`mktoForm_${heroMarketoId ? heroMarketoId : "2157"}`}
@@ -39,7 +39,7 @@ const FormBase = ({
 							if (pageHeroSynced && pageHeroSynced == 1) {
 								return (
 									<h4>
-										Watch Demo<span class="t-hot-pink">.</span>
+										Watch Demo<span className="t-hot-pink">.</span>
 									</h4>
 								);
 							} else if (marketoFormCopy?.length) {
@@ -56,7 +56,7 @@ const FormBase = ({
 				</div>
 				<div
 					id="c-thank-you-message--default-hero"
-					class="c-thank-you-message--default-hero invisible-start"
+					className="c-thank-you-message--default-hero invisible-start"
 				>
 					{marketoThankYouMessage?.length ? (
 						<>
@@ -68,9 +68,11 @@ const FormBase = ({
 					) : (
 						<>
 							<h3>
-								Thank you<span class="hot-pink t-hot-pink">.</span>
+								Thank you<span className="hot-pink t-hot-pink">.</span>
 							</h3>
-							<p class="p-sm">Someone from our team will be with you shortly</p>
+							<p className="p-sm">
+								Someone from our team will be with you shortly
+							</p>
 							<div
 								dangerouslySetInnerHTML={{ __html: successVideoEmbedCode }}
 							></div>

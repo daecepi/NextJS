@@ -42,9 +42,9 @@ const MarketoFormHero = ({
 				}`}
 				style={sectionStyles}
 			>
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6 c-valign--middle">
+				<div className="container">
+					<div className="row">
+						<div className="col-md-6 c-valign--middle">
 							<FormBase
 								heroMarketoId={heroMarketoId}
 								marketoFormCopy={marketoFormCopy}
@@ -55,14 +55,14 @@ const MarketoFormHero = ({
 						{() => {
 							if (displayVideo == "1" && heroVideoUrl) {
 								return (
-									<div class="col-md-6 c-valign--middle">
-										<div class="c-video ">
+									<div className="col-md-6 c-valign--middle">
+										<div className="c-video ">
 											<div
-												class="wistia_responsive_padding"
+												className="wistia_responsive_padding"
 												style="padding:56.25% 0 0 0;position:relative;"
 											>
 												<div
-													class="wistia_responsive_wrapper"
+													className="wistia_responsive_wrapper"
 													style="height:100%;left:0;position:absolute;top:0;width:100%;"
 												>
 													<iframe
@@ -71,7 +71,7 @@ const MarketoFormHero = ({
 														allowtransparency="true"
 														frameborder="0"
 														scrolling="no"
-														class="wistia_embed"
+														className="wistia_embed"
 														name="wistia_embed"
 														allowfullscreen
 														mozallowfullscreen
@@ -95,7 +95,7 @@ const MarketoFormHero = ({
 
 								return (
 									<div
-										class="col-md-6 c-valign--middle c-image invert-sm-spacing c-valign--middle"
+										className="col-md-6 c-valign--middle c-image invert-sm-spacing c-valign--middle"
 										style={{ position: "relative", left: "0px" }}
 									>
 										<img
@@ -111,7 +111,7 @@ const MarketoFormHero = ({
 									</div>
 								);
 							} else {
-								return <div class="col-md-6"></div>;
+								return <div className="col-md-6"></div>;
 							}
 						}}
 					</div>
@@ -127,9 +127,9 @@ const MarketoFormHero = ({
 				} ${heroValues?.specialClass?.length ? heroValues.specialClass : ""}`}
 				style={sectionStyles}
 			>
-				<div class="container">
-					<div class="row  row--no-reverse">
-						<div class="col-md-6 c-valign--middle">
+				<div className="container">
+					<div className="row  row--no-reverse">
+						<div className="col-md-6 c-valign--middle">
 							<HeroCopy
 								slug={slug}
 								loopIndex={loopIndex}
@@ -140,7 +140,7 @@ const MarketoFormHero = ({
 								ctas={ctas}
 							/>
 						</div>
-						<div class="col-md-6 c-valign--middle">
+						<div className="col-md-6 c-valign--middle">
 							<FormBase
 								heroMarketoId={heroMarketoId}
 								marketoFormCopy={marketoFormCopy}

@@ -13,9 +13,9 @@ const Slider = ({
 						href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
 					/>
 
-					<section class="c-single-column slider-section">
+					<section className="c-single-column slider-section">
 						{displayG2CrowdHeader !== undefined && displayG2CrowdHeader ? (
-							<h2 class="text-center">
+							<h2 className="text-center">
 								{g2CrowdHeader !== undefined && g2CrowdHeader.length > 0
 									? matrixBlock.g2CrowdHeader
 									: "The recommended CRM<br /> for Google Workspace."}
@@ -23,11 +23,11 @@ const Slider = ({
 						) : (
 							""
 						)}
-						<div class="row extra-top-margin--small  align-items-center slider-container">
-							<div class="container extra-bottom-margin--x-small ">
+						<div className="row extra-top-margin--small  align-items-center slider-container">
+							<div className="container extra-bottom-margin--x-small ">
 								<div
 									id="slider-reviews-holder"
-									class="row slider-reviews-holder"
+									className="row slider-reviews-holder"
 								>
 									{g2CrowdReviews !== undefined ? (
 										<>
@@ -51,14 +51,14 @@ const Slider = ({
 												return (
 													<div
 														id=""
-														class="c-card__entry c-card--internal-padding review-slider-element"
+														className="c-card__entry c-card--internal-padding review-slider-element"
 													>
-														<div class="stars-container">
+														<div className="stars-container">
 															{/* Loop for filled stars */}
 															{starCount.map((star) => {
 																return (
 																	<img
-																		class="star"
+																		className="star"
 																		src="/imgs/slider/Single-filled-star.svg"
 																		alt="Full star image"
 																	/>
@@ -68,7 +68,7 @@ const Slider = ({
 																<>
 																	{/* Printing the odd star */}
 																	<img
-																		class="star"
+																		className="star"
 																		alt="Half star image"
 																		src="/imgs/slider/Half-star.svg"
 																	/>
@@ -82,7 +82,7 @@ const Slider = ({
 																	{emptyStarCount.map((emptyStar) => {
 																		return (
 																			<img
-																				class="star"
+																				className="star"
 																				alt="Empty star image"
 																				src="/imgs/slider/null-star.svg"
 																			/>
@@ -93,18 +93,18 @@ const Slider = ({
 																""
 															)}
 														</div>
-														<div class="c-card__entry-title">
+														<div className="c-card__entry-title">
 															<h4
-																class="multiple-2-card-trailer"
+																className="multiple-2-card-trailer"
 																style="width: 288px"
 															>
 																{review.reviewTitle}
 															</h4>
 														</div>
-														<p class="review-quote multiple-4-card-trailer">
+														<p className="review-quote multiple-4-card-trailer">
 															{review.reviewQuote}
 														</p>
-														<span class="c-eyebrow">
+														<span className="c-eyebrow">
 															— {review.reviewAuthor}
 														</span>
 													</div>
@@ -116,14 +116,14 @@ const Slider = ({
 									)}
 								</div>
 							</div>
-							<div class="indicators col-sm-12">
-								<div id="indicators-place" class="container">
+							<div className="indicators col-sm-12">
+								<div id="indicators-place" className="container">
 									{g2CrowdReviews !== undefined ? (
 										<>
 											{g2CrowdReviews.map((review) => {
 												<span
 													id={`review-slide-${loop.index}`}
-													class="indicator-line"
+													className="indicator-line"
 													onclick={`changeReviewSlide(${loop.index}, '#review-slide-${loop.index}')`}
 												></span>;
 											})}
@@ -134,11 +134,11 @@ const Slider = ({
 								</div>
 							</div>
 						</div>
-						<p class="text-center reviews-module-footer">
+						<p className="text-center reviews-module-footer">
 							4.6 out of 5 stars based on{" "}
 							<a
 								href="https://www.g2.com/products/copper/reviews"
-								class="t-link no-arrow"
+								className="t-link no-arrow"
 							>
 								437 reviews
 							</a>{" "}
@@ -184,8 +184,8 @@ const Slider = ({
                     slidesToShow: 3,
                     slidesToScroll: 1,
                     dots: false,
-                    nextArrow: '<div class=" c-align--center arrow-control arrow-control-next"><div class="arrow-box"><img class="" alt="Arrow right image" src="imgs/slider/arrow_right.svg" /></div></div>',
-                    prevArrow: '<div class=" c-align--center arrow-control arrow-control-prev"><div class="arrow-box"><img class="" alt="Arrow left image" src="imgs/slider/arrow_left.svg" /></div></div>',
+                    nextArrow: '<div className=" c-align--center arrow-control arrow-control-next"><div className="arrow-box"><img className="" alt="Arrow right image" src="imgs/slider/arrow_right.svg" /></div></div>',
+                    prevArrow: '<div className=" c-align--center arrow-control arrow-control-prev"><div className="arrow-box"><img className="" alt="Arrow left image" src="imgs/slider/arrow_left.svg" /></div></div>',
                     adaptiveHeight: true,
                     responsive: [
                       {
@@ -228,8 +228,8 @@ const Slider = ({
                     ]
                   },
                 };
-                // nextArrow: <div class=" c-align--center arrow-control arrow-control-next"><div class="arrow-box"><img class="" alt="Arrow right image" src="imgs/slider/arrow_right.svg" /></div></div>
-                // prevArrow: <div class=" c-align--center arrow-control arrow-control-prev"><div class="arrow-box"><img class="" alt="Arrow left image" src="imgs/slider/arrow_left.svg" /></div></div>
+                // nextArrow: <div className=" c-align--center arrow-control arrow-control-next"><div className="arrow-box"><img className="" alt="Arrow right image" src="imgs/slider/arrow_right.svg" /></div></div>
+                // prevArrow: <div className=" c-align--center arrow-control arrow-control-prev"><div className="arrow-box"><img className="" alt="Arrow left image" src="imgs/slider/arrow_left.svg" /></div></div>
                 
                   $('.slider-reviews-holder').slick(sliderConfigurations['{{ entry.sliderType }}']);
                   $('.review-slider-element').css('width','350px');

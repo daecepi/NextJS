@@ -1,10 +1,10 @@
 const ButtonBox = ({ eyebrow, copyHeader, copy, step, buttonGroupSchema }) => {
 	return (
 		<fieldset class={`c-form step step-${step}`} style={{ boxShadow: "none" }}>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 extra-bottom-margin--x-small">
-						<pre class="c-eyebrow" style={{ textAlign: "start" }}>
+			<div className="container">
+				<div className="row">
+					<div className="col-md-12 extra-bottom-margin--x-small">
+						<pre className="c-eyebrow" style={{ textAlign: "start" }}>
 							{eyebrow}
 						</pre>
 						{copyHeader?.length ? (
@@ -21,13 +21,13 @@ const ButtonBox = ({ eyebrow, copyHeader, copy, step, buttonGroupSchema }) => {
 					<>
 						{buttonGroupSchema.map((button) => {
 							return (
-								<div class="row">
-									<div class="col-md-10 extra-bottom-margin--xx-medium-small">
+								<div className="row">
+									<div className="col-md-10 extra-bottom-margin--xx-medium-small">
 										{() => {
 											if (button.function?.length) {
 												return (
 													<button
-														class="c-button c-button--outline no-bottom-margin"
+														className="c-button c-button--outline no-bottom-margin"
 														style={{
 															width: "100%",
 															justifyContent: "center",
@@ -41,7 +41,7 @@ const ButtonBox = ({ eyebrow, copyHeader, copy, step, buttonGroupSchema }) => {
 											} else if (buttonElement.href?.length) {
 												return (
 													<a
-														class="c-button c-button--outline no-bottom-margin"
+														className="c-button c-button--outline no-bottom-margin"
 														style={{
 															width: "100%",
 															justifyContent: "center",

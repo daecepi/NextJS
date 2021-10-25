@@ -16,9 +16,9 @@ const FullImageHero = ({
 			class={`c-hero c-hero--full ${imageOverlay ? "h-image-overlay" : ""}`}
 			style={{ backgroundImage: url(`${image[0]?.url ? image[0].url : ""}`) }}
 		>
-			<div class="container">
-				<div class="row">
-					<div class="c-hero__container col-md-10 offset-md-1 c-valign--middle text-md-center">
+			<div className="container">
+				<div className="row">
+					<div className="c-hero__container col-md-10 offset-md-1 c-valign--middle text-md-center">
 						<HeroCopy
 							slug={slug}
 							loopIndex={loopIndex}

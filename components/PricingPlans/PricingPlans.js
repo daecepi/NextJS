@@ -74,50 +74,50 @@ const PricingPlans = ({
 		if (plan.title == "Plan - Business") {
 			return (
 				<>
-					<p class="c-pricing-hero__sub mb-0 mt-4">
+					<p className="c-pricing-hero__sub mb-0 mt-4">
 						Per user, per month. Billed annually.
 					</p>
-					<span class="special"></span>
+					<span className="special"></span>
 				</>
 			);
 		} else if (plan.title == "Plan - Basic") {
 			return (
 				<>
-					<p class="c-pricing-hero__sub mb-0 mt-4">
+					<p className="c-pricing-hero__sub mb-0 mt-4">
 						Per user, per month. Billed annually.
 					</p>
 					<span
 						style={{ display: "none" }}
-						class="c-pricing-hero__sub billed-monthly"
+						className="c-pricing-hero__sub billed-monthly"
 					>
 						Billed&nbsp;monthly.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					</span>
-					<p class="c-pricing-hero__sub mt-0 no-bottom-margin">
+					<p className="c-pricing-hero__sub mt-0 no-bottom-margin">
 						Or $29/user when billed monthly.
 					</p>
 					<span
 						style={{ display: "none" }}
-						class="c-pricing-hero__sub billed-monthly"
+						className="c-pricing-hero__sub billed-monthly"
 					>
 						Billed&nbsp;monthly.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					</span>
-					{/* <span class="special desc js-pricingannual">Or $24 per user per month up to 3 users. Billed monthly.</span> */}
+					{/* <span className="special desc js-pricingannual">Or $24 per user per month up to 3 users. Billed monthly.</span> */}
 				</>
 			);
 		}
 
 		return (
 			<>
-				<p class="c-pricing-hero__sub mb-0 mt-4 no-bottom-margin">
+				<p className="c-pricing-hero__sub mb-0 mt-4 no-bottom-margin">
 					Per user, per month. Billed annually.
 				</p>
 				<span
 					style={{ display: "none" }}
-					class="c-pricing-hero__sub billed-monthly"
+					className="c-pricing-hero__sub billed-monthly"
 				>
 					Billed&nbsp;monthly.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				</span>
-				{/*<span class="special desc js-pricingannual">Save $240/user. Billed annually.</span> */}
+				{/*<span className="special desc js-pricingannual">Save $240/user. Billed annually.</span> */}
 			</>
 		);
 	};
@@ -129,21 +129,21 @@ const PricingPlans = ({
 			}`}
 		>
 			<div
-				class="fb-data-fetched hot-pink banner container extra-bottom-margin--x-small"
+				className="fb-data-fetched hot-pink banner container extra-bottom-margin--x-small"
 				style={{ display: "none" }}
 			>
-				<div class="row">
-					<div class="col-md-10 offset-md-1">
-						<p class="content"></p>
+				<div className="row">
+					<div className="col-md-10 offset-md-1">
+						<p className="content"></p>
 					</div>
 				</div>
 			</div>
-			<div id="pricing-hero-copy-headers" class="container">
+			<div id="pricing-hero-copy-headers" className="container">
 				<h2>{header ? header : ""}</h2>
 				<p>{subHeader ? subHeader : ""}</p>
 			</div>
-			<div class="container">
-				<div class="c-pricing-hero__plans-container square--top--left square--hot-pink circle--bottom--right">
+			<div className="container">
+				<div className="c-pricing-hero__plans-container square--top--left square--hot-pink circle--bottom--right">
 					{pricingPlans.map((plan) => {
 						console.log("plan", plan);
 						return (
@@ -162,19 +162,19 @@ const PricingPlans = ({
 												: ""
 										}`}
 									>
-										{plan.featured ? <p class="p-sm">MOST POPULAR</p> : ""}
+										{plan.featured ? <p className="p-sm">MOST POPULAR</p> : ""}
 										<h3 id={`${plan.planType}-plan`}>{plan.planType}</h3>
 									</div>
-									<div class="c-pricing-hero__plans__content justify-content-between">
-										<div class="c-pricing-hero__billing no-top-margin">
-											<p class="p-sm">{plan.paragraph}</p>
-											<div class="c-pricing-hero__annual desc js-pricingannual">
+									<div className="c-pricing-hero__plans__content justify-content-between">
+										<div className="c-pricing-hero__billing no-top-margin">
+											<p className="p-sm">{plan.paragraph}</p>
+											<div className="c-pricing-hero__annual desc js-pricingannual">
 												{plan.planType == "Basic" ? (
-													<span class="strikethru-text">
+													<span className="strikethru-text">
 														{plan.billedMonthly}
 													</span>
 												) : plan.planType == "Professional" ? (
-													<span class="strikethru-text">
+													<span className="strikethru-text">
 														{plan.billedMonthly}
 													</span>
 												) : (
@@ -183,29 +183,29 @@ const PricingPlans = ({
 												<span>{plan.billedAnnually}</span>
 											</div>
 											<div
-												class="c-pricing-hero__monthly desc js-pricingmonthly"
+												className="c-pricing-hero__monthly desc js-pricingmonthly"
 												style={{ display: "none" }}
 											>
 												{plan.planType == "Business" &&
 												syncedContext.pageHeroSynced !== undefined &&
 												!syncedContext.pageHeroSynced ? (
 													<>
-														{/** {# <span class="strikethru-text">$119</span> #} */}
+														{/** {# <span className="strikethru-text">$119</span> #} */}
 													</>
 												) : (
 													""
 												)}
 												<span>{plan.billedMonthly}</span>
 											</div>
-											<div class="sub-description">
+											<div className="sub-description">
 												{subDescriptionSelector(plan)}
 											</div>
 										</div>
-										<div class="c-pricing-plans__footer">
+										<div className="c-pricing-plans__footer">
 											{plan.cta?.length &&
 											removeCtas !== undefined &&
 											!removeCtas ? (
-												<div class="c-pricing-plans__ctas">
+												<div className="c-pricing-plans__ctas">
 													{ctas.map((cta) => {
 														const buttonColor = cta.buttonColor[0];
 														if (
@@ -213,7 +213,7 @@ const PricingPlans = ({
 															syncedContext.pageHeroSynced
 														) {
 															<a
-																class="t-link underline-hot-pink"
+																className="t-link underline-hot-pink"
 																onclick={(e) => {
 																	showSyncedHeroForm(e);
 																}}
@@ -256,7 +256,7 @@ const PricingPlans = ({
 					})}
 				</div>
 			</div>
-			<p class="p-xtra-sm">
+			<p className="p-xtra-sm">
 				Prices are in USD and don't include taxes and fees where applicable.
 			</p>
 		</section>

@@ -28,7 +28,7 @@ const LogoModule = ({
 				{logoImages.map((logo) => {
 					let optimizedImages = logo.optimizedLandingImages || undefined;
 					return (
-						<li class="logo-section--images">
+						<li className="logo-section--images">
 							{optimizedImages?.optimizedImageUrls?.length > 0 ? (
 								<picture>
 									{optimizedImages.srcsetWebP ? (
@@ -67,13 +67,13 @@ const LogoModule = ({
 				layout == "2Col" ? "c-cols h-padding-bottom" : ""
 			} bottom-padding-mobile home-proof background--${backgroundColor}`}
 		>
-			<div class="container">
+			<div className="container">
 				{layout === "1Col" ? (
-					<div class="col-md-12">
+					<div className="col-md-12">
 						{title?.length > 0 ? (
 							<h2
 								style={{ color: oneColSettings.textColor }}
-								class="text-center"
+								className="text-center"
 							>
 								{title}
 								<br />
@@ -83,18 +83,18 @@ const LogoModule = ({
 						)}
 						<p
 							style={{ color: oneColSettings.textColor }}
-							class="text-center"
+							className="text-center"
 							dangerouslySetInnerHTML={{ __html: copy }}
 						></p>
-						<div class="smb-logo-icons">
-							<ul class="logo-section--one-column">{logoPrinter()}</ul>
+						<div className="smb-logo-icons">
+							<ul className="logo-section--one-column">{logoPrinter()}</ul>
 						</div>
 					</div>
 				) : (
 					""
 				)}
 				{layout == "2Col" ? (
-					<div class="row" style={{ paddingBottom: "0px" }}>
+					<div className="row" style={{ paddingBottom: "0px" }}>
 						<div
 							class={`col-md-6 d-flex align-items-center ${
 								twoColSettings?.reverseLayout === "0"
@@ -102,8 +102,8 @@ const LogoModule = ({
 									: "order-2 offset-md-1"
 							}`}
 						>
-							<div class="">
-								<ul class="logo-section--two-column">{logoPrinter()}</ul>
+							<div className="">
+								<ul className="logo-section--two-column">{logoPrinter()}</ul>
 							</div>
 						</div>
 						<div
@@ -113,17 +113,20 @@ const LogoModule = ({
 									: "order-1"
 							}`}
 						>
-							<div class="col_copy" style={`color:${twoColSettings.textColor}`}>
+							<div
+								className="col_copy"
+								style={`color:${twoColSettings.textColor}`}
+							>
 								{styleForTwoCols}
 								<pre
-									class="c-eyebrow"
+									className="c-eyebrow"
 									style={{ color: twoColSettings.textColor }}
 								>
 									{eyebrow}
 								</pre>
 								<h2 style={{ color: twoColSettings.textColor }}>{title}</h2>
 								<p style={{ color: twoColSettings.textColor }}>{subtitle}</p>
-								<div class="c-single-column__buttons">
+								<div className="c-single-column__buttons">
 									{ctas.map((cta) => {
 										if (cta.buttonColor) {
 											return (

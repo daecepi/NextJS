@@ -1,11 +1,11 @@
 const LoadingComponent = () => {
 	return (
 		<>
-			<div class="loading-cover">
-				<div class="loading-container rotating">
+			<div className="loading-cover">
+				<div className="loading-container rotating">
 					{`<?xml version="1.0" encoding="utf-8"?>`}
 					<svg
-						class="loading-source"
+						className="loading-source"
 						xmlns="http://www.w3.org/2000/svg"
 						xmlns:xlink="http://www.w3.org/1999/xlink"
 						viewBox="0 0 100 100"

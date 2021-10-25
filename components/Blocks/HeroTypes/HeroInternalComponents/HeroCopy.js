@@ -54,12 +54,12 @@ const HeroCopy = ({
 			)}
 
 			<div
-				class="hero-text"
+				className="hero-text"
 				dangerouslySetInnerHTML={{ __html: richText }}
 			></div>
 			{/* Bullets points section */}
 			{bulletItemsInHero.length ? (
-				<ul class="ul-list__container ul-list--white-checks ">
+				<ul className="ul-list__container ul-list--white-checks ">
 					{bulletItemsInHero.map((bulletItem) => {
 						return (
 							<>
@@ -71,10 +71,10 @@ const HeroCopy = ({
 											: ""
 									}`}
 								>
-									<h4 class="ul-list__bullet-header">
+									<h4 className="ul-list__bullet-header">
 										{bulletItem.bulletHeader}
 									</h4>
-									<p class="ul_list__bullet-description">
+									<p className="ul_list__bullet-description">
 										{bulletItem.bulletContent}
 									</p>
 								</li>
@@ -89,10 +89,10 @@ const HeroCopy = ({
 			{bulletPointsMode == "displayAsBulletPoints" &&
 			specialBulletLogos &&
 			specialBulletsText ? (
-				<div class="c-logo-bullets">
+				<div className="c-logo-bullets">
 					{specialBulletLogos.map((bulletLogo, index) => {
 						return (
-							<div class="c-logo-bullets--element">
+							<div className="c-logo-bullets--element">
 								<img
 									src={bulletLogo.url}
 									alt={
@@ -119,13 +119,13 @@ const HeroCopy = ({
 					return <CtaGroup ctas={ctas} />;
 				} else if (slug == "demo-request-pers") {
 					return (
-						<a class="c-button c-button--large" href="/demos">
+						<a className="c-button c-button--large" href="/demos">
 							Request Demo
 						</a>
 					);
 				} else if (slug == "free-trial-pers") {
 					<a
-						class="c-button c-button--large sendUTMsToAmplitude"
+						className="c-button c-button--large sendUTMsToAmplitude"
 						href={syncedContext.generalSignupUrl}
 					>
 						Try Free

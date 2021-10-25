@@ -18,11 +18,11 @@ const heroFormFlow = ({
 	const signupPriter = () => {
 		return (
 			<div style={{ color: "#000000", marginTop: "60px" }}>
-				<h1 class="more-space">Try Free title</h1>
-				<p class="form-subtitle">Try Free content</p>
-				<div class="form_container">
+				<h1 className="more-space">Try Free title</h1>
+				<p className="form-subtitle">Try Free content</p>
+				<div className="form_container">
 					<form
-						class="signup_form"
+						className="signup_form"
 						id="signup_form"
 						action="https://app.prosperworks.com/users"
 						accept-charset="UTF-8"
@@ -35,22 +35,26 @@ const heroFormFlow = ({
 							value="lAAB/AYz9RxQR4RN74ZQgCErmru66/VW8Kzw3EeKrJrJC4AjlOsOIwvmktA9F0k1HVJQkSEber78cUBqUaYwhw=="
 						/>
 						<a
-							class="google_light_btn"
+							className="google_light_btn"
 							href="https://app.prosperworks.com/auth/auto_login?continue_with_google=true&amp;failure_url=https%3A%2F%2Fapp.prosperworks.com%2Fusers%2Fsign_up%3Fauth_error%3DAuthentication%2Bfailed.%2BPlease%2Benter%2Byour%2Bemail%2Bbelow%2Bto%2Bcontinue.&amp;prompt=consent&amp;provider=google_oauth2_extended"
 						>
 							<img
-								class="google_icon"
+								className="google_icon"
 								src="//d3jas8421cca9z.cloudfront.net/assets/google-g-0cf576a5dab9315daac7ffe29d29ed585e0ff9850e59408d0f25f38dc1da037b.svg"
 								alt="Google g"
 							/>
-							<span class="google_light_btn_label">Continue with Google</span>
+							<span className="google_light_btn_label">
+								Continue with Google
+							</span>
 						</a>
-						<div class="signup_form_subtext">or use your email to sign up:</div>
-						<div class="field">
-							<div class="form_text_field_container">
+						<div className="signup_form_subtext">
+							or use your email to sign up:
+						</div>
+						<div className="field">
+							<div className="form_text_field_container">
 								<label for="user[full_name]">Full Name</label>
 								<input
-									class="text_field"
+									className="text_field"
 									size="30"
 									placeholder="Jane Doe"
 									type="text"
@@ -59,12 +63,12 @@ const heroFormFlow = ({
 								/>
 							</div>
 						</div>
-						<div class="field">
-							<div class="form_text_field_container">
+						<div className="field">
+							<div className="form_text_field_container">
 								<label for="user[email]">Work Email</label>
 								<input
 									size="30"
-									class="text_field"
+									className="text_field"
 									placeholder="janedoe@example.com"
 									type="email"
 									name="user[email]"
@@ -84,16 +88,16 @@ const heroFormFlow = ({
 						<input type="hidden" name="visitor_token" value="" />
 						<input type="hidden" name="fireb_device_id" value="" />
 						<input type="hidden" name="ampDeviceID" value="" />
-						<div class="submit-button-row">
+						<div className="submit-button-row">
 							<input
 								type="submit"
 								name="commit"
 								value="Try Free"
-								class="submit_button is-pink with-no-border"
+								className="submit_button is-pink with-no-border"
 							/>
 						</div>
 					</form>
-					<p class="disclaimer">
+					<p className="disclaimer">
 						By signing up, I agree to Copper’s{" "}
 						<a href="/privacy">privacy policy</a> &amp;{" "}
 						<a href="/terms">terms of service.</a>
@@ -132,12 +136,12 @@ const heroFormFlow = ({
 					nearNavigation ? "hero-near-nav" : ""
 				}`}
 			>
-				<div class="container">
-					<div class="row">
-						<div class="col-md-7 flex align-items-center screening">
-							<div class="hero-text">
+				<div className="container">
+					<div className="row">
+						<div className="col-md-7 flex align-items-center screening">
+							<div className="hero-text">
 								{copperIcon ? (
-									<div class="mb-2">
+									<div className="mb-2">
 										<svg
 											width="85"
 											height="85"
@@ -158,10 +162,10 @@ const heroFormFlow = ({
 								)}
 								<h2>{heroTitle}</h2>
 								<div dangerouslySetInnerHTML={{ __html: copy }}></div>
-								<div class="c-hero__buttons ">
+								<div className="c-hero__buttons ">
 									<a
 										id="form-hero-screening"
-										class="form-hero-screening c-button  sendUTMsToAmplitude c-button--outline"
+										className="form-hero-screening c-button  sendUTMsToAmplitude c-button--outline"
 										href="#"
 									>
 										{ctaText}
@@ -183,20 +187,20 @@ const heroFormFlow = ({
 								</div>
 							</div>
 						</div>
-						<div class="col-md-7 hidden form-hero-flow">
+						<div className="col-md-7 hidden form-hero-flow">
 							<DefaultMultiStepForm
 								specialClass={"hero-step-form"}
 								id={formId}
 							/>
 						</div>
-						<div class="col-md-6 hidden try-free-flow c-valign--middle signup-aconditioner  enclosed-container">
+						<div className="col-md-6 hidden try-free-flow c-valign--middle signup-aconditioner  enclosed-container">
 							{signupPriter()}
 						</div>
 						<div
-							class="col-md-5 disappear-mobile"
+							className="col-md-5 disappear-mobile"
 							style={{ alignItems: "flex-start", display: "flex" }}
 						>
-							<div class="c-image">
+							<div className="c-image">
 								<picture>
 									<img
 										style={{
