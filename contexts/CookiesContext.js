@@ -1,20 +1,25 @@
-import { createContext, useContext } from 'react';
+import { createContext, useContext } from "react";
+
+import { parseCookies } from "../helpers";
 
 const AppContext = createContext();
 
+export function CookiesWrapper({ children }) {
+	//const data = parseCookies();
 
-export function AppWrapper({ children }) {
-  let sharedState = {
-    cookiesList: []
-  }
+	/*if (data) {
+		console.log("head", data);
+	}*/
 
-  return (
-    <AppContext.Provider value={sharedState}>
-      {children}
-    </AppContext.Provider>
-  );
+	let sharedState = {
+		cookiesList: [],
+	};
+
+	return (
+		<AppContext.Provider value={sharedState}>{children}</AppContext.Provider>
+	);
 }
 
 export function useAppContext() {
-  return useContext(AppContext);
+	return useContext(AppContext);
 }
