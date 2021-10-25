@@ -1,19 +1,25 @@
 import { createContext, useContext } from "react";
 
-const AppContext = createContext();
+const SyncedContext = createContext();
 
 export function SyncedAppWrapper({ children }) {
 	let sharedState = {
 		pageHeroSynced: false,
 		mainFormReference: undefined,
 		generalSignupUrl: "/signup",
+		marketoConfigurations: {
+			replaceMarketoForms: false,
+		},
+		updateSyncedState: () => {},
 	};
 
 	return (
-		<AppContext.Provider value={sharedState}>{children}</AppContext.Provider>
+		<SyncedContext.Provider value={sharedState}>
+			{children}
+		</SyncedContext.Provider>
 	);
 }
 
 export function useSyncContext() {
-	return useContext(AppContext);
+	return useContext(SyncedContext);
 }
