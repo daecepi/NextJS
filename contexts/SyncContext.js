@@ -1,20 +1,23 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState } from "react";
 
 const SyncedContext = createContext();
 
 export function SyncedAppWrapper({ children }) {
-	let sharedState = {
+	const [syncData, updateSyncData] = useState({
 		pageHeroSynced: false,
 		mainFormReference: undefined,
 		generalSignupUrl: "/signup",
 		marketoConfigurations: {
 			replaceMarketoForms: false,
 		},
-		updateSyncedState: () => {},
+	});
+
+	const updateSyncState = (updateData) => {
+		updateSyncData({ ...syncData, ...updateData });
 	};
 
 	return (
-		<SyncedContext.Provider value={sharedState}>
+		<SyncedContext.Provider value={{ syncData, updateSyncState }}>
 			{children}
 		</SyncedContext.Provider>
 	);

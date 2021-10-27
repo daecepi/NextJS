@@ -6,23 +6,18 @@ import SectionLayout from "../components/SectionLayout/SectionLayout";
 import VideoCard from "../components/Cards/VideoCard";
 import HeroHomePage from "../components/Blocks/HeroTypes/HeroHomePage";
 
+import DefaultPageBase from "../components/PageBase/DefaultPageBase";
+
 import NavigationDefault from "../components/Navigation/NavigationDefault";
 import LogoComponent from "../components/Blocks/LogosComponent";
 import Footer from "../components/Footer/Footer";
 
 export default function Home({ res }) {
-	return (
-		<div>
-			<NavigationDefault />
+	console.log("page fields ", res);
 
-			<Head>
-				<title>Copper CRM</title>
-				<link rel="icon" href="/favicon.ico" />
-				<link
-					rel="stylesheet"
-					href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
-				/>
-			</Head>
+	return (
+		<DefaultPageBase>
+			<NavigationDefault />
 			{/* {res.map((item) => {
         return(
           <h1 className='text-center ' key={item.id} >{item.title}</h1>
@@ -1505,225 +1500,8 @@ export default function Home({ res }) {
 				</div>
 			</section>
 
-			<section id="" className="c-cols c-cols-landing   h-padding-bottom">
-				<div className="container c-animation-container">
-					<h2
-						className="extra-bottom-margin--x-small"
-						style={{ textAlign: "center" }}
-					></h2>
-					<div className="row column-reverse">
-						<div className="col-md-6 d-flex align-items-center order-1 ">
-							<div className="c-image c-image--center c-image--shadow h-remove-shadow no-margin">
-								<div className="video-gif-container">
-									<video
-										id="vid-8"
-										data-cy="video-element"
-										className="video-as-gif h-remove-shadow onViewport"
-										style={{ maxWidth: "100%" }}
-										muted
-										playsInline
-										poster="https://copper.objects.frb.io/videos/homepage/why/CopperHome-Why-Team-new-new', 'mp4', 'h-remove-shadow', 'max-width: 100%;', 'https://copper.objects.frb.io/imgs/homepage/thumbnails/productivity/productivity-thumb-1.png"
-									>
-										<source
-											src="https://copper.objects.frb.io/videos/homepage/productivity/CopperHome-Productivity.webm"
-											type="video/webm"
-										/>
-										<source
-											src="https://copper.objects.frb.io/videos/homepage/productivity/CopperHome-Productivity.mp4"
-											type="video/{{vidExtension}}"
-										></source>
-										<p>Su navegador no soporta video HTML5</p>
-									</video>
-								</div>
-								{/* {% import "components/simple-elements/_index.html" as simpleElements %}
-                            {{ simpleElements.createVideoAsGifElement(entry.slug,'vid-8','https://copper.objects.frb.io/videos/homepage/productivity/CopperHome-Productivity', 'mp4', 'onViewport', 'max-width: 100%;', 'https://copper.objects.frb.io/imgs/homepage/thumbnails/productivity/productivity-thumb-1.png') }} */}
-							</div>
-						</div>
-						<div className="col-md-5 offset-md-1 c-valign--middle order-2">
-							<div className="col_copy">
-								<pre className="c-eyebrow c-eyebrow--dark">
-									SALES AUTOMATION & SERVICE
-								</pre>
-								<h2>Make your team wildly productive.</h2>
-								<p>
-									Copper isn't just for sales teams and lead generation. Whether
-									you’re closing deals, partners, vendors or distributors,
-									you’re always winning throughout every stage of the sales
-									pipeline with Copper.
-								</p>
-								<div className="c-hero__buttons">
-									<div className="flex-column"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section id="" className="c-cols c-cols pricing-style hot-pink">
-				<div
-					style={{
-						position: "absolute",
-						top: "0px",
-						left: "0px",
-						width: "50%",
-						height: "100%",
-					}}
-				>
-					<div
-						className="disappear-mobile"
-						style={{
-							width: "100%",
-							position: "relative",
-							height: "100%",
-						}}
-					>
-						<picture>
-							<source
-								type="image/webp"
-								srcSet="/imgs/pricing/Pricing_CTA-image-dots@2x.webp"
-								alt="Bubbles graphic"
-							/>
-							<source
-								type="image/png"
-								srcSet="/imgs/pricing/Pricing_CTA-image-dots@2x.png"
-								alt="Bubbles graphic"
-							/>
-							<img
-								className="drop-right__img h-remove-shadow bubbles-raw"
-								style={{
-									maxWidth: "auto",
-									height: "135%",
-									position: "absolute",
-									zIndex: "2",
-									left: "50%",
-									top: "50%",
-									width: "auto",
-									right: "0px",
-									transform: "translateX(-50%) translateY(-50%)",
-								}}
-								src="/imgs/pricing/Pricing_CTA-image-dots@2x.png"
-								alt="Bubbles graphic"
-							/>
-						</picture>
-						<picture>
-							<source
-								type="image/webp"
-								srcSet="https://copper.objects.frb.io/imgs/pricing/Pricing_CTA-image-bubbles@2x-migration-2.webp"
-								alt="Bubbles graphic"
-							/>
-							<source
-								type="image/png"
-								srcSet="https://copper.objects.frb.io/imgs/pricing/Pricing_CTA-image-bubbles@2x-migration-2.png"
-								alt="Bubbles graphic"
-							/>
-							<img
-								className="drop-right__img h-remove-shadow bubbles-user"
-								style={{
-									maxWidth: "650px",
-									height: "auto",
-									position: "absolute",
-									zIndex: "2",
-									left: "50%",
-									top: "50%",
-									width: "100%",
-									transform: "translateX(-50%) translateY(-50%)",
-									minWidth: "200px",
-								}}
-								src="https://copper.objects.frb.io/imgs/pricing/Pricing_CTA-image-bubbles@2x-migration-2.png"
-								alt="Bubbles graphic"
-							/>
-						</picture>
-					</div>
-				</div>
-				<div
-					className="container c-animation-container"
-					style={{ position: "static" }}
-				>
-					<h2
-						className="extra-bottom-margin--x-small"
-						style={{ textAlign: "center" }}
-					></h2>
-					<div className="row column-reverse" style={{ position: "static" }}>
-						<div
-							className="col-md-6 d-flex align-items-center order-1 "
-							style={{ position: "static" }}
-						>
-							<div
-								className="c-image c-image--extended-left c-image--shadow h-remove-shadow"
-								style={{ position: "static" }}
-							>
-								<div
-									className="appear-mobile"
-									style={{
-										width: "100%",
-										height: "auto",
-										position: "relative",
-										zIndex: "2",
-										bottom: "unset",
-										left: "0px",
-										right: "0px",
-										marginLeft: "0px",
-									}}
-								>
-									<picture>
-										<source
-											type="image/webp"
-											srcSet="https://copper.objects.frb.io/imgs/pricing/pricing_cta-image-mobile@2x-migration-2.webp"
-											alt="Bubbles graphic"
-										/>
-										<source
-											type="image/png"
-											srcSet="https://copper.objects.frb.io/imgs/pricing/pricing_cta-image-mobile@2x-migration-2.png"
-											alt="Bubbles graphic"
-										/>
-										<img
-											className="drop-right__img h-remove-shadow"
-											src="https://copper.objects.frb.io/imgs/pricing/pricing_cta-image-mobile@2x-migration-2.png"
-											alt="Bubbles graphic"
-										/>
-									</picture>
-								</div>
-							</div>
-						</div>
-						<div className="col-md-6 c-valign--middle order-2">
-							<h2>Try Copper software solution for free</h2>
-							<p>
-								14-day trial. Instant activation, no credit card required. Give
-								the Copper software solution a try today.
-								<br />
-							</p>
-							<div className="c-hero__buttons" style={{ flexDirection: "row" }}>
-								<a
-									className="c-button sendUTMsToAmplitude c-button--white  section-background-flavor"
-									style={{
-										justifyContent: "center",
-										marginLeft: "5px",
-										width: "fit-content",
-									}}
-									href="https://www.copper.com/signup"
-								>
-									Try free
-								</a>
-								<a
-									className="c-button c-button--outline  section-background-flavor "
-									href="/demos"
-									style={{
-										justifyContent: "center",
-										marginLeft: "5px",
-										width: "fit-content",
-									}}
-								>
-									Request demo
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
 			<Footer></Footer>
-		</div>
+		</DefaultPageBase>
 	);
 }
 export async function getStaticProps(context) {

@@ -3,6 +3,7 @@ import ImageSimple from "../Simples/ImageSimple";
 const DefaultHero = ({
 	slug,
 	loopIndex,
+	notFirstHero,
 	backgroundColor,
 	eyebrow,
 	eyebrowSettings,
@@ -16,6 +17,11 @@ const DefaultHero = ({
 	displayVideo,
 	heroVideoUrl,
 }) => {
+	// Defines not first hero styles
+	const sectionStyles = notFirstHero
+		? { paddingTop: "100px", paddingBottom: "100px", minHeight: "0" }
+		: {};
+
 	let imageStyles = { objectFit: "initial", height: "auto", width: "100%" };
 	if (entry.slug == "email-tracking-lp") {
 		imageStyles = { ...imageStyles, maxWidth: "unset" };
@@ -28,11 +34,11 @@ const DefaultHero = ({
 			} ${removeNavigation ? "h-no-nav" : ""} ${
 				specialClass?.length ? specialClass : ""
 			}`}
-			style="{{ notFirstHero is defined and notFirstHero is not null and notFirstHero == 1 ? 'padding-top: 100px; padding-bottom: 100px; min-height: 0;' : '' }}"
+			style={{ ...sectionStyles }}
 		>
-			<div class="container">
-				<div class="row row--no-reverse">
-					<div class="col-md-6 c-valign--middle">
+			<div className="container">
+				<div className="row row--no-reverse">
+					<div className="col-md-6 c-valign--middle">
 						<HeroCopy
 							slug={slug}
 							loopIndex={loopIndex}
@@ -46,16 +52,22 @@ const DefaultHero = ({
 					{() => {
 						if (displayVideo == "1" && heroVideoUrl) {
 							return (
-								<div class="col-md-6 c-valign--middle">
-									<div class="hero-text video-header">{assetText}</div>
-									<div class="c-video ">
+								<div className="col-md-6 c-valign--middle">
+									<div className="hero-text video-header">{assetText}</div>
+									<div className="c-video ">
 										<div
-											class="wistia_responsive_padding"
-											style="padding:56.25% 0 0 0;position:relative;"
+											className="wistia_responsive_padding"
+											style={{ padding: "56.25% 0 0 0", position: "relative" }}
 										>
 											<div
-												class="wistia_responsive_wrapper"
-												style="height:100%;left:0;position:absolute;top:0;width:100%;"
+												className="wistia_responsive_wrapper"
+												style={{
+													height: "100%",
+													left: "0",
+													position: "absolute",
+													top: "0",
+													width: "100%",
+												}}
 											>
 												<iframe
 													src="{{ heroValues.heroVideoUrl }}"
@@ -63,7 +75,7 @@ const DefaultHero = ({
 													allowtransparency="true"
 													frameborder="0"
 													scrolling="no"
-													class="wistia_embed"
+													className="wistia_embed"
 													name="wistia_embed"
 													allowfullscreen
 													mozallowfullscreen
@@ -85,11 +97,16 @@ const DefaultHero = ({
 						} else if (image?.length) {
 							return (
 								<div
-									class="col-md-6 c-valign--middle c-image invert-sm-spacing c-valign--middle"
-									style="position: relative; left: 0px; height: fit-content; max-height: none;"
+									className="col-md-6 c-valign--middle c-image invert-sm-spacing c-valign--middle"
+									style={{
+										position: "relative",
+										left: "0px",
+										height: "fit-content",
+										maxHeight: "none",
+									}}
 								>
 									{assetText?.length ? (
-										<div class="hero-text image-header">{assetText}</div>
+										<div className="hero-text image-header">{assetText}</div>
 									) : (
 										""
 									)}
@@ -101,7 +118,7 @@ const DefaultHero = ({
 								</div>
 							);
 						} else {
-							return <div class="col-md-6"></div>;
+							return <div className="col-md-6"></div>;
 						}
 					}}
 				</div>

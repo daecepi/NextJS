@@ -71,6 +71,7 @@ const HeroBlock = ({
 				specialClass={specialClass}
 				heroSignupTitle={heroSignupTitle}
 				heroSignupDescription={heroSignupDescription}
+				notFirstHero={loopIndex > 1 ? true : false}
 				heroVideoUrl={heroVideoUrl}
 				{...commonParams}
 			/>
@@ -97,6 +98,7 @@ const HeroBlock = ({
 		<DefaultHero
 			{...commonParams}
 			specialClass={specialClass}
+			notFirstHero={loopIndex > 1 ? true : false}
 			assetText={assetText}
 			displayVideo={displayVideo}
 			heroVideoUrl={heroVideoUrl}
