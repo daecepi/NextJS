@@ -29,11 +29,11 @@ const LogoModule = ({
 					let optimizedImages = logo.optimizedLandingImages || undefined;
 					return (
 						<li className="logo-section--images">
-							{optimizedImages?.optimizedImageUrls?.length > 0 ? (
+							{optimizedImages?.srcset?.length > 0 ? (
 								<picture>
 									{optimizedImages.srcsetWebP ? (
 										<source
-											srcset={optimizedImages.srcsetWebP()}
+											srcset={optimizedImages.srcsetWebP}
 											sizes="100vw"
 											type="image/webp"
 										/>
@@ -41,8 +41,8 @@ const LogoModule = ({
 										""
 									)}
 									<img
-										src={optimizedImages.src()}
-										srcset={optimizedImages.srcset()}
+										src={optimizedImages.src}
+										srcset={optimizedImages.srcset}
 										sizes="100vw"
 										alt={logo.altText?.length ? logo.altText : logo.title}
 									/>
@@ -96,7 +96,7 @@ const LogoModule = ({
 				{layout == "2Col" ? (
 					<div className="row" style={{ paddingBottom: "0px" }}>
 						<div
-							class={`col-md-6 d-flex align-items-center ${
+							className={`col-md-6 d-flex align-items-center ${
 								twoColSettings?.reverseLayout === "0"
 									? "order-1"
 									: "order-2 offset-md-1"
@@ -107,7 +107,7 @@ const LogoModule = ({
 							</div>
 						</div>
 						<div
-							class={`col-md-5 c-valign--middle ${
+							className={`col-md-5 c-valign--middle ${
 								twoColSettings.reverseLayout === "0"
 									? "order-2 offset-md-1"
 									: "order-1"
@@ -131,7 +131,7 @@ const LogoModule = ({
 										if (cta.buttonColor) {
 											return (
 												<a
-													class={`c-button c-button--${cta.buttonColor[0].slug}`}
+													className={`c-button c-button--${cta.buttonColor[0].slug}`}
 													target={cta.button.target}
 													href={cta.button.url}
 												>

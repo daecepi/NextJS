@@ -8,7 +8,7 @@ const CtaGroup = (ctas) => {
 						if (cta.modalTrigger) {
 							return (
 								<a
-									class={`c-button ${
+									className={`c-button ${
 										ctas.length > 0 ? "button-center--mobile" : ""
 									} c-button--${buttonColor}  ${
 										cta.takeBackgroundColor ? "section-background-flavor" : ""
@@ -25,7 +25,7 @@ const CtaGroup = (ctas) => {
 							if (cta.button.text.toLowerCase() === "try free") {
 								return (
 									<a
-										class={`c-button ${
+										className={`c-button ${
 											ctas.length > 0 ? "button-center--mobile" : ""
 										} sendUTMsToAmplitude c-button--${buttonColor} ${
 											cta.takeBackgroundColor ? "section-background-flavor" : ""
@@ -39,7 +39,7 @@ const CtaGroup = (ctas) => {
 							} else {
 								return (
 									<a
-										class={`c-button ${
+										className={`c-button ${
 											ctas?.length > 0 ? "button-center--mobile" : ""
 										}  c-button--${buttonColor} ${
 											cta.takeBackgroundColor ? "section-background-flavor" : ""
@@ -75,7 +75,7 @@ const CtaGroup = (ctas) => {
 								<a
 									target={`${cta.button.target === 1 ? "_blank" : undefined}`}
 									href={cta.button.url}
-									class={`t-link ${
+									className={`t-link ${
 										cta.ctaRemoveUnderline ? "no-underline" : ""
 									}`}
 								>

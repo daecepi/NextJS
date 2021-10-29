@@ -41,7 +41,7 @@ const Products = ({ entry }) => {
 					<div>
 						<>
 							{block.typeHandle == "hero" ? (
-								<HeroBlock slug={entry.slug} hero={block} />
+								<HeroBlock slug={entry.slug} {...block} />
 							) : null}
 						</>
 						<>

@@ -23,7 +23,7 @@ const TableModule = ({
 		return (
 			<section
 				id={`${stickyNavName != "" ? stickyNavName.toLowerCase() : ""}`}
-				class={`c-pricing-table--cornflower ${
+				className={`c-pricing-table--cornflower ${
 					matrixBlock.lastInstance ? "last-instance" : ""
 				} ${matrixBlock.includeNavigation ? "nav-added" : ""}`}
 			>
@@ -39,9 +39,9 @@ const TableModule = ({
 										<div className="c-pricing-table__logo__container">
 											{logoOneOptimized.length > 0 ? (
 												<picture>
-													{optimizedImages.srcsetWebP() ? (
+													{optimizedImages.srcsetWebP ? (
 														<source
-															srcset={optimizedImages.srcsetWebP()}
+															srcset={optimizedImages.srcsetWebP}
 															sizes="100vw"
 															type="image/webp"
 														/>
@@ -49,8 +49,8 @@ const TableModule = ({
 														""
 													)}
 													<img
-														src={optimizedImages.src()}
-														srcset={logoOneOptimized.srcset()}
+														src={optimizedImages.src}
+														srcset={logoOneOptimized.srcset}
 														sizes="100vw"
 														width={logoOneOptimized.originalImageWidth}
 														height={logoOneOptimized.originalImageHeight}
@@ -83,11 +83,11 @@ const TableModule = ({
 								)}
 								{firstHeaderLogoTwo?.length ? (
 									<div className="c-pricing-table__logo__container">
-										{logoTwoOptimized?.optimizedImageUrls?.length > 0 ? (
+										{logoTwoOptimized?.srcset?.length > 0 ? (
 											<picture>
-												{logoTwoOptimized.srcsetWebP() ? (
+												{logoTwoOptimized.srcsetWebP ? (
 													<source
-														srcset={`${logoTwoOptimized.srcsetWebP()}`}
+														srcset={`${logoTwoOptimized.srcsetWebP}`}
 														sizes="100vw"
 														type="image/webp"
 													/>
@@ -95,8 +95,8 @@ const TableModule = ({
 													""
 												)}
 												<img
-													src={`${logoTwoOptimized.src()}`}
-													srcset={`${logoTwoOptimized.srcset()}`}
+													src={`${logoTwoOptimized.src}`}
+													srcset={`${logoTwoOptimized.srcset}`}
 													sizes="100vw"
 													width={logoTwoOptimized.originalImageWidth}
 													height={logoTwoOptimized.originalImageHeight}
@@ -133,7 +133,7 @@ const TableModule = ({
 					""
 				)}
 				<div className="container">
-					<h4 class={includeNavigation ? "include-nav" : "no-nav"}>
+					<h4 className={includeNavigation ? "include-nav" : "no-nav"}>
 						{tableTitle}
 					</h4>
 					<div className="c-pricing-table__table--cornflower">

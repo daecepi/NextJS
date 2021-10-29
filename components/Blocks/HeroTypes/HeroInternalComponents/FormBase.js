@@ -22,7 +22,9 @@ const FormBase = ({
 
 			<div
 				id="c-form--default-hero"
-				class={`c-form c-form-mkto${heroMarketoId ? heroMarketoId : "2157"}`}
+				className={`c-form c-form-mkto${
+					heroMarketoId ? heroMarketoId : "2157"
+				}`}
 			>
 				<div className="offline-marketo">
 					{/*{% set formId = `mktoForm_#${ heroMarketoId ? heroMarketoId : '2157' }` %}

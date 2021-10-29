@@ -130,7 +130,7 @@ const heroFormFlow = ({
 				`}
 			</style>
 			<section
-				class={`c-hero--general-signup-form enclosed-form ${
+				className={`c-hero--general-signup-form enclosed-form ${
 					heroBackground[0]?.slug ? heroBackground[0].slug : "white"
 				} hero-form-flow hero-form-flow-${id} ${
 					nearNavigation ? "hero-near-nav" : ""
@@ -174,7 +174,7 @@ const heroFormFlow = ({
 									{tryFreeCtaText?.length ? (
 										<a
 											id="form-hero-try-free"
-											class={`form-hero-try-free c-button  sendUTMsToAmplitude ${
+											className={`form-hero-try-free c-button  sendUTMsToAmplitude ${
 												buttonColorOption == "white" ? "c-button--white" : ""
 											}`}
 											href="#"

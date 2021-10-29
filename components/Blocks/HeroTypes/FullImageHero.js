@@ -13,7 +13,7 @@ const FullImageHero = ({
 }) => {
 	return (
 		<section
-			class={`c-hero c-hero--full ${imageOverlay ? "h-image-overlay" : ""}`}
+			className={`c-hero c-hero--full ${imageOverlay ? "h-image-overlay" : ""}`}
 			style={{ backgroundImage: url(`${image[0]?.url ? image[0].url : ""}`) }}
 		>
 			<div className="container">

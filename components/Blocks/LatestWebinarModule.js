@@ -18,7 +18,7 @@ const LatestWebinarModule = ({ header, removeHeader, addPaddingBottom }) => {
 
 	return (
 		<section
-			class={`h-section-padding ${
+			className={`h-section-padding ${
 				addPaddingBottom ? "extra-bottom-margin--small" : ""
 			}`}
 		>
@@ -49,7 +49,7 @@ const LatestWebinarModule = ({ header, removeHeader, addPaddingBottom }) => {
 												<picture>
 													{optimizedImages.srcsetWebP ? (
 														<source
-															srcset={optimizedImages.srcsetWebP()}
+															srcset={optimizedImages.srcsetWebP}
 															sizes="100vw"
 															type="image/webp"
 														/>
@@ -57,8 +57,8 @@ const LatestWebinarModule = ({ header, removeHeader, addPaddingBottom }) => {
 														""
 													)}
 													<img
-														src={optimizedImages.src()}
-														srcset={optimizedImages.srcset()}
+														src={optimizedImages.src}
+														srcset={optimizedImages.srcset}
 														sizes="100vw"
 														alt={entry.title}
 													/>

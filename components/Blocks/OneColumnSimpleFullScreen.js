@@ -6,7 +6,7 @@ const OneColumnSimpleFullScreen = (
 ) => {
 	return (
 		<section
-			class={`c-single-column ${
+			className={`c-single-column ${
 				backgroundImageClass ? backgroundImageClass : ""
 			} extra-top-margin`}
 		>

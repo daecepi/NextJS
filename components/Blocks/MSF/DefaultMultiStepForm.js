@@ -115,7 +115,9 @@ const DefaultMultiStepForm = ({ specialClass, id }) => {
 				`}
 			</style>
 
-			<div class={`multistep-form ${specialClass} multistep-form-${idToUse}`}>
+			<div
+				className={`multistep-form ${specialClass} multistep-form-${idToUse}`}
+			>
 				<ButtonBox
 					eyebrow={"STEP 1 of 3"}
 					copyHeader={"Do you use Gmail for your business?"}

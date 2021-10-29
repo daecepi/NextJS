@@ -1,6 +1,9 @@
 const ButtonBox = ({ eyebrow, copyHeader, copy, step, buttonGroupSchema }) => {
 	return (
-		<fieldset class={`c-form step step-${step}`} style={{ boxShadow: "none" }}>
+		<fieldset
+			className={`c-form step step-${step}`}
+			style={{ boxShadow: "none" }}
+		>
 			<div className="container">
 				<div className="row">
 					<div className="col-md-12 extra-bottom-margin--x-small">

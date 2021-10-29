@@ -29,7 +29,7 @@ const OneColumnBlock = ({
 		<>
 			<section
 				id={stickyNavName.toLowerCase() || ""}
-				class={`c-single-column ${
+				className={`c-single-column ${
 					addBottomPadding ? "h-padding-bottom" : ""
 				} ${singleBackgroundColor}`}
 			>
@@ -37,7 +37,7 @@ const OneColumnBlock = ({
 					{header?.length || subText?.length ? (
 						<>
 							<div
-								class={`${
+								className={`${
 									textRatio?.value?.length &&
 									copyVariationRatios[textRatio.value]
 										? copyVariationRatios[textRatio.value].ratio

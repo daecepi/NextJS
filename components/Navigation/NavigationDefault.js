@@ -639,7 +639,7 @@ const NavigationDefault = () => {
 						<ul>
 							{menu.map((mobileItems) => {
 								const itemKey = Object.keys(mobileItems);
-								console.log(mobileItems[itemKey]);
+								// console.log(mobileItems[itemKey]);
 								return (
 									<>
 										{mobileItems[itemKey].render == true ? (
@@ -843,7 +843,7 @@ const NavigationDefault = () => {
 							<ul className="c-nav__links">
 								{menu.map((item) => {
 									const itemKey = Object.keys(item);
-									console.log(item[itemKey]);
+									// console.log(item[itemKey]);
 									return (
 										<>
 											{item[itemKey].render == true ? (

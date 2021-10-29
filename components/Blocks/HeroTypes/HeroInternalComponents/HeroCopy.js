@@ -10,19 +10,24 @@ const HeroCopy = ({
 	copyLogo,
 	richText,
 	ctas,
+	bulletItemsInHero,
+	bulletPointsMode,
+	specialBulletLogos,
+	specialBulletsText,
 }) => {
-	let firstEyebrowToTakePlace = eyebrowSettings[0]?.eyebrowColor[0]?.slug
-		? eyebrowSettings[0].eyebrowColor[0].slug
-		: { eyebrowColor: [{ slug: "white" }] };
+	let firstEyebrowToTakePlace =
+		eyebrowSettings && eyebrowSettings[0]?.eyebrowColor[0]?.slug
+			? eyebrowSettings[0].eyebrowColor[0].slug
+			: { eyebrowColor: [{ slug: "white" }] };
 
 	// Synced context
 	const syncedContext = useSyncContext();
 	return (
 		<>
-			{firstEyebrowToTakePlace && eyebrow.length ? (
+			{firstEyebrowToTakePlace && eyebrow?.length ? (
 				<pre
-					class={`c-eyebrow ${
-						firstEyebrowToTakePlace
+					className={`c-eyebrow ${
+						eyebrowSettings && firstEyebrowToTakePlace
 							? "c-eyebrow--" + firstEyebrowToTakePlace
 							: ""
 					}`}
@@ -32,9 +37,9 @@ const HeroCopy = ({
 			) : (
 				""
 			)}
-			{copyLogo[0] && copyLogo[0] ? (
+			{copyLogo && copyLogo[0] ? (
 				<div
-					class={`hero-logo${
+					className={`hero-logo${
 						slug == "try-free-crm-capterra" && loopIndex == 1
 							? "--double-size"
 							: ""
@@ -58,14 +63,14 @@ const HeroCopy = ({
 				dangerouslySetInnerHTML={{ __html: richText }}
 			></div>
 			{/* Bullets points section */}
-			{bulletItemsInHero.length ? (
+			{bulletItemsInHero?.length ? (
 				<ul className="ul-list__container ul-list--white-checks ">
 					{bulletItemsInHero.map((bulletItem) => {
 						return (
 							<>
 								{/* Assuming 'text' is the column handle of the text field */}
 								<li
-									class={`${
+									className={`${
 										bulletItem.bulletHeader?.length
 											? "ul-list--li-paragraph-design"
 											: ""

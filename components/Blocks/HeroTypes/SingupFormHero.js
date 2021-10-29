@@ -149,11 +149,11 @@ const SignupFormHero = ({
 										className="col-md-6 c-valign--middle c-image invert-sm-spacing c-valign--middle"
 										style={{ position: "relative", left: "0px" }}
 									>
-										{optimizedImages?.optimizedImageUrls?.length > 0 ? (
+										{optimizedImages?.srcset?.length > 0 ? (
 											<picture>
 												{optimizedImages.srcsetWebP ? (
 													<source
-														srcset={optimizedImages.srcsetWebP()}
+														srcset={optimizedImages.srcsetWebP}
 														sizes="100vw"
 														type="image/webp"
 													/>
@@ -161,8 +161,8 @@ const SignupFormHero = ({
 													""
 												)}
 												<img
-													src={optimizedImages.src()}
-													srcset={optimizedImages.srcset()}
+													src={optimizedImages.src}
+													srcset={optimizedImages.srcset}
 													sizes="100vw"
 													className={imageContain ? "h-image-contain" : ""}
 													style={{ objectFit: "initial", height: "auto" }}
@@ -198,7 +198,7 @@ const SignupFormHero = ({
 		return (
 			<section
 				id="starting-hero"
-				class={`c-hero--split
+				className={`c-hero--split
 					landing-hero
 					${entry.removeNavigation ? "h-no-nav" : ""}
 					c-hero--general-signup-form

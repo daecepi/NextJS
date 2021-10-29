@@ -29,7 +29,7 @@ const MarketoFormHero = ({
 		return (
 			<section
 				id="starting-hero"
-				class={`c-hero--split
+				className={`c-hero--split
       landing-hero 
       ${notFirstHero ? "not-first" : ""}
       ${
@@ -100,7 +100,7 @@ const MarketoFormHero = ({
 									>
 										<img
 											style="object-fit: initial; height: auto;"
-											class={imageContain ? "h-image-contain" : ""}
+											className={imageContain ? "h-image-contain" : ""}
 											src={specificImage.url}
 											alt={
 												specificImage?.altText?.length
@@ -122,7 +122,7 @@ const MarketoFormHero = ({
 		return (
 			<section
 				id="starting-hero"
-				class={`c-hero--split landing-hero {{ backgroundColor ? backgroundColor.slug : 'hot-pink' }} ${
+				className={`c-hero--split landing-hero {{ backgroundColor ? backgroundColor.slug : 'hot-pink' }} ${
 					removeNavigation ? "h-no-nav" : ""
 				} ${heroValues?.specialClass?.length ? heroValues.specialClass : ""}`}
 				style={sectionStyles}

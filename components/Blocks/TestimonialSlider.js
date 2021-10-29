@@ -53,7 +53,7 @@ const testimonialSlider = ({ eyebrow, contentCopy, sliderContent }) => {
 					id={`check-${item}`}
 					data-target-slide={`testimonial-slide-${item}`}
 					data-target-index={i}
-					class={`check-icon check-icon-${i} ${item === 0 ? "active" : ""}`}
+					className={`check-icon check-icon-${i} ${item === 0 ? "active" : ""}`}
 				>
 					<svg
 						width="10"
@@ -79,16 +79,16 @@ const testimonialSlider = ({ eyebrow, contentCopy, sliderContent }) => {
 		return (
 			<div
 				id={`testimonial-slide-${index - 1}`}
-				class={`testimonial-slider ${index === 1 ? "active" : ""}`}
+				className={`testimonial-slider ${index === 1 ? "active" : ""}`}
 			>
 				<div className="c-image c-image--shadow testimonial-image">
 					{contentImage ? (
 						<>
-							{optimizedImages.optimizedImageUrls.length > 0 ? (
+							{optimizedImages.srcset?.length > 0 ? (
 								<picture>
 									{optimizedImages.srcsetWebP ? (
 										<source
-											srcset={optimizedImages.srcsetWebP()}
+											srcset={optimizedImages.srcsetWebP}
 											sizes="100vw"
 											type="image/webp"
 										/>
@@ -97,8 +97,8 @@ const testimonialSlider = ({ eyebrow, contentCopy, sliderContent }) => {
 									)}
 
 									<img
-										src={optimizedImages.src()}
-										srcset={optimizedImages.srcset()}
+										src={optimizedImages.src}
+										srcset={optimizedImages.srcset}
 										sizes="100vw"
 										alt={
 											contentImage.altText?.length

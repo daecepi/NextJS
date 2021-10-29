@@ -124,7 +124,7 @@ const PricingPlans = ({
 
 	return (
 		<section
-			class={`c-pricing-hero--cornflower price-hero ${
+			className={`c-pricing-hero--cornflower price-hero ${
 				reducePadding ? "h-reduce-padding" : ""
 			}`}
 		>
@@ -149,12 +149,12 @@ const PricingPlans = ({
 						return (
 							<>
 								<div
-									class={`c-pricing-hero__plans ${
+									className={`c-pricing-hero__plans ${
 										plan.featured ? "featured" : ""
 									}`}
 								>
 									<div
-										class={`c-pricing-hero__plans__title ${
+										className={`c-pricing-hero__plans__title ${
 											plan.featured
 												? "featured"
 												: plan.planType == "Business"
@@ -222,7 +222,7 @@ const PricingPlans = ({
 															</a>;
 														} else if (cta.modalTrigger) {
 															<a
-																class={`c-button c-button--${
+																className={`c-button c-button--${
 																	buttonColor ? buttonColor.slug : "outline"
 																}`}
 																href="/demos"
@@ -231,7 +231,7 @@ const PricingPlans = ({
 															</a>;
 														} else {
 															<a
-																class={`c-button c-button--${
+																className={`c-button c-button--${
 																	buttonColor ? buttonColor.slug : "outline"
 																} ${
 																	plan.featured ? "featured-button" : ""

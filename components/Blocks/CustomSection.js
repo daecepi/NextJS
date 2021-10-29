@@ -133,7 +133,7 @@ const CustomSection = ({ backgroundColor, settings, layout }) => {
 												const imageD = internalSection.image[0];
 												const optimizedImages = imageD.optimizedLandingImages;
 												if (imageD?.url) {
-													if (optimizedImages?.optimizedImageUrls?.length > 0) {
+													if (optimizedImages?.srcset?.length > 0) {
 														let styleProp =
 															internalSection.settings[0].maxWidth.length > 0
 																? internalSection.settings[0].maxWidth
@@ -142,7 +142,7 @@ const CustomSection = ({ backgroundColor, settings, layout }) => {
 															<picture>
 																{optimizedImages.srcsetWebP ? (
 																	<source
-																		srcset={optimizedImages.srcsetWebP()}
+																		srcset={optimizedImages.srcsetWebP}
 																		sizes="100vw"
 																		type="image/webp"
 																	/>
@@ -150,8 +150,8 @@ const CustomSection = ({ backgroundColor, settings, layout }) => {
 																	""
 																)}
 																<img
-																	src={optimizedImages.src()}
-																	srcset={optimizedImages.srcset()}
+																	src={optimizedImages.src}
+																	srcset={optimizedImages.srcset}
 																	sizes="100vw"
 																	className="my-0"
 																	style={styleProp}

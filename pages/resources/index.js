@@ -219,7 +219,7 @@ const resources = (props) => {
 								{props.blogEntries.map((item, index) => {
 									if (index <= 3) {
 										return (
-											<div class="col-lg-6 col-xl-4 c-card-col">
+											<div className="col-lg-6 col-xl-4 c-card-col">
 												{item.featuredImage[0].url ? (
 													<BlogLargeCardImage
 														imagegradient={item.imagegradient}

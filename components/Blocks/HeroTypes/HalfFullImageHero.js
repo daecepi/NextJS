@@ -11,16 +11,16 @@ const HalfFullImageHero = ({
 	const optimizedImages = imageToUse.optimizedLandingImages;
 	return (
 		<section
-			class={`c-hero--split ${
+			className={`c-hero--split ${
 				backgroundColor[0] ? backgroundColor[0].slug : "hot-pink"
 			} product-page`}
 		>
 			<div className="c-image">
-				{optimizedImages?.optimizedImageUrls?.length > 0 ? (
+				{optimizedImages?.srcset?.length > 0 ? (
 					<picture>
 						{optimizedImages.srcsetWebP ? (
 							<source
-								srcset={optimizedImages.srcsetWebP()}
+								srcset={optimizedImages.srcsetWebP}
 								sizes="100vw"
 								type="image/webp"
 							/>
@@ -28,8 +28,8 @@ const HalfFullImageHero = ({
 							""
 						)}
 						<img
-							src="{{ optimizedImages.src() }}"
-							srcset="{{ optimizedImages.srcset() }}"
+							src="{{ optimizedImages.src }}"
+							srcset="{{ optimizedImages.srcset }}"
 							sizes="100vw"
 							alt="{{ image.altText is defined and image.altText|length ? image.altText : image.title }}"
 						/>

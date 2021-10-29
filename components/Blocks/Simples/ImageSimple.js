@@ -1,44 +1,41 @@
 import Image from "next/image";
 
 const ImageSimple = ({ image, classAtr, stylesAtr }) => {
-	let singleImage = image[0];
-	if (image.length) {
+	console.log("Image object obtained ", image);
+	if (!image.length) {
 		return "";
 	}
+	let singleImage = image[0];
 	let optimizedImages = singleImage.optimizedLandingImages;
 	return (
 		<>
-			{singleImage.length ? (
-				<>
-					{optimizedImages.optimizedImageUrls.length > 0 ? (
-						<picture>
-							{optimizedImages.srcsetWebP() ? (
-								<source
-									srcset={optimizedImages.srcsetWebP()}
-									sizes="100vw"
-									type="image/webp"
-								/>
-							) : (
-								""
-							)}
-							<img
-								src={optimizedImages.src()}
-								srcset={optimizedImages.srcset()}
-								sizes="100vw"
-								alt={image?.altText | length ? image.altText : image.title}
-							/>
-						</picture>
-					) : (
-						<img
-							className={classAtr ? classAtr : ""}
-							style={stylesAtr ? stylesAtr : {}}
-							src={image.url}
-							alt={image.altText?.length ? image.altText : image.title}
+			{optimizedImages.srcset?.length > 0 ? (
+				<picture>
+					{optimizedImages.srcsetWebp ? (
+						<source
+							srcset={optimizedImages.srcsetWebp}
+							sizes="100vw"
+							type="image/webp"
 						/>
+					) : (
+						""
 					)}
-				</>
+					<img
+						src={optimizedImages.src}
+						srcset={optimizedImages.srcset}
+						className={classAtr ? classAtr : ""}
+						style={stylesAtr ? { ...stylesAtr } : {}}
+						sizes="100vw"
+						alt={image.altText?.length ? image.altText : image.title}
+					/>
+				</picture>
 			) : (
-				""
+				<img
+					className={classAtr ? classAtr : ""}
+					style={stylesAtr ? { ...stylesAtr } : {}}
+					src={image.url}
+					alt={image.altText?.length ? image.altText : image.title}
+				/>
 			)}
 		</>
 	);

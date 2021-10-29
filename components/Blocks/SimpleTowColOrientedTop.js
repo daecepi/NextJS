@@ -10,11 +10,11 @@ const SimpleTwoColOrientedTop = ({ copy, image }) => {
 						<div className="c-image c-image--center no-embelleshment">
 							{contentImage ? (
 								<>
-									{optimizedImages.optimizedImageUrls.length > 0 ? (
+									{optimizedImages.srcset?.length > 0 ? (
 										<picture>
 											{optimizedImages.srcsetWebP ? (
 												<source
-													srcset={optimizedImages.srcsetWebP()}
+													srcset={optimizedImages.srcsetWebP}
 													sizes="100vw"
 													type="image/webp"
 												/>
@@ -23,8 +23,8 @@ const SimpleTwoColOrientedTop = ({ copy, image }) => {
 											)}
 
 											<img
-												src={optimizedImages.src()}
-												srcset={optimizedImages.srcset()}
+												src={optimizedImages.src}
+												srcset={optimizedImages.srcset}
 												sizes="100vw"
 												alt={
 													contentImage.altText?.length
