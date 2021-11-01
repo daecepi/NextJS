@@ -13,7 +13,7 @@ const ImageSimple = ({ image, classAtr, stylesAtr }) => {
 				<picture>
 					{optimizedImages.srcsetWebp ? (
 						<source
-							srcset={optimizedImages.srcsetWebp}
+							srcSet={optimizedImages.srcsetWebp}
 							sizes="100vw"
 							type="image/webp"
 						/>
@@ -22,7 +22,7 @@ const ImageSimple = ({ image, classAtr, stylesAtr }) => {
 					)}
 					<img
 						src={optimizedImages.src}
-						srcset={optimizedImages.srcset}
+						srcSet={optimizedImages.srcset}
 						className={classAtr ? classAtr : ""}
 						style={stylesAtr ? { ...stylesAtr } : {}}
 						sizes="100vw"

@@ -56,7 +56,6 @@ const HeroBlock = ({
 		richText,
 		ctas: cta,
 	};
-	console.log("common params ", commonParams);
 	const { query } = useRouter();
 
 	if (fullImageHero) {

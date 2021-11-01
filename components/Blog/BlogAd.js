@@ -12,8 +12,8 @@ const BlogAd = () => {
 					height="920"
 				></Image>
 				{/* <picture>
-              <source type="image/webp" srcset="/imgs/blog/AD-1--uncle-crm.webp"  className="c-copper-chronicles__ad__img" alt="AD-1 uncle crm image"  />
-              <source type="image/png" srcset="/imgs/blog/AD-1--uncle-crm.jpg"  className="c-copper-chronicles__ad__img" alt="AD-1 uncle crm image"  />
+              <source type="image/webp" srcSet="/imgs/blog/AD-1--uncle-crm.webp"  className="c-copper-chronicles__ad__img" alt="AD-1 uncle crm image"  />
+              <source type="image/png" srcSet="/imgs/blog/AD-1--uncle-crm.jpg"  className="c-copper-chronicles__ad__img" alt="AD-1 uncle crm image"  />
               <img   className="c-copper-chronicles__ad__img" alt="AD-1 uncle crm image"   src="/imgs/blog/AD-1--uncle-crm.jpg"   />
     </picture> */}
 			</a>

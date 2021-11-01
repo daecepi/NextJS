@@ -22,8 +22,8 @@ const TwoUp = (props) => {
 							height={props.imageHeight}
 						></Image>
 						{/* <picture>
-                    <source type="image/webp" srcset="/imgs/product/200309_Automate_UI02.webp"  className="drop-right__img img-no-shadow"   alt="Automation image" />
-                    <source type="image/png" srcset="/imgs/product/200309_Automate_UI02.png"  className="drop-right__img img-no-shadow"   alt="Automation image" />
+                    <source type="image/webp" srcSet="/imgs/product/200309_Automate_UI02.webp"  className="drop-right__img img-no-shadow"   alt="Automation image" />
+                    <source type="image/png" srcSet="/imgs/product/200309_Automate_UI02.png"  className="drop-right__img img-no-shadow"   alt="Automation image" />
                     <img   className="drop-right__img img-no-shadow"   src="/imgs/product/200309_Automate_UI02.png"   alt="Automation image" />
                 </picture> */}
 					</div>

@@ -1,4 +1,4 @@
-import { getAllPostsWithSlug, getSingleEntry } from "../lib/api";
+import { getAllPostsWithSlug, getLandingPageEntry } from "../lib/api";
 
 // Styles definitions
 import styles from "../styles/Home.module.css";
@@ -19,24 +19,18 @@ import FooterLanding from "../components/Footer/FooterLanding";
 import Products from "../components/Sections/Products/Products";
 
 const Entry = ({ entry }) => {
-  // const returnsTwoColumnComponent = () => {
-  //   return (
-  //     <>
-  //       <TwoColumnComponent />
-  //     </>
-  //   );
-  // };
-  if( entry.sectionHandle == 'landingPage'){
-    return(
-      <Products entry={entry}></Products>
-    )
-  }else{
-    return (
-        <p>building</p>
-      );
-  }
-
-  
+	// const returnsTwoColumnComponent = () => {
+	//   return (
+	//     <>
+	//       <TwoColumnComponent />
+	//     </>
+	//   );
+	// };
+	if (entry.sectionHandle == "landingPage") {
+		return <Products entry={entry}></Products>;
+	} else {
+		return <p>building</p>;
+	}
 };
 
 export default Entry;
@@ -53,7 +47,7 @@ export default Entry;
 // }
 
 // export async function getStaticProps({ params }) {
-//     const entry = await getSingleEntry(params.slug)
+//     const entry = await getLandingPageEntry(params.slug)
 //     return {
 //         props: {
 //             entry,
@@ -63,17 +57,17 @@ export default Entry;
 // }
 
 export async function getServerSideProps({ params }) {
-  const entry = await getSingleEntry(params);
+	const entry = await getLandingPageEntry(params);
 
-  if (!entry) {
-    return {
-      notFound: true,
-    };
-  }
+	if (!entry) {
+		return {
+			notFound: true,
+		};
+	}
 
-  return {
-    props: {
-      entry,
-    }, // will be passed to the page component as props
-  };
+	return {
+		props: {
+			entry,
+		}, // will be passed to the page component as props
+	};
 }
