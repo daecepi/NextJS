@@ -253,14 +253,6 @@ const DefaultHead = ({ entry, globals }) => {
 					href="/favicon-16x16.png"
 					sizes="16x16"
 				/>
-
-				<style jsx>
-					{`
-						.forced-none {
-							display: none !important;
-						}
-					`}
-				</style>
 			</Head>
 
 			{pathname !== "/" ? (

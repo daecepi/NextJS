@@ -6,7 +6,7 @@ import { SyncedAppWrapper } from "../..//contexts/SyncContext";
 const DefaultPageBase = ({ entry, children }) => {
 	return (
 		<SyncedAppWrapper>
-			{/* <DefaultHead entry={entry || {}} /> */}
+			<DefaultHead entry={entry || {}} />
 			<CookiesWrapper>{children}</CookiesWrapper>
 		</SyncedAppWrapper>
 	);

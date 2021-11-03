@@ -275,9 +275,13 @@ const AboutBioModal = ({ leaderId, containerStyles, closeSignal }) => {
 					<p id="leader-title" className="sm putty">
 						{leaderInformation[leaderId]?.leaderTitle || ""}
 					</p>
-					<p id="leader-bio" className="p-sm">
-						{leaderInformation[leaderId]?.leaderBio || ""}
-					</p>
+					<p
+						id="leader-bio"
+						className="p-sm"
+						dangerouslySetInnerHTML={{
+							__html: leaderInformation[leaderId]?.leaderBio || "",
+						}}
+					></p>
 				</div>
 			</div>
 		</ModalBase>
