@@ -6,11 +6,11 @@
 @font-face {
 	font-display: swap;
 	font-family: "Graphik-Light";
-	src: url("../fonts/../fonts/Graphik-Light-Web.eot");
-	src: url("../fonts/../fonts/Graphik-Light-Web.eot?#iefix")
+	src: url("/fonts/../fonts/Graphik-Light-Web.eot");
+	src: url("/fonts/../fonts/Graphik-Light-Web.eot?#iefix")
 			format("embedded-opentype"),
-		url("../fonts/../fonts/Graphik-Light-Web.woff2") format("woff2"),
-		url("../fonts/../fonts/Graphik-Light-Web.woff") format("woff");
+		url("/fonts/../fonts/Graphik-Light-Web.woff2") format("woff2"),
+		url("/fonts/../fonts/Graphik-Light-Web.woff") format("woff");
 	font-weight: 300;
 	font-style: normal;
 	font-stretch: normal;
@@ -19,11 +19,11 @@
 @font-face {
 	font-display: swap;
 	font-family: "Graphik-Regular";
-	src: url("../fonts/../fonts/Graphik-Regular-Web.eot");
-	src: url("../fonts/../fonts/Graphik-Regular-Web.eot?#iefix")
+	src: url("/fonts/../fonts/Graphik-Regular-Web.eot");
+	src: url("/fonts/../fonts/Graphik-Regular-Web.eot?#iefix")
 			format("embedded-opentype"),
-		url("../fonts/../fonts/Graphik-Regular-Web.woff2") format("woff2"),
-		url("../fonts/../fonts/Graphik-Regular-Web.woff") format("woff");
+		url("/fonts/../fonts/Graphik-Regular-Web.woff2") format("woff2"),
+		url("/fonts/../fonts/Graphik-Regular-Web.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
 	font-stretch: normal;
@@ -32,10 +32,10 @@
 @font-face {
 	font-display: swap;
 	font-family: "Graphik-Medium";
-	src: url("../fonts/Graphik-Medium-Web.eot");
-	src: url("../fonts/Graphik-Medium-Web.eot?#iefix") format("embedded-opentype"),
-		url("../fonts/Graphik-Medium-Web.woff2") format("woff2"),
-		url("../fonts/Graphik-Medium-Web.woff") format("woff");
+	src: url("/fonts/Graphik-Medium-Web.eot");
+	src: url("/fonts/Graphik-Medium-Web.eot?#iefix") format("embedded-opentype"),
+		url("/fonts/Graphik-Medium-Web.woff2") format("woff2"),
+		url("/fonts/Graphik-Medium-Web.woff") format("woff");
 	font-weight: 500;
 	font-style: normal;
 	font-stretch: normal;

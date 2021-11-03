@@ -1,16 +1,11 @@
 import Script from "next/script";
 
-import { getEntryByType, getHomepage } from "../lib/api";
-import ImageWebpElement from "../components/Singles/ImageWebp";
+import { getEntryByType } from "../lib/api";
 import DefaultPageBase from "../components/PageBase/DefaultPageBase";
-import NavigationDefault from "../components/Navigation/NavigationDefault";
-import { useCallback, useState } from "react";
-import ModalBase from "../components/Blocks/Modals/ModalBase/ModalBase";
+import { useState } from "react";
 import AboutBioModal from "../components/Blocks/Modals/AboutBioModal";
 
 export default function About({ res }) {
-	console.log("ENTRIES RECEIVED", res);
-
 	const [modalState, updateModalState] = useState("");
 
 	const displayModal = (leaderId) => {
@@ -22,6 +17,7 @@ export default function About({ res }) {
 
 	return (
 		<DefaultPageBase entry={res}>
+			<NavigationDefault />
 			{/* Page content */}
 			<style jsx>
 				{`

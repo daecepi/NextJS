@@ -17,7 +17,7 @@
 // 	   </div>
 // 		 <div class="row">
 // 	   	 <div class="col-md-6 c-valign--middle">
-// 			 	 <img src="https://semantic-ui.com/images/wireframe/paragraph.png" alt="Text Placeholder""> 	
+// 			 	 <img src="https://semantic-ui.com/images/wireframe/paragraph.png" alt="Text Placeholder"">
 // 			 </div>
 // 	  	 <div class="col-md-6">
 // 			   <div class="c-image">
@@ -27,13 +27,13 @@
 // 	   </div>
 //   </div>
 // </section>
-// 
+//
 // Styleguide Layout.Alternating.Container
 
 .c-cols {
 	padding: $global-mobile-padding;
 	padding-bottom: 0px;
-	@include media-breakpoint-up(md) { 
+	@include media-breakpoint-up(md) {
 		padding: $global-desktop-padding;
 	}
 	@at-root {
@@ -45,7 +45,7 @@
 			color: $color-white;
 		}
 		#{&}-background--pink {
-			background-color: #FFA2BD;
+			background-color: #ffa2bd;
 			color: $color-white;
 		}
 		#{&}-background--midnight {
@@ -60,15 +60,15 @@
 	&.c-cols-landing {
 		padding: 60px 0 20px;
 		@include media-breakpoint-up(md) {
-		 padding: 120px 0 20px;
-		 .c-image img{
-			max-width: initial;
-		 }
+			padding: 120px 0 20px;
+			.c-image img {
+				max-width: initial;
+			}
 		}
-		.row{
+		.row {
 			padding-bottom: 0px !important;
 		}
-		.c-image{
+		.c-image {
 			margin-left: auto;
 			margin-right: auto;
 			margin-top: 60px;
@@ -84,29 +84,29 @@
 			}
 		}
 
-		&.asset-first-mobile{
-			@include media-breakpoint-down(sm){
-				.c-cols-landing-content{
+		&.asset-first-mobile {
+			@include media-breakpoint-down(sm) {
+				.c-cols-landing-content {
 					order: 1;
 				}
-				.c-cols-landing-asset{
+				.c-cols-landing-asset {
 					order: 0;
 				}
 			}
 		}
 	}
-	&.pricing-style{
+	&.pricing-style {
 		padding: 60px 0 60px;
 		@include media-breakpoint-up(md) {
-		 padding: 120px 0 120px;
-		 .c-image img{
-			max-width: initial;
-		 }
+			padding: 120px 0 120px;
+			.c-image img {
+				max-width: initial;
+			}
 		}
-		.row{
+		.row {
 			padding-bottom: 0px !important;
 		}
-		.c-image{
+		.c-image {
 			margin-left: auto;
 			margin-right: auto;
 			margin-top: 60px;
@@ -122,39 +122,38 @@
 			}
 		}
 
-		&.asset-first-mobile{
-			@include media-breakpoint-down(sm){
-				.c-cols-landing-content{
+		&.asset-first-mobile {
+			@include media-breakpoint-down(sm) {
+				.c-cols-landing-content {
 					order: 1;
 				}
-				.c-cols-landing-asset{
+				.c-cols-landing-asset {
 					order: 0;
 				}
 			}
-		}	
-		@include media-breakpoint-up(md){
-			.c-hero__buttons{
-				.c-button{
+		}
+		@include media-breakpoint-up(md) {
+			.c-hero__buttons {
+				.c-button {
 					margin-bottom: 10px;
 				}
 			}
 		}
-		@include media-breakpoint-down(sm){
+		@include media-breakpoint-down(sm) {
 			padding-bottom: 30px;
 
 			@media (max-width: 600px) {
-				&{
+				& {
 					padding-bottom: 0px;
 				}
 			}
 
-
-			.col-md-6.d-flex{
+			.col-md-6.d-flex {
 				padding-right: 0px;
 				padding-left: 0px;
 			}
 
-			.c-image.c-image--extended-left{
+			.c-image.c-image--extended-left {
 				position: static;
 				height: fit-content;
 				margin-bottom: 0px;
@@ -163,21 +162,21 @@
 				overflow: visible;
 				min-height: unset;
 				max-height: unset;
-				
-					@media (min-width: 600px) {
-						.appear-mobile{
-							display: none !important;
-						}
+
+				@media (min-width: 600px) {
+					.appear-mobile {
+						display: none !important;
 					}
+				}
 			}
-			.c-valign--middle{
+			.c-valign--middle {
 				text-align: center;
 
-				.c-hero__buttons{
+				.c-hero__buttons {
 					display: flex;
 					flex-direction: column;
 					margin-top: 15px;
-					.c-button{
+					.c-button {
 						margin: 0px;
 						margin-bottom: 10px;
 						width: 100%;
@@ -188,7 +187,7 @@
 	}
 	.row {
 		padding-bottom: 60px;
-		&.row-reverse{
+		&.row-reverse {
 			flex-direction: row;
 			@include media-breakpoint-up(md) {
 				flex-direction: row-reverse;
@@ -217,19 +216,19 @@
 			}
 			&:last-child {
 				padding-bottom: 42px;
-			}			
+			}
 		}
 	}
 	.c-image {
 		position: relative;
 		padding: 0;
 		margin: 7%;
-    margin-top: 60px;
-    max-width: 60vw;
-    margin-left: auto;
-    margin-right: auto;
-    float: none;
-    display: block;
+		margin-top: 60px;
+		max-width: 60vw;
+		margin-left: auto;
+		margin-right: auto;
+		float: none;
+		display: block;
 		@include media-breakpoint-up(md) {
 			display: inline-block;
 			float: inherit;
@@ -251,14 +250,14 @@
 		// 		<img src="https://semantic-ui.com/images/wireframe/image.png" alt="Image Placeholder">
 		// 	</div>
 		// </section>
-		// 
-		// .c-image--left - float image far left of column *TODO this floats are going in opposite direction* 
+		//
+		// .c-image--left - float image far left of column *TODO this floats are going in opposite direction*
 		// .c-image--center - center image within column
-		// .c-image--right - float image far right of column *TODO this floats are going in opposite direction* 
-		// .c-image--drop-right - float image slightly to the right of column *TODO this floats are going in opposite direction* 
-		// .c-image--drop-left - float image slightly to the left of column *TODO this floats are going in opposite direction* 
+		// .c-image--right - float image far right of column *TODO this floats are going in opposite direction*
+		// .c-image--drop-right - float image slightly to the right of column *TODO this floats are going in opposite direction*
+		// .c-image--drop-left - float image slightly to the left of column *TODO this floats are going in opposite direction*
 		// .c-image--shadow -  adds shadow to the image
-		// 
+		//
 		// Styleguide Layout.Alternating.Images
 		@at-root {
 			#{&}--left {
@@ -276,7 +275,7 @@
 				}
 			}
 			#{&}--large {
-				img{
+				img {
 					max-width: 550px !important;
 				}
 			}
@@ -292,24 +291,24 @@
 					&:after {
 						left: 10%;
 					}
-					.drop-right__img { 
+					.drop-right__img {
 						max-width: 866px;
 						width: 100%;
 						box-shadow: $global-shadow;
 						.insights & {
 							max-width: 620px;
-						}	
+						}
 						.implementation & {
 							max-width: 766px;
-						}				
+						}
 					}
-					
+
 					/* Color blocks */
 					&.colorblock {
 						@at-root {
 							#{&}--putty {
 								&:after {
-									content: '';
+									content: "";
 									position: absolute;
 									background: $color-putty;
 									width: calc(100% - 90px);
@@ -344,120 +343,120 @@
 				}
 			}
 
-			#{&}--extended-right{
-	      position: absolute;
-		    top: 0;
-		    height: 100%;
-		    width: 50vw;
-		    left: 50vw;
+			#{&}--extended-right {
+				position: absolute;
+				top: 0;
+				height: 100%;
+				width: 50vw;
+				left: 50vw;
 				z-index: 1;
-				
-				@include media-breakpoint-down(sm){
-		      position: relative;
-			    top: 0;
-			    left: auto;
-			    width: 100%;
-			    margin-bottom: 30px;
-			    height: 40vh;
+
+				@include media-breakpoint-down(sm) {
+					position: relative;
+					top: 0;
+					left: auto;
+					width: 100%;
+					margin-bottom: 30px;
+					height: 40vh;
 					overflow: hidden;
 					min-height: 380px;
 					max-height: 400px;
 					padding: 0px 15px;
 				}
-        @include media-breakpoint-down(xs) {
-          min-height: 220px;
-          max-height: 280px;
+				@include media-breakpoint-down(xs) {
+					min-height: 220px;
+					max-height: 280px;
 				}
-				img{
-		      width: 100%;
+				img {
+					width: 100%;
 					height: 100% !important;
 					object-fit: cover;
 				}
 			}
 
-			#{&}--extended-left{
-	      position: absolute;
-		    top: 0;
-		    height: 100%;
-		    width: 50vw;
-		    right: 50vw;
+			#{&}--extended-left {
+				position: absolute;
+				top: 0;
+				height: 100%;
+				width: 50vw;
+				right: 50vw;
 				z-index: 1;
-				
-				@include media-breakpoint-down(sm){
-		      position: relative;
-			    top: 0;
-			    right: auto;
-			    width: 100%;
-			    margin-bottom: 30px;
-			    height: 40vh;
+
+				@include media-breakpoint-down(sm) {
+					position: relative;
+					top: 0;
+					right: auto;
+					width: 100%;
+					margin-bottom: 30px;
+					height: 40vh;
 					overflow: hidden;
 					min-height: 380px;
 					max-height: 400px;
 					padding: 0px 15px;
 				}
-        @include media-breakpoint-down(xs) {
-          min-height: 220px;
-          max-height: 280px;
+				@include media-breakpoint-down(xs) {
+					min-height: 220px;
+					max-height: 280px;
 				}
-				img{
-		      width: 100%;
+				img {
+					width: 100%;
 					height: 100%;
 					object-fit: cover;
 				}
 			}
-			
+
 			.collaboration & {
 				&.team-selling {
 					display: block;
-			    position: absolute;
-			    top: 0px;
-			    width: 560px;
-			    height: 580px;
-			    left: 10%;
-			    margin-top: 0px;
-			    @include media-breakpoint-down(sm) {
-				    left: 0;
-				    position: relative;
-				    height: auto;
-				    width: 100%;
-				    max-width: 100%;
-				    margin: 0;
+					position: absolute;
+					top: 0px;
+					width: 560px;
+					height: 580px;
+					left: 10%;
+					margin-top: 0px;
+					@include media-breakpoint-down(sm) {
+						left: 0;
+						position: relative;
+						height: auto;
+						width: 100%;
+						max-width: 100%;
+						margin: 0;
 						margin-top: 30px;
 						// left: 20% !important;
-			    }
-			    
-			    img {
-				    max-width: 100%;
+					}
+
+					img {
+						max-width: 100%;
 						width: 500px;
-						
+
 						@include media-breakpoint-down(sm) {
 							width: 100%;
 						}
-			    }
+					}
 				}
-				
+
 				&.central-system {
 					display: block;
-			    position: absolute;
-			    top: 0px;
-			    width: 560px;
-			    height: 580px;
-			    left: -10%;
-			    margin-top: 0px;
-			    
-			    @include media-breakpoint-down(sm) {
-				    left: 0;
-				    position: relative;
-				    height: auto;
-				    width: 100%;
-				    max-width: 100%;
-				    margin: 0;
-				    margin-top: 40px;
-			    }
-			    
-			    img {
-				    max-width: 100%;
-			    }
+					position: absolute;
+					top: 0px;
+					width: 560px;
+					height: 580px;
+					left: -10%;
+					margin-top: 0px;
+
+					@include media-breakpoint-down(sm) {
+						left: 0;
+						position: relative;
+						height: auto;
+						width: 100%;
+						max-width: 100%;
+						margin: 0;
+						margin-top: 40px;
+					}
+
+					img {
+						max-width: 100%;
+					}
 				}
 			}
 			.gsuite & {
@@ -479,9 +478,8 @@
 				}
 			}
 		}
-		
-		@include media-breakpoint-up(md) { 
-			
+
+		@include media-breakpoint-up(md) {
 			/* Embellishments */
 			&.diamond--bottom--right {
 				&:before {
@@ -490,7 +488,7 @@
 			}
 			&.diamond--bottom--left {
 				&:before {
-					content: '';
+					content: "";
 					position: absolute;
 					bottom: 60px;
 					left: -25%;
@@ -499,7 +497,7 @@
 			}
 			&.circle--bottom--right {
 				&:before {
-					content: '';
+					content: "";
 					position: absolute;
 					bottom: -20px;
 					right: -25%;
@@ -508,7 +506,7 @@
 			}
 			&.circle--top--right {
 				&:before {
-					content: '';
+					content: "";
 					position: absolute;
 					top: -25px;
 					right: -30px;
@@ -517,7 +515,7 @@
 			}
 			&.circle--bottom--left {
 				&:before {
-					content: '';
+					content: "";
 					position: absolute;
 					bottom: -15px;
 					left: -60px;
@@ -526,27 +524,26 @@
 			}
 			&.rectangle--bottom--left {
 				&:before {
-					content: '';
+					content: "";
 					position: absolute;
 					bottom: -50px;
 					left: -50px;
 					z-index: 1;
 				}
 			}
-			&.rectangle--bottom--right{
+			&.rectangle--bottom--right {
 				&:before {
-					content: '';
+					content: "";
 					position: absolute;
 					bottom: -30px;
 					right: -50px;
 					z-index: 1;
 				}
 			}
-			
+
 			.unicorns & {
 				margin-top: 0px;
 			}
-			
 		}
 		img {
 			width: 100%;
@@ -558,7 +555,7 @@
 			}
 		}
 	}
-	
+
 	&.unicorns {
 		.c-image {
 			max-width: 100%;
@@ -580,9 +577,9 @@
 			position: relative;
 		}
 		li:before {
-			content: '';
+			content: "";
 			margin: 0 5px 0 -15px;
-			background: url('../imgs/green-check.svg');
+			background: url("/imgs/green-check.svg");
 			background-repeat: no-repeat;
 			height: 16px;
 			width: 21px;
@@ -592,32 +589,32 @@
 			top: 4px;
 		}
 	}
-	&.pink-bullets{
+	&.pink-bullets {
 		li:before {
-			content: '•';
+			content: "•";
 			background: unset;
 			color: $color-hot-pink;
 			left: -10px;
 			top: 0px;
 		}
 	}
-	&.mint-checks{
+	&.mint-checks {
 		li:before {
-			content: '';
-			background: url('/imgs/lists/lists-mint-check.svg');
+			content: "";
+			background: url("/imgs/lists/lists-mint-check.svg");
 		}
 	}
-	&.white-checks{
+	&.white-checks {
 		li:before {
-			content: '';
-			background: url('/imgs/lists/lists-white-check.svg');
+			content: "";
+			background: url("/imgs/lists/lists-white-check.svg");
 		}
 	}
-	&.hot-pink-checks{
-		ul{
+	&.hot-pink-checks {
+		ul {
 			li:before {
-				content: '';
-				background: url('/imgs/lists/lists-hot-pink-check.svg');
+				content: "";
+				background: url("/imgs/lists/lists-hot-pink-check.svg");
 			}
 		}
 	}
@@ -648,14 +645,13 @@
 		}
 	}
 	&.product-page {
-		padding-top:115px;
+		padding-top: 115px;
 		padding-bottom: 50px;
 		ul {
 			li {
-
 			}
 			li:before {
-				content: '•';
+				content: "•";
 				font-size: 20px;
 				line-height: 30px;
 				background: none;
@@ -670,22 +666,22 @@
 			&.bullets--indigo {
 				li:before {
 					color: $color-indigo;
-				}	
+				}
 			}
 			&.bullets--barney-purple {
 				li:before {
 					color: $color-barney-purple;
-				}	
+				}
 			}
 			&.bullets--hot-pink {
 				li:before {
 					color: $color-hot-pink;
-				}	
+				}
 			}
 			&.bullets--teal {
 				li:before {
 					color: $color-teal;
-				}	
+				}
 			}
 		}
 		.c-image--drop-right .drop-right__img {
