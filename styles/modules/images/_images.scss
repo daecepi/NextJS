@@ -31,7 +31,6 @@
   border-radius: 50%;
   background-size: cover;
   transition: box-shadow 0.15s ease-in-out;
-  overflow: hidden;
   &:hover {
     cursor: pointer;
     box-shadow: $global-shadow-hover;

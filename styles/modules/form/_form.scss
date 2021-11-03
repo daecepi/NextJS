@@ -216,7 +216,7 @@ section.white {
       transition: border-color 90ms ease-in-out;
       &:before{
         background: none;
-        background-image: url('/imgs/RadioButton_Unchecked_Gray.svg');
+        background-image: url('../imgs/RadioButton_Unchecked_Gray.svg');
         content: '';
         position: absolute;
         top: 0;
@@ -232,7 +232,7 @@ section.white {
         &:before {
           content: '';
           background: none;
-          background-image: url('/imgs/RadioButton_Checked_Pink.svg');
+          background-image: url('../imgs/RadioButton_Checked_Pink.svg');
           position: absolute;
           top: 0;
           bottom: 0;
@@ -259,7 +259,7 @@ section.white {
         border-color: $color-mint;
         &:before {
           content: '';
-          background-image: url('/imgs/checkmark-mint.png');
+          background-image: url('../imgs/checkmark-mint.png');
           position: absolute;
           top: 0;
           bottom: 0;
@@ -282,7 +282,7 @@ section.white {
         cursor: pointer;
         &:before {
           content: '';
-          background-image: url('/imgs/Box_Checked_Gray.svg');
+          background-image: url('../imgs/Box_Checked_Gray.svg');
           position: absolute;
           top: 0;
           bottom: 0;
@@ -296,7 +296,7 @@ section.white {
         &:checked {
           &:before {
             content: '';
-            background-image: url('/imgs/Box_Checked_Pink.svg');
+            background-image: url('../imgs/Box_Checked_Pink.svg');
             position: absolute;
             top: 0;
             bottom: 0;
@@ -566,7 +566,7 @@ section.white {
           padding: 0 48px;
         }
         .c-form__text__img{
-          background-image: url('/imgs/modal-bg-image.jpg');
+          background-image: url('../imgs/modal-bg-image.jpg');
           background-size: cover;
           height: 100%;
         }

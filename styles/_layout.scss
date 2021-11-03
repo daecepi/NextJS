@@ -176,7 +176,7 @@ section {
 		color: $color-eggplant;pre.c-eyebrow {
       color: $color-eggplant;
       &:before {
-        border-bottom: 2px solid #fff;
+        border-bottom: 2px solid $color-eggplant;
       }
 		}
 		.t-link, .t-link::after{
@@ -190,7 +190,7 @@ section {
 		color: $color-white;pre.c-eyebrow {
       color: $color-white;
       &:before {
-        border-bottom: 2px solid $color-eggplant;
+        border-bottom: 2px solid $color-white;
       }
 		}
 		.t-link, .t-link::after{
@@ -205,7 +205,7 @@ section {
 		pre.c-eyebrow {
       color: $color-white;
       &:before {
-        border-bottom: 2px solid #fff;
+        border-bottom: 2px solid $color-white;
       }
 		}
 		.t-link, .t-link::after{
@@ -220,7 +220,7 @@ section {
 		pre.c-eyebrow {
       color: $color-white;
       &:before {
-        border-bottom: 2px solid #fff;
+        border-bottom: 2px solid $color-white;
       }
 		}
 		@include ctasSectionBackgroundReuse($color-deep-purple, normal);
@@ -405,6 +405,12 @@ section {
 	&.soft-gray {
     background-color: $color-soft-gray;
     color: $color-black;
+		pre.c-eyebrow {
+			color: $color-black;
+			&:before {
+				border-bottom: 2px solid $color-black;
+			}
+		}
 	    pre.c-eyebrow.c-eyebrow--dark {
 	      color: $color-black;
 	      &:before {
@@ -417,6 +423,12 @@ section {
 	&.extra-soft-gray {
     background-color: $color-extra-soft-gray;
     color: $color-black;
+		pre.c-eyebrow {
+      color: $color-black;
+			&:before {
+				border-bottom: 2px solid $color-black;
+			}
+		}
 	    pre.c-eyebrow.c-eyebrow--dark {
 	      color: $color-black;
 	      &:before {
@@ -428,6 +440,19 @@ section {
 
 	&.final-plea {
 		background-color: #56468f;
+		color: $color-white;
+		pre.c-eyebrow {
+			color: $color-white;
+			&:before {
+				border-bottom: 2px solid $color-white;
+			}
+		}
+		pre.c-eyebrow.c-eyebrow--dark {
+			color: $color-white;
+			&:before {
+				border-bottom: 2px solid $color-white;
+			}
+		}
 		.c-image {
 			padding: 0;
 			display: none;
@@ -1495,7 +1520,7 @@ blockquote {
 		}
 
 		&.graphite{
-			@include transparentFormStructure($color-graphite, $color-eggplant);
+			@include transparentFormStructure($color-white, $color-eggplant);
 		}
 
 		&.burgundy{
@@ -1547,8 +1572,6 @@ blockquote {
 	
 
 }
-
-
 .try-free-flow{
 	margin-right: auto;
 	text-align: center;

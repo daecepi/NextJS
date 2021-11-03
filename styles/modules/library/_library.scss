@@ -320,7 +320,7 @@ span.search-free-open{
 					content: "View All";
 				}
 				&:after{
-					content: url('/imgs/arrow-labmono.svg');
+					content: url('../imgs/arrow-labmono.svg');
 					margin-left: 10px;
 					
 				}
@@ -329,7 +329,7 @@ span.search-free-open{
 					color: $color-hot-pink;
 					border-bottom: thin solid $color-hot-pink;
 					&:after{
-						content: url('/imgs/pink-arrow.svg');
+						content: url('../imgs/pink-arrow.svg');
 					}
 				}
 			@include media-breakpoint-down(sm){
@@ -578,7 +578,7 @@ span.search-free-open{
 				border: none;
 				position: relative;
 				&:after{
-					content: url('/imgs/arrow-down-black.svg');
+					content: url('../imgs/arrow-down-black.svg');
 					display: inline-block;
 					position: absolute;
 					transform: rotate(-90deg) scale(1.5);
@@ -716,7 +716,7 @@ span.search-free-open{
 				border: 1.2px solid white;
 				border-radius: 20px;
 				&:before {
-					content: url('/imgs/arrow-labmono-white.svg');
+					content: url('../imgs/arrow-labmono-white.svg');
 					display: inline-block;
 					padding-bottom: 2px;
 					transform: scale(.8);
@@ -725,7 +725,7 @@ span.search-free-open{
 					/*border-color: $color-hot-pink;*/
 					
 					&:before {
-						/*content: url('/imgs/pink-arrow.svg');*/
+						/*content: url('../imgs/pink-arrow.svg');*/
 					}
 				}
 

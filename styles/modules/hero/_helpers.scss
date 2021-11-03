@@ -10,7 +10,7 @@ section.c-hero--split {
     background-color: $color-sky;
   }
   &.background--agency {
-    background-image: url('/imgs/industry/industry-agency-hero@2x.jpg');
+    background-image: url('../imgs/industry/industry-agency-hero@2x.jpg');
     color: $color-graphite;
     background-color: #e6e8e9; 
     background-size: 540px auto;
@@ -51,17 +51,17 @@ section.c-hero--split {
     }
   }
   &.background--enterprise {
-    background-image: url('/imgs/segmentation/segmentation-enterprise-hero.jpg');
+    background-image: url('../imgs/segmentation/segmentation-enterprise-hero.jpg');
   }
   &.background--smb {
-    background-image: url('/imgs/segmentation/segmentation-smb-hero.jpg');
+    background-image: url('../imgs/segmentation/segmentation-smb-hero.jpg');
   }    
   &.background--mm {
-    background-image: url('/imgs/segmentation/segmentation-mm-hero.jpg');
+    background-image: url('../imgs/segmentation/segmentation-mm-hero.jpg');
   }   
   &.background--consulting {
-    // background-image: url('/imgs/industry/consulting-hero.jpg');
-    background-image: url('/imgs/industry/industry-consulting-hero@2x.jpg');
+    // background-image: url('../imgs/industry/consulting-hero.jpg');
+    background-image: url('../imgs/industry/industry-consulting-hero@2x.jpg');
     color: $color-white;
     background-color: #54498e; 
     // background-size: 540px auto;
@@ -84,7 +84,7 @@ section.c-hero--split {
     }
   }  
   &.background--tech {
-    background-image: url('/imgs/industry/industry-tech-hero@2x.jpg ');
+    background-image: url('../imgs/industry/industry-tech-hero@2x.jpg ');
     color: $color-graphite;
     background-color: #e6e8e9; 
     background-size: 540px auto;
@@ -105,7 +105,7 @@ section.c-hero--split {
     }
   }  
   &.background--tech-important {
-    background-image: url('/imgs/industry/industry-tech-hero@2x.jpg ') !important;
+    background-image: url('../imgs/industry/industry-tech-hero@2x.jpg ') !important;
     color: $color-graphite !important;
     background-color: #e6e8e9 !important;
     background-size: 540px auto !important;
@@ -126,7 +126,7 @@ section.c-hero--split {
     }
   }  
   &.background--corp-dev {
-    background-image: url('/imgs/industry/industry-corp-dev-hero@2x.jpg ');
+    background-image: url('../imgs/industry/industry-corp-dev-hero@2x.jpg ');
     color: $color-graphite;
     background-color: #f4f4f4; 
     background-size: 540px auto;
@@ -147,7 +147,7 @@ section.c-hero--split {
     }
   }    
   &.background--real-estate {
-    background-image: url('/imgs/industry/industry-real-estate-hero@2x.jpg ');
+    background-image: url('../imgs/industry/industry-real-estate-hero@2x.jpg ');
     color: $color-graphite;
     background-color: #e3e3e3; 
     background-size: 540px auto;

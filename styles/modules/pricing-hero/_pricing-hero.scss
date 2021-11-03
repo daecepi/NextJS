@@ -47,7 +47,7 @@
         width: 0;
         height: 0;
         &:checked + .toggle-slider {
-          background-color: #3B3E3F;
+          background-color: #20D5BB;
         }
 
         &:focus + .toggle-slider {
@@ -109,15 +109,12 @@
   }
 }
 .price-hero {
-  h1,h2 {
+  h2 {
     max-width: unset;
     margin: 0px auto;
     @include media-breakpoint-down(sm){
       margin-top: 50px;  
     }
-  }
-  p{
-    margin: 7px 0;
   }
   .c-pricing-hero__plans-container{
     text-align: left;
@@ -141,6 +138,14 @@
       text-align: left;
       span {
         position: relative;
+      }
+      .desc {
+        min-height: 84px;
+      }
+      .pricing__number-row{
+        font-family: 'Graphik-Medium', sans-serif;
+        font-size: 28px;
+        line-height: 28px;
       }
       .asterix {
         color: #FF3465;

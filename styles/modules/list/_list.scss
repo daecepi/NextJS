@@ -55,6 +55,13 @@
   @include media-breakpoint-up(lg) { 
     margin-bottom: 120px;
   }
+  &.reduced-spacing{
+    margin-bottom: 65px;
+
+    @include media-breakpoint-up(lg){
+      margin-bottom: 90px;
+    }
+  }
   p {
     max-width: 600px;
     margin: 0 auto;
