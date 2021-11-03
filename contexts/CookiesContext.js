@@ -13,14 +13,14 @@ export function CookiesWrapper({ values, children }) {
 	const { query } = useRouter();
 
 	// Creates prototype object of the cookies that are being used right now
-	console.log("cookies value ", cookiesKeysUsed, values);
+	//console.log("cookies value ", cookiesKeysUsed, values);
 	const defaultCookieValue = cookiesKeysUsed.map((cookieKey) => {
 		return [cookieKey, undefined];
 	});
 
 	const finalTransFormation = Object.fromEntries(defaultCookieValue);
 
-	console.log("Cookie starting combination ", finalTransFormation);
+	//console.log("Cookie starting combination ", finalTransFormation);
 
 	// reference list of the cookies to use
 	const [cookieValues, updateCookieValues] = useState({
@@ -48,7 +48,7 @@ export function CookiesWrapper({ values, children }) {
 
 		// Making a listener to check when a user is oging ot leave the page for saving the cookies
 
-		window.onbeforeunload = (event) => {
+		/*window.onbeforeunload = (event) => {
 			const e = event || window.event;
 			// Cancel the event
 			e.preventDefault();
@@ -56,7 +56,7 @@ export function CookiesWrapper({ values, children }) {
 				e.returnValue = ""; // Legacy method for cross browser support
 			}
 			return ""; // Legacy method for cross browser support
-		};
+		};*/
 	}, []);
 
 	const updateCookieContext = (cookiesToUpdate) => {

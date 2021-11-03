@@ -3,13 +3,11 @@ import DefaultHead from "../Head/DefaultHead";
 import { CookiesWrapper } from "../../contexts/CookiesContext";
 
 import { SyncedAppWrapper } from "../..//contexts/SyncContext";
-const DefaultPageBase = ({ children }) => {
+const DefaultPageBase = ({ entry, children }) => {
 	return (
 		<SyncedAppWrapper>
-			<CookiesWrapper>
-				<DefaultHead />
-				{children}
-			</CookiesWrapper>
+			{/* <DefaultHead entry={entry || {}} /> */}
+			<CookiesWrapper>{children}</CookiesWrapper>
 		</SyncedAppWrapper>
 	);
 };

@@ -7,7 +7,10 @@ export const detectEnvUrl = () => {
 	switch (process.env.ENVIRONMENT) {
 		case "dev":
 			return ".copper.lndo.site";
-
+		case "staging":
+			return "staging.frb.io";
+		case "prod":
+			return "copper.com";
 		default:
 			return "";
 	}
