@@ -10,12 +10,12 @@ const SpecialTestimonial = ({ text }) => {
 									<picture>
 										<source
 											type="image/webp"
-											srcset="/imgs/industry/industry-tech-IMG-01-update@2x.webp"
+											srcSet="/imgs/industry/industry-tech-IMG-01-update@2x.webp"
 											alt="Industry real state image 1"
 										/>
 										<source
 											type="image/png"
-											srcset="/imgs/industry/industry-tech-IMG-01-update@2x.png"
+											srcSet="/imgs/industry/industry-tech-IMG-01-update@2x.png"
 											alt="Industry real state image 1"
 										/>
 										<img

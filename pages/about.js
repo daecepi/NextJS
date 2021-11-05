@@ -4,9 +4,15 @@ import { getEntryByType } from "../lib/api";
 import DefaultPageBase from "../components/PageBase/DefaultPageBase";
 import { useState } from "react";
 import AboutBioModal from "../components/Blocks/Modals/AboutBioModal";
+import NavigationDefault from "../components/Navigation/NavigationDefault";
 
 export default function About({ res }) {
 	const [modalState, updateModalState] = useState("");
+	console.log(
+		"Important about log",
+		process.env.NEXT_PUBLIC_ENVIRONMENT,
+		process.env.NEXT_PUBLIC_ENVIRONMENT !== "dev"
+	);
 
 	const displayModal = (leaderId) => {
 		updateModalState(leaderId);
@@ -31,12 +37,12 @@ export default function About({ res }) {
 					<picture>
 						<source
 							type="image/webp"
-							srcset="imgs/about/hero/image_about-hero2@2x.webp"
+							srcSet="imgs/about/hero/image_about-hero2@2x.webp"
 							alt="Priscilla du preez Xk K Cui44i M0 unsplash 1"
 						/>
 						<source
 							type="image/png"
-							srcset="imgs/about/hero/image_about-hero2@2x.png"
+							srcSet="imgs/about/hero/image_about-hero2@2x.png"
 							alt="Priscilla du preez Xk K Cui44i M0 unsplash 1"
 						/>
 						<img
@@ -68,13 +74,13 @@ export default function About({ res }) {
 								<picture>
 									<source
 										type="image/webp"
-										srcset="imgs/about/image_our-story@2x.webp"
+										srcSet="imgs/about/image_our-story@2x.webp"
 										className="h-remove-shadow"
 										alt="Our story image"
 									/>
 									<source
 										type="image/png"
-										srcset="imgs/about/image_our-story@2x.png"
+										srcSet="imgs/about/image_our-story@2x.png"
 										className="h-remove-shadow"
 										alt="Our story image"
 									/>
@@ -172,13 +178,13 @@ export default function About({ res }) {
 								<picture>
 									<source
 										type="image/webp"
-										srcset="https://copper.objects.frb.io/imgs/about/LogoGardenv2.webp"
+										srcSet="https://copper.objects.frb.io/imgs/about/LogoGardenv2.webp"
 										className="h-remove-shadow"
 										alt="Logo garden image"
 									/>
 									<source
 										type="image/png"
-										srcset="https://copper.objects.frb.io/imgs/about/LogoGardenv2.png"
+										srcSet="https://copper.objects.frb.io/imgs/about/LogoGardenv2.png"
 										className="h-remove-shadow"
 										alt="Logo garden image"
 									/>
@@ -277,12 +283,12 @@ export default function About({ res }) {
 								<picture>
 									<source
 										type="image/webp"
-										srcset="/imgs/about/dennis-ceo-1.webp"
+										srcSet="/imgs/about/dennis-ceo-1.webp"
 										alt="Dennis Fois photo"
 									/>
 									<source
 										type="image/png"
-										srcset="/imgs/about/dennis-ceo-1.jpg"
+										srcSet="/imgs/about/dennis-ceo-1.jpg"
 										alt="Dennis Fois photo"
 									/>
 									<img
@@ -312,12 +318,12 @@ export default function About({ res }) {
 								<picture>
 									<source
 										type="image/webp"
-										srcset="/imgs/about/image_leadership-avatar_carrie@2x.webp"
+										srcSet="/imgs/about/image_leadership-avatar_carrie@2x.webp"
 										alt="Carrie Shaw photo"
 									/>
 									<source
 										type="image/png"
-										srcset="/imgs/about/image_leadership-avatar_carrie@2x.png"
+										srcSet="/imgs/about/image_leadership-avatar_carrie@2x.png"
 										alt="Carrie Shaw photo"
 									/>
 									<img
@@ -347,12 +353,12 @@ export default function About({ res }) {
 								<picture>
 									<source
 										type="image/webp"
-										srcset="/imgs/about/ben.webp"
+										srcSet="/imgs/about/ben.webp"
 										alt="Ben Hance photo"
 									/>
 									<source
 										type="image/png"
-										srcset="/imgs/about/ben.jpg"
+										srcSet="/imgs/about/ben.jpg"
 										alt="Ben Hance photo"
 									/>
 									<img src="/imgs/about/ben.jpg" alt="Ben Hance photo" />
@@ -379,12 +385,12 @@ export default function About({ res }) {
 								<picture>
 									<source
 										type="image/webp"
-										srcset="https://copper.objects.frb.io/imgs/about/ken-aponte-copper-vp-success1.webp"
+										srcSet="https://copper.objects.frb.io/imgs/about/ken-aponte-copper-vp-success1.webp"
 										alt="Ken Aponte photo"
 									/>
 									<source
 										type="image/png"
-										srcset="https://copper.objects.frb.io/imgs/about/ken-aponte-copper-vp-success1.jpg"
+										srcSet="https://copper.objects.frb.io/imgs/about/ken-aponte-copper-vp-success1.jpg"
 										alt="Ken Aponte photo"
 									/>
 									<img
@@ -414,12 +420,12 @@ export default function About({ res }) {
 								<picture>
 									<source
 										type="image/webp"
-										srcset="/imgs/about/Wyndham_Bio.webp"
+										srcSet="/imgs/about/Wyndham_Bio.webp"
 										alt="Wydham Hudson photo"
 									/>
 									<source
 										type="image/png"
-										srcset="/imgs/about/Wyndham_Bio.jpg"
+										srcSet="/imgs/about/Wyndham_Bio.jpg"
 										alt="Wydham Hudson photo"
 									/>
 									<img
@@ -449,12 +455,12 @@ export default function About({ res }) {
 								<picture>
 									<source
 										type="image/webp"
-										srcset="https://copper.objects.frb.io/imgs/about/Sam_bio.webp"
+										srcSet="https://copper.objects.frb.io/imgs/about/Sam_bio.webp"
 										alt="Sam Moorhead photo"
 									/>
 									<source
 										type="image/png"
-										srcset="https://copper.objects.frb.io/imgs/about/Sam_bio.jpg"
+										srcSet="https://copper.objects.frb.io/imgs/about/Sam_bio.jpg"
 										alt="Sam Moorhead photo"
 									/>
 									<img
@@ -484,12 +490,12 @@ export default function About({ res }) {
 								<picture>
 									<source
 										type="image/webp"
-										srcset="https://copper.objects.frb.io/imgs/about/Derek_bio.webp"
+										srcSet="https://copper.objects.frb.io/imgs/about/Derek_bio.webp"
 										alt="Derek Skaletsky photo"
 									/>
 									<source
 										type="image/png"
-										srcset="https://copper.objects.frb.io/imgs/about/Derek_bio.jpg"
+										srcSet="https://copper.objects.frb.io/imgs/about/Derek_bio.jpg"
 										alt="Derek Skaletsky photo"
 									/>
 									<img
@@ -519,12 +525,12 @@ export default function About({ res }) {
 								<picture>
 									<source
 										type="image/webp"
-										srcset="https://copper.objects.frb.io/imgs/about/Rick_bio.webp"
+										srcSet="https://copper.objects.frb.io/imgs/about/Rick_bio.webp"
 										alt="Rick Smith photo"
 									/>
 									<source
 										type="image/png"
-										srcset="https://copper.objects.frb.io/imgs/about/Rick_bio.jpg"
+										srcSet="https://copper.objects.frb.io/imgs/about/Rick_bio.jpg"
 										alt="Rick Smith photo"
 									/>
 									<img
@@ -554,12 +560,12 @@ export default function About({ res }) {
 								<picture>
 									<source
 										type="image/webp"
-										srcset="/imgs/about/cory_rework2.webp"
+										srcSet="/imgs/about/cory_rework2.webp"
 										alt="Cory Thomas photo"
 									/>
 									<source
 										type="image/png"
-										srcset="/imgs/about/cory_rework2.png"
+										srcSet="/imgs/about/cory_rework2.png"
 										alt="Cory Thomas photo"
 									/>
 									<img
@@ -600,13 +606,13 @@ export default function About({ res }) {
 							<picture>
 								<source
 									type="image/webp"
-									srcset="/imgs/dot-shape.webp"
+									srcSet="/imgs/dot-shape.webp"
 									className="dotted-circle-svg"
 									alt="Dot shape image"
 								/>
 								<source
 									type="image/png"
-									srcset="/imgs/dot-shape.png"
+									srcSet="/imgs/dot-shape.png"
 									className="dotted-circle-svg"
 									alt="Dot shape image"
 								/>
@@ -619,14 +625,14 @@ export default function About({ res }) {
 							<picture>
 								<source
 									type="image/webp"
-									srcset="/imgs/image_news-dot-pattern-circle@2x.webp"
+									srcSet="/imgs/image_news-dot-pattern-circle@2x.webp"
 									className="dotted-circle-right"
 									alt="Dot pattern circle image"
 									style={{ position: "absolute" }}
 								/>
 								<source
 									type="image/png"
-									srcset="/imgs/image_news-dot-pattern-circle@2x.png"
+									srcSet="/imgs/image_news-dot-pattern-circle@2x.png"
 									className="dotted-circle-right"
 									alt="Dot pattern circle image"
 									style={{ position: "absolute" }}
@@ -644,12 +650,12 @@ export default function About({ res }) {
 										<picture>
 											<source
 												type="image/webp"
-												srcset="https://copper.objects.frb.io/imgs/about/highlights/businesswire-logo.webp"
+												srcSet="https://copper.objects.frb.io/imgs/about/highlights/businesswire-logo.webp"
 												alt="Business Wire logo"
 											/>
 											<source
 												type="image/png"
-												srcset="https://copper.objects.frb.io/imgs/about/highlights/businesswire-logo.png"
+												srcSet="https://copper.objects.frb.io/imgs/about/highlights/businesswire-logo.png"
 												alt="Business Wire logo"
 											/>
 											<img
@@ -675,12 +681,12 @@ export default function About({ res }) {
 										<picture>
 											<source
 												type="image/webp"
-												srcset="imgs/about/highlights/image_news-logo-techcrunch2@2x.webp"
+												srcSet="imgs/about/highlights/image_news-logo-techcrunch2@2x.webp"
 												alt="Techcrunch news logo"
 											/>
 											<source
 												type="image/png"
-												srcset="imgs/about/highlights/image_news-logo-techcrunch2@2x.png"
+												srcSet="imgs/about/highlights/image_news-logo-techcrunch2@2x.png"
 												alt="Techcrunch news logo"
 											/>
 											<img
@@ -709,12 +715,12 @@ export default function About({ res }) {
 										<picture>
 											<source
 												type="image/webp"
-												srcset="imgs/about/highlights/image_news-logo-gartner2@2x.webp"
+												srcSet="imgs/about/highlights/image_news-logo-gartner2@2x.webp"
 												alt="Gartner news logo"
 											/>
 											<source
 												type="image/png"
-												srcset="imgs/about/highlights/image_news-logo-gartner2@2x.png"
+												srcSet="imgs/about/highlights/image_news-logo-gartner2@2x.png"
 												alt="Gartner news logo"
 											/>
 											<img
@@ -743,12 +749,12 @@ export default function About({ res }) {
 										<picture>
 											<source
 												type="image/webp"
-												srcset="imgs/about/highlights/image_news-logo-techcrunch2@2x.webp"
+												srcSet="imgs/about/highlights/image_news-logo-techcrunch2@2x.webp"
 												alt="Techcrunch news logo"
 											/>
 											<source
 												type="image/png"
-												srcset="imgs/about/highlights/image_news-logo-techcrunch2@2x.png"
+												srcSet="imgs/about/highlights/image_news-logo-techcrunch2@2x.png"
 												alt="Techcrunch news logo"
 											/>
 											<img
@@ -774,12 +780,12 @@ export default function About({ res }) {
 										<picture>
 											<source
 												type="image/webp"
-												srcset="imgs/about/highlights/martech-cube-logo.webp"
+												srcSet="imgs/about/highlights/martech-cube-logo.webp"
 												alt="MarTech Cube logo"
 											/>
 											<source
 												type="image/png"
-												srcset="imgs/about/highlights/martech-cube-logo.png"
+												srcSet="imgs/about/highlights/martech-cube-logo.png"
 												alt="MarTech Cube logo"
 											/>
 											<img
@@ -808,12 +814,12 @@ export default function About({ res }) {
 										<picture>
 											<source
 												type="image/webp"
-												srcset="imgs/about/highlights/image_news-logo-forbes2@2x.webp"
+												srcSet="imgs/about/highlights/image_news-logo-forbes2@2x.webp"
 												alt="Forbes news logo"
 											/>
 											<source
 												type="image/png"
-												srcset="imgs/about/highlights/image_news-logo-forbes2@2x.png"
+												srcSet="imgs/about/highlights/image_news-logo-forbes2@2x.png"
 												alt="Forbes news logo"
 											/>
 											<img
@@ -841,12 +847,12 @@ export default function About({ res }) {
 										<picture>
 											<source
 												type="image/webp"
-												srcset="imgs/about/highlights/image_news-logo-pcmag2@2x.webp"
+												srcSet="imgs/about/highlights/image_news-logo-pcmag2@2x.webp"
 												alt="Pcmag news image"
 											/>
 											<source
 												type="image/png"
-												srcset="imgs/about/highlights/image_news-logo-pcmag2@2x.png"
+												srcSet="imgs/about/highlights/image_news-logo-pcmag2@2x.png"
 												alt="Pcmag news image"
 											/>
 											<img
@@ -876,12 +882,12 @@ export default function About({ res }) {
 										<picture>
 											<source
 												type="image/webp"
-												srcset="imgs/about/highlights/martechtoday-logo.webp"
+												srcSet="imgs/about/highlights/martechtoday-logo.webp"
 												alt="MarTech Today logo"
 											/>
 											<source
 												type="image/png"
-												srcset="imgs/about/highlights/martechtoday-logo.png"
+												srcSet="imgs/about/highlights/martechtoday-logo.png"
 												alt="MarTech Today logo"
 											/>
 											<img
@@ -910,12 +916,12 @@ export default function About({ res }) {
 										<picture>
 											<source
 												type="image/webp"
-												srcset="imgs/about/highlights/image_news-logo-forbes2@2x.webp"
+												srcSet="imgs/about/highlights/image_news-logo-forbes2@2x.webp"
 												alt=" Forbes news logo"
 											/>
 											<source
 												type="image/png"
-												srcset="imgs/about/highlights/image_news-logo-forbes2@2x.png"
+												srcSet="imgs/about/highlights/image_news-logo-forbes2@2x.png"
 												alt=" Forbes news logo"
 											/>
 											<img
@@ -1015,12 +1021,12 @@ export default function About({ res }) {
 									<picture>
 										<source
 											type="image/webp"
-											srcset="imgs/about/awards/image_award-logo_gartner@2x.webp"
+											srcSet="imgs/about/awards/image_award-logo_gartner@2x.webp"
 											alt="Gartner award logo"
 										/>
 										<source
 											type="image/png"
-											srcset="imgs/about/awards/image_award-logo_gartner@2x.png"
+											srcSet="imgs/about/awards/image_award-logo_gartner@2x.png"
 											alt="Gartner award logo"
 										/>
 										<img
@@ -1036,12 +1042,12 @@ export default function About({ res }) {
 									<picture>
 										<source
 											type="image/webp"
-											srcset="imgs/about/awards/image_award-logo_g2@2x.webp"
+											srcSet="imgs/about/awards/image_award-logo_g2@2x.webp"
 											alt="G2 award logo"
 										/>
 										<source
 											type="image/png"
-											srcset="imgs/about/awards/image_award-logo_g2@2x.png"
+											srcSet="imgs/about/awards/image_award-logo_g2@2x.png"
 											alt="G2 award logo"
 										/>
 										<img
@@ -1057,12 +1063,12 @@ export default function About({ res }) {
 									<picture>
 										<source
 											type="image/webp"
-											srcset="imgs/about/awards/image_award-logo_inc@2x.webp"
+											srcSet="imgs/about/awards/image_award-logo_inc@2x.webp"
 											alt="Inc award logo"
 										/>
 										<source
 											type="image/png"
-											srcset="imgs/about/awards/image_award-logo_inc@2x.png"
+											srcSet="imgs/about/awards/image_award-logo_inc@2x.png"
 											alt="Inc award logo"
 										/>
 										<img
@@ -1078,12 +1084,12 @@ export default function About({ res }) {
 									<picture>
 										<source
 											type="image/webp"
-											srcset="imgs/about/awards/image_award-logo_appalie@2x.webp"
+											srcSet="imgs/about/awards/image_award-logo_appalie@2x.webp"
 											alt="Appalie award logo"
 										/>
 										<source
 											type="image/png"
-											srcset="imgs/about/awards/image_award-logo_appalie@2x.png"
+											srcSet="imgs/about/awards/image_award-logo_appalie@2x.png"
 											alt="Appalie award logo"
 										/>
 										<img
@@ -1099,12 +1105,12 @@ export default function About({ res }) {
 									<picture>
 										<source
 											type="image/webp"
-											srcset="imgs/about/awards/image_award-logo_martech@2x.webp"
+											srcSet="imgs/about/awards/image_award-logo_martech@2x.webp"
 											alt="Martech award logo"
 										/>
 										<source
 											type="image/png"
-											srcset="imgs/about/awards/image_award-logo_martech@2x.png"
+											srcSet="imgs/about/awards/image_award-logo_martech@2x.png"
 											alt="Martech award logo"
 										/>
 										<img
@@ -1120,12 +1126,12 @@ export default function About({ res }) {
 									<picture>
 										<source
 											type="image/webp"
-											srcset="imgs/about/awards/image_award-logo_capterra@2x.webp"
+											srcSet="imgs/about/awards/image_award-logo_capterra@2x.webp"
 											alt="Capterra award logo"
 										/>
 										<source
 											type="image/png"
-											srcset="imgs/about/awards/image_award-logo_capterra@2x.png"
+											srcSet="imgs/about/awards/image_award-logo_capterra@2x.png"
 											alt="Capterra award logo"
 										/>
 										<img
@@ -1151,12 +1157,12 @@ export default function About({ res }) {
 								<picture>
 									<source
 										type="image/webp"
-										srcset="/imgs/about/image_investor-logos-full@2x.webp"
+										srcSet="/imgs/about/image_investor-logos-full@2x.webp"
 										alt="Investor logo full"
 									/>
 									<source
 										type="image/png"
-										srcset="/imgs/about/image_investor-logos-full@2x.png"
+										srcSet="/imgs/about/image_investor-logos-full@2x.png"
 										alt="Investor logo full"
 									/>
 									<img
@@ -1196,12 +1202,12 @@ export default function About({ res }) {
 									<picture>
 										<source
 											type="image/webp"
-											srcset="imgs/office-logos/image_location-spot-sanfran@2x.webp"
+											srcSet="imgs/office-logos/image_location-spot-sanfran@2x.webp"
 											alt="Location San Fracisco location"
 										/>
 										<source
 											type="image/png"
-											srcset="imgs/office-logos/image_location-spot-sanfran@2x.png"
+											srcSet="imgs/office-logos/image_location-spot-sanfran@2x.png"
 											alt="Location San Fracisco location"
 										/>
 										<img
@@ -1224,12 +1230,12 @@ export default function About({ res }) {
 									<picture>
 										<source
 											type="image/webp"
-											srcset="imgs/office-logos/image_location-spot-toronto@2x.webp"
+											srcSet="imgs/office-logos/image_location-spot-toronto@2x.webp"
 											alt="Location Toronto location"
 										/>
 										<source
 											type="image/png"
-											srcset="imgs/office-logos/image_location-spot-toronto@2x.png"
+											srcSet="imgs/office-logos/image_location-spot-toronto@2x.png"
 											alt="Location Toronto location"
 										/>
 										<img
@@ -1289,13 +1295,13 @@ export default function About({ res }) {
 							<picture>
 								<source
 									type="image/webp"
-									srcset="imgs/about/join-us/image_cta-left@2x.webp"
+									srcSet="imgs/about/join-us/image_cta-left@2x.webp"
 									className="img-left"
 									alt="Logo"
 								/>
 								<source
 									type="image/png"
-									srcset="imgs/about/join-us/image_cta-left@2x.png"
+									srcSet="imgs/about/join-us/image_cta-left@2x.png"
 									className="img-left"
 									alt="Logo"
 								/>
@@ -1308,13 +1314,13 @@ export default function About({ res }) {
 							<picture>
 								<source
 									type="image/webp"
-									srcset="imgs/about/join-us/image_cta-right@2x.webp"
+									srcSet="imgs/about/join-us/image_cta-right@2x.webp"
 									className="img-right"
 									alt="Logo"
 								/>
 								<source
 									type="image/png"
-									srcset="imgs/about/join-us/image_cta-right@2x.png"
+									srcSet="imgs/about/join-us/image_cta-right@2x.png"
 									className="img-right"
 									alt="Logo"
 								/>

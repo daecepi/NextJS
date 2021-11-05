@@ -4,7 +4,7 @@ export function parseCookies(cookieName) {
 }
 
 export const detectEnvUrl = () => {
-	switch (process.env.ENVIRONMENT) {
+	switch (process.env.NEXT_PUBLIC_ENVIRONMENT) {
 		case "dev":
 			return ".copper.lndo.site";
 		case "staging":

@@ -66,13 +66,13 @@ const DemosPage = () => {
 								<picture>
 									<source
 										type="image/webp"
-										srcset="https://copper.objects.frb.io/imgs/demos/demo_ui01.webp"
+										srcSet="https://copper.objects.frb.io/imgs/demos/demo_ui01.webp"
 										class=""
 										alt="Demo UI image"
 									/>
 									<source
 										type="image/png"
-										srcset="https://copper.objects.frb.io/imgs/demos/demo_ui01.png"
+										srcSet="https://copper.objects.frb.io/imgs/demos/demo_ui01.png"
 										class=""
 										alt="Demo UI image"
 									/>
@@ -115,13 +115,13 @@ const DemosPage = () => {
 									<picture>
 										<source
 											type="image/webp"
-											srcset="imgs/demos/working.webp"
+											srcSet="imgs/demos/working.webp"
 											class=""
 											alt="Working image"
 										/>
 										<source
 											type="image/png"
-											srcset="imgs/demos/working.jpg"
+											srcSet="imgs/demos/working.jpg"
 											class=""
 											alt="Working image"
 										/>
