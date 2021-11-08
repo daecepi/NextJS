@@ -647,9 +647,10 @@ const NavigationDefault = () => {
 												{mobileItems[itemKey].dropdowntype != "" ? (
 													<li
 														className="js-dropdown-nav"
-														dropdown-type={`${mobileItems.dropdownType}-mobile"`}
+														dropdown-type={`${mobileItems[itemKey].dropdownType}-mobile"`}
+														key={mobileItems[itemKey].key}
 													>
-														{mobileItems.name}
+														{mobileItems[itemKey].name}
 														<svg
 															width="16px"
 															height="8px"
@@ -686,12 +687,16 @@ const NavigationDefault = () => {
 														</svg>
 													</li>
 												) : (
-													<li>
+													<li key={mobileItems[itemKey].key}>
 														<a
-															href={mobileItems.url}
+															href={
+																mobileItems[itemKey]?.url
+																	? mobileItems[itemKey].url
+																	: "#"
+															}
 															target={
-																mobileItems.target != ""
-																	? mobileItems.target
+																mobileItems[itemKey]?.target != ""
+																	? mobileItems[itemKey].target
 																	: null
 															}
 														>
@@ -850,6 +855,7 @@ const NavigationDefault = () => {
 												<>
 													{item[itemKey].dropdowntype != "" ? (
 														<li
+															key={item.key}
 															onClick={() => toggleMenu(item[itemKey].tag)}
 															className={`h-dropdown js-dropdown-nav ${
 																active == item[itemKey].tag ? "active" : null
@@ -977,6 +983,7 @@ const NavigationDefault = () => {
 																				target={
 																					ditem.target ? dditem.target : null
 																				}
+																				key={ditem.key}
 																				href={ditem.url}
 																			>
 																				<img
@@ -989,7 +996,7 @@ const NavigationDefault = () => {
 																					src={ditem.icon}
 																				/>
 																				<div>
-																					<li>
+																					<li key={ditem.key}>
 																						{ditem.name}{" "}
 																						{ditem.tag ? (
 																							<span className="tag--new">
@@ -1017,6 +1024,7 @@ const NavigationDefault = () => {
 																				target={
 																					ditem.target ? dditem.target : null
 																				}
+																				key={ditem.key}
 																				href={ditem.url}
 																			>
 																				<img
@@ -1029,7 +1037,7 @@ const NavigationDefault = () => {
 																					src={ditem.icon}
 																				/>
 																				<div>
-																					<li>
+																					<li key={ditem.key}>
 																						{ditem.name}{" "}
 																						{ditem.tag ? (
 																							<span className="tag--new">
@@ -1057,6 +1065,7 @@ const NavigationDefault = () => {
 																				target={
 																					ditem.target ? dditem.target : null
 																				}
+																				key={ditem.key}
 																				href={ditem.url}
 																			>
 																				<img
@@ -1069,7 +1078,7 @@ const NavigationDefault = () => {
 																					src={ditem.icon}
 																				/>
 																				<div>
-																					<li>
+																					<li key={ditem.key}>
 																						{ditem.name}{" "}
 																						{ditem.tag ? (
 																							<span className="tag--new">

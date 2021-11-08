@@ -2929,8 +2929,8 @@ color:gray;
     height: 100%;
 ">
     <picture>
-      <source type="image/webp" srcset="/imgs/pricing/Pricing_CTA-image-dots@2x.webp" alt="Bubbles graphic">
-      <source type="image/png" srcset="/imgs/pricing/Pricing_CTA-image-dots@2x.png" alt="Bubbles graphic">
+      <source type="image/webp" srcSet="/imgs/pricing/Pricing_CTA-image-dots@2x.webp" alt="Bubbles graphic">
+      <source type="image/png" srcSet="/imgs/pricing/Pricing_CTA-image-dots@2x.png" alt="Bubbles graphic">
       <img class="drop-right__img h-remove-shadow bubbles-raw" style="
       max-width: auto;
       height: 135%;
@@ -2944,8 +2944,8 @@ color:gray;
       " src="/imgs/pricing/Pricing_CTA-image-dots@2x.png" alt="Bubbles graphic">
     </picture>
     <picture>
-      <source type="image/webp" srcset="https://copper.objects.frb.io/imgs/pricing/Pricing_CTA-image-bubbles@2x-migration-2.webp" alt="Bubbles graphic">
-      <source type="image/png" srcset="https://copper.objects.frb.io/imgs/pricing/Pricing_CTA-image-bubbles@2x-migration-2.png" alt="Bubbles graphic">
+      <source type="image/webp" srcSet="https://copper.objects.frb.io/imgs/pricing/Pricing_CTA-image-bubbles@2x-migration-2.webp" alt="Bubbles graphic">
+      <source type="image/png" srcSet="https://copper.objects.frb.io/imgs/pricing/Pricing_CTA-image-bubbles@2x-migration-2.png" alt="Bubbles graphic">
       <img class="drop-right__img h-remove-shadow bubbles-user" style="
       max-width: 650px;
       height: auto;
@@ -2974,8 +2974,8 @@ color:gray;
         right: 0px;
         margin-left: 0px;">
           <picture>
-            <source type="image/webp" srcset="https://copper.objects.frb.io/imgs/pricing/pricing_cta-image-mobile@2x-migration-2.webp" alt="Bubbles graphic">
-            <source type="image/png" srcset="https://copper.objects.frb.io/imgs/pricing/pricing_cta-image-mobile@2x-migration-2.png" alt="Bubbles graphic">
+            <source type="image/webp" srcSet="https://copper.objects.frb.io/imgs/pricing/pricing_cta-image-mobile@2x-migration-2.webp" alt="Bubbles graphic">
+            <source type="image/png" srcSet="https://copper.objects.frb.io/imgs/pricing/pricing_cta-image-mobile@2x-migration-2.png" alt="Bubbles graphic">
             <img class="drop-right__img h-remove-shadow" src="https://copper.objects.frb.io/imgs/pricing/pricing_cta-image-mobile@2x-migration-2.png" alt="Bubbles graphic">
           </picture>
         </div>

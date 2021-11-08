@@ -88,7 +88,7 @@ const testimonialSlider = ({ eyebrow, contentCopy, sliderContent }) => {
 								<picture>
 									{optimizedImages.srcsetWebP ? (
 										<source
-											srcset={optimizedImages.srcsetWebP}
+											srcSet={optimizedImages.srcsetWebP}
 											sizes="100vw"
 											type="image/webp"
 										/>
@@ -98,7 +98,7 @@ const testimonialSlider = ({ eyebrow, contentCopy, sliderContent }) => {
 
 									<img
 										src={optimizedImages.src}
-										srcset={optimizedImages.srcset}
+										srcSet={optimizedImages.srcset}
 										sizes="100vw"
 										alt={
 											contentImage.altText?.length
@@ -122,12 +122,12 @@ const testimonialSlider = ({ eyebrow, contentCopy, sliderContent }) => {
 						<picture>
 							<source
 								type="image/webp"
-								srcset="imgs/landing/projects-crm/brooke-cagle-NoRsyXmHGpI-unsplash-1.webp"
+								srcSet="imgs/landing/projects-crm/brooke-cagle-NoRsyXmHGpI-unsplash-1.webp"
 								alt="Brooke cagle No Rsy Xm H Gp I unsplash 1"
 							/>
 							<source
 								type="image/png"
-								srcset="imgs/landing/projects-crm/brooke-cagle-NoRsyXmHGpI-unsplash-1.png"
+								srcSet="imgs/landing/projects-crm/brooke-cagle-NoRsyXmHGpI-unsplash-1.png"
 								alt="Brooke cagle No Rsy Xm H Gp I unsplash 1"
 							/>
 							<img

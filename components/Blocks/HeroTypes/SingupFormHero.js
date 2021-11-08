@@ -153,7 +153,7 @@ const SignupFormHero = ({
 											<picture>
 												{optimizedImages.srcsetWebP ? (
 													<source
-														srcset={optimizedImages.srcsetWebP}
+														srcSet={optimizedImages.srcsetWebP}
 														sizes="100vw"
 														type="image/webp"
 													/>
@@ -162,7 +162,7 @@ const SignupFormHero = ({
 												)}
 												<img
 													src={optimizedImages.src}
-													srcset={optimizedImages.srcset}
+													srcSet={optimizedImages.srcset}
 													sizes="100vw"
 													className={imageContain ? "h-image-contain" : ""}
 													style={{ objectFit: "initial", height: "auto" }}

@@ -49,7 +49,7 @@ const LatestWebinarModule = ({ header, removeHeader, addPaddingBottom }) => {
 												<picture>
 													{optimizedImages.srcsetWebP ? (
 														<source
-															srcset={optimizedImages.srcsetWebP}
+															srcSet={optimizedImages.srcsetWebP}
 															sizes="100vw"
 															type="image/webp"
 														/>
@@ -58,7 +58,7 @@ const LatestWebinarModule = ({ header, removeHeader, addPaddingBottom }) => {
 													)}
 													<img
 														src={optimizedImages.src}
-														srcset={optimizedImages.srcset}
+														srcSet={optimizedImages.srcset}
 														sizes="100vw"
 														alt={entry.title}
 													/>
@@ -75,13 +75,13 @@ const LatestWebinarModule = ({ header, removeHeader, addPaddingBottom }) => {
 										<picture>
 											<source
 												type="image/webp"
-												srcset="/imgs/industry/industry-agency-blog-01@2x.webp"
+												srcSet="/imgs/industry/industry-agency-blog-01@2x.webp"
 												className="c-card__default__image"
 												alt="Industry agency blog"
 											/>
 											<source
 												type="image/png"
-												srcset="/imgs/industry/industry-agency-blog-01@2x.jpg"
+												srcSet="/imgs/industry/industry-agency-blog-01@2x.jpg"
 												className="c-card__default__image"
 												alt="Industry agency blog"
 											/>

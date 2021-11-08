@@ -142,7 +142,7 @@ const CustomSection = ({ backgroundColor, settings, layout }) => {
 															<picture>
 																{optimizedImages.srcsetWebP ? (
 																	<source
-																		srcset={optimizedImages.srcsetWebP}
+																		srcSet={optimizedImages.srcsetWebP}
 																		sizes="100vw"
 																		type="image/webp"
 																	/>
@@ -151,7 +151,7 @@ const CustomSection = ({ backgroundColor, settings, layout }) => {
 																)}
 																<img
 																	src={optimizedImages.src}
-																	srcset={optimizedImages.srcset}
+																	srcSet={optimizedImages.srcset}
 																	sizes="100vw"
 																	className="my-0"
 																	style={styleProp}

@@ -33,7 +33,7 @@ const LogoModule = ({
 								<picture>
 									{optimizedImages.srcsetWebP ? (
 										<source
-											srcset={optimizedImages.srcsetWebP}
+											srcSet={optimizedImages.srcsetWebP}
 											sizes="100vw"
 											type="image/webp"
 										/>
@@ -42,7 +42,7 @@ const LogoModule = ({
 									)}
 									<img
 										src={optimizedImages.src}
-										srcset={optimizedImages.srcset}
+										srcSet={optimizedImages.srcset}
 										sizes="100vw"
 										alt={logo.altText?.length ? logo.altText : logo.title}
 									/>

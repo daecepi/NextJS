@@ -309,7 +309,7 @@
     top: 100px;
     width: 100%;
     max-width: 1200px;
-    margin-left: -42px;
+    margin-left: -45px;
     ul {
       flex: 1;
       padding: 0;
@@ -463,6 +463,9 @@
     .c-nav__icon{
       float: none!important;
       padding-bottom: 0px!important;
+    }
+    .tag-container {
+      margin-top:9px;
     }
   }
 }

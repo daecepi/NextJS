@@ -15,13 +15,13 @@ const ResourcesModule = () => {
 							<picture>
 								<source
 									type="image/webp"
-									srcset="/imgs/industry/industry-tech-blog-01@2x.webp"
+									srcSet="/imgs/industry/industry-tech-blog-01@2x.webp"
 									className="c-card__default__image"
 									alt="Industry tech blog image"
 								/>
 								<source
 									type="image/png"
-									srcset="/imgs/industry/industry-tech-blog-01@2x.png"
+									srcSet="/imgs/industry/industry-tech-blog-01@2x.png"
 									className="c-card__default__image"
 									alt="Industry tech blog image"
 								/>
@@ -65,13 +65,13 @@ const ResourcesModule = () => {
 							<picture>
 								<source
 									type="image/webp"
-									srcset="/imgs/industry/industry-tech-blog-02@2x.webp"
+									srcSet="/imgs/industry/industry-tech-blog-02@2x.webp"
 									className="c-card__default__image"
 									alt="Industry tech blog image 2"
 								/>
 								<source
 									type="image/png"
-									srcset="/imgs/industry/industry-tech-blog-02@2x.png"
+									srcSet="/imgs/industry/industry-tech-blog-02@2x.png"
 									className="c-card__default__image"
 									alt="Industry tech blog image 2"
 								/>
@@ -110,13 +110,13 @@ const ResourcesModule = () => {
 							<picture>
 								<source
 									type="image/webp"
-									srcset="/imgs/industry/industry-tech-blog-03@2x.webp"
+									srcSet="/imgs/industry/industry-tech-blog-03@2x.webp"
 									className="c-card__default__image"
 									alt="Industry tech blog image 3"
 								/>
 								<source
 									type="image/png"
-									srcset="/imgs/industry/industry-tech-blog-03@2x.png"
+									srcSet="/imgs/industry/industry-tech-blog-03@2x.png"
 									className="c-card__default__image"
 									alt="Industry tech blog image 3"
 								/>

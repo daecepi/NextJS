@@ -41,7 +41,7 @@ const TableModule = ({
 												<picture>
 													{optimizedImages.srcsetWebP ? (
 														<source
-															srcset={optimizedImages.srcsetWebP}
+															srcSet={optimizedImages.srcsetWebP}
 															sizes="100vw"
 															type="image/webp"
 														/>
@@ -50,7 +50,7 @@ const TableModule = ({
 													)}
 													<img
 														src={optimizedImages.src}
-														srcset={logoOneOptimized.srcset}
+														srcSet={logoOneOptimized.srcset}
 														sizes="100vw"
 														width={logoOneOptimized.originalImageWidth}
 														height={logoOneOptimized.originalImageHeight}
@@ -87,7 +87,7 @@ const TableModule = ({
 											<picture>
 												{logoTwoOptimized.srcsetWebP ? (
 													<source
-														srcset={`${logoTwoOptimized.srcsetWebP}`}
+														srcSet={`${logoTwoOptimized.srcsetWebP}`}
 														sizes="100vw"
 														type="image/webp"
 													/>
@@ -96,7 +96,7 @@ const TableModule = ({
 												)}
 												<img
 													src={`${logoTwoOptimized.src}`}
-													srcset={`${logoTwoOptimized.srcset}`}
+													srcSet={`${logoTwoOptimized.srcset}`}
 													sizes="100vw"
 													width={logoTwoOptimized.originalImageWidth}
 													height={logoTwoOptimized.originalImageHeight}

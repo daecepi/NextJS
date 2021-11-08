@@ -7,7 +7,12 @@ import { useRouter } from "next/router";
 const DefaultHead = ({ entry, globals }) => {
 	const { pathname } = useRouter();
 
-	console.log("CURRENT PATHNAME ", pathname);
+	console.log(
+		"CURRENT PATHNAME ",
+		pathname,
+		process.env.NEXT_PUBLIC_ENVIRONMENT,
+		process.env.NEXT_PUBLIC_ENVIRONMENT !== "dev"
+	);
 
 	const ogImagesDefinition = (entry) => {
 		if (entry.featuredImage?.length) {
@@ -229,7 +234,7 @@ const DefaultHead = ({ entry, globals }) => {
 				)}
 				{ogImagesDefinition(entry)}
 
-				{process.env.ENVIRONMENT == "staging" ? (
+				{process.env.NEXT_PUBLIC_ENVIRONMENT == "staging" ? (
 					<meta content="noindex,nofollow" name="robots" />
 				) : (
 					""
@@ -287,7 +292,16 @@ const DefaultHead = ({ entry, globals }) => {
 			) : (
 				""
 			)}
-			{process.env.ENVIRONMENT !== "dev" ? (
+			<Script
+				onLoad={() => {
+					console.log(
+						"CHECK",
+						process.env.NEXT_PUBLIC_ENVIRONMENT,
+						process.env.NEXT_PUBLIC_ENVIRONMENT !== "dev"
+					);
+				}}
+			/>
+			{process.env.NEXT_PUBLIC_ENVIRONMENT !== "dev" ? (
 				<>
 					{/* OneTrust Cookies Consent Notice start for copper.com */}
 					<Script
@@ -295,6 +309,13 @@ const DefaultHead = ({ entry, globals }) => {
 						type="text/javascript"
 						charset="UTF-8"
 						data-domain-script="1e64248c-522b-4c85-a017-174502aeabdf"
+						onLoad={() => {
+							console.log(
+								"Extra",
+								process.env.NEXT_PUBLIC_ENVIRONMENT,
+								process.env.NEXT_PUBLIC_ENVIRONMENT !== "dev"
+							);
+						}}
 					></Script>
 					<Script
 						type="text/javascript"
