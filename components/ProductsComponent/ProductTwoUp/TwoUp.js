@@ -46,6 +46,11 @@ const TwoUp = (props) => {
 							})}
 						</ul>
 					) : null}
+					{props.aboutText && props.aboutUrl && (
+						<a class="t-link" href={props.aboutUrl}>
+							{props.aboutText}
+						</a>
+					)}
 				</div>
 			</div>
 		</>

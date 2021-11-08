@@ -1,16 +1,10 @@
-import Image from "next/image";
+import Image from 'next/image';
 
-const HeroProduct = (props) => {
+const HeroProduct = props => {
 	return (
-		<section
-			className={`c-hero--split background--${props.backgroundColor} product-page`}
-		>
+		<section className={`c-hero--split background--${props.backgroundColor} product-page`}>
 			<div className="c-image">
-				<Image
-					layout="fill"
-					className=" object-cover"
-					src={props.imageUrl}
-				></Image>
+				<Image layout="fill" className=" object-cover" src={props.imageUrl}></Image>
 				{/* <picture>
                     <img src='/imgs/product/191223_Automate_Hero.png'></img>
                 </picture> */}
@@ -23,14 +17,11 @@ const HeroProduct = (props) => {
 			<div className="container">
 				<div className="row">
 					<div className="col-md-6 c-valign--middle">
-						<pre className="c-eyebrow c-eyebrow--light">{props.eyebrow}</pre>
+						<pre className={props.eyebrowDark ? 'c-eyebrow' : 'c-eyebrow c-eyebrow--light'}>{props.eyebrow}</pre>
 						<h1 className="t-white">{props.title}</h1>
 						<p>{props.copy}</p>
 						<div className="c-hero__buttons">
-							<a
-								className="c-button sendUTMsToAmplitude"
-								href={props.ctaOneUrl}
-							>
+							<a className="c-button sendUTMsToAmplitude" href={props.ctaOneUrl}>
 								{props.ctaOneText}
 							</a>
 							<a className="c-button c-button--outline" href={props.ctaTwoUrl}>

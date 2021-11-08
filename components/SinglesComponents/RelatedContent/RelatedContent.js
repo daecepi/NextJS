@@ -15,7 +15,7 @@ const RelatedContent = (props) => {
 										<div className="c-card__entry extended-card">
 											<a
 												className="c-card__clickthrough"
-												href="/blog/jump-450-agency-crm-case-study"
+												href={item.url}
 											></a>
 											<Image
 												src={item.image}

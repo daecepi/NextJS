@@ -62,6 +62,10 @@ const CaseStudy = (props) => {
                         {props.company}
                       </span>
                     </cite>
+										{props.companyLogo ? (<div class="c-panel__blockquote--logo">
+										<Image src={props.companyLogo} width={props.companyLogoWidth} height={props.companyLogoHeight}/>
+										</div>): ""}
+										
                   </div>
                 </div>
               </div>
