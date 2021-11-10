@@ -75,8 +75,8 @@ const AutomateSells = () => {
                 'Thanks to Copper, I have',
                 'a lot more time to focus on high-value work'
             ]}
-            quoteby='Olga Avramescu'
-            company='Storm Ventures'
+            quoteby='OLGA AVRAMESCU'
+            company='STORM VENTURES'
             backgroundColor='light-pink'
         ></CaseStudy>
         <ProductTwoUp>

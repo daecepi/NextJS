@@ -113,8 +113,8 @@ const TrackLeads = () => {
 				quote={[
 					"We were letting more than 25% of our leads slip through the cracks because we weren’t following up. With Copper, we're capturing more leads in an organized way.",
 				]}
-				quoteby="Matt Chapman"
-				company="Smartpress"
+				quoteby="MATT CHAPMAN"
+				company="SMARTPRESS"
 				backgroundColor="indigo"
 			></CaseStudy>
 			<ProductTwoUp>

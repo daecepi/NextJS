@@ -3,7 +3,7 @@ const FinalPleaHero = ({ eyebrow, title, copy, imageUrl, imageWidth, imageHeight
 	return (
 		<section className="c-hero--split background--putty background--final-plea fifty-fifty--no-mobile">
 			<div className="c-image">
-				<Image src={imageUrl} width="1140" height="1200"></Image>
+				<Image src={imageUrl} width={imageWidth} height={imageHeight}></Image>
 			</div>
 			<div className="container">
 				<div className="row">

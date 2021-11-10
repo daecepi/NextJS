@@ -116,7 +116,7 @@ const Security = () => {
             "I chose Copper because it has most of the expected modern features, integrates with Gmail and Inbox, and provides a security model that supports a complex business with multiple teams."
           ]}
           quoteby="GOVIND D"
-          company="G2 Crowd Review"
+          company="G2 CROWD REVIEW"
           backgroundColor='hot-pink'
         ></CaseStudy>
         

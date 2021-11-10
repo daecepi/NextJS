@@ -13,6 +13,14 @@ import NumbersSection from '../components/SinglesComponents/NumbersSection.js/Nu
 import RelatedContent from '../components/SinglesComponents/RelatedContent/RelatedContent';
 
 export default function MidMarkeCRM() {
+	let companiesLogos = [
+		{ imageUrl: '/imgs/segmentation/Mailchimp.jpg', width: 180, height: 53 },
+		{ imageUrl: '/imgs/segmentation/mealpal.jpg', width: 180, height: 53 },
+		{ imageUrl: '/imgs/segmentation/zapier.jpg', width: 180, height: 53 },
+		{ imageUrl: '/imgs/segmentation/lumapps.jpg', width: 180, height: 53 },
+		{ imageUrl: '/imgs/segmentation/bird.jpg', width: 180, height: 53 },
+		{ imageUrl: '/imgs/segmentation/nerdwallet.jpg', width: 180, height: 53 },
+	];
 	return (
 		<>
 			<Head>
@@ -31,14 +39,16 @@ export default function MidMarkeCRM() {
 				ctaTwoUrl="/demos"
 				imageUrl="/imgs/segmentation/segmentation-mm-hero.jpg"
 			/>
-			<Customers />
+			<Customers title="The world’s fastest growing businesses choose Copper." companiesLogos={companiesLogos} />
 			<section class="c-jumble c-jumble-background--graphite c-jumble--align-right no-top-margin">
 				<div class="container">
 					<div class="c-jumble__container col-md-10 offset-md-2 no-padding">
 						<div class="c-jumble__content c-valign--middle">
 							<div class="row column-reverse">
-								<div class="col-md-5 order-md-2 mr-1">
-									<Image src="/imgs/segmentation/segmentation-mm-jumble.png" width="478" height="465" />
+								<div class="col-md-5 order-md-2">
+									<div class="c-image">
+										<Image src="/imgs/segmentation/segmentation-mm-jumble.png" width="478" height="465" />
+									</div>
 								</div>
 								<div class="col-md-7 order-md-1">
 									<pre class="c-eyebrow c-eyebrow--light">SALES WORKFLOW AUTOMATION</pre>
@@ -94,15 +104,14 @@ export default function MidMarkeCRM() {
 			<CaseStudy
 				eyebrow="Success Story"
 				imageUrl="/imgs/segmentation/segmentation-mm-quote.jpg"
-				imageWidth="860"
-				imageHeight="1040"
+				imageWidth="341"
+				imageHeight="450"
 				quote={[
 					<span>
 						We can push out 10x the amount of work because of the <strong>automation</strong> in Copper.
 					</span>,
 				]}
-				quoteby="Sarah Gilbert"
-				company="BEVERLY ROBINSON"
+				quoteby="BEVERLY ROBINSON"
 				companyLogo="/imgs/segmentation/segmentation-mm-logo.png"
 				companyLogoWidth="186"
 				companyLogoHeight="68"
