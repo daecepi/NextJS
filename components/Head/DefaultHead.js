@@ -7,13 +7,6 @@ import { useRouter } from "next/router";
 const DefaultHead = ({ entry, globals }) => {
 	const { pathname } = useRouter();
 
-	console.log(
-		"CURRENT PATHNAME ",
-		pathname,
-		process.env.NEXT_PUBLIC_ENVIRONMENT,
-		process.env.NEXT_PUBLIC_ENVIRONMENT !== "dev"
-	);
-
 	const ogImagesDefinition = (entry) => {
 		if (entry.featuredImage?.length) {
 			const imageToUse = entry.featuredImage[0];

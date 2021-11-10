@@ -13,8 +13,6 @@ const AboutBioModal = ({ leaderId, containerStyles, closeSignal }) => {
 	const twitterUrl = leaderInformation[leaderId]?.socialLinks?.twitter || "";
 	const twitterDisplay = twitterUrl !== "" ? "block" : "none";
 
-	console.log("Gotten", leaderInformation[leaderId]);
-
 	return (
 		<ModalBase
 			display={leaderInformation[leaderId] ? true : false}

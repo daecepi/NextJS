@@ -8,11 +8,8 @@ import NavigationDefault from "../components/Navigation/NavigationDefault";
 
 export default function About({ res }) {
 	const [modalState, updateModalState] = useState("");
-	console.log(
-		"Important about log",
-		process.env.NEXT_PUBLIC_ENVIRONMENT,
-		process.env.NEXT_PUBLIC_ENVIRONMENT !== "dev"
-	);
+
+	// console.log("RED OBTAINED ", res);
 
 	const displayModal = (leaderId) => {
 		updateModalState(leaderId);
@@ -1339,7 +1336,7 @@ export default function About({ res }) {
 }
 
 export async function getStaticProps(context) {
-	const res = await getEntryByType("about", "about");
+	const res = await getEntryByType("about", "about", true);
 	return {
 		props: {
 			res,
