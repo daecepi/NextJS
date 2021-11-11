@@ -107,8 +107,8 @@ const ManageContacts = () => {
           quote={[
             "Copper not only made it easy to centralize all communication but also gave us more transparency and visibility into our business."
           ]}
-          quoteby="Sarah Gilbert"
-          company="RHR International"
+          quoteby="SARAH GILBERT"
+          company="RHR INTERNATIONAL"
           backgroundColor='purple-rain'
         ></CaseStudy>
         <ProductTwoUp>

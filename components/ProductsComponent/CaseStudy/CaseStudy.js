@@ -1,5 +1,5 @@
-import Image from "next/image";
-const CaseStudy = (props) => {
+import Image from 'next/image';
+const CaseStudy = props => {
 	return (
 		<section className="c-case-study c-case-study--align-left">
 			<div className={`container colorblock--${props.backgroundColor}`}>
@@ -8,30 +8,8 @@ const CaseStudy = (props) => {
 						<div className="row row-eq-height align-items-center">
 							<div className="col-md-6 c-align--center">
 								<div className="c-image c-image--shadow">
-									<pre className="c-eyebrow c-eyebrow--light">
-										{props.eyebrow}
-									</pre>
-									<Image
-										src={props.imageUrl}
-										width={props.imageWidth}
-										height={props.imageHeight}
-									></Image>
-									{/* <picture>
-                      <source
-                        type="image/webp"
-                        srcSet="/imgs/product/191223_Automate_QuotePhoto.webp"
-                        alt="Quote photo"
-                      />
-                      <source
-                        type="image/png"
-                        srcSet="/imgs/product/191223_Automate_QuotePhoto.png"
-                        alt="Quote photo"
-                      />
-                      <img
-                        src="/imgs/product/191223_Automate_QuotePhoto.png"
-                        alt="Quote photo"
-                      />
-                    </picture> */}
+									<pre className="c-eyebrow c-eyebrow--light">{props.eyebrow}</pre>
+									<Image src={props.imageUrl} width={props.imageWidth} height={props.imageHeight}></Image>
 								</div>
 							</div>
 							<div className="col-md-6">
@@ -54,15 +32,22 @@ const CaseStudy = (props) => {
 										})}
 									</blockquote>
 									<cite>
-										{props.quoteBy}
-										<span
-											className="c-panel__blockquote--position"
-											style={{ textTransform: "uppercase" }}
-										>
-											{props.company}
-										</span>
+										{props.quoteby}
+										<span className="c-panel__blockquote--position">{props.company}</span>
 									</cite>
+									{props.companyLogo && (
+										<div class="c-panel__blockquote--logo">
+											<Image src={props.companyLogo} width={props.companyLogoWidth} height={props.companyLogoHeight} />
+										</div>
+									)}
 								</div>
+								{props.linkUrl && (
+									<div class="col-md-12 c-align--right">
+										<a class="t-link" href={props.linkUrl}>
+											{props.linkText}
+										</a>
+									</div>
+								)}
 							</div>
 						</div>
 					</div>
