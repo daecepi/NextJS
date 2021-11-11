@@ -4,7 +4,7 @@ const FinalCta = (props) => {
 		<section className="final-plea product-page">
 			<div className="container">
 				<div className="row">
-					<div className="col-md-5">
+					<div className="col-md-5 text-dark">
 						<h2>{props.title}</h2>
 						<p>{props.copy}</p>
 						<div className="c-hero__buttons">

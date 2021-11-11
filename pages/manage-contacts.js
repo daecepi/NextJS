@@ -78,8 +78,8 @@ const ManageContacts = () => {
           <TwoUp
             eyebrow="SKIP MANUAL DATA ENTRY"
             title="No more wasted time on data entry."
-            copy="Copper suggests recent contacts you’ve been emailing to be added to your list so that you don’t lose track of anyone.
-            It even automatically pulls in contact details like phone numbers, email addresses, and social media so you can say goodbye to entering that all by hand!"
+            copy={(<><p>Copper suggests recent contacts you’ve been emailing to be added to your list so that you don’t lose track of anyone.</p>
+            <p>It even automatically pulls in contact details like phone numbers, email addresses, and social media so you can say goodbye to entering that all by hand!</p></>)}
             imageUrl="/imgs/product/200309_Organize_UI02.png"
             imageWidth="1109"
             imageHeight="1122"
