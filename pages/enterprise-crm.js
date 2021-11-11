@@ -5,7 +5,7 @@ import NavigationDefault from '../components/Navigation/NavigationDefault';
 import CaseStudy from '../components/ProductsComponent/CaseStudy/CaseStudy';
 import ProductTwoUp from '../components/ProductsComponent/ProductTwoUp/ProductTwoUp';
 import TwoUp from '../components/ProductsComponent/ProductTwoUp/TwoUp';
-import Customers from '../components/Sections/Customers';
+import Customers from '../components/Sections/Customers/Customers';
 import CallOut from '../components/SinglesComponents/CallOut/CallOut';
 import FinalPleaHero from '../components/SinglesComponents/FinalPleadHero/FinalPleaHero';
 import NumbersSection from '../components/SinglesComponents/NumbersSection.js/NumbersSection';

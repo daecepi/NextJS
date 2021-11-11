@@ -35,14 +35,19 @@ const CaseStudy = props => {
 										{props.quoteby}
 										<span className="c-panel__blockquote--position">{props.company}</span>
 									</cite>
-									{props.companyLogo ? (
+									{props.companyLogo && (
 										<div class="c-panel__blockquote--logo">
 											<Image src={props.companyLogo} width={props.companyLogoWidth} height={props.companyLogoHeight} />
 										</div>
-									) : (
-										''
 									)}
 								</div>
+								{props.linkUrl && (
+									<div class="col-md-12 c-align--right">
+										<a class="t-link" href={props.linkUrl}>
+											{props.linkText}
+										</a>
+									</div>
+								)}
 							</div>
 						</div>
 					</div>
