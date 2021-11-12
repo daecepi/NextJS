@@ -78,10 +78,6 @@ const Security = () => {
           title="How we do it"
           copy='Our customers trust us with mission-critical business data.  We take this responsibility very seriously, always keeping data protection front-of-mind.'
         >
-           <div className="col-md-4">
-        <h4>Inactivity Monitor</h4>
-        <p className="p-sm">See the number of days a lead has gone without a follow-up so you know when you should reach out.</p>
-      </div>
       <div className="col-md-4">
         <h4>User Access Management</h4>
         <p className="p-sm">Employee and vendor access to all customer data is tightly regulated and restricted to a need-to-know basis using role-based access controls.</p>
