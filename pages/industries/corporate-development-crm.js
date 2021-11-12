@@ -1,4 +1,14 @@
+import Head from "next/head";
+import HeroSinglePages from "../../components/Blocks/HeroTypes/HeroSinglePages";
+import Jumble from "../../components/SinglesComponents/Jumble/Jumble";
+import Footer from "../../components/Footer/Footer";
+import CallOut from "../../components/SinglesComponents/CallOut/CallOut";
+import NuumbersSection from "../../components/SinglesComponents/NumbersSection.js/NumbersSection";
+import RelatedContent from "../../components/SinglesComponents/RelatedContent/RelatedContent";
 import FinalPleaHero from "../../components/SinglesComponents/FinalPleadHero/FinalPleaHero";
+import NavigationDefault from "../../components/Navigation/NavigationDefault";
+import SingleTwoColCraft from "../../components/SinglesComponents/SingleTwoCol/SingleTwoColCraft";
+import TwoColModule from "../../components/Blocks/TwoCols";
 export default function CorporateDevCrm({}) {
 	return (
 		<>

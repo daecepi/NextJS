@@ -20,7 +20,7 @@ const FinalPleaHero = ({
 				<div className="row">
 					<div className="col-md-6 c-valign--middle">
 						<pre className="c-eyebrow" style={{ top: 0, marginLeft: 0 }}>
-							{eyebrow || "Retain more\nclients today"}
+							{eyebrow || ""}
 						</pre>
 						<h2 className="t-white">{title}</h2>
 						{copy && <p style={{ maxWidth: "420px" }}>{copy}</p>}
@@ -30,7 +30,7 @@ const FinalPleaHero = ({
 							</a>
 							<a
 								className="c-button c-button--outline sendUTMsToAmplitude"
-								href="/signup"
+								href="https://www.copper.com/signup"
 							>
 								Try Free
 							</a>

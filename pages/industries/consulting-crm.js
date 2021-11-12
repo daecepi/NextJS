@@ -17,14 +17,14 @@ export default function ConsultingCrm() {
 			</Head>
 			<NavigationDefault
 				utility={[
-					{ text: "Try Free", ulr: "/signup" },
+					{ text: "Try Free", ulr: "https://www.copper.com/signup" },
 					{ text: "Login", ulr: "https://app.copper.com/users/sign_in" },
 				]}
 			/>
 			<section className="c-hero--split background--consulting">
 				<div className="container">
 					<div className="row">
-						<div className="col-md-6 col-lg-5 c-valign--middle">
+						<div className="col-md-5 col-lg-5 c-valign--middle">
 							<pre className="c-eyebrow c-eyebrow--light">
 								COPPER FOR CONSULTING COMPANIES
 							</pre>
@@ -33,7 +33,10 @@ export default function ConsultingCrm() {
 							</h1>
 							<p>Build strong and lasting client relationships with Copper.</p>
 							<div className="c-hero__buttons">
-								<a className="c-button sendUTMsToAmplitude" href="/signup">
+								<a
+									className="c-button sendUTMsToAmplitude"
+									href="https://www.copper.comhttps://www.copper.com/signup"
+								>
 									Try Free
 								</a>
 								<a className="c-button c-button--outline" href="/demos">

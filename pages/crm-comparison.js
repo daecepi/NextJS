@@ -43,7 +43,10 @@ export default function CrmComparisonPage({ res }) {
 								<CtaGroup ctas={entry.ctas} />
 							) : (
 								<div class="c-hero__buttons">
-									<a class="c-button c-button--white" href="/signup">
+									<a
+										class="c-button c-button--white"
+										href="https://www.copper.comhttps://www.copper.com/signup"
+									>
 										Free Trial
 									</a>
 									<a class="c-button c-button--white-outline" href="/demos">

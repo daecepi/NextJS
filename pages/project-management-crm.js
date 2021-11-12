@@ -870,7 +870,7 @@ const PmCRM = () => {
 									</p>
 									<a
 										className="t-link h-white sendUTMsToAmplitude"
-										href="/signup?_ga=2.203906000.1318646422.1594028674-1197161615.1589920381&_gac=1.248633752.1593720638.null"
+										href="https://www.copper.com/signup?_ga=2.203906000.1318646422.1594028674-1197161615.1589920381&_gac=1.248633752.1593720638.null"
 									>
 										Try Free Today
 									</a>
@@ -986,7 +986,7 @@ const PmCRM = () => {
 									<div className="flex-column">
 										<a
 											target=""
-											href="/signup?_ga=2.203906000.1318646422.1594028674-1197161615.1589920381&_gac=1.248633752.1593720638.null"
+											href="https://www.copper.com/signup?_ga=2.203906000.1318646422.1594028674-1197161615.1589920381&_gac=1.248633752.1593720638.null"
 											className="t-link sendUTMsToAmplitude"
 										>
 											Try Free Today
@@ -1226,7 +1226,7 @@ const PmCRM = () => {
 								<a
 									className="c-button sendUTMsToAmplitude c-button--hot-pink"
 									target=""
-									href="/signup"
+									href="https://www.copper.com/signup"
 								>
 									Try Free Today
 								</a>

@@ -57,7 +57,7 @@ const PersonalizationModal = ({}) => {
 								<a
 									id="do-success"
 									className="c-button c-button--hot-pink"
-									href="/signup"
+									href="https://www.copper.com/signup"
 								>
 									Try Free
 								</a>

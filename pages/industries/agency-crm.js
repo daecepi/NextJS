@@ -18,7 +18,7 @@ const AgencyCrm = () => {
 			</Head>
 			<NavigationDefault></NavigationDefault>
 			<HeroSinglePages
-				pageColorcClass="agency"
+				pageColorcClass="--agency"
 				eyebrow="COPPER FOR CREATIVE AGENCIES"
 				title="CRM minus the creative blocks."
 				copy="Digital and creative agencies get more done and make their clients happier with Copper."
@@ -144,7 +144,12 @@ const AgencyCrm = () => {
 				]}
 			></RelatedContent>
 			<FinalPleaHero
-				title={<div>Retain more<br/> clients today</div>}
+				title={
+					<div>
+						Retain more
+						<br /> clients today
+					</div>
+				}
 				copy="No credit card required. Start your 14-day free trial today."
 				imageUrl="/imgs/industry/industry-agency-final-plea.jpg"
 				imageWidth="1140"
