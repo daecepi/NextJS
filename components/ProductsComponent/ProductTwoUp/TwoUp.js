@@ -146,7 +146,7 @@ const TwoUp = props => {
 						</ul>
 					) : null}
 					{props.aboutText && props.aboutUrl && (
-						<a className="t-link" href={props.aboutUrl}>
+						<a className="t-link mt-4" href={props.aboutUrl}>
 							{props.aboutText}
 						</a>
 					)}

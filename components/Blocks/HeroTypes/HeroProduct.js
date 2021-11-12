@@ -13,12 +13,19 @@ const HeroProduct = props => {
 						<h1 className="t-white">{props.title}</h1>
 						<p>{props.copy}</p>
 						<div className="c-hero__buttons">
-							<a className={props.ctaLight ? 'c-button c-button--white sendUTMsToAmplitude' : 'c-button sendUTMsToAmplitude'} href={props.ctaOneUrl}>
-								{props.ctaOneText}
-							</a>
-							<a className={props.ctaLight ? 'c-button c-button--outline--white' : 'c-button c-button--outline'} href={props.ctaTwoUrl}>
-								{props.ctaTwoText}
-							</a>
+							{props.ctaOneUrl && props.ctaOneText && (
+								<a
+									className={props.ctaLight ? 'c-button c-button--white sendUTMsToAmplitude' : 'c-button sendUTMsToAmplitude'}
+									href={props.ctaOneUrl}
+								>
+									{props.ctaOneText}
+								</a>
+							)}
+							{props.ctaTwoUrl && props.ctaTwoText && (
+								<a className={props.ctaLight ? 'c-button c-button--outline--white' : 'c-button c-button--outline'} href={props.ctaTwoUrl}>
+									{props.ctaTwoText}
+								</a>
+							)}
 						</div>
 					</div>
 				</div>
