@@ -30,7 +30,7 @@ const FinalPleaHero = ({
 							</a>
 							<a
 								className="c-button c-button--outline sendUTMsToAmplitude"
-								href="{{ craft.app.config.general.signUpUrl }}"
+								href="/signup"
 							>
 								Try Free
 							</a>

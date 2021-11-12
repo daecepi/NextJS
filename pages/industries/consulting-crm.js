@@ -25,11 +25,15 @@ export default function ConsultingCrm() {
 				<div className="container">
 					<div className="row">
 						<div className="col-md-6 col-lg-5 c-valign--middle">
-							<pre className="c-eyebrow c-eyebrow--light">COPPER FOR CONSULTING COMPANIES</pre>
-							<h1 className="t-white">Manage relationships from deal to project.</h1>
+							<pre className="c-eyebrow c-eyebrow--light">
+								COPPER FOR CONSULTING COMPANIES
+							</pre>
+							<h1 className="t-white">
+								Manage relationships from deal to project.
+							</h1>
 							<p>Build strong and lasting client relationships with Copper.</p>
 							<div className="c-hero__buttons">
-								<a className="c-button sendUTMsToAmplitude" href="{{ craft.app.config.general.signUpUrl }}">
+								<a className="c-button sendUTMsToAmplitude" href="/signup">
 									Try Free
 								</a>
 								<a className="c-button c-button--outline" href="/demos">
@@ -46,9 +50,20 @@ export default function ConsultingCrm() {
 						<div className="col-md order-2">
 							<div className="c-image c-image--center no-embelleshment">
 								<picture>
-									<source type="image/webp" srcset="/imgs/industry/industry-consulting-logo-cloud@2x.webp" alt="Consulting logo" />
-									<source type="image/png" srcset="/imgs/industry/industry-consulting-logo-cloud@2x.png" alt="Consulting logo" />
-									<img src="/imgs/industry/industry-consulting-logo-cloud@2x.png" alt="Consulting logo" />
+									<source
+										type="image/webp"
+										srcset="/imgs/industry/industry-consulting-logo-cloud@2x.webp"
+										alt="Consulting logo"
+									/>
+									<source
+										type="image/png"
+										srcset="/imgs/industry/industry-consulting-logo-cloud@2x.png"
+										alt="Consulting logo"
+									/>
+									<img
+										src="/imgs/industry/industry-consulting-logo-cloud@2x.png"
+										alt="Consulting logo"
+									/>
 								</picture>
 							</div>
 						</div>
@@ -68,18 +83,32 @@ export default function ConsultingCrm() {
 								<div className="col-md-6 order-md-2">
 									<div className="c-image">
 										<picture>
-											<source type="image/webp" srcset="/imgs/industry/consulting-02.webp" alt="Consulting industry image" />
-											<source type="image/png" srcset="/imgs/industry/consulting-02.png" alt="Consulting industry image" />
-											<img alt="Consulting industry image" src="/imgs/industry/consulting-02.png" />
+											<source
+												type="image/webp"
+												srcset="/imgs/industry/consulting-02.webp"
+												alt="Consulting industry image"
+											/>
+											<source
+												type="image/png"
+												srcset="/imgs/industry/consulting-02.png"
+												alt="Consulting industry image"
+											/>
+											<img
+												alt="Consulting industry image"
+												src="/imgs/industry/consulting-02.png"
+											/>
 										</picture>
 									</div>
 								</div>
 								<div className="col-md-6 order-md-1">
-									<pre className="c-eyebrow c-eyebrow--light">ONE CENTRAL SYSTEM</pre>
+									<pre className="c-eyebrow c-eyebrow--light">
+										ONE CENTRAL SYSTEM
+									</pre>
 									<h2>Finally, your relationships organized.</h2>
 									<p>
-										You’ve got a lot of clients to juggle. Copper automatically organizes client and project information in one place—leads, deals,
-										proposals, contracts, resources.
+										You’ve got a lot of clients to juggle. Copper automatically
+										organizes client and project information in one place—leads,
+										deals, proposals, contracts, resources.
 									</p>
 								</div>
 							</div>
@@ -115,7 +144,10 @@ export default function ConsultingCrm() {
 							<div className="container">
 								<div className="row">
 									<div className="c-testimonial__image offset-md-2 col-md-4">
-										<pre className="c-eyebrow c-eyebrow--light" style={{ top: "0", marginLeft: "0" }}>
+										<pre
+											className="c-eyebrow c-eyebrow--light"
+											style={{ top: "0", marginLeft: "0" }}
+										>
 											Success Stories
 										</pre>
 										<div className="colorblock--bottom--right colorblock--volt">
@@ -126,21 +158,33 @@ export default function ConsultingCrm() {
 													className=""
 													alt="Customers Testimonial"
 												/>
-												<source type="image/png" srcset="/imgs/industry/industry-consulting-customer.jpg" className="" alt="Customers Testimonial" />
-												<img className="" src="/imgs/industry/industry-consulting-customer.jpg" alt="Customers Testimonial" />
+												<source
+													type="image/png"
+													srcset="/imgs/industry/industry-consulting-customer.jpg"
+													className=""
+													alt="Customers Testimonial"
+												/>
+												<img
+													className=""
+													src="/imgs/industry/industry-consulting-customer.jpg"
+													alt="Customers Testimonial"
+												/>
 											</picture>
 										</div>
 									</div>
 									<div className="c-testimonial__quote col-md-4 offset-md-1">
 										<div className="c-quote-carousel__blockquote--item active">
 											<blockquote>
-												Copper helps us sell faster and get higher-quality clients because of the way it allows people to share information and
-												contacts across teams.
+												Copper helps us sell faster and get higher-quality
+												clients because of the way it allows people to share
+												information and contacts across teams.
 											</blockquote>
 											<cite>
 												Sarah Gilbert
 												<br />
-												<span className="c-quote-carousel__blockquote--position">Director of Operations and IT, RHR International</span>
+												<span className="c-quote-carousel__blockquote--position">
+													Director of Operations and IT, RHR International
+												</span>
 											</cite>
 										</div>
 									</div>
