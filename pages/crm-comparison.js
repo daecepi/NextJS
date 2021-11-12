@@ -3,128 +3,9 @@ import DefaultPageBase from "../components/PageBase/DefaultPageBase";
 import { filterStripTags } from "../helpers";
 
 export default function CrmComparisonPage({ res }) {
-	const entry = res.entry;
 	return (
-		<DefaultPageBase entry={entry} globals={res.globals}>
-			<section class="crm-comparison-hero c-hero--split c-hero--split--animation background--mint">
-				<div class="c-image c-image--left">
-					{entry?.crmHeroImage?.length ? (
-						<ImageSimple
-							image={entry.crmHeroImage[0]}
-							stylesAtr={imageStyles}
-						/>
-					) : (
-						<picture>
-							<source
-								type="image/webp"
-								srcset="/local/DSC00046-2-small.jpg-min.webp"
-								alt="Special image"
-							/>
-							<source
-								type="image/png"
-								srcset="/local/DSC00046-2-small.jpg-min.jpg"
-								alt="Special image"
-							/>
-							<img
-								src="/local/DSC00046-2-small.jpg-min.jpg"
-								alt="Special image"
-							/>
-						</picture>
-					)}
-				</div>
-
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6 c-valign--middle">
-							<pre class="c-eyebrow c-eyebrow--light">{entry.eyebrow}</pre>
-							<h1 class="t-white">{entry.header}</h1>
-							<p>{filterStripTags(entry.heroText)}</p>
-							{entry?.ctas?.length ? (
-								<CtaGroup ctas={entry.ctas} />
-							) : (
-								<div class="c-hero__buttons">
-									<a
-										class="c-button c-button--white"
-										href="https://www.copper.comhttps://www.copper.com/signup"
-									>
-										Free Trial
-									</a>
-									<a class="c-button c-button--white-outline" href="/demos">
-										Request Demo
-									</a>
-								</div>
-							)}
-						</div>
-					</div>
-				</div>
-			</section>
-
-			{/* Simplify your workday */}
-			<section class="c-list-card crm-comparison-cards">
-				<div class="container">
-					<div class="c-list-card__header c-align--center">
-						<h2 class="col-sm-10 t-center">Compare the most popular CRMs.</h2>
-						<p class="col-sm-8 t-center">
-							Get an idea of what other CRMs can and can't do to narrow down
-							your options with a CRM feature comparison.
-						</p>
-					</div>
-					<div class="row">
-						{/* Cards */}
-						{entry?.crmCards
-							? entry.crmCards.map((card) => {
-									return (
-										<a
-											href="{{crm.crmCardLink.url}}"
-											target="_blank"
-											class="col-md-4 card__mobile-top-margin"
-										>
-											<div class="c-list-card__card c-list-card__card--centered no-margin">
-												<div class="c-list-card__image c-list-card__image--text c-valign--middle">
-													{card.crmLogo?.length ? (
-														<ImageSimple
-															image={crm.crmLogo[0]}
-															stylesAtr={{ maxWidth: "150px" }}
-														/>
-													) : (
-														<picture>
-															<source
-																type="image/webp"
-																srcset="/imgs/integrations/docusign-logo.webp"
-																alt="{{crm.crmName}}"
-																style="max-width: 150px;"
-															/>
-															<source
-																type="image/png"
-																srcset="/imgs/integrations/docusign-logo.png"
-																alt="{{crm.crmName}}"
-																style="max-width: 150px;"
-															/>
-															<img
-																alt="{{crm.crmName}}"
-																src="/imgs/integrations/docusign-logo.png"
-																style="max-width: 150px;"
-															/>
-														</picture>
-													)}
-												</div>
-												{card.crmCopy?.length ? (
-													<p class="p-sm">{crm.crmCopy}</p>
-												) : (
-													""
-												)}
-												<div class="c-card__meta c-card__meta--noline c-card__meta--nopadding ">
-													<p class="t-link">Learn More</p>
-												</div>
-											</div>
-										</a>
-									);
-							  })
-							: ""}
-					</div>
-				</div>
-			</section>
-
+		<>
+			<h1>Next one</h1>
 			{/* Quote Carousel */}
 			{/*<section class="crm-comparison-quotes c-quote-carousel js-quote-carousel">
 <div class="container-fluid">
@@ -230,18 +111,6 @@ export default function CrmComparisonPage({ res }) {
     </div>
 </div>
       </section>*/}
-		</DefaultPageBase>
+		</>
 	);
-}
-
-export async function getStaticProps(context) {
-	const res = await getEntryByType(
-		"crmComparisonIndex",
-		"crm-comparison-index"
-	);
-	return {
-		props: {
-			res,
-		}, // will be passed to the page component as props
-	};
 }

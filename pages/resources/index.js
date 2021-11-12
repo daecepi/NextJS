@@ -313,8 +313,7 @@ const resources = (props) => {
 export default resources;
 
 export async function getServerSideProps({ params }) {
-	let pageNumber = 1;
-	const blogInformation = await fetch(`copper.com/api/blog${pageNumber}.json`);
+	// const blogInformation = await fetch(`copper.com/api/blog${pageNumber}.json`);
 	const menuCategory = await getBlogCategoriesMenu();
 	const blogFormats = await getBlogFormats();
 	const blogEntries = await getBlogEntries();
@@ -323,7 +322,6 @@ export async function getServerSideProps({ params }) {
 
 	return {
 		props: {
-			blogInformation,
 			menuCategory,
 			blogFormats,
 			blogEntries,
