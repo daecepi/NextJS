@@ -15,3 +15,7 @@ export const detectEnvUrl = () => {
 			return "";
 	}
 };
+
+const filterStripTags = (string) => {
+	return string.replace(/(<([^>]+)>)/gi, "");
+};

@@ -4,7 +4,6 @@ import { getEntryByType } from "../lib/api";
 import DefaultPageBase from "../components/PageBase/DefaultPageBase";
 import { useState } from "react";
 import AboutBioModal from "../components/Blocks/Modals/AboutBioModal";
-import NavigationDefault from "../components/Navigation/NavigationDefault";
 
 export default function About({ res }) {
 	const [modalState, updateModalState] = useState("");
@@ -19,8 +18,7 @@ export default function About({ res }) {
 	};
 
 	return (
-		<DefaultPageBase entry={res}>
-			<NavigationDefault />
+		<DefaultPageBase entry={res.entry} global={res.global}>
 			{/* Page content */}
 			<style jsx>
 				{`
@@ -1336,7 +1334,7 @@ export default function About({ res }) {
 }
 
 export async function getStaticProps(context) {
-	const res = await getEntryByType("about", "about", true);
+	const res = await getEntryByType("about", "about");
 	return {
 		props: {
 			res,
