@@ -5,14 +5,6 @@ const HeroProduct = props => {
 		<section className={`c-hero--split background--${props.backgroundColor} product-page`}>
 			<div className="c-image">
 				<Image layout="fill" className=" object-cover" src={props.imageUrl}></Image>
-				{/* <picture>
-                    <img src='/imgs/product/191223_Automate_Hero.png'></img>
-                </picture> */}
-				{/* <picture>
-                <source type="image/webp" srcSet="/imgs/product/191223_Automate_Hero.webp"    alt="Automation hero image" />
-                <source type="image/png" srcSet="/imgs/product/191223_Automate_Hero.png"    alt="Automation hero image" />
-                <img     src="/imgs/product/191223_Automate_Hero.png"   alt="Automation hero image" />
-            </picture> */}
 			</div>
 			<div className="container">
 				<div className="row">
@@ -21,10 +13,10 @@ const HeroProduct = props => {
 						<h1 className="t-white">{props.title}</h1>
 						<p>{props.copy}</p>
 						<div className="c-hero__buttons">
-							<a className="c-button sendUTMsToAmplitude" href={props.ctaOneUrl}>
+							<a className={props.ctaLight ? 'c-button c-button--white sendUTMsToAmplitude' : 'c-button sendUTMsToAmplitude'} href={props.ctaOneUrl}>
 								{props.ctaOneText}
 							</a>
-							<a className="c-button c-button--outline" href={props.ctaTwoUrl}>
+							<a className={props.ctaLight ? 'c-button c-button--outline--white' : 'c-button c-button--outline'} href={props.ctaTwoUrl}>
 								{props.ctaTwoText}
 							</a>
 						</div>
