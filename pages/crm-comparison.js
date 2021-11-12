@@ -43,10 +43,7 @@ export default function CrmComparisonPage({ res }) {
 								<CtaGroup ctas={entry.ctas} />
 							) : (
 								<div class="c-hero__buttons">
-									<a
-										class="c-button c-button--white"
-										href="{{ craft.app.config.general.signUpUrl }}"
-									>
+									<a class="c-button c-button--white" href="/signup">
 										Free Trial
 									</a>
 									<a class="c-button c-button--white-outline" href="/demos">

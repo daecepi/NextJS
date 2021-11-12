@@ -890,11 +890,7 @@ const PmCRM = () => {
 					></h2>
 					<div className="row column-reverse">
 						<div className="col-md-6 d-flex align-items-center order-1 ">
-							<div
-								id="project-second-module"
-								className=""
-								style={{ position: "relative" }}
-							>
+							<div id="project-second-module" className="relative">
 								<picture>
 									<source
 										type="image/webp"
@@ -1015,7 +1011,7 @@ const PmCRM = () => {
 					></h2>
 					<div className="row">
 						<div className="col-md-6 d-flex align-items-center offset-md-1 order-2 ">
-							<div id="project-third-module" className="">
+							<div id="project-third-module" className="relative">
 								<picture>
 									<source
 										type="image/webp"
