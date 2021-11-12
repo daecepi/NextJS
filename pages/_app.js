@@ -4,9 +4,13 @@ import "../styles/global.scss";
 import { CookiesProvider } from "react-cookie";
 import { useEffect, useState } from "react";
 import { parseCookies } from "../helpers";
-
+import { RecoilRoot } from "recoil";
 function MyApp({ Component, pageProps }) {
-	return <Component {...pageProps} />;
+	return (
+		<RecoilRoot>
+			<Component {...pageProps} />
+		</RecoilRoot>
+	);
 }
 
 export default MyApp;

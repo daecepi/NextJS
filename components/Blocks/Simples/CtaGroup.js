@@ -2,6 +2,7 @@ const CtaGroup = (ctas) => {
 	return (
 		<div className="c-hero__buttons">
 			{ctas.map((cta) => {
+				const convertedCta = linkitButtonPropertyGetter(cta);
 				switch (key) {
 					case "ctas":
 						let buttonColor = cta.buttonColor[0] || "white";

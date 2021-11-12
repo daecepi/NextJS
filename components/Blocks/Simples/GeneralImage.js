@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Generalimage = ({ image }) => {
 	let contentImage = image[0];
 
@@ -31,14 +33,16 @@ const Generalimage = ({ image }) => {
 							/>
 						</picture>
 					) : (
-						<img
-							src={contentImage.url}
-							alt={
-								contentImage.altText?.length
-									? contentImage.altText
-									: contentImage.title
-							}
-						></img>
+						<picture>
+							<img
+								src={contentImage.url}
+								alt={
+									contentImage.altText?.length
+										? contentImage.altText
+										: contentImage.title
+								}
+							/>
+						</picture>
 					)}
 				</>
 			) : (

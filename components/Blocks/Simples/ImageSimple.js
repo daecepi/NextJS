@@ -1,17 +1,17 @@
 import Image from "next/image";
 
-const ImageSimple = ({ image, classAtr, stylesAtr }) => {
+const ImageSimple = ({ image, webpSource, classAtr, stylesAtr }) => {
 	console.log("Image object obtained ", image);
-	if (!image.length) {
+	if (!image?.length) {
 		return "";
 	}
 	let singleImage = image[0];
 	let optimizedImages = singleImage.optimizedLandingImages;
 	return (
 		<>
-			{optimizedImages.srcset?.length > 0 ? (
+			{optimizedImages?.srcset?.length > 0 ? (
 				<picture>
-					{optimizedImages.srcsetWebp ? (
+					{optimizedImages?.srcsetWebp ? (
 						<source
 							srcSet={optimizedImages.srcsetWebp}
 							sizes="100vw"
@@ -20,7 +20,7 @@ const ImageSimple = ({ image, classAtr, stylesAtr }) => {
 					) : (
 						""
 					)}
-					<img
+					<Image
 						src={optimizedImages.src}
 						srcSet={optimizedImages.srcset}
 						className={classAtr ? classAtr : ""}
@@ -30,12 +30,18 @@ const ImageSimple = ({ image, classAtr, stylesAtr }) => {
 					/>
 				</picture>
 			) : (
-				<img
-					className={classAtr ? classAtr : ""}
-					style={stylesAtr ? { ...stylesAtr } : {}}
-					src={image.url}
-					alt={image.altText?.length ? image.altText : image.title}
-				/>
+				<picture>
+					{webpSource ? <source srcSet={webpSource} type="image/webp" /> : ""}
+					<Image
+						className={classAtr ? classAtr : ""}
+						style={stylesAtr ? { ...stylesAtr } : {}}
+						// layout="fill"
+						src={singleImage.url}
+						width="806"
+						height="734"
+						alt={image.altText?.length ? image.altText : image.title}
+					/>
+				</picture>
 			)}
 		</>
 	);

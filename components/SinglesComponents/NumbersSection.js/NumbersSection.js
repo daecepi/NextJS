@@ -1,13 +1,24 @@
 import Image from "next/image";
+import NumbersTable from "./NumberDescription";
 
 const NumbersSection = (props) => {
 	return (
 		<div className="c-numbers--full">
-			<Image
-				src="/imgs/industry/industry-agency-IMG-04@2x.jpg"
-				width="2880"
-				height="1280"
-			></Image>
+			{props.image?.length ? (
+				<Image
+					src={props.image[0].url}
+					width="2880"
+					height="1280"
+					alt={props.image[0].title}
+				></Image>
+			) : (
+				<Image
+					src="/imgs/industry/industry-agency-IMG-04@2x.jpg"
+					width="2880"
+					height="1280"
+					alt="Some alt"
+				></Image>
+			)}
 			{/* <picture>
           <source
             type="image/webp"
@@ -34,9 +45,11 @@ const NumbersSection = (props) => {
 							<pre className="c-eyebrow" style={{ top: 0, marginLeft: 0 }}>
 								{props.eyebrow}
 							</pre>
-							<h2>{props.title}</h2>
+							<h2 dangerouslySetInnerHTML={{ __html: props.title }}></h2>
 						</div>
-						<div className="col-md-8">{props.children}</div>
+						<div className="col-md-8">
+							<NumbersTable numberBoxes={props.numbersTable} />
+						</div>
 					</div>
 				</div>
 			</div>

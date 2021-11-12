@@ -77,7 +77,7 @@ const NavigationDefault = () => {
 						colPos: 2,
 					},
 					{
-						key: "manageContacts",
+						key: "manageProjects",
 						name: "Manage Projects",
 						icon: "/imgs/icons/menu-icon_projects@2x.png",
 						description: "Manage your team’s work after the deal is closed",
@@ -638,8 +638,9 @@ const NavigationDefault = () => {
 					<div className="c-nav--mobile__links" style={{ paddingTop: "160px" }}>
 						<ul>
 							{menu.map((mobileItems) => {
+								//console.log("Mobile item being trated", mobileItems);
 								const itemKey = Object.keys(mobileItems);
-								// console.log(mobileItems[itemKey]);
+								//console.log("MOBILE ITEM", mobileItems[itemKey]);
 								return (
 									<>
 										{mobileItems[itemKey].render == true ? (
@@ -650,7 +651,8 @@ const NavigationDefault = () => {
 														dropdown-type={`${mobileItems[itemKey].dropdownType}-mobile"`}
 														key={mobileItems[itemKey].key}
 													>
-														{mobileItems[itemKey].name}
+														{mobileItems[itemKey].name}{" "}
+														{mobileItems[itemKey].key} entre
 														<svg
 															width="16px"
 															height="8px"
@@ -977,6 +979,7 @@ const NavigationDefault = () => {
 															{desktopSecondLevel[dropdownItems].dropdown.map(
 																(ditem) => {
 																	if (ditem.colPos == 1) {
+																		//console.log("DITEM ITEMS ", ditem);
 																		return (
 																			<a
 																				className="c-nav__dropdown__item"
@@ -995,9 +998,9 @@ const NavigationDefault = () => {
 																					}
 																					src={ditem.icon}
 																				/>
-																				<div>
+																				<div key={ditem.key}>
 																					<li key={ditem.key}>
-																						{ditem.name}{" "}
+																						{ditem.name} {ditem.key}
 																						{ditem.tag ? (
 																							<span className="tag--new">
 																								{ditem.tag}
@@ -1038,7 +1041,7 @@ const NavigationDefault = () => {
 																				/>
 																				<div>
 																					<li key={ditem.key}>
-																						{ditem.name}{" "}
+																						{ditem.name} {ditem.key}
 																						{ditem.tag ? (
 																							<span className="tag--new">
 																								{ditem.tag}
@@ -1079,7 +1082,7 @@ const NavigationDefault = () => {
 																				/>
 																				<div>
 																					<li key={ditem.key}>
-																						{ditem.name}{" "}
+																						{ditem.name} {ditem.key}
 																						{ditem.tag ? (
 																							<span className="tag--new">
 																								{ditem.tag}

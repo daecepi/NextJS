@@ -17,7 +17,6 @@ export default function Home({ res }) {
 
 	return (
 		<DefaultPageBase>
-			<NavigationDefault />
 			{/* {res.map((item) => {
         return(
           <h1 className='text-center ' key={item.id} >{item.title}</h1>

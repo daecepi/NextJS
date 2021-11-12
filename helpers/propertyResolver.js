@@ -15,5 +15,6 @@ const linkitButtonPropertyGetter = (linkitString) => {
 		baseIndex + 1,
 		linkitString.indexOf("</a>")
 	);
+	const keyCtas = "ctas";
 	return { href, value };
 };

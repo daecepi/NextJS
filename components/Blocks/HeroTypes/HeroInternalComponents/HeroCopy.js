@@ -10,11 +10,13 @@ const HeroCopy = ({
 	copyLogo,
 	richText,
 	ctas,
+	forceCtas,
 	bulletItemsInHero,
 	bulletPointsMode,
 	specialBulletLogos,
 	specialBulletsText,
 }) => {
+	console.log("richtext ", richText);
 	let firstEyebrowToTakePlace =
 		eyebrowSettings && eyebrowSettings[0]?.eyebrowColor[0]?.slug
 			? eyebrowSettings[0].eyebrowColor[0].slug
@@ -22,6 +24,29 @@ const HeroCopy = ({
 
 	// Synced context
 	const syncedContext = useSyncContext();
+
+	const printCtaGroup = () => {
+		if (forceCtas) {
+			return forceCtas;
+		} else if (ctas?.length) {
+			return <CtaGroup ctas={ctas} />;
+		} else if (slug == "demo-request-pers") {
+			return (
+				<a className="c-button c-button--large" href="/demos">
+					Request Demo
+				</a>
+			);
+		} else if (slug == "free-trial-pers") {
+			<a
+				className="c-button c-button--large sendUTMsToAmplitude"
+				href={syncedContext.generalSignupUrl}
+			>
+				Try Free
+			</a>;
+		}
+		return "";
+	};
+
 	return (
 		<>
 			{firstEyebrowToTakePlace && eyebrow?.length ? (
@@ -58,10 +83,7 @@ const HeroCopy = ({
 				""
 			)}
 
-			<div
-				className="hero-text"
-				dangerouslySetInnerHTML={{ __html: richText }}
-			></div>
+			<div className="hero-text">{richText}</div>
 			{/* Bullets points section */}
 			{bulletItemsInHero?.length ? (
 				<ul className="ul-list__container ul-list--white-checks ">
@@ -119,25 +141,7 @@ const HeroCopy = ({
 				""
 			)}
 			{/* CTAs section */}
-			{() => {
-				if (ctas?.length) {
-					return <CtaGroup ctas={ctas} />;
-				} else if (slug == "demo-request-pers") {
-					return (
-						<a className="c-button c-button--large" href="/demos">
-							Request Demo
-						</a>
-					);
-				} else if (slug == "free-trial-pers") {
-					<a
-						className="c-button c-button--large sendUTMsToAmplitude"
-						href={syncedContext.generalSignupUrl}
-					>
-						Try Free
-					</a>;
-				}
-				return "";
-			}}
+			{printCtaGroup()}
 		</>
 	);
 };
