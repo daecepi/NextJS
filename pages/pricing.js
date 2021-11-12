@@ -920,7 +920,7 @@ LazyLoad.js(['https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'
              </script>
               <div class="c-pricing-plans__footer">
                                     <div class="c-pricing-plans__ctas">
-                                                                                                                                              <a class="c-button c-button--outline  pricing-cta" target="" href="/signup" data-plan-type="Basic">Try Free</a>
+                                                                                                                                              <a class="c-button c-button--outline  pricing-cta" target="" href="https://www.copper.com/signup" data-plan-type="Basic">Try Free</a>
                                                                                     </div>
                                 
                
@@ -971,7 +971,7 @@ LazyLoad.js(['https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'
              </script>
               <div class="c-pricing-plans__footer">
                                     <div class="c-pricing-plans__ctas">
-                                                                                                                                              <a class="c-button c-button--hot-pink featured-button pricing-cta" target="" href="/signup" data-plan-type="Professional">Try Free</a>
+                                                                                                                                              <a class="c-button c-button--hot-pink featured-button pricing-cta" target="" href="https://www.copper.com/signup" data-plan-type="Professional">Try Free</a>
                                                                                     </div>
                                 
                
@@ -1020,7 +1020,7 @@ LazyLoad.js(['https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'
              </script>
               <div class="c-pricing-plans__footer">
                                     <div class="c-pricing-plans__ctas">
-                                                                                                                                              <a class="c-button c-button--outline  pricing-cta" target="" href="/signup" data-plan-type="Business">Try Free</a>
+                                                                                                                                              <a class="c-button c-button--outline  pricing-cta" target="" href="https://www.copper.com/signup" data-plan-type="Business">Try Free</a>
                                                                                     </div>
                                 
                

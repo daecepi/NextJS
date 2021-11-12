@@ -148,7 +148,7 @@ const resources = (props) => {
 							<a
 								className="c-button sendUTMsToAmplitude blogCTA"
 								target="_blank"
-								href="/signup"
+								href="https://www.copper.com/signup"
 								style={{ marginLeft: "17px", marginRight: "15px" }}
 							>
 								Try Copper free

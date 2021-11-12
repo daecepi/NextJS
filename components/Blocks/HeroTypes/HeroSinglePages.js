@@ -17,11 +17,11 @@ const HeroSinglePages = (props) => {
 			</div>
 			<div className="container ">
 				<div className="row">
-					<div className="col-md-6 c-valign--middle">
+					<div className="col-md-5 c-valign--middle">
 						<pre className="c-eyebrow">{props.eyebrow}</pre>
 						<h1 className="t-white">{props.title}</h1>
 						<p>{props.copy}</p>
-						<div className="c-hero__buttons flex">
+						<div className="c-hero__buttons">
 							<Link href="https://www.copper.com/signup">
 								<a className="c-button sendUTMsToAmplitude">Try Free</a>
 							</Link>
