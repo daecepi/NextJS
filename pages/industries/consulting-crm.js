@@ -1,13 +1,13 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import Footer from '../../components/Footer/Footer';
-import NavigationDefault from '../../components/Navigation/NavigationDefault';
-import ProductTwoUp from '../../components/ProductsComponent/ProductTwoUp/ProductTwoUp';
-import TwoUp from '../../components/ProductsComponent/ProductTwoUp/TwoUp';
-import CallOut from '../../components/SinglesComponents/CallOut/CallOut';
-import FinalPleaHero from '../../components/SinglesComponents/FinalPleadHero/FinalPleaHero';
-import NumbersSection from '../../components/SinglesComponents/NumbersSection.js/NumbersSection';
-import RelatedContent from '../../components/SinglesComponents/RelatedContent/RelatedContent';
+import Head from "next/head";
+import Image from "next/image";
+import Footer from "../../components/Footer/Footer";
+import NavigationDefault from "../../components/Navigation/NavigationDefault";
+import ProductTwoUp from "../../components/ProductsComponent/ProductTwoUp/ProductTwoUp";
+import TwoUp from "../../components/ProductsComponent/ProductTwoUp/TwoUp";
+import CallOut from "../../components/SinglesComponents/CallOut/CallOut";
+import FinalPleaHero from "../../components/SinglesComponents/FinalPleadHero/FinalPleaHero";
+import NumbersSection from "../../components/SinglesComponents/NumbersSection.js/NumbersSection";
+import RelatedContent from "../../components/SinglesComponents/RelatedContent/RelatedContent";
 
 export default function ConsultingCrm() {
 	return (
@@ -17,8 +17,8 @@ export default function ConsultingCrm() {
 			</Head>
 			<NavigationDefault
 				utility={[
-					{ text: 'Try Free', ulr: '/signup' },
-					{ text: 'Login', ulr: 'https://app.copper.com/users/sign_in' },
+					{ text: "Try Free", ulr: "/signup" },
+					{ text: "Login", ulr: "https://app.copper.com/users/sign_in" },
 				]}
 			/>
 			<section className="c-hero--split background--consulting">
@@ -115,7 +115,7 @@ export default function ConsultingCrm() {
 							<div className="container">
 								<div className="row">
 									<div className="c-testimonial__image offset-md-2 col-md-4">
-										<pre className="c-eyebrow c-eyebrow--light" style={{ top: '0', marginLeft: '0' }}>
+										<pre className="c-eyebrow c-eyebrow--light" style={{ top: "0", marginLeft: "0" }}>
 											Success Stories
 										</pre>
 										<div className="colorblock--bottom--right colorblock--volt">
@@ -162,7 +162,12 @@ export default function ConsultingCrm() {
 			<NumbersSection
 				eyebrow="By The Numbers"
 				title="Copper + Consultants"
-				imageUrl="/imgs/industry/industry-consulting-IMG-04@2x.jpg"
+				image={[
+					{
+						url: "/imgs/industry/industry-consulting-IMG-04@2x.jpg",
+						title: "Numbers",
+					},
+				]}
 			>
 				<div className="row">
 					<div className="c-number col-md-5">
@@ -189,28 +194,28 @@ export default function ConsultingCrm() {
 				eyebrow="Resources"
 				cards={[
 					{
-						eyebrow: 'CASE STUDY',
-						title: 'Copper and Google Workspace help RHR International Boost Customer Relations and Sales',
-						url: '/resources/rhr-case-study',
-						image: '/imgs/industry/industry-consulting-blog-01@2x.jpg',
-						imageWidth: '354',
-						imageHeight: '190',
+						eyebrow: "CASE STUDY",
+						title: "Copper and Google Workspace help RHR International Boost Customer Relations and Sales",
+						url: "/resources/rhr-case-study",
+						image: "/imgs/industry/industry-consulting-blog-01@2x.jpg",
+						imageWidth: "354",
+						imageHeight: "190",
 					},
 					{
-						eyebrow: 'RELATIONSHIP ERA',
-						title: 'The New Wave of Customer Relationship Management',
-						url: '/resources/new-wave-customer-relationship-management',
-						image: '/imgs/industry/industry-consulting-blog-02@2x.jpg',
-						imageWidth: '354',
-						imageHeight: '190',
+						eyebrow: "RELATIONSHIP ERA",
+						title: "The New Wave of Customer Relationship Management",
+						url: "/resources/new-wave-customer-relationship-management",
+						image: "/imgs/industry/industry-consulting-blog-02@2x.jpg",
+						imageWidth: "354",
+						imageHeight: "190",
 					},
 					{
-						eyebrow: 'CASE STUDY',
-						title: 'Zivelo Accelerates Their Sales and BD Efforts by Leveraging Copper’s Deep Integration with Google Apps',
-						url: '/7-ways-to-get-the-most-out-of-your-agencys-crm',
-						image: '/imgs/industry/industry-consulting-blog-03@2x.jpg',
-						imageWidth: '354',
-						imageHeight: '190',
+						eyebrow: "CASE STUDY",
+						title: "Zivelo Accelerates Their Sales and BD Efforts by Leveraging Copper’s Deep Integration with Google Apps",
+						url: "/7-ways-to-get-the-most-out-of-your-agencys-crm",
+						image: "/imgs/industry/industry-consulting-blog-03@2x.jpg",
+						imageWidth: "354",
+						imageHeight: "190",
 					},
 				]}
 			/>

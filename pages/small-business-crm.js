@@ -1,14 +1,14 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import HeroProduct from '../components/Blocks/HeroTypes/HeroProduct';
-import Footer from '../components/Footer/Footer';
-import NavigationDefault from '../components/Navigation/NavigationDefault';
-import CaseStudy from '../components/ProductsComponent/CaseStudy/CaseStudy';
-import ProductTwoUp from '../components/ProductsComponent/ProductTwoUp/ProductTwoUp';
-import TwoUp from '../components/ProductsComponent/ProductTwoUp/TwoUp';
-import CallOut from '../components/SinglesComponents/CallOut/CallOut';
-import FinalPleaHero from '../components/SinglesComponents/FinalPleadHero/FinalPleaHero';
-import NumbersSection from '../components/SinglesComponents/NumbersSection.js/NumbersSection';
+import Head from "next/head";
+import Image from "next/image";
+import HeroProduct from "../components/Blocks/HeroTypes/HeroProduct";
+import Footer from "../components/Footer/Footer";
+import NavigationDefault from "../components/Navigation/NavigationDefault";
+import CaseStudy from "../components/ProductsComponent/CaseStudy/CaseStudy";
+import ProductTwoUp from "../components/ProductsComponent/ProductTwoUp/ProductTwoUp";
+import TwoUp from "../components/ProductsComponent/ProductTwoUp/TwoUp";
+import CallOut from "../components/SinglesComponents/CallOut/CallOut";
+import FinalPleaHero from "../components/SinglesComponents/FinalPleadHero/FinalPleaHero";
+import NumbersSection from "../components/SinglesComponents/NumbersSection.js/NumbersSection";
 export default function SmallBusinessCRM() {
 	return (
 		<>
@@ -124,7 +124,16 @@ export default function SmallBusinessCRM() {
 			/>
 			<CallOut title="Because you have work to do." smallTitle={true} />
 
-			<NumbersSection eyebrow="By The Numbers" title="The only CRM that works for you." imageUrl="/imgs/segmentation/segmentation-smb-numbers.jpg">
+			<NumbersSection
+				eyebrow="By The Numbers"
+				title="The only CRM that works for you."
+				image={[
+					{
+						url: "/imgs/segmentation/segmentation-smb-numbers.jpg",
+						title: "Numbers",
+					},
+				]}
+			>
 				<div className="row">
 					<div className="c-number col-md-5">
 						<span className="t-numbers">13</span>
@@ -150,8 +159,8 @@ export default function SmallBusinessCRM() {
 				<div class="container">
 					<div class="row">
 						<div class="col-md order-2">
-							<div class="c-image c-image--center no-embelleshment"> 
-								<Image src="/imgs/segmentation/segmentation-smb-customers.png" width="350" height="297"/>
+							<div class="c-image c-image--center no-embelleshment">
+								<Image src="/imgs/segmentation/segmentation-smb-customers.png" width="350" height="297" />
 							</div>
 						</div>
 						<div class="col-md order-1">

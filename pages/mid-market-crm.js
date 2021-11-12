@@ -1,25 +1,25 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import HeroProduct from '../components/Blocks/HeroTypes/HeroProduct';
-import Footer from '../components/Footer/Footer';
-import NavigationDefault from '../components/Navigation/NavigationDefault';
-import CaseStudy from '../components/ProductsComponent/CaseStudy/CaseStudy';
-import ProductTwoUp from '../components/ProductsComponent/ProductTwoUp/ProductTwoUp';
-import TwoUp from '../components/ProductsComponent/ProductTwoUp/TwoUp';
-import Customers from '../components/Sections/Customers/Customers';
-import CallOut from '../components/SinglesComponents/CallOut/CallOut';
-import FinalPleaHero from '../components/SinglesComponents/FinalPleadHero/FinalPleaHero';
-import NumbersSection from '../components/SinglesComponents/NumbersSection.js/NumbersSection';
-import RelatedContent from '../components/SinglesComponents/RelatedContent/RelatedContent';
+import Head from "next/head";
+import Image from "next/image";
+import HeroProduct from "../components/Blocks/HeroTypes/HeroProduct";
+import Footer from "../components/Footer/Footer";
+import NavigationDefault from "../components/Navigation/NavigationDefault";
+import CaseStudy from "../components/ProductsComponent/CaseStudy/CaseStudy";
+import ProductTwoUp from "../components/ProductsComponent/ProductTwoUp/ProductTwoUp";
+import TwoUp from "../components/ProductsComponent/ProductTwoUp/TwoUp";
+import Customers from "../components/Sections/Customers/Customers";
+import CallOut from "../components/SinglesComponents/CallOut/CallOut";
+import FinalPleaHero from "../components/SinglesComponents/FinalPleadHero/FinalPleaHero";
+import NumbersSection from "../components/SinglesComponents/NumbersSection.js/NumbersSection";
+import RelatedContent from "../components/SinglesComponents/RelatedContent/RelatedContent";
 
 export default function MidMarkeCRM() {
 	let companiesLogos = [
-		{ imageUrl: '/imgs/segmentation/Mailchimp.jpg', width: 180, height: 53 },
-		{ imageUrl: '/imgs/segmentation/mealpal.jpg', width: 180, height: 53 },
-		{ imageUrl: '/imgs/segmentation/zapier.jpg', width: 180, height: 53 },
-		{ imageUrl: '/imgs/segmentation/lumapps.jpg', width: 180, height: 53 },
-		{ imageUrl: '/imgs/segmentation/bird.jpg', width: 180, height: 53 },
-		{ imageUrl: '/imgs/segmentation/nerdwallet.jpg', width: 180, height: 53 },
+		{ imageUrl: "/imgs/segmentation/Mailchimp.jpg", width: 180, height: 53 },
+		{ imageUrl: "/imgs/segmentation/mealpal.jpg", width: 180, height: 53 },
+		{ imageUrl: "/imgs/segmentation/zapier.jpg", width: 180, height: 53 },
+		{ imageUrl: "/imgs/segmentation/lumapps.jpg", width: 180, height: 53 },
+		{ imageUrl: "/imgs/segmentation/bird.jpg", width: 180, height: 53 },
+		{ imageUrl: "/imgs/segmentation/nerdwallet.jpg", width: 180, height: 53 },
 	];
 	return (
 		<>
@@ -123,7 +123,12 @@ export default function MidMarkeCRM() {
 			<NumbersSection
 				eyebrow="By The Numbers"
 				title="Copper + Google Workspace. Better together"
-				imageUrl="/imgs/segmentation/segmentation-mm-numbers.jpg"
+				image={[
+					{
+						url: "/imgs/segmentation/segmentation-mm-numbers.jpg",
+						title: "Numbers",
+					},
+				]}
 			>
 				<div className="row">
 					<div className="c-number col-md-5">
@@ -150,28 +155,28 @@ export default function MidMarkeCRM() {
 				eyebrow="Resources"
 				cards={[
 					{
-						eyebrow: 'Infographic',
-						title: 'ROI Infographic',
-						url: 'https://get.copper.com/rs/763-DVL-293/images/infographic_ROI_survey.pdf',
-						image: '/imgs/segmentation/inforgraphic-roi header.jpg',
-						imageWidth: '800',
-						imageHeight: '418',
+						eyebrow: "Infographic",
+						title: "ROI Infographic",
+						url: "https://get.copper.com/rs/763-DVL-293/images/infographic_ROI_survey.pdf",
+						image: "/imgs/segmentation/inforgraphic-roi header.jpg",
+						imageWidth: "800",
+						imageHeight: "418",
 					},
 					{
-						eyebrow: 'Resources',
-						title: 'The CRM Benchmark Report',
-						url: '/blog/crm-benchmark-report',
-						image: '/imgs/general/segmentation/benchmark_blog_800x400@2x.jpg',
-						imageWidth: '800',
-						imageHeight: '418',
+						eyebrow: "Resources",
+						title: "The CRM Benchmark Report",
+						url: "/blog/crm-benchmark-report",
+						image: "/imgs/general/segmentation/benchmark_blog_800x400@2x.jpg",
+						imageWidth: "800",
+						imageHeight: "418",
 					},
 					{
-						eyebrow: 'CRM & TECH',
-						title: 'The New Requirements of CRM',
-						url: '/blog/the-new-requirements-of-crm',
-						image: '/imgs/general/segmentation/blog_header_C_volt.png',
-						imageWidth: '800',
-						imageHeight: '418',
+						eyebrow: "CRM & TECH",
+						title: "The New Requirements of CRM",
+						url: "/blog/the-new-requirements-of-crm",
+						image: "/imgs/general/segmentation/blog_header_C_volt.png",
+						imageWidth: "800",
+						imageHeight: "418",
 					},
 				]}
 			></RelatedContent>

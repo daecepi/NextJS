@@ -1,26 +1,26 @@
-import Head from 'next/head';
-import HeroProduct from '../components/Blocks/HeroTypes/HeroProduct';
-import Footer from '../components/Footer/Footer';
-import NavigationDefault from '../components/Navigation/NavigationDefault';
-import CaseStudy from '../components/ProductsComponent/CaseStudy/CaseStudy';
-import ProductTwoUp from '../components/ProductsComponent/ProductTwoUp/ProductTwoUp';
-import TwoUp from '../components/ProductsComponent/ProductTwoUp/TwoUp';
-import Customers from '../components/Sections/Customers/Customers';
-import CallOut from '../components/SinglesComponents/CallOut/CallOut';
-import FinalPleaHero from '../components/SinglesComponents/FinalPleadHero/FinalPleaHero';
-import NumbersSection from '../components/SinglesComponents/NumbersSection.js/NumbersSection';
+import Head from "next/head";
+import HeroProduct from "../components/Blocks/HeroTypes/HeroProduct";
+import Footer from "../components/Footer/Footer";
+import NavigationDefault from "../components/Navigation/NavigationDefault";
+import CaseStudy from "../components/ProductsComponent/CaseStudy/CaseStudy";
+import ProductTwoUp from "../components/ProductsComponent/ProductTwoUp/ProductTwoUp";
+import TwoUp from "../components/ProductsComponent/ProductTwoUp/TwoUp";
+import Customers from "../components/Sections/Customers/Customers";
+import CallOut from "../components/SinglesComponents/CallOut/CallOut";
+import FinalPleaHero from "../components/SinglesComponents/FinalPleadHero/FinalPleaHero";
+import NumbersSection from "../components/SinglesComponents/NumbersSection.js/NumbersSection";
 
 export default function EnterpriseCRM() {
 	let companiesLogos = [
-		{imageUrl: "/imgs/segmentation/google.jpg", width:127, height:53},
-		{imageUrl: "/imgs/segmentation/rhr.jpg", width:115, height:53},
-		{imageUrl: "/imgs/segmentation/ideo.jpg", width:107, height:53},
-		{imageUrl: "/imgs/segmentation/hellofresh.jpg", width:82, height:53},
-		{imageUrl: "/imgs/segmentation/atlassian.jpg", width:180, height:53},
-		{imageUrl: "/imgs/segmentation/softbank.jpg", width:156, height:53},
-		{imageUrl: "/imgs/segmentation/casio.jpg", width:140, height:53},
-		{imageUrl: "/imgs/segmentation/zillow.jpg", width:180, height:53},
-	]
+		{ imageUrl: "/imgs/segmentation/google.jpg", width: 127, height: 53 },
+		{ imageUrl: "/imgs/segmentation/rhr.jpg", width: 115, height: 53 },
+		{ imageUrl: "/imgs/segmentation/ideo.jpg", width: 107, height: 53 },
+		{ imageUrl: "/imgs/segmentation/hellofresh.jpg", width: 82, height: 53 },
+		{ imageUrl: "/imgs/segmentation/atlassian.jpg", width: 180, height: 53 },
+		{ imageUrl: "/imgs/segmentation/softbank.jpg", width: 156, height: 53 },
+		{ imageUrl: "/imgs/segmentation/casio.jpg", width: 140, height: 53 },
+		{ imageUrl: "/imgs/segmentation/zillow.jpg", width: 180, height: 53 },
+	];
 	return (
 		<>
 			<Head>
@@ -39,7 +39,7 @@ export default function EnterpriseCRM() {
 				ctaTwoUrl="/demos"
 				imageUrl="/imgs/segmentation/segmentation-enterprise-hero.jpg"
 			/>
-			<Customers title="Companies who have joined the Relationship Era." companiesLogos={companiesLogos}/>
+			<Customers title="Companies who have joined the Relationship Era." companiesLogos={companiesLogos} />
 			<ProductTwoUp>
 				<TwoUp
 					eyebrow="RECOMMENDED FOR GOOGLE WORKSPACE"
@@ -98,7 +98,12 @@ export default function EnterpriseCRM() {
 			<NumbersSection
 				eyebrow="By The Numbers"
 				title="Why enterprises love Copper:"
-				imageUrl="/imgs/segmentation/segementation-enterprise-numbers.jpg"
+				image={[
+					{
+						url: "/imgs/segmentation/segementation-enterprise-numbers.jpg",
+						title: "Numbers",
+					},
+				]}
 			>
 				<div className="row">
 					<div className="c-number col-md-5">

@@ -91,7 +91,12 @@ const AgencyCrm = () => {
 			<NuumbersSection
 				eyebrow="By The Numbers"
 				title="Copper + Digital Agencies"
-				imageUrl="/imgs/industry/industry-agency-IMG-04@2x.jpg"
+				image={[
+					{
+						url: "/imgs/industry/industry-agency-IMG-04@2x.jpg",
+						title: "Industry real state image 2",
+					},
+				]}
 			>
 				<div className="row">
 					<div className="c-number col-md-5">
@@ -144,7 +149,12 @@ const AgencyCrm = () => {
 				]}
 			></RelatedContent>
 			<FinalPleaHero
-				title={<div>Retain more<br/> clients today</div>}
+				title={
+					<div>
+						Retain more
+						<br /> clients today
+					</div>
+				}
 				copy="No credit card required. Start your 14-day free trial today."
 				imageUrl="/imgs/industry/industry-agency-final-plea.jpg"
 				imageWidth="1140"
