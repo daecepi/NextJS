@@ -1,12 +1,14 @@
 import Image from "next/image";
 
-const ImageSimple = ({ image, webpSource, classAtr, stylesAtr }) => {
+const ImageSimple = ({ image, webpSource, classAtr, stylesAtr, imageWidth, imageHeight }) => {
 	console.log("Image object obtained ", image);
 	if (!image?.length) {
 		return "";
 	}
 	let singleImage = image[0];
 	let optimizedImages = singleImage.optimizedLandingImages;
+	let width = imageWidth ? imageWidth : "806";
+	let height = imageHeight ? imageHeight : "734";
 	return (
 		<>
 			{optimizedImages?.srcset?.length > 0 ? (
@@ -37,8 +39,8 @@ const ImageSimple = ({ image, webpSource, classAtr, stylesAtr }) => {
 						style={stylesAtr ? { ...stylesAtr } : {}}
 						// layout="fill"
 						src={singleImage.url}
-						width="806"
-						height="734"
+						width={width}
+						height={height}
 						alt={image.altText?.length ? image.altText : image.title}
 					/>
 				</picture>

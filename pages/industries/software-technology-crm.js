@@ -8,7 +8,7 @@ import RelatedContent from "../../components/SinglesComponents/RelatedContent/Re
 import FinalPleaHero from "../../components/SinglesComponents/FinalPleadHero/FinalPleaHero";
 import NavigationDefault from "../../components/Navigation/NavigationDefault";
 import SingleTwoColCraft from "../../components/SinglesComponents/SingleTwoCol/SingleTwoColCraft";
-import TwoColModule from "../../components/Blocks/TwoCols";
+import TwoColModule from "../../components/Blocks/TwoColModule";
 
 export default function SoftwareTechCrm({}) {
 	return (

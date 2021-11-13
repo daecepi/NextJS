@@ -8,9 +8,11 @@ import CaseStudy from "../components/ProductsComponent/CaseStudy/CaseStudy";
 import ProductOneCol from "../components/ProductsComponent/ProductOneCol";
 import ProductTwoUp from "../components/ProductsComponent/ProductTwoUp/ProductTwoUp";
 import TwoUp from "../components/ProductsComponent/ProductTwoUp/TwoUp";
+
 import ThreeColList from "../components/ProductsComponent/List/ThreeColList";
 import ListItem from "../components/ProductsComponent/List/ListItem";
 import FinalCta from "../components/ProductsComponent/FinalCta";
+import TwoColModule from "../components/Blocks/TwoColModule";
 
 const TrackLeads = () => {
 	return (
@@ -30,7 +32,7 @@ const TrackLeads = () => {
 				ctaOneUrl="https://www.copper.com/signup"
 				ctaTwoText="Request Demo"
 				ctaTwoUrl="/demos"
-				imageUrl="/imgs/product/191223_TrackDeals_Hero.png"
+				imageUrl="https://copper.objects.frb.io/imgs/product/hero-track-deals-james.jpg"
 			/>
 			<section className="c-single-column product-page">
 				<div className="container">
@@ -67,29 +69,38 @@ const TrackLeads = () => {
 					</div>
 				</div>
 			</section>
-			{/* <ProductOneCol
-          title="Get more done—by doing less."
-          copy={[
-            "Spend your time on the tasks in your selling",
-            "process that are actually valuable.",
-          ]}
-          imageUrl="https://copper.objects.frb.io/imgs/product/manage-contacts/200309_Organize_UI01.png"
-        /> */}
-			<ProductTwoUp>
-				<TwoUp
+				<TwoColModule
 					eyebrow="AUTOMATED FOLLOW-UPS"
-					title="Never drop the ball."
-					copy="Copper speeds up follow-ups with email templates and sets reminders for you to stay on top of hot deals and respond to customers without missing a beat. Say goodbye to lost deals, and hello to keeping customers around longer!"
-					imageUrl="/imgs/product/200309_TrackDeals_UI02.png"
-					imageWidth="1348"
-					imageHeight="1073"
-					bulletLists={[
-						"Personalized email templates",
-						"Automatically set reminders based off any trigger",
-						"Assign time-based tasks without lifting a finger",
+					richText={
+						<div>
+							<h2>Never drop the ball.</h2>
+							<p>Copper speeds up follow-ups with email templates and sets reminders for you to stay on top of hot deals and respond to customers without missing a beat. Say goodbye to lost deals, and hello to keeping customers around longer!</p>
+							<ul class="bullets--hot-pink">
+								<li>Personalized email templates</li>
+								<li>Automatically set reminders based off any trigger</li>
+								<li>Assign time-based tasks without lifting a finger</li>
+							</ul>
+						</div>
+					}
+					image={[
+						{
+							url: "/imgs/product/200309_TrackDeals_UI02.png",
+							title: "Track deals image 4",
+						},
 					]}
-					reverse={false}
-				></TwoUp>
+					backgroundColor={[{slug:"product-page"}]}
+					imageWidth="641"
+					imageHeight="510"
+					imageOrientation="dropRight"
+					slug={"track-leads"}
+					loopIndex={0}
+					forcedCtas={
+						<a href="/blog/storm-ventures-case-study" class="t-link">
+							How Storm Ventures focused on acquisitions.
+						</a>
+					}
+				/>
+			<ProductTwoUp>
 				<TwoUp
 					eyebrow="ISUAL SALES PIPELINES"
 					title="Make sales more visual."
@@ -117,19 +128,35 @@ const TrackLeads = () => {
 				company="SMARTPRESS"
 				backgroundColor="indigo"
 			></CaseStudy>
-			<ProductTwoUp>
-				<TwoUp
+
+				<TwoColModule
 					eyebrow="KEEP THINGS MOVING"
-					title="Always know your next step."
-					copy="Stay on top of hot deals and close them faster thanks to Copper’s recommendations, which suggest next steps based on upcoming meetings, tasks, and overdue email responses."
-					imageUrl="/imgs/product/200309_TrackDeals_UI04.png"
-					imageWidth="1008"
-					imageHeight="1046"
-					reverse={false}
-				></TwoUp>
-			</ProductTwoUp>
+					richText={
+						<div>
+							<h2>Always know<br/>your next step.</h2>
+							<p>Stay on top of hot deals and close them faster thanks to Copper’s recommendations, which suggest next steps based on upcoming meetings, tasks, and overdue email responses.</p>
+						</div>
+					}
+					image={[
+						{
+							url: "/imgs/product/200309_TrackDeals_UI04.png",
+							title: "Always know your next step image",
+						},
+					]}
+					backgroundColor={[{slug:"product-page"}]}
+					imageWidth="540"
+					imageHeight="560"
+					imageOrientation="right"
+					slug={"track-leads"}
+					loopIndex={0}
+					forcedCtas={
+						<a href="/blog/storm-ventures-case-study" class="t-link">
+							How Storm Ventures focused on acquisitions.
+						</a>
+					}
+				/>
 			<ThreeColList
-				title="Build lasting relationships with Copper."
+				title="Know what you need to do to close deals faster."
 				linkUrl="/features"
 				linkText="See all features"
 			>

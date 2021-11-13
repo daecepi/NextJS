@@ -13,7 +13,11 @@ const TwoColModule = ({
 	image,
 	removeShadow,
 	addBottomPadding,
+	imageWidth,
+	imageHeight,
 }) => {
+	let width = imageWidth ? imageWidth : undefined;
+	let height = imageHeight ? imageHeight : undefined;
 	const internalStructure = () => {
 		switch (imageOrientation) {
 			case "left":
@@ -29,6 +33,8 @@ const TwoColModule = ({
 									<ImageSimple
 										classAtr={removeShadow ? "h-remove-shadow" : ""}
 										image={image}
+										imageWidth={width}
+										imageHeight={height}
 									/>
 								) : (
 									""
@@ -57,6 +63,8 @@ const TwoColModule = ({
 									<ImageSimple
 										classAtr={removeShadow ? "h-remove-shadow" : ""}
 										image={image}
+										imageWidth={width}
+										imageHeight={height}
 									/>
 								) : (
 									""
@@ -87,6 +95,8 @@ const TwoColModule = ({
 											removeShadow ? "h-remove-shadow" : ""
 										}`}
 										image={image}
+										imageWidth={width}
+										imageHeight={height}
 									/>
 								) : (
 									""
@@ -117,6 +127,8 @@ const TwoColModule = ({
 											removeShadow ? "h-remove-shadow" : ""
 										}`}
 										image={image}
+										imageWidth={width}
+										imageHeight={height}
 									/>
 								) : (
 									""
