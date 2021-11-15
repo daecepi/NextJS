@@ -94,11 +94,6 @@ const TrackLeads = () => {
 					imageOrientation="dropRight"
 					slug={"track-leads"}
 					loopIndex={0}
-					forcedCtas={
-						<a href="/blog/storm-ventures-case-study" class="t-link">
-							How Storm Ventures focused on acquisitions.
-						</a>
-					}
 				/>
 			<ProductTwoUp>
 				<TwoUp
@@ -149,11 +144,6 @@ const TrackLeads = () => {
 					imageOrientation="right"
 					slug={"track-leads"}
 					loopIndex={0}
-					forcedCtas={
-						<a href="/blog/storm-ventures-case-study" class="t-link">
-							How Storm Ventures focused on acquisitions.
-						</a>
-					}
 				/>
 			<ThreeColList
 				title="Know what you need to do to close deals faster."

@@ -9,6 +9,7 @@ import NuumbersSection from "../../components/SinglesComponents/NumbersSection.j
 import RelatedContent from "../../components/SinglesComponents/RelatedContent/RelatedContent";
 import FinalPleaHero from "../../components/SinglesComponents/FinalPleadHero/FinalPleaHero";
 import NavigationDefault from "../../components/Navigation/NavigationDefault";
+import TwoColModule from "../../components/Blocks/TwoColModule";
 
 const AgencyCrm = () => {
 	return (
@@ -24,16 +25,26 @@ const AgencyCrm = () => {
 				copy="Digital and creative agencies get more done and make their clients happier with Copper."
 				imageUrl="/imgs/industry/industry-agency-hero@2x.jpg"
 			/>
-			<SingleTwoCol
-				title="900+ digital and creative agencies, big and small, love Copper."
-				eyebrow={null}
-				description={null}
-				linkText="See customer stories"
-				linkUrl="/customers"
-				imageUrl="/industries/industry-agency-logo-cloud@2x.png"
-				imageWidth="806"
-				imageHeigh="686"
-			/>
+			<TwoColModule
+					richText={
+						<div>
+							<h2 class=" mb-2">900+ digital and creative agencies, big and small, love Copper.</h2>
+							<a class="t-link" href="/customers" target="_blank">See customer stories</a>
+						</div>
+					}
+					image={[
+						{
+							url: "/industries/industry-agency-logo-cloud@2x.png",
+							title: "Track deals image 4",
+						},
+					]}
+					backgroundColor={[{slug:"product-page"}]}
+					imageWidth="350"
+					imageHeight="298"
+					imageOrientation="dropRight"
+					slug={"track-leads"}
+					loopIndex={0}
+				/>
 			<Jumble
 				backgroundColor="hot-pink"
 				eyebrow="agency CRM"
@@ -54,27 +65,27 @@ const AgencyCrm = () => {
 				imageHeigh="1210"
 				imagePosition="left"
 			/>
-			<SingleTwoCol
-				title="Every little detail, 100% organized."
-				eyebrow="CENTRALIZE RELATIONSHIPS"
-				description="Creative projects are complex—lots of people, lots of files, lots of opinions. Copper automatically captures and connects everything so nothing falls through the cracks and you can concentrate on creative work, not busy work."
-				linkText="See how Advoc8 does it."
-				linkUrl="/blog/advoc8-agency-case-study"
-				imageUrl="https://copper.objects.frb.io/imgs/industry/agencies-crm/industry-agency-IMG-02@2x.png"
-				imageWidth="1076"
-				imageHeigh="1210"
-				imagePosition={null}
-			/>
-			<SingleTwoCol
-				title="Every little detail, 100% organized."
-				eyebrow="CENTRALIZE RELATIONSHIPS"
-				description="Creative projects are complex—lots of people, lots of files, lots of opinions. Copper automatically captures and connects everything so nothing falls through the cracks and you can concentrate on creative work, not busy work."
-				linkText="See how Advoc8 does it."
-				linkUrl="/blog/advoc8-agency-case-study"
-				imageUrl="https://copper.objects.frb.io/imgs/industry/agencies-crm/industry-agency-IMG-02@2x.png"
-				imageWidth="1076"
-				imageHeigh="1210"
-				imagePosition="left"
+			<TwoColModule
+				eyebrow="REAL-TIME COLLABORATION"
+				richText={
+					<div>
+						<h2>Up-to-the-minute insights on everybody you interact with.</h2>
+						<p>Copper’s activity feed gives everyone on your team visibility into real-time customer and seller moments. Trust us, your account managers and deal makers will love it.</p>
+						<a class="t-link" href="/collaboration">Learn More</a>
+					</div>
+				}
+				image={[
+					{
+						url: "https://copper.objects.frb.io/imgs/industry/agencies-crm/industry-agency-insights.png",
+						title: "Stop the forecasting guessing games",
+					},
+				]}
+				backgroundColor={[{slug:"product-page"}]}
+				imageWidth="395"
+				imageHeight="556"
+				imageOrientation="dropRight"
+				slug={"track-leads"}
+				loopIndex={0}
 			/>
 			<Quote
 				quote="Copper has created transparency that has resonated throughout our entire company."
