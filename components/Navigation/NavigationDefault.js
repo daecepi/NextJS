@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import { LoneAnonymousOperationRule } from "graphql";
 
-const NavigationDefault = () => {
+const NavigationDefault = ({buttons}) => {
 	const { query } = useRouter();
 	const [active, setActive] = useState("");
 
@@ -20,6 +20,76 @@ const NavigationDefault = () => {
 			setActive("nomenu");
 		}
 	};
+
+	const handleHamburgerIcon = event => {
+		const hamburger = document.getElementById("nav-icon2");
+		const body = document.querySelector("body");
+		const navMobileOverlay = document.getElementsByClassName("c-nav--mobile__overlay");
+		hamburger.classList.toggle("open");
+		body.classList.toggle("body--stop-scrolling");
+		navMobileOverlay[0].classList.toggle("open");
+		const hamburgerSpans = [...hamburger.children]
+		hamburgerSpans.forEach(span => {
+			span.classList.remove("white");
+		});
+		const navMobile = document.getElementById("navMobile");
+		const navDropdown = [...document.getElementsByClassName("c-nav__dropdown")];
+		const jsDropdownNav = [...document.getElementsByClassName("js-dropdown-nav")];
+		navMobile.classList.remove("z-index");
+		navDropdown.forEach(dropdown => {
+			dropdown.classList.remove("active");
+		});
+		jsDropdownNav.forEach(dropdown => {
+			dropdown.classList.remove("active");
+		});
+	};
+
+	const handleMobileSubMenu = event => {
+		const dropdownType = event.target.getAttribute("dropdown-type");
+		const nav = document.getElementById(dropdownType);
+		if (event.target.classList.contains("active")) {
+			event.target.classList.remove("active");
+			nav.classList.remove("active");
+		} else {
+			const navDropdown = [...document.getElementsByClassName("c-nav__dropdown")];
+			const jsDropdownNav = [...document.getElementsByClassName("js-dropdown-nav")];
+			navDropdown.forEach(dropdown => {
+				dropdown.classList.remove("active");
+			});
+			jsDropdownNav.forEach(dropdown => {
+				dropdown.classList.remove("active");
+			});
+			event.target.classList.add("active");
+			nav.classList.add("active");
+			const hamburger = document.getElementById("nav-icon2");
+			const hamburgerSpans = [...hamburger.children];
+			hamburgerSpans.forEach(span => {
+				span.classList.add("white");
+			});
+			const navMobile = document.getElementById("navMobile");
+			navMobile.classList.add("z-index");
+		}
+		console.log("handleMobileSubMenu", event);
+	};
+
+	const handleSubMenuBack = event => {
+		const navDropdown = [...document.getElementsByClassName("c-nav__dropdown")];
+		const jsDropdownNav = [...document.getElementsByClassName("js-dropdown-nav")];
+		navDropdown.forEach(dropdown => {
+			dropdown.classList.remove("active");
+		});
+		jsDropdownNav.forEach(dropdown => {
+			dropdown.classList.remove("active");
+		});
+		const hamburger = document.getElementById("nav-icon2");
+		const hamburgerSpans = [...hamburger.children];
+		hamburgerSpans.forEach(span => {
+			span.classList.remove("white");
+		});
+		const navMobile = document.getElementById("navMobile");
+		navMobile.classList.remove("z-index");
+	};
+
 	const menu = [
 		{
 			whyCopper: {
@@ -80,14 +150,13 @@ const NavigationDefault = () => {
 						key: "googleWrokspace",
 						name: "Google Workspace CRM",
 						icon: "https://copper.objects.frb.io/imgs/icons/icon_Google Workspace.png",
-						description:
-							"Manage your contacts, deals, emails and more in one place",
+						description: "Manage your contacts, deals, emails and more in one place",
 						url: "/google-workspace-crm",
 						tag: "UPDATED",
 						colPos: 2,
 					},
 					{
-						key: "manageProjects",
+						key: "manageContacts",
 						name: "Manage Projects",
 						icon: "/imgs/icons/menu-icon_projects@2x.png",
 						description: "Manage your team’s work after the deal is closed",
@@ -319,33 +388,10 @@ const NavigationDefault = () => {
 	return (
 		<>
 			<nav
-				className="c-nav--mobile
-{% if craft.app.request.pathInfo == '/' or craft.app.request.pathInfo == '' %}
-  {% if webBanner.webBannerStatus is defined and webBanner.webBannerStatus == 1 %}
-    webBanner-active__nav 
-  {% endif %}
-{% endif %}
- "
+				className="c-nav--mobile"
 				style={{ height: "fit-content" }}
+				id="navMobile"
 			>
-				{/* {% if url == '/' %}
-    {% if webBanner.webBannerStatus is defined and webBanner.webBannerStatus == 1 %}
-    <div id="webBannerDoc" className="webBanner" style="position:relative;background:{{webBanner.webBannerColor|default('white')}}" data-webbanneractive="{{webBanner.webBannerStatus}}" > 
-        <a className="link-overlay" href="{{webBanner.webBannerLink.url|default('#')}}"></a>
-        <div className="webBanner-desktop-text d-none d-md-flex ">{{webBanner.webBannerTextDesktop|default('Copper your best CRM choice')}}</div>
-        <div className="webBanner-mobile-text d-md-none d-sm-flex">{{webBanner.webBannerTextMobile|default('Copper your best CRM choice')}}</div>	
-        <div className="webBanner-button">
-        <span>
-            {% if webBanner.webBannerLink != null %}
-                <a className="c-button c-button--white-outline" href="{{webBanner.webBannerLink.url|default('copper.com')}}">
-                        {{webBanner.webBannerLink.text|default('copper.com')}}
-                </a>
-            {% endif %}
-        </span>
-        </div>
-    </div>
-    {% endif %}
-{% endif  %} */}
 				<div style={{ position: "relative", height: "60px", zIndex: "99999" }}>
 					<Link href="/">
 						<a className="c-nav__logo">
@@ -421,7 +467,7 @@ const NavigationDefault = () => {
 						</a>
 					</Link>
 
-					<div className="c-back js-sub-back">
+					<div className="c-back js-sub-back" onClick={handleSubMenuBack}>
 						<svg
 							width="16px"
 							height="8px"
@@ -460,7 +506,7 @@ const NavigationDefault = () => {
 					</div>
 
 					<div className="c-nav--mobile__burger">
-						<div id="nav-icon2">
+						<div id="nav-icon2" onClick={handleHamburgerIcon}>
 							<span></span>
 							<span></span>
 							<span></span>
@@ -471,32 +517,27 @@ const NavigationDefault = () => {
 					</div>
 				</div>
 				<div
-					className="c-nav--mobile__overlay
-{% if craft.app.request.pathInfo == '/' or craft.app.request.pathInfo == '' %}
-  {% if webBanner.webBannerStatus is defined and webBanner.webBannerStatus == 1 %}
-    webBanner-active__nav 
-  {% endif %}
-{% endif %}"
+					className="c-nav--mobile__overlay"
 					style={{ overflow: "hidden", top: "0px" }}
 				>
 					<div className="c-nav--mobile__links" style={{ paddingTop: "160px" }}>
 						<ul>
 							{menu.map((mobileItems) => {
-								//console.log("Mobile item being trated", mobileItems);
 								const itemKey = Object.keys(mobileItems);
-								//console.log("MOBILE ITEM", mobileItems[itemKey]);
+								const mobileItem = mobileItems[itemKey];
+								console.log("mobileItem", mobileItem)
 								return (
 									<>
-										{mobileItems[itemKey].render == true ? (
+										{mobileItem.render == true ? (
 											<>
-												{mobileItems[itemKey].dropdowntype != "" ? (
+												{mobileItem.dropdowntype != "" ? (
 													<li
 														className="js-dropdown-nav"
-														dropdown-type={`${mobileItems[itemKey].dropdownType}-mobile"`}
-														key={mobileItems[itemKey].key}
+														dropdown-type={`${mobileItem.dropdowntype}-mobile`}
+														key={mobileItem.key}
+														onClick={handleMobileSubMenu}
 													>
-														{mobileItems[itemKey].name}{" "}
-														{mobileItems[itemKey].key} entre
+														{mobileItem.name}
 														<svg
 															width="16px"
 															height="8px"
@@ -504,6 +545,7 @@ const NavigationDefault = () => {
 															version="1.1"
 															xmlns="http://www.w3.org/2000/svg"
 															xmlnsXlink="http://www.w3.org/1999/xlink"
+															style={{display: "inline"}}
 														>
 															<defs></defs>
 															<g
@@ -533,20 +575,20 @@ const NavigationDefault = () => {
 														</svg>
 													</li>
 												) : (
-													<li key={mobileItems[itemKey].key}>
+													<li key={mobileItem.key}>
 														<a
 															href={
-																mobileItems[itemKey]?.url
-																	? mobileItems[itemKey].url
+																mobileItem?.url
+																	? mobileItem.url
 																	: "#"
 															}
 															target={
-																mobileItems[itemKey]?.target != ""
-																	? mobileItems[itemKey].target
+																mobileItem?.target != ""
+																	? mobileItem.target
 																	: null
 															}
 														>
-															{mobileItems.name}
+															{mobileItem.name}
 														</a>
 													</li>
 												)}
@@ -556,30 +598,38 @@ const NavigationDefault = () => {
 								);
 							})}
 							<li>
-								{/* {% for mobileUtilities in defaultNav.utilities %}
-            <a className="{{mobileUtilities.classes |join(' ')}} {% if mobileUtilities.sendUTMsToAmplitude ==  true %}sendUTMsToAmplitude{% endif %}" style="color: {{mobileUtilities.color}}; margin-top: 32px;" href="{{mobileUtilities.url}}" data-cy="general-menu-CTA--mobile">{{mobileUtilities.name}}</a>
-        {% endfor %} */}
+								<a class="c-button " style={{color: "white", marginTop: "32px"}} href={buttons?.option.url || "https://www.copper.com/signup"} data-cy="general-menu-CTA--mobile">{buttons?.option.text || "Try Free"}</a>
+								<a class="c-button c-button--outline " style={{color: "#FF3465", marginTop: "32px"}} href={buttons?.login.url || "https://app.copper.com/users/sign_in"} data-cy="general-menu-CTA--mobile">{buttons?.login.text || "Login"}</a>
 							</li>
 						</ul>
 					</div>
-					{/* <div className="c-nav--mobile__sub" >
-        {% for mobileSecondLevel in defaultNav.menu %}
-            {% if mobileSecondLevel.render == "true" %}
-                {% if mobileSecondLevel.dropdownType != "" %}
-                    <div className="c-nav__dropdown" id="{{mobileSecondLevel.dropdownType}}-mobile" style='padding-top:160px;'>
-                        <ul>
-                        <span className="c-nav__dropdown__title">{{mobileSecondLevel.name}}</span>
-                            {% for items in mobileSecondLevel.dropdown %}
-                                <a className="c-nav__dropdown__item" {% if items.target is defined and items.target != '' %} target="{{ items.target }}" {% endif %} href="{{items.url}}">
-                                    <li>{{items.name}}</li>
-                                </a>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                {% endif %}
-            {% endif %}
-        {% endfor %}        
-    </div> */}
+					<div className="c-nav--mobile__sub">
+					{menu.map((mobileItems) => {
+						const itemKey = Object.keys(mobileItems);
+						const mobileItem = mobileItems[itemKey];
+						return (
+							<>
+								{mobileItem.render === true && (
+									<>
+										{mobileItem.dropdown?.length > 0 && (
+											<div className="c-nav__dropdown" id={`${mobileItem.dropdowntype}-mobile`} key={mobileItem.key}>
+												<ul>
+														<span className="c-nav__dropdown__title">{mobileItem.name}</span>
+													{mobileItem.dropdown.map(submenu => (
+															<a class="c-nav__dropdown__item" href={submenu.url} key={submenu.key}>
+																<li>{submenu.name}</li>
+															</a>
+														)
+													)}
+												</ul>
+											</div>
+										)}
+									</>
+								)}
+							</>
+						);
+					})}
+					</div>
 				</div>
 			</nav>
 
@@ -591,25 +641,6 @@ const NavigationDefault = () => {
 				className="c-nav c-new-nav"
 				style={{ flexWrap: "wrap", height: "fit-content" }}
 			>
-				{/* {query.name == '/' ? }  */}
-				{/* {% if url == '/' %}
-          {% if webBanner.webBannerStatus is defined and webBanner.webBannerStatus == 1 %}
-          <div id="webBannerDoc" className="webBanner" style="position:relative;background:{{webBanner.webBannerColor|default('white')}}" data-webbanneractive="{{webBanner.webBannerStatus}}" > 
-              <a className="link-overlay" href="{{webBanner.webBannerLink.url|default('#')}}"></a>
-              <div className="webBanner-desktop-text d-none d-md-flex ">{{webBanner.webBannerTextDesktop|default('Copper your best CRM choice')}}</div>
-              <div className="webBanner-mobile-text d-md-none d-sm-flex">{{webBanner.webBannerTextMobile|default('Copper your best CRM choice')}}</div>	
-              <div className="webBanner-button">
-              <span>
-                  {% if webBanner.webBannerLink != null %}
-                      <a className="c-button c-button--white-outline" href="{{webBanner.webBannerLink.url|default('copper.com')}}">
-                              {{webBanner.webBannerLink.text|default('copper.com')}}
-                      </a>
-                  {% endif %}
-              </span>
-              </div>
-          </div>
-          {% endif %}
-      {% endif  %} */}
 				<div className="c-nav__container">
 					<div className="container" style={{ flexWrap: "wrap" }}>
 						<div
@@ -694,7 +725,6 @@ const NavigationDefault = () => {
 							<ul className="c-nav__links">
 								{menu.map((item) => {
 									const itemKey = Object.keys(item);
-									// console.log(item[itemKey]);
 									return (
 										<>
 											{item[itemKey].render == true ? (
@@ -714,10 +744,7 @@ const NavigationDefault = () => {
 															dropdowntype={item[itemKey].dropdowntype}
 														>
 															{item[itemKey].name}
-															<span
-																className="carrot"
-																style={{ marginLeft: "0.25rem" }}
-															>
+															<span className="carrot" style={{marginLeft:"0.25rem"}}>
 																<svg
 																	width="6px"
 																	height="4px"
@@ -793,15 +820,18 @@ const NavigationDefault = () => {
 								></div>
 								<span className="search-free-close"></span>
 							</div>
-							{/* <ul className="c-nav__utility">
-        {menu.utilities.map((desktopUtilities)=>{
-          <a id="desktop-nav-main-CTA" className={`${desktopUtilities.desktopclassNamees } ${desktopUtilities.sendUTMsToAmplitude ==  true ? 'sendUTMsToAmplitude' : ''}`} href={desktopUtilities.url} data-cy="general-menu-CTA">
-                <li>
-                    {desktopUtilities.name}
-                </li>
-            </a>
-        })}
-      </ul> */}
+							<ul class="c-nav__utility">
+								<a id="desktop-nav-main-CTA" class="c-button " href={buttons?.option.url || "https://www.copper.com/signup"} data-cy="general-menu-CTA">
+										<li>
+												{buttons?.option.text || "Try Free"}
+										</li>
+								</a>
+								<a id="desktop-nav-main-CTA" class="c-nav__login " href={buttons?.login.url || "https://app.copper.com/users/sign_in"} data-cy="general-menu-CTA">
+										<li>
+												{buttons?.login.text || "Login"}
+										</li>
+								</a>
+              </ul>
 						</div>
 						<div style={{ position: "relative", width: "100%" }}>
 							{menu.map((desktopSecondLevel) => {
@@ -820,13 +850,12 @@ const NavigationDefault = () => {
 														}`}
 														data-cy="general-nav-dropdown"
 														id={desktopSecondLevel[dropdownItems].dropdowntype}
-														style={{ top: "0px", width: "100vw" }}
+														style={{ top: "0px", left: "3px", width: "100vw" }}
 													>
 														<ul>
 															{desktopSecondLevel[dropdownItems].dropdown.map(
 																(ditem) => {
 																	if (ditem.colPos == 1) {
-																		//console.log("DITEM ITEMS ", ditem);
 																		return (
 																			<a
 																				className="c-nav__dropdown__item"
@@ -845,8 +874,11 @@ const NavigationDefault = () => {
 																					}
 																					src={ditem.icon}
 																				/>
-																				<div key={ditem.key}>
-																					<li key={ditem.key}>{ditem.name} </li>
+																				<div>
+																					<li key={ditem.key}>
+																						{ditem.name}{" "}
+																						
+																					</li>
 																					<span className="c-nav__dropdown__detail">
 																						{ditem.description}
 																					</span>
@@ -885,7 +917,9 @@ const NavigationDefault = () => {
 																					src={ditem.icon}
 																				/>
 																				<div>
-																					<li key={ditem.key}>{ditem.name} </li>
+																					<li key={ditem.key}>
+																						{ditem.name}{" "}
+																					</li>
 																					<span className="c-nav__dropdown__detail">
 																						{ditem.description}
 																					</span>
@@ -924,7 +958,9 @@ const NavigationDefault = () => {
 																					src={ditem.icon}
 																				/>
 																				<div>
-																					<li key={ditem.key}>{ditem.name} </li>
+																					<li key={ditem.key}>
+																						{ditem.name}{" "}
+																					</li>
 																					<span className="c-nav__dropdown__detail">
 																						{ditem.description}
 																					</span>
@@ -940,23 +976,6 @@ const NavigationDefault = () => {
 																}
 															)}
 														</ul>
-
-														{/* {% for i in 1..3 %}
-                        <ul>
-                            {% for items in desktopSecondLevel.dropdown %}
-                                {% if items.colPos == i %}
-                                <a className="c-nav__dropdown__item" {% if items.target is defined and items.target != '' %} target="{{ items.target }}" {% endif %} href="{{items.url}}">
-                                    <img className="c-nav__icon" alt="{{items.altText is defined and items.altText|length ? items.altText : 'Icon'}}" src="{{items.icon}}">
-                                    <div>
-                                        <li>{{items.name}} {% if items.tag is defined and items.tag != '' %}<span className="tag--new">{{ items.tag }}</span>{% endif %}</li>
-                                        <span className="c-nav__dropdown__detail">{{items.description |nl2br}}</span>
-                                    </div>
-                                </a>
-                                {% endif %}
-                            {% endfor %}
-                        </ul>
-                    {% endfor %}
-                    {{ macro.navAd( desktopSecondLevel.navAd ) }}    */}
 													</div>
 												) : null}
 											</>

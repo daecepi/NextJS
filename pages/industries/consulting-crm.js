@@ -15,12 +15,7 @@ export default function ConsultingCrm() {
 			<Head>
 				<title>Best CRM For Consultants | Copper</title>
 			</Head>
-			<NavigationDefault
-				utility={[
-					{ text: "Try Free", ulr: "https://www.copper.com/signup" },
-					{ text: "Login", ulr: "https://app.copper.com/users/sign_in" },
-				]}
-			/>
+			<NavigationDefault />
 			<section className="c-hero--split background--consulting">
 				<div className="container">
 					<div className="row">
