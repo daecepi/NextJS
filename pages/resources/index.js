@@ -129,6 +129,28 @@ const resources = (props) => {
 						});
 					}}
 				></Script>
+				{/* Style fixes  */}
+				<style jsx>
+					{`
+						main.content .c-blog-card--large {
+							position: relative;
+							width: 100%;
+							display: -webkit-box;
+							display: -ms-flexbox;
+							display: flex;
+							-webkit-box-orient: vertical;
+							-webkit-box-direction: normal;
+							-ms-flex-direction: column;
+							flex-direction: column;
+							-webkit-box-shadow: 0 6px 20px 0 rgb(60 63 64 / 7%);
+							box-shadow: 0 6px 20px 0 rgb(60 63 64 / 7%);
+							-webkit-box-flex: 1;
+							-ms-flex-positive: 1;
+							flex-grow: 1;
+							margin-left: 0px;
+						}
+					`}
+				</style>
 
 				<main id="content" className="c-blog-content no-banner" role="main">
 					<div className="c-blog-content__search">
