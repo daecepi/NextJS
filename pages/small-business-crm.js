@@ -48,7 +48,7 @@ export default function SmallBusinessCRM() {
 					<div class="c-jumble__container col-md-10 offset-md-2 no-padding">
 						<div class="c-jumble__content c-valign--middle">
 							<div class="row column-reverse">
-								<div class="col-md-5 order-md-2">
+								<div class="col-md-5 order-md-2 relative">
 									<div class="c-image">
 										<Image src="/imgs/segmentation/SMB-UI02.png" width="478" height="500" />
 									</div>

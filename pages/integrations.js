@@ -14,10 +14,10 @@ export default function Integrations() {
 				<title>CRM Integration With Your Favorite Tools | Copper</title>
 			</Head>
 			<NavigationDefault
-				utility={[
-					{ text: "Try Free", ulr: "https://www.copper.com/signup" },
-					{ text: "Login", ulr: "https://app.copper.com/users/sign_in" },
-				]}
+				buttons={{
+					option: { text: "Try Free", ulr: "https://www.copper.com/signup" },
+					login: { text: "Login", ulr: "https://app.copper.com/users/sign_in" },
+				}}
 			/>
 			<HeroProduct
 				backgroundColor="midnight"

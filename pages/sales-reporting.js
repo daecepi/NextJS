@@ -13,10 +13,10 @@ export default function SalesReporting() {
 				<title>Sales Reporting | Copper</title>
 			</Head>
 			<NavigationDefault
-				utility={[
-					{ text: 'Learn More', ulr: '/demos' },
-					{ text: 'Login', ulr: 'https://app.copper.com/users/sign_in' },
-				]}
+				buttons={{
+					option: { text: 'Learn More', url: '/demos' },
+					login: { text: 'Login', url: 'https://app.copper.com/users/sign_in' },
+				}}
 			/>
 			<HeroProduct
 				backgroundColor="midnight"
