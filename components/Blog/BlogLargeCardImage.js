@@ -54,7 +54,7 @@ const BlogLargeCardImage = (props) => {
 						) : (
 							<div className="circle-img c-author__img c-author__img background-100">
 								<span className="c-author__img--alt">
-									{(props, authorName)}
+									{(props, authorName)} {(props, authorLastName)}
 								</span>
 							</div>
 						)}

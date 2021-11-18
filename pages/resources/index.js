@@ -16,6 +16,7 @@ import BlogLargeCardText from "../../components/Blog/BlogLargeCardText";
 import BlogAd from "../../components/Blog/BlogAd";
 
 const resources = (props) => {
+	console.log("daskdnjaksdnad");
 	console.log("featured images being sent ", props);
 	return (
 		<>

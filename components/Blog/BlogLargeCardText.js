@@ -25,7 +25,9 @@ const BlogLargeCardText = (props) => {
 							></div>
 						) : (
 							<div className="['circle-img c-author__img', 'c-author__img', 'background-' +random(entry.author.id)]">
-								<span className="c-author__img--alt">{props.authorName}</span>
+								<span className="c-author__img--alt">
+									{props.authorName} {props.authorLastName}
+								</span>
 							</div>
 						)}
 
