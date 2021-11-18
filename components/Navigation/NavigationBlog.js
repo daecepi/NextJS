@@ -34,7 +34,7 @@ const NavigationBlog = (props) => {
 					</div>
 				</div>
 			</div>
-			<nav className="c-side-nav">
+			<nav className="c-side-nav" style={{ height: "100vh" }}>
 				<div className="container">
 					<a className="c-side-nav__logo" href="/resources">
 						<img alt="Side nav logo" src="/imgs/blog/side-nav-logo.svg" />
@@ -194,11 +194,24 @@ const NavigationBlog = (props) => {
 
 					<div className="c-side-nav__utility">
 						<div className="c-side-nav__social">
-							{/* <a href="https://www.youtube.com/c/CopperInc" target="_blank">{% include '/icons/social-yt.svg' %}</a>
-        <a href="https://www.instagram.com/copperinc/" target="_blank">{% include '/icons/social-ig.svg' %}</a>
-        <a href="https://www.facebook.com/CopperInc/" target="_blank">{% include '/icons/social-fb.svg' %}</a>
-        <a href="https://twitter.com/copperinc" target="_blank">{% include '/icons/social-tw.svg' %}</a>
-        <a href="https://www.linkedin.com/company/copper-inc/" target="_blank">{% include '/icons/social-li.svg' %}</a> */}
+							<a href="https://www.youtube.com/c/CopperInc" target="_blank">
+								<img src="https://copper.objects.frb.io/imgs/icons/social-yt.svg" />
+							</a>
+							<a href="https://www.instagram.com/copperinc/" target="_blank">
+								<img src="https://copper.objects.frb.io/imgs/icons/social-ig.svg" />
+							</a>
+							<a href="https://www.facebook.com/CopperInc/" target="_blank">
+								<img src="https://copper.objects.frb.io/imgs/icons/social-fb.svg" />
+							</a>
+							<a href="https://twitter.com/copperinc" target="_blank">
+								<img src="https://copper.objects.frb.io/imgs/icons/social-tw.svg" />
+							</a>
+							<a
+								href="https://www.linkedin.com/company/copper-inc/"
+								target="_blank"
+							>
+								<img src="https://copper.objects.frb.io/imgs/icons/social-li.svg" />
+							</a>
 						</div>
 						<a className="t-link__gray" href="/">
 							copper.com

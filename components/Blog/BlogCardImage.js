@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-const BlogLargeCardImage = (props) => {
+const BlogCardImage = (props) => {
 	return (
-		<div className="c-blog-card c-blog-card--large">
+		<div className="c-blog-card">
 			<a className="c-card__clickthrough" href={props.url}></a>
 			<div className="c-blog-card__image-container">
 				{props.imagegradient && (
@@ -77,4 +77,4 @@ const BlogLargeCardImage = (props) => {
 	);
 };
 
-export default BlogLargeCardImage;
+export default BlogCardImage;
