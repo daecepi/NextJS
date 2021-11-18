@@ -2,12 +2,13 @@ import NavigationBlog from "../../components/Navigation/NavigationBlog";
 import Head from "next/head";
 import Script from "next/script";
 import BlogLargeCardImage from "../../components/Blog/BlogLargeCardImage.js";
+import BlogCardImage from "../../components/Blog/BlogCardImage";
+import BlogCardText from "../../components/Blog/BlogCardText";
 import {
 	getBlogCategoriesMenu,
 	getBlogFormats,
 	getBlogEntries,
 	getBlogFeaturedEntries,
-	getSingleCaregory,
 } from "../../lib/api";
 import Footer from "../../components/Footer/Footer";
 import BlogFeaturedCard from "../../components/Blog/BlogFeaturedCard";
@@ -15,7 +16,7 @@ import BlogLargeCardText from "../../components/Blog/BlogLargeCardText";
 import BlogAd from "../../components/Blog/BlogAd";
 
 const resources = (props) => {
-	console.log(props.paramss);
+	console.log("featured images being sent ", props);
 	return (
 		<>
 			<div className="ltr resources blog-body flex">
@@ -130,9 +131,9 @@ const resources = (props) => {
 					}}
 				></Script>
 				{/* Style fixes  */}
-				<style jsx>
+				<style jsx global>
 					{`
-						main.content .c-blog-card--large {
+						#content .c-blog-card.c-blog-card--large {
 							position: relative;
 							width: 100%;
 							display: -webkit-box;
@@ -142,12 +143,14 @@ const resources = (props) => {
 							-webkit-box-direction: normal;
 							-ms-flex-direction: column;
 							flex-direction: column;
-							-webkit-box-shadow: 0 6px 20px 0 rgb(60 63 64 / 7%);
-							box-shadow: 0 6px 20px 0 rgb(60 63 64 / 7%);
 							-webkit-box-flex: 1;
 							-ms-flex-positive: 1;
 							flex-grow: 1;
 							margin-left: 0px;
+						}
+						.c-copper-chronicles__top__new.col-xl-6 {
+							padding-left: 15px;
+							padding-right: 15px;
 						}
 					`}
 				</style>
@@ -243,7 +246,7 @@ const resources = (props) => {
 										return (
 											<div className="col-lg-6 col-xl-4 c-card-col">
 												{item.featuredImage[0].url ? (
-													<BlogLargeCardImage
+													<BlogCardImage
 														imagegradient={item.imagegradient}
 														url={item.url}
 														imageUrl={item.featuredImage[0].url}
@@ -257,9 +260,9 @@ const resources = (props) => {
 														authorName={item.author.firstName}
 														authorLastName={item.author.lastName}
 														authorTitle={item.author.authorTitle}
-													></BlogLargeCardImage>
+													/>
 												) : (
-													<BlogLargeCardText
+													<BlogCardText
 														imagegradient={item.imagegradient}
 														url={item.url}
 														parentCategory={item.parentCategory}
@@ -270,7 +273,7 @@ const resources = (props) => {
 														authorName={item.author.firstName}
 														authorLastName={item.author.lastName}
 														authorTitle={item.author.authorTitle}
-													></BlogLargeCardText>
+													/>
 												)}
 												{/* <blog-card v-if="entryTeaser.image" :entry="entryTeaser" />
                       <blog-card-text v-else :entry="entryTeaser" /> */}
@@ -281,7 +284,7 @@ const resources = (props) => {
 										return (
 											<div class="col-lg-6 col-xl-4 c-card-col order-md-last">
 												{item.featuredImage[0].url ? (
-													<BlogLargeCardImage
+													<BlogCardImage
 														imagegradient={item.imagegradient}
 														url={item.url}
 														imageUrl={item.featuredImage[0].url}
@@ -295,9 +298,9 @@ const resources = (props) => {
 														authorName={item.author.firstName}
 														authorLastName={item.author.lastName}
 														authorTitle={item.author.authorTitle}
-													></BlogLargeCardImage>
+													/>
 												) : (
-													<BlogLargeCardText
+													<BlogCardText
 														imagegradient={item.imagegradient}
 														url={item.url}
 														parentCategory={item.parentCategory}
@@ -308,7 +311,7 @@ const resources = (props) => {
 														authorName={item.author.firstName}
 														authorLastName={item.author.lastName}
 														authorTitle={item.author.authorTitle}
-													></BlogLargeCardText>
+													/>
 												)}
 												{/* <blog-card v-if="entryTeaser.image" :entry="entryTeaser" />
                       <blog-card-text v-else :entry="entryTeaser" /> */}
