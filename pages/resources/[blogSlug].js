@@ -61,7 +61,7 @@ const Post = ({
 			image: {
 				"@type": "ImageObject",
 				url: `${
-					(entry.featuredImage.length && entry.featuredImage[0]?.url) ||
+					(entry.featuredImage?.length && entry.featuredImage[0]?.url) ||
 					"/imgs/seo-images/generic-social-card_linkedin.png"
 				}`,
 				width: 1440,
