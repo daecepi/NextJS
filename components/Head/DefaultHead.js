@@ -150,9 +150,7 @@ const DefaultHead = ({ entry, globals }) => {
 						<meta
 							property="article:published_time"
 							content={
-								entry.postDate
-									? new Date(entry.postDate).format("F jS \\a\\t g:ia")
-									: ""
+								entry.postDate ? new Date(entry.postDate).toISOString() : ""
 							}
 						/>
 

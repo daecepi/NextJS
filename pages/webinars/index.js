@@ -1,10 +1,8 @@
-
 const WebinarIndex = () => {
+	return "";
+};
 
-  return ()
-}
-
-export default WebinarIndex
+export default WebinarIndex;
 
 export async function getServerSideProps({ params }) {
 	// const blogInformation = await fetch(`copper.com/api/blog${pageNumber}.json`);
