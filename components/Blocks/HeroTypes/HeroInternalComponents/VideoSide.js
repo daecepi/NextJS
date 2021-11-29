@@ -4,11 +4,17 @@ const VideoSide = ({ heroVideoUrl }) => {
 			<div className="c-video ">
 				<div
 					className="wistia_responsive_padding"
-					style="padding:56.25% 0 0 0;position:relative;"
+					style={{ padding: "56.25% 0 0 0", position: "relative" }}
 				>
 					<div
 						className="wistia_responsive_wrapper"
-						style="height:100%;left:0;position:absolute;top:0;width:100%;"
+						style={{
+							height: "100%",
+							left: "0",
+							position: "absolute",
+							top: "0",
+							width: "100%",
+						}}
 					>
 						<iframe
 							src={heroVideoUrl}

@@ -26,25 +26,29 @@ const AgencyCrm = () => {
 				imageUrl="/imgs/industry/industry-agency-hero@2x.jpg"
 			/>
 			<TwoColModule
-					richText={
-						<div>
-							<h2 class=" mb-2">900+ digital and creative agencies, big and small, love Copper.</h2>
-							<a class="t-link" href="/customers" target="_blank">See customer stories</a>
-						</div>
-					}
-					image={[
-						{
-							url: "/industries/industry-agency-logo-cloud@2x.png",
-							title: "Track deals image 4",
-						},
-					]}
-					backgroundColor={[{slug:"product-page"}]}
-					imageWidth="350"
-					imageHeight="298"
-					imageOrientation="dropRight"
-					slug={"track-leads"}
-					loopIndex={0}
-				/>
+				richText={
+					<div>
+						<h2 className=" mb-2">
+							900+ digital and creative agencies, big and small, love Copper.
+						</h2>
+						<a className="t-link" href="/customers" target="_blank">
+							See customer stories
+						</a>
+					</div>
+				}
+				image={[
+					{
+						url: "/industries/industry-agency-logo-cloud@2x.png",
+						title: "Track deals image 4",
+					},
+				]}
+				backgroundColor={[{ slug: "product-page" }]}
+				imageWidth="350"
+				imageHeight="298"
+				imageOrientation="dropRight"
+				slug={"track-leads"}
+				loopIndex={0}
+			/>
 			<Jumble
 				backgroundColor="hot-pink"
 				eyebrow="agency CRM"
@@ -70,8 +74,14 @@ const AgencyCrm = () => {
 				richText={
 					<div>
 						<h2>Up-to-the-minute insights on everybody you interact with.</h2>
-						<p>Copper’s activity feed gives everyone on your team visibility into real-time customer and seller moments. Trust us, your account managers and deal makers will love it.</p>
-						<a class="t-link" href="/collaboration">Learn More</a>
+						<p>
+							Copper’s activity feed gives everyone on your team visibility into
+							real-time customer and seller moments. Trust us, your account
+							managers and deal makers will love it.
+						</p>
+						<a className="t-link" href="/collaboration">
+							Learn More
+						</a>
 					</div>
 				}
 				image={[
@@ -80,7 +90,7 @@ const AgencyCrm = () => {
 						title: "Stop the forecasting guessing games",
 					},
 				]}
-				backgroundColor={[{slug:"product-page"}]}
+				backgroundColor={[{ slug: "product-page" }]}
 				imageWidth="395"
 				imageHeight="556"
 				imageOrientation="dropRight"

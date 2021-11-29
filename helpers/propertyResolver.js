@@ -1,4 +1,4 @@
-const linkitButtonPropertyGetter = (linkitString) => {
+export const linkitButtonPropertyGetter = (linkitString) => {
 	// Verifies string structure
 	if (
 		linkitString.includes("class") &&

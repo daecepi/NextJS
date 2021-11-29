@@ -2,7 +2,7 @@ const ResourcesModule = () => {
 	return (
 		<section className="c-blog__entries sl_hide">
 			<div className="container">
-				<pre className="c-eyebrow" style="top:0; margin-left:0;">
+				<pre className="c-eyebrow" style={{ top: "0", marginLeft: "0" }}>
 					Resources
 				</pre>
 				<div className="row">

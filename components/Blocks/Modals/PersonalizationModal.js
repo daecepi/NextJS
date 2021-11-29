@@ -114,7 +114,7 @@ const PersonalizationModal = ({}) => {
 									<img
 										src="https://d2ydtwisqcxv72.cloudfront.net/landing/copper-logo.png"
 										alt="Copper logo"
-										style="max-width: 100%;"
+										style={{ maxWidth: "100%" }}
 									/>
 								</div>
 							</div>

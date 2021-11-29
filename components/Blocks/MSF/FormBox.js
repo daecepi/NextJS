@@ -24,12 +24,12 @@ const FormBox = (
 
 			<fieldset
 				className="c-form step step-3"
-				style="box-shadow: none; padding-bottom: 0px;padding-top: 0px;"
+				style={{ boxShadow: "none", paddingBottom: "0px", paddingTop: "0px" }}
 			>
 				<div className="container">
 					<div className="row">
 						<div className="col-md-11 ">
-							<pre className="c-eyebrow" style="text-align: start;">
+							<pre className="c-eyebrow" style={{ textAlign: "start" }}>
 								{eyebrow}
 							</pre>
 							{copyHeader?.length ? (

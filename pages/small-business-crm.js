@@ -13,7 +13,9 @@ export default function SmallBusinessCRM() {
 	return (
 		<>
 			<Head>
-				<title>Agency CRM for Advertising, Marketing & Creative Agencies | Copper</title>
+				<title>
+					Agency CRM for Advertising, Marketing & Creative Agencies | Copper
+				</title>
 			</Head>
 			<NavigationDefault />
 			<HeroProduct
@@ -37,31 +39,43 @@ export default function SmallBusinessCRM() {
 							Google Workspace
 						</h2>
 						<p>4.8 stars on Google Workspace Marketplace.</p>
-						<a className="t-link" href="https://workspace.google.com/marketplace/app/copper_crm/461423560386">
+						<a
+							className="t-link"
+							href="https://workspace.google.com/marketplace/app/copper_crm/461423560386"
+						>
 							See For Yourself
 						</a>
 					</div>
 				</div>
 			</section>
-			<section class="c-jumble c-jumble-background--eggplant c-jumble--align-right no-top-margin">
-				<div class="container">
-					<div class="c-jumble__container col-md-10 offset-md-2 no-padding">
-						<div class="c-jumble__content c-valign--middle">
-							<div class="row column-reverse">
-								<div class="col-md-5 order-md-2 relative">
-									<div class="c-image">
-										<Image src="/imgs/segmentation/SMB-UI02.png" width="478" height="500" />
+			<section className="c-jumble c-jumble-background--eggplant c-jumble--align-right no-top-margin">
+				<div className="container">
+					<div className="c-jumble__container col-md-10 offset-md-2 no-padding">
+						<div className="c-jumble__content c-valign--middle">
+							<div className="row column-reverse">
+								<div className="col-md-5 order-md-2 relative">
+									<div className="c-image">
+										<Image
+											src="/imgs/segmentation/SMB-UI02.png"
+											width="478"
+											height="500"
+										/>
 									</div>
 								</div>
-								<div class="col-md-7 order-md-1">
-									<pre class="c-eyebrow c-eyebrow--light">SIMPLE & EASY TO USE </pre>
+								<div className="col-md-7 order-md-1">
+									<pre className="c-eyebrow c-eyebrow--light">
+										SIMPLE & EASY TO USE{" "}
+									</pre>
 									<h2>Get up and running in minutes.</h2>
 									<p>
-										Copper is a different kind of CRM. We made implementation super easy so all your data is automatically populated without IT or
-										admin support. Not only that, it’s also easily customizable to your processes in minutes—just sit back and watch your team
-										instantly adopt the beautiful and intuitive system.
+										Copper is a different kind of CRM. We made implementation
+										super easy so all your data is automatically populated
+										without IT or admin support. Not only that, it’s also easily
+										customizable to your processes in minutes—just sit back and
+										watch your team instantly adopt the beautiful and intuitive
+										system.
 									</p>
-									<a class="t-link h-white" href="/implementation">
+									<a className="t-link h-white" href="/implementation">
 										Learn More
 									</a>
 								</div>
@@ -110,7 +124,8 @@ export default function SmallBusinessCRM() {
 				imageHeight="450"
 				quote={[
 					<span>
-						Copper is <strong>incredibly intuitive</strong>, easy-to-use, and works instantly without IT admins.
+						Copper is <strong>incredibly intuitive</strong>, easy-to-use, and
+						works instantly without IT admins.
 					</span>,
 				]}
 				quoteby="OLIVIER CHANOUX"
@@ -155,21 +170,28 @@ export default function SmallBusinessCRM() {
 					</div>
 				</div>
 			</NumbersSection>
-			<section class="c-cols">
-				<div class="container">
-					<div class="row">
-						<div class="col-md order-2">
-							<div class="c-image c-image--center no-embelleshment">
-								<Image src="/imgs/segmentation/segmentation-smb-customers.png" width="350" height="297" />
+			<section className="c-cols">
+				<div className="container">
+					<div className="row">
+						<div className="col-md order-2">
+							<div className="c-image c-image--center no-embelleshment">
+								<Image
+									src="/imgs/segmentation/segmentation-smb-customers.png"
+									width="350"
+									height="297"
+								/>
 							</div>
 						</div>
-						<div class="col-md order-1">
+						<div className="col-md order-1">
 							<h2>
 								Small businesses
 								<br />
 								love Copper.
 							</h2>
-							<p>Small businesses love Copper. Meet the first simple and intuitive CRM that allows you to work right from your Gmail.</p>
+							<p>
+								Small businesses love Copper. Meet the first simple and
+								intuitive CRM that allows you to work right from your Gmail.
+							</p>
 						</div>
 					</div>
 				</div>

@@ -39,7 +39,10 @@ const UnderlineNumbers = ({ image, eyebrow, copy, numbersTable }) => {
 						<div className="container">
 							<div className="row">
 								<div className="col-md-4">
-									<pre className="c-eyebrow" style="top:0; margin-left:0;">
+									<pre
+										className="c-eyebrow"
+										style={{ top: "0", marginLeft: "0" }}
+									>
 										{eyebrow}
 									</pre>
 									<div dangerouslySetInnerHTML={{ __html: copy }}></div>
@@ -53,12 +56,15 @@ const UnderlineNumbers = ({ image, eyebrow, copy, numbersTable }) => {
 				<div className="c-numbers--full">
 					<div
 						className="c-numbers__container extra-top-margin--medium"
-						style="top: 0px;"
+						style={{ top: "0px" }}
 					>
 						<div className="container">
 							<div className="row">
 								<div className="col-md-4">
-									<pre className="c-eyebrow" style="top:0; margin-left:0;">
+									<pre
+										className="c-eyebrow"
+										style={{ top: "0", marginLeft: "0" }}
+									>
 										{eyebrow}
 									</pre>
 									<div dangerouslySetInnerHTML={{ __html: copy }}></div>

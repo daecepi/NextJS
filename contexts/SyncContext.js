@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from "react";
+import { atom } from "recoil";
 
 const SyncedContext = createContext();
 
@@ -26,3 +27,15 @@ export function SyncedAppWrapper({ children }) {
 export function useSyncContext() {
 	return useContext(SyncedContext);
 }
+
+export const SyncedAtom = atom({
+	key: "SyncedAtom",
+	default: {
+		pageHeroSynced: false,
+		mainFormReference: undefined,
+		generalSignupUrl: "/signup",
+		marketoConfigurations: {
+			replaceMarketoForms: false,
+		},
+	},
+});

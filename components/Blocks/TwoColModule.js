@@ -22,10 +22,10 @@ const TwoColModule = ({
 		switch (imageOrientation) {
 			case "left":
 				return (
-					<div class="row column-reverse">
-						<div class="col-md-6 d-flex align-items-center order-1">
+					<div className="row column-reverse">
+						<div className="col-md-6 d-flex align-items-center order-1">
 							<div
-								class={`c-image c-image--center c-image--shadow ${
+								className={`c-image c-image--center c-image--shadow ${
 									removeShadow ? "h-remove-shadow" : ""
 								}`}
 							>
@@ -41,7 +41,7 @@ const TwoColModule = ({
 								)}
 							</div>
 						</div>
-						<div class="col-md-5 offset-md-1 c-valign--middle order-2">
+						<div className="col-md-5 offset-md-1 c-valign--middle order-2">
 							<HeroCopy
 								slug={slug}
 								eyebrow={eyebrow}
@@ -56,9 +56,9 @@ const TwoColModule = ({
 				break;
 			case "right":
 				return (
-					<div class="row">
-						<div class="col-md-6 d-flex align-items-center offset-md-1 order-2">
-							<div class="c-image c-image--center c-image--shadow {{ matrixBlock.removeShadow ? 'h-remove-shadow' : '' }}">
+					<div className="row">
+						<div className="col-md-6 d-flex align-items-center offset-md-1 order-2">
+							<div className="c-image c-image--center c-image--shadow {{ matrixBlock.removeShadow ? 'h-remove-shadow' : '' }}">
 								{image?.length ? (
 									<ImageSimple
 										classAtr={removeShadow ? "h-remove-shadow" : ""}
@@ -71,7 +71,7 @@ const TwoColModule = ({
 								)}
 							</div>
 						</div>
-						<div class="col-md-5 c-valign--middle order-1">
+						<div className="col-md-5 c-valign--middle order-1">
 							<HeroCopy
 								slug={slug}
 								eyebrow={eyebrow}
@@ -86,9 +86,9 @@ const TwoColModule = ({
 				break;
 			case "dropRight":
 				return (
-					<div class="row">
-						<div class="col-md-7 d-flex align-items-center order-2">
-							<div class="c-image c-image--drop-right c-image--shadow {{ matrixBlock.removeShadow ? 'h-remove-shadow' : '' }}">
+					<div className="row">
+						<div className="col-md-7 d-flex align-items-center order-2">
+							<div className="c-image c-image--drop-right c-image--shadow {{ matrixBlock.removeShadow ? 'h-remove-shadow' : '' }}">
 								{image?.length ? (
 									<ImageSimple
 										classAtr={`drop-right__img ${
@@ -103,7 +103,7 @@ const TwoColModule = ({
 								)}
 							</div>
 						</div>
-						<div class="col-md-5 c-valign--middle order-1">
+						<div className="col-md-5 c-valign--middle order-1">
 							<HeroCopy
 								slug={slug}
 								eyebrow={eyebrow}
@@ -118,9 +118,9 @@ const TwoColModule = ({
 				break;
 			case "dropLeft":
 				return (
-					<div class="row column-reverse">
-						<div class="col-md-7 d-flex align-items-center order-1">
-							<div class="c-image c-image--drop-left c-image--shadow {{ matrixBlock.removeShadow ? 'h-remove-shadow' : '' }}">
+					<div className="row column-reverse">
+						<div className="col-md-7 d-flex align-items-center order-1">
+							<div className="c-image c-image--drop-left c-image--shadow {{ matrixBlock.removeShadow ? 'h-remove-shadow' : '' }}">
 								{image?.length ? (
 									<ImageSimple
 										classAtr={`drop-left__img ${
@@ -135,7 +135,7 @@ const TwoColModule = ({
 								)}
 							</div>
 						</div>
-						<div class="col-md-5 c-valign--middle order-2">
+						<div className="col-md-5 c-valign--middle order-2">
 							<HeroCopy
 								slug={slug}
 								eyebrow={eyebrow}
@@ -155,11 +155,11 @@ const TwoColModule = ({
 
 	return (
 		<section
-			class={`c-cols c-cols-landing ${
+			className={`c-cols c-cols-landing ${
 				backgroundColor && backgroundColor[0] ? backgroundColor[0].slug : ""
 			} ${addBottomPadding ? "h-padding-bottom" : ""}`}
 		>
-			<div class="container">{internalStructure()}</div>
+			<div className="container">{internalStructure()}</div>
 		</section>
 	);
 };

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import { LoneAnonymousOperationRule } from "graphql";
 
-const NavigationDefault = ({buttons}) => {
+const NavigationDefault = ({ buttons }) => {
 	const { query } = useRouter();
 	const [active, setActive] = useState("");
 
@@ -21,49 +21,57 @@ const NavigationDefault = ({buttons}) => {
 		}
 	};
 
-	const handleHamburgerIcon = event => {
+	const handleHamburgerIcon = (event) => {
 		const hamburger = document.getElementById("nav-icon2");
 		const body = document.querySelector("body");
-		const navMobileOverlay = document.getElementsByClassName("c-nav--mobile__overlay");
+		const navMobileOverlay = document.getElementsByClassName(
+			"c-nav--mobile__overlay"
+		);
 		hamburger.classList.toggle("open");
 		body.classList.toggle("body--stop-scrolling");
 		navMobileOverlay[0].classList.toggle("open");
-		const hamburgerSpans = [...hamburger.children]
-		hamburgerSpans.forEach(span => {
+		const hamburgerSpans = [...hamburger.children];
+		hamburgerSpans.forEach((span) => {
 			span.classList.remove("white");
 		});
 		const navMobile = document.getElementById("navMobile");
 		const navDropdown = [...document.getElementsByClassName("c-nav__dropdown")];
-		const jsDropdownNav = [...document.getElementsByClassName("js-dropdown-nav")];
+		const jsDropdownNav = [
+			...document.getElementsByClassName("js-dropdown-nav"),
+		];
 		navMobile.classList.remove("z-index");
-		navDropdown.forEach(dropdown => {
+		navDropdown.forEach((dropdown) => {
 			dropdown.classList.remove("active");
 		});
-		jsDropdownNav.forEach(dropdown => {
+		jsDropdownNav.forEach((dropdown) => {
 			dropdown.classList.remove("active");
 		});
 	};
 
-	const handleMobileSubMenu = event => {
+	const handleMobileSubMenu = (event) => {
 		const dropdownType = event.target.getAttribute("dropdown-type");
 		const nav = document.getElementById(dropdownType);
 		if (event.target.classList.contains("active")) {
 			event.target.classList.remove("active");
 			nav.classList.remove("active");
 		} else {
-			const navDropdown = [...document.getElementsByClassName("c-nav__dropdown")];
-			const jsDropdownNav = [...document.getElementsByClassName("js-dropdown-nav")];
-			navDropdown.forEach(dropdown => {
+			const navDropdown = [
+				...document.getElementsByClassName("c-nav__dropdown"),
+			];
+			const jsDropdownNav = [
+				...document.getElementsByClassName("js-dropdown-nav"),
+			];
+			navDropdown.forEach((dropdown) => {
 				dropdown.classList.remove("active");
 			});
-			jsDropdownNav.forEach(dropdown => {
+			jsDropdownNav.forEach((dropdown) => {
 				dropdown.classList.remove("active");
 			});
 			event.target.classList.add("active");
 			nav.classList.add("active");
 			const hamburger = document.getElementById("nav-icon2");
 			const hamburgerSpans = [...hamburger.children];
-			hamburgerSpans.forEach(span => {
+			hamburgerSpans.forEach((span) => {
 				span.classList.add("white");
 			});
 			const navMobile = document.getElementById("navMobile");
@@ -72,18 +80,20 @@ const NavigationDefault = ({buttons}) => {
 		console.log("handleMobileSubMenu", event);
 	};
 
-	const handleSubMenuBack = event => {
+	const handleSubMenuBack = (event) => {
 		const navDropdown = [...document.getElementsByClassName("c-nav__dropdown")];
-		const jsDropdownNav = [...document.getElementsByClassName("js-dropdown-nav")];
-		navDropdown.forEach(dropdown => {
+		const jsDropdownNav = [
+			...document.getElementsByClassName("js-dropdown-nav"),
+		];
+		navDropdown.forEach((dropdown) => {
 			dropdown.classList.remove("active");
 		});
-		jsDropdownNav.forEach(dropdown => {
+		jsDropdownNav.forEach((dropdown) => {
 			dropdown.classList.remove("active");
 		});
 		const hamburger = document.getElementById("nav-icon2");
 		const hamburgerSpans = [...hamburger.children];
-		hamburgerSpans.forEach(span => {
+		hamburgerSpans.forEach((span) => {
 			span.classList.remove("white");
 		});
 		const navMobile = document.getElementById("navMobile");
@@ -150,7 +160,8 @@ const NavigationDefault = ({buttons}) => {
 						key: "googleWrokspace",
 						name: "Google Workspace CRM",
 						icon: "https://copper.objects.frb.io/imgs/icons/icon_Google Workspace.png",
-						description: "Manage your contacts, deals, emails and more in one place",
+						description:
+							"Manage your contacts, deals, emails and more in one place",
 						url: "/google-workspace-crm",
 						tag: "UPDATED",
 						colPos: 2,
@@ -525,7 +536,7 @@ const NavigationDefault = ({buttons}) => {
 							{menu.map((mobileItems) => {
 								const itemKey = Object.keys(mobileItems);
 								const mobileItem = mobileItems[itemKey];
-								console.log("mobileItem", mobileItem)
+								console.log("mobileItem", mobileItem);
 								return (
 									<>
 										{mobileItem.render == true ? (
@@ -545,7 +556,7 @@ const NavigationDefault = ({buttons}) => {
 															version="1.1"
 															xmlns="http://www.w3.org/2000/svg"
 															xmlnsXlink="http://www.w3.org/1999/xlink"
-															style={{display: "inline"}}
+															style={{ display: "inline" }}
 														>
 															<defs></defs>
 															<g
@@ -577,11 +588,7 @@ const NavigationDefault = ({buttons}) => {
 												) : (
 													<li key={mobileItem.key}>
 														<a
-															href={
-																mobileItem?.url
-																	? mobileItem.url
-																	: "#"
-															}
+															href={mobileItem?.url ? mobileItem.url : "#"}
 															target={
 																mobileItem?.target != ""
 																	? mobileItem.target
@@ -598,37 +605,62 @@ const NavigationDefault = ({buttons}) => {
 								);
 							})}
 							<li>
-								<a class="c-button " style={{color: "white", marginTop: "32px"}} href={buttons?.option.url || "https://www.copper.com/signup"} data-cy="general-menu-CTA--mobile">{buttons?.option.text || "Try Free"}</a>
-								<a class="c-button c-button--outline " style={{color: "#FF3465", marginTop: "32px"}} href={buttons?.login.url || "https://app.copper.com/users/sign_in"} data-cy="general-menu-CTA--mobile">{buttons?.login.text || "Login"}</a>
+								<a
+									className="c-button "
+									style={{ color: "white", marginTop: "32px" }}
+									href={buttons?.option.url || "https://www.copper.com/signup"}
+									data-cy="general-menu-CTA--mobile"
+								>
+									{buttons?.option.text || "Try Free"}
+								</a>
+								<a
+									className="c-button c-button--outline "
+									style={{ color: "#FF3465", marginTop: "32px" }}
+									href={
+										buttons?.login.url || "https://app.copper.com/users/sign_in"
+									}
+									data-cy="general-menu-CTA--mobile"
+								>
+									{buttons?.login.text || "Login"}
+								</a>
 							</li>
 						</ul>
 					</div>
 					<div className="c-nav--mobile__sub">
-					{menu.map((mobileItems) => {
-						const itemKey = Object.keys(mobileItems);
-						const mobileItem = mobileItems[itemKey];
-						return (
-							<>
-								{mobileItem.render === true && (
-									<>
-										{mobileItem.dropdown?.length > 0 && (
-											<div className="c-nav__dropdown" id={`${mobileItem.dropdowntype}-mobile`} key={mobileItem.key}>
-												<ul>
-														<span className="c-nav__dropdown__title">{mobileItem.name}</span>
-													{mobileItem.dropdown.map(submenu => (
-															<a class="c-nav__dropdown__item" href={submenu.url} key={submenu.key}>
+						{menu.map((mobileItems) => {
+							const itemKey = Object.keys(mobileItems);
+							const mobileItem = mobileItems[itemKey];
+							return (
+								<>
+									{mobileItem.render === true && (
+										<>
+											{mobileItem.dropdown?.length > 0 && (
+												<div
+													className="c-nav__dropdown"
+													id={`${mobileItem.dropdowntype}-mobile`}
+													key={mobileItem.key}
+												>
+													<ul>
+														<span className="c-nav__dropdown__title">
+															{mobileItem.name}
+														</span>
+														{mobileItem.dropdown.map((submenu) => (
+															<a
+																className="c-nav__dropdown__item"
+																href={submenu.url}
+																key={submenu.key}
+															>
 																<li>{submenu.name}</li>
 															</a>
-														)
-													)}
-												</ul>
-											</div>
-										)}
-									</>
-								)}
-							</>
-						);
-					})}
+														))}
+													</ul>
+												</div>
+											)}
+										</>
+									)}
+								</>
+							);
+						})}
 					</div>
 				</div>
 			</nav>
@@ -744,7 +776,10 @@ const NavigationDefault = ({buttons}) => {
 															dropdowntype={item[itemKey].dropdowntype}
 														>
 															{item[itemKey].name}
-															<span className="carrot" style={{marginLeft:"0.25rem"}}>
+															<span
+																className="carrot"
+																style={{ marginLeft: "0.25rem" }}
+															>
 																<svg
 																	width="6px"
 																	height="4px"
@@ -820,18 +855,26 @@ const NavigationDefault = ({buttons}) => {
 								></div>
 								<span className="search-free-close"></span>
 							</div>
-							<ul class="c-nav__utility">
-								<a id="desktop-nav-main-CTA" class="c-button " href={buttons?.option.url || "https://www.copper.com/signup"} data-cy="general-menu-CTA">
-										<li>
-												{buttons?.option.text || "Try Free"}
-										</li>
+							<ul className="c-nav__utility">
+								<a
+									id="desktop-nav-main-CTA"
+									className="c-button "
+									href={buttons?.option.url || "https://www.copper.com/signup"}
+									data-cy="general-menu-CTA"
+								>
+									<li>{buttons?.option.text || "Try Free"}</li>
 								</a>
-								<a id="desktop-nav-main-CTA" class="c-nav__login " href={buttons?.login.url || "https://app.copper.com/users/sign_in"} data-cy="general-menu-CTA">
-										<li>
-												{buttons?.login.text || "Login"}
-										</li>
+								<a
+									id="desktop-nav-main-CTA"
+									className="c-nav__login "
+									href={
+										buttons?.login.url || "https://app.copper.com/users/sign_in"
+									}
+									data-cy="general-menu-CTA"
+								>
+									<li>{buttons?.login.text || "Login"}</li>
 								</a>
-              </ul>
+							</ul>
 						</div>
 						<div style={{ position: "relative", width: "100%" }}>
 							{menu.map((desktopSecondLevel) => {
@@ -875,10 +918,7 @@ const NavigationDefault = ({buttons}) => {
 																					src={ditem.icon}
 																				/>
 																				<div>
-																					<li key={ditem.key}>
-																						{ditem.name}{" "}
-																						
-																					</li>
+																					<li key={ditem.key}>{ditem.name} </li>
 																					<span className="c-nav__dropdown__detail">
 																						{ditem.description}
 																					</span>
@@ -917,9 +957,7 @@ const NavigationDefault = ({buttons}) => {
 																					src={ditem.icon}
 																				/>
 																				<div>
-																					<li key={ditem.key}>
-																						{ditem.name}{" "}
-																					</li>
+																					<li key={ditem.key}>{ditem.name} </li>
 																					<span className="c-nav__dropdown__detail">
 																						{ditem.description}
 																					</span>
@@ -958,9 +996,7 @@ const NavigationDefault = ({buttons}) => {
 																					src={ditem.icon}
 																				/>
 																				<div>
-																					<li key={ditem.key}>
-																						{ditem.name}{" "}
-																					</li>
+																					<li key={ditem.key}>{ditem.name} </li>
 																					<span className="c-nav__dropdown__detail">
 																						{ditem.description}
 																					</span>

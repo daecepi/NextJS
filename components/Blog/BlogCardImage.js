@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 const BlogCardImage = (props) => {
+	console.log("SUPER PROPS ", props);
 	return (
 		<div className="c-blog-card">
 			<a className="c-card__clickthrough" href={props.url}></a>
@@ -54,14 +55,14 @@ const BlogCardImage = (props) => {
 						) : (
 							<div className="circle-img c-author__img c-author__img background-100">
 								<span className="c-author__img--alt">
-									{(props, authorName)} {(props, authorLastName)}
+									{props.authorName} {props.authorLastName}
 								</span>
 							</div>
 						)}
 						<div className="c-author__meta">
 							<p className="p-sm  no-margin">
 								<strong>
-									{props.autorName} {props.authorLastName}
+									{props.authorName} {props.authorLastName}
 								</strong>
 							</p>
 							{props.authorTitle ? (

@@ -1,5 +1,21 @@
 /* purgecss start ignore */
 @tailwind base;
+$xs: 0px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+@mixin media-breakpoint-up($size) {
+	@media screen and (min-width: $size) {
+		@content;
+	}
+}
+@mixin media-breakpoint-down($size) {
+	@media screen and (max-width: $size) {
+		@content;
+	}
+}
+
 $grid-breakpoints: (
 	xs: 0,
 	sm: 576px,

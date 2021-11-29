@@ -9,15 +9,61 @@ import {
 	getBlogFormats,
 	getBlogEntries,
 	getBlogFeaturedEntries,
+	getEntryByType,
 } from "../../lib/api";
 import Footer from "../../components/Footer/Footer";
 import BlogFeaturedCard from "../../components/Blog/BlogFeaturedCard";
-import BlogLargeCardText from "../../components/Blog/BlogLargeCardText";
 import BlogAd from "../../components/Blog/BlogAd";
 
 const resources = (props) => {
-	console.log("daskdnjaksdnad");
-	console.log("featured images being sent ", props);
+	// console.log("daskdnjaksdnad");
+	console.log("featured images being sent ", props.entry);
+	const authorCard = (author) => {
+		console.log("AUTHRO RECEIVED ,", author);
+		const photoStyle =
+			(author.photo?.url && {
+				backgroundImage: `url('${author.photo.url}')`,
+			}) ||
+			undefined;
+		return (
+			<div className="c-author c-author--cickable relative">
+				<a
+					className="c-card__clickthrough"
+					href={`https://copper.com/blog/authors/${author.username}`}
+				></a>
+				{photoStyle ? (
+					<div
+						className="circle-img c-author__img"
+						style={{ ...photoStyle }}
+					></div>
+				) : (
+					<div className="circle-img c-author__img background-{{(author.id%2) +1}}">
+						<span v-if="!entry.author.photo" className="c-author__img--alt">
+							{author.name?.split(" ")[0] || ""}
+						</span>
+					</div>
+				)}
+				<div className="c-author__meta-container">
+					<div className="c-author__meta">
+						<p className="p-sm  no-margin">
+							<strong>
+								{author.firstName || ""} {author.lastName || ""}
+							</strong>
+						</p>
+						{author.authorTitle ? (
+							<p className="p-sm  no-margin">{author.authorTitle}</p>
+						) : (
+							<p className="p-sm  no-margin">Contributor</p>
+						)}
+					</div>
+					<div className="c-author__link">
+						<a className="t-link">See all articles</a>
+					</div>
+				</div>
+			</div>
+		);
+	};
+
 	return (
 		<>
 			<div className="ltr resources blog-body flex">
@@ -283,7 +329,7 @@ const resources = (props) => {
 									}
 									if (index > 3) {
 										return (
-											<div class="col-lg-6 col-xl-4 c-card-col order-md-last">
+											<div className="col-lg-6 col-xl-4 c-card-col order-md-last">
 												{item.featuredImage[0].url ? (
 													<BlogCardImage
 														imagegradient={item.imagegradient}
@@ -326,6 +372,44 @@ const resources = (props) => {
 									{/* <ad :link="adLink" :image="adImage" /> */}
 								</div>
 							</div>
+							<div className="row">
+								<div className="col-md-5 c-copper-chronicles__title">
+									<h3 style={{ fontSize: "20px", lineHeight: "30px" }}>
+										Authors
+									</h3>
+								</div>
+							</div>
+							<div className="row">
+								<Script
+									onLoad={() => {
+										console.log("IMPRESIVE ", props.entry?.featuredAuthors);
+									}}
+								/>
+								{props.entry?.featuredAuthors?.length ? (
+									<>
+										{props.entry.featuredAuthors.map((author) => {
+											return (
+												<div className="col-xl-6 col-lg-12 c-copper-chronicles__topics t-horizontal-line-above">
+													{authorCard(author)}
+												</div>
+											);
+										})}
+									</>
+								) : (
+									<div className="c-valign--middle">
+										<h4>There is no authors to feature right now</h4>
+									</div>
+								)}
+								<div className="col-md-12">
+									<div className="c-author c-author--cickable">
+										<div className="c-author__link c-author__link--all-authors">
+											<a className="t-link" href="/blog/authors">
+												See all authors
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 
@@ -340,6 +424,7 @@ export default resources;
 
 export async function getServerSideProps({ params }) {
 	// const blogInformation = await fetch(`copper.com/api/blog${pageNumber}.json`);
+	const entry = await getEntryByType("blogIndex", "blog-index");
 	const menuCategory = await getBlogCategoriesMenu();
 	const blogFormats = await getBlogFormats();
 	const blogEntries = await getBlogEntries();
@@ -348,6 +433,8 @@ export async function getServerSideProps({ params }) {
 
 	return {
 		props: {
+			entry: entry.entry || {},
+			globals: entry.globalSets || {},
 			menuCategory,
 			blogFormats,
 			blogEntries,

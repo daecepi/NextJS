@@ -59,11 +59,20 @@ const MarketoFormHero = ({
 										<div className="c-video ">
 											<div
 												className="wistia_responsive_padding"
-												style="padding:56.25% 0 0 0;position:relative;"
+												style={{
+													padding: "56.25% 0 0 0",
+													position: "relative",
+												}}
 											>
 												<div
 													className="wistia_responsive_wrapper"
-													style="height:100%;left:0;position:absolute;top:0;width:100%;"
+													style={{
+														height: "100%",
+														left: "0",
+														position: "absolute",
+														top: "0",
+														width: "100%",
+													}}
 												>
 													<iframe
 														src={heroValues.heroVideoUrl}
@@ -99,7 +108,7 @@ const MarketoFormHero = ({
 										style={{ position: "relative", left: "0px" }}
 									>
 										<img
-											style="object-fit: initial; height: auto;"
+											style={{ objectFit: "initial", height: "auto" }}
 											className={imageContain ? "h-image-contain" : ""}
 											src={specificImage.url}
 											alt={

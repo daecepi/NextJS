@@ -39,25 +39,36 @@ export default function MidMarkeCRM() {
 				ctaTwoUrl="/demos"
 				imageUrl="/imgs/segmentation/segmentation-mm-hero.jpg"
 			/>
-			<Customers title="The world’s fastest growing businesses choose Copper." companiesLogos={companiesLogos} />
-			<section class="c-jumble c-jumble-background--graphite c-jumble--align-right no-top-margin">
-				<div class="container">
-					<div class="c-jumble__container col-md-10 offset-md-2 no-padding">
-						<div class="c-jumble__content c-valign--middle">
-							<div class="row column-reverse">
-								<div class="col-md-5 order-md-2 relative">
-									<div class="c-image">
-										<Image src="/imgs/segmentation/segmentation-mm-jumble.png" width="478" height="465" />
+			<Customers
+				title="The world’s fastest growing businesses choose Copper."
+				companiesLogos={companiesLogos}
+			/>
+			<section className="c-jumble c-jumble-background--graphite c-jumble--align-right no-top-margin">
+				<div className="container">
+					<div className="c-jumble__container col-md-10 offset-md-2 no-padding">
+						<div className="c-jumble__content c-valign--middle">
+							<div className="row column-reverse">
+								<div className="col-md-5 order-md-2 relative">
+									<div className="c-image">
+										<Image
+											src="/imgs/segmentation/segmentation-mm-jumble.png"
+											width="478"
+											height="465"
+										/>
 									</div>
 								</div>
-								<div class="col-md-7 order-md-1">
-									<pre class="c-eyebrow c-eyebrow--light">SALES WORKFLOW AUTOMATION</pre>
+								<div className="col-md-7 order-md-1">
+									<pre className="c-eyebrow c-eyebrow--light">
+										SALES WORKFLOW AUTOMATION
+									</pre>
 									<h2>Hello productivity. Goodbye busy work.</h2>
 									<p>
-										Need to streamline your processes? Copper automates tasks and sales workflows, and even prompts you to follow up on next steps in
-										your relationship cycle to help every seller move deals forward faster.
+										Need to streamline your processes? Copper automates tasks
+										and sales workflows, and even prompts you to follow up on
+										next steps in your relationship cycle to help every seller
+										move deals forward faster.
 									</p>
-									<a class="t-link h-white" href="/productivity">
+									<a className="t-link h-white" href="/productivity">
 										Start Automating
 									</a>
 								</div>
@@ -108,7 +119,8 @@ export default function MidMarkeCRM() {
 				imageHeight="450"
 				quote={[
 					<span>
-						We can push out 10x the amount of work because of the <strong>automation</strong> in Copper.
+						We can push out 10x the amount of work because of the{" "}
+						<strong>automation</strong> in Copper.
 					</span>,
 				]}
 				quoteby="BEVERLY ROBINSON"
@@ -118,7 +130,10 @@ export default function MidMarkeCRM() {
 				backgroundColor="hot-pink"
 			></CaseStudy>
 
-			<CallOut title="Building better customer relationships today." smallTitle={true} />
+			<CallOut
+				title="Building better customer relationships today."
+				smallTitle={true}
+			/>
 
 			<NumbersSection
 				eyebrow="By The Numbers"
