@@ -69,7 +69,6 @@ const NavigationDefault = ({buttons}) => {
 			const navMobile = document.getElementById("navMobile");
 			navMobile.classList.add("z-index");
 		}
-		console.log("handleMobileSubMenu", event);
 	};
 
 	const handleSubMenuBack = event => {
@@ -525,7 +524,6 @@ const NavigationDefault = ({buttons}) => {
 							{menu.map((mobileItems) => {
 								const itemKey = Object.keys(mobileItems);
 								const mobileItem = mobileItems[itemKey];
-								console.log("mobileItem", mobileItem)
 								return (
 									<>
 										{mobileItem.render == true ? (
@@ -598,8 +596,8 @@ const NavigationDefault = ({buttons}) => {
 								);
 							})}
 							<li>
-								<a class="c-button " style={{color: "white", marginTop: "32px"}} href={buttons?.option.url || "https://www.copper.com/signup"} data-cy="general-menu-CTA--mobile">{buttons?.option.text || "Try Free"}</a>
-								<a class="c-button c-button--outline " style={{color: "#FF3465", marginTop: "32px"}} href={buttons?.login.url || "https://app.copper.com/users/sign_in"} data-cy="general-menu-CTA--mobile">{buttons?.login.text || "Login"}</a>
+								<a className="c-button " style={{color: "white", marginTop: "32px"}} href={buttons?.option.url || "https://www.copper.com/signup"} data-cy="general-menu-CTA--mobile">{buttons?.option.text || "Try Free"}</a>
+								<a className="c-button c-button--outline " style={{color: "#FF3465", marginTop: "32px"}} href={buttons?.login.url || "https://app.copper.com/users/sign_in"} data-cy="general-menu-CTA--mobile">{buttons?.login.text || "Login"}</a>
 							</li>
 						</ul>
 					</div>
@@ -616,7 +614,7 @@ const NavigationDefault = ({buttons}) => {
 												<ul>
 														<span className="c-nav__dropdown__title">{mobileItem.name}</span>
 													{mobileItem.dropdown.map(submenu => (
-															<a class="c-nav__dropdown__item" href={submenu.url} key={submenu.key}>
+															<a className="c-nav__dropdown__item" href={submenu.url} key={submenu.key}>
 																<li>{submenu.name}</li>
 															</a>
 														)
@@ -820,13 +818,13 @@ const NavigationDefault = ({buttons}) => {
 								></div>
 								<span className="search-free-close"></span>
 							</div>
-							<ul class="c-nav__utility">
-								<a id="desktop-nav-main-CTA" class="c-button " href={buttons?.option.url || "https://www.copper.com/signup"} data-cy="general-menu-CTA">
+							<ul className="c-nav__utility">
+								<a id="desktop-nav-main-CTA" className="c-button " href={buttons?.option.url || "https://www.copper.com/signup"} data-cy="general-menu-CTA">
 										<li>
 												{buttons?.option.text || "Try Free"}
 										</li>
 								</a>
-								<a id="desktop-nav-main-CTA" class="c-nav__login " href={buttons?.login.url || "https://app.copper.com/users/sign_in"} data-cy="general-menu-CTA">
+								<a id="desktop-nav-main-CTA" className="c-nav__login " href={buttons?.login.url || "https://app.copper.com/users/sign_in"} data-cy="general-menu-CTA">
 										<li>
 												{buttons?.login.text || "Login"}
 										</li>
