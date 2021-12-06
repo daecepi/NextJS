@@ -9,7 +9,6 @@ import { paragraphTextGetter } from "../helpers/propertyResolver";
 
 export default function CrmComparisonPage({ res }) {
 	const { entry } = res;
-	console.log("entry", entry);
 	return (
 		<>
 			<Head>
@@ -23,7 +22,7 @@ export default function CrmComparisonPage({ res }) {
 				copy={paragraphTextGetter(entry.heroText)}
 				ctaLight={true}
 				ctaOneText="Free Trial"
-				ctaOneUrl="https://www.copper.com/signup"
+				ctaOneUrl="/signup"
 				ctaTwoText="Request Demo"
 				ctaTwoUrl="/demos"
 				imageUrl={`https:${entry.crmHeroImage[0].url}`}
@@ -31,9 +30,12 @@ export default function CrmComparisonPage({ res }) {
 			<section className="c-list-card crm-comparison-cards">
 				<div className="container">
 					<div className="c-list-card__header c-align--center">
-						<h2 className="col-sm-10 t-center">Compare the most popular CRMs.</h2>
+						<h2 className="col-sm-10 t-center">
+							Compare the most popular CRMs.
+						</h2>
 						<p className="col-sm-8 t-center">
-							Get an idea of what other CRMs can and can't do to narrow down your options with a CRM feature comparison.
+							Get an idea of what other CRMs can and can't do to narrow down
+							your options with a CRM feature comparison.
 						</p>
 					</div>
 					<div className="row">
@@ -56,13 +58,18 @@ export default function CrmComparisonPage({ res }) {
 						<div className="c-quote-carousel__content row">
 							<div className="container">
 								<div className="col-md-11 offset-md-1">
-									<pre className="c-eyebrow c-eyebrow--light">Customer Story</pre>
+									<pre className="c-eyebrow c-eyebrow--light">
+										Customer Story
+									</pre>
 								</div>
 								<div className="c-quote-carousel__group">
 									{entry.customerStories.map((story, index) => {
 										console.log(story);
 										return (
-											<div className="row c-quote-carousel__group--item" key={index}>
+											<div
+												className="row c-quote-carousel__group--item"
+												key={index}
+											>
 												<div className="c-quote-carousel__group--item-image col-md-4 offset-md-1">
 													{story.customerImage && (
 														<img
@@ -76,9 +83,13 @@ export default function CrmComparisonPage({ res }) {
 												<div className="c-quote-carousel__blockquote col-md-7 c-valign--middle">
 													<div className="c-quote-carousel__blockquote--item">
 														<cite>
-															<blockquote>{paragraphTextGetter(story.customerQuote)}</blockquote>
+															<blockquote>
+																{paragraphTextGetter(story.customerQuote)}
+															</blockquote>
 															{story.customerName}{" "}
-															<span className="c-quote-carousel__blockquote--position">{story.customerPosition}</span>
+															<span className="c-quote-carousel__blockquote--position">
+																{story.customerPosition}
+															</span>
 														</cite>
 														<div className="c-quote-carousel__blockquote--logo">
 															{story.customerCompanyLogo?.length > 0 && (
@@ -103,7 +114,10 @@ export default function CrmComparisonPage({ res }) {
 				<div className="container">
 					<div className="c-list-card__header">
 						<h2 className="t-center">Copper features</h2>
-						<p className="t-center">All of the CRM Features and CRM Capabilities are included with your free trial.</p>
+						<p className="t-center">
+							All of the CRM Features and CRM Capabilities are included with
+							your free trial.
+						</p>
 					</div>
 					<div className="row">
 						{entry.copperFeatures.map((feature) => {
@@ -117,7 +131,9 @@ export default function CrmComparisonPage({ res }) {
 										{feature.featureList.map((item) => (
 											<div className="c-list-card__copy">
 												<h4>{item.title && item.title}</h4>
-												<p className="p-sm">{item.paragraph && item.paragraph}</p>
+												<p className="p-sm">
+													{item.paragraph && item.paragraph}
+												</p>
 											</div>
 										))}
 									</div>
@@ -137,7 +153,10 @@ export default function CrmComparisonPage({ res }) {
 				<div class="container">
 					<div class="row">
 						<div class="col-md order-2">
-							<div class="c-image c-image--center sl_swap" id="home-customer-logos">
+							<div
+								class="c-image c-image--center sl_swap"
+								id="home-customer-logos"
+							>
 								{entry.lastModuleImage[0] ? (
 									<Image
 										src={`https:${entry.lastModuleImage[0].url}`}
@@ -147,8 +166,16 @@ export default function CrmComparisonPage({ res }) {
 									/>
 								) : (
 									<picture>
-										<source type="image/webp" srcset="/imgs/home-logos.webp" alt="Customer logos" />
-										<source type="image/png" srcset="/imgs/home-logos.png" alt="Customer logos" />
+										<source
+											type="image/webp"
+											srcset="/imgs/home-logos.webp"
+											alt="Customer logos"
+										/>
+										<source
+											type="image/png"
+											srcset="/imgs/home-logos.png"
+											alt="Customer logos"
+										/>
 										<img src="/imgs/home-logos.png" alt="Customer logos" />
 									</picture>
 								)}
@@ -173,7 +200,10 @@ export default function CrmComparisonPage({ res }) {
 }
 
 export async function getStaticProps(context) {
-	const res = await getEntryByType("crmComparisonIndex", "crm-comparison-index");
+	const res = await getEntryByType(
+		"crmComparisonIndex",
+		"crm-comparison-index"
+	);
 	return {
 		props: {
 			res,
