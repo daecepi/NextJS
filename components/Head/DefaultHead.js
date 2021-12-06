@@ -150,9 +150,7 @@ const DefaultHead = ({ entry, globals }) => {
 						<meta
 							property="article:published_time"
 							content={
-								entry.postDate
-									? new Date(entry.postDate).format("F jS \\a\\t g:ia")
-									: ""
+								entry.postDate ? new Date(entry.postDate).toISOString() : ""
 							}
 						/>
 
@@ -319,28 +317,28 @@ const DefaultHead = ({ entry, globals }) => {
 					{/* OneTrust Cookies Consent Notice end for copper.com */}
 					<Script
 						type="text/plain"
-						class="optanon-category-C0005"
+						className="optanon-category-C0005"
 						onLoad={() => {
 							document.cookie = "Social Media Cookies - Social Media Cookie 1";
 						}}
 					></Script>
 					<Script
 						type="text/plain"
-						class="optanon-category-C0004"
+						className="optanon-category-C0004"
 						onLoad={() => {
 							document.cookie = "Targeting Cookie - Targeting Cookie 1";
 						}}
 					></Script>
 					<Script
 						type="text/plain"
-						class="optanon-category-C0003"
+						className="optanon-category-C0003"
 						onLoad={() => {
 							document.cookie = "Functional Cookie - Functional Cookie 1";
 						}}
 					></Script>
 					<Script
 						type="text/plain"
-						class="optanon-category-C0002"
+						className="optanon-category-C0002"
 						onLoad={() => {
 							document.cookie = "Performance Cookie - Performance Cookie 1";
 						}}

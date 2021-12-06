@@ -69,32 +69,37 @@ const TrackLeads = () => {
 					</div>
 				</div>
 			</section>
-				<TwoColModule
-					eyebrow="AUTOMATED FOLLOW-UPS"
-					richText={
-						<div>
-							<h2>Never drop the ball.</h2>
-							<p>Copper speeds up follow-ups with email templates and sets reminders for you to stay on top of hot deals and respond to customers without missing a beat. Say goodbye to lost deals, and hello to keeping customers around longer!</p>
-							<ul class="bullets--hot-pink">
-								<li>Personalized email templates</li>
-								<li>Automatically set reminders based off any trigger</li>
-								<li>Assign time-based tasks without lifting a finger</li>
-							</ul>
-						</div>
-					}
-					image={[
-						{
-							url: "/imgs/product/200309_TrackDeals_UI02.png",
-							title: "Track deals image 4",
-						},
-					]}
-					backgroundColor={[{slug:"product-page"}]}
-					imageWidth="641"
-					imageHeight="510"
-					imageOrientation="dropRight"
-					slug={"track-leads"}
-					loopIndex={0}
-				/>
+			<TwoColModule
+				eyebrow="AUTOMATED FOLLOW-UPS"
+				richText={
+					<div>
+						<h2>Never drop the ball.</h2>
+						<p>
+							Copper speeds up follow-ups with email templates and sets
+							reminders for you to stay on top of hot deals and respond to
+							customers without missing a beat. Say goodbye to lost deals, and
+							hello to keeping customers around longer!
+						</p>
+						<ul className="bullets--hot-pink">
+							<li>Personalized email templates</li>
+							<li>Automatically set reminders based off any trigger</li>
+							<li>Assign time-based tasks without lifting a finger</li>
+						</ul>
+					</div>
+				}
+				image={[
+					{
+						url: "/imgs/product/200309_TrackDeals_UI02.png",
+						title: "Track deals image 4",
+					},
+				]}
+				backgroundColor={[{ slug: "product-page" }]}
+				imageWidth="641"
+				imageHeight="510"
+				imageOrientation="dropRight"
+				slug={"track-leads"}
+				loopIndex={0}
+			/>
 			<ProductTwoUp>
 				<TwoUp
 					eyebrow="ISUAL SALES PIPELINES"
@@ -124,27 +129,35 @@ const TrackLeads = () => {
 				backgroundColor="indigo"
 			></CaseStudy>
 
-				<TwoColModule
-					eyebrow="KEEP THINGS MOVING"
-					richText={
-						<div>
-							<h2>Always know<br/>your next step.</h2>
-							<p>Stay on top of hot deals and close them faster thanks to Copper’s recommendations, which suggest next steps based on upcoming meetings, tasks, and overdue email responses.</p>
-						</div>
-					}
-					image={[
-						{
-							url: "/imgs/product/200309_TrackDeals_UI04.png",
-							title: "Always know your next step image",
-						},
-					]}
-					backgroundColor={[{slug:"product-page"}]}
-					imageWidth="540"
-					imageHeight="560"
-					imageOrientation="right"
-					slug={"track-leads"}
-					loopIndex={0}
-				/>
+			<TwoColModule
+				eyebrow="KEEP THINGS MOVING"
+				richText={
+					<div>
+						<h2>
+							Always know
+							<br />
+							your next step.
+						</h2>
+						<p>
+							Stay on top of hot deals and close them faster thanks to Copper’s
+							recommendations, which suggest next steps based on upcoming
+							meetings, tasks, and overdue email responses.
+						</p>
+					</div>
+				}
+				image={[
+					{
+						url: "/imgs/product/200309_TrackDeals_UI04.png",
+						title: "Always know your next step image",
+					},
+				]}
+				backgroundColor={[{ slug: "product-page" }]}
+				imageWidth="540"
+				imageHeight="560"
+				imageOrientation="right"
+				slug={"track-leads"}
+				loopIndex={0}
+			/>
 			<ThreeColList
 				title="Know what you need to do to close deals faster."
 				linkUrl="/features"

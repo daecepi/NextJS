@@ -31,7 +31,7 @@ const BlogCardText = (props) => {
 						<div className="c-author__meta">
 							<p className="p-sm  no-margin">
 								<strong>
-									{props.autorName} {props.authorLastName}
+									{props.authorName} {props.authorLastName}
 								</strong>
 							</p>
 							{props.authorTitle ? (

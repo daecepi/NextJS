@@ -105,7 +105,7 @@ export default function CorporateDevCrm({}) {
 				slug={"corporate-development-crm"}
 				loopIndex={0}
 				forcedCtas={
-					<a href="/blog/storm-ventures-case-study" class="t-link">
+					<a href="/blog/storm-ventures-case-study" className="t-link">
 						How Storm Ventures focused on acquisitions.
 					</a>
 				}
@@ -165,18 +165,18 @@ export default function CorporateDevCrm({}) {
 				slug={"corporate-development-crm"}
 				loopIndex={0}
 				forcedCtas={
-					<a href="/blog/storm-ventures-case-study" class="t-link">
+					<a href="/blog/storm-ventures-case-study" className="t-link">
 						How Storm Ventures focused on acquisitions.
 					</a>
 				}
 			/>
-			<section class="c-jumble c-jumble-background--graphite c-jumble--align-left no-top-margin extra-bottom-margin">
-				<div class="container">
-					<div class="c-jumble__container col-md-10 no-padding">
-						<div class="c-jumble__content c-valign--middle">
-							<div class="row">
-								<div class="col-md-6 order-md-2">
-									<div class="c-panel__image c-panel__image--sm-padding c-panel--top--mint c-valign--middle rectangle--mint rectangle--bottom--left">
+			<section className="c-jumble c-jumble-background--graphite c-jumble--align-left no-top-margin extra-bottom-margin">
+				<div className="container">
+					<div className="c-jumble__container col-md-10 no-padding">
+						<div className="c-jumble__content c-valign--middle">
+							<div className="row">
+								<div className="col-md-6 order-md-2">
+									<div className="c-panel__image c-panel__image--sm-padding c-panel--top--mint c-valign--middle rectangle--mint rectangle--bottom--left">
 										<picture>
 											<source
 												type="image/webp"
@@ -195,7 +195,7 @@ export default function CorporateDevCrm({}) {
 										</picture>
 									</div>
 								</div>
-								<div class="col-md-6 order-md-1">
+								<div className="col-md-6 order-md-1">
 									<h2>Secure, even by Google Cloud's standards.</h2>
 								</div>
 							</div>

@@ -178,13 +178,13 @@ const testimonialSlider = ({ eyebrow, contentCopy, sliderContent }) => {
 		<>
 			<section
 				className="c-case-study c-case-study--align-left home-quote"
-				style="margin-bottom: 150px;"
+				style={{ marginBottom: "150px" }}
 			>
 				<div className="container colorblock--eggplant">
 					<div className="c-case-study__container col-md-12 no-padding">
 						<div
 							className="c-case-study__content c-valign--middle no-top-padding no-bottom-padding"
-							style="padding-bottom: 0px;"
+							style={{ paddingBottom: "0px" }}
 						>
 							<div className="row row-eq-height md-with-spacing">
 								<div className="col-md-4">
@@ -192,7 +192,13 @@ const testimonialSlider = ({ eyebrow, contentCopy, sliderContent }) => {
 										{eyebrow}
 									</pre>
 									<div className="c-panel__blockquote c-valign--middle">
-										<h1 style="color: white;font-size: 52px; line-height: 64px;">
+										<h1
+											style={{
+												color: "white",
+												fontSize: "52px",
+												lineHeight: "64px",
+											}}
+										>
 											{contentCopy}
 										</h1>
 									</div>

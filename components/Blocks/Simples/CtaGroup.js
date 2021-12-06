@@ -1,11 +1,17 @@
+import { linkitButtonPropertyGetter } from "../../../helpers/propertyResolver";
+
 const CtaGroup = (ctas) => {
+	// In case the component is called with no params or not array return
+	if (!ctas?.length) return "";
+
+	// Appropiate return for the component with its validations
 	return (
 		<div className="c-hero__buttons">
 			{ctas.map((cta) => {
-				const convertedCta = linkitButtonPropertyGetter(cta);
-				switch (key) {
+				const convertedCta = linkitButtonPropertyGetter(convertedCta);
+				switch (cta.handleType) {
 					case "ctas":
-						let buttonColor = cta.buttonColor[0] || "white";
+						let buttonColor = convertedCtaColor[0] || "white";
 						if (cta.modalTrigger) {
 							return (
 								<a
@@ -16,14 +22,14 @@ const CtaGroup = (ctas) => {
 									}`}
 									href="/demos"
 								>
-									{cta.button.text}
+									{convertedCta?.text || ""}
 								</a>
 							);
 						} else {
 							{
 								/* Check if the cta have the try free string to add the sendUTMsToAmplitude class */
 							}
-							if (cta.button.text.toLowerCase() === "try free") {
+							if (convertedCta.text.toLowerCase() === "try free") {
 								return (
 									<a
 										className={`c-button ${
@@ -31,10 +37,14 @@ const CtaGroup = (ctas) => {
 										} sendUTMsToAmplitude c-button--${buttonColor} ${
 											cta.takeBackgroundColor ? "section-background-flavor" : ""
 										}`}
-										target={cta.button.target == 1 ? "_blank" : undefined}
-										href={cta.button.url}
+										target={
+											convertedCta?.target && convertedCta.target == 1
+												? "_blank"
+												: undefined
+										}
+										href={convertedCta?.url || ""}
 									>
-										{cta.button.text}
+										{convertedCta?.text || ""}
 									</a>
 								);
 							} else {
@@ -45,10 +55,14 @@ const CtaGroup = (ctas) => {
 										}  c-button--${buttonColor} ${
 											cta.takeBackgroundColor ? "section-background-flavor" : ""
 										} `}
-										target={cta.button.target == 1 ? "_blank" : undefined}
-										href={cta.button.url}
+										target={
+											convertedCta?.target && convertedCta.target == 1
+												? "_blank"
+												: undefined
+										}
+										href={convertedCta?.url || ""}
 									>
-										{cta.button.text}
+										{convertedCta?.text || ""}
 									</a>
 								);
 							}
@@ -60,8 +74,12 @@ const CtaGroup = (ctas) => {
 						return (
 							<a
 								className="c-button-image"
-								target={`${cta.button.target === 1 ? "_blank" : undefined}`}
-								href={cta.button.url}
+								target={`${
+									convertedCta?.target && convertedCta.target === 1
+										? "_blank"
+										: undefined
+								}`}
+								href={convertedCta?.url || ""}
 							>
 								<img
 									src={image.url}
@@ -74,13 +92,17 @@ const CtaGroup = (ctas) => {
 						return (
 							<div className="flex-column">
 								<a
-									target={`${cta.button.target === 1 ? "_blank" : undefined}`}
-									href={cta.button.url}
+									target={`${
+										convertedCta?.target && convertedCta.target === 1
+											? "_blank"
+											: undefined
+									}`}
+									href={convertedCta?.url || ""}
 									className={`t-link ${
 										cta.ctaRemoveUnderline ? "no-underline" : ""
 									}`}
 								>
-									{cta.button.text}
+									{convertedCta?.text || ""}
 								</a>
 							</div>
 						);

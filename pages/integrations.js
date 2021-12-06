@@ -575,34 +575,34 @@ export default function Integrations() {
 				company="TAS TRADESOFT"
 				backgroundColor="indigo"
 			/>
-			<section class="c-cols c-cols-alternate product-page product-page-section">
-				<div class="container">
-					<div class="row extra-padding--bottom">
-						<div class="col-md-6 order-2">
-							<div class="c-image c-image--drop-right">
+			<section className="c-cols c-cols-alternate product-page product-page-section">
+				<div className="container">
+					<div className="row extra-padding--bottom">
+						<div className="col-md-6 order-2">
+							<div className="c-image c-image--drop-right">
 								<picture>
 									<source
 										type="image/webp"
 										srcset="https://copper.objects.frb.io/imgs/integrations/200309_Integrations_UI02.webp"
-										class="drop-right__img img-no-shadow"
+										className="drop-right__img img-no-shadow"
 										alt="Integration image 2"
 									/>
 									<source
 										type="image/png"
 										srcset="https://copper.objects.frb.io/imgs/integrations/200309_Integrations_UI02.png"
-										class="drop-right__img img-no-shadow"
+										className="drop-right__img img-no-shadow"
 										alt="Integration image 2"
 									/>
 									<img
-										class="drop-right__img img-no-shadow"
+										className="drop-right__img img-no-shadow"
 										src="https://copper.objects.frb.io/imgs/integrations/200309_Integrations_UI02.png"
 										alt="Integration image 2"
 									/>
 								</picture>
 							</div>
 						</div>
-						<div class="col-md-5 c-valign--middle order-1">
-							<pre class="c-eyebrow c-eyebrow--dark">MOBILE APPS</pre>
+						<div className="col-md-5 c-valign--middle order-1">
+							<pre className="c-eyebrow c-eyebrow--dark">MOBILE APPS</pre>
 							<h2>
 								Take your business tools
 								<br />
@@ -615,26 +615,26 @@ export default function Integrations() {
 								application can help you with data integration and connection to
 								every customer.
 							</p>
-							<div class="row">
-								<div class="col-6 c-valign--middle">
+							<div className="row">
+								<div className="col-6 c-valign--middle">
 									<a
 										href="https://apps.apple.com/us/app/copper/id941438829"
 										target="_blank"
 									>
 										<img
-											class="img-fluid"
+											className="img-fluid"
 											src="/imgs/product/Download_on_the_App_Store_Badge.svg"
 											alt="Download on the app store image"
 										/>
 									</a>
 								</div>
-								<div class="col-6 c-valign--middle">
+								<div className="col-6 c-valign--middle">
 									<a
 										href="https://chrome.google.com/webstore/detail/copper-crm-for-gmail/hpfmedbkgaakgagknibnonpkimkibkla?hl=en"
 										target="_blank"
 									>
 										<img
-											class="img-fluid"
+											className="img-fluid"
 											src="/imgs/product/google-play-badge-01.svg"
 											alt="Google play badge image"
 										/>

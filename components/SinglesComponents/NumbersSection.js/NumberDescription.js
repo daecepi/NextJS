@@ -19,16 +19,16 @@ const NumbersTable = ({ numberBoxes }) => {
 		<>
 			{numberBoxPairDivision.map((pair) => {
 				return (
-					<div class="row">
+					<div className="row">
 						{pair?.length
 							? pair.map((numberBox, index) => {
 									return (
 										<div
-											class={`c-number col-md-5 ${
+											className={`c-number col-md-5 ${
 												index % 2 !== 0 ? "offset-md-1" : ""
 											}`}
 										>
-											<span class="t-numbers">{numberBox.number}</span>
+											<span className="t-numbers">{numberBox.number}</span>
 											<p>{numberBox.subText}</p>
 										</div>
 									);

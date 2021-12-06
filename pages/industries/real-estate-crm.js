@@ -107,7 +107,7 @@ const RealEstateCrm = () => {
 				slug={"real=estate-crm"}
 				loopIndex={0}
 				forcedCtas={
-					<a href="/blog/houwzer-case-study" class="t-link">
+					<a href="/blog/houwzer-case-study" className="t-link">
 						See how Howzer grew their real estate agent team
 					</a>
 				}
@@ -137,7 +137,7 @@ const RealEstateCrm = () => {
 				imageHeigh="1082"
 				imageOrientation={"right"}
 				forcedCtas={
-					<a href="/blog/reali-case-study" class="t-link">
+					<a href="/blog/reali-case-study" className="t-link">
 						Watch how Reali strengthens relationships.
 					</a>
 				}
@@ -168,7 +168,7 @@ const RealEstateCrm = () => {
 				slug={"real-estate-crm"}
 				loopIndex={0}
 				forcedCtas={
-					<a href="/blog/remax-realtor-copper-piesync" class="t-link">
+					<a href="/blog/remax-realtor-copper-piesync" className="t-link">
 						How this Remax realtor utilizes Copper on the road
 					</a>
 				}

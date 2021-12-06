@@ -13,11 +13,11 @@ const SingleTwoColCraft = ({
 	return (
 		<>
 			{/* Customers block */}
-			<section class="c-cols no-bottom-padding">
-				<div class="container">
-					<div class="row">
-						<div class="col-md order-2">
-							<div class="c-image c-image--center no-embelleshment">
+			<section className="c-cols no-bottom-padding">
+				<div className="container">
+					<div className="row">
+						<div className="col-md order-2">
+							<div className="c-image c-image--center no-embelleshment">
 								{forcedImage ? (
 									forcedImage
 								) : (
@@ -25,7 +25,7 @@ const SingleTwoColCraft = ({
 								)}
 							</div>
 						</div>
-						<div class="col-md order-1">
+						<div className="col-md order-1">
 							{eyebrow?.length ? <pre className="c-eyebrow">{}</pre> : ""}
 							<h2>{title}</h2>
 							<p>{description}</p>

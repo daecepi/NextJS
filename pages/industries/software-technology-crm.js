@@ -105,7 +105,7 @@ export default function SoftwareTechCrm({}) {
 				slug={"software-technology-crm"}
 				loopIndex={0}
 				forcedCtas={
-					<a href="/resources/lumapps-case-study" class="t-link">
+					<a href="/resources/lumapps-case-study" className="t-link">
 						LumApps manages 2,000% lead growth with Copper
 					</a>
 				}
@@ -134,7 +134,7 @@ export default function SoftwareTechCrm({}) {
 				imageHeigh="1082"
 				imageOrientation={"right"}
 				forcedCtas={
-					<a href="/blog/onesupport-growth-case-study" class="t-link">
+					<a href="/blog/onesupport-growth-case-study" className="t-link">
 						How OneSupport grew subscribers by 173%
 					</a>
 				}

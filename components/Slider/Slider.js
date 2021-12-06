@@ -96,7 +96,7 @@ const Slider = ({
 														<div className="c-card__entry-title">
 															<h4
 																className="multiple-2-card-trailer"
-																style="width: 288px"
+																style={{ width: "288px" }}
 															>
 																{review.reviewTitle}
 															</h4>
@@ -144,7 +144,11 @@ const Slider = ({
 							</a>{" "}
 							on{" "}
 							<img
-								style="height: 28px; width: 100px; display: inline-block;"
+								style={{
+									height: "28px",
+									width: "100px",
+									display: "inline-block",
+								}}
 								alt="G2 slider logo"
 								src="imgs/slider/G2-logo.svg"
 							/>
