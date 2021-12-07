@@ -1,13 +1,15 @@
 import Head from "next/head";
 import Image from "next/image";
+import { useRecoilValue } from "recoil";
 import HeroProduct from "../components/Blocks/HeroTypes/HeroProduct";
 import Footer from "../components/Footer/Footer";
 import NavigationDefault from "../components/Navigation/NavigationDefault";
 import { linkitButtonPropertyGetter } from "../helpers/propertyResolver";
 import { getEntryByType } from "../lib/api";
-import { useRecoilValue } from "recoil";
+import { SyncedAtom } from "../contexts/SyncContext";
 
 export default function Features({ res }) {
+	const syncedAtom = useRecoilValue(SyncedAtom);
 	const { entry } = res;
 	return (
 		<>
@@ -124,7 +126,7 @@ export default function Features({ res }) {
 							<div className="c-hero__buttons">
 								<a
 									className="c-button c-button--white"
-									href="{syncedAtom.generalSignupUrl}"
+									href={syncedAtom.generalSignupUrl}
 								>
 									Get Started
 								</a>
