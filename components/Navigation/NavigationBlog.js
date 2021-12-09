@@ -139,7 +139,7 @@ const NavigationBlog = (props) => {
 										function (form) {
 											$("#mktoForm_1942 #Email").after(
 												'<button type="submit" id="newsletter-submit" class="c-form-blog__submit">' +
-													'<i class="material-icons" style="font-family:Material Icons">' +
+													'<i class="material-icons" font-family:Material Icons">' +
 													"arrow_forward" +
 													"</i>" +
 													"</button>"

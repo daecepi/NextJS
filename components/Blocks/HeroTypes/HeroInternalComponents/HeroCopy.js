@@ -1,6 +1,7 @@
 import CtaGroup from "../../Simples/CtaGroup";
 
-import { useSyncContext } from "../../../../contexts/SyncContext";
+import { SyncedAtom } from "../../../../contexts/SyncContext";
+import { useRecoilValue } from "recoil";
 
 const HeroCopy = ({
 	slug,
@@ -17,13 +18,11 @@ const HeroCopy = ({
 	specialBulletsText,
 }) => {
 	console.log("richtext ", richText);
+	const syncedAtom = useRecoilValue(SyncedAtom);
 	let firstEyebrowToTakePlace =
 		eyebrowSettings && eyebrowSettings[0]?.eyebrowColor[0]?.slug
 			? eyebrowSettings[0].eyebrowColor[0].slug
 			: { eyebrowColor: [{ slug: "white" }] };
-
-	// Synced context
-	const syncedContext = useSyncContext();
 
 	const printCtaGroup = () => {
 		if (forceCtas) {
@@ -39,7 +38,7 @@ const HeroCopy = ({
 		} else if (slug == "free-trial-pers") {
 			<a
 				className="c-button c-button--large sendUTMsToAmplitude"
-				href={syncedContext.generalSignupUrl}
+				href={syncedAtom.generalSignupUrl}
 			>
 				Try Free
 			</a>;

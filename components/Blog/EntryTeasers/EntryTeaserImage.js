@@ -1,3 +1,4 @@
+import { generateOneOrZero } from "../../../helpers";
 import TeaserImage from "./TeaserImage";
 
 const EntryTeaserImage = ({
@@ -51,7 +52,11 @@ const EntryTeaserImage = ({
 									}}
 								></div>
 							) : (
-								<div className="circle-img c-author__img c-author__img--x-small background-{{random(1)+1}}">
+								<div
+									className={`circle-img c-author__img c-author__img--x-small background-${
+										generateOneOrZero(0) + 1
+									}`}
+								>
 									<span
 										v-if="!entryTeaserAuthorToUse.photo"
 										className="c-author__img--alt"

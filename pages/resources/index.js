@@ -37,7 +37,11 @@ const resources = (props) => {
 						style={{ ...photoStyle }}
 					></div>
 				) : (
-					<div className="circle-img c-author__img background-{{(author.id%2) +1}}">
+					<div
+						className={`circle-img c-author__img background-${
+							(author.id % 2) + 1
+						}`}
+					>
 						<span v-if="!entry.author.photo" className="c-author__img--alt">
 							{author.name?.split(" ")[0] || ""}
 						</span>
@@ -434,7 +438,7 @@ export async function getServerSideProps({ params }) {
 	return {
 		props: {
 			entry: entry.entry || {},
-			globals: entry.globalSets || {},
+			globals: entry.globalSets || [],
 			menuCategory,
 			blogFormats,
 			blogEntries,

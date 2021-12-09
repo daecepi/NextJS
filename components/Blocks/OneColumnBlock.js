@@ -59,7 +59,7 @@ const OneColumnBlock = ({
 					{copy ? <div dangerouslySetInnerHTML={{ __html: copy }}></div> : ""}
 					{entries.map((entry) => {
 						console.log("Entry received ", entry);
-						return entry.type === "Video" ? (
+						return entry.typeHandle === "Video" ? (
 							<VideoSimple {...entry} />
 						) : (
 							<ImageSimple {...entry} />

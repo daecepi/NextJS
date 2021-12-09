@@ -374,7 +374,7 @@
 	.spacer {
 		width: 40px;
 
-		@include media-breakpoint-down(lg) {
+		@include media-breakpoint-down(xl) {
 			display: none;
 		}
 	}

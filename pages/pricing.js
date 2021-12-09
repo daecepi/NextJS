@@ -2,8 +2,9 @@ import NavigationDefault from "../components/Navigation/NavigationDefault";
 
 import Script from "next/script";
 import Head from "next/head";
+import { getStaticProps } from "./webinars/[webinarSlug]";
 
-const PricingPage = ({ res }) => {
+const PricingPage = ({ entry, globals }) => {
 	let priceValidity = new Date(
 		new Date().getTime() + 12 * 30 * 24 * 60 * 60 * 1000
 	);
@@ -3701,3 +3702,9 @@ background-image: linear-gradient(to bottom, #75ae4c, #99c47c);
 };
 
 export default PricingPage;
+
+export function getStaticProps({ context }) {
+	return {
+		props: {},
+	};
+}
