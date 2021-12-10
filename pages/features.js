@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import { useRecoilValue } from "recoil";
 import HeroProduct from "../components/Blocks/HeroTypes/HeroProduct";
 import Footer from "../components/Footer/Footer";
@@ -70,16 +71,17 @@ export default function Features({ res }) {
 										<pre className="c-plain-eyebrow">{feature.pricingPlan}</pre>
 									)}
 									{feature.featureDetailLink ? (
-										<a
-											className="t-link--volt__container"
+										<Link
 											href={`${
 												linkitButtonPropertyGetter(feature.featureDetailLink)
 													.href
 											}`}
 										>
-											<h4 className="t-link--volt__link">{feature.title}</h4>
-											<p className="p-sm">{feature.paragraph}</p>
-										</a>
+											<a className="t-link--volt__container">
+												<h4 className="t-link--volt__link">{feature.title}</h4>
+												<p className="p-sm">{feature.paragraph}</p>
+											</a>
+										</Link>
 									) : (
 										<>
 											<h4>{feature.title}</h4>
@@ -124,15 +126,14 @@ export default function Features({ res }) {
 								No credit card required. Start your 14-day free trial today.
 							</p>
 							<div className="c-hero__buttons">
-								<a
-									className="c-button c-button--white"
-									href={syncedAtom.generalSignupUrl}
-								>
-									Get Started
-								</a>
-								<a className="c-button c-button--white-outline" href="/demos">
-									Request Demo
-								</a>
+								<Link href={syncedAtom.generalSignupUrl}>
+									<a className="c-button c-button--white">Get Started</a>
+								</Link>
+								<Link href="/demos">
+									<a className="c-button c-button--white-outline" href="/demos">
+										Request Demo
+									</a>
+								</Link>
 							</div>
 						</div>
 					</div>

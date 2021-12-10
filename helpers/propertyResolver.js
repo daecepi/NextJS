@@ -1,17 +1,36 @@
+const TEXT_INSIDE_TAG_REGEX = /(?<=\>)(?!\<)(.*)(?=\<)(?<!\>)/g;
+const HREF_REGEX = /(?<=href=")([^\'\"]+)/g;
 export const linkitButtonPropertyGetter = (linkitString) => {
 	// Verifies string structure
-	if (linkitString.includes("class") && !linkitString.includes('href="') && !linkitString.includes("</a>"))
+	if (
+		linkitString.includes("class") &&
+		!linkitString.includes('href="') &&
+		!linkitString.includes("</a>")
+	)
 		return undefined;
 	const baseIndex = linkitString.lastIndexOf('">');
-	const href = linkitString.substring(linkitString.indexOf('href="') + 6, baseIndex);
-	const value = linkitString.substring(baseIndex + 2, linkitString.indexOf("</a>"));
+	const href = linkitString.substring(
+		linkitString.indexOf('href="') + 6,
+		baseIndex
+	);
+	const value = linkitString.substring(
+		baseIndex + 2,
+		linkitString.indexOf("</a>")
+	);
 	return { href, value };
 };
 
-export const paragraphTextGetter = (paragraphString) => {
-	if (paragraphString.includes("class") && !paragraphString.includes("</p>")) return undefined;
+export const getLink = (ancorText) => {
+	const href = ancorText.match(TEXT_INSIDE_TAG_REGEX)[0];
+	const value = ancorText.match(HREF_REGEX)[0];
+	return { href, value };
+};
 
-	const baseIndex = paragraphString.lastIndexOf("<p>");
-	const text = paragraphString.substring(baseIndex + 3, paragraphString.indexOf("</p>"));
-	return text;
+export const getTagText = (tagString) => {
+	const found = tagString.match(TEXT_INSIDE_TAG_REGEX)?.[0];
+	return found;
+};
+
+export const addHTTPStoUrl = (url) => {
+	if (url.startsWith("//")) return url.replace("//", "https://");
 };

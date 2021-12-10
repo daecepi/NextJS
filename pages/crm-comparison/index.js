@@ -1,11 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
-import HeroProduct from "../components/Blocks/HeroTypes/HeroProduct";
-import Footer from "../components/Footer/Footer";
-import CrmCard from "../components/Cards/CrmCard";
-import NavigationDefault from "../components/Navigation/NavigationDefault";
-import { getEntryByType } from "../lib/api";
-import { paragraphTextGetter } from "../helpers/propertyResolver";
+import HeroProduct from "../../components/Blocks/HeroTypes/HeroProduct";
+import Footer from "../../components/Footer/Footer";
+import CrmCard from "../../components/Cards/CrmCard";
+import NavigationDefault from "../../components/Navigation/NavigationDefault";
+import { getEntryByType } from "../../lib/api";
+import { getTagText } from "../../helpers/propertyResolver";
 
 export default function CrmComparisonPage({ res }) {
 	const { entry } = res;
@@ -19,7 +19,7 @@ export default function CrmComparisonPage({ res }) {
 				backgroundColor="mint"
 				eyebrow={entry.eyebrow}
 				title={entry.header}
-				copy={paragraphTextGetter(entry.heroText)}
+				copy={getTagText(entry.heroText)}
 				ctaLight={true}
 				ctaOneText="Free Trial"
 				ctaOneUrl="/signup"
@@ -64,7 +64,6 @@ export default function CrmComparisonPage({ res }) {
 								</div>
 								<div className="c-quote-carousel__group">
 									{entry.customerStories.map((story, index) => {
-										console.log(story);
 										return (
 											<div
 												className="row c-quote-carousel__group--item"
@@ -84,7 +83,7 @@ export default function CrmComparisonPage({ res }) {
 													<div className="c-quote-carousel__blockquote--item">
 														<cite>
 															<blockquote>
-																{paragraphTextGetter(story.customerQuote)}
+																{getTagText(story.customerQuote)}
 															</blockquote>
 															{story.customerName}{" "}
 															<span className="c-quote-carousel__blockquote--position">
@@ -120,19 +119,20 @@ export default function CrmComparisonPage({ res }) {
 						</p>
 					</div>
 					<div className="row">
-						{entry.copperFeatures.map((feature) => {
-							console.log(feature);
+						{entry.copperFeatures.map((category) => {
 							return (
-								<div className="col-md-4">
+								<div className="col-md-4" key={category.featureCategory}>
 									<div className="c-list-card__card">
 										<div className="c-list-card__border mint"></div>
-										<span className="t-eyebrow">{feature.featureCategory}</span>
+										<span className="t-eyebrow">
+											{category.featureCategory}
+										</span>
 										<div className="c-list-card__icon"></div>
-										{feature.featureList.map((item) => (
-											<div className="c-list-card__copy">
-												<h4>{item.title && item.title}</h4>
+										{category.featureList.map((feature) => (
+											<div className="c-list-card__copy" key={feature.id}>
+												<h4>{feature.title && feature.title}</h4>
 												<p className="p-sm">
-													{item.paragraph && item.paragraph}
+													{feature.paragraph && feature.paragraph}
 												</p>
 											</div>
 										))}
@@ -149,12 +149,12 @@ export default function CrmComparisonPage({ res }) {
 				</div>
 			</section>
 
-			<section class="crm-comparison-last-module c-cols">
-				<div class="container">
-					<div class="row">
-						<div class="col-md order-2">
+			<section className="crm-comparison-last-module c-cols">
+				<div className="container">
+					<div className="row">
+						<div className="col-md order-2">
 							<div
-								class="c-image c-image--center sl_swap"
+								className="c-image c-image--center sl_swap"
 								id="home-customer-logos"
 							>
 								{entry.lastModuleImage[0] ? (
@@ -181,12 +181,12 @@ export default function CrmComparisonPage({ res }) {
 								)}
 							</div>
 						</div>
-						<div class="col-md order-1">
+						<div className="col-md order-1">
 							<h2>So happy</h2>
 							<h2>with Copper</h2>
 							<p>12,000 + of the most innovative companies</p>
-							<div class="c-hero__buttons">
-								<a class="c-button" href="/customers">
+							<div className="c-hero__buttons">
+								<a className="c-button" href="/customers">
 									See customer stories
 								</a>
 							</div>
