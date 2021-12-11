@@ -7,7 +7,7 @@ import Footer from "../components/Footer/Footer";
 import NavigationDefault from "../components/Navigation/NavigationDefault";
 import { linkitButtonPropertyGetter } from "../helpers/propertyResolver";
 import { getEntryByType } from "../lib/api";
-import { SyncedAtom } from "../contexts/SyncContext";
+import { SyncedAtom } from "../atoms/SyncAtom";
 
 export default function Features({ res }) {
 	const syncedAtom = useRecoilValue(SyncedAtom);
