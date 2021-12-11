@@ -1,6 +1,6 @@
 import Script from "next/script";
 
-import { getEntryByType } from "../lib/api";
+import { getEntryBySectionHandle } from "../lib/api";
 import DefaultPageBase from "../components/PageBase/DefaultPageBase";
 import { useState } from "react";
 import AboutBioModal from "../components/Blocks/Modals/AboutBioModal";
@@ -1334,10 +1334,11 @@ export default function About({ res }) {
 }
 
 export async function getStaticProps(context) {
-	const res = await getEntryByType("about", "about");
+	const res = await getEntryBySectionHandle("about", "about");
 	return {
 		props: {
 			res,
 		}, // will be passed to the page component as props
+		revalidate: 120, // in seconds
 	};
 }

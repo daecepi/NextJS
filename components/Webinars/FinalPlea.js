@@ -1,8 +1,8 @@
 // Final Plea Hero
 const FinalPlea = () => {
 	return (
-		<section class="c-hero--split background--leavebehind">
-			<div class="c-image">
+		<section className="c-hero--split background--leavebehind">
+			<div className="c-image">
 				<picture>
 					<source
 						type="image/webp"
@@ -20,11 +20,11 @@ const FinalPlea = () => {
 					/>
 				</picture>
 			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 c-valign--middle">
-						<pre class="c-eyebrow c-eyebrow--light">Goodbye Data Entry</pre>
-						<h2 class="t-white">
+			<div className="container">
+				<div className="row">
+					<div className="col-md-6 c-valign--middle">
+						<pre className="c-eyebrow c-eyebrow--light">Goodbye Data Entry</pre>
+						<h2 className="t-white">
 							Hello Copper.
 							<br />
 							Try it free!
@@ -32,14 +32,14 @@ const FinalPlea = () => {
 						<p style={{ maxWidth: "420px" }}>
 							No credit card required. Start your 14-day free trial today.
 						</p>
-						<div class="c-hero__buttons">
+						<div className="c-hero__buttons">
 							<a
-								class="c-button sendUTMsToAmplitude"
+								className="c-button sendUTMsToAmplitude"
 								href="{{ craft.app.config.general.signUpUrl }}"
 							>
 								Try Free
 							</a>
-							<a class="c-button c-button--outline" href="/demos">
+							<a className="c-button c-button--outline" href="/demos">
 								Request Demo
 							</a>
 						</div>

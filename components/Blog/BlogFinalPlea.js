@@ -1,5 +1,5 @@
 import { useRecoilValue } from "recoil";
-import { SyncedAtom } from "../../contexts/SyncContext";
+import { SyncedAtom } from "../../atoms/SyncAtom";
 
 const BlogFinalPlea = () => {
 	const syncedAtomInformation = useRecoilValue(SyncedAtom);

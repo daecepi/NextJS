@@ -2,7 +2,7 @@ import Script from "next/script";
 
 import WebinarSpecialForm from "../WebinarSpecialForm";
 
-import "https://use.typekit.net/uaf5vus.css";
+// import "https://use.typekit.net/uaf5vus.css";
 
 const WebinarSpecial = ({ entry }) => {
 	const image =
@@ -98,7 +98,7 @@ const WebinarSpecial = ({ entry }) => {
 			</div>
 
 			<Script
-				src="min/Lazyload.js"
+				src="js/lazyload.min.js"
 				strategy="afterInteractive"
 				onLoad={() => {
 					LazyLoad.js(

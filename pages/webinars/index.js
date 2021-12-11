@@ -303,5 +303,6 @@ export async function getStaticProps(context) {
 			onDemandWebinars: onDemandWebinars || [],
 			// category
 		}, // will be passed to the page component as props
+		revalidate: 120, // in seconds
 	};
 }

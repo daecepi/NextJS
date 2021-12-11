@@ -1,6 +1,6 @@
 import CtaGroup from "../../Simples/CtaGroup";
 
-import { SyncedAtom } from "../../../../contexts/SyncContext";
+import { SyncedAtom } from "../../../../atoms/SyncAtom";
 import { useRecoilValue } from "recoil";
 
 const HeroCopy = ({

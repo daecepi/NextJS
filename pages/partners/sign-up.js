@@ -22,7 +22,7 @@ const PartnersSignup = ({ entry, globals }) => {
 										<form id="mktoForm_1285"></form>
 									</div>
 									<Script
-										src="/js/Lazyload.min.js"
+										src="/js/lazyload.min.js"
 										strategy="afterInteractive"
 										onLoad={() => {
 											LazyLoad.js(
@@ -113,5 +113,6 @@ export async function getStaticProps(context) {
 			entry: res.entry || {},
 			globals: res.globalSets || [],
 		}, // will be passed to the page component as props
+		revalidate: 120, // in seconds
 	};
 }

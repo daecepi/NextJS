@@ -38,27 +38,27 @@ const Webinars = ({ entry, globals, recentWebinars }) => {
 	return (
 		<>
 			<div
-				class={`c-webinar-form ${
+				className={`c-webinar-form ${
 					entry.specialStyle && entry.specialStyle == "inspirationSeries"
 						? "inspiration-series-transform"
 						: ""
 				}`}
 				id="c-webinar-gate"
 			>
-				<div class="c-resource--header">
+				<div className="c-resource--header">
 					{image && (
 						<>
 							{entry.type == "blog" || entry.type == "blogBuilder" ? (
 								<img
 									src={image.url}
 									alt={image.altText?.length ? image.altText : image.title}
-									class="c-resource--header__background-image"
+									className="c-resource--header__background-image"
 								/>
 							) : (
 								<img
 									src={image.url}
 									alt={image.altText?.length ? image.altText : image.title}
-									class="c-resource--header__background-image c-resource--header__background-image--fullscreen"
+									className="c-resource--header__background-image c-resource--header__background-image--fullscreen"
 								/>
 							)}
 						</>
@@ -68,16 +68,16 @@ const Webinars = ({ entry, globals, recentWebinars }) => {
 				<RequesiteForm entry={entry} />
 			</div>
 
-			<div class="c-webinar padding-top d-none" id="c-webinar">
-				<section class="c-webinar-video">
-					<div class="container">
+			<div className="c-webinar padding-top d-none" id="c-webinar">
+				<section className="c-webinar-video">
+					<div className="container">
 						{entry.embeddedVideo?.length > 0 ? (
 							<div
-								class="c-video"
+								className="c-video"
 								dangerouslySetInnerHTML={{ __html: entry.embeddedVideo }}
 							></div>
 						) : (
-							<div class="col-md-12 t-center">
+							<div className="col-md-12 t-center">
 								<h1>Webinar still not available</h1>
 								{entry.releaseDate ? (
 									<p>
@@ -91,14 +91,14 @@ const Webinars = ({ entry, globals, recentWebinars }) => {
 					</div>
 				</section>
 
-				<section class="c-webinar-content h-section-padding">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-4 bottom-margin-mobile">
-								<p class="c-webinar-content__related-resources">
+				<section className="c-webinar-content h-section-padding">
+					<div className="container">
+						<div className="row">
+							<div className="col-md-4 bottom-margin-mobile">
+								<p className="c-webinar-content__related-resources">
 									Related Resources
 								</p>
-								<div class="c-webinar-content__related-list">
+								<div className="c-webinar-content__related-list">
 									{entry.relatedResource?.length &&
 										entry.relatedResource.map((relatedEntry) => {
 											return (
@@ -109,63 +109,65 @@ const Webinars = ({ entry, globals, recentWebinars }) => {
 										})}
 								</div>
 							</div>
-							<div class="col-md-8">
+							<div className="col-md-8">
 								<h3>{entry.title}</h3>
 								<p>{entry.description}</p>
-								<div class="c-webinar-hosts extra-top-margin--small ">
+								<div className="c-webinar-hosts extra-top-margin--small ">
 									<h3>Hosted By:</h3>
-									<div class="d-flex flex-wrap">
+									<div className="d-flex flex-wrap">
 										{entry.featuredAuthor?.length ? (
 											<>
 												{entry.featuredAuthors.map((author) => {
 													return (
-														<div class="c-author__detail">
+														<div className="c-author__detail">
 															{!author.photo ? (
-																<div class="circle-img c-author__img background-{{(author.id%2) +1}}">
-																	<span class="c-author__img--alt">
+																<div className="circle-img c-author__img background-{{(author.id%2) +1}}">
+																	<span className="c-author__img--alt">
 																		{author.firstName.split(" ") || ""}
 																	</span>
 																</div>
 															) : (
 																<div
-																	class="circle-img c-author__img"
+																	className="circle-img c-author__img"
 																	style={{
 																		backgroundImage: `url('${author.photo.url}')`,
 																	}}
 																></div>
 															)}
-															<div class="c-author__meta c-author__meta--detail">
-																<p class="p-sm">
+															<div className="c-author__meta c-author__meta--detail">
+																<p className="p-sm">
 																	<strong>{author.name}</strong>
 																</p>
-																<p class="p-sm">{author.authorTitle}</p>
+																<p className="p-sm">{author.authorTitle}</p>
 															</div>
 														</div>
 													);
 												})}
 											</>
 										) : (
-											<div class="c-author__detail">
+											<div className="c-author__detail">
 												{!finalDefaultAuthorInfo?.photo?.url ? (
-													<div class="circle-img c-author__img background-{{(finalDefaultAuthorInfo.id%2) +1}}">
-														<span class="c-author__img--alt">
+													<div className="circle-img c-author__img background-{{(finalDefaultAuthorInfo.id%2) +1}}">
+														<span className="c-author__img--alt">
 															{finalDefaultAuthorInfo.firstName.split(" ") ||
 																""}
 														</span>
 													</div>
 												) : (
 													<div
-														class="circle-img c-author__img"
+														className="circle-img c-author__img"
 														style={{
 															backgroundImage: `url('${finalDefaultAuthorInfo.photo.url}')`,
 														}}
 													></div>
 												)}
-												<div class="c-author__meta c-author__meta--detail">
-													<p class="p-sm">
+												<div className="c-author__meta c-author__meta--detail">
+													<p className="p-sm">
 														<strong>{finalDefaultAuthorInfo.name}</strong>
 													</p>
-													<p class="p-sm">{finalDefaultAuthorInfo.jobTitle}</p>
+													<p className="p-sm">
+														{finalDefaultAuthorInfo.jobTitle}
+													</p>
 												</div>
 											</div>
 										)}
@@ -184,10 +186,10 @@ const Webinars = ({ entry, globals, recentWebinars }) => {
 				)}
 
 				{/* Recent posts section */}
-				<section class="c-blog__entries h-section-padding">
-					<div class="container">
-						<h2 class="text-center">Recent Webinars</h2>
-						<div class="row extra-top-margin--small">
+				<section className="c-blog__entries h-section-padding">
+					<div className="container">
+						<h2 className="text-center">Recent Webinars</h2>
+						<div className="row extra-top-margin--small">
 							{recentWebinars?.length &&
 								recentWebinars.map((recentWebinar) => {
 									const recentWebinarImage =
@@ -195,15 +197,15 @@ const Webinars = ({ entry, globals, recentWebinars }) => {
 											recentWebinar.featuredImage[0]) ||
 										undefined;
 									return (
-										<div class="col-md-4">
-											<div class="c-card__entry extended-card">
+										<div className="col-md-4">
+											<div className="c-card__entry extended-card">
 												<a
-													class="c-card__clickthrough"
+													className="c-card__clickthrough"
 													href={recentWebinar.url}
 												></a>
 												{recentWebinarImage ? (
 													<img
-														class="c-card__default__image"
+														className="c-card__default__image"
 														src={recentWebinarImage.url}
 														alt={
 															recentWebinarImage.altText?.length
@@ -216,24 +218,24 @@ const Webinars = ({ entry, globals, recentWebinars }) => {
 														<source
 															type="image/webp"
 															srcset="/imgs/industry/industry-agency-blog-01@2x.webp"
-															class="c-card__default__image"
+															className="c-card__default__image"
 															alt="Industry agency blog image"
 														/>
 														<source
 															type="image/png"
 															srcset="/imgs/industry/industry-agency-blog-01@2x.jpg"
-															class="c-card__default__image"
+															className="c-card__default__image"
 															alt="Industry agency blog image"
 														/>
 														<img
-															class="c-card__default__image"
+															className="c-card__default__image"
 															src="/imgs/industry/industry-agency-blog-01@2x.jpg"
 															alt="Industry agency blog image"
 														/>
 													</picture>
 												)}
-												<div class="c-card__entry__content">
-													<span class="t-eyebrow t-special-eyebrow t-special-eyebrow--lt-purple">
+												<div className="c-card__entry__content">
+													<span className="t-eyebrow t-special-eyebrow t-special-eyebrow--lt-purple">
 														{recentWebinarImage.releaseDate &&
 														new Date(recentWebinarImage.releaseDate) &&
 														new Date(recentWebinarImage.releaseDate) >=
@@ -242,18 +244,23 @@ const Webinars = ({ entry, globals, recentWebinars }) => {
 															: "Video"}
 													</span>
 													<br />
-													<h4 class="c-card__entry-title">
+													<h4 className="c-card__entry-title">
 														<a
-															class="underline_from_lefsettt"
+															className="underline_from_lefsettt"
 															href={`/${recentWebinarImage.uri}`}
 														>
 															{recentWebinarImage.title}
 														</a>
 													</h4>
-													<p class="p-sm">{recentWebinarImage.description}</p>
+													<p className="p-sm">
+														{recentWebinarImage.description}
+													</p>
 												</div>
-												<div class="c-card__meta">
-													<a class="t-link" href={`/${recentWebinarImage.uri}`}>
+												<div className="c-card__meta">
+													<a
+														className="t-link"
+														href={`/${recentWebinarImage.uri}`}
+													>
 														Watch Now
 													</a>
 												</div>
@@ -268,7 +275,7 @@ const Webinars = ({ entry, globals, recentWebinars }) => {
 			</div>
 
 			<Script
-				src="/js/Lazyload.js"
+				src="/js/lazyload.min.js"
 				strategy="beforeInteractive"
 				onLoad={() => {
 					LazyLoad.js(
@@ -307,7 +314,7 @@ const Webinars = ({ entry, globals, recentWebinars }) => {
 
 export default Webinars;
 
-export async function getServerSideProps({ params }) {
+export async function getStaticProps({ params }) {
 	// const blogInformation = await fetch(`copper.com/api/blog${pageNumber}.json`);
 	const entry = await getEntryByType("blogIndex", "blog-index");
 	const recentWebinars = await getRecentWebinars();
@@ -319,5 +326,6 @@ export async function getServerSideProps({ params }) {
 			recentWebinars: recentWebinars || [],
 			// category
 		}, // will be passed to the page component as props
+		revalidate: 120, // In seconds
 	};
 }

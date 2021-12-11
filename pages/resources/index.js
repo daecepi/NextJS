@@ -426,7 +426,7 @@ const resources = (props) => {
 
 export default resources;
 
-export async function getServerSideProps({ params }) {
+export async function getStaticProps({ params }) {
 	// const blogInformation = await fetch(`copper.com/api/blog${pageNumber}.json`);
 	const entry = await getEntryByType("blogIndex", "blog-index");
 	const menuCategory = await getBlogCategoriesMenu();
@@ -445,5 +445,6 @@ export async function getServerSideProps({ params }) {
 			featuredBlogs,
 			// category
 		}, // will be passed to the page component as props
+		revalidate: 120, // in seconds
 	};
 }

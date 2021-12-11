@@ -1,6 +1,6 @@
 import Script from "next/script";
 
-import "https://use.typekit.net/uaf5vus.css";
+// import "https://use.typekit.net/uaf5vus.css";
 
 const WebinarSpecialForm = ({ entry }) => {
 	return (
@@ -41,7 +41,7 @@ const WebinarSpecialForm = ({ entry }) => {
 													<p>{entry.eventDate}</p>
 												</div>
 												<Script
-													src="/js/Lazyload.min.js"
+													src="/js/lazyload.min.js"
 													onLoad={() => {
 														LazyLoad.js(
 															[

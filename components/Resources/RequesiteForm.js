@@ -1,6 +1,6 @@
 import Script from "next/script";
 import { useRecoilValue } from "recoil";
-import { SyncedAtom } from "../../contexts/SyncContext";
+import { SyncedAtom } from "../../atoms/SyncAtom";
 
 const RequesiteForm = ({ entry }) => {
 	const syncedAtom = useRecoilValue(SyncedAtom);
@@ -152,7 +152,7 @@ const RequesiteForm = ({ entry }) => {
 														</picture>
 													</div>
 													<Script
-														src="js/Lazyload.min.js"
+														src="/js/lazyload.min.js"
 														strategy="afterInteractive"
 														onLoad={() => {
 															LazyLoad.js(

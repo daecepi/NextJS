@@ -12,8 +12,8 @@ import {
 	getEntryBySectionHandle,
 	getEntryByType,
 	getFeaturedPosts,
+	getPathsBySection,
 } from "../../lib/api";
-import { getFullUrl } from "../../helpers";
 
 const Post = ({
 	entry,
@@ -49,7 +49,7 @@ const Post = ({
 			"@type": "Article",
 			mainEntityOfPage: {
 				"@type": "WebPage",
-				"@id": `${entry.fullUrl}`,
+				"@id": `${entry.url}`,
 			},
 			headline: `${
 				entry.seoTitle ? entry.seoTitle.slice(0, 110) : entry.title
@@ -208,10 +208,8 @@ const Post = ({
 
 export default Post;
 
-export async function getServerSideProps(context) {
-	const fullUrl = getFullUrl(context);
-
-	const entry = await getEntryBySectionHandle("blog", context.query.blogSlug);
+export async function getStaticProps(context) {
+	const entry = await getEntryBySectionHandle("blog", context.params.blogSlug);
 	const featuredPosts = await getFeaturedPosts(entry.id || 0);
 	const blogAd = await getEntryBySectionHandle("blogIndex", "/resources");
 
@@ -221,7 +219,7 @@ export async function getServerSideProps(context) {
 	console.log("Featured posts gotten ", featuredPosts);
 	return {
 		props: {
-			entry: { ...entry.entry, fullUrl: fullUrl } || {},
+			entry: entry.entry || {},
 			globals: entry.globalSets || {},
 			featuredPosts: featuredPosts || [],
 			blogAd,
@@ -230,5 +228,19 @@ export async function getServerSideProps(context) {
 			menuCategory,
 			blogFormats,
 		}, // will be passed to the page component as props
+		revalidate: 120, // in seconds
+	};
+}
+
+export async function getStaticPaths() {
+	const blogPosts = await getPathsBySection("blog");
+
+	const paths = blogPosts.map((blogPost) => ({
+		params: { blogSlug: blogPost.slug },
+	}));
+
+	return {
+		paths,
+		fallback: true,
 	};
 }
