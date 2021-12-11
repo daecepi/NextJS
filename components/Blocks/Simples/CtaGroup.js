@@ -1,6 +1,7 @@
 import { linkitButtonPropertyGetter } from "../../../helpers/propertyResolver";
 
-const CtaGroup = (ctas) => {
+const CtaGroup = ({ ctas }) => {
+	const numberCtas = ctas.length;
 	// In case the component is called with no params or not array return
 	if (!ctas?.length) return "";
 
@@ -8,10 +9,10 @@ const CtaGroup = (ctas) => {
 	return (
 		<div className="c-hero__buttons">
 			{ctas.map((cta) => {
-				const convertedCta = linkitButtonPropertyGetter(convertedCta);
-				switch (cta.handleType) {
+				const convertedCta = linkitButtonPropertyGetter(cta.button);
+				switch (cta.typeHandle) {
 					case "ctas":
-						let buttonColor = convertedCtaColor[0] || "white";
+						let buttonColor = cta.buttonColor[0].slug || "white";
 						if (cta.modalTrigger) {
 							return (
 								<a
@@ -22,14 +23,14 @@ const CtaGroup = (ctas) => {
 									}`}
 									href="/demos"
 								>
-									{convertedCta?.text || ""}
+									{convertedCta?.value || ""}
 								</a>
 							);
 						} else {
 							{
 								/* Check if the cta have the try free string to add the sendUTMsToAmplitude class */
 							}
-							if (convertedCta.text.toLowerCase() === "try free") {
+							if (convertedCta.value.toLowerCase() === "try free") {
 								return (
 									<a
 										className={`c-button ${
@@ -42,9 +43,9 @@ const CtaGroup = (ctas) => {
 												? "_blank"
 												: undefined
 										}
-										href={convertedCta?.url || ""}
+										href={convertedCta?.href || ""}
 									>
-										{convertedCta?.text || ""}
+										{convertedCta?.value || ""}
 									</a>
 								);
 							} else {
@@ -60,9 +61,9 @@ const CtaGroup = (ctas) => {
 												? "_blank"
 												: undefined
 										}
-										href={convertedCta?.url || ""}
+										href={convertedCta?.href || ""}
 									>
-										{convertedCta?.text || ""}
+										{convertedCta?.value || ""}
 									</a>
 								);
 							}
@@ -79,7 +80,7 @@ const CtaGroup = (ctas) => {
 										? "_blank"
 										: undefined
 								}`}
-								href={convertedCta?.url || ""}
+								href={convertedCta?.href || ""}
 							>
 								<img
 									src={image.url}
@@ -97,12 +98,12 @@ const CtaGroup = (ctas) => {
 											? "_blank"
 											: undefined
 									}`}
-									href={convertedCta?.url || ""}
+									href={convertedCta?.href || ""}
 									className={`t-link ${
 										cta.ctaRemoveUnderline ? "no-underline" : ""
 									}`}
 								>
-									{convertedCta?.text || ""}
+									{convertedCta?.value || ""}
 								</a>
 							</div>
 						);

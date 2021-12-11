@@ -77,7 +77,6 @@ const NavigationDefault = ({ buttons }) => {
 			const navMobile = document.getElementById("navMobile");
 			navMobile.classList.add("z-index");
 		}
-		console.log("handleMobileSubMenu", event);
 	};
 
 	const handleSubMenuBack = (event) => {
@@ -536,7 +535,6 @@ const NavigationDefault = ({ buttons }) => {
 							{menu.map((mobileItems) => {
 								const itemKey = Object.keys(mobileItems);
 								const mobileItem = mobileItems[itemKey];
-								console.log("mobileItem", mobileItem);
 								return (
 									<>
 										{mobileItem.render == true ? (

@@ -1,12 +1,21 @@
 import Image from "next/image";
+import { addHTTPStoUrl } from "../../../helpers/propertyResolver";
 
-const ImageSimple = ({ image, webpSource, classAtr, stylesAtr, imageWidth, imageHeight }) => {
+const ImageSimple = ({
+	image,
+	webpSource,
+	classAtr,
+	stylesAtr,
+	imageWidth,
+	imageHeight,
+}) => {
 	console.log("Image object obtained ", image);
 	if (!image?.length) {
 		return "";
 	}
 	let singleImage = image[0];
 	let optimizedImages = singleImage.optimizedLandingImages;
+	let src = addHTTPStoUrl(optimizedImages.src);
 	let width = imageWidth ? imageWidth : "806";
 	let height = imageHeight ? imageHeight : "734";
 	return (
@@ -23,11 +32,13 @@ const ImageSimple = ({ image, webpSource, classAtr, stylesAtr, imageWidth, image
 						""
 					)}
 					<Image
-						src={optimizedImages.src}
+						src={src}
 						srcSet={optimizedImages.srcset}
 						className={classAtr ? classAtr : ""}
 						style={stylesAtr ? { ...stylesAtr } : {}}
-						sizes="100vw"
+						// sizes="100vw"
+						width={width}
+						height={height}
 						alt={image.altText?.length ? image.altText : image.title}
 					/>
 				</picture>
@@ -38,7 +49,7 @@ const ImageSimple = ({ image, webpSource, classAtr, stylesAtr, imageWidth, image
 						className={classAtr ? classAtr : ""}
 						style={stylesAtr ? { ...stylesAtr } : {}}
 						// layout="fill"
-						src={singleImage.url}
+						src={addHTTPStoUrl(singleImage.url)}
 						width={width}
 						height={height}
 						alt={image.altText?.length ? image.altText : image.title}
