@@ -186,11 +186,18 @@ export default function Home({ res }) {
 										</Link>
 									</div>
 								</div>
-								<Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></Script>
-								<Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></Script>
+								<Script
+									strategy="lazyOnload"
+									src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+								></Script>
+								<Script
+									strategy="lazyOnload"
+									src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"
+								></Script>
 
 								<Script
 									id="video-player"
+									strategy="lazyOnload"
 									src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
 									onLoad={() => {
 										if (!lastGifVidExecuted) {
@@ -844,10 +851,12 @@ export default function Home({ res }) {
 									<div className="imageThumb">
 										<Script
 											src="https://fast.wistia.com/embed/medias/p24wanuzo7.jsonp"
+											strategy="lazyOnload"
 											async
 										></Script>
 										<Script
 											src="https://fast.wistia.com/assets/external/E-v1.js"
+											strategy="lazyOnload"
 											async
 										></Script>
 										<div
@@ -956,10 +965,12 @@ export default function Home({ res }) {
 									<div className="imageThumb">
 										<Script
 											src="https://fast.wistia.com/embed/medias/2yhihnpbkc.jsonp"
+											strategy="lazyOnload"
 											async
 										></Script>
 										<Script
 											src="https://fast.wistia.com/assets/external/E-v1.js"
+											strategy="lazyOnload"
 											async
 										></Script>
 										<div
