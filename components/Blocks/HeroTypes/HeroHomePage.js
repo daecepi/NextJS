@@ -110,17 +110,21 @@ const HeroHomePage = (props) => {
 					>
 						{/* {% import "components/simple-elements/_index.html" as simpleElements %} */}
 						<div style={{ position: "relative" }}>
-							<img
-								id="vid-1-placeholder"
-								style={{
-									width: "68.5%",
-									maxWidth: "450px",
-									position: "relative",
-									left: "9.3%",
-									top: "1%",
-								}}
-								src="https://copper.objects.frb.io/imgs/homepage/thumbnails/hero/hero-thumb.png"
-							/>
+							<picture>
+								<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/hero/hero-thumb.webp" />
+								<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/hero/hero-thumb.png" />
+								<img
+									id="vid-1-placeholder"
+									style={{
+										width: "68.5%",
+										maxWidth: "450px",
+										position: "relative",
+										left: "9.3%",
+										top: "1%",
+									}}
+									src="https://copper.objects.frb.io/imgs/homepage/thumbnails/hero/hero-thumb.png"
+								/>
+							</picture>
 							<div style={{ position: "absolute", left: "0px", top: "-4%" }}>
 								<div className="video-gif-container">
 									<video

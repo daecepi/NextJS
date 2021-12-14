@@ -468,26 +468,36 @@ export default function Home({ res }) {
 										});
 									}}
 								></Script>
-								<div className="video-gif-container">
-									<video
-										id="vid-1-1"
-										data-cy="video-element"
-										className="video-as-gif h-remove-shadow onViewport"
-										style={{ maxWidth: "100%" }}
-										muted
-										playsInline
-										poster="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png"
+								<div style={{ position: "relative" }}>
+									<picture>
+										<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.webp" />
+										<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png" />
+										<img src="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png" />
+									</picture>
+									<div
+										style={{ position: "absolute", left: "0px", top: "-4%" }}
 									>
-										<source
-											src="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Adoption.webm"
-											type="video/webm"
-										/>
-										<source
-											src="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Adoption.mp4"
-											type="video/{{vidExtension}}"
-										></source>
-										<p>Su navegador no soporta video HTML5</p>
-									</video>
+										<div className="video-gif-container">
+											<video
+												id="vid-1-1"
+												data-cy="video-element"
+												className="video-as-gif h-remove-shadow onViewport"
+												style={{ maxWidth: "100%" }}
+												muted
+												playsInline
+											>
+												<source
+													src="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Adoption.webm"
+													type="video/webm"
+												/>
+												<source
+													src="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Adoption.mp4"
+													type="video/{{vidExtension}}"
+												></source>
+												<p>Su navegador no soporta video HTML5</p>
+											</video>
+										</div>
+									</div>
 								</div>
 
 								{/* {% import "components/simple-elements/_index.html" as simpleElements %}
@@ -510,26 +520,36 @@ export default function Home({ res }) {
 					<div className="row ">
 						<div className="col-md-6 d-flex align-items-center order-1 ">
 							<div className="c-image c-image--center c-image--shadow h-remove-shadow">
-								<div className="video-gif-container">
-									<video
-										id="vid-1-1"
-										data-cy="video-element"
-										className="video-as-gif h-remove-shadow onViewport"
-										style={{ maxWidth: "100%" }}
-										muted
-										playsInline
-										poster="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png"
+								<div style={{ position: "relative" }}>
+									<picture>
+										<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.webp" />
+										<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png" />
+										<img src="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png" />
+									</picture>
+									<div
+										style={{ position: "absolute", left: "0px", top: "-4%" }}
 									>
-										<source
-											src="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Adoption.webm"
-											type="video/webm"
-										/>
-										<source
-											src="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Adoption.mp4"
-											type="video/{{vidExtension}}"
-										></source>
-										<p>Su navegador no soporta video HTML5</p>
-									</video>
+										<div className="video-gif-container">
+											<video
+												id="vid-1-1"
+												data-cy="video-element"
+												className="video-as-gif h-remove-shadow onViewport"
+												style={{ maxWidth: "100%" }}
+												muted
+												playsInline
+											>
+												<source
+													src="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Adoption.webm"
+													type="video/webm"
+												/>
+												<source
+													src="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Adoption.mp4"
+													type="video/{{vidExtension}}"
+												></source>
+												<p>Su navegador no soporta video HTML5</p>
+											</video>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -564,26 +584,36 @@ export default function Home({ res }) {
 					<div className="row row-reverse">
 						<div className="col-md-6 d-flex align-items-center order-1 ">
 							<div className="c-image c-image--center c-image--shadow h-remove-shadow">
-								<div className="video-gif-container">
-									<video
-										id="vid-2"
-										data-cy="video-element"
-										className="video-as-gif h-remove-shadow onViewport"
-										style={{ maxWidth: "100%" }}
-										muted
-										playsInline
-										poster="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png"
+								<div style={{ position: "relative" }}>
+									<picture>
+										<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.webp" />
+										<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png" />
+										<img src="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png" />
+									</picture>
+									<div
+										style={{ position: "absolute", left: "0px", top: "-4%" }}
 									>
-										<source
-											src="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Opportunities.webm"
-											type="video/webm"
-										/>
-										<source
-											src="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Opportunities.mp4"
-											type="video/{{vidExtension}}"
-										></source>
-										<p>Su navegador no soporta video HTML5</p>
-									</video>
+										<div className="video-gif-container">
+											<video
+												id="vid-2"
+												data-cy="video-element"
+												className="video-as-gif h-remove-shadow onViewport"
+												style={{ maxWidth: "100%" }}
+												muted
+												playsInline
+											>
+												<source
+													src="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Opportunities.webm"
+													type="video/webm"
+												/>
+												<source
+													src="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Opportunities.mp4"
+													type="video/{{vidExtension}}"
+												></source>
+												<p>Su navegador no soporta video HTML5</p>
+											</video>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -616,26 +646,36 @@ export default function Home({ res }) {
 					<div className="row">
 						<div className="col-md-6 d-flex align-items-center order-1 ">
 							<div className="c-image c-image--center c-image--shadow h-remove-shadow">
-								<div className="video-gif-container">
-									<video
-										id="vid-3"
-										data-cy="video-element"
-										className="video-as-gif h-remove-shadow onViewport"
-										style={{ maxWidth: "100%" }}
-										muted
-										playsInline
-										poster="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png"
+								<div style={{ position: "relative" }}>
+									<picture>
+										<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.webp" />
+										<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png" />
+										<img src="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png" />
+									</picture>
+									<div
+										style={{ position: "absolute", left: "0px", top: "-4%" }}
 									>
-										<source
-											src="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Opportunities.webm"
-											type="video/webm"
-										/>
-										<source
-											src="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Opportunities.mp4"
-											type="video/{{vidExtension}}"
-										></source>
-										<p>Su navegador no soporta video HTML5</p>
-									</video>
+										<div className="video-gif-container">
+											<video
+												id="vid-3"
+												data-cy="video-element"
+												className="video-as-gif h-remove-shadow onViewport"
+												style={{ maxWidth: "100%" }}
+												muted
+												playsInline
+											>
+												<source
+													src="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Opportunities.webm"
+													type="video/webm"
+												/>
+												<source
+													src="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Opportunities.mp4"
+													type="video/{{vidExtension}}"
+												></source>
+												<p>Su navegador no soporta video HTML5</p>
+											</video>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -1074,26 +1114,36 @@ export default function Home({ res }) {
 								</p>
 							</div>
 							<div>
-								<div className="video-gif-container">
-									<video
-										id="vid-mob-4"
-										data-cy="video-element"
-										className="video-as-gif h-remove-shadow onViewport"
-										style={{ maxWidth: "100%" }}
-										muted
-										playsInline
-										poster="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png"
+								<div style={{ position: "relative" }}>
+									<picture>
+										<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.webp" />
+										<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png" />
+										<img src="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png" />
+									</picture>
+									<div
+										style={{ position: "absolute", left: "0px", top: "-4%" }}
 									>
-										<source
-											src="https://copper.objects.frb.io/videos/homepage/why/CopperHome-Why-Team-new-new.webm"
-											type="video/webm"
-										/>
-										<source
-											src="https://copper.objects.frb.io/videos/homepage/why/CopperHome-Why-Team-new-new.mp4"
-											type="video/{{vidExtension}}"
-										></source>
-										<p>Su navegador no soporta video HTML5</p>
-									</video>
+										<div className="video-gif-container">
+											<video
+												id="vid-mob-4"
+												data-cy="video-element"
+												className="video-as-gif h-remove-shadow onViewport"
+												style={{ maxWidth: "100%" }}
+												muted
+												playsInline
+											>
+												<source
+													src="https://copper.objects.frb.io/videos/homepage/why/CopperHome-Why-Team-new-new.webm"
+													type="video/webm"
+												/>
+												<source
+													src="https://copper.objects.frb.io/videos/homepage/why/CopperHome-Why-Team-new-new.mp4"
+													type="video/{{vidExtension}}"
+												></source>
+												<p>Su navegador no soporta video HTML5</p>
+											</video>
+										</div>
+									</div>
 								</div>
 								{/* {% import "components/simple-elements/_index.html" as simpleElements %}
 					{{ simpleElements.createVideoAsGifElement(entry.slug,'vid-mob-4','https://copper.objects.frb.io/videos/homepage/why/CopperHome-Why-Team-new-new', 'mp4', 'h-remove-shadow onViewport', 'max-width: 100%;', 'https://copper.objects.frb.io/imgs/homepage/thumbnails/why/why-thumb-1.png') }} */}
@@ -1112,26 +1162,36 @@ export default function Home({ res }) {
 								</p>
 							</div>
 							<div>
-								<div className="video-gif-container">
-									<video
-										id="vid-mob-5"
-										data-cy="video-element"
-										className="video-as-gif h-remove-shadow onViewport"
-										style={{ maxWidth: "100%" }}
-										muted
-										playsInline
-										poster="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png"
+								<div style={{ position: "relative" }}>
+									<picture>
+										<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.webp" />
+										<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png" />
+										<img src="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png" />
+									</picture>
+									<div
+										style={{ position: "absolute", left: "0px", top: "-4%" }}
 									>
-										<source
-											src="https://copper.objects.frb.io/videos/homepage/why/CopperHome-Why-Automation-new.webm"
-											type="video/webm"
-										/>
-										<source
-											src="https://copper.objects.frb.io/videos/homepage/why/CopperHome-Why-Automation-new.mp4"
-											type="video/{{vidExtension}}"
-										></source>
-										<p>Su navegador no soporta video HTML5</p>
-									</video>
+										<div className="video-gif-container">
+											<video
+												id="vid-mob-5"
+												data-cy="video-element"
+												className="video-as-gif h-remove-shadow onViewport"
+												style={{ maxWidth: "100%" }}
+												muted
+												playsInline
+											>
+												<source
+													src="https://copper.objects.frb.io/videos/homepage/why/CopperHome-Why-Automation-new.webm"
+													type="video/webm"
+												/>
+												<source
+													src="https://copper.objects.frb.io/videos/homepage/why/CopperHome-Why-Automation-new.mp4"
+													type="video/{{vidExtension}}"
+												></source>
+												<p>Su navegador no soporta video HTML5</p>
+											</video>
+										</div>
+									</div>
 								</div>
 								{/* {% import "components/simple-elements/_index.html" as simpleElements %}
 					{{ simpleElements.createVideoAsGifElement(entry.slug,'vid-mob-5','https://copper.objects.frb.io/videos/homepage/why/CopperHome-Why-Automation-new', 'mp4', 'h-remove-shadow onViewport', 'max-width: 100%;', 'https://copper.objects.frb.io/imgs/homepage/thumbnails/why/why-thumb-2.png') }} */}
@@ -1152,26 +1212,36 @@ export default function Home({ res }) {
 								</p>
 							</div>
 							<div>
-								<div className="video-gif-container">
-									<video
-										id="vid-mob-6"
-										data-cy="video-element"
-										className="video-as-gif h-remove-shadow onViewport"
-										style={{ maxWidth: "100%" }}
-										muted
-										playsInline
-										poster="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png"
+								<div style={{ position: "relative" }}>
+									<picture>
+										<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.webp" />
+										<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png" />
+										<img src="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png" />
+									</picture>
+									<div
+										style={{ position: "absolute", left: "0px", top: "-4%" }}
 									>
-										<source
-											src="https://copper.objects.frb.io/videos/homepage/why/CopperHome-Why-ROI-new.webm"
-											type="video/webm"
-										/>
-										<source
-											src="https://copper.objects.frb.io/videos/homepage/why/CopperHome-Why-ROI-new.mp4"
-											type="video/{{vidExtension}}"
-										></source>
-										<p>Su navegador no soporta video HTML5</p>
-									</video>
+										<div className="video-gif-container">
+											<video
+												id="vid-mob-6"
+												data-cy="video-element"
+												className="video-as-gif h-remove-shadow onViewport"
+												style={{ maxWidth: "100%" }}
+												muted
+												playsInline
+											>
+												<source
+													src="https://copper.objects.frb.io/videos/homepage/why/CopperHome-Why-ROI-new.webm"
+													type="video/webm"
+												/>
+												<source
+													src="https://copper.objects.frb.io/videos/homepage/why/CopperHome-Why-ROI-new.mp4"
+													type="video/{{vidExtension}}"
+												></source>
+												<p>Su navegador no soporta video HTML5</p>
+											</video>
+										</div>
+									</div>
 								</div>
 								{/* {% import "components/simple-elements/_index.html" as simpleElements %}
 					{{ simpleElements.createVideoAsGifElement(entry.slug,'vid-mob-6','https://copper.objects.frb.io/videos/homepage/why/CopperHome-Why-ROI-new', 'mp4', 'h-remove-shadow onViewport', 'max-width: 100%;', 'https://copper.objects.frb.io/imgs/homepage/thumbnails/why/why-thumb-3.png') }} */}
