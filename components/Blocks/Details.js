@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useCallback, useState } from "react";
 import { getFeaturesLinking } from "../../lib/api";
 
@@ -66,7 +67,9 @@ const Details = ({ richText, stickyNavName }) => {
 							<p className="p-xtra-sm">
 								Want to see all the features?
 								<br />
-								<a href="/features">See the complete list</a>
+								<Link href="/features">
+									<a>See the complete list</a>
+								</Link>
 							</p>
 
 							<p className="p-xtra-sm">
@@ -74,12 +77,9 @@ const Details = ({ richText, stickyNavName }) => {
 								<br />
 								Start your 14-day free trial today.
 							</p>
-							<a
-								className="c-button"
-								href="https://app.copper.com/users/sign_up"
-							>
-								Free Trial
-							</a>
+							<Link href="https://app.copper.com/users/sign_up">
+								<a className="c-button">Free Trial</a>
+							</Link>
 						</div>
 					</div>
 					<article className="col-md-8 offset-md-1">

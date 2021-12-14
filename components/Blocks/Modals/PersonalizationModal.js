@@ -1,6 +1,6 @@
 // Next imports
 import Script from "next/script";
-
+import Link from "next/link";
 // Package imports
 import ModalBase from "./ModalBase/ModalBase";
 
@@ -54,20 +54,16 @@ const PersonalizationModal = ({}) => {
 								className="col-md-12 leader-titles"
 								style={{ textAlign: "center" }}
 							>
-								<a
-									id="do-success"
-									className="c-button c-button--hot-pink"
-									href="https://www.copper.com/signup"
-								>
-									Try Free
-								</a>
-								<a
-									id="do-close"
-									className="c-button c-button--outline"
-									href="#"
-								>
-									No thanks
-								</a>
+								<Link href="https://www.copper.com/signup">
+									<a id="do-success" className="c-button c-button--hot-pink">
+										Try Free
+									</a>
+								</Link>
+								<Link href="#">
+									<a id="do-close" className="c-button c-button--outline">
+										No thanks
+									</a>
+								</Link>
 							</div>
 						</div>
 					</div>
@@ -136,13 +132,11 @@ const PersonalizationModal = ({}) => {
 								className="col-md-12 leader-titles"
 								style={{ textAlign: "center" }}
 							>
-								<a
-									id="success-close"
-									className="c-button c-button--hot-pink"
-									href="#"
-								>
-									Back to Copper
-								</a>
+								<Link href="#">
+									<a id="success-close" className="c-button c-button--hot-pink">
+										Back to Copper
+									</a>
+								</Link>
 							</div>
 						</div>
 					</div>

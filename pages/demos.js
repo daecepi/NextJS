@@ -1,5 +1,6 @@
-import NavigationDefault from "../components/Navigation/NavigationDefault";
 import Head from "next/head";
+import Link from "next/link";
+import NavigationDefault from "../components/Navigation/NavigationDefault";
 
 const DemosPage = () => {
 	return (
@@ -35,8 +36,11 @@ const DemosPage = () => {
 													<div class="h-gdpr" style={{ display: "block" }}>
 														<span>
 															By submitting this form you agree to our terms.
-															See our <a href="/privacy">privacy policy</a> to
-															learn about how we use your information.
+															See our
+															<Link href="/privacy">
+																<a>privacy policy</a>
+															</Link>{" "}
+															to learn about how we use your information.
 														</span>
 													</div>
 												</form>

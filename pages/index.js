@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import Script from "next/script";
 import styles from "../styles/Home.module.css";
 import { getAllPostsWithSlug, getEntryBySectionHandle } from "../lib/api";
@@ -180,9 +181,9 @@ export default function Home({ res }) {
 								</p>
 								<div className="c-hero__buttons mb-5">
 									<div className="flex-column">
-										<a href="/g-suite-crm" className="t-link ">
-											Learn more
-										</a>
+										<Link href="/g-suite-crm">
+											<a className="t-link ">Learn more</a>
+										</Link>
 									</div>
 								</div>
 								<Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></Script>
@@ -545,9 +546,9 @@ export default function Home({ res }) {
 								</p>
 								<div className="c-hero__buttons">
 									<div className="flex-column">
-										<a href="/g-suite-crm" className="t-link ">
-											Learn more
-										</a>
+										<Link href="/g-suite-crm">
+											<a className="t-link ">Learn more</a>
+										</Link>
 									</div>
 								</div>
 							</div>
@@ -598,9 +599,9 @@ export default function Home({ res }) {
 								</p>
 								<div className="c-hero__buttons">
 									<div className="flex-column">
-										<a href="/track-leads" className="t-link ">
-											Learn more
-										</a>
+										<Link href="/track-leads">
+											<a className="t-link ">Learn more</a>
+										</Link>
 									</div>
 								</div>
 							</div>
@@ -649,9 +650,9 @@ export default function Home({ res }) {
 								</p>
 								<div className="c-hero__buttons">
 									<div className="flex-column">
-										<a href="/manage-contacts" className="t-link ">
-											Learn more
-										</a>
+										<Link href="/manage-contacts">
+											<a className="t-link ">Learn more</a>
+										</Link>
 									</div>
 								</div>
 							</div>
@@ -1027,19 +1028,17 @@ export default function Home({ res }) {
 							inbox.
 						</p>
 						<div className="c-single-column__buttons">
-							<a
-								className="c-button sendUTMsToAmplitude"
-								href="https://www.copper.com/signup"
-							>
-								Try free
-							</a>
-							<a
-								className="c-button c-button--outline"
-								href="/demos"
-								style={{ marginRight: "0px" }}
-							>
-								Request demo
-							</a>
+							<Link href="/signup">
+								<a className="c-button sendUTMsToAmplitude">Try free</a>
+							</Link>
+							<Link href="/demos">
+								<a
+									className="c-button c-button--outline"
+									style={{ marginRight: "0px" }}
+								>
+									Request demo
+								</a>
+							</Link>
 						</div>
 					</div>
 				</div>
@@ -1205,46 +1204,52 @@ export default function Home({ res }) {
 							Why your team will love Copper.
 						</h4>
 						<div className="radios-box">
-							<a href="#uno" style={{ color: "inherit" }}>
-								<div className="radio-box">
-									<input
-										type="radio"
-										checked
-										className="radio-selector"
-										id="but1"
-										name="sel_button"
-									/>
-									<label for="but1">
-										<strong>It's quick to launch</strong>
-									</label>
-								</div>
-							</a>
-							<a href="#dos" style={{ color: "inherit" }}>
-								<div className="radio-box">
-									<input
-										type="radio"
-										className="radio-selector"
-										id="but2"
-										name="sel_button"
-									/>
-									<label for="but2">
-										<strong>There's no busy work</strong>
-									</label>
-								</div>
-							</a>
-							<a href="#tres" style={{ color: "inherit" }}>
-								<div className="radio-box">
-									<input
-										type="radio"
-										className="radio-selector"
-										id="but3"
-										name="sel_button"
-									/>
-									<label for="but3">
-										<strong>It's made for closing</strong>
-									</label>
-								</div>
-							</a>
+							<Link href="#uno">
+								<a style={{ color: "inherit" }}>
+									<div className="radio-box">
+										<input
+											type="radio"
+											checked
+											className="radio-selector"
+											id="but1"
+											name="sel_button"
+										/>
+										<label for="but1">
+											<strong>It's quick to launch</strong>
+										</label>
+									</div>
+								</a>
+							</Link>
+							<Link href="#dos">
+								<a style={{ color: "inherit" }}>
+									<div className="radio-box">
+										<input
+											type="radio"
+											className="radio-selector"
+											id="but2"
+											name="sel_button"
+										/>
+										<label for="but2">
+											<strong>There's no busy work</strong>
+										</label>
+									</div>
+								</a>
+							</Link>
+							<Link href="#tres">
+								<a style={{ color: "inherit" }}>
+									<div className="radio-box">
+										<input
+											type="radio"
+											className="radio-selector"
+											id="but3"
+											name="sel_button"
+										/>
+										<label for="but3">
+											<strong>It's made for closing</strong>
+										</label>
+									</div>
+								</a>
+							</Link>
 						</div>
 					</div>
 				</div>
@@ -1489,9 +1494,9 @@ export default function Home({ res }) {
 							</p>
 							<div className="c-hero__buttons">
 								<div className="flex-column">
-									<a href="/project-management-crm" className="t-link h-white">
-										Learn more
-									</a>
+									<Link href="/project-management-crm">
+										<a className="t-link h-white">Learn more</a>
+									</Link>
 								</div>
 							</div>
 						</div>

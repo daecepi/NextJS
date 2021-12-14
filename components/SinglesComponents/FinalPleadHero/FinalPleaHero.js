@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 const FinalPleaHero = ({
 	eyebrow,
 	title,
@@ -25,15 +26,14 @@ const FinalPleaHero = ({
 						<h2 className="t-white">{title}</h2>
 						{copy && <p style={{ maxWidth: "420px" }}>{copy}</p>}
 						<div className="c-hero__buttons">
-							<a className="c-button" href="/demos">
-								Request Demo
-							</a>
-							<a
-								className="c-button c-button--outline sendUTMsToAmplitude"
-								href="https://www.copper.com/signup"
-							>
-								Try Free
-							</a>
+							<Link href="/demos">
+								<a className="c-button">Request Demo</a>
+							</Link>
+							<Link href="https://www.copper.com/signup">
+								<a className="c-button c-button--outline sendUTMsToAmplitude">
+									Try Free
+								</a>
+							</Link>
 						</div>
 					</div>
 				</div>

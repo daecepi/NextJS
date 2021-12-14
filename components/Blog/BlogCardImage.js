@@ -1,10 +1,13 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const BlogCardImage = (props) => {
 	console.log("SUPER PROPS ", props);
 	return (
 		<div className="c-blog-card">
-			<a className="c-card__clickthrough" href={props.url}></a>
+			<Link href={props.url}>
+				<a className="c-card__clickthrough"></a>
+			</Link>
 			<div className="c-blog-card__image-container">
 				{props.imagegradient && (
 					<div

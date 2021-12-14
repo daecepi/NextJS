@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useCallback, useState } from "react";
 import { getLatestWebinars } from "../../lib/api";
 
@@ -42,7 +43,9 @@ const LatestWebinarModule = ({ header, removeHeader, addPaddingBottom }) => {
 						return (
 							<div className="col-md-4">
 								<div className="c-card__entry h-webinar">
-									<a className="c-card__clickthrough" href={webinar.url}></a>
+									<Link href={webinar.url}>
+										<a className="c-card__clickthrough"></a>
+									</Link>
 									{image ? (
 										<>
 											{optimizedImage.optimizedImagesUrls.length ? (
@@ -112,9 +115,11 @@ const LatestWebinarModule = ({ header, removeHeader, addPaddingBottom }) => {
 										)}
 										<span className="t-eyebrow ">{webinar.eyebrow}</span>
 										<h4 className="c-card__entry-title multiple-2-card-trailer">
-											<a className="underline_from_lefsettt" href={webinar.url}>
-												{webinar.title}
-											</a>
+											<Link href={webinar.url}>
+												<a className="underline_from_lefsettt">
+													{webinar.title}
+												</a>
+											</Link>
 										</h4>
 										<p className="p-sm multiple-5-card-trailer">
 											{webinar.description}
@@ -122,13 +127,13 @@ const LatestWebinarModule = ({ header, removeHeader, addPaddingBottom }) => {
 									</div>
 									<div className="c-card__meta">
 										{webinar.type === "register" ? (
-											<a className="t-link" href={webinar.url}>
-												Sign up
-											</a>
+											<Link href={webinar.url}>
+												<a className="t-link">Sign up</a>
+											</Link>
 										) : (
-											<a className="t-link" href={webinar.url}>
-												Watch now
-											</a>
+											<Link href={webinar.url}>
+												<a className="t-link">Watch now</a>
+											</Link>
 										)}
 									</div>
 								</div>

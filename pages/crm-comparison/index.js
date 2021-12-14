@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import HeroProduct from "../../components/Blocks/HeroTypes/HeroProduct";
 import Footer from "../../components/Footer/Footer";
 import CrmCard from "../../components/Cards/CrmCard";
@@ -141,9 +142,9 @@ export default function CrmComparisonPage({ res }) {
 							);
 						})}
 						<div className="row c-align--center extra-top-margin--small">
-							<a className="t-link" href="/features">
-								See all features
-							</a>
+							<Link href="/features">
+								<a className="t-link">See all features</a>
+							</Link>
 						</div>
 					</div>
 				</div>
@@ -186,9 +187,9 @@ export default function CrmComparisonPage({ res }) {
 							<h2>with Copper</h2>
 							<p>12,000 + of the most innovative companies</p>
 							<div className="c-hero__buttons">
-								<a className="c-button" href="/customers">
-									See customer stories
-								</a>
+								<Link href="/customers">
+									<a className="c-button">See customer stories</a>
+								</Link>
 							</div>
 						</div>
 					</div>

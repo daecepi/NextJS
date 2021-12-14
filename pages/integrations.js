@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import HeroProduct from "../components/Blocks/HeroTypes/HeroProduct";
 import Footer from "../components/Footer/Footer";
 import NavigationDefault from "../components/Navigation/NavigationDefault";
@@ -38,397 +39,372 @@ export default function Integrations() {
 						</p>
 					</div>
 					<div className="row">
-						<a
-							href="https://www.copper.com/google-workspace-crm"
-							target="_blank"
-							className="col-md-4 extra-top-margin--x-small"
-						>
-							<div className="c-list-card__card c-list-card__card--centered no-margin">
-								<div className="c-list-card__image c-list-card__image--text c-list-card__card--no-outline c-valign--middle">
-									<picture>
-										<img
-											src="https://copper.objects.frb.io/imgs/product/logo_Google.png"
-											alt="Google Workspace"
-											style={{ maxWidth: "200px", maxHeight: "140px" }}
-										/>
-									</picture>
+						<Link href="https://www.copper.com/google-workspace-crm">
+							<a target="_blank" className="col-md-4 extra-top-margin--x-small">
+								<div className="c-list-card__card c-list-card__card--centered no-margin">
+									<div className="c-list-card__image c-list-card__image--text c-list-card__card--no-outline c-valign--middle">
+										<picture>
+											<img
+												src="https://copper.objects.frb.io/imgs/product/logo_Google.png"
+												alt="Google Workspace"
+												style={{ maxWidth: "200px", maxHeight: "140px" }}
+											/>
+										</picture>
+									</div>
+									<p className="p-sm">
+										Class-leading, native integration with Gmail, Drive, and
+										other Google Workspace apps.
+									</p>
 								</div>
-								<p className="p-sm">
-									Class-leading, native integration with Gmail, Drive, and other
-									Google Workspace apps.
-								</p>
-							</div>
-						</a>
+							</a>
+						</Link>
 
-						<a
-							href="/integrations/linkedin-crm-integration"
-							target="_blank"
-							className="col-md-4 extra-top-margin--x-small"
-						>
-							<div className="c-list-card__card c-list-card__card--centered no-margin">
-								<div className="c-list-card__image c-list-card__image--text c-list-card__card--no-outline c-valign--middle">
-									<picture>
-										<img
-											src="https://copper.objects.frb.io/imgs/product/LI-Logo.png"
-											alt="LinkedIn"
-											style={{ maxHeight: "200px", maxWidth: "200px" }}
-										/>
-									</picture>
+						<Link href="/integrations/linkedin-crm-integration">
+							<a target="_blank" className="col-md-4 extra-top-margin--x-small">
+								<div className="c-list-card__card c-list-card__card--centered no-margin">
+									<div className="c-list-card__image c-list-card__image--text c-list-card__card--no-outline c-valign--middle">
+										<picture>
+											<img
+												src="https://copper.objects.frb.io/imgs/product/LI-Logo.png"
+												alt="LinkedIn"
+												style={{ maxHeight: "200px", maxWidth: "200px" }}
+											/>
+										</picture>
+									</div>
+									<p className="p-sm">
+										Prospect smarter and ditch the data entry with profiles at
+										your fingertips
+									</p>
 								</div>
-								<p className="p-sm">
-									Prospect smarter and ditch the data entry with profiles at
-									your fingertips
-								</p>
-							</div>
-						</a>
+							</a>
+						</Link>
 
-						<a
-							href="/integrations/slack-crm"
-							target="_blank"
-							className="col-md-4 extra-top-margin--x-small"
-						>
-							<div className="c-list-card__card c-list-card__card--centered no-margin">
-								<div className="c-list-card__image c-list-card__image--text c-list-card__card--no-outline c-valign--middle">
-									<picture>
-										<source
-											type="image/webp"
-											srcset="/imgs/product/slack_logo.webp"
-											alt="Slack"
-										/>
-										<source
-											type="image/png"
-											srcset="/imgs/product/slack_logo.png"
-											alt="Slack"
-										/>
-										<img src="/imgs/product/slack_logo.png" alt="Slack" />
-									</picture>
+						<Link href="/integrations/slack-crm">
+							<a target="_blank" className="col-md-4 extra-top-margin--x-small">
+								<div className="c-list-card__card c-list-card__card--centered no-margin">
+									<div className="c-list-card__image c-list-card__image--text c-list-card__card--no-outline c-valign--middle">
+										<picture>
+											<source
+												type="image/webp"
+												srcset="/imgs/product/slack_logo.webp"
+												alt="Slack"
+											/>
+											<source
+												type="image/png"
+												srcset="/imgs/product/slack_logo.png"
+												alt="Slack"
+											/>
+											<img src="/imgs/product/slack_logo.png" alt="Slack" />
+										</picture>
+									</div>
+									<p className="p-sm">
+										Receive important Copper notifications in any Slack channel
+									</p>
 								</div>
-								<p className="p-sm">
-									Receive important Copper notifications in any Slack channel
-								</p>
-							</div>
-						</a>
+							</a>
+						</Link>
 
-						<a
-							href="#"
-							target="_blank"
-							className="col-md-4 extra-top-margin--x-small"
-						>
-							<div className="c-list-card__card c-list-card__card--centered no-margin">
-								<div className="c-list-card__image c-list-card__image--text c-list-card__card--no-outline c-valign--middle">
-									<picture>
-										<img
-											src="https://copper.objects.frb.io/imgs/product/Dropbox.svg"
-											alt="Dropbox"
-										/>
-									</picture>
+						<Link href="#">
+							<a target="_blank" className="col-md-4 extra-top-margin--x-small">
+								<div className="c-list-card__card c-list-card__card--centered no-margin">
+									<div className="c-list-card__image c-list-card__image--text c-list-card__card--no-outline c-valign--middle">
+										<picture>
+											<img
+												src="https://copper.objects.frb.io/imgs/product/Dropbox.svg"
+												alt="Dropbox"
+											/>
+										</picture>
+									</div>
+									<p className="p-sm">
+										Browse and link files and folders in Dropbox right from
+										Copper.
+									</p>
 								</div>
-								<p className="p-sm">
-									Browse and link files and folders in Dropbox right from
-									Copper.
-								</p>
-							</div>
-						</a>
+							</a>
+						</Link>
 
-						<a
-							href="/integrations/docusign-crm"
-							target="_blank"
-							className="col-md-4 extra-top-margin--x-small"
-						>
-							<div className="c-list-card__card c-list-card__card--centered no-margin">
-								<div className="c-list-card__image c-list-card__image--text c-list-card__card--no-outline c-valign--middle">
-									<picture>
-										<source
-											type="image/webp"
-											srcset="/imgs/product/Docusign_logo.webp"
-											alt="DocuSign"
-										/>
-										<source
-											type="image/png"
-											srcset="/imgs/product/Docusign_logo.png"
-											alt="DocuSign"
-										/>
-										<img src="/imgs/product/Docusign_logo.png" alt="DocuSign" />
-									</picture>
+						<Link href="/integrations/docusign-crm">
+							<a target="_blank" className="col-md-4 extra-top-margin--x-small">
+								<div className="c-list-card__card c-list-card__card--centered no-margin">
+									<div className="c-list-card__image c-list-card__image--text c-list-card__card--no-outline c-valign--middle">
+										<picture>
+											<source
+												type="image/webp"
+												srcset="/imgs/product/Docusign_logo.webp"
+												alt="DocuSign"
+											/>
+											<source
+												type="image/png"
+												srcset="/imgs/product/Docusign_logo.png"
+												alt="DocuSign"
+											/>
+											<img
+												src="/imgs/product/Docusign_logo.png"
+												alt="DocuSign"
+											/>
+										</picture>
+									</div>
+									<p className="p-sm">
+										Auto-fill templates that make it easy to send and sign
+										e-documents
+									</p>
 								</div>
-								<p className="p-sm">
-									Auto-fill templates that make it easy to send and sign
-									e-documents
-								</p>
-							</div>
-						</a>
+							</a>
+						</Link>
 
-						<a
-							href="https://mailchimp.com/integrations/prosperworks/"
-							target="_blank"
-							className="col-md-4 extra-top-margin--x-small"
-						>
-							<div className="c-list-card__card c-list-card__card--centered no-margin">
-								<div className="c-list-card__image c-list-card__image--text c-list-card__card--no-outline c-valign--middle">
-									<picture>
-										<source
-											type="image/webp"
-											srcset="/imgs/product/mailchimp_logo.webp"
-											alt="MailChimp"
-										/>
-										<source
-											type="image/png"
-											srcset="/imgs/product/mailchimp_logo.png"
-											alt="MailChimp"
-										/>
-										<img
-											src="/imgs/product/mailchimp_logo.png"
-											alt="MailChimp"
-										/>
-									</picture>
+						<Link href="https://mailchimp.com/integrations/prosperworks/">
+							<a target="_blank" className="col-md-4 extra-top-margin--x-small">
+								<div className="c-list-card__card c-list-card__card--centered no-margin">
+									<div className="c-list-card__image c-list-card__image--text c-list-card__card--no-outline c-valign--middle">
+										<picture>
+											<source
+												type="image/webp"
+												srcset="/imgs/product/mailchimp_logo.webp"
+												alt="MailChimp"
+											/>
+											<source
+												type="image/png"
+												srcset="/imgs/product/mailchimp_logo.png"
+												alt="MailChimp"
+											/>
+											<img
+												src="/imgs/product/mailchimp_logo.png"
+												alt="MailChimp"
+											/>
+										</picture>
+									</div>
+									<p className="p-sm">
+										Export contacts from Copper to MailChimp email campaigns
+									</p>
 								</div>
-								<p className="p-sm">
-									Export contacts from Copper to MailChimp email campaigns
-								</p>
-							</div>
-						</a>
+							</a>
+						</Link>
 
-						<a
-							href="https://www.copper.com/integrations/quickbooks-crm"
-							target="_blank"
-							className="col-md-4 extra-top-margin--x-small"
-						>
-							<div className="c-list-card__card c-list-card__card--centered no-margin">
-								<div className="c-list-card__image c-list-card__image--text c-list-card__card--no-outline c-valign--middle">
-									<picture>
-										<source
-											type="image/webp"
-											srcset="/imgs/product/QuickBooks_logo.webp"
-											alt="Quickbooks"
-											style={{ maxWidth: "200px" }}
-										/>
-										<source
-											type="image/png"
-											srcset="/imgs/product/QuickBooks_logo.png"
-											alt="Quickbooks"
-											style={{ maxWidth: "200px" }}
-										/>
-										<img
-											src="/imgs/product/QuickBooks_logo.png"
-											alt="Quickbooks"
-											style={{ maxWidth: "200px" }}
-										/>
-									</picture>
+						<Link href="https://www.copper.com/integrations/quickbooks-crm">
+							<a target="_blank" className="col-md-4 extra-top-margin--x-small">
+								<div className="c-list-card__card c-list-card__card--centered no-margin">
+									<div className="c-list-card__image c-list-card__image--text c-list-card__card--no-outline c-valign--middle">
+										<picture>
+											<source
+												type="image/webp"
+												srcset="/imgs/product/QuickBooks_logo.webp"
+												alt="Quickbooks"
+												style={{ maxWidth: "200px" }}
+											/>
+											<source
+												type="image/png"
+												srcset="/imgs/product/QuickBooks_logo.png"
+												alt="Quickbooks"
+												style={{ maxWidth: "200px" }}
+											/>
+											<img
+												src="/imgs/product/QuickBooks_logo.png"
+												alt="Quickbooks"
+												style={{ maxWidth: "200px" }}
+											/>
+										</picture>
+									</div>
+									<p className="p-sm">
+										See any Quickbooks invoice status and amount on any record
+									</p>
 								</div>
-								<p className="p-sm">
-									See any Quickbooks invoice status and amount on any record
-								</p>
-							</div>
-						</a>
+							</a>
+						</Link>
 
-						<a
-							href="https://www.ringcentral.com/apps/copper-ringcentral"
-							target="_blank"
-							className="col-md-4 extra-top-margin--x-small"
-						>
-							<div className="c-list-card__card c-list-card__card--centered no-margin">
-								<div className="c-list-card__image c-list-card__image--text c-list-card__card--no-outline c-valign--middle">
-									<picture>
-										<source
-											type="image/webp"
-											srcset="/imgs/product/ringcentral_logo.webp"
-											alt="Ring Central"
-										/>
-										<source
-											type="image/png"
-											srcset="/imgs/product/ringcentral_logo.png"
-											alt="Ring Central"
-										/>
-										<img
-											src="/imgs/product/ringcentral_logo.png"
-											alt="Ring Central"
-										/>
-									</picture>
+						<Link href="https://www.ringcentral.com/apps/copper-ringcentral">
+							<a target="_blank" className="col-md-4 extra-top-margin--x-small">
+								<div className="c-list-card__card c-list-card__card--centered no-margin">
+									<div className="c-list-card__image c-list-card__image--text c-list-card__card--no-outline c-valign--middle">
+										<picture>
+											<source
+												type="image/webp"
+												srcset="/imgs/product/ringcentral_logo.webp"
+												alt="Ring Central"
+											/>
+											<source
+												type="image/png"
+												srcset="/imgs/product/ringcentral_logo.png"
+												alt="Ring Central"
+											/>
+											<img
+												src="/imgs/product/ringcentral_logo.png"
+												alt="Ring Central"
+											/>
+										</picture>
+									</div>
+									<p className="p-sm">
+										Make, receive, and quick-log phone calls within Copper
+									</p>
 								</div>
-								<p className="p-sm">
-									Make, receive, and quick-log phone calls within Copper
-								</p>
-							</div>
-						</a>
+							</a>
+						</Link>
 
-						<a
-							href="/integrations/zendesk-crm"
-							target="_blank"
-							className="col-md-4 extra-top-margin--x-small"
-						>
-							<div className="c-list-card__card c-list-card__card--centered no-margin">
-								<div className="c-list-card__image c-list-card__image--text c-list-card__card--no-outline c-valign--middle">
-									<picture>
-										<source
-											type="image/webp"
-											srcset="/imgs/product/zendesk_logo.webp"
-											alt="Zendesk"
-										/>
-										<source
-											type="image/png"
-											srcset="/imgs/product/zendesk_logo.png"
-											alt="Zendesk"
-										/>
-										<img src="/imgs/product/zendesk_logo.png" alt="Zendesk" />
-									</picture>
+						<Link href="/integrations/zendesk-crm">
+							<a target="_blank" className="col-md-4 extra-top-margin--x-small">
+								<div className="c-list-card__card c-list-card__card--centered no-margin">
+									<div className="c-list-card__image c-list-card__image--text c-list-card__card--no-outline c-valign--middle">
+										<picture>
+											<source
+												type="image/webp"
+												srcset="/imgs/product/zendesk_logo.webp"
+												alt="Zendesk"
+											/>
+											<source
+												type="image/png"
+												srcset="/imgs/product/zendesk_logo.png"
+												alt="Zendesk"
+											/>
+											<img src="/imgs/product/zendesk_logo.png" alt="Zendesk" />
+										</picture>
+									</div>
+									<p className="p-sm">
+										View support tickets on related records
+									</p>
 								</div>
-								<p className="p-sm">View support tickets on related records</p>
-							</div>
-						</a>
+							</a>
+						</Link>
 
-						<a
-							href="https://www.copper.com/integrations/hubspot-crm"
-							target="_blank"
-							className="col-md-4 extra-top-margin--x-small"
-						>
-							<div className="c-list-card__card c-list-card__card--centered no-margin">
-								<div className="c-list-card__image c-list-card__image--text c-list-card__card--no-outline c-valign--middle">
-									<picture>
-										<source
-											type="image/webp"
-											srcset="/imgs/product/hubspot_logo.webp"
-											alt="HubSpot"
-										/>
-										<source
-											type="image/png"
-											srcset="/imgs/product/hubspot_logo.png"
-											alt="HubSpot"
-										/>
-										<img src="/imgs/product/hubspot_logo.png" alt="HubSpot" />
-									</picture>
+						<Link href="https://www.copper.com/integrations/hubspot-crm">
+							<a target="_blank" className="col-md-4 extra-top-margin--x-small">
+								<div className="c-list-card__card c-list-card__card--centered no-margin">
+									<div className="c-list-card__image c-list-card__image--text c-list-card__card--no-outline c-valign--middle">
+										<picture>
+											<source
+												type="image/webp"
+												srcset="/imgs/product/hubspot_logo.webp"
+												alt="HubSpot"
+											/>
+											<source
+												type="image/png"
+												srcset="/imgs/product/hubspot_logo.png"
+												alt="HubSpot"
+											/>
+											<img src="/imgs/product/hubspot_logo.png" alt="HubSpot" />
+										</picture>
+									</div>
+									<p className="p-sm">View subscriber lists and campaigns</p>
 								</div>
-								<p className="p-sm">View subscriber lists and campaigns</p>
-							</div>
-						</a>
+							</a>
+						</Link>
 
-						<a
-							href="https://outfunnel.com/copper-outfunnel-integration/"
-							target="_blank"
-							className="col-md-4 extra-top-margin--x-small"
-						>
-							<div className="c-list-card__card c-list-card__card--centered no-margin">
-								<div className="c-list-card__image c-list-card__image--text c-list-card__card--no-outline c-valign--middle">
-									<picture>
-										<source
-											type="image/webp"
-											srcset="https://copper.objects.frb.io/imgs/product/outfunnel-logo-v2.webp"
-											alt="Outfunnel"
-										/>
-										<source
-											type="image/png"
-											srcset="https://copper.objects.frb.io/imgs/product/outfunnel-logo-v2.png"
-											alt="Outfunnel"
-										/>
-										<img
-											src="https://copper.objects.frb.io/imgs/product/outfunnel-logo-v2.png"
-											alt="Outfunnel"
-										/>
-									</picture>
+						<Link href="https://outfunnel.com/copper-outfunnel-integration/">
+							<a target="_blank" className="col-md-4 extra-top-margin--x-small">
+								<div className="c-list-card__card c-list-card__card--centered no-margin">
+									<div className="c-list-card__image c-list-card__image--text c-list-card__card--no-outline c-valign--middle">
+										<picture>
+											<source
+												type="image/webp"
+												srcset="https://copper.objects.frb.io/imgs/product/outfunnel-logo-v2.webp"
+												alt="Outfunnel"
+											/>
+											<source
+												type="image/png"
+												srcset="https://copper.objects.frb.io/imgs/product/outfunnel-logo-v2.png"
+												alt="Outfunnel"
+											/>
+											<img
+												src="https://copper.objects.frb.io/imgs/product/outfunnel-logo-v2.png"
+												alt="Outfunnel"
+											/>
+										</picture>
+									</div>
+									<p className="p-sm">
+										Start and stop targeted email campaigns and get lead context
+										without leaving your inbox
+									</p>
 								</div>
-								<p className="p-sm">
-									Start and stop targeted email campaigns and get lead context
-									without leaving your inbox
-								</p>
-							</div>
-						</a>
+							</a>
+						</Link>
 
-						<a
-							href="https://aircall.io/call-center-software-integrations/copper/"
-							target="_blank"
-							className="col-md-4 extra-top-margin--x-small"
-						>
-							<div className="c-list-card__card c-list-card__card--centered no-margin">
-								<div className="c-list-card__image c-list-card__image--text c-list-card__card--no-outline c-valign--middle">
-									<picture>
-										<source
-											type="image/webp"
-											srcset="/imgs/product/aircall-logo.webp"
-											alt="AirCall"
-										/>
-										<source
-											type="image/png"
-											srcset="/imgs/product/aircall-logo.png"
-											alt="AirCall"
-										/>
-										<img src="/imgs/product/aircall-logo.png" alt="AirCall" />
-									</picture>
+						<Link href="https://aircall.io/call-center-software-integrations/copper/">
+							<a target="_blank" className="col-md-4 extra-top-margin--x-small">
+								<div className="c-list-card__card c-list-card__card--centered no-margin">
+									<div className="c-list-card__image c-list-card__image--text c-list-card__card--no-outline c-valign--middle">
+										<picture>
+											<source
+												type="image/webp"
+												srcset="/imgs/product/aircall-logo.webp"
+												alt="AirCall"
+											/>
+											<source
+												type="image/png"
+												srcset="/imgs/product/aircall-logo.png"
+												alt="AirCall"
+											/>
+											<img src="/imgs/product/aircall-logo.png" alt="AirCall" />
+										</picture>
+									</div>
+									<p className="p-sm">
+										Automatically log calls and sync with records in Copper
+									</p>
 								</div>
-								<p className="p-sm">
-									Automatically log calls and sync with records in Copper
-								</p>
-							</div>
-						</a>
+							</a>
+						</Link>
 
-						<a
-							href="/integrations/copper-square-crm-integration"
-							target="_blank"
-							className="col-md-4 extra-top-margin--x-small"
-						>
-							<div className="c-list-card__card c-list-card__card--centered no-margin">
-								<div className="c-list-card__image c-list-card__image--text c-list-card__card--no-outline c-valign--middle">
-									<picture>
-										<img
-											src="https://copper.objects.frb.io/imgs/product/integrations/Square_logo.svg"
-											alt="Square"
-											style={{ maxWidth: "200px" }}
-										/>
-									</picture>
+						<Link href="/integrations/copper-square-crm-integration">
+							<a target="_blank" className="col-md-4 extra-top-margin--x-small">
+								<div className="c-list-card__card c-list-card__card--centered no-margin">
+									<div className="c-list-card__image c-list-card__image--text c-list-card__card--no-outline c-valign--middle">
+										<picture>
+											<img
+												src="https://copper.objects.frb.io/imgs/product/integrations/Square_logo.svg"
+												alt="Square"
+												style={{ maxWidth: "200px" }}
+											/>
+										</picture>
+									</div>
+									<p className="p-sm">
+										Simplify invoices and revenue tracking; offer flexible
+										payment options
+									</p>
 								</div>
-								<p className="p-sm">
-									Simplify invoices and revenue tracking; offer flexible payment
-									options
-								</p>
-							</div>
-						</a>
+							</a>
+						</Link>
 
-						<a
-							href="/integrations/sow-software-solution-vogsy-integration"
-							target="_blank"
-							className="col-md-4 extra-top-margin--x-small"
-						>
-							<div className="c-list-card__card c-list-card__card--centered no-margin">
-								<div className="c-list-card__image c-list-card__image--text c-list-card__card--no-outline c-valign--middle">
-									<picture>
-										<img
-											src="https://copper.objects.frb.io/imgs/product/integrations/vogsy_logo-1.svg"
-											alt="Vogsy"
-											style={{ maxWidth: "200px" }}
-										/>
-									</picture>
+						<Link href="/integrations/sow-software-solution-vogsy-integration">
+							<a target="_blank" className="col-md-4 extra-top-margin--x-small">
+								<div className="c-list-card__card c-list-card__card--centered no-margin">
+									<div className="c-list-card__image c-list-card__image--text c-list-card__card--no-outline c-valign--middle">
+										<picture>
+											<img
+												src="https://copper.objects.frb.io/imgs/product/integrations/vogsy_logo-1.svg"
+												alt="Vogsy"
+												style={{ maxWidth: "200px" }}
+											/>
+										</picture>
+									</div>
+									<p className="p-sm">
+										Easily create SOWs and quotes, forecast revenue without
+										manual spreadsheet work
+									</p>
 								</div>
-								<p className="p-sm">
-									Easily create SOWs and quotes, forecast revenue without manual
-									spreadsheet work
-								</p>
-							</div>
-						</a>
+							</a>
+						</Link>
 
-						<a
-							href="/integrations/xero-crm"
-							target="_blank"
-							className="col-md-4 extra-top-margin--x-small"
-						>
-							<div className="c-list-card__card c-list-card__card--centered no-margin">
-								<div className="c-list-card__image c-list-card__image--text c-list-card__card--no-outline c-valign--middle">
-									<picture>
-										<source
-											type="image/webp"
-											srcset="/imgs/product/xero_logo.webp"
-											alt="Xero"
-										/>
-										<source
-											type="image/png"
-											srcset="/imgs/product/xero_logo.png"
-											alt="Xero"
-										/>
-										<img src="/imgs/product/xero_logo.png" alt="Xero" />
-									</picture>
+						<Link href="/integrations/xero-crm">
+							<a target="_blank" className="col-md-4 extra-top-margin--x-small">
+								<div className="c-list-card__card c-list-card__card--centered no-margin">
+									<div className="c-list-card__image c-list-card__image--text c-list-card__card--no-outline c-valign--middle">
+										<picture>
+											<source
+												type="image/webp"
+												srcset="/imgs/product/xero_logo.webp"
+												alt="Xero"
+											/>
+											<source
+												type="image/png"
+												srcset="/imgs/product/xero_logo.png"
+												alt="Xero"
+											/>
+											<img src="/imgs/product/xero_logo.png" alt="Xero" />
+										</picture>
+									</div>
+									<p className="p-sm">
+										View any Xero invoice status and amount on any record
+									</p>
 								</div>
-								<p className="p-sm">
-									View any Xero invoice status and amount on any record
-								</p>
-							</div>
-						</a>
+							</a>
+						</Link>
 					</div>
 				</div>
 			</section>
@@ -442,22 +418,18 @@ export default function Integrations() {
 				</p>
 				<ul className="remove-list-bullets">
 					<li>
-						<a
-							href="https://developer.copper.com/"
-							style={{ color: "#ff5d84" }}
-							target="_blank"
-						>
-							Open API
-						</a>
+						<Link href="https://developer.copper.com/">
+							<a style={{ color: "#ff5d84" }} target="_blank">
+								Open API
+							</a>
+						</Link>
 					</li>
 					<li>
-						<a
-							href="https://support.copper.com/hc/en-us/articles/115000333246-Working-with-the-Zapier-Integration"
-							style={{ color: "#ff5d84" }}
-							target="_blank"
-						>
-							Zapier
-						</a>
+						<Link href="https://support.copper.com/hc/en-us/articles/115000333246-Working-with-the-Zapier-Integration">
+							<a style={{ color: "#ff5d84" }} target="_blank">
+								Zapier
+							</a>
+						</Link>
 					</li>
 				</ul>
 				<div
@@ -534,9 +506,9 @@ export default function Integrations() {
 				</div>
 				<p style={{ marginTop: "41px" }}>
 					Don’t see what you’re looking for?{" "}
-					<a href="https://zapier.com/apps/copper/integrations">
-						Search on Zapier
-					</a>
+					<Link href="https://zapier.com/apps/copper/integrations">
+						<a>Search on Zapier</a>
+					</Link>
 				</p>
 			</div>
 			<ProductTwoUp>
@@ -546,12 +518,9 @@ export default function Integrations() {
 					copy={
 						<>
 							Our{" "}
-							<a
-								href="https://developer.copper.com/"
-								style={{ color: "#ff5d84" }}
-							>
-								Open API
-							</a>{" "}
+							<Link href="https://developer.copper.com/">
+								<a style={{ color: "#ff5d84" }}>Open API</a>
+							</Link>{" "}
 							allows you to access and build your own applications that interact
 							with Copper.
 						</>
@@ -617,28 +586,26 @@ export default function Integrations() {
 							</p>
 							<div className="row">
 								<div className="col-6 c-valign--middle">
-									<a
-										href="https://apps.apple.com/us/app/copper/id941438829"
-										target="_blank"
-									>
-										<img
-											className="img-fluid"
-											src="/imgs/product/Download_on_the_App_Store_Badge.svg"
-											alt="Download on the app store image"
-										/>
-									</a>
+									<Link href="https://apps.apple.com/us/app/copper/id941438829">
+										<a target="_blank">
+											<img
+												className="img-fluid"
+												src="/imgs/product/Download_on_the_App_Store_Badge.svg"
+												alt="Download on the app store image"
+											/>
+										</a>
+									</Link>
 								</div>
 								<div className="col-6 c-valign--middle">
-									<a
-										href="https://chrome.google.com/webstore/detail/copper-crm-for-gmail/hpfmedbkgaakgagknibnonpkimkibkla?hl=en"
-										target="_blank"
-									>
-										<img
-											className="img-fluid"
-											src="/imgs/product/google-play-badge-01.svg"
-											alt="Google play badge image"
-										/>
-									</a>
+									<Link href="https://chrome.google.com/webstore/detail/copper-crm-for-gmail/hpfmedbkgaakgagknibnonpkimkibkla?hl=en">
+										<a target="_blank">
+											<img
+												className="img-fluid"
+												src="/imgs/product/google-play-badge-01.svg"
+												alt="Google play badge image"
+											/>
+										</a>
+									</Link>
 								</div>
 							</div>
 						</div>

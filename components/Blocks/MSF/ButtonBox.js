@@ -1,3 +1,4 @@
+import Link from "next/link";
 const ButtonBox = ({ eyebrow, copyHeader, copy, step, buttonGroupSchema }) => {
 	return (
 		<fieldset
@@ -43,17 +44,18 @@ const ButtonBox = ({ eyebrow, copyHeader, copy, step, buttonGroupSchema }) => {
 												);
 											} else if (buttonElement.href?.length) {
 												return (
-													<a
-														className="c-button c-button--outline no-bottom-margin"
-														style={{
-															width: "100%",
-															justifyContent: "center",
-															outline: "none",
-														}}
-														href={buttonElement.href}
-													>
-														{buttonElement.text}
-													</a>
+													<Link href={buttonElement.href}>
+														<a
+															className="c-button c-button--outline no-bottom-margin"
+															style={{
+																width: "100%",
+																justifyContent: "center",
+																outline: "none",
+															}}
+														>
+															{buttonElement.text}
+														</a>
+													</Link>
 												);
 											}
 											return "";

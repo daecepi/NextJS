@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Script from "next/script";
 
 import { getEntryBySectionHandle } from "../lib/api";
@@ -661,12 +662,9 @@ export default function About({ res }) {
 									</div>
 									<p>Copper acquires engagement analytics platform Sherlock</p>
 									<div className="c-card__meta c-card__meta--noline c-card__meta--nopadding ">
-										<a
-											className="t-link"
-											href="https://www.businesswire.com/news/home/20210209005321/en/Copper-Acquires-Sherlock-to-Bring-Actionable-Insights-to-CRM"
-										>
-											Learn More
-										</a>
+										<Link href="https://www.businesswire.com/news/home/20210209005321/en/Copper-Acquires-Sherlock-to-Bring-Actionable-Insights-to-CRM">
+											<a className="t-link">Learn More</a>
+										</Link>
 									</div>
 								</div>
 							</div>
@@ -695,12 +693,9 @@ export default function About({ res }) {
 										smaller acquisitions
 									</p>
 									<div className="c-card__meta c-card__meta--noline c-card__meta--nopadding ">
-										<a
-											className="t-link"
-											href="https://techcrunch.com/2021/02/10/these-three-enterprise-deals-show-theres-plenty-of-action-in-smaller-acquisitions/"
-										>
-											Learn More
-										</a>
+										<Link href="https://techcrunch.com/2021/02/10/these-three-enterprise-deals-show-theres-plenty-of-action-in-smaller-acquisitions/">
+											<a className="t-link">Learn More</a>
+										</Link>
 									</div>
 								</div>
 							</div>
@@ -729,12 +724,9 @@ export default function About({ res }) {
 										Automation
 									</p>
 									<div className="c-card__meta c-card__meta--noline c-card__meta--nopadding ">
-										<a
-											className="t-link"
-											href="https://martechseries.com/technology/copper-positioned-gartners-2019-magic-quadrant-sales-force-automation/"
-										>
-											Learn More
-										</a>
+										<Link href="https://martechseries.com/technology/copper-positioned-gartners-2019-magic-quadrant-sales-force-automation/">
+											<a className="t-link">Learn More</a>
+										</Link>
 									</div>
 								</div>
 							</div>
@@ -760,12 +752,9 @@ export default function About({ res }) {
 									</div>
 									<p>Copper raises $53M for its Google Workspace-centric CRM</p>
 									<div className="c-card__meta c-card__meta--noline c-card__meta--nopadding ">
-										<a
-											className="t-link"
-											href="https://techcrunch.com/2017/09/26/prosperworks-raises-53m-for-its-g-suite-centric-crm-service/"
-										>
-											Learn More
-										</a>
+										<Link href="https://techcrunch.com/2017/09/26/prosperworks-raises-53m-for-its-g-suite-centric-crm-service/">
+											<a className="t-link">Learn More</a>
+										</Link>
 									</div>
 								</div>
 							</div>
@@ -794,12 +783,9 @@ export default function About({ res }) {
 										Survey
 									</p>
 									<div className="c-card__meta c-card__meta--noline c-card__meta--nopadding ">
-										<a
-											className="t-link"
-											href="https://www.martechcube.com/crm-leader-copper-releases-marketing-sales-relationships-survey/"
-										>
-											Learn More
-										</a>
+										<Link href="https://www.martechcube.com/crm-leader-copper-releases-marketing-sales-relationships-survey/">
+											<a className="t-link">Learn More</a>
+										</Link>
 									</div>
 								</div>
 							</div>
@@ -827,12 +813,9 @@ export default function About({ res }) {
 										Copper's Winning 60% Against Salesforce In $52B CRM Market
 									</p>
 									<div className="c-card__meta c-card__meta--noline c-card__meta--nopadding ">
-										<a
-											className="t-link"
-											href="https://www.forbes.com/sites/petercohan/2018/08/08/coppers-winning-60-against-salesforce-in-52b-crm-market/?sh=3381451a13f8"
-										>
-											Learn More
-										</a>
+										<Link href="https://www.forbes.com/sites/petercohan/2018/08/08/coppers-winning-60-against-salesforce-in-52b-crm-market/?sh=3381451a13f8">
+											<a className="t-link">Learn More</a>
+										</Link>
 									</div>
 								</div>
 							</div>
@@ -862,12 +845,9 @@ export default function About({ res }) {
 										productivity environment.
 									</p>
 									<div className="c-card__meta c-card__meta--noline c-card__meta--nopadding ">
-										<a
-											className="t-link"
-											href="https://au.pcmag.com/cloud-services-1/48133/copper-review"
-										>
-											Learn More
-										</a>
+										<Link href="https://au.pcmag.com/cloud-services-1/48133/copper-review">
+											<a className="t-link">Learn More</a>
+										</Link>
 									</div>
 								</div>
 							</div>
@@ -896,12 +876,9 @@ export default function About({ res }) {
 										agile go-to-market strategies?
 									</p>
 									<div className="c-card__meta c-card__meta--noline c-card__meta--nopadding ">
-										<a
-											className="t-link"
-											href="https://martech.org/will-marketing-and-sales-finally-align-around-revops-and-agile-go-to-market-strategies/"
-										>
-											Learn More
-										</a>
+										<Link href="https://martech.org/will-marketing-and-sales-finally-align-around-revops-and-agile-go-to-market-strategies/">
+											<a className="t-link">Learn More</a>
+										</Link>
 									</div>
 								</div>
 							</div>
@@ -930,12 +907,9 @@ export default function About({ res }) {
 										What’s Most Important
 									</p>
 									<div className="c-card__meta c-card__meta--noline c-card__meta--nopadding ">
-										<a
-											className="t-link"
-											href="https://www.forbes.com/sites/quickerbettertech/2018/07/26/on-crm-prosperworks-crm-is-now-copper-but-thats-not-whats-most-important/?sh=4f5e3777ec35"
-										>
-											Learn More
-										</a>
+										<Link href="https://www.forbes.com/sites/quickerbettertech/2018/07/26/on-crm-prosperworks-crm-is-now-copper-but-thats-not-whats-most-important/?sh=4f5e3777ec35">
+											<a className="t-link">Learn More</a>
+										</Link>
 									</div>
 								</div>
 							</div>
@@ -1277,13 +1251,11 @@ export default function About({ res }) {
 							</p>
 							<p></p>
 							<div className="c-hero__buttons">
-								<a
-									className="c-button c-button--hot-pink"
-									target="_blank"
-									href="https://jobs.lever.co/copper/"
-								>
-									See Openings
-								</a>
+								<Link href="https://jobs.lever.co/copper/">
+									<a className="c-button c-button--hot-pink" target="_blank">
+										See Openings
+									</a>
+								</Link>
 							</div>
 						</div>
 						<div className="img-companier">

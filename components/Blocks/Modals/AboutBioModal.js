@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { getHighlightsPopupInformation } from "../../../models/about-models";
 
 import ModalBase from "./ModalBase/ModalBase";
@@ -35,28 +36,24 @@ const AboutBioModal = ({ leaderId, containerStyles, closeSignal }) => {
 							/>
 						</div>
 						<div className="social-links">
-							<a
-								href={linkedingUrl}
-								className="s-linkedin"
-								style={{ display: linkedinDisplay }}
-							>
-								<Image
-									src="https://copper.objects.frb.io/imgs/about/highlights/linkedin-modal.svg"
-									width="15px"
-									height="15px"
-								/>
-							</a>
-							<a
-								href={twitterUrl}
-								className="s-twitter"
-								style={{ display: twitterDisplay }}
-							>
-								<Image
-									src="https://copper.objects.frb.io/imgs/about/highlights/twitter-modal.svg"
-									width="18px"
-									height="15px"
-								/>
-							</a>
+							<Link href={linkedingUrl}>
+								<a className="s-linkedin" style={{ display: linkedinDisplay }}>
+									<Image
+										src="https://copper.objects.frb.io/imgs/about/highlights/linkedin-modal.svg"
+										width="15px"
+										height="15px"
+									/>
+								</a>
+							</Link>
+							<Link href={twitterUrl}>
+								<a className="s-twitter" style={{ display: twitterDisplay }}>
+									<Image
+										src="https://copper.objects.frb.io/imgs/about/highlights/twitter-modal.svg"
+										width="18px"
+										height="15px"
+									/>
+								</a>
+							</Link>
 						</div>
 					</div>
 				</div>

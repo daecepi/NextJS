@@ -1,4 +1,5 @@
 import { linkitButtonPropertyGetter } from "../../../helpers/propertyResolver";
+import Link from "next/link";
 
 const CtaGroup = ({ ctas }) => {
 	const numberCtas = ctas.length;
@@ -15,16 +16,17 @@ const CtaGroup = ({ ctas }) => {
 						let buttonColor = cta.buttonColor[0].slug || "white";
 						if (cta.modalTrigger) {
 							return (
-								<a
-									className={`c-button ${
-										ctas.length > 0 ? "button-center--mobile" : ""
-									} c-button--${buttonColor}  ${
-										cta.takeBackgroundColor ? "section-background-flavor" : ""
-									}`}
-									href="/demos"
-								>
-									{convertedCta?.value || ""}
-								</a>
+								<Link href="/demos">
+									<a
+										className={`c-button ${
+											ctas.length > 0 ? "button-center--mobile" : ""
+										} c-button--${buttonColor}  ${
+											cta.takeBackgroundColor ? "section-background-flavor" : ""
+										}`}
+									>
+										{convertedCta?.value || ""}
+									</a>
+								</Link>
 							);
 						} else {
 							{
@@ -32,39 +34,45 @@ const CtaGroup = ({ ctas }) => {
 							}
 							if (convertedCta.value.toLowerCase() === "try free") {
 								return (
-									<a
-										className={`c-button ${
-											ctas.length > 0 ? "button-center--mobile" : ""
-										} sendUTMsToAmplitude c-button--${buttonColor} ${
-											cta.takeBackgroundColor ? "section-background-flavor" : ""
-										}`}
-										target={
-											convertedCta?.target && convertedCta.target == 1
-												? "_blank"
-												: undefined
-										}
-										href={convertedCta?.href || ""}
-									>
-										{convertedCta?.value || ""}
-									</a>
+									<Link href={convertedCta?.href || ""}>
+										<a
+											className={`c-button ${
+												ctas.length > 0 ? "button-center--mobile" : ""
+											} sendUTMsToAmplitude c-button--${buttonColor} ${
+												cta.takeBackgroundColor
+													? "section-background-flavor"
+													: ""
+											}`}
+											target={
+												convertedCta?.target && convertedCta.target == 1
+													? "_blank"
+													: undefined
+											}
+										>
+											{convertedCta?.value || ""}
+										</a>
+									</Link>
 								);
 							} else {
 								return (
-									<a
-										className={`c-button ${
-											ctas?.length > 0 ? "button-center--mobile" : ""
-										}  c-button--${buttonColor} ${
-											cta.takeBackgroundColor ? "section-background-flavor" : ""
-										} `}
-										target={
-											convertedCta?.target && convertedCta.target == 1
-												? "_blank"
-												: undefined
-										}
-										href={convertedCta?.href || ""}
-									>
-										{convertedCta?.value || ""}
-									</a>
+									<Link href={convertedCta?.href || ""}>
+										<a
+											className={`c-button ${
+												ctas?.length > 0 ? "button-center--mobile" : ""
+											}  c-button--${buttonColor} ${
+												cta.takeBackgroundColor
+													? "section-background-flavor"
+													: ""
+											} `}
+											target={
+												convertedCta?.target && convertedCta.target == 1
+													? "_blank"
+													: undefined
+											}
+										>
+											{convertedCta?.value || ""}
+										</a>
+									</Link>
 								);
 							}
 						}
@@ -73,38 +81,40 @@ const CtaGroup = ({ ctas }) => {
 					case "imageCta":
 						let image = cta.backgroundImage[0] || undefined;
 						return (
-							<a
-								className="c-button-image"
-								target={`${
-									convertedCta?.target && convertedCta.target === 1
-										? "_blank"
-										: undefined
-								}`}
-								href={convertedCta?.href || ""}
-							>
-								<img
-									src={image.url}
-									alt={image.altText?.length ? image.altText : image.title}
-								/>
-							</a>
-						);
-
-					case "link":
-						return (
-							<div className="flex-column">
+							<Link href={convertedCta?.href || ""}>
 								<a
+									className="c-button-image"
 									target={`${
 										convertedCta?.target && convertedCta.target === 1
 											? "_blank"
 											: undefined
 									}`}
-									href={convertedCta?.href || ""}
-									className={`t-link ${
-										cta.ctaRemoveUnderline ? "no-underline" : ""
-									}`}
 								>
-									{convertedCta?.value || ""}
+									<img
+										src={image.url}
+										alt={image.altText?.length ? image.altText : image.title}
+									/>
 								</a>
+							</Link>
+						);
+
+					case "link":
+						return (
+							<div className="flex-column">
+								<Link href={convertedCta?.href || ""}>
+									<a
+										target={`${
+											convertedCta?.target && convertedCta.target === 1
+												? "_blank"
+												: undefined
+										}`}
+										className={`t-link ${
+											cta.ctaRemoveUnderline ? "no-underline" : ""
+										}`}
+									>
+										{convertedCta?.value || ""}
+									</a>
+								</Link>
 							</div>
 						);
 					default:

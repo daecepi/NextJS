@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import Script from "next/script";
 import NavigationDefault from "../components/Navigation/NavigationDefault";
@@ -90,19 +91,18 @@ export default function GoogleWorkspaceCrm({}) {
 												name="authenticity_token"
 												value="lAAB/AYz9RxQR4RN74ZQgCErmru66/VW8Kzw3EeKrJrJC4AjlOsOIwvmktA9F0k1HVJQkSEber78cUBqUaYwhw=="
 											/>
-											<a
-												className="google_light_btn"
-												href="https://app.copper.com/auth/auto_login?continue_with_google=true&amp;failure_url=https%3A%2F%2Fapp.copper.com%2Fusers%2Fsign_up%3Fauth_error%3DAuthentication%2Bfailed.%2BPlease%2Benter%2Byour%2Bemail%2Bbelow%2Bto%2Bcontinue.&amp;prompt=consent&amp;provider=google_oauth2_extended"
-											>
-												<img
-													className="google_icon"
-													src="/imgs/google-g-0cf576a5dab9315daac7ffe29d29ed585e0ff9850e59408d0f25f38dc1da037b.svg"
-													alt="Google g"
-												/>
-												<span className="google_light_btn_label">
-													Continue with Google
-												</span>
-											</a>
+											<Link href="https://app.copper.com/auth/auto_login?continue_with_google=true&amp;failure_url=https%3A%2F%2Fapp.copper.com%2Fusers%2Fsign_up%3Fauth_error%3DAuthentication%2Bfailed.%2BPlease%2Benter%2Byour%2Bemail%2Bbelow%2Bto%2Bcontinue.&amp;prompt=consent&amp;provider=google_oauth2_extended">
+												<a className="google_light_btn">
+													<img
+														className="google_icon"
+														src="/imgs/google-g-0cf576a5dab9315daac7ffe29d29ed585e0ff9850e59408d0f25f38dc1da037b.svg"
+														alt="Google g"
+													/>
+													<span className="google_light_btn_label">
+														Continue with Google
+													</span>
+												</a>
+											</Link>
 											<div className="signup_form_subtext">
 												or use your email to sign up:
 											</div>
@@ -144,8 +144,13 @@ export default function GoogleWorkspaceCrm({}) {
 										</form>
 										<p className="disclaimer">
 											By signing up, I agree to Copper’s{" "}
-											<a href="/privacy">privacy policy</a> &{" "}
-											<a href="/terms">terms of service.</a>
+											<Link href="/privacy">
+												<a>privacy policy</a>
+											</Link>{" "}
+											&{" "}
+											<Link href="/terms">
+												<a>terms of service.</a>
+											</Link>
 										</p>
 									</div>
 								</div>
@@ -211,12 +216,12 @@ export default function GoogleWorkspaceCrm({}) {
 										tasks in your marketing and sales process.
 									</p>
 									<div className="c-single-column__buttons">
-										<a className="c-button sendUTMsToAmplitude" href="/signup">
-											Try Free
-										</a>
-										<a className="c-button c-button--outline" href="/demos">
-											Request Demo
-										</a>
+										<Link href="/signup">
+											<a className="c-button sendUTMsToAmplitude">Try Free</a>
+										</Link>
+										<Link href="/demos">
+											<a className="c-button c-button--outline">Request Demo</a>
+										</Link>
 									</div>
 								</div>
 							</div>
@@ -231,12 +236,9 @@ export default function GoogleWorkspaceCrm({}) {
 									<p>
 										A Google-recommended CRM, Chrome Enterprise Partner,
 										Google-backed company and a featured Workspace solution at{" "}
-										<a
-											target="_blank"
-											href="https://copper-crm.wistia.com/medias/4wvijtqq4r?wvideo=4wvijtqq4r&mkt_tok=NzYzLURWTC0yO[…]khvz0bw2n8uZO1FK25UAN2cmAydUMNG6aNZRM50469xJhcSWB6-Fz6dG8Q"
-										>
-											Google Next '21
-										</a>
+										<Link href="https://copper-crm.wistia.com/medias/4wvijtqq4r?wvideo=4wvijtqq4r&mkt_tok=NzYzLURWTC0yO[…]khvz0bw2n8uZO1FK25UAN2cmAydUMNG6aNZRM50469xJhcSWB6-Fz6dG8Q">
+											<a target="_blank">Google Next '21</a>
+										</Link>
 										, Copper is the CRM of choice for Workspace businesses.
 									</p>
 								</div>
@@ -1015,28 +1017,30 @@ export default function GoogleWorkspaceCrm({}) {
 										className="c-hero__buttons"
 										style={{ flexDirection: "row" }}
 									>
-										<a
-											className="c-button sendUTMsToAmplitude c-button--white  section-background-flavor"
-											style={{
-												justifyContent: "center",
-												marginRight: "5px",
-												width: "fit-content",
-											}}
-											href="https://www.copper.com/signup"
-										>
-											Try free
-										</a>
-										<a
-											className="c-button c-button--outline  section-background-flavor "
-											href="/demos"
-											style={{
-												justifyContent: "center",
-												marginLeft: "5px",
-												width: "fit-content",
-											}}
-										>
-											Request demo
-										</a>
+										<Link href="/signup">
+											<a
+												className="c-button sendUTMsToAmplitude c-button--white  section-background-flavor"
+												style={{
+													justifyContent: "center",
+													marginRight: "5px",
+													width: "fit-content",
+												}}
+											>
+												Try free
+											</a>
+										</Link>
+										<Link href="/demos">
+											<a
+												className="c-button c-button--outline  section-background-flavor "
+												style={{
+													justifyContent: "center",
+													marginLeft: "5px",
+													width: "fit-content",
+												}}
+											>
+												Request demo
+											</a>
+										</Link>
 									</div>
 								</div>
 							</div>

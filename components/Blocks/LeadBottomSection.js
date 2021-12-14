@@ -1,3 +1,4 @@
+import Link from "next/link";
 const LeadBottomSection = ({ copy }) => {
 	return (
 		<section id="" className="c-cols c-cols pricing-style hot-pink">
@@ -140,28 +141,30 @@ const LeadBottomSection = ({ copy }) => {
 							</>
 						)}
 						<div className="c-hero__buttons" style={{ flexDirection: "row" }}>
-							<a
-								className="c-button sendUTMsToAmplitude c-button--white  section-background-flavor"
-								style={{
-									justifyContent: "center",
-									marginRight: "5px",
-									width: "fit-content",
-								}}
-								href="https://www.copper.com/signup"
-							>
-								Try free
-							</a>
-							<a
-								className="c-button c-button--outline  section-background-flavor "
-								href="/demos"
-								style={{
-									justifyContent: "center",
-									marginRight: "5px",
-									width: "fit-content",
-								}}
-							>
-								Request demo
-							</a>
+							<Link href="https://www.copper.com/signup">
+								<a
+									className="c-button sendUTMsToAmplitude c-button--white  section-background-flavor"
+									style={{
+										justifyContent: "center",
+										marginRight: "5px",
+										width: "fit-content",
+									}}
+								>
+									Try free
+								</a>
+							</Link>
+							<Link href="/demos">
+								<a
+									className="c-button c-button--outline  section-background-flavor "
+									style={{
+										justifyContent: "center",
+										marginRight: "5px",
+										width: "fit-content",
+									}}
+								>
+									Request demo
+								</a>
+							</Link>
 						</div>
 					</div>
 				</div>

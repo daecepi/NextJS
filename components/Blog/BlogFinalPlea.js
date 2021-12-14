@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useRecoilValue } from "recoil";
 import { SyncedAtom } from "../../atoms/SyncAtom";
 
@@ -31,15 +32,14 @@ const BlogFinalPlea = () => {
 							No credit card required. Start your 14-day free trial today.
 						</p>
 						<div className="c-hero__buttons">
-							<a className="c-button" href="/demos">
-								Request Demo
-							</a>
-							<a
-								className="c-button c-button--outline sendUTMsToAmplitude"
-								href={syncedAtomInformation.generalSignupUrl}
-							>
-								Try Free
-							</a>
+							<Link href="/demos">
+								<a className="c-button">Request Demo</a>
+							</Link>
+							<Link href={syncedAtomInformation.generalSignupUrl}>
+								<a className="c-button c-button--outline sendUTMsToAmplitude">
+									Try Free
+								</a>
+							</Link>
 						</div>
 					</div>
 				</div>

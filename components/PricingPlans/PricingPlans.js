@@ -1,3 +1,4 @@
+import Link from "next/link";
 import PricingCardLarge from "../PricingPlans/PricingCardLarge";
 import PricingCardSmall from "../PricingPlans/PricingCardSmall";
 
@@ -221,27 +222,29 @@ const PricingPlans = ({
 																Get Demo
 															</a>;
 														} else if (cta.modalTrigger) {
-															<a
-																className={`c-button c-button--${
-																	buttonColor ? buttonColor.slug : "outline"
-																}`}
-																href="/demos"
-															>
-																{cta.button.text}
-															</a>;
+															<Link href="/demos">
+																<a
+																	className={`c-button c-button--${
+																		buttonColor ? buttonColor.slug : "outline"
+																	}`}
+																>
+																	{cta.button.text}
+																</a>
+															</Link>;
 														} else {
-															<a
-																className={`c-button c-button--${
-																	buttonColor ? buttonColor.slug : "outline"
-																} ${
-																	plan.featured ? "featured-button" : ""
-																} pricing-cta`}
-																target={cta.button.target}
-																href={cta.button.url}
-																data-plan-type={plan.planType}
-															>
-																{cta.button.text}
-															</a>;
+															<Link href={cta.button.url}>
+																<a
+																	className={`c-button c-button--${
+																		buttonColor ? buttonColor.slug : "outline"
+																	} ${
+																		plan.featured ? "featured-button" : ""
+																	} pricing-cta`}
+																	target={cta.button.target}
+																	data-plan-type={plan.planType}
+																>
+																	{cta.button.text}
+																</a>
+															</Link>;
 														}
 													})}
 												</div>

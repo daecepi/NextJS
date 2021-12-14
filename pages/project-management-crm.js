@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import Script from "next/script";
 import HeroHomePage from "../components/Blocks/HeroTypes/HeroHomePage";
 import Footer from "../components/Footer/Footer";
@@ -356,19 +357,18 @@ const PmCRM = () => {
 												name="authenticity_token"
 												value="lAAB/AYz9RxQR4RN74ZQgCErmru66/VW8Kzw3EeKrJrJC4AjlOsOIwvmktA9F0k1HVJQkSEber78cUBqUaYwhw=="
 											/>
-											<a
-												className="google_light_btn"
-												href="https://app.copper.com/auth/auto_login?continue_with_google=true&amp;failure_url=https%3A%2F%2Fapp.copper.com%2Fusers%2Fsign_up%3Fauth_error%3DAuthentication%2Bfailed.%2BPlease%2Benter%2Byour%2Bemail%2Bbelow%2Bto%2Bcontinue.&amp;prompt=consent&amp;provider=google_oauth2_extended"
-											>
-												<img
-													className="google_icon"
-													alt="Google Icon"
-													src="//d3jas8421cca9z.cloudfront.net/assets/google-g-0cf576a5dab9315daac7ffe29d29ed585e0ff9850e59408d0f25f38dc1da037b.svg"
-												/>
-												<span className="google_light_btn_label">
-													Continue with Google
-												</span>
-											</a>
+											<Link href="https://app.copper.com/auth/auto_login?continue_with_google=true&amp;failure_url=https%3A%2F%2Fapp.copper.com%2Fusers%2Fsign_up%3Fauth_error%3DAuthentication%2Bfailed.%2BPlease%2Benter%2Byour%2Bemail%2Bbelow%2Bto%2Bcontinue.&amp;prompt=consent&amp;provider=google_oauth2_extended">
+												<a className="google_light_btn">
+													<img
+														className="google_icon"
+														alt="Google Icon"
+														src="//d3jas8421cca9z.cloudfront.net/assets/google-g-0cf576a5dab9315daac7ffe29d29ed585e0ff9850e59408d0f25f38dc1da037b.svg"
+													/>
+													<span className="google_light_btn_label">
+														Continue with Google
+													</span>
+												</a>
+											</Link>
 											<div className="signup_form_subtext">
 												or use your email to sign up:
 											</div>
@@ -410,8 +410,13 @@ const PmCRM = () => {
 										</form>
 										<p className="disclaimer">
 											By signing up, I agree to Copper’s{" "}
-											<a href="/privacy">privacy policy</a> &amp;{" "}
-											<a href="/terms">terms of service.</a>
+											<Link href="/privacy">
+												<a>privacy policy</a>
+											</Link>{" "}
+											&amp;{" "}
+											<Link href="/terms">
+												<a>terms of service.</a>
+											</Link>
 										</p>
 									</div>
 								</div>
@@ -868,12 +873,11 @@ const PmCRM = () => {
 										deeply integrated with Google Workspace - tie back directly
 										to your deal pipeline for a customer relationship.
 									</p>
-									<a
-										className="t-link h-white sendUTMsToAmplitude"
-										href="https://www.copper.com/signup?_ga=2.203906000.1318646422.1594028674-1197161615.1589920381&_gac=1.248633752.1593720638.null"
-									>
-										Try Free Today
-									</a>
+									<Link href="https://www.copper.com/signup?_ga=2.203906000.1318646422.1594028674-1197161615.1589920381&_gac=1.248633752.1593720638.null">
+										<a className="t-link h-white sendUTMsToAmplitude">
+											Try Free Today
+										</a>
+									</Link>
 								</div>
 							</div>
 						</div>
@@ -984,13 +988,11 @@ const PmCRM = () => {
 								</p>
 								<div className="c-hero__buttons">
 									<div className="flex-column">
-										<a
-											target=""
-											href="https://www.copper.com/signup?_ga=2.203906000.1318646422.1594028674-1197161615.1589920381&_gac=1.248633752.1593720638.null"
-											className="t-link sendUTMsToAmplitude"
-										>
-											Try Free Today
-										</a>
+										<Link href="https://www.copper.com/signup?_ga=2.203906000.1318646422.1594028674-1197161615.1589920381&_gac=1.248633752.1593720638.null">
+											<a target="" className="t-link sendUTMsToAmplitude">
+												Try Free Today
+											</a>
+										</Link>
 									</div>
 								</div>
 							</div>
@@ -1159,13 +1161,15 @@ const PmCRM = () => {
 										<pre className="c-eyebrow c-eyebrow--light">
 											SUCCESS STORIES
 										</pre>
-										<a href="https://www.alliswellstudios.com/" target="_blank">
-											<img
-												src="//d2ydtwisqcxv72.cloudfront.net/landing/section-image_testimonial-avatar@2x.png"
-												alt="James Keblas"
-												style={{ width: "359px !important", height: "393px" }}
-											/>
-										</a>
+										<Link href="https://www.alliswellstudios.com/">
+											<a target="_blank">
+												<img
+													src="//d2ydtwisqcxv72.cloudfront.net/landing/section-image_testimonial-avatar@2x.png"
+													alt="James Keblas"
+													style={{ width: "359px !important", height: "393px" }}
+												/>
+											</a>
+										</Link>
 									</div>
 								</div>
 
@@ -1179,13 +1183,11 @@ const PmCRM = () => {
 											JAMES KEBLAS
 											<span className="c-panel__blockquote--position">
 												Head of Business Development,{" "}
-												<a
-													href="https://www.alliswellstudios.com/"
-													className="no-style-link"
-													target="_blank"
-												>
-													All is Well
-												</a>
+												<Link href="https://www.alliswellstudios.com/">
+													<a className="no-style-link" target="_blank">
+														All is Well
+													</a>
+												</Link>
 											</span>
 										</cite>
 										<div className="c-panel__blockquote--logo"></div>
@@ -1223,13 +1225,14 @@ const PmCRM = () => {
 							</p>
 							<p></p>
 							<div className="c-hero__buttons">
-								<a
-									className="c-button sendUTMsToAmplitude c-button--hot-pink"
-									target=""
-									href="https://www.copper.com/signup"
-								>
-									Try Free Today
-								</a>
+								<Link href="https://www.copper.com/signup">
+									<a
+										className="c-button sendUTMsToAmplitude c-button--hot-pink"
+										target=""
+									>
+										Try Free Today
+									</a>
+								</Link>
 							</div>
 						</div>
 						<div className="img-companier">

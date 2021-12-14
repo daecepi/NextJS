@@ -2,6 +2,7 @@ import Head from "next/head";
 import NavigationDefault from "../components/Navigation/NavigationDefault";
 import Footer from "../components/Footer/Footer";
 import Image from "next/image";
+import Link from "next/link";
 
 import HeroProduct from "../components/Blocks/HeroTypes/HeroProduct";
 import CaseStudy from "../components/ProductsComponent/CaseStudy/CaseStudy";
@@ -55,15 +56,12 @@ const TrackLeads = () => {
 								the table. Don’t let a lead slip through the cracks ever again.
 							</p>
 							<div className="c-single-column__buttons">
-								<a
-									className="c-button sendUTMsToAmplitude"
-									href="https://www.copper.com/signup"
-								>
-									Try Free
-								</a>
-								<a className="c-button c-button--outline" href="/demos">
-									Request Demo
-								</a>
+								<Link href="/signup">
+									<a className="c-button sendUTMsToAmplitude">Try Free</a>
+								</Link>
+								<Link href="/demos">
+									<a className="c-button c-button--outline">Request Demo</a>
+								</Link>
 							</div>
 						</div>
 					</div>
