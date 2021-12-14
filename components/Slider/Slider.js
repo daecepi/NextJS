@@ -1,3 +1,4 @@
+import Link from "next/link";
 const Slider = ({
 	displaG2CrowdModule,
 	displayG2CrowdHeader,
@@ -136,12 +137,9 @@ const Slider = ({
 						</div>
 						<p className="text-center reviews-module-footer">
 							4.6 out of 5 stars based on{" "}
-							<a
-								href="https://www.g2.com/products/copper/reviews"
-								className="t-link no-arrow"
-							>
-								437 reviews
-							</a>{" "}
+							<Link href="https://www.g2.com/products/copper/reviews">
+								<a className="t-link no-arrow">437 reviews</a>
+							</Link>{" "}
 							on{" "}
 							<img
 								style={{

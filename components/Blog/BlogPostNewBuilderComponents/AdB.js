@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { linkitButtonPropertyGetter } from "../../../helpers/propertyResolver";
 
 const AdB = ({ eyebrow, pinkPeriodAfterHeader, header, paragraph }) => {
@@ -18,25 +19,27 @@ const AdB = ({ eyebrow, pinkPeriodAfterHeader, header, paragraph }) => {
 							(cta.buttonColor?.length && cta.buttonColor[0]) || undefined;
 						if (cta.modalTrigger) {
 							const buttonResolved = linkitButtonPropertyGetter(cta.button);
-							<a
-								className={`c-button c-button--${
-									buttonColor ? buttonColor.slug : "white"
-								}`}
-								href="/demos"
-							>
-								{buttonResolved?.text || ""}
-							</a>;
+							<Link href="/demos">
+								<a
+									className={`c-button c-button--${
+										buttonColor ? buttonColor.slug : "white"
+									}`}
+								>
+									{buttonResolved?.text || ""}
+								</a>
+							</Link>;
 						}
 						return (
-							<a
-								className={`c-button c-button--${
-									buttonColor ? buttonColor.slug : "white"
-								}`}
-								target={buttonResolved.target == 1 ? "_blank" : undefined}
-								href={buttonResolved.url}
-							>
-								{cta.button.text}
-							</a>
+							<Link href={buttonResolved.url}>
+								<a
+									className={`c-button c-button--${
+										buttonColor ? buttonColor.slug : "white"
+									}`}
+									target={buttonResolved.target == 1 ? "_blank" : undefined}
+								>
+									{cta.button.text}
+								</a>
+							</Link>
 						);
 					})}
 			</div>

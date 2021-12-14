@@ -1,16 +1,34 @@
-import Image from 'next/image';
-import Script from 'next/script';
+import Image from "next/image";
+import Link from "next/link";
+import Script from "next/script";
 
-const TwoUp = props => {
+const TwoUp = (props) => {
 	return (
 		<>
-			<div className={`row ${props.reverse ? 'column-reverse' : 'extra-padding--bottom'}`}>
-				<div className={`${props.reverse ? 'col-md-6' : 'col-md-7 order-2'} `}>
-					<div className={`${props.reverse ? 'c-image c-image--left' : 'c-image c-image--drop-right'} `}>
+			<div
+				className={`row ${
+					props.reverse ? "column-reverse" : "extra-padding--bottom"
+				}`}
+			>
+				<div className={`${props.reverse ? "col-md-6" : "col-md-7 order-2"} `}>
+					<div
+						className={`${
+							props.reverse
+								? "c-image c-image--left"
+								: "c-image c-image--drop-right"
+						} `}
+					>
 						{props.videoWebm && props.videoMp4 ? (
 							<div className="video-gif-container">
-								<video id={props.videoId} data-cy="video-element" className="video-as-gif onViewport" style={{ maxWidth: '100%' }} muted playsInline>
-									{' '}
+								<video
+									id={props.videoId}
+									data-cy="video-element"
+									className="video-as-gif onViewport"
+									style={{ maxWidth: "100%" }}
+									muted
+									playsInline
+								>
+									{" "}
 									<source src={props.videoWebm} type="video/webm" />
 									<source src={props.videoMp4} type="video/mp4" />
 									<p>Su navegador no soporta video HTML5</p>
@@ -27,15 +45,19 @@ const TwoUp = props => {
 										}
 
 										function scrollFunctionality() {
-											$('.video-as-gif.onViewport').each(function (index) {
+											$(".video-as-gif.onViewport").each(function (index) {
 												var elementTop = $(this).offset().top;
 												var elementBottom = elementTop + $(this).outerHeight();
 												var viewportTop = $(window).scrollTop();
 												var viewportBottom = viewportTop + $(window).height();
 
-												var elemenId = $(this).attr('id');
+												var elemenId = $(this).attr("id");
 												console.log(elemenId);
-												if (elementBottom > viewportTop && elementTop < viewportBottom && lastGifVidExecuted[elemenId] !== 1) {
+												if (
+													elementBottom > viewportTop &&
+													elementTop < viewportBottom &&
+													lastGifVidExecuted[elemenId] !== 1
+												) {
 													lastGifVidExecuted[elemenId] = 1;
 													$(this)[0].play();
 												} else if (lastGifVidExecuted[elemenId] !== 1) {
@@ -53,7 +75,10 @@ const TwoUp = props => {
 											var myInterval = setInterval(function () {
 												var videoOne = document.getElementById(props.videoId);
 												if (videoOne.readyState >= 3 || videoOne.loadStart) {
-													$(`#${props.videoId}-placeholder`).css('opacity', '0');
+													$(`#${props.videoId}-placeholder`).css(
+														"opacity",
+														"0"
+													);
 													clearInterval(myInterval);
 												}
 											}, 200);
@@ -61,24 +86,24 @@ const TwoUp = props => {
 											gsap.registerPlugin(ScrollTrigger);
 
 											function getPos(newpos) {
-												var position = $('.flagForAnimation').offset().top;
-												var divHeight = $('#theAnimation2').height() + 240;
-												if (newpos == '#uno') {
-													$('html, body').animate(
+												var position = $(".flagForAnimation").offset().top;
+												var divHeight = $("#theAnimation2").height() + 240;
+												if (newpos == "#uno") {
+													$("html, body").animate(
 														{
 															scrollTop: position,
 														},
 														1000
 													);
-												} else if (newpos == '#dos') {
-													$('html, body').animate(
+												} else if (newpos == "#dos") {
+													$("html, body").animate(
 														{
 															scrollTop: position + divHeight * 1.5,
 														},
 														1000
 													);
-												} else if (newpos == '#tres') {
-													$('html, body').animate(
+												} else if (newpos == "#tres") {
+													$("html, body").animate(
 														{
 															scrollTop: position + 3 * divHeight,
 														},
@@ -86,8 +111,8 @@ const TwoUp = props => {
 													);
 												}
 											}
-											$(document).on('click', "a[href^='#']", function (e) {
-												var id = $(this).attr('href');
+											$(document).on("click", "a[href^='#']", function (e) {
+												var id = $(this).attr("href");
 												if (id.length > 0) {
 													e.preventDefault();
 													getPos(id);
@@ -100,17 +125,21 @@ const TwoUp = props => {
 									strategy="lazyOnload"
 									src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
 									onLoad={() => {
-										$('.three-column-slider .container > .container .row').slick({
+										$(
+											".three-column-slider .container > .container .row"
+										).slick({
 											infinite: false,
 											mobileFirst: true,
 											slidesToShow: 1,
 											slidesToScroll: 1,
 											dots: true,
 											rows: 0,
-											appendDots: '.dots-box',
-											appendArrows: '.buttons-box',
-											prevArrow: '<a id="arrowBack" target="" className="button-slide-change t-link inverted-arrow">Prev</a>',
-											nextArrow: '<a id="arrowNext" target="arrowNext"  className="button-slide-change t-link">Next</a>',
+											appendDots: ".dots-box",
+											appendArrows: ".buttons-box",
+											prevArrow:
+												'<a id="arrowBack" target="" className="button-slide-change t-link inverted-arrow">Prev</a>',
+											nextArrow:
+												'<a id="arrowNext" target="arrowNext"  className="button-slide-change t-link">Next</a>',
 											// the magic
 											responsive: [
 												{
@@ -123,18 +152,30 @@ const TwoUp = props => {
 												},
 											],
 										});
-										$(window).on('resize', function () {
-											$('.three-column-slider .container > .container .row').slick('resize');
+										$(window).on("resize", function () {
+											$(
+												".three-column-slider .container > .container .row"
+											).slick("resize");
 										});
 									}}
 								></Script>
 							</div>
 						) : (
-							<Image src={props.imageUrl} width={props.imageWidth} height={props.imageHeight}></Image>
+							<Image
+								src={props.imageUrl}
+								width={props.imageWidth}
+								height={props.imageHeight}
+							></Image>
 						)}
 					</div>
 				</div>
-				<div className={` ${props.reverse ? 'col-md-5 offset-md-1 c-valign--middle' : 'col-md-5 c-valign--middle order-1'} `}>
+				<div
+					className={` ${
+						props.reverse
+							? "col-md-5 offset-md-1 c-valign--middle"
+							: "col-md-5 c-valign--middle order-1"
+					} `}
+				>
 					<pre className="c-eyebrow c-eyebrow--dark">{props.eyebrow}</pre>
 					<h2>{props.title}</h2>
 					<p>{props.copy}</p>
@@ -146,9 +187,9 @@ const TwoUp = props => {
 						</ul>
 					) : null}
 					{props.aboutText && props.aboutUrl && (
-						<a className="t-link mt-4" href={props.aboutUrl}>
-							{props.aboutText}
-						</a>
+						<Link href={props.aboutUrl}>
+							<a className="t-link mt-4">{props.aboutText}</a>
+						</Link>
 					)}
 				</div>
 			</div>

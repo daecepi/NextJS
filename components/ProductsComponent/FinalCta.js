@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 const FinalCta = (props) => {
 	return (
 		<section className="final-plea product-page">
@@ -8,15 +9,14 @@ const FinalCta = (props) => {
 						<h2>{props.title}</h2>
 						<p>{props.copy}</p>
 						<div className="c-hero__buttons">
-							<a
-								className="c-button sendUTMsToAmplitude"
-								href={props.ctaOneUrl}
-							>
-								{props.ctaOneText}
-							</a>
-							<a className="c-button c-button--outline" href={props.ctaTwoUrl}>
-								{props.ctaTwoText}
-							</a>
+							<Link href={props.ctaOneUrl}>
+								<a className="c-button sendUTMsToAmplitude">
+									{props.ctaOneText}
+								</a>
+							</Link>
+							<Link href={props.ctaTwoUrl}>
+								<a className="c-button c-button--outline">{props.ctaTwoText}</a>
+							</Link>
 						</div>
 					</div>
 					<div className="col-md-5 offset-md-2">

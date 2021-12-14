@@ -1,3 +1,4 @@
+import Link from "next/link";
 import TeaserImage from "./TeaserImage";
 
 const EntryTeaserImage = ({
@@ -22,7 +23,9 @@ const EntryTeaserImage = ({
 		<>
 			<div className="c-blog-card">
 				<TeaserImage featuredImage={featuredImage} />
-				<a className="c-card__clickthrough" href={`/resources/${slug}`}></a>
+				<Link href={`/resources/${slug}`}>
+					<a className="c-card__clickthrough"></a>
+				</Link>
 				<div className="c-blog-card__content">
 					<span className="t-eyebrow ">
 						{mainCategory?.slug || ""}

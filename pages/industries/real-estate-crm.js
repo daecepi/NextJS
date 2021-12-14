@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import HeroSinglePages from "../../components/Blocks/HeroTypes/HeroSinglePages";
 import SingleTwoCol from "../../components/SinglesComponents/SingleTwoCol/SingleTwoCol";
 import Jumble from "../../components/SinglesComponents/Jumble/Jumble";
@@ -107,9 +108,11 @@ const RealEstateCrm = () => {
 				slug={"real=estate-crm"}
 				loopIndex={0}
 				forcedCtas={
-					<a href="/blog/houwzer-case-study" className="t-link">
-						See how Howzer grew their real estate agent team
-					</a>
+					<Link href="/blog/houwzer-case-study">
+						<a className="t-link">
+							See how Howzer grew their real estate agent team
+						</a>
+					</Link>
 				}
 			/>
 			<TwoColModule
@@ -137,9 +140,9 @@ const RealEstateCrm = () => {
 				imageHeigh="1082"
 				imageOrientation={"right"}
 				forcedCtas={
-					<a href="/blog/reali-case-study" className="t-link">
-						Watch how Reali strengthens relationships.
-					</a>
+					<Link href="/blog/reali-case-study">
+						<a className="t-link">Watch how Reali strengthens relationships.</a>
+					</Link>
 				}
 			/>
 			<TwoColModule
@@ -168,9 +171,11 @@ const RealEstateCrm = () => {
 				slug={"real-estate-crm"}
 				loopIndex={0}
 				forcedCtas={
-					<a href="/blog/remax-realtor-copper-piesync" className="t-link">
-						How this Remax realtor utilizes Copper on the road
-					</a>
+					<Link href="/blog/remax-realtor-copper-piesync">
+						<a className="t-link">
+							How this Remax realtor utilizes Copper on the road
+						</a>
+					</Link>
 				}
 			/>
 			{/*<Quote></Quote>*/}

@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import Script from "next/script";
 
 import NavigationBlog from "../../components/Navigation/NavigationBlog";
@@ -162,14 +163,15 @@ const Post = ({
 							style={{ position: "relative", right: "0px" }}
 							data-cy="resources-search-free-open-desktop"
 						></span>
-						<a
-							className="c-button sendUTMsToAmplitude blogCTA"
-							target="_blank"
-							href="https://www.copper.com/signup"
-							style={{ marginLeft: "17px", marginRight: "15px" }}
-						>
-							Try Copper free
-						</a>
+						<Link href="/signup">
+							<a
+								className="c-button sendUTMsToAmplitude blogCTA"
+								target="_blank"
+								style={{ marginLeft: "17px", marginRight: "15px" }}
+							>
+								Try Copper free
+							</a>
+						</Link>
 					</div>
 				</div>
 				<progress max="0" value="0"></progress>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import VideoSide from "./HeroInternalComponents/VideoSide";
 import HeroCopy from "./HeroInternalComponents/HeroCopy";
 import DefaultSignupWidget from "../Simples/DefaultSingupWidget";
@@ -68,19 +69,18 @@ const SignupFormHero = ({
 											name="authenticity_token"
 											value="lAAB/AYz9RxQR4RN74ZQgCErmru66/VW8Kzw3EeKrJrJC4AjlOsOIwvmktA9F0k1HVJQkSEber78cUBqUaYwhw=="
 										/>
-										<a
-											className="google_light_btn"
-											href="https://app.copper.com/auth/auto_login?continue_with_google=true&amp;failure_url=https%3A%2F%2Fapp.copper.com%2Fusers%2Fsign_up%3Fauth_error%3DAuthentication%2Bfailed.%2BPlease%2Benter%2Byour%2Bemail%2Bbelow%2Bto%2Bcontinue.&amp;prompt=consent&amp;provider=google_oauth2_extended"
-										>
-											<img
-												className="google_icon"
-												src="//d3jas8421cca9z.cloudfront.net/assets/google-g-0cf576a5dab9315daac7ffe29d29ed585e0ff9850e59408d0f25f38dc1da037b.svg"
-												alt="Google g"
-											/>
-											<span className="google_light_btn_label">
-												Continue with Google
-											</span>
-										</a>
+										<Link href="https://app.copper.com/auth/auto_login?continue_with_google=true&amp;failure_url=https%3A%2F%2Fapp.copper.com%2Fusers%2Fsign_up%3Fauth_error%3DAuthentication%2Bfailed.%2BPlease%2Benter%2Byour%2Bemail%2Bbelow%2Bto%2Bcontinue.&amp;prompt=consent&amp;provider=google_oauth2_extended">
+											<a className="google_light_btn">
+												<img
+													className="google_icon"
+													src="//d3jas8421cca9z.cloudfront.net/assets/google-g-0cf576a5dab9315daac7ffe29d29ed585e0ff9850e59408d0f25f38dc1da037b.svg"
+													alt="Google g"
+												/>
+												<span className="google_light_btn_label">
+													Continue with Google
+												</span>
+											</a>
+										</Link>
 										<div className="signup_form_subtext">
 											or use your email to sign up:
 										</div>
@@ -132,8 +132,13 @@ const SignupFormHero = ({
 									</form>
 									<p className="disclaimer">
 										By signing up, I agree to Copper’s{" "}
-										<a href="/privacy">privacy policy</a> &{" "}
-										<a href="/terms">terms of service.</a>
+										<Link href="/privacy">
+											<a>privacy policy</a>
+										</Link>{" "}
+										&{" "}
+										<Link href="/terms">
+											<a>terms of service.</a>
+										</Link>
 									</p>
 								</div>
 							</div>

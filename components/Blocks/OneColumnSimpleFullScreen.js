@@ -1,3 +1,4 @@
+import Link from "next/link";
 const OneColumnSimpleFullScreen = (
 	backgroundImageClass,
 	copy,
@@ -14,9 +15,9 @@ const OneColumnSimpleFullScreen = (
 				<div className="col-md-10 offset-md-1 c-single-column__container">
 					<div dangerouslySetInnerHTML={{ __html: copy }}></div>
 					{ctaText.length && ctaUrl.length ? (
-						<a className="t-link" href={ctaUrl}>
-							{ctaText}
-						</a>
+						<Link href={ctaUrl}>
+							<a className="t-link">{ctaText}</a>
+						</Link>
 					) : (
 						""
 					)}

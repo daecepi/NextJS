@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 const CaseStudy = (props) => {
 	return (
 		<section className="c-case-study c-case-study--align-left">
@@ -55,9 +56,9 @@ const CaseStudy = (props) => {
 								</div>
 								{props.linkUrl && (
 									<div className="col-md-12 c-align--right">
-										<a className="t-link" href={props.linkUrl}>
-											{props.linkText}
-										</a>
+										<Link href={props.linkUrl}>
+											<a className="t-link">{props.linkText}</a>
+										</Link>
 									</div>
 								)}
 							</div>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 const CustomSection = ({ backgroundColor, settings, layout }) => {
 	const sectionBackgroundColor = backgroundColor[0] || "white";
 
@@ -191,9 +192,9 @@ const CustomSection = ({ backgroundColor, settings, layout }) => {
 													className={`text-${matrixSection.settings[0].alignment}`}
 												>
 													{matrixSection?.imageLink?.length > 0 ? (
-														<a href={matrixSection.imageLink} taget="_blank">
-															{internalSectionContent()}
-														</a>
+														<Link href={matrixSection.imageLink}>
+															<a taget="_blank">{internalSectionContent()}</a>
+														</Link>
 													) : (
 														<>{internalSectionContent()}</>
 													)}
@@ -210,13 +211,14 @@ const CustomSection = ({ backgroundColor, settings, layout }) => {
 														left: "0px",
 													}}
 												>
-													<a
-														className="c-button sendUTMsToAmplitude mr-0"
-														target="_blank"
-														href={internalSection.urlLink.url}
-													>
-														{internalSection.urlLink.text}
-													</a>
+													<Link href={internalSection.urlLink.url}>
+														<a
+															className="c-button sendUTMsToAmplitude mr-0"
+															target="_blank"
+														>
+															{internalSection.urlLink.text}
+														</a>
+													</Link>
 												</div>
 											);
 
@@ -232,59 +234,65 @@ const CustomSection = ({ backgroundColor, settings, layout }) => {
 																	let buttonColor = cta.buttonColor[0];
 																	if (cta.modalTrigger) {
 																		return (
+																			<Link href="/demos">
+																				<a
+																					className={`c-button c-button--${
+																						buttonColor
+																							? buttonColor.slug
+																							: "white"
+																					}`}
+																				>
+																					{cta.button.text}
+																				</a>
+																			</Link>
+																		);
+																	}
+																	return (
+																		<Link href={cta.button.url}>
 																			<a
-																				className={`c-button c-button--${
+																				className={`${
+																					loop.length <= 1 ? "mr-0" : ""
+																				} c-button sendUTMsToAmplitude c-button--${
 																					buttonColor
 																						? buttonColor.slug
 																						: "white"
 																				}`}
-																				href="/demos"
+																				target={cta.button.target}
 																			>
 																				{cta.button.text}
 																			</a>
-																		);
-																	}
-																	return (
-																		<a
-																			className={`${
-																				loop.length <= 1 ? "mr-0" : ""
-																			} c-button sendUTMsToAmplitude c-button--${
-																				buttonColor ? buttonColor.slug : "white"
-																			}`}
-																			target="{{ cta.button.target }}"
-																			href="{{ cta.button.url }}"
-																		>
-																			{cta.button.text}
-																		</a>
+																		</Link>
 																	);
 																case "imageCta":
 																	let image = cta.backgroundImage[0];
 																	return (
-																		<a
-																			className="c-button-image"
-																			target={cta.button.target}
-																			href={cta.button.url}
-																		>
-																			<img
-																				src={image.url}
-																				alt={
-																					image?.altText?.length
-																						? image.altText
-																						: image.title
-																				}
-																			/>
-																		</a>
+																		<Link href={cta.button.url}>
+																			<a
+																				className="c-button-image"
+																				target={cta.button.target}
+																			>
+																				<img
+																					src={image.url}
+																					alt={
+																						image?.altText?.length
+																							? image.altText
+																							: image.title
+																					}
+																				/>
+																			</a>
+																		</Link>
 																	);
 																case "link":
 																	return (
 																		<div className="flex-column">
-																			<a
-																				target={cta.button.target}
-																				href={cta.button.url}
-																				className="t-link"
-																			>
-																				{cta.button.text}
-																			</a>
+																			<Link href={cta.button.url}>
+																				<a
+																					target={cta.button.target}
+																					className="t-link"
+																				>
+																					{cta.button.text}
+																				</a>
+																			</Link>
 																		</div>
 																	);
 																default:

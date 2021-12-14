@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import HeroProduct from "../components/Blocks/HeroTypes/HeroProduct";
 import Footer from "../components/Footer/Footer";
 import NavigationDefault from "../components/Navigation/NavigationDefault";
@@ -39,12 +40,9 @@ export default function SmallBusinessCRM() {
 							Google Workspace
 						</h2>
 						<p>4.8 stars on Google Workspace Marketplace.</p>
-						<a
-							className="t-link"
-							href="https://workspace.google.com/marketplace/app/copper_crm/461423560386"
-						>
-							See For Yourself
-						</a>
+						<Link href="https://workspace.google.com/marketplace/app/copper_crm/461423560386">
+							<a className="t-link">See For Yourself</a>
+						</Link>
 					</div>
 				</div>
 			</section>
@@ -75,9 +73,9 @@ export default function SmallBusinessCRM() {
 										watch your team instantly adopt the beautiful and intuitive
 										system.
 									</p>
-									<a className="t-link h-white" href="/implementation">
-										Learn More
-									</a>
+									<Link href="/implementation">
+										<a className="t-link h-white">Learn More</a>
+									</Link>
 								</div>
 							</div>
 						</div>

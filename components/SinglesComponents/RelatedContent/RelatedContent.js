@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const RelatedContent = (props) => {
 	return (
@@ -13,10 +14,9 @@ const RelatedContent = (props) => {
 								return (
 									<div className="col-md-4">
 										<div className="c-card__entry extended-card">
-											<a
-												className="c-card__clickthrough"
-												href={item.url}
-											></a>
+											<Link href={item.url}>
+												<a className="c-card__clickthrough"></a>
+											</Link>
 											<Image
 												src={item.image}
 												width={item.imageWidth}
@@ -28,18 +28,17 @@ const RelatedContent = (props) => {
 													<span className="t-eyebrow">{item.eyebrow}</span>
 												</div>
 												<h4 className="c-card__entry-title">
-													<a
-														className="underline_from_lefsettt"
-														href={item.url}
-													>
-														{item.title}
-													</a>
+													<Link href={item.url}>
+														<a className="underline_from_lefsettt">
+															{item.title}
+														</a>
+													</Link>
 												</h4>
 											</div>
 											<div className="c-card__meta">
-												<a className="t-link" href={item.url}>
-													Read More
-												</a>
+												<Link href={item.url}>
+													<a className="t-link">Read More</a>
+												</Link>
 											</div>
 										</div>
 									</div>

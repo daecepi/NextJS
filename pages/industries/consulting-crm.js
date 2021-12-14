@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import Footer from "../../components/Footer/Footer";
 import NavigationDefault from "../../components/Navigation/NavigationDefault";
 import ProductTwoUp from "../../components/ProductsComponent/ProductTwoUp/ProductTwoUp";
@@ -28,15 +29,12 @@ export default function ConsultingCrm() {
 							</h1>
 							<p>Build strong and lasting client relationships with Copper.</p>
 							<div className="c-hero__buttons">
-								<a
-									className="c-button sendUTMsToAmplitude"
-									href="https://www.copper.comhttps://www.copper.com/signup"
-								>
-									Try Free
-								</a>
-								<a className="c-button c-button--outline" href="/demos">
-									Request Demo
-								</a>
+								<Link href="/signup">
+									<a className="c-button sendUTMsToAmplitude">Try Free</a>
+								</Link>
+								<Link href="/demos">
+									<a className="c-button c-button--outline">Request Demo</a>
+								</Link>
 							</div>
 						</div>
 					</div>
@@ -237,7 +235,8 @@ export default function ConsultingCrm() {
 				cards={[
 					{
 						eyebrow: "CASE STUDY",
-						title: "Copper and Google Workspace help RHR International Boost Customer Relations and Sales",
+						title:
+							"Copper and Google Workspace help RHR International Boost Customer Relations and Sales",
 						url: "/resources/rhr-case-study",
 						image: "/imgs/industry/industry-consulting-blog-01@2x.jpg",
 						imageWidth: "354",
@@ -253,7 +252,8 @@ export default function ConsultingCrm() {
 					},
 					{
 						eyebrow: "CASE STUDY",
-						title: "Zivelo Accelerates Their Sales and BD Efforts by Leveraging Copper’s Deep Integration with Google Apps",
+						title:
+							"Zivelo Accelerates Their Sales and BD Efforts by Leveraging Copper’s Deep Integration with Google Apps",
 						url: "/7-ways-to-get-the-most-out-of-your-agencys-crm",
 						image: "/imgs/industry/industry-consulting-blog-03@2x.jpg",
 						imageWidth: "354",
