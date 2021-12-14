@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import Script from "next/script";
 import styles from "../styles/Home.module.css";
 import { getAllPostsWithSlug, getEntryBySectionHandle } from "../lib/api";
@@ -42,7 +43,7 @@ export default function Home({ res }) {
 							srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_IDEO@2x.png"
 							alt="Ideo graphic"
 						/>
-						<img
+						<Image
 							style={{ width: "calc(100% / 1.3)!important;" }}
 							src="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_IDEO@2x.png"
 							alt="Ideo graphic"
@@ -737,6 +738,7 @@ export default function Home({ res }) {
 									}}
 								>
 									<div className="imageThumb">
+										{/*
 										<Script
 											strategy="lazyOnload"
 											src="https://fast.wistia.com/embed/medias/tihe7k9xsl.jsonp"
@@ -745,6 +747,7 @@ export default function Home({ res }) {
 											strategy="lazyOnload"
 											src="https://fast.wistia.com/assets/external/E-v1.js"
 										></Script>
+										*/}
 										<div
 											className="wistia_responsive_padding"
 											style={{ padding: "56.25% 0 0 0", position: "relative" }}
@@ -849,6 +852,7 @@ export default function Home({ res }) {
 									}}
 								>
 									<div className="imageThumb">
+										{/*
 										<Script
 											src="https://fast.wistia.com/embed/medias/p24wanuzo7.jsonp"
 											strategy="lazyOnload"
@@ -859,6 +863,7 @@ export default function Home({ res }) {
 											strategy="lazyOnload"
 											async
 										></Script>
+										*/}
 										<div
 											className="wistia_responsive_padding"
 											style={{ padding: "56.25% 0 0 0", position: "relative" }}
@@ -963,6 +968,7 @@ export default function Home({ res }) {
 									}}
 								>
 									<div className="imageThumb">
+										{/*
 										<Script
 											src="https://fast.wistia.com/embed/medias/2yhihnpbkc.jsonp"
 											strategy="lazyOnload"
@@ -973,6 +979,7 @@ export default function Home({ res }) {
 											strategy="lazyOnload"
 											async
 										></Script>
+										*/}
 										<div
 											className="wistia_responsive_padding"
 											style={{ padding: "56.25% 0 0 0", position: "relative" }}
