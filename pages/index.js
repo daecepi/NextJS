@@ -1,16 +1,12 @@
-import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import Script from "next/script";
 import styles from "../styles/Home.module.css";
-import { getAllPostsWithSlug, getEntryBySectionHandle } from "../lib/api";
-import SectionLayout from "../components/SectionLayout/SectionLayout";
-import VideoCard from "../components/Cards/VideoCard";
+import { getEntryBySectionHandle } from "../lib/api";
 import HeroHomePage from "../components/Blocks/HeroTypes/HeroHomePage";
 
 import DefaultPageBase from "../components/PageBase/DefaultPageBase";
 
-import NavigationDefault from "../components/Navigation/NavigationDefault";
 import LogoComponent from "../components/Blocks/LogosComponent";
 import Footer from "../components/Footer/Footer";
 
@@ -43,7 +39,7 @@ export default function Home({ res }) {
 							srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_IDEO@2x.png"
 							alt="Ideo graphic"
 						/>
-						<Image
+						<img
 							style={{ width: "calc(100% / 1.3)!important;" }}
 							src="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_IDEO@2x.png"
 							alt="Ideo graphic"
