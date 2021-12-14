@@ -730,8 +730,14 @@ export default function Home({ res }) {
 									}}
 								>
 									<div className="imageThumb">
-										<Script src="https://fast.wistia.com/embed/medias/tihe7k9xsl.jsonp"></Script>
-										<Script src="https://fast.wistia.com/assets/external/E-v1.js"></Script>
+										<Script
+											strategy="lazyOnload"
+											src="https://fast.wistia.com/embed/medias/tihe7k9xsl.jsonp"
+										></Script>
+										<Script
+											strategy="lazyOnload"
+											src="https://fast.wistia.com/assets/external/E-v1.js"
+										></Script>
 										<div
 											className="wistia_responsive_padding"
 											style={{ padding: "56.25% 0 0 0", position: "relative" }}
