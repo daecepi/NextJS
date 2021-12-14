@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Script from "next/script";
 import styles from "../styles/Home.module.css";
-import { getAllPostsWithSlug } from "../lib/api";
+import { getAllPostsWithSlug, getEntryBySectionHandle } from "../lib/api";
 import SectionLayout from "../components/SectionLayout/SectionLayout";
 import VideoCard from "../components/Cards/VideoCard";
 import HeroHomePage from "../components/Blocks/HeroTypes/HeroHomePage";
@@ -1504,7 +1504,7 @@ export default function Home({ res }) {
 	);
 }
 export async function getStaticProps(context) {
-	const res = await getAllPostsWithSlug();
+	const res = await getEntryBySectionHandle("homapage", "homepage");
 	return {
 		props: {
 			res,

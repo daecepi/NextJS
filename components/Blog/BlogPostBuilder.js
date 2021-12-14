@@ -5,19 +5,19 @@ import BlogFinalPlea from "./BlogFinalPlea";
 import EntryTeaser from "./EntryTeasers/EntryTease";
 import EntryTeaserImage from "./EntryTeasers/EntryTeaserImage";
 
-const BlogPostBuilder = ({ entry, featuredPosts }) => {
+const BlogPostBuilder = ({ entry, authorInformation, featuredPosts }) => {
 	// SELECTS THE LAST CATEGORY
 	const mainCategory =
-		(entry.blogCategories?.length &&
+		(entry?.blogCategories?.length &&
 			entry.blogCategories[entry.blogCategories.length - 1]) ||
 		undefined;
 
 	return (
 		<>
 			<BlogBuildersFeaturedImage
-				slug={entry.slug}
-				featuredImage={entry.featuredImage}
-				imageGradient={entry.imageGradient}
+				slug={entry?.slug || undefined}
+				featuredImage={entry?.featuredImage || undefined}
+				imageGradient={entry?.imageGradient || undefined}
 			/>
 			<section className="c-resource-content c-resource-content--overlap--blog">
 				<div className="c-blog-builder--social-share"></div>
@@ -28,54 +28,58 @@ const BlogPostBuilder = ({ entry, featuredPosts }) => {
 								{/* Show category & reading time */}
 								{mainCategory?.length && entry.readingTime?.length && (
 									<pre className="c-eyebrow">
-										{mainCategory.title} : {entry.readingTime} read
+										{mainCategory?.title || ""} : {entry?.readingTime || ""}{" "}
+										read
 									</pre>
 								)}
 								{/* Only show category if no readng time given */}
 								{mainCategory?.length && !entry.readingTime.length && (
-									<pre className="c-eyebrow">{mainCategory.title}</pre>
+									<pre className="c-eyebrow">{mainCategory?.title || ""}</pre>
 								)}
-								{entry.blogSubtitle?.length ? (
+								{entry?.blogSubtitle?.length ? (
 									<>
-										<h1 className="shared-title-space">{entry.title || ""}</h1>
+										<h1 className="shared-title-space">{entry?.title || ""}</h1>
 										<p className="shared-title-space">
-											{entry.blogSubtitle || ""}
+											{entry?.blogSubtitle || ""}
 										</p>
 									</>
 								) : (
-									<h1 className="">{entry.title || ""}</h1>
+									<h1 className="">{entry?.title || ""}</h1>
 								)}
 							</div>
 							<div className="c-blog-builder--content__meta">
 								<div className="c-author">
-									{authorInformation.photo ? (
+									{authorInformation?.photo ? (
 										<div
 											className="circle-img c-author__img"
 											style={{
-												backgroundImage: `url(' ${authorInformation.photo.url} )'`,
+												backgroundImage: `url(' ${
+													authorInformation?.photo?.url || ""
+												} )'`,
 											}}
 										></div>
 									) : (
 										<div
 											className={`circle-img c-author__img background-${
-												(authorInformation.id % 2) + 1
+												((authorInformation?.id && authorInformation.id % 2) ||
+													0) + 1
 											}`}
 										>
 											<span
 												v-if="!authorInformation.photo"
 												className="c-author__img--alt"
 											>
-												{authorInformation.name?.split(" ")[0] || ""}
+												{authorInformation?.name?.split(" ")[0] || ""}
 											</span>
 										</div>
 									)}
 									<div className="c-author__meta">
 										<p className="p-sm  no-margin">
-											<strong>{authorInformation.name}</strong>
+											<strong>{authorInformation?.name || ""}</strong>
 										</p>
 										{authorInformation.authorTitle ? (
 											<p className="p-sm  no-margin">
-												{authorInformation.authorTitle}
+												{authorInformation?.authorTitle || ""}
 											</p>
 										) : (
 											<p className="p-sm  no-margin">Contributor</p>
@@ -83,14 +87,16 @@ const BlogPostBuilder = ({ entry, featuredPosts }) => {
 									</div>
 								</div>
 								<p className="p-sm date">
-									{new Date(entry.postDate).toLocaleDateString("F j, Y")}
+									{(entry?.postDate &&
+										new Date(entry.postDate).toLocaleDateString("F j, Y")) ||
+										""}
 								</p>
 							</div>
 							<div className="c-blog__entry--post">
 								<div className="c-blog__entry__copy">
 									<div
 										className="c-blog__body-copy"
-										dangerouslySetInnerHTML={{ __html: entry.richText }}
+										dangerouslySetInnerHTML={{ __html: entry?.richText }}
 									></div>
 								</div>
 							</div>

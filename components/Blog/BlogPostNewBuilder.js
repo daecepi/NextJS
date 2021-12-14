@@ -13,28 +13,17 @@ import Tldr from "./BlogPostNewBuilderComponents/Tldr";
 import EntryTeaser from "./EntryTeasers/EntryTease";
 import EntryTeaserImage from "./EntryTeasers/EntryTeaserImage";
 import SocialSharePostComponent from "./SocialSharePostComponent";
-const BlogPostNewBuilder = ({ entry, featuredPosts, blogAd }) => {
+const BlogPostNewBuilder = ({
+	entry,
+	authorInformation,
+	featuredPosts,
+	blogAd,
+}) => {
 	// SELECTS THE LAST CATEGORY
 	const mainCategory =
 		(entry.blogCategories?.length &&
 			entry.blogCategories[entry.blogCategories.length - 1]) ||
 		undefined;
-
-	// Authors information
-	const defauiltAuthorValues = { photo: undefined, name: "", authorTitle: "" };
-	const externalAuthor = entry.useExternalAuthor?.length
-		? {
-				name: entry.externalAuthorName,
-				authorTitle: entry.externalAuthorJobTitle,
-				photo: entry.externalAuthorPhoto[0],
-		  }
-		: {};
-
-	let authorInformation = {
-		...defauiltAuthorValues,
-		...entry.author,
-		...externalAuthor,
-	};
 
 	// One Appearing self category
 	const appearingCategory = (entry, defaultAd) => {
@@ -226,12 +215,11 @@ const BlogPostNewBuilder = ({ entry, featuredPosts, blogAd }) => {
 												(authorInformation.id % 2) + 1
 											}`}
 										>
-											<span
-												v-if="!authorInformation.photo"
-												className="c-author__img--alt"
-											>
-												{authorInformation.name?.split(" ")[0] || ""}
-											</span>
+											{!authorInformation?.photo && (
+												<span className="c-author__img--alt">
+													{authorInformation.name?.split(" ")[0] || ""}
+												</span>
+											)}
 										</div>
 									)}
 									<div className="c-author__meta">

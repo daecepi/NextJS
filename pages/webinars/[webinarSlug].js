@@ -6,6 +6,7 @@ import { getEntryBySectionHandle, getPathsBySection } from "../../lib/api";
 
 const WebinarPost = ({ entry, globals }) => {
 	const webinarEntryTypeSelector = (entry) => {
+		if (!entry) return "";
 		if (entry.typeHandle == "register") {
 			return <Register entry={entry} />;
 		} else if (entry.typeHandle == "webinars") {
@@ -16,6 +17,8 @@ const WebinarPost = ({ entry, globals }) => {
 
 		return "";
 	};
+
+	console.log("PROPS ", entry, globals);
 
 	return (
 		<DefaultPageBase entry={entry} globals={globals}>
@@ -43,12 +46,16 @@ export async function getStaticProps(context) {
 export async function getStaticPaths() {
 	const webinarPosts = await getPathsBySection("webinars");
 
-	const paths = webinarPosts.map((webinarPost) => ({
-		params: { webinarSlug: webinarPost.slug || "" },
-	}));
+	console.log("webinar slugs", webinarPosts);
+
+	const paths = webinarPosts?.length
+		? webinarPosts.map((webinarPost) => ({
+				params: { webinarSlug: webinarPost.slug || "" },
+		  }))
+		: [];
 
 	return {
-		paths,
+		paths: paths || [],
 		fallback: true,
 	};
 }

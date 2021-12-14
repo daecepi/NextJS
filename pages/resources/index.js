@@ -80,8 +80,8 @@ const resources = (props) => {
 					/>
 				</Head>
 				<NavigationBlog
-					menuCategories={props.menuCategory}
-					menuBlogFormats={props.blogFormats}
+					menuCategories={props.menuCategory || []}
+					menuBlogFormats={props.blogFormats || []}
 				></NavigationBlog>
 				<Script
 					strategy="lazyOnload"
@@ -429,7 +429,7 @@ export default resources;
 export async function getStaticProps({ params }) {
 	// const blogInformation = await fetch(`copper.com/api/blog${pageNumber}.json`);
 	const entry = await getEntryByType("blogIndex", "blog-index");
-	const menuCategory = await getBlogCategoriesMenu();
+	const menuCategory = (await getBlogCategoriesMenu()) || [];
 	const blogFormats = await getBlogFormats();
 	const blogEntries = await getBlogEntries();
 	const featuredBlogs = await getBlogFeaturedEntries();
@@ -439,7 +439,7 @@ export async function getStaticProps({ params }) {
 		props: {
 			entry: entry.entry || {},
 			globals: entry.globalSets || [],
-			menuCategory,
+			menuCategory: menuCategory || [],
 			blogFormats,
 			blogEntries,
 			featuredBlogs,

@@ -75,10 +75,14 @@ export default Entry;
 
 export async function getStaticProps(context) {
 	const res = await getEntryBySectionHandle("legal", context.params.slug);
+	const res2 = await getEntryBySectionHandle(
+		"landingPage",
+		context.params.slug
+	);
 
 	return {
 		props: {
-			entry: res.entry || {},
+			entry: { ...res.entry, ...res2.entry } || {},
 			globals: res.globalSets || [],
 		}, // will be passed to the page component as props
 		revalidate: 120, // In seconds
@@ -86,6 +90,9 @@ export async function getStaticProps(context) {
 }
 
 export async function getStaticPaths() {
+	/*
+		TODO: Entry Types: generalLanding
+	*/
 	const landingPages = await getPathsBySection("landingPage");
 	const termPages = await getPathsBySection("legal");
 

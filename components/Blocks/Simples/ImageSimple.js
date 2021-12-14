@@ -14,8 +14,8 @@ const ImageSimple = ({
 		return "";
 	}
 	let singleImage = image[0];
-	let optimizedImages = singleImage.optimizedLandingImages;
-	let src = addHTTPStoUrl(optimizedImages.src);
+	let optimizedImages = singleImage?.optimizedLandingImages || undefined;
+	let src = addHTTPStoUrl(optimizedImages?.src || undefined) || "";
 	let width = imageWidth ? imageWidth : "806";
 	let height = imageHeight ? imageHeight : "734";
 	return (
@@ -49,7 +49,7 @@ const ImageSimple = ({
 						className={classAtr ? classAtr : ""}
 						style={stylesAtr ? { ...stylesAtr } : {}}
 						// layout="fill"
-						src={addHTTPStoUrl(singleImage.url)}
+						src={addHTTPStoUrl(singleImage?.url) || singleImage.url}
 						width={width}
 						height={height}
 						alt={image.altText?.length ? image.altText : image.title}

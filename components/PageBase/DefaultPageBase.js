@@ -12,12 +12,14 @@ const DefaultPageBase = ({ entry, globals, classNameOverride, children }) => {
 	const globalToUse = globals || [];
 	const globalsObject = globalsAdapter(globalToUse);
 
+	const slugToUse = entry?.slug || "";
+
 	return (
 		<SyncedAppWrapper>
 			<DefaultHead entry={entry || {}} />
-			<NavigationSelector entryType={entry?.typeHandle || "unknown"} />
+			<NavigationSelector entryType={entry?.typeHandle || slugToUse} />
 			<CookiesWrapper>
-				<div className={classNameOverride || entry.slug}>
+				<div className={classNameOverride || ""}>
 					<main className="content">{children}</main>
 				</div>
 			</CookiesWrapper>

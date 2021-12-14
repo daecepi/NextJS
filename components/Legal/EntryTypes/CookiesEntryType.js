@@ -1,4 +1,4 @@
-const CookiesEntryType = () => {
+const CookiesEntryType = ({ entry }) => {
 	return (
 		<section className="c-full-text">
 			<div className="c-full-text__container">

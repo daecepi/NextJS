@@ -1,6 +1,7 @@
 const TEXT_INSIDE_TAG_REGEX = /(?<=\>)(?!\<)(.*)(?=\<)(?<!\>)/g;
 const HREF_REGEX = /(?<=href=")([^\'\"]+)/g;
 export const linkitButtonPropertyGetter = (linkitString) => {
+	if (!linkitString?.length) return "";
 	// Verifies string structure
 	if (
 		linkitString.includes("class") &&
@@ -32,5 +33,7 @@ export const getTagText = (tagString) => {
 };
 
 export const addHTTPStoUrl = (url) => {
+	if (!url) return "";
 	if (url.startsWith("//")) return url.replace("//", "https://");
+	return url;
 };

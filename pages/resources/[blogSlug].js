@@ -28,7 +28,7 @@ const Post = ({
 
 	// Pushed the order of the information base on
 	const defauiltAuthorValues = { photo: undefined, name: "", authorTitle: "" };
-	const externalAuthor = entry.useExternalAuthor?.length
+	const externalAuthor = entry?.useExternalAuthor?.length
 		? {
 				name: entry.externalAuthorName,
 				authorTitle: entry.externalAuthorJobTitle,
@@ -36,32 +36,32 @@ const Post = ({
 		  }
 		: {};
 
-	let authorInformation = {
+	var authorInformation = {
 		...defauiltAuthorValues,
-		...entry.author,
 		...externalAuthor,
 	};
 
 	// JsonLD management
-	const returnJsonLd = (entry) => {
+	const returnJsonLd = (entry, authorInformation) => {
+		const titleToUse = entry?.title ? entry.title : "";
 		return {
 			"@context": "https://schema.org",
 			"@type": "Article",
 			mainEntityOfPage: {
 				"@type": "WebPage",
-				"@id": `${entry.url}`,
+				"@id": `${entry?.url || ""}`,
 			},
 			headline: `${
-				entry.seoTitle ? entry.seoTitle.slice(0, 110) : entry.title
+				entry?.seoTitle ? entry.seoTitle.slice(0, 110) : titleToUse
 			}`,
-			url: `${entry.url}`,
+			url: `${entry?.url || ""}`,
 			description: `${
-				entry.seoDescription ? entry.seoDescription : entry.title
+				entry?.seoDescription ? entry.seoDescription : titleToUse
 			}`,
 			image: {
 				"@type": "ImageObject",
 				url: `${
-					(entry.featuredImage?.length && entry.featuredImage[0]?.url) ||
+					(entry?.featuredImage?.length && entry.featuredImage[0]?.url) ||
 					"/imgs/seo-images/generic-social-card_linkedin.png"
 				}`,
 				width: 1440,
@@ -69,8 +69,8 @@ const Post = ({
 			},
 			author: {
 				"@type": "Person",
-				name: `${authorInformation.name}`,
-				jobTitle: `${authorInformation.authorTitle}`,
+				name: `${authorInformation?.name || ""}`,
+				jobTitle: `${authorInformation?.authorTitle || ""}`,
 			},
 			publisher: {
 				"@type": "Organization",
@@ -87,8 +87,8 @@ const Post = ({
 	};
 
 	console.log("props gotten ", entry, globalSets);
-	const entryTypeSelector = (entry) => {
-		if (entry.typeHandle === "blogBuilder") {
+	const entryTypeSelector = (entry, authorInformation) => {
+		if (entry?.typeHandle === "blogBuilder") {
 			return (
 				<BlogPostNewBuilder
 					entry={entry}
@@ -174,14 +174,14 @@ const Post = ({
 				</div>
 				<progress max="0" value="0"></progress>
 				<div className="c-blog-content__main container c-blog-content__main--blog-entry">
-					<div>{entryTypeSelector(entry)}</div>
+					<div>{entryTypeSelector(entry, authorInformation)}</div>
 
 					{/* Common ending for blog posts of each entry type */}
 					<Script
 						type="application/ld+json"
-						dangerouslySetInnerHTML={
-							({ ...returnJsonLd(entry, authorInformation) }, authorInformation)
-						}
+						dangerouslySetInnerHTML={{
+							_html: returnJsonLd(entry, authorInformation),
+						}}
 					></Script>
 				</div>
 
@@ -214,8 +214,8 @@ export async function getStaticProps(context) {
 	const blogAd = await getEntryBySectionHandle("blogIndex", "/resources");
 
 	// Menu related queries
-	const menuCategory = await getBlogCategoriesMenu();
-	const blogFormats = await getBlogFormats();
+	const menuCategory = (await getBlogCategoriesMenu()) || [];
+	const blogFormats = (await getBlogFormats()) || [];
 	console.log("Featured posts gotten ", featuredPosts);
 	return {
 		props: {
@@ -225,8 +225,8 @@ export async function getStaticProps(context) {
 			blogAd,
 
 			// Menu related fetches
-			menuCategory,
-			blogFormats,
+			menuCategory: menuCategory || [],
+			blogFormats: blogFormats || [],
 		}, // will be passed to the page component as props
 		revalidate: 120, // in seconds
 	};
