@@ -1,7 +1,10 @@
+import Link from "next/link";
 const BlogCardText = (props) => {
 	return (
 		<div className="c-blog-card ">
-			<a className="c-card__clickthrough" href={props.url}></a>
+			<Link href={props.url}>
+				<a className="c-card__clickthrough"></a>
+			</Link>
 			<div className="c-blog-card__content c-blog-card__content--large">
 				<span className="t-eyebrow ">
 					{props.parentCategory}{" "}

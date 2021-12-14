@@ -1,3 +1,4 @@
+import Link from "next/link";
 import CtaGroup from "../../Simples/CtaGroup";
 
 import { useSyncContext } from "../../../../contexts/SyncContext";
@@ -32,17 +33,14 @@ const HeroCopy = ({
 			return <CtaGroup ctas={ctas} />;
 		} else if (slug == "demo-request-pers") {
 			return (
-				<a className="c-button c-button--large" href="/demos">
-					Request Demo
-				</a>
+				<Link href="/demos">
+					<a className="c-button c-button--large">Request Demo</a>
+				</Link>
 			);
 		} else if (slug == "free-trial-pers") {
-			<a
-				className="c-button c-button--large sendUTMsToAmplitude"
-				href={syncedContext.generalSignupUrl}
-			>
-				Try Free
-			</a>;
+			<Link href={syncedContext.generalSignupUrl}>
+				<a className="c-button c-button--large sendUTMsToAmplitude">Try Free</a>
+			</Link>;
 		}
 		return "";
 	};

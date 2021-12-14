@@ -33,9 +33,9 @@ const Jumble = (props) => {
 								</pre>
 								<h2>{props.title}</h2>
 								<p>{props.copy}</p>
-								<a className="t-link h-white" href={props.ctaUrl}>
-									{props.ctaText}
-								</a>
+								<Link href={props.ctaUrl}>
+									<a className="t-link h-white">{props.ctaText}</a>
+								</Link>
 							</div>
 						</div>
 					</div>

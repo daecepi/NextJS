@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import HeroBlock from "../../components/Blocks/HeroBlock";
 import TestimonialBlock from "../../components/Blocks/TestimonialBlock";
 import TwoColumn from "../../components/TwoColumn/TwoColumn";
@@ -47,20 +48,22 @@ const TYPES = {
 							{block.cta.map((ctaItem) => {
 								const link = linkitButtonPropertyGetter(ctaItem.button);
 								return (
-									<a
-										className={`c-button ${
-											block.cta.length > 0 && "button-center--mobile"
-										} c-button--${
-											ctaItem.buttonColor
-												? ctaItem.buttonColor[0].slug
-												: "white"
-										} ${
-											ctaItem.takeBackgroundColor && "section-background-flavor"
-										}`}
-										href={link.href}
-									>
-										{link.value}
-									</a>
+									<Link href={link.href}>
+										<a
+											className={`c-button ${
+												block.cta.length > 0 && "button-center--mobile"
+											} c-button--${
+												ctaItem.buttonColor
+													? ctaItem.buttonColor[0].slug
+													: "white"
+											} ${
+												ctaItem.takeBackgroundColor &&
+												"section-background-flavor"
+											}`}
+										>
+											{link.value}
+										</a>
+									</Link>
 								);
 							})}
 						</div>
@@ -116,11 +119,9 @@ const TYPES = {
 										style={{ height: "calc(100% - 20px)", display: "flex" }}
 									>
 										{clickthrough && (
-											<a
-												class="c-card__clickthrough"
-												href={clickthrough.href}
-												target="_blank"
-											></a>
+											<Link href={clickthrough.href}>
+												<a class="c-card__clickthrough" target="_blank"></a>
+											</Link>
 										)}
 										<div
 											style={{

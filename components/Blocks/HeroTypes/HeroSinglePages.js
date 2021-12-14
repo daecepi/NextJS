@@ -26,9 +26,7 @@ const HeroSinglePages = (props) => {
 								<a className="c-button sendUTMsToAmplitude">Try Free</a>
 							</Link>
 							<Link href="/demos">
-								<a className="c-button c-button--outline" href="/demos">
-									Request Demo
-								</a>
+								<a className="c-button c-button--outline">Request Demo</a>
 							</Link>
 						</div>
 					</div>

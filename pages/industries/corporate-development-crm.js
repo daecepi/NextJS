@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import HeroSinglePages from "../../components/Blocks/HeroTypes/HeroSinglePages";
 import Jumble from "../../components/SinglesComponents/Jumble/Jumble";
 import Footer from "../../components/Footer/Footer";
@@ -105,9 +106,11 @@ export default function CorporateDevCrm({}) {
 				slug={"corporate-development-crm"}
 				loopIndex={0}
 				forcedCtas={
-					<a href="/blog/storm-ventures-case-study" className="t-link">
-						How Storm Ventures focused on acquisitions.
-					</a>
+					<Link href="/blog/storm-ventures-case-study">
+						<a className="t-link">
+							How Storm Ventures focused on acquisitions.
+						</a>
+					</Link>
 				}
 			/>
 			<TwoColModule
@@ -165,9 +168,11 @@ export default function CorporateDevCrm({}) {
 				slug={"corporate-development-crm"}
 				loopIndex={0}
 				forcedCtas={
-					<a href="/blog/storm-ventures-case-study" className="t-link">
-						How Storm Ventures focused on acquisitions.
-					</a>
+					<Link href="/blog/storm-ventures-case-study">
+						<a className="t-link">
+							How Storm Ventures focused on acquisitions.
+						</a>
+					</Link>
 				}
 			/>
 			<section className="c-jumble c-jumble-background--graphite c-jumble--align-left no-top-margin extra-bottom-margin">

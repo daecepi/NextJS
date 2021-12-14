@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import HeroSinglePages from "../../components/Blocks/HeroTypes/HeroSinglePages";
 import SingleTwoCol from "../../components/SinglesComponents/SingleTwoCol/SingleTwoCol";
 import Jumble from "../../components/SinglesComponents/Jumble/Jumble";
@@ -31,9 +32,12 @@ const AgencyCrm = () => {
 						<h2 className=" mb-2">
 							900+ digital and creative agencies, big and small, love Copper.
 						</h2>
-						<a className="t-link" href="/customers" target="_blank">
-							See customer stories
-						</a>
+
+						<Link href="/customers">
+							<a className="t-link" target="_blank">
+								See customer stories
+							</a>
+						</Link>
 					</div>
 				}
 				image={[
@@ -79,9 +83,9 @@ const AgencyCrm = () => {
 							real-time customer and seller moments. Trust us, your account
 							managers and deal makers will love it.
 						</p>
-						<a className="t-link" href="/collaboration">
-							Learn More
-						</a>
+						<Link href="/collaboration">
+							<a className="t-link">Learn More</a>
+						</Link>
 					</div>
 				}
 				image={[

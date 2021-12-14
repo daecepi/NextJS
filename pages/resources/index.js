@@ -1,5 +1,6 @@
 import NavigationBlog from "../../components/Navigation/NavigationBlog";
 import Head from "next/head";
+import Link from "next/link";
 import Script from "next/script";
 import BlogLargeCardImage from "../../components/Blog/BlogLargeCardImage.js";
 import BlogCardImage from "../../components/Blog/BlogCardImage";
@@ -27,10 +28,9 @@ const resources = (props) => {
 			undefined;
 		return (
 			<div className="c-author c-author--cickable relative">
-				<a
-					className="c-card__clickthrough"
-					href={`https://copper.com/blog/authors/${author.username}`}
-				></a>
+				<Link href={`https://copper.com/blog/authors/${author.username}`}>
+					<a className="c-card__clickthrough"></a>
+				</Link>
 				{photoStyle ? (
 					<div
 						className="circle-img c-author__img"
@@ -217,14 +217,15 @@ const resources = (props) => {
 								style={{ position: "relative", right: "0px" }}
 								data-cy="resources-search-free-open-desktop"
 							></span>
-							<a
-								className="c-button sendUTMsToAmplitude blogCTA"
-								target="_blank"
-								href="https://www.copper.com/signup"
-								style={{ marginLeft: "17px", marginRight: "15px" }}
-							>
-								Try Copper free
-							</a>
+							<Link href="/signup">
+								<a
+									className="c-button sendUTMsToAmplitude blogCTA"
+									target="_blank"
+									style={{ marginLeft: "17px", marginRight: "15px" }}
+								>
+									Try Copper free
+								</a>
+							</Link>
 						</div>
 					</div>
 					<div className="c-blog-content__main container c-blog-content__main--index">
@@ -403,9 +404,9 @@ const resources = (props) => {
 								<div className="col-md-12">
 									<div className="c-author c-author--cickable">
 										<div className="c-author__link c-author__link--all-authors">
-											<a className="t-link" href="/blog/authors">
-												See all authors
-											</a>
+											<Link href="/blog/authors">
+												<a className="t-link">See all authors</a>
+											</Link>
 										</div>
 									</div>
 								</div>

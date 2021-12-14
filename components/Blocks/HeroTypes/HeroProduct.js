@@ -1,30 +1,56 @@
-import Image from 'next/image';
+import Image from "next/image";
+import Link from "next/link";
 
-const HeroProduct = props => {
+const HeroProduct = (props) => {
 	return (
-		<section className={`c-hero--split background--${props.backgroundColor} product-page`}>
+		<section
+			className={`c-hero--split background--${props.backgroundColor} product-page`}
+		>
 			<div className="c-image">
-				<Image layout="fill" className=" object-cover" src={props.imageUrl}></Image>
+				<Image
+					layout="fill"
+					className=" object-cover"
+					src={props.imageUrl}
+				></Image>
 			</div>
 			<div className="container">
 				<div className="row">
 					<div className="col-md-6 c-valign--middle">
-						<pre className={props.eyebrowDark ? 'c-eyebrow' : 'c-eyebrow c-eyebrow--light'}>{props.eyebrow}</pre>
+						<pre
+							className={
+								props.eyebrowDark ? "c-eyebrow" : "c-eyebrow c-eyebrow--light"
+							}
+						>
+							{props.eyebrow}
+						</pre>
 						<h1 className="t-white">{props.title}</h1>
 						<p>{props.copy}</p>
 						<div className="c-hero__buttons">
 							{props.ctaOneUrl && props.ctaOneText && (
-								<a
-									className={props.ctaLight ? 'c-button c-button--white sendUTMsToAmplitude' : 'c-button sendUTMsToAmplitude'}
-									href={props.ctaOneUrl}
-								>
-									{props.ctaOneText}
-								</a>
+								<Link href={props.ctaOneUrl}>
+									<a
+										className={
+											props.ctaLight
+												? "c-button c-button--white sendUTMsToAmplitude"
+												: "c-button sendUTMsToAmplitude"
+										}
+									>
+										{props.ctaOneText}
+									</a>
+								</Link>
 							)}
 							{props.ctaTwoUrl && props.ctaTwoText && (
-								<a className={props.ctaLight ? 'c-button c-button--outline--white' : 'c-button c-button--outline'} href={props.ctaTwoUrl}>
-									{props.ctaTwoText}
-								</a>
+								<Link href={props.ctaTwoUrl}>
+									<a
+										className={
+											props.ctaLight
+												? "c-button c-button--outline--white"
+												: "c-button c-button--outline"
+										}
+									>
+										{props.ctaTwoText}
+									</a>
+								</Link>
 							)}
 						</div>
 					</div>

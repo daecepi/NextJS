@@ -1,3 +1,4 @@
+import Link from "next/link";
 const SimpleTwoColColorConfined = ({
 	backgroundColor,
 	eyebrow,
@@ -61,9 +62,9 @@ const SimpleTwoColColorConfined = ({
 									<pre className="c-eyebrow c-eyebrow--light">{eyebrow}</pre>
 									<div dangerouslySetInnerHTML={{ __html: copy }}></div>
 									{ctaText.length && ctaUrl.length ? (
-										<a className="t-link h-white" href={ctaLink}>
-											{ctaText}
-										</a>
+										<Link href={ctaLink}>
+											<a className="t-link h-white">{ctaText}</a>
+										</Link>
 									) : (
 										""
 									)}

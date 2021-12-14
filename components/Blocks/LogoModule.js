@@ -1,3 +1,4 @@
+import Link from "next/link";
 const LogoModule = ({
 	eyebrow,
 	logoTitle,
@@ -130,13 +131,14 @@ const LogoModule = ({
 									{ctas.map((cta) => {
 										if (cta.buttonColor) {
 											return (
-												<a
-													className={`c-button c-button--${cta.buttonColor[0].slug}`}
-													target={cta.button.target}
-													href={cta.button.url}
-												>
-													{ctas.button.text}
-												</a>
+												<Link href={cta.button.url}>
+													<a
+														className={`c-button c-button--${cta.buttonColor[0].slug}`}
+														target={cta.button.target}
+													>
+														{ctas.button.text}
+													</a>
+												</Link>
 											);
 										}
 										return "";

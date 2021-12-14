@@ -1,3 +1,4 @@
+import Link from "next/link";
 const CtaModule = ({
 	header,
 	subHeader,
@@ -15,16 +16,19 @@ const CtaModule = ({
 							let buttonColor = cta.buttonColor[0] || "white";
 							if (cta.modalTrigger) {
 								return (
-									<a
-										className={`c-button ${
-											ctas.length > 0 ? "button-center--mobile" : ""
-										} c-button--${buttonColor}  ${
-											cta.takeBackgroundColor ? "section-background-flavor" : ""
-										}`}
-										href="/demos"
-									>
-										{cta.button.text}
-									</a>
+									<Link href="/demos">
+										<a
+											className={`c-button ${
+												ctas.length > 0 ? "button-center--mobile" : ""
+											} c-button--${buttonColor}  ${
+												cta.takeBackgroundColor
+													? "section-background-flavor"
+													: ""
+											}`}
+										>
+											{cta.button.text}
+										</a>
+									</Link>
 								);
 							} else {
 								{
@@ -32,35 +36,37 @@ const CtaModule = ({
 								}
 								if (cta.button.text.toLowerCase() === "try free") {
 									return (
-										<a
-											className={`c-button ${
-												ctas.length > 0 ? "button-center--mobile" : ""
-											} sendUTMsToAmplitude c-button--${buttonColor} ${
-												cta.takeBackgroundColor
-													? "section-background-flavor"
-													: ""
-											}`}
-											target={cta.button.target == 1 ? "_blank" : undefined}
-											href={cta.button.url}
-										>
-											{cta.button.text}
-										</a>
+										<Link href={cta.button.url}>
+											<a
+												className={`c-button ${
+													ctas.length > 0 ? "button-center--mobile" : ""
+												} sendUTMsToAmplitude c-button--${buttonColor} ${
+													cta.takeBackgroundColor
+														? "section-background-flavor"
+														: ""
+												}`}
+												target={cta.button.target == 1 ? "_blank" : undefined}
+											>
+												{cta.button.text}
+											</a>
+										</Link>
 									);
 								} else {
 									return (
-										<a
-											className={`c-button ${
-												ctas?.length > 0 ? "button-center--mobile" : ""
-											}  c-button--${buttonColor} ${
-												cta.takeBackgroundColor
-													? "section-background-flavor"
-													: ""
-											} `}
-											target={cta.button.target == 1 ? "_blank" : undefined}
-											href={cta.button.url}
-										>
-											{cta.button.text}
-										</a>
+										<Link href={cta.button.url}>
+											<a
+												className={`c-button ${
+													ctas?.length > 0 ? "button-center--mobile" : ""
+												}  c-button--${buttonColor} ${
+													cta.takeBackgroundColor
+														? "section-background-flavor"
+														: ""
+												} `}
+												target={cta.button.target == 1 ? "_blank" : undefined}
+											>
+												{cta.button.text}
+											</a>
+										</Link>
 									);
 								}
 							}
@@ -69,30 +75,34 @@ const CtaModule = ({
 						case "imageCta":
 							let image = cta.backgroundImage[0] || undefined;
 							return (
-								<a
-									className="c-button-image"
-									target={`${cta.button.target === 1 ? "_blank" : undefined}`}
-									href={cta.button.url}
-								>
-									<img
-										src={image.url}
-										alt={image.altText?.length ? image.altText : image.title}
-									/>
-								</a>
+								<Link href={cta.button.url}>
+									<a
+										className="c-button-image"
+										target={`${cta.button.target === 1 ? "_blank" : undefined}`}
+									>
+										<img
+											src={image.url}
+											alt={image.altText?.length ? image.altText : image.title}
+										/>
+									</a>
+								</Link>
 							);
 
 						case "link":
 							return (
 								<div className="flex-column">
-									<a
-										target={`${cta.button.target === 1 ? "_blank" : undefined}`}
-										href={cta.button.url}
-										className={`t-link ${
-											cta.ctaRemoveUnderline ? "no-underline" : ""
-										}`}
-									>
-										{cta.button.text}
-									</a>
+									<Link href={cta.button.url}>
+										<a
+											target={`${
+												cta.button.target === 1 ? "_blank" : undefined
+											}`}
+											className={`t-link ${
+												cta.ctaRemoveUnderline ? "no-underline" : ""
+											}`}
+										>
+											{cta.button.text}
+										</a>
+									</Link>
 								</div>
 							);
 						default:

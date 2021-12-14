@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Generalimage from "./Simples/GeneralImage";
 
 const testimonialSlider = ({ eyebrow, contentCopy, sliderContent }) => {
@@ -156,13 +157,11 @@ const testimonialSlider = ({ eyebrow, contentCopy, sliderContent }) => {
 									<>{slideDots.map((dot) => dot)}</>
 								</div>
 								<div className="buttons-box">
-									<a
-										target=""
-										href="http://copper.com/"
-										className="button-slide-change t-link "
-									>
-										Next
-									</a>
+									<Link href="http://copper.com/">
+										<a target="" className="button-slide-change t-link ">
+											Next
+										</a>
+									</Link>
 								</div>
 							</>
 						) : (

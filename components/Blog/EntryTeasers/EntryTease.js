@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { generateOneOrZero } from "../../../helpers";
 
 const EntryTeaser = ({
@@ -19,7 +20,9 @@ const EntryTeaser = ({
 
 	return (
 		<div className="c-blog-card">
-			<a className="c-card__clickthrough" href={`/resources/${slug}` || ""}></a>
+			<Link href={`/resources/${slug}` || ""}>
+				<a className="c-card__clickthrough"></a>
+			</Link>
 			<div className="c-blog-card__content c-blog-card__content--text">
 				<span className="t-eyebrow ">
 					{mainCategory?.slug || ""}

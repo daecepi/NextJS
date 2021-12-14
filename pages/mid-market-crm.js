@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import HeroProduct from "../components/Blocks/HeroTypes/HeroProduct";
 import Footer from "../components/Footer/Footer";
 import NavigationDefault from "../components/Navigation/NavigationDefault";
@@ -68,9 +69,9 @@ export default function MidMarkeCRM() {
 										next steps in your relationship cycle to help every seller
 										move deals forward faster.
 									</p>
-									<a className="t-link h-white" href="/productivity">
-										Start Automating
-									</a>
+									<Link href="/productivity">
+										<a className="t-link h-white">Start Automating</a>
+									</Link>
 								</div>
 							</div>
 						</div>
