@@ -737,10 +737,12 @@ export default function Home({ res }) {
 										<Script
 											strategy="lazyOnload"
 											src="https://fast.wistia.com/embed/medias/tihe7k9xsl.jsonp"
+											defer
 										></Script>
 										<Script
 											strategy="lazyOnload"
 											src="https://fast.wistia.com/assets/external/E-v1.js"
+											defer
 										></Script>
 										<div
 											className="wistia_responsive_padding"
@@ -849,10 +851,12 @@ export default function Home({ res }) {
 										<Script
 											src="https://fast.wistia.com/embed/medias/p24wanuzo7.jsonp"
 											strategy="lazyOnload"
+											defer
 										></Script>
 										<Script
 											src="https://fast.wistia.com/assets/external/E-v1.js"
 											strategy="lazyOnload"
+											defer
 										></Script>
 										<div
 											className="wistia_responsive_padding"
@@ -961,10 +965,12 @@ export default function Home({ res }) {
 										<Script
 											src="https://fast.wistia.com/embed/medias/2yhihnpbkc.jsonp"
 											strategy="lazyOnload"
+											defer
 										></Script>
 										<Script
 											src="https://fast.wistia.com/assets/external/E-v1.js"
 											strategy="lazyOnload"
+											defer
 										></Script>
 										<div
 											className="wistia_responsive_padding"
