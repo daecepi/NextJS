@@ -1,4 +1,4 @@
-import Document, { Html, Head, Main } from "next/document";
+import Document, { Html, Head, Main, NextScript } from "next/document";
 import { DeferredNextScript } from "../components/Deffer/DeffererScript";
 
 class MyDocument extends Document {
@@ -13,7 +13,7 @@ class MyDocument extends Document {
 				<Head />
 				<body>
 					<Main />
-					<DeferredNextScript />
+					<NextScript />
 				</body>
 			</Html>
 		);

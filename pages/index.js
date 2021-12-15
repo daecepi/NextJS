@@ -435,6 +435,10 @@ export default function Home({ res }) {
 									}}
 								></Script>
 								<Script
+									src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+									strategy="afterInteractive"
+								/>
+								<Script
 									strategy="lazyOnload"
 									src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
 									onLoad={() => {
@@ -735,12 +739,12 @@ export default function Home({ res }) {
 								>
 									<div className="imageThumb">
 										<Script
-											strategy="lazyOnload"
+											strategy="afterInteractive"
 											src="https://fast.wistia.com/embed/medias/tihe7k9xsl.jsonp"
 											defer
 										></Script>
 										<Script
-											strategy="lazyOnload"
+											strategy="afterInteractive"
 											src="https://fast.wistia.com/assets/external/E-v1.js"
 											defer
 										></Script>
@@ -850,12 +854,12 @@ export default function Home({ res }) {
 									<div className="imageThumb">
 										<Script
 											src="https://fast.wistia.com/embed/medias/p24wanuzo7.jsonp"
-											strategy="lazyOnload"
+											strategy="afterInteractive"
 											defer
 										></Script>
 										<Script
 											src="https://fast.wistia.com/assets/external/E-v1.js"
-											strategy="lazyOnload"
+											strategy="afterInteractive"
 											defer
 										></Script>
 										<div
@@ -964,12 +968,12 @@ export default function Home({ res }) {
 									<div className="imageThumb">
 										<Script
 											src="https://fast.wistia.com/embed/medias/2yhihnpbkc.jsonp"
-											strategy="lazyOnload"
+											strategy="afterInteractive"
 											defer
 										></Script>
 										<Script
 											src="https://fast.wistia.com/assets/external/E-v1.js"
-											strategy="lazyOnload"
+											strategy="afterInteractive"
 											defer
 										></Script>
 										<div
