@@ -734,7 +734,6 @@ export default function Home({ res }) {
 									}}
 								>
 									<div className="imageThumb">
-										{/*
 										<Script
 											strategy="lazyOnload"
 											src="https://fast.wistia.com/embed/medias/tihe7k9xsl.jsonp"
@@ -743,7 +742,6 @@ export default function Home({ res }) {
 											strategy="lazyOnload"
 											src="https://fast.wistia.com/assets/external/E-v1.js"
 										></Script>
-										*/}
 										<div
 											className="wistia_responsive_padding"
 											style={{ padding: "56.25% 0 0 0", position: "relative" }}
@@ -848,18 +846,14 @@ export default function Home({ res }) {
 									}}
 								>
 									<div className="imageThumb">
-										{/*
 										<Script
 											src="https://fast.wistia.com/embed/medias/p24wanuzo7.jsonp"
 											strategy="lazyOnload"
-											async
 										></Script>
 										<Script
 											src="https://fast.wistia.com/assets/external/E-v1.js"
 											strategy="lazyOnload"
-											async
 										></Script>
-										*/}
 										<div
 											className="wistia_responsive_padding"
 											style={{ padding: "56.25% 0 0 0", position: "relative" }}
@@ -964,18 +958,14 @@ export default function Home({ res }) {
 									}}
 								>
 									<div className="imageThumb">
-										{/*
 										<Script
 											src="https://fast.wistia.com/embed/medias/2yhihnpbkc.jsonp"
 											strategy="lazyOnload"
-											async
 										></Script>
 										<Script
 											src="https://fast.wistia.com/assets/external/E-v1.js"
 											strategy="lazyOnload"
-											async
 										></Script>
-										*/}
 										<div
 											className="wistia_responsive_padding"
 											style={{ padding: "56.25% 0 0 0", position: "relative" }}
