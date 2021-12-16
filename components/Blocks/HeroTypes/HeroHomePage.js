@@ -111,20 +111,13 @@ const HeroHomePage = (props) => {
 					>
 						{/* {% import "components/simple-elements/_index.html" as simpleElements %} */}
 						<div style={{ position: "relative" }}>
-							<picture>
+							<picture style={{ opacity: "0" }}>
 								<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/hero/hero-thumb.webp" />
 								<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/hero/hero-thumb.png" />
 								<Image
 									width={468}
 									height={348}
 									id="vid-1-placeholder"
-									style={{
-										width: "68.5%",
-										maxWidth: "450px",
-										position: "relative",
-										left: "9.3%",
-										top: "1%",
-									}}
 									src="https://copper.objects.frb.io/imgs/homepage/thumbnails/hero/hero-thumb.png"
 								/>
 							</picture>
