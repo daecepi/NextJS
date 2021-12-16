@@ -9,6 +9,7 @@ import DefaultPageBase from "../components/PageBase/DefaultPageBase";
 
 import LogoComponent from "../components/Blocks/LogosComponent";
 import Footer from "../components/Footer/Footer";
+import VideoElement from "../components/Wistia/VideoElement";
 
 export default function Home({ res }) {
 	console.log("page fields ", res);
@@ -738,6 +739,11 @@ export default function Home({ res }) {
 									}}
 								>
 									<div className="imageThumb">
+										<VideoElement
+											url={
+												"https://fast.wistia.com/embed/medias/tihe7k9xsl.jsonp"
+											}
+										/>
 										{/*<Script
 											strategy="afterInteractive"
 											src="https://fast.wistia.com/embed/medias/tihe7k9xsl.jsonp"
@@ -852,6 +858,11 @@ export default function Home({ res }) {
 									}}
 								>
 									<div className="imageThumb">
+										<VideoElement
+											url={
+												"https://fast.wistia.com/embed/medias/p24wanuzo7.jsonp"
+											}
+										/>
 										{/*<Script
 											src="https://fast.wistia.com/embed/medias/p24wanuzo7.jsonp"
 											strategy="afterInteractive"
@@ -966,6 +977,11 @@ export default function Home({ res }) {
 									}}
 								>
 									<div className="imageThumb">
+										<VideoElement
+											url={
+												"https://fast.wistia.com/embed/medias/2yhihnpbkc.jsonp"
+											}
+										/>
 										{/*<Script
 											src="https://fast.wistia.com/embed/medias/2yhihnpbkc.jsonp"
 											strategy="afterInteractive"
