@@ -1,10 +1,10 @@
-import Head from 'next/head';
-import HeroProduct from '../components/Blocks/HeroTypes/HeroProduct';
-import Footer from '../components/Footer/Footer';
-import NavigationDefault from '../components/Navigation/NavigationDefault';
-import ProductTwoUp from '../components/ProductsComponent/ProductTwoUp/ProductTwoUp';
-import TwoUp from '../components/ProductsComponent/ProductTwoUp/TwoUp';
-import FinalHeroFull from '../components/SinglesComponents/FinalHeroFull/FinalHeroFull';
+import Head from "next/head";
+import HeroProduct from "../components/Blocks/HeroTypes/HeroProduct";
+import Footer from "../components/Footer/Footer";
+import NavigationDefault from "../components/Navigation/NavigationDefault";
+import ProductTwoUp from "../components/ProductsComponent/ProductTwoUp/ProductTwoUp";
+import TwoUp from "../components/ProductsComponent/ProductTwoUp/TwoUp";
+import FinalHeroFull from "../components/SinglesComponents/FinalHeroFull/FinalHeroFull";
 
 export default function SalesReporting() {
 	return (
@@ -12,12 +12,7 @@ export default function SalesReporting() {
 			<Head>
 				<title>Sales Reporting | Copper</title>
 			</Head>
-			<NavigationDefault
-				buttons={{
-					option: { text: 'Learn More', url: '/demos' },
-					login: { text: 'Login', url: 'https://app.copper.com/users/sign_in' },
-				}}
-			/>
+			<NavigationDefault />
 			<HeroProduct
 				backgroundColor="midnight"
 				eyebrow="COPPER REPORTS"
@@ -33,38 +28,75 @@ export default function SalesReporting() {
 			<section id="" className="c-single-column  white">
 				<div className="container">
 					<div className="col-md-8 offset-md-2  c-single-column__container extra-bottom-margin--x-small sales-color">
-						<h2 style={{ fontSize: '52px', lineHeight: '64px' }}>Find your power with Reports</h2>
+						<h2 style={{ fontSize: "52px", lineHeight: "64px" }}>
+							Find your power with Reports
+						</h2>
 						<p className="p-sm">
-							We know how important it is for you to have total visibility into your performance and growth at any given time. With the new Copper
-							Reports, you’ll gain clarity and confidence in understanding your performance.
+							We know how important it is for you to have total visibility into
+							your performance and growth at any given time. With the new Copper
+							Reports, you’ll gain clarity and confidence in understanding your
+							performance.
 						</p>
 					</div>
-					<div className="col-md-10 offset-md-1" style={{ paddingBottom: '35px' }}>
-						<div className="c-video" style={{ boxShadow: '0px 16px 18px 0px rgb(0 0 0 / 24%)' }}>
-							<script src="https://fast.wistia.com/embed/medias/6dyja3az1x.jsonp" async></script>
-							<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
-							<div className="wistia_responsive_padding" style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
-								<div className="wistia_responsive_wrapper" style={{ height: '100%', left: '0', position: 'absolute', top: '0', width: '100%' }}>
+					<div
+						className="col-md-10 offset-md-1"
+						style={{ paddingBottom: "35px" }}
+					>
+						<div
+							className="c-video"
+							style={{ boxShadow: "0px 16px 18px 0px rgb(0 0 0 / 24%)" }}
+						>
+							<script
+								src="https://fast.wistia.com/embed/medias/6dyja3az1x.jsonp"
+								async
+							></script>
+							<script
+								src="https://fast.wistia.com/assets/external/E-v1.js"
+								async
+							></script>
+							<div
+								className="wistia_responsive_padding"
+								style={{ padding: "56.25% 0 0 0", position: "relative" }}
+							>
+								<div
+									className="wistia_responsive_wrapper"
+									style={{
+										height: "100%",
+										left: "0",
+										position: "absolute",
+										top: "0",
+										width: "100%",
+									}}
+								>
 									<div
 										className="wistia_embed wistia_async_6dyja3az1x videoFoam=true"
-										style={{ height: '100%', position: 'relative', width: '100%' }}
+										style={{
+											height: "100%",
+											position: "relative",
+											width: "100%",
+										}}
 									>
 										<div
 											className="wistia_swatch"
 											style={{
-												height: '100%',
-												left: '0',
-												opacity: '0',
-												overflow: 'hidden',
-												position: 'absolute',
-												top: '0',
-												transition: 'opacity 200ms',
-												width: '100%',
+												height: "100%",
+												left: "0",
+												opacity: "0",
+												overflow: "hidden",
+												position: "absolute",
+												top: "0",
+												transition: "opacity 200ms",
+												width: "100%",
 											}}
 										>
 											<img
 												src="https://fast.wistia.com/embed/medias/6dyja3az1x/swatch"
-												style={{ filter: 'blur(5px)', height: '100%', objectFit: 'contain', width: '100%' }}
+												style={{
+													filter: "blur(5px)",
+													height: "100%",
+													objectFit: "contain",
+													width: "100%",
+												}}
 												alt="Video thumbnail"
 												aria-hidden="true"
 											/>
@@ -102,26 +134,45 @@ export default function SalesReporting() {
 							<div className="container">
 								<div className="row">
 									<div className="c-testimonial__quote col-md-5 offset-md-1">
-										<pre className="c-eyebrow c-eyebrow--light extra-bottom-margin--x-small" style={{ top: '0', marginLeft: '0' }}>
+										<pre
+											className="c-eyebrow c-eyebrow--light extra-bottom-margin--x-small"
+											style={{ top: "0", marginLeft: "0" }}
+										>
 											Success Stories
 										</pre>
 										<div className="c-quote-carousel__blockquote--item active">
 											<blockquote>
-												“Copper is a core part of how we’ll scale and grow. It’s what gives us the data insights we need to get where we want to be.”
+												“Copper is a core part of how we’ll scale and grow. It’s
+												what gives us the data insights we need to get where we
+												want to be.”
 											</blockquote>
 											<cite>
 												DAVE SPEER
 												<br />
-												<span className="c-quote-carousel__blockquote--position" style={{ fontWeight: 'normal' }}>
+												<span
+													className="c-quote-carousel__blockquote--position"
+													style={{ fontWeight: "normal" }}
+												>
 													HOUWZER
 												</span>
 											</cite>
 										</div>
 									</div>
 									<div className="c-testimonial__image spacing--mobile offset-md-1 col-md-4">
-										<source type="image/webp" srcset="https://copper.objects.frb.io/imgs/product/Group-579.webp" alt="Reporting image hero" />
-										<source type="image/png" srcset="https://copper.objects.frb.io/imgs/product/Group-579.png" alt="Reporting image hero" />
-										<img src="https://copper.objects.frb.io/imgs/product/Group-579.png" alt="Group 579" />
+										<source
+											type="image/webp"
+											srcset="https://copper.objects.frb.io/imgs/product/Group-579.webp"
+											alt="Reporting image hero"
+										/>
+										<source
+											type="image/png"
+											srcset="https://copper.objects.frb.io/imgs/product/Group-579.png"
+											alt="Reporting image hero"
+										/>
+										<img
+											src="https://copper.objects.frb.io/imgs/product/Group-579.png"
+											alt="Group 579"
+										/>
 									</div>
 								</div>
 							</div>
