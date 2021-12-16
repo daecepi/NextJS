@@ -203,7 +203,7 @@ export default function Home({ entry, globals }) {
 						title="Personalize to fit your special business needs"
 						copy="Adaptable as your business evolves, personalized templates give you the capability to build exactly what you want, without having to ask for help."
 						reverse={true}
-						videoId="vid-4"
+						videoId="vid-5"
 						videoWebm="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Gsuite.webm"
 						videoMp4="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Gsuite.mp4"
 					/>

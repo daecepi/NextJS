@@ -70,7 +70,7 @@ $container-max-widths: (
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "animation";
 @import "mixins";
-@import "variables";
+@import "_variables";
 @import "layout";
 @import "typography";
 @import "modules";
