@@ -33,12 +33,52 @@ $container-max-widths: (
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "animation";
 @import "mixins";
-@import "_variables";
+@import "variables";
 @import "layout";
 @import "typography";
 @import "modules";
 @import "pages";
 @import "redactor-specializatiions";
+
+// @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+// @import url("https://fonts.googleapis.com/css?family=Roboto+Mono:300,500,700");
+// @import url("https://rsms.me/inter/inter.css");
+
+// @font-face {
+// 	font-display: swap;
+// 	font-family: "Graphik-Light";
+// 	src: url("/fonts/Graphik-Light-Web.eot");
+// 	src: url("/fonts/Graphik-Light-Web.eot?#iefix") format("embedded-opentype"),
+// 		url("/fonts/Graphik-Light-Web.woff2") format("woff2"),
+// 		url("/fonts/Graphik-Light-Web.woff") format("woff");
+// 	font-weight: 300;
+// 	font-style: normal;
+// 	font-stretch: normal;
+// }
+
+// @font-face {
+// 	font-display: swap;
+// 	font-family: "Graphik-Regular";
+// 	src: url("/fonts/Graphik-Regular-Web.eot");
+// 	src: url("/fonts/Graphik-Regular-Web.eot?#iefix") format("embedded-opentype"),
+// 		url("/fonts/Graphik-Regular-Web.woff2") format("woff2"),
+// 		url("/fonts/Graphik-Regular-Web.woff") format("woff");
+// 	font-weight: 400;
+// 	font-style: normal;
+// 	font-stretch: normal;
+// }
+
+// @font-face {
+// 	font-display: swap;
+// 	font-family: "Graphik-Medium";
+// 	src: url("/fonts/Graphik-Medium-Web.eot");
+// 	src: url("/fonts/Graphik-Medium-Web.eot?#iefix") format("embedded-opentype"),
+// 		url("/fonts/Graphik-Medium-Web.woff2") format("woff2"),
+// 		url("/fonts/Graphik-Medium-Web.woff") format("woff");
+// 	font-weight: 500;
+// 	font-style: normal;
+// 	font-stretch: normal;
+// }
 
 // H1
 //
@@ -688,47 +728,6 @@ a.custom-link {
 @tailwind components;
 /* purgecss end ignore */
 // Material icons
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:300,500,700");
-@import url("https://rsms.me/inter/inter.css");
-
-@font-face {
-	font-display: swap;
-	font-family: "Graphik-Light";
-	src: url("/fonts/../fonts/Graphik-Light-Web.eot");
-	src: url("/fonts/../fonts/Graphik-Light-Web.eot?#iefix")
-			format("embedded-opentype"),
-		url("/fonts/../fonts/Graphik-Light-Web.woff2") format("woff2"),
-		url("/fonts/../fonts/Graphik-Light-Web.woff") format("woff");
-	font-weight: 300;
-	font-style: normal;
-	font-stretch: normal;
-}
-
-@font-face {
-	font-display: swap;
-	font-family: "Graphik-Regular";
-	src: url("/fonts/../fonts/Graphik-Regular-Web.eot");
-	src: url("/fonts/../fonts/Graphik-Regular-Web.eot?#iefix")
-			format("embedded-opentype"),
-		url("/fonts/../fonts/Graphik-Regular-Web.woff2") format("woff2"),
-		url("/fonts/../fonts/Graphik-Regular-Web.woff") format("woff");
-	font-weight: 400;
-	font-style: normal;
-	font-stretch: normal;
-}
-
-@font-face {
-	font-display: swap;
-	font-family: "Graphik-Medium";
-	src: url("/fonts/Graphik-Medium-Web.eot");
-	src: url("/fonts/Graphik-Medium-Web.eot?#iefix") format("embedded-opentype"),
-		url("/fonts/Graphik-Medium-Web.woff2") format("woff2"),
-		url("/fonts/Graphik-Medium-Web.woff") format("woff");
-	font-weight: 500;
-	font-style: normal;
-	font-stretch: normal;
-}
 
 html,
 body {

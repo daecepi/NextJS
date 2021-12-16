@@ -4,7 +4,6 @@
 @import url("https://rsms.me/inter/inter.css");
 
 @font-face {
-	font-display: swap;
 	font-family: "Graphik-Light";
 	src: url("/fonts/../fonts/Graphik-Light-Web.eot");
 	src: url("/fonts/../fonts/Graphik-Light-Web.eot?#iefix")
@@ -14,10 +13,10 @@
 	font-weight: 300;
 	font-style: normal;
 	font-stretch: normal;
+	font-display: swap;
 }
 
 @font-face {
-	font-display: swap;
 	font-family: "Graphik-Regular";
 	src: url("/fonts/../fonts/Graphik-Regular-Web.eot");
 	src: url("/fonts/../fonts/Graphik-Regular-Web.eot?#iefix")
@@ -27,10 +26,10 @@
 	font-weight: 400;
 	font-style: normal;
 	font-stretch: normal;
+	font-display: swap;
 }
 
 @font-face {
-	font-display: swap;
 	font-family: "Graphik-Medium";
 	src: url("/fonts/Graphik-Medium-Web.eot");
 	src: url("/fonts/Graphik-Medium-Web.eot?#iefix") format("embedded-opentype"),
@@ -39,6 +38,7 @@
 	font-weight: 500;
 	font-style: normal;
 	font-stretch: normal;
+	font-display: swap;
 }
 
 // H1
@@ -53,7 +53,7 @@
 h1,
 .h1 {
 	/* Heading 1: */
-	font-family: $medium-font;
+	// font-family: $medium-font;
 	font-weight: 500;
 	font-size: 54px;
 	line-height: 58px;
