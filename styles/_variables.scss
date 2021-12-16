@@ -71,9 +71,9 @@ $global-shadow: 0 6px 20px 0 rgba(60, 63, 64, 0.07);
 $global-shadow-hover: 0 10px 25px 0 rgba(60, 63, 64, 0.14);
 $global-wimpy-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
 // Fonts
-$regular-font: "Graphik-Regular";
+$light-font: "Graphik-Light", sans-serif;
+$regular-font: "Graphik-Regular", sans-serif;
 $medium-font: "Graphik-Medium", sans-serif;
-$light-font: "Graphik-Light";
 
 // Transition
 $hero--split: 1s;

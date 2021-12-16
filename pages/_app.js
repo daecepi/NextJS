@@ -1,3 +1,4 @@
+import "../styles/index.module.scss";
 import "../styles/global.scss";
 
 // Cookies provide for the cookies context

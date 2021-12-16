@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 const HeroHomePage = (props) => {
 	return (
 		<section className="landing-hero c-hero--signup-form enclosed-form no-transition split-background--purple  hero-mod-purple">
@@ -113,7 +114,9 @@ const HeroHomePage = (props) => {
 							<picture>
 								<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/hero/hero-thumb.webp" />
 								<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/hero/hero-thumb.png" />
-								<img
+								<Image
+									width={468}
+									height={348}
 									id="vid-1-placeholder"
 									style={{
 										width: "68.5%",

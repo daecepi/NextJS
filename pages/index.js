@@ -13,6 +13,8 @@ import VideoElement from "../components/Wistia/VideoElement";
 
 import useInView from "react-cool-inview";
 import dynamic from "next/dynamic";
+import ProductTwoUp from "../components/ProductsComponent/ProductTwoUp/ProductTwoUp";
+import TwoUp from "../components/ProductsComponent/ProductTwoUp/TwoUp";
 
 export default function Home({ entry, globals }) {
 	console.log("page fields ", entry, globals);
@@ -41,10 +43,12 @@ export default function Home({ entry, globals }) {
 								srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_IDEO@2x.png"
 								alt="Ideo graphic"
 							/>
-							<img
+							<Image
 								style={{ width: "calc(100% / 1.3)!important;" }}
 								src="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_IDEO@2x.png"
 								alt="Ideo graphic"
+								width={67}
+								height={16}
 							/>
 						</picture>
 					</li>
@@ -60,10 +64,12 @@ export default function Home({ entry, globals }) {
 								srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_masterclass@2x.png"
 								alt="Masterclass graphic"
 							/>
-							<img
+							<Image
 								style={{ width: "calc(100% / 1.3)!important;" }}
 								src="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_masterclass@2x.png"
 								alt="Masterclass graphic"
+								width={64}
+								height={9}
 							/>
 						</picture>
 					</li>
@@ -79,10 +85,12 @@ export default function Home({ entry, globals }) {
 								srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_swell@2x.png"
 								alt="Swell graphic"
 							/>
-							<img
+							<Image
 								style={{ width: "calc(100% / 1.3)!important;" }}
 								src="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_swell@2x.png"
 								alt="Swell graphic"
+								width={64}
+								height={20}
 							/>
 						</picture>
 					</li>
@@ -98,10 +106,12 @@ export default function Home({ entry, globals }) {
 								srcSet="https://copper.objects.frb.io/imgs/homepage//logos-module/Logo_Mailchimp.png"
 								alt="Bubbles graphic"
 							/>
-							<img
+							<Image
 								style={{ width: "calc(100% / 1.3)!important;" }}
 								src="https://copper.objects.frb.io/imgs/homepage//logos-module/Logo_Mailchimp.png"
 								alt="Bubbles graphic"
+								width={64}
+								height={18}
 							/>
 						</picture>
 					</li>
@@ -117,10 +127,12 @@ export default function Home({ entry, globals }) {
 								srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/Logo_Softbank.png"
 								alt="Bubbles graphic"
 							/>
-							<img
+							<Image
 								style={{ width: "calc(100% / 1.3)!important;" }}
 								src="https://copper.objects.frb.io/imgs/homepage/logos-module/Logo_Softbank.png"
 								alt="Bubbles graphic"
+								width={64}
+								height={10}
 							/>
 						</picture>
 					</li>
@@ -136,10 +148,12 @@ export default function Home({ entry, globals }) {
 								srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_zipi@2x.png"
 								alt="Swell graphic"
 							/>
-							<img
+							<Image
 								style={{ width: "calc(100% / 1.3)!important;" }}
 								src="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_zipi@2x.png"
 								alt="Swell graphic"
+								width={64}
+								height={45}
 							/>
 						</picture>
 					</li>
@@ -155,582 +169,45 @@ export default function Home({ entry, globals }) {
 								srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_houwzer2x.png"
 								alt="Bubbles graphic"
 							/>
-							<img
+							<Image
 								style={{ width: "calc(100% / 1.3)!important;" }}
 								src="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_houwzer2x.png"
 								alt="Bubbles graphic"
+								width={64}
+								height={19}
 							/>
 						</picture>
 					</li>
 				</LogoComponent>
 
-				<section className="animation-one-mobile d-block d-md-none h-section-padding">
-					<div className="container">
-						<div className="row">
-							<div className="col-12">
-								<div className="first-animated-block">
-									<pre className="c-eyebrow c-eyebrow--compressed c-eyebrow--dark multiple-2-card-trailer">
-										THE CRM FOR WORKSPACE
-									</pre>
-									<h3>We're known for our Google Workspace integration.</h3>
-									<p>
-										Use Google Workspace (formerly G Suite)? Then you already
-										know how to use Copper. Work out of your inbox with the CRM
-										integration recommended for Google Workspace and Chrome.
-									</p>
-									<div className="c-hero__buttons mb-5">
-										<div className="flex-column">
-											<Link href="/g-suite-crm">
-												<a className="t-link ">Learn more</a>
-											</Link>
-										</div>
-									</div>
-									<Script
-										strategy="lazyOnload"
-										src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
-									></Script>
-									<Script
-										strategy="lazyOnload"
-										src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"
-									></Script>
-
-									<Script
-										id="video-player"
-										strategy="lazyOnload"
-										src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-										onLoad={() => {
-											if (!lastGifVidExecuted) {
-												var lastGifVidExecuted = [];
-											}
-
-											function scrollFunctionality() {
-												$(".video-as-gif.onViewport").each(function (index) {
-													var elementTop = $(this).offset().top;
-													var elementBottom =
-														elementTop + $(this).outerHeight();
-													var viewportTop = $(window).scrollTop();
-													var viewportBottom = viewportTop + $(window).height();
-
-													var elemenId = $(this).attr("id");
-													console.log(elemenId);
-													if (
-														elementBottom > viewportTop &&
-														elementTop < viewportBottom &&
-														lastGifVidExecuted[elemenId] !== 1
-													) {
-														lastGifVidExecuted[elemenId] = 1;
-														$(this)[0].play();
-													} else if (lastGifVidExecuted[elemenId] !== 1) {
-														$(this)[0].pause();
-													}
-												});
-											}
-
-											$(window).scroll(function () {
-												scrollFunctionality();
-											});
-
-											$(document).ready(function () {
-												scrollFunctionality();
-												var myInterval = setInterval(function () {
-													var videoOne = document.getElementById("vid-1");
-													if (videoOne.readyState >= 3 || videoOne.loadStart) {
-														$("#vid-1-placeholder").css("opacity", "0");
-														clearInterval(myInterval);
-													}
-												}, 200);
-
-												gsap.registerPlugin(ScrollTrigger);
-
-												let secondAnomationLength = gsap.utils.toArray(
-													"#theAnimation2 .c-animation-container"
-												);
-
-												ScrollTrigger.matchMedia({
-													"(min-width: 768px)": function () {
-														let tlTwo = gsap.timeline({
-															scrollTrigger: {
-																trigger: "#theAnimation2",
-																scrub: 1,
-																end: "=+3000",
-																pin: true,
-																snap: {
-																	snapTo: "labels",
-																	duration: { min: 0.2, max: 0.5 },
-																	delay: 1,
-																},
-															},
-														});
-														$(
-															"#theAnimation2 .c-animation-container.d-none"
-														).removeClass("d-none");
-														tlTwo
-															.addLabel("third")
-															.fromTo(
-																"#but1",
-																{ checked: false },
-																{ checked: true }
-															)
-															.fromTo(
-																"#theAnimation2 .c-animation-container.theone2 .col_copy",
-																1,
-																{ opacity: 1, y: 0 },
-																{
-																	opacity: 0,
-																	y: -200,
-																	ease: Linear.easeNone,
-																	onStart: () => {
-																		videoPlayer(4);
-																	},
-																}
-															)
-															.fromTo(
-																"#theAnimation2 .thecircle",
-																1,
-																{ y: 0, x: 0 },
-																{ y: -675, x: 75, ease: Linear.easeNone },
-																"-=0.5"
-															) // in from left
-															.fromTo(
-																"#theAnimation2 .c-animation-container.thetwo2 .col_copy",
-																1,
-																{ autoAlpha: 0, opacity: 0, y: 200 },
-																{
-																	autoAlpha: 1,
-																	opacity: 1,
-																	y: 0,
-																	ease: Linear.easeNone,
-																}
-															) // in from left
-															.fromTo(
-																"#theAnimation2 .c-animation-container.theone2 .c-image",
-																1,
-																{ opacity: 1 },
-																{
-																	opacity: 0,
-																	ease: Linear.easeNone,
-																	onComplete: () => {
-																		videoPlayer(5);
-																	},
-																}
-															)
-															.fromTo(
-																"#theAnimation2 .c-animation-container.thetwo2 .c-image",
-																1,
-																{ autoAlpha: 0, opacity: 0 },
-																{
-																	autoAlpha: 1,
-																	opacity: 1,
-																	ease: Linear.easeNone,
-																}
-															)
-															.fromTo(
-																"#but1",
-																{ checked: true },
-																{ checked: false }
-															)
-															.fromTo(
-																"#but2",
-																{ checked: false },
-																{ checked: true }
-															)
-															.addLabel("fourth")
-															.fromTo(
-																"#theAnimation2 .c-animation-container.thetwo2 .col_copy",
-																1,
-																{ opacity: 1, y: 0 },
-																{
-																	opacity: 0,
-																	y: -200,
-																	ease: Linear.easeNone,
-																}
-															) // in from left
-															.fromTo(
-																"#theAnimation2 .thecircle",
-																1,
-																{ y: -675, x: 75 },
-																{ y: 750, x: 750, ease: Linear.easeNone },
-																"-=0.5"
-															) // in from left
-															.fromTo(
-																"#theAnimation2 .c-animation-container.thethree2 .col_copy",
-																1,
-																{ autoAlpha: 0, opacity: 0, y: 200 },
-																{
-																	autoAlpha: 1,
-																	opacity: 1,
-																	y: 0,
-																	ease: Linear.easeNone,
-																}
-															)
-															.fromTo(
-																"#theAnimation2 .c-animation-container.thetwo2 .c-image",
-																1,
-																{ opacity: 1 },
-																{
-																	opacity: 0,
-																	ease: Linear.easeNone,
-																	onComplete: () => {
-																		videoPlayer(6);
-																	},
-																}
-															)
-															.fromTo(
-																"#theAnimation2 .c-animation-container.thethree2 .c-image",
-																1,
-																{ autoAlpha: 0, opacity: 0 },
-																{
-																	autoAlpha: 1,
-																	opacity: 1,
-																	ease: Linear.easeNone,
-																}
-															)
-															.fromTo(
-																"#but2",
-																{ checked: true },
-																{ checked: false }
-															)
-															.fromTo(
-																"#but3",
-																{ checked: false },
-																{ checked: true }
-															)
-															.addLabel("fifth");
-													},
-												});
-
-												function videoPlayer(video) {
-													var videos = $("#vid-" + video);
-
-													videos.trigger("play");
-												}
-
-												function getPos(newpos) {
-													var position = $(".flagForAnimation").offset().top;
-													var divHeight = $("#theAnimation2").height() + 240;
-													if (newpos == "#uno") {
-														$("html, body").animate(
-															{
-																scrollTop: position,
-															},
-															1000
-														);
-													} else if (newpos == "#dos") {
-														$("html, body").animate(
-															{
-																scrollTop: position + divHeight * 1.5,
-															},
-															1000
-														);
-													} else if (newpos == "#tres") {
-														$("html, body").animate(
-															{
-																scrollTop: position + 3 * divHeight,
-															},
-															1000
-														);
-													}
-												}
-												$(document).on("click", "a[href^='#']", function (e) {
-													var id = $(this).attr("href");
-													if (id.length > 0) {
-														e.preventDefault();
-														getPos(id);
-													}
-												});
-											});
-										}}
-									></Script>
-									<Script
-										src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
-										strategy="afterInteractive"
-									/>
-									<Script
-										strategy="lazyOnload"
-										src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
-										onLoad={() => {
-											$(
-												".three-column-slider .container > .container .row"
-											).slick({
-												infinite: false,
-												mobileFirst: true,
-												slidesToShow: 1,
-												slidesToScroll: 1,
-												dots: true,
-												rows: 0,
-												appendDots: ".dots-box",
-												appendArrows: ".buttons-box",
-												prevArrow:
-													'<a id="arrowBack" target="" className="button-slide-change t-link inverted-arrow">Prev</a>',
-												nextArrow:
-													'<a id="arrowNext" target="arrowNext"  className="button-slide-change t-link">Next</a>',
-												// the magic
-												responsive: [
-													{
-														breakpoint: 769,
-														settings: {
-															slidesToShow: 3,
-															slidesToScroll: 1,
-															rows: 0,
-														},
-													},
-												],
-											});
-											$(window).on("resize", function () {
-												$(
-													".three-column-slider .container > .container .row"
-												).slick("resize");
-											});
-										}}
-									></Script>
-									<div style={{ position: "relative" }}>
-										<picture>
-											<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.webp" />
-											<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png" />
-											<img src="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png" />
-										</picture>
-										<div
-											style={{
-												position: "absolute",
-												left: "0px",
-												top: "-4%",
-											}}
-										>
-											<div className="video-gif-container">
-												<video
-													id="vid-1-1"
-													data-cy="video-element"
-													className="video-as-gif h-remove-shadow onViewport"
-													style={{ maxWidth: "100%" }}
-													muted
-													playsInline
-												>
-													<source
-														src="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Adoption.webm"
-														type="video/webm"
-													/>
-													<source
-														src="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Adoption.mp4"
-														type="video/{{vidExtension}}"
-													></source>
-													<p>Su navegador no soporta video HTML5</p>
-												</video>
-											</div>
-										</div>
-									</div>
-
-									{/* {% import "components/simple-elements/_index.html" as simpleElements %}
-						{{ simpleElements.createVideoAsGifElement(entry.slug,'vid-mob-1-1', 'https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Adoption', 'mp4', 'h-remove-shadow onViewport', 'max-width: 100%;', 'https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png') }} */}
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section
-					id="theAnimation"
-					className="d-none d-md-block c-cols c-cols-landing   h-padding-bottom"
-				>
-					<div className="container c-animation-container theone min-vh-75 my-5 d-flex">
-						<h2
-							className="extra-bottom-margin--x-small"
-							style={{ textAlign: "center" }}
-						></h2>
-						<div className="row ">
-							<div className="col-md-6 d-flex align-items-center order-1 ">
-								<div className="c-image c-image--center c-image--shadow h-remove-shadow">
-									<div style={{ position: "relative" }}>
-										<picture>
-											<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.webp" />
-											<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png" />
-											<img src="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png" />
-										</picture>
-										<div
-											style={{
-												position: "absolute",
-												left: "0px",
-												top: "-4%",
-											}}
-										>
-											<div className="video-gif-container">
-												<video
-													id="vid-1-1"
-													data-cy="video-element"
-													className="video-as-gif h-remove-shadow onViewport"
-													style={{ maxWidth: "100%" }}
-													muted
-													playsInline
-												>
-													<source
-														src="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Adoption.webm"
-														type="video/webm"
-													/>
-													<source
-														src="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Adoption.mp4"
-														type="video/{{vidExtension}}"
-													></source>
-													<p>Su navegador no soporta video HTML5</p>
-												</video>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div className="col-md-5 offset-md-1 c-valign--middle order-2">
-								<div className="col_copy">
-									<pre className="c-eyebrow c-eyebrow--compressed c-eyebrow--dark multiple-2-card-trailer">
-										THE CRM FOR WORKSPACE
-									</pre>
-									<h3>We’re known for our Google Workspace integration.</h3>
-									<p>
-										Use Google Workspace? Then you already know how to use
-										Copper. Work out of your inbox with the CRM integration for
-										Google Workspace and Chrome.
-									</p>
-									<div className="c-hero__buttons">
-										<div className="flex-column">
-											<Link href="/g-suite-crm">
-												<a className="t-link ">Learn more</a>
-											</Link>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div className="container c-animation-container thetwo min-vh-75 my-5 d-flex">
-						<h2
-							className="extra-bottom-margin--x-small"
-							style={{ textAlign: "center" }}
-						></h2>
-						<div className="row row-reverse">
-							<div className="col-md-6 d-flex align-items-center order-1 ">
-								<div className="c-image c-image--center c-image--shadow h-remove-shadow">
-									<div style={{ position: "relative" }}>
-										<picture>
-											<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.webp" />
-											<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png" />
-											<img src="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png" />
-										</picture>
-										<div
-											style={{
-												position: "absolute",
-												left: "0px",
-												top: "-4%",
-											}}
-										>
-											<div className="video-gif-container">
-												<video
-													id="vid-2"
-													data-cy="video-element"
-													className="video-as-gif h-remove-shadow onViewport"
-													style={{ maxWidth: "100%" }}
-													muted
-													playsInline
-												>
-													<source
-														src="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Opportunities.webm"
-														type="video/webm"
-													/>
-													<source
-														src="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Opportunities.mp4"
-														type="video/{{vidExtension}}"
-													></source>
-													<p>Su navegador no soporta video HTML5</p>
-												</video>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div className="col-md-5 offset-md-1 c-valign--middle order-2">
-								<div className="col_copy">
-									<pre className="c-eyebrow c-eyebrow--dark">
-										BUILD BETTER RELATIONSHIPS
-									</pre>
-									<h3>Never drop an opportunity again.</h3>
-									<p>
-										You’ll have perfect visibility into all the activity that
-										goes into closing a deal across your whole team.
-									</p>
-									<div className="c-hero__buttons">
-										<div className="flex-column">
-											<Link href="/track-leads">
-												<a className="t-link ">Learn more</a>
-											</Link>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div className="container c-animation-container thethree min-vh-75 my-5 d-flex">
-						<h2
-							className="extra-bottom-margin--x-small"
-							style={{ textAlign: "center" }}
-						></h2>
-						<div className="row">
-							<div className="col-md-6 d-flex align-items-center order-1 ">
-								<div className="c-image c-image--center c-image--shadow h-remove-shadow">
-									<div style={{ position: "relative" }}>
-										<picture>
-											<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.webp" />
-											<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png" />
-											<img src="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png" />
-										</picture>
-										<div
-											style={{
-												position: "absolute",
-												left: "0px",
-												top: "-4%",
-											}}
-										>
-											<div className="video-gif-container">
-												<video
-													id="vid-3"
-													data-cy="video-element"
-													className="video-as-gif h-remove-shadow onViewport"
-													style={{ maxWidth: "100%" }}
-													muted
-													playsInline
-												>
-													<source
-														src="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Opportunities.webm"
-														type="video/webm"
-													/>
-													<source
-														src="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Opportunities.mp4"
-														type="video/{{vidExtension}}"
-													></source>
-													<p>Su navegador no soporta video HTML5</p>
-												</video>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div className="col-md-5 offset-md-1 c-valign--middle order-2">
-								<div className="col_copy">
-									<pre className="c-eyebrow c-eyebrow--dark">EASY TO ADOPT</pre>
-									<h3>The CRM tool your team will actually love.</h3>
-									<p>
-										Zero learning curve. Zero data entry. Workflows the way you
-										want them. Copper is the fastest path to your most
-										productive team.
-									</p>
-									<div className="c-hero__buttons">
-										<div className="flex-column">
-											<Link href="/manage-contacts">
-												<a className="t-link ">Learn more</a>
-											</Link>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
+				<ProductTwoUp>
+					<TwoUp
+						eyebrow="THE CRM FOR WORKSPACE"
+						title="We’re known for our Google Workspace integration."
+						copy="Use Google Workspace? Then you already know how to use Copper. Work out of your inbox with the CRM integration for Google Workspace and Chrome."
+						reverse={true}
+						videoId="vid-2"
+						videoWebm="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Adoption.webm"
+						videoMp4="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Adoption.mp4"
+					/>
+					<TwoUp
+						eyebrow="TOTAL FLEXIBILITY"
+						title="Personalize to fit your special business needs"
+						copy="Adaptable as your business evolves, personalized templates give you the capability to build exactly what you want, without having to ask for help."
+						videoId="vid-3"
+						videoWebm="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Opportunities.webm"
+						videoMp4="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Opportunities.mp4"
+					/>
+					<TwoUp
+						eyebrow="TOTAL FLEXIBILITY"
+						title="Personalize to fit your special business needs"
+						copy="Adaptable as your business evolves, personalized templates give you the capability to build exactly what you want, without having to ask for help."
+						reverse={true}
+						videoId="vid-4"
+						videoWebm="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Gsuite.webm"
+						videoMp4="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Gsuite.mp4"
+					/>
+				</ProductTwoUp>
 
 				<section className="h-section-padding three-column-slider">
 					<div className="section-cover maintain-spacing midnight"></div>

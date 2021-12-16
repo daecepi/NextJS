@@ -6,7 +6,7 @@ const TwoUp = (props) => {
 	return (
 		<>
 			<div
-				className={`row ${
+				className={`row pb-0 ${
 					props.reverse ? "column-reverse" : "extra-padding--bottom"
 				}`}
 			>
