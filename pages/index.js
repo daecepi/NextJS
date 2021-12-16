@@ -738,7 +738,7 @@ export default function Home({ res }) {
 									}}
 								>
 									<div className="imageThumb">
-										<Script
+										{/*<Script
 											strategy="afterInteractive"
 											src="https://fast.wistia.com/embed/medias/tihe7k9xsl.jsonp"
 											defer
@@ -747,7 +747,7 @@ export default function Home({ res }) {
 											strategy="afterInteractive"
 											src="https://fast.wistia.com/assets/external/E-v1.js"
 											defer
-										></Script>
+										></Script>*/}
 										<div
 											className="wistia_responsive_padding"
 											style={{ padding: "56.25% 0 0 0", position: "relative" }}
@@ -852,7 +852,7 @@ export default function Home({ res }) {
 									}}
 								>
 									<div className="imageThumb">
-										<Script
+										{/*<Script
 											src="https://fast.wistia.com/embed/medias/p24wanuzo7.jsonp"
 											strategy="afterInteractive"
 											defer
@@ -861,7 +861,7 @@ export default function Home({ res }) {
 											src="https://fast.wistia.com/assets/external/E-v1.js"
 											strategy="afterInteractive"
 											defer
-										></Script>
+										></Script>*/}
 										<div
 											className="wistia_responsive_padding"
 											style={{ padding: "56.25% 0 0 0", position: "relative" }}
@@ -966,7 +966,7 @@ export default function Home({ res }) {
 									}}
 								>
 									<div className="imageThumb">
-										<Script
+										{/*<Script
 											src="https://fast.wistia.com/embed/medias/2yhihnpbkc.jsonp"
 											strategy="afterInteractive"
 											defer
@@ -975,7 +975,7 @@ export default function Home({ res }) {
 											src="https://fast.wistia.com/assets/external/E-v1.js"
 											strategy="afterInteractive"
 											defer
-										></Script>
+										></Script>*/}
 										<div
 											className="wistia_responsive_padding"
 											style={{ padding: "56.25% 0 0 0", position: "relative" }}
