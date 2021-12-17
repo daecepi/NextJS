@@ -333,10 +333,12 @@ export default function Home({ entry, globals }) {
 													srcSet="https://copper.objects.frb.io/imgs/homepage/video-slider/Logo_Curology.png"
 													alt="Gartner news logo"
 												/>
-												<img
+												<Image
 													style={{ width: "calc(100% / 2)" }}
 													src="https://copper.objects.frb.io/imgs/homepage/video-slider/Logo_Curology.png"
 													alt="Gartner news logo"
+													width={80}
+													height={19}
 												/>
 											</picture>
 										</div>
@@ -455,10 +457,12 @@ export default function Home({ entry, globals }) {
 													srcSet="https://copper.objects.frb.io/imgs/homepage/video-slider/Logo_Corduroy.png"
 													alt="Corduroy logo"
 												/>
-												<img
+												<Image
 													style={{ width: "calc(100% / 2)" }}
 													src="https://copper.objects.frb.io/imgs/homepage/video-slider/Logo_Corduroy.png"
 													alt="Corduroy logo"
+													width={74}
+													height={25}
 												/>
 											</picture>
 										</div>
@@ -577,10 +581,12 @@ export default function Home({ entry, globals }) {
 													srcSet="https://copper.objects.frb.io/imgs/homepage/video-slider/storm-ventures-logo-bw.png"
 													alt="Storm Venture logo"
 												/>
-												<img
+												<Image
 													style={{ width: "calc(100% / 2)" }}
 													src="https://copper.objects.frb.io/imgs/homepage/video-slider/storm-ventures-logo-bw.png"
 													alt="Storm Venture logo"
+													width={134}
+													height={18}
 												/>
 											</picture>
 										</div>
