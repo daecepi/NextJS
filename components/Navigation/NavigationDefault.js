@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Pills from "../CTAS/Pills";
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -114,6 +115,8 @@ const NavigationDefault = ({ buttons }) => {
 						key: "orgContacts",
 						name: "Organize Contacts",
 						icon: "/imgs/icons/Productivity-2x.png",
+						iconWidth: 35,
+						iconHeight: 28,
 						description: "Keep all your relationships in one central place",
 						url: "/manage-contacts",
 						tag: "",
@@ -123,6 +126,8 @@ const NavigationDefault = ({ buttons }) => {
 						key: "automateTasks",
 						name: "Automate Tasks",
 						icon: "/imgs/icons/icon-product-implementation@2x.png",
+						iconWidth: 35,
+						iconHeight: 29,
 						description: "Create recurring tasks and notifications",
 						url: "/automate-sales",
 						tag: "",
@@ -132,6 +137,8 @@ const NavigationDefault = ({ buttons }) => {
 						key: "secAndPrivacy",
 						name: "Security and Privacy",
 						icon: "/imgs/icons/icon-product-security@2x.png",
+						iconWidth: 35,
+						iconHeight: 29,
 						description: "Learn how Copper keeps your data safe",
 						url: "/security",
 						tag: "",
@@ -141,6 +148,8 @@ const NavigationDefault = ({ buttons }) => {
 						key: "trackDeals",
 						name: "Track Deals",
 						icon: "/imgs/icons/Insights-2x.png",
+						iconWidth: 35,
+						iconHeight: 24,
 						description: "Set up the pipeline that works for you",
 						url: "/track-leads",
 						tag: "",
@@ -150,6 +159,8 @@ const NavigationDefault = ({ buttons }) => {
 						key: "getReports",
 						name: "Get Reports",
 						icon: "/imgs/icons/Collaboration-2x.png",
+						iconWidth: 35,
+						iconHeight: 33,
 						description: "See how your business is doing with custom reports",
 						url: "/sales-reporting",
 						tag: "",
@@ -159,6 +170,8 @@ const NavigationDefault = ({ buttons }) => {
 						key: "googleWrokspace",
 						name: "Google Workspace CRM",
 						icon: "https://copper.objects.frb.io/imgs/icons/icon_Google Workspace.png",
+						iconWidth: 35,
+						iconHeight: 23,
 						description:
 							"Manage your contacts, deals, emails and more in one place",
 						url: "/google-workspace-crm",
@@ -169,6 +182,8 @@ const NavigationDefault = ({ buttons }) => {
 						key: "manageContacts",
 						name: "Manage Projects",
 						icon: "/imgs/icons/menu-icon_projects@2x.png",
+						iconWidth: 35,
+						iconHeight: 35,
 						description: "Manage your team’s work after the deal is closed",
 						url: "/project-management-crm",
 						tag: "",
@@ -178,6 +193,8 @@ const NavigationDefault = ({ buttons }) => {
 						key: "integrations",
 						name: "Integrations",
 						icon: "/imgs/icons/Integration-2x.png",
+						iconWidth: 35,
+						iconHeight: 23,
 						description:
 							"Save time by connecting Copper to popular apps and tools",
 						url: "/integrations",
@@ -201,6 +218,8 @@ const NavigationDefault = ({ buttons }) => {
 						key: "agencies",
 						name: "Agencies",
 						icon: "/imgs/icons/Media-2x.png",
+						iconWidth: 35,
+						iconHeight: 28,
 						description:
 							"Better client relations for advertising and media agencies.",
 						url: "/industries/agency-crm",
@@ -211,6 +230,8 @@ const NavigationDefault = ({ buttons }) => {
 						key: "consulting",
 						name: "Consulting",
 						icon: "/imgs/icons/Business-2x.png",
+						iconWidth: 35,
+						iconHeight: 28,
 						description: "Manage clients and deals from one central place.",
 						url: "/industries/consulting-crm",
 						tag: "",
@@ -220,6 +241,8 @@ const NavigationDefault = ({ buttons }) => {
 						key: "technology",
 						name: "Technology",
 						icon: "/imgs/icons/Software-2x.png",
+						iconWidth: 35,
+						iconHeight: 28,
 						description: "Innovate and scale faster with less crm busy work.",
 						url: "/industries/software-technology-crm",
 						tag: "",
@@ -229,6 +252,8 @@ const NavigationDefault = ({ buttons }) => {
 						key: "realEstate",
 						name: "Real Estate",
 						icon: "/imgs/icons/RealState-2x.png",
+						iconWidth: 35,
+						iconHeight: 28,
 						description:
 							"Real estate professionals manage more listings with Copper.",
 						url: "/industries/real-estate-crm",
@@ -239,6 +264,8 @@ const NavigationDefault = ({ buttons }) => {
 						key: "corporateDevelopment",
 						name: "Corporate Development",
 						icon: "/imgs/icons/Corp-2x.png",
+						iconWidth: 35,
+						iconHeight: 28,
 						description: "Track and manage deals in one place with Copper.",
 						url: "/industries/corporate-development-crm",
 						tag: "",
@@ -279,6 +306,8 @@ const NavigationDefault = ({ buttons }) => {
 						key: "library",
 						name: "Library",
 						icon: "/imgs/icons/icon-resources-events.png",
+						iconWidth: 35,
+						iconHeight: 28,
 						description:
 							"Books, guides, videos and tools for growing your small business.",
 						url: "/resources",
@@ -289,6 +318,8 @@ const NavigationDefault = ({ buttons }) => {
 						key: "productUpdates",
 						name: "Product Updates",
 						icon: "/imgs/icons/icon-resources-updates.png",
+						iconWidth: 35,
+						iconHeight: 28,
 						description: "Get updates on our product, best practices and tips.",
 						url: "/blog-categories/copper?sc=743",
 						tag: "",
@@ -298,6 +329,8 @@ const NavigationDefault = ({ buttons }) => {
 						key: "blog",
 						name: "Blog",
 						icon: "/imgs/icons/icon-resources-blog.png",
+						iconWidth: 35,
+						iconHeight: 28,
 						description:
 							"News, stories and latest thinking on sales, marketing and more.",
 						url: "/blog",
@@ -308,6 +341,8 @@ const NavigationDefault = ({ buttons }) => {
 						key: "developers",
 						name: "Developers",
 						icon: "/imgs/icons/icon-resources-developers.png",
+						iconWidth: 35,
+						iconHeight: 28,
 						description: "Use our API to integrate Copper with other apps.",
 						url: "https://developer.copper.com/",
 						tag: "",
@@ -317,6 +352,8 @@ const NavigationDefault = ({ buttons }) => {
 						key: "helpCenter",
 						name: "Help Center",
 						icon: "/imgs/icons/icon-resources-help.png",
+						iconWidth: 35,
+						iconHeight: 28,
 						description: "Browse our knowledge base to find answers.",
 						url: "https://support.copper.com",
 						tag: "",
@@ -326,6 +363,8 @@ const NavigationDefault = ({ buttons }) => {
 						key: "webinars",
 						name: "Webinars",
 						icon: "/imgs/icons/icon-resources-webinars.png",
+						iconWidth: 35,
+						iconHeight: 28,
 						description:
 							"Check our schedule and sign up for our online events.",
 						url: "/webinars",
@@ -349,6 +388,8 @@ const NavigationDefault = ({ buttons }) => {
 						key: "about",
 						name: "About",
 						icon: "/imgs/icons/About.png",
+						iconWidth: 35,
+						iconHeight: 28,
 						description: "Learn about our company.",
 						url: "/about",
 						tag: "",
@@ -358,6 +399,8 @@ const NavigationDefault = ({ buttons }) => {
 						key: "contactUs",
 						name: "Contact Us",
 						icon: "/imgs/icons/contact.png",
+						iconWidth: 35,
+						iconHeight: 28,
 						description: "Get in touch with the team.",
 						url: "/contact",
 						tag: "",
@@ -367,6 +410,8 @@ const NavigationDefault = ({ buttons }) => {
 						key: "careers",
 						name: "Careers",
 						icon: "/imgs/icons/careers.png",
+						iconWidth: 35,
+						iconHeight: 28,
 						description: "Search our latest job openings",
 						url: "/about#careers",
 						tag: "",
@@ -376,6 +421,8 @@ const NavigationDefault = ({ buttons }) => {
 						key: "partners",
 						name: "Partners",
 						icon: "/imgs/icons/Partners.png",
+						iconWidth: 35,
+						iconHeight: 28,
 						description: "Learn about our partners and how \n to become one.",
 						url: "/partners",
 						tag: "",
@@ -385,6 +432,8 @@ const NavigationDefault = ({ buttons }) => {
 						key: "press",
 						name: "Press",
 						icon: "/imgs/icons/Press.png",
+						iconWidth: 35,
+						iconHeight: 28,
 						description: "Check out all the Copper press and news.",
 						url: "/press",
 						tag: "",
@@ -927,15 +976,19 @@ const NavigationDefault = ({ buttons }) => {
 																					}
 																					key={ditem.key}
 																				>
-																					<img
-																						className="c-nav__icon"
-																						alt={
-																							ditem.altText
-																								? ditem.altText
-																								: "Icon"
-																						}
-																						src={ditem.icon}
-																					/>
+																					<div className="c-nav__icon">
+																						<Image
+																							alt={
+																								ditem.altText
+																									? ditem.altText
+																									: "Icon"
+																							}
+																							src={ditem.icon}
+																							width={ditem.iconWidth}
+																							height={ditem.iconHeight}
+																							layout="fixed"
+																						/>
+																					</div>
 																					<div>
 																						<li key={ditem.key}>
 																							{ditem.name}{" "}
@@ -969,15 +1022,19 @@ const NavigationDefault = ({ buttons }) => {
 																					}
 																					key={ditem.key}
 																				>
-																					<img
-																						className="c-nav__icon"
-																						alt={
-																							ditem.altText
-																								? ditem.altText
-																								: "Icon"
-																						}
-																						src={ditem.icon}
-																					/>
+																					<div className="c-nav__icon">
+																						<Image
+																							alt={
+																								ditem.altText
+																									? ditem.altText
+																									: "Icon"
+																							}
+																							src={ditem.icon}
+																							width={ditem.iconWidth}
+																							height={ditem.iconHeight}
+																							layout="fixed"
+																						/>
+																					</div>
 																					<div>
 																						<li key={ditem.key}>
 																							{ditem.name}{" "}
@@ -1011,15 +1068,19 @@ const NavigationDefault = ({ buttons }) => {
 																					}
 																					key={ditem.key}
 																				>
-																					<img
-																						className="c-nav__icon"
-																						alt={
-																							ditem.altText
-																								? ditem.altText
-																								: "Icon"
-																						}
-																						src={ditem.icon}
-																					/>
+																					<div className="c-nav__icon">
+																						<Image
+																							alt={
+																								ditem.altText
+																									? ditem.altText
+																									: "Icon"
+																							}
+																							src={ditem.icon}
+																							width={ditem.iconWidth}
+																							height={ditem.iconHeight}
+																							layout="fixed"
+																						/>
+																					</div>
 																					<div>
 																						<li key={ditem.key}>
 																							{ditem.name}{" "}

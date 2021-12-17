@@ -1,5 +1,6 @@
 import Script from "next/script";
 import Link from "next/link";
+import Image from "next/image";
 import { useRecoilValue } from "recoil";
 
 import { SyncedAtom } from "../../atoms/SyncAtom";
@@ -7,6 +8,7 @@ import CtaGroup from "../../components/Blocks/Simples/CtaGroup";
 import DefaultPageBase from "../../components/PageBase/DefaultPageBase";
 import { filterStripTags } from "../../helpers";
 import { getEntryBySectionHandle, getOnDemandWebinar } from "../../lib/api";
+import { addHTTPStoUrl } from "../../helpers/propertyResolver";
 
 const WebinarIndex = ({ entry, globals, onDemandWebinars }) => {
 	const syncedAtomInformation = useRecoilValue(SyncedAtom);
@@ -45,15 +47,19 @@ const WebinarIndex = ({ entry, globals, onDemandWebinars }) => {
 					<picture>
 						<source
 							type="image/webp"
-							srcSet="/imgs/webinar-hero-1.webp"
+							srcSet="https://copper.objects.frb.io/imgs/webinars/webinar-homepage-header.webp"
 							alt="Webinar hero image"
 						/>
 						<source
 							type="image/png"
-							srcSet="/imgs/webinar-hero-1.jpg"
+							srcSet="https://copper.objects.frb.io/imgs/webinars/webinar-homepage-header.jpg"
 							alt="Webinar hero image"
 						/>
-						<img src="/imgs/webinar-hero-1.jpg" alt="Webinar hero image" />
+						<Image
+							src="https://copper.objects.frb.io/imgs/webinars/webinar-homepage-header.jpg"
+							alt="Webinar hero image"
+							layout="fill"
+						/>
 					</picture>
 				</div>
 				<div className="container">
@@ -75,7 +81,6 @@ const WebinarIndex = ({ entry, globals, onDemandWebinars }) => {
 					<div className="row extra-top-margin--small">
 						{entry.featuredWebinars?.length &&
 							entry.featuredWebinars.map((webinarEntry) => {
-								console.log("item", webinarEntry);
 								return (
 									<div className="col-md-4">
 										<div className="c-card__entry h-webinar">
@@ -83,14 +88,17 @@ const WebinarIndex = ({ entry, globals, onDemandWebinars }) => {
 												<a className="c-card__clickthrough"></a>
 											</Link>
 											{webinarEntry.featuredImage?.length ? (
-												<img
+												<Image
 													className="c-card__default__image"
-													src={webinarEntry.featuredImage[0].url}
+													src={addHTTPStoUrl(webinarEntry.featuredImage[0].url)}
 													alt={
 														webinarEntry.featuredImage[0].altText
 															? webinarEntry.featuredImage[0].altText
 															: webinarEntry.featuredImage[0].title
 													}
+													width={348}
+													height={176}
+													layout="responsive"
 												/>
 											) : (
 												<picture>
@@ -106,10 +114,13 @@ const WebinarIndex = ({ entry, globals, onDemandWebinars }) => {
 														className="c-card__default__image"
 														alt="Industry agency blog image"
 													/>
-													<img
+													<Image
 														className="c-card__default__image"
 														src="/imgs/industry/industry-agency-blog-01@2x.jpg"
 														alt="Industry agency blog image"
+														width={348}
+														height={176}
+														layout="responsive"
 													/>
 												</picture>
 											)}
@@ -246,9 +257,10 @@ const WebinarIndex = ({ entry, globals, onDemandWebinars }) => {
 							srcSet="/imgs/UI_ipad_final-plea-update-new.jpg"
 							alt="Ipad UI image"
 						/>
-						<img
+						<Image
 							src="/imgs/UI_ipad_final-plea-update-new.jpg"
 							alt="Ipad UI image"
+							layout="fill"
 						/>
 					</picture>
 				</div>
