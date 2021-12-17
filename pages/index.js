@@ -224,10 +224,10 @@ export default function Home({ entry, globals }) {
 							are our top priorities.
 						</p>
 
-						<Script
-							src="https://fast.wistia.com/embed/medias/p24wanuzo7.jsonp"
-							strategy="beforeInteractive"
-						></Script>
+						{/*<Script
+							src="https://fast.wistia.com/assets/external/E-v1.js"
+							strategy="afterInteractive"
+						></Script>*/}
 						<div className="container">
 							<div className="row extra-top-margin--small">
 								<div className="col-md-4 c-card--tool ">
@@ -242,12 +242,12 @@ export default function Home({ entry, globals }) {
 										}}
 									>
 										<div className="imageThumb">
-											<VideoElement
+											{/*<VideoElement
 												url={
 													"https://fast.wistia.com/embed/medias/tihe7k9xsl.jsonp"
 												}
 											/>
-											{/*<Script
+											<Script
 											strategy="afterInteractive"
 											src="https://fast.wistia.com/embed/medias/tihe7k9xsl.jsonp"
 											defer
@@ -364,12 +364,12 @@ export default function Home({ entry, globals }) {
 										}}
 									>
 										<div className="imageThumb">
-											<VideoElement
+											{/*<VideoElement
 												url={
 													"https://fast.wistia.com/embed/medias/p24wanuzo7.jsonp"
 												}
 											/>
-											{/*<Script
+											<Script
 											src="https://fast.wistia.com/embed/medias/p24wanuzo7.jsonp"
 											strategy="afterInteractive"
 											defer
@@ -487,12 +487,12 @@ export default function Home({ entry, globals }) {
 										}}
 									>
 										<div className="imageThumb">
-											<VideoElement
+											{/*<VideoElement
 												url={
 													"https://fast.wistia.com/embed/medias/2yhihnpbkc.jsonp"
 												}
 											/>
-											{/*<Script
+											<Script
 											src="https://fast.wistia.com/embed/medias/2yhihnpbkc.jsonp"
 											strategy="afterInteractive"
 											defer
