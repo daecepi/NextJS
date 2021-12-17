@@ -367,10 +367,12 @@ export default function Home({ entry, globals }) {
 													srcSet="https://copper.objects.frb.io/imgs/homepage/video-slider/Logo_Curology.png"
 													alt="Gartner news logo"
 												/>
-												<img
+												<Image
 													style={{ width: "calc(100% / 2)" }}
 													src="https://copper.objects.frb.io/imgs/homepage/video-slider/Logo_Curology.png"
 													alt="Gartner news logo"
+													width={80}
+													height={19}
 												/>
 											</picture>
 										</div>
@@ -496,10 +498,12 @@ export default function Home({ entry, globals }) {
 													srcSet="https://copper.objects.frb.io/imgs/homepage/video-slider/Logo_Corduroy.png"
 													alt="Corduroy logo"
 												/>
-												<img
+												<Image
 													style={{ width: "calc(100% / 2)" }}
 													src="https://copper.objects.frb.io/imgs/homepage/video-slider/Logo_Corduroy.png"
 													alt="Corduroy logo"
+													width={74}
+													height={25}
 												/>
 											</picture>
 										</div>
@@ -625,10 +629,12 @@ export default function Home({ entry, globals }) {
 													srcSet="https://copper.objects.frb.io/imgs/homepage/video-slider/storm-ventures-logo-bw.png"
 													alt="Storm Venture logo"
 												/>
-												<img
+												<Image
 													style={{ width: "calc(100% / 2)" }}
 													src="https://copper.objects.frb.io/imgs/homepage/video-slider/storm-ventures-logo-bw.png"
 													alt="Storm Venture logo"
+													width={134}
+													height={18}
 												/>
 											</picture>
 										</div>
@@ -705,9 +711,13 @@ export default function Home({ entry, globals }) {
 							<div>
 								<div style={{ position: "relative" }}>
 									<picture>
-										<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.webp" />
-										<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png" />
-										<img src="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png" />
+										<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/why/why-thumb-1.webp" />
+										<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/why/why-thumb-1.png" />
+										<Image
+											src="https://copper.objects.frb.io/imgs/homepage/thumbnails/why/why-thumb-1.png"
+											width={570}
+											height={417}
+										/>
 									</picture>
 									<div
 										style={{
@@ -757,9 +767,13 @@ export default function Home({ entry, globals }) {
 							<div>
 								<div style={{ position: "relative" }}>
 									<picture>
-										<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.webp" />
-										<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png" />
-										<img src="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png" />
+										<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/why/why-thumb-2.webp" />
+										<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/why/why-thumb-2.png" />
+										<Image
+											src="https://copper.objects.frb.io/imgs/homepage/thumbnails/why/why-thumb-2.png"
+											width={570}
+											height={417}
+										/>
 									</picture>
 									<div
 										style={{
@@ -811,9 +825,13 @@ export default function Home({ entry, globals }) {
 							<div>
 								<div style={{ position: "relative" }}>
 									<picture>
-										<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.webp" />
-										<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png" />
-										<img src="https://copper.objects.frb.io/imgs/homepage/thumbnails/features/features-thumb-1.png" />
+										<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/why/why-thumb-3.webp" />
+										<source srcSet="https://copper.objects.frb.io/imgs/homepage/thumbnails/why/why-thumb-3.png" />
+										<Image
+											src="https://copper.objects.frb.io/imgs/homepage/thumbnails/why/why-thumb-3.png"
+											width={570}
+											height={417}
+										/>
 									</picture>
 									<div
 										style={{
