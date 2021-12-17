@@ -1,15 +1,7 @@
-module.exports = {};
 // next.config.js
-const withCss = require("@zeit/next-css");
-const withPurgeCss = require("next-purgecss");
-const config = withPurgeCss({
-	purgeCssPaths: ["pages/**/*", "components/**/*"],
-	purgeCss: {
-		whitelist: () => ["player"],
-		whitelistPatterns: () => [/Toastify/, /.*nprogress.*/],
-		rejected: true,
-	},
-	purgeCssEnabled: ({ dev, isServer }) => true, // Enable PurgeCSS for all env
+// const withCss = require("@zeit/next-css");
+//const withPurgeCss = require("next-purgecss");
+const config = {
 	async redirects() {
 		return [
 			{
@@ -33,5 +25,5 @@ const config = withPurgeCss({
 			"objects.us1.frbit.com",
 		],
 	},
-});
+};
 module.exports = config; // If NextJS >= 9.3
