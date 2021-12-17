@@ -21,7 +21,7 @@ const BlogLargeCardImage = (props) => {
 				)}
 				<Image
 					layout="responsive"
-					src={`http://${props.imageUrl}`}
+					src={`http:${props.imageUrl}`}
 					width={props.imageWidth}
 					height={props.imageHeight}
 					className="rounded"
