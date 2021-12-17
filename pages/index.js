@@ -13,9 +13,30 @@ import VideoElement from "../components/Wistia/VideoElement";
 
 import ProductTwoUp from "../components/ProductsComponent/ProductTwoUp/ProductTwoUp";
 import TwoUp from "../components/ProductsComponent/ProductTwoUp/TwoUp";
+import { useCallback } from "react";
 
 export default function Home({ entry, globals }) {
 	console.log("page fields ", entry, globals);
+
+	// Async Wistia importer
+	const wistiaCall = useCallback((url) => {
+		console.log("Executing");
+		const wistiaLibrary = document.createElement("script");
+		wistiaLibrary.src = "https://fast.wistia.com/assets/external/E-v1.js";
+		wistiaLibrary.defer = true;
+
+		const wistiaScript = document.createElement("script");
+		wistiaScript.src = url;
+		wistiaScript.defer = true;
+
+		document.body.appendChild(wistiaLibrary);
+		document.body.appendChild(wistiaScript);
+	}, []);
+
+	const callBackTest = useCallback(() => {
+		console.log("TES CALLBACK");
+	}, []);
+
 	return (
 		<DefaultPageBase entry={entry} globals={globals}>
 			<HeroHomePage
@@ -212,7 +233,13 @@ export default function Home({ entry, globals }) {
 						What our clients are saying.
 					</h2>
 
-					<p className="text-center" style={{ color: "white" }}>
+					<p
+						className="text-center"
+						style={{ color: "white" }}
+						onClick={() => {
+							callBackTest();
+						}}
+					>
 						Customer satisfaction, customer retention, and customer loyalty are
 						our top priorities.
 					</p>
@@ -234,7 +261,14 @@ export default function Home({ entry, globals }) {
 										flexDirection: "column",
 									}}
 								>
-									<div className="imageThumb">
+									<div
+										className="imageThumb"
+										onClick={() => {
+											wistiaCall(
+												"https://fast.wistia.com/embed/medias/tihe7k9xsl.jsonp"
+											);
+										}}
+									>
 										{/*<VideoElement
 												url={
 													"https://fast.wistia.com/embed/medias/tihe7k9xsl.jsonp"
@@ -356,7 +390,14 @@ export default function Home({ entry, globals }) {
 										flexDirection: "column",
 									}}
 								>
-									<div className="imageThumb">
+									<div
+										className="imageThumb"
+										onClick={() => {
+											wistiaCall(
+												"https://fast.wistia.com/embed/medias/tihe7k9xsl.jsonp"
+											);
+										}}
+									>
 										{/*<VideoElement
 												url={
 													"https://fast.wistia.com/embed/medias/p24wanuzo7.jsonp"
@@ -478,7 +519,14 @@ export default function Home({ entry, globals }) {
 										flexDirection: "column",
 									}}
 								>
-									<div className="imageThumb">
+									<div
+										className="imageThumb"
+										onClick={() => {
+											wistiaCall(
+												"https://fast.wistia.com/embed/medias/tihe7k9xsl.jsonp"
+											);
+										}}
+									>
 										{/*<VideoElement
 												url={
 													"https://fast.wistia.com/embed/medias/2yhihnpbkc.jsonp"
