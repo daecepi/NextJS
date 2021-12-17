@@ -59,6 +59,7 @@ const WebinarIndex = ({ entry, globals, onDemandWebinars }) => {
 							src="https://copper.objects.frb.io/imgs/webinars/webinar-homepage-header.jpg"
 							alt="Webinar hero image"
 							layout="fill"
+							priority
 						/>
 					</picture>
 				</div>
