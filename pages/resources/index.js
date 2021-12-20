@@ -1,6 +1,7 @@
 import NavigationBlog from "../../components/Navigation/NavigationBlog";
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import Script from "next/script";
 import BlogLargeCardImage from "../../components/Blog/BlogLargeCardImage.js";
 import BlogCardImage from "../../components/Blog/BlogCardImage";
@@ -15,27 +16,25 @@ import {
 import Footer from "../../components/Footer/Footer";
 import BlogFeaturedCard from "../../components/Blog/BlogFeaturedCard";
 import BlogAd from "../../components/Blog/BlogAd";
+import { addHTTPStoUrl } from "../../helpers/propertyResolver";
 
 const resources = (props) => {
 	// console.log("daskdnjaksdnad");
 	console.log("featured images being sent ", props.entry);
 	const authorCard = (author) => {
 		console.log("AUTHRO RECEIVED ,", author);
-		const photoStyle =
-			(author.photo?.url && {
-				backgroundImage: `url('${author.photo.url}')`,
-			}) ||
-			undefined;
 		return (
 			<div className="c-author c-author--cickable relative">
 				<Link href={`https://copper.com/blog/authors/${author.username}`}>
 					<a className="c-card__clickthrough"></a>
 				</Link>
-				{photoStyle ? (
-					<div
+				{author.photo?.url ? (
+					<Image
 						className="circle-img c-author__img"
-						style={{ ...photoStyle }}
-					></div>
+						src={addHTTPStoUrl(author.photo.url)}
+						width={62}
+						height={62}
+					/>
 				) : (
 					<div
 						className={`circle-img c-author__img background-${
