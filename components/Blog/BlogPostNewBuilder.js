@@ -246,8 +246,6 @@ const BlogPostNewBuilder = ({
 							<div id="rail-start"></div>
 							{entry.blogBuilder.map((matrixBlock) => {
 								switch (matrixBlock.typeHandle) {
-									case "tldr":
-										return <Tldr tldr={tldr} />;
 									case "copyEditor":
 										return <CopyEditor {...matrixBlock} />;
 									case "media":
@@ -280,7 +278,7 @@ const BlogPostNewBuilder = ({
 					<h3 className="c-copper-chronicles__title">Related articles</h3>
 					<div className="row">
 						{featuredPosts.map((postCard) => {
-							console.log("post card ", postCard);
+							//console.log("post card ", postCard);
 							return (
 								<div className="col-xl-4 col-lg-6 col-md-12 c-card-col">
 									{postCard.featuredImage?.length ? (

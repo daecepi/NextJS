@@ -1,5 +1,5 @@
 const TeaserImage = ({ featuredImage }) => {
-	console.log("FEATURED IMAGE GETTING HERE ", featuredImage);
+	// console.log("FEATURED IMAGE GETTING HERE ", featuredImage);
 	const singleFeaturedImage = featuredImage?.length
 		? featuredImage[0]
 		: undefined;

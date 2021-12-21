@@ -11,7 +11,7 @@ const EntryTeaserImage = ({
 	author,
 	slug,
 }) => {
-	console.log("ENTERED FEATURED IMAGE", featuredImage);
+	//console.log("ENTERED FEATURED IMAGE", featuredImage);
 	const mainCategory = blogCategories?.length
 		? blogCategories[blogCategories.length - 1]
 		: undefined;

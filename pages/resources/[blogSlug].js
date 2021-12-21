@@ -40,6 +40,7 @@ const Post = ({
 	var authorInformation = {
 		...defauiltAuthorValues,
 		...externalAuthor,
+		...(entry?.author || {}),
 	};
 
 	// JsonLD management
@@ -179,12 +180,6 @@ const Post = ({
 					<div>{entryTypeSelector(entry, authorInformation)}</div>
 
 					{/* Common ending for blog posts of each entry type */}
-					<Script
-						type="application/ld+json"
-						dangerouslySetInnerHTML={{
-							_html: returnJsonLd(entry, authorInformation),
-						}}
-					></Script>
 				</div>
 
 				<Script
