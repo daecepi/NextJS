@@ -1,3 +1,4 @@
+import Link from "next/link";
 const FBSvg = () => {
 	return (
 		<Link href="https://www.facebook.com/CopperInc/">

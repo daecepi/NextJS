@@ -1,3 +1,4 @@
+import Link from "next/link";
 const TWSvg = () => {
 	return (
 		<Link href="https://twitter.com/copperinc">

@@ -1,3 +1,4 @@
+import Link from "next/link";
 const LNSvg = () => {
 	return (
 		<Link href="https://www.linkedin.com/company/copper-inc/">
