@@ -6,11 +6,9 @@ import Link from "next/link";
 
 import HeroProduct from "../components/Blocks/HeroTypes/HeroProduct";
 import CaseStudy from "../components/ProductsComponent/CaseStudy/CaseStudy";
-import ProductOneCol from "../components/ProductsComponent/ProductOneCol";
 import ProductTwoUp from "../components/ProductsComponent/ProductTwoUp/ProductTwoUp";
 import TwoUp from "../components/ProductsComponent/ProductTwoUp/TwoUp";
 import ThreeColList from "../components/ProductsComponent/List/ThreeColList";
-import ListItem from "../components/ProductsComponent/List/ListItem";
 import FinalCta from "../components/ProductsComponent/FinalCta";
 import DefaultPageBase from "../components/PageBase/DefaultPageBase";
 import { getEntryBySectionHandle } from "../lib/api";
@@ -83,7 +81,7 @@ const ManageContacts = ({ entry, globals }) => {
 					title="No more wasted time on data entry."
 					copy={
 						<>
-							<p>
+							<p className="mb-4 mt-0">
 								Copper suggests recent contacts you’ve been emailing to be added
 								to your list so that you don’t lose track of anyone.
 							</p>
@@ -95,23 +93,23 @@ const ManageContacts = ({ entry, globals }) => {
 						</>
 					}
 					imageUrl="/imgs/product/200309_Organize_UI02.png"
-					imageWidth="1109"
-					imageHeight="1122"
-					reverse={false}
-				></TwoUp>
+					imageWidth="635"
+					imageHeight="642"
+				/>
 				<TwoUp
 					eyebrow="UNDERSTAND YOUR CONTACTS BETTER"
 					title="Find key information, faster."
 					copy="Tag, filter and sort your leads and customers by any criteria to better understand where your business is coming from. (It helps you target more specific customers and analyze team activity too.)"
 					imageUrl="/imgs/product/200309_Organize_UI03.png"
-					imageWidth="1069"
-					imageHeight="1001"
+					imageWidth="540"
+					imageHeight="506"
 					bulletLists={[
 						"Save lists of contacts by type, like: current customers, partners, VIP clients, etc.",
 						"Send targeted communications by industry, geography, company size, and more",
 					]}
-					reverse={true}
-				></TwoUp>
+					bulletsColor="indigo"
+					reverse
+				/>
 			</ProductTwoUp>
 			<CaseStudy
 				eyebrow="Success Story"
@@ -124,17 +122,16 @@ const ManageContacts = ({ entry, globals }) => {
 				quoteby="SARAH GILBERT"
 				company="RHR INTERNATIONAL"
 				backgroundColor="purple-rain"
-			></CaseStudy>
+			/>
 			<ProductTwoUp>
 				<TwoUp
 					eyebrow="VISIBILITY INTO TOUCHPOINTS"
 					title="See the whole history of your relationship."
 					copy="Get the big picture (and little details) without having to comb through multiple places. Copper tracks and displays a live activity feed of every interaction on your contacts’ profiles."
 					imageUrl="https://copper.objects.frb.io/imgs/product/manage-contacts/200309_Organize_UI04.png"
-					imageWidth="1086"
-					imageHeight="1206"
-					reverse={false}
-				></TwoUp>
+					imageWidth="540"
+					imageHeight="600"
+				/>
 			</ProductTwoUp>
 			<ThreeColList
 				title="Build lasting relationships with Copper."

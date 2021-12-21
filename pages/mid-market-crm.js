@@ -88,9 +88,8 @@ export default function MidMarkeCRM({ entry, globals }) {
 					imageUrl="/imgs/segmentation/MM-Ui2.png"
 					imageWidth="534"
 					imageHeight="452"
-					reverse={false}
-					aboutText="Learn More"
-					aboutUrl="/g-suite-crm"
+					ctaText="Learn More"
+					ctaUrl="/g-suite-crm"
 				></TwoUp>
 				<TwoUp
 					eyebrow="SALES WORKFLOW AUTOMATION"
@@ -99,9 +98,9 @@ export default function MidMarkeCRM({ entry, globals }) {
 					imageUrl="/imgs/segmentation/segmentation-mm-2.png"
 					imageWidth="538"
 					imageHeight="461"
-					reverse={true}
-					aboutText="Work Together"
-					aboutUrl="/collaboration"
+					reverse
+					ctaText="Work Together"
+					ctaUrl="/collaboration"
 				></TwoUp>
 				<TwoUp
 					eyebrow="REPORTING AND ANALYTICS"
@@ -110,9 +109,8 @@ export default function MidMarkeCRM({ entry, globals }) {
 					imageUrl="/imgs/segmentation/segmentation-mm-3.png"
 					imageWidth="429"
 					imageHeight="346"
-					reverse={false}
-					aboutText="Learn More"
-					aboutUrl="/insights"
+					ctaText="Learn More"
+					ctaUrl="/insights"
 				></TwoUp>
 			</ProductTwoUp>
 			<CaseStudy

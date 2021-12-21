@@ -111,7 +111,7 @@ const TrackLeads = () => {
 						"Know the win probability for any deal",
 						"Easily see which deals are slipping",
 					]}
-					reverse={true}
+					reverse
 				></TwoUp>
 			</ProductTwoUp>
 			<CaseStudy

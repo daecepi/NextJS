@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
 import HeroSinglePages from "../../components/Blocks/HeroTypes/HeroSinglePages";
-import SingleTwoCol from "../../components/SinglesComponents/SingleTwoCol/SingleTwoCol";
 import Jumble from "../../components/SinglesComponents/Jumble/Jumble";
 import Footer from "../../components/Footer/Footer";
 import Quote from "../../components/SinglesComponents/Quote/Quote";
@@ -11,6 +10,8 @@ import RelatedContent from "../../components/SinglesComponents/RelatedContent/Re
 import FinalPleaHero from "../../components/SinglesComponents/FinalPleadHero/FinalPleaHero";
 import NavigationDefault from "../../components/Navigation/NavigationDefault";
 import TwoColModule from "../../components/Blocks/TwoColModule";
+import ProductTwoUp from "../../components/ProductsComponent/ProductTwoUp/ProductTwoUp";
+import TwoUp from "../../components/ProductsComponent/ProductTwoUp/TwoUp";
 
 const AgencyCrm = () => {
 	return (
@@ -62,48 +63,33 @@ const AgencyCrm = () => {
 				ctaText="Learn More"
 				ctaUrl="/g-suite-crm"
 			/>
-			<SingleTwoCol
-				title="Every little detail, 100% organized."
-				eyebrow="CENTRALIZE RELATIONSHIPS"
-				description="Creative projects are complex—lots of people, lots of files, lots of opinions. Copper automatically captures and connects everything so nothing falls through the cracks and you can concentrate on creative work, not busy work."
-				linkText="See how Advoc8 does it."
-				linkUrl="/blog/advoc8-agency-case-study"
-				imageUrl="https://copper.objects.frb.io/imgs/industry/agencies-crm/industry-agency-IMG-02@2x.png"
-				imageWidth="1076"
-				imageHeigh="1210"
-				imagePosition="left"
-			/>
-			<TwoColModule
-				eyebrow="REAL-TIME COLLABORATION"
-				richText={
-					<div>
-						<h2>Up-to-the-minute insights on everybody you interact with.</h2>
-						<p>
-							Copper’s activity feed gives everyone on your team visibility into
-							real-time customer and seller moments. Trust us, your account
-							managers and deal makers will love it.
-						</p>
-						<Link href="/collaboration">
-							<a className="t-link">Learn More</a>
-						</Link>
-					</div>
-				}
-				image={[
-					{
-						url: "https://copper.objects.frb.io/imgs/industry/agencies-crm/industry-agency-insights.png",
-						title: "Stop the forecasting guessing games",
-					},
-				]}
-				backgroundColor={[{ slug: "product-page" }]}
-				imageWidth="395"
-				imageHeight="556"
-				imageOrientation="dropRight"
-				slug={"track-leads"}
-				loopIndex={0}
-			/>
+			<ProductTwoUp>
+				<TwoUp
+					eyebrow="CENTRALIZE RELATIONSHIPS"
+					title="Every little detail, 100% organized."
+					copy="Creative projects are complex—lots of people, lots of files, lots of opinions. Copper automatically captures and connects everything so nothing falls through the cracks and you can concentrate on creative work, not busy work."
+					imageUrl="https://copper.objects.frb.io/imgs/industry/agencies-crm/industry-agency-IMG-02@2x.png"
+					imageWidth="538"
+					imageHeight="605"
+					ctaText="See how Advoc8 does it."
+					ctaUrl="/blog/advoc8-agency-case-study"
+					reverse
+				/>
+				<TwoUp
+					eyebrow="REAL-TIME COLLABORATION"
+					title="Up-to-the-minute insights on everybody you interact with."
+					copy="Copper's activity feed gives everyone on your team visibility into real-time customer and seller moments. Trust us, your account managers and deal makers will love it."
+					imageUrl="https://copper.objects.frb.io/imgs/industry/agencies-crm/industry-agency-insights.png"
+					imageWidth="429"
+					imageHeight="604"
+					ctaText="Learn More"
+					ctaUrl="/collaboration"
+					dropRight
+				/>
+			</ProductTwoUp>
 			<Quote
 				quote="Copper has created transparency that has resonated throughout our entire company."
-				quoteby="Nicholas Markovitz"
+				quoteBy="Nicholas Markovitz"
 				quotePosition="Managing Director, Creative Brands"
 				ctaUrl="/blog/creative-brands-case-study"
 				ctaText="See how creative brands did it"
@@ -111,8 +97,8 @@ const AgencyCrm = () => {
 				imageWidth="676"
 				imageHeight="880"
 				bgColor="graphite"
-			></Quote>
-			<CallOut title="Create something awesome, together."></CallOut>
+			/>
+			<CallOut title="Create something awesome, together." />
 			<NuumbersSection
 				eyebrow="By The Numbers"
 				title="Copper + Digital Agencies"
@@ -186,7 +172,7 @@ const AgencyCrm = () => {
 				imageHeight="1200"
 			/>
 
-			<Footer></Footer>
+			<Footer />
 		</>
 	);
 };

@@ -334,7 +334,7 @@ const NavigationDefault = ({ buttons }) => {
 						iconHeight: 28,
 						description:
 							"News, stories and latest thinking on sales, marketing and more.",
-						url: "/blog",
+						url: "/resources",
 						tag: "",
 						colPos: 3,
 					},

@@ -235,7 +235,7 @@ const Footer = () => {
 							<ul>
 								<span className="footer__title">Learn</span>
 								<li>
-									<Link href="/blog">
+									<Link href="/resources">
 										<a>Blog</a>
 									</Link>
 								</li>
