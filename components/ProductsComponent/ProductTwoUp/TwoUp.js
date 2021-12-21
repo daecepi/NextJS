@@ -26,7 +26,7 @@ const TwoUp = ({
 		<>
 			<div
 				className={`row ${removeBottomSpacing ? "pb-0" : "mb-5"} ${
-					reverse && "column-reverse"
+					reverse ? "column-reverse" : ""
 				}`}
 			>
 				<div
@@ -36,7 +36,7 @@ const TwoUp = ({
 				>
 					<div
 						className={`${reverse ? "c-image c-image--left" : "c-image"} ${
-							dropRight && "c-image--drop-right"
+							dropRight ? "c-image--drop-right" : ""
 						}`}
 					>
 						{videoWebm && videoMp4 ? (

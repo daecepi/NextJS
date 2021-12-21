@@ -1,19 +1,17 @@
 import Link from "next/link";
-const ThreeColList = (props) => {
+const ThreeColList = ({ title, copy, children, linkUrl, linkText }) => {
 	return (
 		<section className="c-list">
 			<div className="container">
 				<div className="c-list__header c-align--center">
-					<h2 className="t-center col-md-8">{props.title}</h2>
-					{props.copy ? (
-						<p className="t-center col-md-8">{props.copy}</p>
-					) : null}
+					<h2 className="col-md-8">{title}</h2>
+					{copy ? <p className="col-md-8">{copy}</p> : null}
 				</div>
-				<div className="row">{props.children}</div>
-				{props.linkUrl ? (
+				<div className="row">{children}</div>
+				{linkUrl ? (
 					<div className="row c-align--center extra-top-margin--small">
-						<Link href={props.linkUrl}>
-							<a className="t-link">{props.linkText}</a>
+						<Link href={linkUrl}>
+							<a className="t-link">{linkText}</a>
 						</Link>
 					</div>
 				) : null}

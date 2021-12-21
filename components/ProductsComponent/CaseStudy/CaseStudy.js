@@ -16,7 +16,7 @@ const CaseStudy = (props) => {
 										src={props.imageUrl}
 										width={props.imageWidth}
 										height={props.imageHeight}
-									></Image>
+									/>
 								</div>
 							</div>
 							<div className="col-md-6">
