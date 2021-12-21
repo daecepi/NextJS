@@ -16,7 +16,7 @@ const TeaserImage = ({ featuredImage }) => {
 								className="c-blog-card__image lazyload"
 								src={optimizedImages?.placeholderBox || ""}
 								data-src={optimizedImages.src}
-								data-srcset={optimizedImages.srcset}
+								data-srcSet={optimizedImages.srcset}
 								alt={
 									singleFeaturedImage.altText?.length
 										? singleFeaturedImage.altText

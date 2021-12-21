@@ -217,13 +217,13 @@ const Webinars = ({ entry, globals, recentWebinars }) => {
 													<picture>
 														<source
 															type="image/webp"
-															srcset="/imgs/industry/industry-agency-blog-01@2x.webp"
+															srcSet="/imgs/industry/industry-agency-blog-01@2x.webp"
 															className="c-card__default__image"
 															alt="Industry agency blog image"
 														/>
 														<source
 															type="image/png"
-															srcset="/imgs/industry/industry-agency-blog-01@2x.jpg"
+															srcSet="/imgs/industry/industry-agency-blog-01@2x.jpg"
 															className="c-card__default__image"
 															alt="Industry agency blog image"
 														/>

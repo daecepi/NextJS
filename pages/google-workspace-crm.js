@@ -46,8 +46,8 @@ export default function GoogleWorkspaceCrm({ entry, globals }) {
 				<div id={id && `${id}-${index}`} className={classes}>
 					<div className="c-card__entry c-card--entry-1 ">
 						<picture>
-							<source srcset={slideCard.imageWebp} />
-							<source srcset={slideCard.imageNormal} />
+							<source srcSet={slideCard.imageWebp} />
+							<source srcSet={slideCard.imageNormal} />
 							<img
 								src={slideCard.imageNormal}
 								className="c-card--logo"
@@ -157,8 +157,8 @@ export default function GoogleWorkspaceCrm({ entry, globals }) {
 								</div>
 								<div className="c-image floating">
 									<picture>
-										<source srcset="https://copper.objects.frb.io/imgs/product/google-workspace-crm/hero-google-workspace-CRM-updated.webp" />
-										<source srcset="https://copper.objects.frb.io/imgs/product/google-workspace-crm/hero-google-workspace-CRM-updated.jpg" />
+										<source srcSet="https://copper.objects.frb.io/imgs/product/google-workspace-crm/hero-google-workspace-CRM-updated.webp" />
+										<source srcSet="https://copper.objects.frb.io/imgs/product/google-workspace-crm/hero-google-workspace-CRM-updated.jpg" />
 										<img
 											className="home-floating-image large-image"
 											src="https://copper.objects.frb.io/imgs/product/google-workspace-crm/hero-google-workspace-CRM-updated.jpg"
@@ -246,8 +246,8 @@ export default function GoogleWorkspaceCrm({ entry, globals }) {
 								<div className="col-md-3 logo-container">
 									<div className="c-image">
 										<picture>
-											<source srcset="https://copper.objects.frb.io/imgs/product/google-workspace-crm/Google-Partner-Logo-updated.webp" />
-											<source srcset="https://copper.objects.frb.io/imgs/product/google-workspace-crm/Google-Partner-Logo-updated.png" />
+											<source srcSet="https://copper.objects.frb.io/imgs/product/google-workspace-crm/Google-Partner-Logo-updated.webp" />
+											<source srcSet="https://copper.objects.frb.io/imgs/product/google-workspace-crm/Google-Partner-Logo-updated.png" />
 											<img
 												className="home-floating-image large-image"
 												src="https://copper.objects.frb.io/imgs/product/google-workspace-crm/Google-Partner-Logo-updated.png"
@@ -259,8 +259,8 @@ export default function GoogleWorkspaceCrm({ entry, globals }) {
 								<div className="col-md-3 logo-container">
 									<div className="c-image">
 										<picture>
-											<source srcset="https://copper.objects.frb.io/imgs/product/google-workspace-crm/Chrome-enterprise-recommended-logo-updated-2.webp" />
-											<source srcset="https://copper.objects.frb.io/imgs/product/google-workspace-crm/Chrome-enterprise-recommended-logo-updated-2.png" />
+											<source srcSet="https://copper.objects.frb.io/imgs/product/google-workspace-crm/Chrome-enterprise-recommended-logo-updated-2.webp" />
+											<source srcSet="https://copper.objects.frb.io/imgs/product/google-workspace-crm/Chrome-enterprise-recommended-logo-updated-2.png" />
 											<img
 												className="home-floating-image large-image"
 												src="https://copper.objects.frb.io/imgs/product/google-workspace-crm/Chrome-enterprise-recommended-logo-updated-2.png"
@@ -316,8 +316,8 @@ export default function GoogleWorkspaceCrm({ entry, globals }) {
 								<div className="col-md-6 order-2">
 									<div className="c-image google-drive-integration c-image--drop-right">
 										<picture>
-											<source srcset="https://copper.objects.frb.io/imgs/product/google-workspace-crm/gmail-copper-integration-updated.webp" />
-											<source srcset="https://copper.objects.frb.io/imgs/product/google-workspace-crm/gmail-copper-integration-updated.png" />
+											<source srcSet="https://copper.objects.frb.io/imgs/product/google-workspace-crm/gmail-copper-integration-updated.webp" />
+											<source srcSet="https://copper.objects.frb.io/imgs/product/google-workspace-crm/gmail-copper-integration-updated.png" />
 											<img
 												className="drop-right__img h-remove-shadow"
 												src="https://copper.objects.frb.io/imgs/product/google-workspace-crm/gmail-copper-integration-updated.png"
@@ -345,8 +345,8 @@ export default function GoogleWorkspaceCrm({ entry, globals }) {
 								<div className="col-md-6  order-1">
 									<div className="c-image google-drive-integration c-image--drop-left">
 										<picture>
-											<source srcset="https://copper.objects.frb.io/imgs/product/google-workspace-crm/Group4508.webp" />
-											<source srcset="https://copper.objects.frb.io/imgs/product/google-workspace-crm/Group4508.png" />
+											<source srcSet="https://copper.objects.frb.io/imgs/product/google-workspace-crm/Group4508.webp" />
+											<source srcSet="https://copper.objects.frb.io/imgs/product/google-workspace-crm/Group4508.png" />
 											<img
 												className="drop-left__img h-remove-shadow"
 												src="https://copper.objects.frb.io/imgs/product/google-workspace-crm/Group4508.png"
@@ -373,8 +373,8 @@ export default function GoogleWorkspaceCrm({ entry, globals }) {
 								<div className="col-md-6 order-2">
 									<div className="c-image google-drive-integration c-image--drop-right">
 										<picture>
-											<source srcset="https://copper.objects.frb.io/imgs/product/google-workspace-crm/Group4508.webp" />
-											<source srcset="https://copper.objects.frb.io/imgs/product/google-workspace-crm/Group4508.png" />
+											<source srcSet="https://copper.objects.frb.io/imgs/product/google-workspace-crm/Group4508.webp" />
+											<source srcSet="https://copper.objects.frb.io/imgs/product/google-workspace-crm/Group4508.png" />
 											<img
 												className="drop-right__img h-remove-shadow"
 												src="https://copper.objects.frb.io/imgs/product/google-workspace-crm/Group4508.png"
@@ -403,8 +403,8 @@ export default function GoogleWorkspaceCrm({ entry, globals }) {
 										className="c-image google-drive-integration c-image--drop-right"
 									>
 										<picture>
-											<source srcset="https://copper.objects.frb.io/imgs/product/google-workspace-crm/Group4513.webp" />
-											<source srcset="https://copper.objects.frb.io/imgs/product/google-workspace-crm/Group4513.png" />
+											<source srcSet="https://copper.objects.frb.io/imgs/product/google-workspace-crm/Group4513.webp" />
+											<source srcSet="https://copper.objects.frb.io/imgs/product/google-workspace-crm/Group4513.png" />
 											<img
 												className="drop-right__img h-remove-shadow"
 												src="https://copper.objects.frb.io/imgs/product/google-workspace-crm/Group4513.png"
@@ -536,12 +536,12 @@ export default function GoogleWorkspaceCrm({ entry, globals }) {
 											<picture>
 												<source
 													type="image/webp"
-													srcset="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_IDEO@2x.webp"
+													srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_IDEO@2x.webp"
 													alt="Ideo graphic"
 												/>
 												<source
 													type="image/png"
-													srcset="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_IDEO@2x.png"
+													srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_IDEO@2x.png"
 													alt="Ideo graphic"
 												/>
 												<img
@@ -558,12 +558,12 @@ export default function GoogleWorkspaceCrm({ entry, globals }) {
 											<picture>
 												<source
 													type="image/webp"
-													srcset="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_masterclass@2x.webp"
+													srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_masterclass@2x.webp"
 													alt="Masterclass graphic"
 												/>
 												<source
 													type="image/png"
-													srcset="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_masterclass@2x.png"
+													srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_masterclass@2x.png"
 													alt="Masterclass graphic"
 												/>
 												<img
@@ -580,12 +580,12 @@ export default function GoogleWorkspaceCrm({ entry, globals }) {
 											<picture>
 												<source
 													type="image/webp"
-													srcset="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_swell@2x.webp"
+													srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_swell@2x.webp"
 													alt="Swell graphic"
 												/>
 												<source
 													type="image/png"
-													srcset="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_swell@2x.png"
+													srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_swell@2x.png"
 													alt="Swell graphic"
 												/>
 												<img
@@ -602,12 +602,12 @@ export default function GoogleWorkspaceCrm({ entry, globals }) {
 											<picture>
 												<source
 													type="image/webp"
-													srcset="https://copper.objects.frb.io/imgs/homepage//logos-module/Logo_Mailchimp.webp"
+													srcSet="https://copper.objects.frb.io/imgs/homepage//logos-module/Logo_Mailchimp.webp"
 													alt="Bubbles graphic"
 												/>
 												<source
 													type="image/png"
-													srcset="https://copper.objects.frb.io/imgs/homepage//logos-module/Logo_Mailchimp.png"
+													srcSet="https://copper.objects.frb.io/imgs/homepage//logos-module/Logo_Mailchimp.png"
 													alt="Bubbles graphic"
 												/>
 												<img
@@ -624,12 +624,12 @@ export default function GoogleWorkspaceCrm({ entry, globals }) {
 											<picture>
 												<source
 													type="image/webp"
-													srcset="https://copper.objects.frb.io/imgs/homepage/logos-module/Logo_Softbank.webp"
+													srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/Logo_Softbank.webp"
 													alt="Bubbles graphic"
 												/>
 												<source
 													type="image/png"
-													srcset="https://copper.objects.frb.io/imgs/homepage/logos-module/Logo_Softbank.png"
+													srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/Logo_Softbank.png"
 													alt="Bubbles graphic"
 												/>
 												<img
@@ -646,12 +646,12 @@ export default function GoogleWorkspaceCrm({ entry, globals }) {
 											<picture>
 												<source
 													type="image/webp"
-													srcset="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_zipi@2x.webp"
+													srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_zipi@2x.webp"
 													alt="Swell graphic"
 												/>
 												<source
 													type="image/png"
-													srcset="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_zipi@2x.png"
+													srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_zipi@2x.png"
 													alt="Swell graphic"
 												/>
 												<img
@@ -668,12 +668,12 @@ export default function GoogleWorkspaceCrm({ entry, globals }) {
 											<picture>
 												<source
 													type="image/webp"
-													srcset="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_houwzer2x.webp"
+													srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_houwzer2x.webp"
 													alt="Bubbles graphic"
 												/>
 												<source
 													type="image/png"
-													srcset="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_houwzer2x.png"
+													srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_houwzer2x.png"
 													alt="Bubbles graphic"
 												/>
 												<img
@@ -866,8 +866,8 @@ export default function GoogleWorkspaceCrm({ entry, globals }) {
 									<div className="row d-flex">
 										<div className="col-2 col-sm-1 col-md-2 title-alignment-icon">
 											<picture>
-												<source srcset="https://copper.objects.frb.io/imgs/product/google-workspace-crm/Google-Workspace-logos/google-chat-logo.webp" />
-												<source srcset="https://copper.objects.frb.io/imgs/product/google-workspace-crm/Google-Workspace-logos/google-chat-logo.png" />
+												<source srcSet="https://copper.objects.frb.io/imgs/product/google-workspace-crm/Google-Workspace-logos/google-chat-logo.webp" />
+												<source srcSet="https://copper.objects.frb.io/imgs/product/google-workspace-crm/Google-Workspace-logos/google-chat-logo.png" />
 												<img
 													src="https://copper.objects.frb.io/imgs/product/google-workspace-crm/Google-Workspace-logos/google-chat-logo.png"
 													alt="Google Chat"
@@ -904,12 +904,12 @@ export default function GoogleWorkspaceCrm({ entry, globals }) {
 								<picture>
 									<source
 										type="image/webp"
-										srcset="/imgs/pricing/Pricing_CTA-image-dots@2x.webp"
+										srcSet="/imgs/pricing/Pricing_CTA-image-dots@2x.webp"
 										alt="Bubbles graphic"
 									/>
 									<source
 										type="image/png"
-										srcset="/imgs/pricing/Pricing_CTA-image-dots@2x.png"
+										srcSet="/imgs/pricing/Pricing_CTA-image-dots@2x.png"
 										alt="Bubbles graphic"
 									/>
 									<img
@@ -932,12 +932,12 @@ export default function GoogleWorkspaceCrm({ entry, globals }) {
 								<picture>
 									<source
 										type="image/webp"
-										srcset="https://copper.objects.frb.io/imgs/pricing/Pricing_CTA-image-bubbles@2x-migration-2.webp"
+										srcSet="https://copper.objects.frb.io/imgs/pricing/Pricing_CTA-image-bubbles@2x-migration-2.webp"
 										alt="Bubbles graphic"
 									/>
 									<source
 										type="image/png"
-										srcset="https://copper.objects.frb.io/imgs/pricing/Pricing_CTA-image-bubbles@2x-migration-2.png"
+										srcSet="https://copper.objects.frb.io/imgs/pricing/Pricing_CTA-image-bubbles@2x-migration-2.png"
 										alt="Bubbles graphic"
 									/>
 									<img
@@ -991,12 +991,12 @@ export default function GoogleWorkspaceCrm({ entry, globals }) {
 											<picture>
 												<source
 													type="image/webp"
-													srcset="https://copper.objects.frb.io/imgs/pricing/pricing_cta-image-mobile@2x-migration-2.webp"
+													srcSet="https://copper.objects.frb.io/imgs/pricing/pricing_cta-image-mobile@2x-migration-2.webp"
 													alt="Bubbles graphic"
 												/>
 												<source
 													type="image/png"
-													srcset="https://copper.objects.frb.io/imgs/pricing/pricing_cta-image-mobile@2x-migration-2.png"
+													srcSet="https://copper.objects.frb.io/imgs/pricing/pricing_cta-image-mobile@2x-migration-2.png"
 													alt="Bubbles graphic"
 												/>
 												<img

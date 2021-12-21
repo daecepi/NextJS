@@ -50,12 +50,12 @@ export default function SoftwareTechCrm({}) {
 					<picture>
 						<source
 							type="image/webp"
-							srcset="/imgs/industry/Logo-cloud.webp"
+							srcSet="/imgs/industry/Logo-cloud.webp"
 							alt="Cloud logo"
 						/>
 						<source
 							type="image/png"
-							srcset="/imgs/industry/Logo-cloud.png"
+							srcSet="/imgs/industry/Logo-cloud.png"
 							alt="Cloud logo"
 						/>
 						<Image

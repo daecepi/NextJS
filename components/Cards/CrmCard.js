@@ -24,12 +24,12 @@ const CrmCard = ({ name, copy, link, logo }) => {
 							<picture>
 								<source
 									type="image/webp"
-									srcset="/local/DSC00046-2-small.jpg-min.webp"
+									srcSet="/local/DSC00046-2-small.jpg-min.webp"
 									alt="Special image"
 								/>
 								<source
 									type="image/png"
-									srcset="/local/DSC00046-2-small.jpg-min.jpg"
+									srcSet="/local/DSC00046-2-small.jpg-min.jpg"
 									alt="Special image"
 								/>
 								<img

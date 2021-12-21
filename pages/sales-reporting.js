@@ -161,12 +161,12 @@ export default function SalesReporting() {
 									<div className="c-testimonial__image spacing--mobile offset-md-1 col-md-4">
 										<source
 											type="image/webp"
-											srcset="https://copper.objects.frb.io/imgs/product/Group-579.webp"
+											srcSet="https://copper.objects.frb.io/imgs/product/Group-579.webp"
 											alt="Reporting image hero"
 										/>
 										<source
 											type="image/png"
-											srcset="https://copper.objects.frb.io/imgs/product/Group-579.png"
+											srcSet="https://copper.objects.frb.io/imgs/product/Group-579.png"
 											alt="Reporting image hero"
 										/>
 										<img

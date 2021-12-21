@@ -134,14 +134,14 @@ const TYPES = {
 												<picture>
 													{optimizedImages.srcsetWebp ? (
 														<source
-															srcset={optimizedImages.srcsetWebp}
+															srcSet={optimizedImages.srcsetWebp}
 															sizes="100vw"
 															type="image/webp"
 														/>
 													) : (
 														<Image
 															src={optimizedImages.src}
-															srcset={optimizedImages.srcset}
+															srcSet={optimizedImages.srcset}
 															sizes="100vw"
 															className="c-card__image--center p-5"
 															alt={image.altText ? image.altText : image.title}

@@ -80,13 +80,13 @@ const PartnersSignup = ({ entry, globals }) => {
 							<picture>
 								<source
 									type="image/webp"
-									srcset="/imgs/partners/partners-IMG-03@2x.webp"
+									srcSet="/imgs/partners/partners-IMG-03@2x.webp"
 									alt="Partners image"
 									style={{ position: "absolute", bottom: "0", width: "100%" }}
 								/>
 								<source
 									type="image/png"
-									srcset="/imgs/partners/partners-IMG-03@2x.png"
+									srcSet="/imgs/partners/partners-IMG-03@2x.png"
 									alt="Partners image"
 									style={{ position: "absolute", bottom: "0", width: "100%" }}
 								/>

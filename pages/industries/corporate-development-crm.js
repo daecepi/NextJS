@@ -49,12 +49,12 @@ export default function CorporateDevCrm({}) {
 					<picture>
 						<source
 							type="image/webp"
-							srcset="https://copper.objects.frb.io/imgs/industry/corp-dev/industry-corp-dev-logo-cloud.webp"
+							srcSet="https://copper.objects.frb.io/imgs/industry/corp-dev/industry-corp-dev-logo-cloud.webp"
 							alt="Industry corp cloud logo"
 						/>
 						<source
 							type="image/png"
-							srcset="https://copper.objects.frb.io/imgs/industry/corp-dev/industry-corp-dev-logo-cloud.png"
+							srcSet="https://copper.objects.frb.io/imgs/industry/corp-dev/industry-corp-dev-logo-cloud.png"
 							alt="Industry corp cloud logo"
 						/>
 						<Image
@@ -120,12 +120,12 @@ export default function CorporateDevCrm({}) {
 										<picture>
 											<source
 												type="image/webp"
-												srcset="/imgs/industry/industry-corp-dev-logo-security.webp"
+												srcSet="/imgs/industry/industry-corp-dev-logo-security.webp"
 												alt="Need a custom integration?"
 											/>
 											<source
 												type="image/png"
-												srcset="/imgs/industry/industry-corp-dev-logo-security.png"
+												srcSet="/imgs/industry/industry-corp-dev-logo-security.png"
 												alt="Need a custom integration?"
 											/>
 											<img

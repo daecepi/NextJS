@@ -26,12 +26,12 @@ const TosEntryType = ({ entry }) => {
 									<picture>
 										<source
 											type="image/webp"
-											srcset="/imgs/tos/terms/terms_logo.webp"
+											srcSet="/imgs/tos/terms/terms_logo.webp"
 											alt="Terms logo"
 										/>
 										<source
 											type="image/png"
-											srcset="/imgs/tos/terms/terms_logo.png"
+											srcSet="/imgs/tos/terms/terms_logo.png"
 											alt="Terms logo"
 										/>
 										<img

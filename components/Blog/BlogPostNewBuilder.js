@@ -48,12 +48,12 @@ const BlogPostNewBuilder = ({
 							<picture>
 								<source
 									type="image/webp"
-									srcset="/imgs/blog/siena-small.webp"
+									srcSet="/imgs/blog/siena-small.webp"
 									alt="Siena small image"
 								/>
 								<source
 									type="image/png"
-									srcset="/imgs/blog/siena-small.jpg"
+									srcSet="/imgs/blog/siena-small.jpg"
 									alt="Siena small image"
 								/>
 								<img alt="Siena small image" src="/imgs/blog/siena-small.jpg" />
@@ -97,12 +97,12 @@ const BlogPostNewBuilder = ({
 							<picture>
 								<source
 									type="image/webp"
-									srcset="/imgs/blog/siena-small.webp"
+									srcSet="/imgs/blog/siena-small.webp"
 									alt="Siena small image"
 								/>
 								<source
 									type="image/png"
-									srcset="/imgs/blog/siena-small.jpg"
+									srcSet="/imgs/blog/siena-small.jpg"
 									alt="Siena small image"
 								/>
 								<img alt="Siena small image" src="/imgs/blog/siena-small.jpg" />

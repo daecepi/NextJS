@@ -38,7 +38,7 @@ const BlogBuildersFeaturedImage = ({
 											image.altText?.length > 0 ? image.altText : image.title
 										}
 										src={optimizedImages.src}
-										srcset={optimizedImages.srcset}
+										srcSet={optimizedImages.srcset}
 										sizes="100vw"
 									/>
 								</picture>

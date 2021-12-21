@@ -6,12 +6,12 @@ const FinalPlea = () => {
 				<picture>
 					<source
 						type="image/webp"
-						srcset="/imgs/UI_ipad_final-plea-update-new.webp"
+						srcSet="/imgs/UI_ipad_final-plea-update-new.webp"
 						alt="Ipad UI updated image"
 					/>
 					<source
 						type="image/png"
-						srcset="/imgs/UI_ipad_final-plea-update-new.jpg"
+						srcSet="/imgs/UI_ipad_final-plea-update-new.jpg"
 						alt="Ipad UI updated image"
 					/>
 					<img

@@ -50,12 +50,12 @@ const RealEstateCrm = () => {
 					<picture>
 						<source
 							type="image/webp"
-							srcset="/imgs/industry/industry-real-estate-logo.webp"
+							srcSet="/imgs/industry/industry-real-estate-logo.webp"
 							alt="Industry real estate logo"
 						/>
 						<source
 							type="image/png"
-							srcset="/imgs/industry/industry-real-estate-logo.png"
+							srcSet="/imgs/industry/industry-real-estate-logo.png"
 							alt="Industry real estate logo"
 						/>
 						<img

@@ -10,12 +10,12 @@ const BlogFinalPlea = () => {
 				<picture>
 					<source
 						type="image/webp"
-						srcset="/imgs/leave-behind-scaled.webp"
+						srcSet="/imgs/leave-behind-scaled.webp"
 						alt="Leave behind scaled image"
 					/>
 					<source
 						type="image/png"
-						srcset="/imgs/leave-behind-scaled.jpg"
+						srcSet="/imgs/leave-behind-scaled.jpg"
 						alt="Leave behind scaled image"
 					/>
 					<img

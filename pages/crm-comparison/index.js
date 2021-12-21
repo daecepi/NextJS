@@ -169,12 +169,12 @@ export default function CrmComparisonPage({ res }) {
 									<picture>
 										<source
 											type="image/webp"
-											srcset="/imgs/home-logos.webp"
+											srcSet="/imgs/home-logos.webp"
 											alt="Customer logos"
 										/>
 										<source
 											type="image/png"
-											srcset="/imgs/home-logos.png"
+											srcSet="/imgs/home-logos.png"
 											alt="Customer logos"
 										/>
 										<img src="/imgs/home-logos.png" alt="Customer logos" />

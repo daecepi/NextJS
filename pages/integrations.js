@@ -82,12 +82,12 @@ export default function Integrations({ entry, globals }) {
 										<picture>
 											<source
 												type="image/webp"
-												srcset="/imgs/product/slack_logo.webp"
+												srcSet="/imgs/product/slack_logo.webp"
 												alt="Slack"
 											/>
 											<source
 												type="image/png"
-												srcset="/imgs/product/slack_logo.png"
+												srcSet="/imgs/product/slack_logo.png"
 												alt="Slack"
 											/>
 											<img src="/imgs/product/slack_logo.png" alt="Slack" />
@@ -126,12 +126,12 @@ export default function Integrations({ entry, globals }) {
 										<picture>
 											<source
 												type="image/webp"
-												srcset="/imgs/product/Docusign_logo.webp"
+												srcSet="/imgs/product/Docusign_logo.webp"
 												alt="DocuSign"
 											/>
 											<source
 												type="image/png"
-												srcset="/imgs/product/Docusign_logo.png"
+												srcSet="/imgs/product/Docusign_logo.png"
 												alt="DocuSign"
 											/>
 											<img
@@ -155,12 +155,12 @@ export default function Integrations({ entry, globals }) {
 										<picture>
 											<source
 												type="image/webp"
-												srcset="/imgs/product/mailchimp_logo.webp"
+												srcSet="/imgs/product/mailchimp_logo.webp"
 												alt="MailChimp"
 											/>
 											<source
 												type="image/png"
-												srcset="/imgs/product/mailchimp_logo.png"
+												srcSet="/imgs/product/mailchimp_logo.png"
 												alt="MailChimp"
 											/>
 											<img
@@ -183,13 +183,13 @@ export default function Integrations({ entry, globals }) {
 										<picture>
 											<source
 												type="image/webp"
-												srcset="/imgs/product/QuickBooks_logo.webp"
+												srcSet="/imgs/product/QuickBooks_logo.webp"
 												alt="Quickbooks"
 												style={{ maxWidth: "200px" }}
 											/>
 											<source
 												type="image/png"
-												srcset="/imgs/product/QuickBooks_logo.png"
+												srcSet="/imgs/product/QuickBooks_logo.png"
 												alt="Quickbooks"
 												style={{ maxWidth: "200px" }}
 											/>
@@ -214,12 +214,12 @@ export default function Integrations({ entry, globals }) {
 										<picture>
 											<source
 												type="image/webp"
-												srcset="/imgs/product/ringcentral_logo.webp"
+												srcSet="/imgs/product/ringcentral_logo.webp"
 												alt="Ring Central"
 											/>
 											<source
 												type="image/png"
-												srcset="/imgs/product/ringcentral_logo.png"
+												srcSet="/imgs/product/ringcentral_logo.png"
 												alt="Ring Central"
 											/>
 											<img
@@ -242,12 +242,12 @@ export default function Integrations({ entry, globals }) {
 										<picture>
 											<source
 												type="image/webp"
-												srcset="/imgs/product/zendesk_logo.webp"
+												srcSet="/imgs/product/zendesk_logo.webp"
 												alt="Zendesk"
 											/>
 											<source
 												type="image/png"
-												srcset="/imgs/product/zendesk_logo.png"
+												srcSet="/imgs/product/zendesk_logo.png"
 												alt="Zendesk"
 											/>
 											<img src="/imgs/product/zendesk_logo.png" alt="Zendesk" />
@@ -267,12 +267,12 @@ export default function Integrations({ entry, globals }) {
 										<picture>
 											<source
 												type="image/webp"
-												srcset="/imgs/product/hubspot_logo.webp"
+												srcSet="/imgs/product/hubspot_logo.webp"
 												alt="HubSpot"
 											/>
 											<source
 												type="image/png"
-												srcset="/imgs/product/hubspot_logo.png"
+												srcSet="/imgs/product/hubspot_logo.png"
 												alt="HubSpot"
 											/>
 											<img src="/imgs/product/hubspot_logo.png" alt="HubSpot" />
@@ -290,12 +290,12 @@ export default function Integrations({ entry, globals }) {
 										<picture>
 											<source
 												type="image/webp"
-												srcset="https://copper.objects.frb.io/imgs/product/outfunnel-logo-v2.webp"
+												srcSet="https://copper.objects.frb.io/imgs/product/outfunnel-logo-v2.webp"
 												alt="Outfunnel"
 											/>
 											<source
 												type="image/png"
-												srcset="https://copper.objects.frb.io/imgs/product/outfunnel-logo-v2.png"
+												srcSet="https://copper.objects.frb.io/imgs/product/outfunnel-logo-v2.png"
 												alt="Outfunnel"
 											/>
 											<img
@@ -319,12 +319,12 @@ export default function Integrations({ entry, globals }) {
 										<picture>
 											<source
 												type="image/webp"
-												srcset="/imgs/product/aircall-logo.webp"
+												srcSet="/imgs/product/aircall-logo.webp"
 												alt="AirCall"
 											/>
 											<source
 												type="image/png"
-												srcset="/imgs/product/aircall-logo.png"
+												srcSet="/imgs/product/aircall-logo.png"
 												alt="AirCall"
 											/>
 											<img src="/imgs/product/aircall-logo.png" alt="AirCall" />
@@ -384,12 +384,12 @@ export default function Integrations({ entry, globals }) {
 										<picture>
 											<source
 												type="image/webp"
-												srcset="/imgs/product/xero_logo.webp"
+												srcSet="/imgs/product/xero_logo.webp"
 												alt="Xero"
 											/>
 											<source
 												type="image/png"
-												srcset="/imgs/product/xero_logo.png"
+												srcSet="/imgs/product/xero_logo.png"
 												alt="Xero"
 											/>
 											<img src="/imgs/product/xero_logo.png" alt="Xero" />
@@ -548,13 +548,13 @@ export default function Integrations({ entry, globals }) {
 								<picture>
 									<source
 										type="image/webp"
-										srcset="https://copper.objects.frb.io/imgs/integrations/200309_Integrations_UI02.webp"
+										srcSet="https://copper.objects.frb.io/imgs/integrations/200309_Integrations_UI02.webp"
 										className="drop-right__img img-no-shadow"
 										alt="Integration image 2"
 									/>
 									<source
 										type="image/png"
-										srcset="https://copper.objects.frb.io/imgs/integrations/200309_Integrations_UI02.png"
+										srcSet="https://copper.objects.frb.io/imgs/integrations/200309_Integrations_UI02.png"
 										className="drop-right__img img-no-shadow"
 										alt="Integration image 2"
 									/>

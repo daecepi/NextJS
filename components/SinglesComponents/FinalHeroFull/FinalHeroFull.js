@@ -21,12 +21,12 @@ export default function FinalHeroFull({ title, copy }) {
 						<picture>
 							<source
 								type="image/webp"
-								srcset="/imgs/pricing/Pricing_CTA-image-dots@2x.webp"
+								srcSet="/imgs/pricing/Pricing_CTA-image-dots@2x.webp"
 								alt="Bubbles graphic"
 							/>
 							<source
 								type="image/png"
-								srcset="/imgs/pricing/Pricing_CTA-image-dots@2x.png"
+								srcSet="/imgs/pricing/Pricing_CTA-image-dots@2x.png"
 								alt="Bubbles graphic"
 							/>
 							<img
@@ -49,12 +49,12 @@ export default function FinalHeroFull({ title, copy }) {
 						<picture>
 							<source
 								type="image/webp"
-								srcset="https://copper.objects.frb.io/imgs/pricing/Pricing_CTA-image-bubbles@2x-migration-2.webp"
+								srcSet="https://copper.objects.frb.io/imgs/pricing/Pricing_CTA-image-bubbles@2x-migration-2.webp"
 								alt="Bubbles graphic"
 							/>
 							<source
 								type="image/png"
-								srcset="https://copper.objects.frb.io/imgs/pricing/Pricing_CTA-image-bubbles@2x-migration-2.png"
+								srcSet="https://copper.objects.frb.io/imgs/pricing/Pricing_CTA-image-bubbles@2x-migration-2.png"
 								alt="Bubbles graphic"
 							/>
 							<img

@@ -316,6 +316,7 @@ const DemosPage = ({ entry, globals }) => {
 										}
 									});
 									form.onSuccess(function () {
+										// Fix GA
 										if (
 											(window.location.pathname === "/demos" ||
 												window.location.pathname === "/demo") &&

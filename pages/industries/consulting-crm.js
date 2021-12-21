@@ -41,12 +41,12 @@ export default function ConsultingCrm() {
 					<picture>
 						<source
 							type="image/webp"
-							srcset="/imgs/industry/industry-consulting-logo-cloud@2x.webp"
+							srcSet="/imgs/industry/industry-consulting-logo-cloud@2x.webp"
 							alt="Consulting logo"
 						/>
 						<source
 							type="image/png"
-							srcset="/imgs/industry/industry-consulting-logo-cloud@2x.png"
+							srcSet="/imgs/industry/industry-consulting-logo-cloud@2x.png"
 							alt="Consulting logo"
 						/>
 						<Image

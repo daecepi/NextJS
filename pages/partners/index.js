@@ -14,12 +14,12 @@ const ParnersPage = ({ entry, globals }) => {
 					<picture>
 						<source
 							type="image/webp"
-							srcset="https://copper.objects.frb.io/imgs/partners/Partners-Landing-Page-Hero.webp"
+							srcSet="https://copper.objects.frb.io/imgs/partners/Partners-Landing-Page-Hero.webp"
 							alt="Partner page's hero image"
 						/>
 						<source
 							type="image/png"
-							srcset="https://copper.objects.frb.io/imgs/partners/Partners-Landing-Page-Hero.jpg"
+							srcSet="https://copper.objects.frb.io/imgs/partners/Partners-Landing-Page-Hero.jpg"
 							alt="Partner page's hero image"
 						/>
 						<img
@@ -909,14 +909,14 @@ const ParnersPage = ({ entry, globals }) => {
 									<picture>
 										<source
 											type="image/webp"
-											srcset="/imgs/partners/Confirmation_Image.webp"
+											srcSet="/imgs/partners/Confirmation_Image.webp"
 											style={{ marginRight: "20px" }}
 											className="drop-right__img no-shadow"
 											alt="Thank you from Copper"
 										/>
 										<source
 											type="image/png"
-											srcset="/imgs/partners/Confirmation_Image.png"
+											srcSet="/imgs/partners/Confirmation_Image.png"
 											style={{ marginRight: "20px" }}
 											className="drop-right__img no-shadow"
 											alt="Thank you from Copper"

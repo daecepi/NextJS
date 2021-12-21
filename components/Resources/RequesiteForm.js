@@ -133,13 +133,13 @@ const RequesiteForm = ({ entry }) => {
 														<picture>
 															<source
 																type="image/webp"
-																srcset="/imgs/webinars/webinar-form-image.webp"
+																srcSet="/imgs/webinars/webinar-form-image.webp"
 																className=""
 																alt="Working image"
 															/>
 															<source
 																type="image/png"
-																srcset="/imgs/webinars/webinar-form-image.png"
+																srcSet="/imgs/webinars/webinar-form-image.png"
 																className=""
 																alt="Working image"
 															/>
