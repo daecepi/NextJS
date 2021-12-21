@@ -528,8 +528,8 @@ export default function Integrations() {
 					imageUrl="https://copper.objects.frb.io/imgs/product/integrations-open-api-group2.png"
 					imageWidth="635"
 					imageHeight="637"
-					aboutText="View the API documentation"
-					aboutUrl="https://developer.copper.com"
+					ctaText="View the API documentation"
+					ctaUrl="https://developer.copper.com"
 				/>
 			</ProductTwoUp>
 			<CaseStudy

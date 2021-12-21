@@ -39,7 +39,10 @@ export default function EnterpriseCRM() {
 				ctaTwoUrl="/demos"
 				imageUrl="/imgs/segmentation/segmentation-enterprise-hero.jpg"
 			/>
-			<Customers title="Companies who have joined the Relationship Era." companiesLogos={companiesLogos} />
+			<Customers
+				title="Companies who have joined the Relationship Era."
+				companiesLogos={companiesLogos}
+			/>
 			<ProductTwoUp>
 				<TwoUp
 					eyebrow="RECOMMENDED FOR GOOGLE WORKSPACE"
@@ -49,8 +52,8 @@ export default function EnterpriseCRM() {
 					imageWidth="534"
 					imageHeight="473"
 					reverse={false}
-					aboutText="Learn More"
-					aboutUrl="/g-suite-crm"
+					ctaText="Learn More"
+					ctaUrl="/g-suite-crm"
 				></TwoUp>
 				<TwoUp
 					eyebrow="AUTOMATED DATA ENTRY AND WORKFLOWS"
@@ -60,8 +63,8 @@ export default function EnterpriseCRM() {
 					imageWidth="538"
 					imageHeight="770"
 					reverse={true}
-					aboutText="Learn How"
-					aboutUrl="/productivity"
+					ctaText="Learn How"
+					ctaUrl="/productivity"
 				></TwoUp>
 				<TwoUp
 					eyebrow="POWERFUL INSIGHTS & ANALYTICS"
@@ -71,8 +74,8 @@ export default function EnterpriseCRM() {
 					imageWidth="540"
 					imageHeight="378"
 					reverse={false}
-					aboutText="Work Together"
-					aboutUrl="/insights"
+					ctaText="Work Together"
+					ctaUrl="/insights"
 				></TwoUp>
 			</ProductTwoUp>
 			<CaseStudy
@@ -82,7 +85,8 @@ export default function EnterpriseCRM() {
 				imageHeight="450"
 				quote={[
 					<span>
-						Since we started using Copper, we've closed upwards of 10% <strong>more customers</strong>.
+						Since we started using Copper, we've closed upwards of 10%{" "}
+						<strong>more customers</strong>.
 					</span>,
 				]}
 				quoteby="AMY PIENTA"
@@ -93,7 +97,10 @@ export default function EnterpriseCRM() {
 				backgroundColor="mint"
 			></CaseStudy>
 
-			<CallOut title="Strengthen your business relationships with Google Workspace + Copper." smallTitle={true} />
+			<CallOut
+				title="Strengthen your business relationships with Google Workspace + Copper."
+				smallTitle={true}
+			/>
 
 			<NumbersSection
 				eyebrow="By The Numbers"
@@ -135,8 +142,8 @@ export default function EnterpriseCRM() {
 					imageUrl="/imgs/segmentation/segmentation-enterprise-4.png"
 					imageWidth="538"
 					imageHeight="505"
-					aboutText="Read their story"
-					aboutUrl="/blog/rhr-case-study"
+					ctaText="Read their story"
+					ctaUrl="/blog/rhr-case-study"
 				/>
 			</ProductTwoUp>
 

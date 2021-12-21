@@ -90,8 +90,8 @@ export default function SmallBusinessCRM() {
 					imageUrl="/imgs/segmentation/SMB-Ui03.png"
 					imageWidth="534"
 					imageHeight="430"
-					aboutText="Learn More"
-					aboutUrl="/collaboration"
+					ctaText="Learn More"
+					ctaUrl="/collaboration"
 				/>
 				<TwoUp
 					eyebrow="Copper plus Google Workspace</pre>"
@@ -101,8 +101,8 @@ export default function SmallBusinessCRM() {
 					imageWidth="538"
 					imageHeight="464"
 					reverse={true}
-					aboutText="Learn More"
-					aboutUrl="/g-suite-crm"
+					ctaText="Learn More"
+					ctaUrl="/g-suite-crm"
 				/>
 				<TwoUp
 					eyebrow="AUTOMATED DATA ENTRY"
@@ -111,8 +111,8 @@ export default function SmallBusinessCRM() {
 					imageUrl="/imgs/segmentation/segmentation-smb-3.png"
 					imageWidth="429"
 					imageHeight="711"
-					aboutText="Eliminate data entry"
-					aboutUrl="/productivity"
+					ctaText="Eliminate data entry"
+					ctaUrl="/productivity"
 				/>
 			</ProductTwoUp>
 			<CaseStudy

@@ -14,13 +14,14 @@ const TwoUp = ({
 	title,
 	copy,
 	bulletLists,
-	aboutUrl,
-	aboutText,
+	ctaUrl,
+	ctaText,
+	dropRight,
 }) => {
 	return (
 		<>
 			<div
-				className={`row mb-5 ${
+				className={`row mb-5 mt- ${
 					reverse ? "column-reverse" : "extra-padding--bottom"
 				}`}
 			>
@@ -30,9 +31,9 @@ const TwoUp = ({
 					} `}
 				>
 					<div
-						className={`${
-							reverse ? "c-image c-image--left" : "c-image c-image--drop-right"
-						} `}
+						className={`${reverse ? "c-image c-image--left" : "c-image"} ${
+							dropRight && "c-image--drop-right"
+						}`}
 					>
 						{videoWebm && videoMp4 ? (
 							<div className="video-gif-container">
@@ -199,9 +200,9 @@ const TwoUp = ({
 							})}
 						</ul>
 					) : null}
-					{aboutText && aboutUrl && (
-						<Link href={aboutUrl}>
-							<a className="t-link mt-4">{aboutText}</a>
+					{ctaText && ctaUrl && (
+						<Link href={ctaUrl}>
+							<a className="t-link">{ctaText}</a>
 						</Link>
 					)}
 				</div>

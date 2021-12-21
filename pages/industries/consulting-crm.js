@@ -121,8 +121,8 @@ export default function ConsultingCrm() {
 					imageUrl="/imgs/industry/consulting-03.png"
 					imageWidth="538"
 					imageHeight="518"
-					aboutText="How RHR manages relationships with Copper."
-					aboutUrl="resources/rhr-case-study"
+					ctaText="How RHR manages relationships with Copper."
+					ctaUrl="resources/rhr-case-study"
 				/>
 				<TwoUp
 					eyebrow="STREAMLINED WORKFLOWS"

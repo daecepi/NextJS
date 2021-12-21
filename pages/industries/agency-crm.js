@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
 import HeroSinglePages from "../../components/Blocks/HeroTypes/HeroSinglePages";
-import SingleTwoCol from "../../components/SinglesComponents/SingleTwoCol/SingleTwoCol";
 import Jumble from "../../components/SinglesComponents/Jumble/Jumble";
 import Footer from "../../components/Footer/Footer";
 import Quote from "../../components/SinglesComponents/Quote/Quote";
@@ -72,8 +71,8 @@ const AgencyCrm = () => {
 					imageUrl="https://copper.objects.frb.io/imgs/industry/agencies-crm/industry-agency-IMG-02@2x.png"
 					imageWidth="538"
 					imageHeight="605"
-					aboutText="See how Advoc8 does it."
-					aboutUrl="/blog/advoc8-agency-case-study"
+					ctaText="See how Advoc8 does it."
+					ctaUrl="/blog/advoc8-agency-case-study"
 					reverse={true}
 				/>
 				<TwoUp
@@ -83,9 +82,10 @@ const AgencyCrm = () => {
 					imageUrl="https://copper.objects.frb.io/imgs/industry/agencies-crm/industry-agency-insights.png"
 					imageWidth="429"
 					imageHeight="604"
-					aboutText="Learn More"
-					aboutUrl="/collaboration"
+					ctaText="Learn More"
+					ctaUrl="/collaboration"
 					reverse={false}
+					dropRight={true}
 				/>
 			</ProductTwoUp>
 			<Quote
