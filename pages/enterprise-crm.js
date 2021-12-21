@@ -51,7 +51,6 @@ export default function EnterpriseCRM() {
 					imageUrl="/imgs/segmentation/Ent-UI01.png"
 					imageWidth="534"
 					imageHeight="473"
-					reverse={false}
 					ctaText="Learn More"
 					ctaUrl="/g-suite-crm"
 				></TwoUp>
@@ -62,7 +61,7 @@ export default function EnterpriseCRM() {
 					imageUrl="/imgs/segmentation/segmentation-enterprise-2.png"
 					imageWidth="538"
 					imageHeight="770"
-					reverse={true}
+					reverse
 					ctaText="Learn How"
 					ctaUrl="/productivity"
 				></TwoUp>
@@ -73,7 +72,6 @@ export default function EnterpriseCRM() {
 					imageUrl="/imgs/segmentation/Enterprise-UI03.png"
 					imageWidth="540"
 					imageHeight="378"
-					reverse={false}
 					ctaText="Work Together"
 					ctaUrl="/insights"
 				></TwoUp>
@@ -138,7 +136,7 @@ export default function EnterpriseCRM() {
 				<TwoUp
 					eyebrow="CASE STUDY"
 					title="RHR International builds stronger relationships with Copper and Google Workspace."
-					reverse={true}
+					reverse
 					imageUrl="/imgs/segmentation/segmentation-enterprise-4.png"
 					imageWidth="538"
 					imageHeight="505"

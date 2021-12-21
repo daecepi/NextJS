@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Link from "next/link";
 import HeroSinglePages from "../../components/Blocks/HeroTypes/HeroSinglePages";
 import Jumble from "../../components/SinglesComponents/Jumble/Jumble";
 import Footer from "../../components/Footer/Footer";
@@ -90,7 +89,7 @@ const RealEstateCrm = () => {
 					imageHeight="520"
 					ctaUrl="/blog/houwzer-case-study"
 					ctaText="See how Howzer grew their real estate agent team"
-					reverse={true}
+					reverse
 				/>
 				<TwoUp
 					eyebrow="REAL ESTATE PROCESSES"
@@ -101,7 +100,6 @@ const RealEstateCrm = () => {
 					imageHeight="511"
 					ctaUrl="/blog/reali-case-study"
 					ctaText="Watch how Reali strengthens relationships."
-					reverse={false}
 				/>
 				<TwoUp
 					eyebrow="MOBILE CRM"
@@ -112,8 +110,8 @@ const RealEstateCrm = () => {
 					imageHeight="653"
 					ctaUrl="/blog/houwzer-case-study"
 					ctaText="How this Remax realtor utilizes Copper on the road"
-					reverse={true}
-					removeBottomSpacing={true}
+					reverse
+					removeBottomSpacing
 				/>
 			</ProductTwoUp>
 			{/*<Quote></Quote>*/}
@@ -146,11 +144,11 @@ const RealEstateCrm = () => {
 			<FinalPleaHero
 				title={`Sell more
                 with Copper`}
-				description={`No credit card required. Start your 14-day free trial today.`}
+				copy="No credit card required. Start your 14-day free trial today."
 				imageUrl="/imgs/industry/industry-real-estate-final-plea@2x.jpg"
 			/>
 
-			<Footer></Footer>
+			<Footer />
 		</>
 	);
 };

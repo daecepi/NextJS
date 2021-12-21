@@ -73,7 +73,7 @@ const AgencyCrm = () => {
 					imageHeight="605"
 					ctaText="See how Advoc8 does it."
 					ctaUrl="/blog/advoc8-agency-case-study"
-					reverse={true}
+					reverse
 				/>
 				<TwoUp
 					eyebrow="REAL-TIME COLLABORATION"
@@ -84,8 +84,7 @@ const AgencyCrm = () => {
 					imageHeight="604"
 					ctaText="Learn More"
 					ctaUrl="/collaboration"
-					reverse={false}
-					dropRight={true}
+					dropRight
 				/>
 			</ProductTwoUp>
 			<Quote
@@ -173,7 +172,7 @@ const AgencyCrm = () => {
 				imageHeight="1200"
 			/>
 
-			<Footer></Footer>
+			<Footer />
 		</>
 	);
 };

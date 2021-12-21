@@ -86,7 +86,6 @@ export default function MidMarkeCRM() {
 					imageUrl="/imgs/segmentation/MM-Ui2.png"
 					imageWidth="534"
 					imageHeight="452"
-					reverse={false}
 					ctaText="Learn More"
 					ctaUrl="/g-suite-crm"
 				></TwoUp>
@@ -97,7 +96,7 @@ export default function MidMarkeCRM() {
 					imageUrl="/imgs/segmentation/segmentation-mm-2.png"
 					imageWidth="538"
 					imageHeight="461"
-					reverse={true}
+					reverse
 					ctaText="Work Together"
 					ctaUrl="/collaboration"
 				></TwoUp>
@@ -108,7 +107,6 @@ export default function MidMarkeCRM() {
 					imageUrl="/imgs/segmentation/segmentation-mm-3.png"
 					imageWidth="429"
 					imageHeight="346"
-					reverse={false}
 					ctaText="Learn More"
 					ctaUrl="/insights"
 				></TwoUp>

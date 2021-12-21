@@ -199,7 +199,7 @@ export default function Home({ entry, globals }) {
 					eyebrow="THE CRM FOR WORKSPACE"
 					title="We’re known for our Google Workspace integration."
 					copy="Use Google Workspace? Then you already know how to use Copper. Work out of your inbox with the CRM integration for Google Workspace and Chrome."
-					reverse={true}
+					reverse
 					videoId="vid-2"
 					videoWebm="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Adoption.webm"
 					videoMp4="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Adoption.mp4"
@@ -216,7 +216,7 @@ export default function Home({ entry, globals }) {
 					eyebrow="TOTAL FLEXIBILITY"
 					title="Personalize to fit your special business needs"
 					copy="Adaptable as your business evolves, personalized templates give you the capability to build exactly what you want, without having to ask for help."
-					reverse={true}
+					reverse
 					videoId="vid-5"
 					videoWebm="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Gsuite.webm"
 					videoMp4="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Gsuite.mp4"

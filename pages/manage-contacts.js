@@ -96,7 +96,6 @@ const ManageContacts = () => {
 					imageUrl="/imgs/product/200309_Organize_UI02.png"
 					imageWidth="1109"
 					imageHeight="1122"
-					reverse={false}
 				></TwoUp>
 				<TwoUp
 					eyebrow="UNDERSTAND YOUR CONTACTS BETTER"
@@ -109,7 +108,7 @@ const ManageContacts = () => {
 						"Save lists of contacts by type, like: current customers, partners, VIP clients, etc.",
 						"Send targeted communications by industry, geography, company size, and more",
 					]}
-					reverse={true}
+					reverse
 				></TwoUp>
 			</ProductTwoUp>
 			<CaseStudy
@@ -132,7 +131,6 @@ const ManageContacts = () => {
 					imageUrl="https://copper.objects.frb.io/imgs/product/manage-contacts/200309_Organize_UI04.png"
 					imageWidth="1086"
 					imageHeight="1206"
-					reverse={false}
 				></TwoUp>
 			</ProductTwoUp>
 			<ThreeColList

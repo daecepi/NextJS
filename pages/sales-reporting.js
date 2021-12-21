@@ -121,7 +121,7 @@ export default function SalesReporting() {
 					eyebrow="TOTAL FLEXIBILITY"
 					title="Personalize to fit your special business needs"
 					copy="Adaptable as your business evolves, personalized templates give you the capability to build exactly what you want, without having to ask for help."
-					reverse={true}
+					reverse
 					videoId="vid-2"
 					videoWebm="https://copper.objects.frb.io/videos/sales-reporting/2-Reports-Personalize.webm"
 					videoMp4="https://copper.objects.frb.io/videos/sales-reporting/2-Reports-Personalize.mp4"
@@ -193,7 +193,7 @@ export default function SalesReporting() {
 					eyebrow="EASY COLLABORATION"
 					title="Schedule report delivery"
 					copy="Report delivery can be scheduled and sent to stakeholders and team members with or without a Copper account."
-					reverse={true}
+					reverse
 					videoId="vid-4"
 					videoWebm="https://copper.objects.frb.io/videos/sales-reporting/4-Reports-Email-Schedule.webm"
 					videoMp4="https://copper.objects.frb.io/videos/sales-reporting/4-Reports-Email-Schedule.mp4"

@@ -100,7 +100,7 @@ export default function SmallBusinessCRM() {
 					imageUrl="/imgs/segmentation/SMB-Ui04.png"
 					imageWidth="538"
 					imageHeight="464"
-					reverse={true}
+					reverse
 					ctaText="Learn More"
 					ctaUrl="/g-suite-crm"
 				/>

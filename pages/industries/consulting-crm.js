@@ -117,7 +117,7 @@ export default function ConsultingCrm() {
 					eyebrow="ZERO DATA ENTRY"
 					title="Less busy work, more revenue."
 					copy="Relationships are your bread and butter. Copper is the only CRM that automatically tracks and inputs leads, contacts, account details, email history and more."
-					reverse={true}
+					reverse
 					imageUrl="/imgs/industry/consulting-03.png"
 					imageWidth="538"
 					imageHeight="518"

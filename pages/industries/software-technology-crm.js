@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import HeroSinglePages from "../../components/Blocks/HeroTypes/HeroSinglePages";
 import Jumble from "../../components/SinglesComponents/Jumble/Jumble";
 import Footer from "../../components/Footer/Footer";
@@ -10,6 +11,8 @@ import FinalPleaHero from "../../components/SinglesComponents/FinalPleadHero/Fin
 import NavigationDefault from "../../components/Navigation/NavigationDefault";
 import SingleTwoColCraft from "../../components/SinglesComponents/SingleTwoCol/SingleTwoColCraft";
 import TwoColModule from "../../components/Blocks/TwoColModule";
+import ProductTwoUp from "../../components/ProductsComponent/ProductTwoUp/ProductTwoUp";
+import TwoUp from "../../components/ProductsComponent/ProductTwoUp/TwoUp";
 
 export default function SoftwareTechCrm({}) {
 	return (
@@ -57,10 +60,12 @@ export default function SoftwareTechCrm({}) {
 							srcset="/imgs/industry/Logo-cloud.png"
 							alt="Cloud logo"
 						/>
-						<img
+						<Image
 							src="/imgs/industry/Logo-cloud.png"
 							alt="Cloud logo"
 							style={{ display: "inline", textAlign: "center" }}
+							width={350}
+							height={263}
 						/>
 					</picture>
 				}
@@ -73,75 +78,39 @@ export default function SoftwareTechCrm({}) {
 			/>
 			<Jumble
 				backgroundColor="graphite"
-				eyebrow="BUILT FOR WORKSPACE"
-				title="BUILT FOR GOOGLE WORKSPACE"
+				eyebrow="BUILT FOR GOOGLE WORKSPACE"
+				title="The CRM for Google Workspace."
 				copy="Copper is designed and built for Google Workspace so your team can do everything—from adding leads to closing deals right from your inbox."
 				imageUrl="/imgs/industry/industry-tech-IMG-01-update@2x.png"
 				ctaText="Learn More"
 				ctaUrl="/g-suite-crm"
 			/>
-			<TwoColModule
-				eyebrow="ZERO DATA ENTRY"
-				richText={
-					<div>
-						<h2>Focus on deals, not on data entry.</h2>
-						<p>
-							Copper automatically inputs leads, contacts, account details,
-							email history and more, so you can spend your time closing deals,
-							not copying and pasting.
-						</p>
-					</div>
-				}
-				linkText="See how Howzer grew their real estate agent team"
-				linkUrl="/blog/advoc8-agency-case-study"
-				image={[
-					{
-						url: "/imgs/industry/tech_ui-01.png",
-						title: "Stop the forecasting guessing games",
-					},
-				]}
-				imageWidth="1150"
-				imageHeigh="1112"
-				imageOrientation="left"
-				slug={"software-technology-crm"}
-				loopIndex={0}
-				forcedCtas={
-					<Link href="/resources/lumapps-case-study">
-						<a className="t-link">
-							LumApps manages 2,000% lead growth with Copper
-						</a>
-					</Link>
-				}
-			/>
-			<TwoColModule
-				eyebrow="DATA ACCURACY"
-				richText={
-					<div>
-						<h2>Data you need to make the sale.</h2>
-						<p>
-							Copper creates clear and elegant reports that make it easy for
-							everyone on your team to get the insights they need to close a
-							deal: a bird’s eye view, a deep dive or anything in between.
-						</p>
-					</div>
-				}
-				image={[
-					{
-						url: "/imgs/industry/Tech_UI02.png",
-						title: "Stop the forecasting guessing games",
-					},
-				]}
-				linkText="Watch how Reali strengthens relationships."
-				linkUrl="/blog/reali-case-study"
-				imageWidth="1344"
-				imageHeigh="1082"
-				imageOrientation={"right"}
-				forcedCtas={
-					<Link href="/blog/onesupport-growth-case-study">
-						<a className="t-link">How OneSupport grew subscribers by 173%</a>
-					</Link>
-				}
-			/>
+
+			<ProductTwoUp>
+				<TwoUp
+					eyebrow="ZERO DATA ENTRY"
+					title="Focus on deals, not on data entry."
+					copy="Copper automatically inputs leads, contacts, account details, email history and more, so you can spend your time closing deals, not copying and pasting."
+					imageUrl="/imgs/industry/tech_ui-01.png"
+					imageWidth="540"
+					imageHeight="521"
+					ctaUrl="/blog/lumapps-case-study"
+					ctaText="LumApps manages 2,000% lead growth with Copper"
+					reverse
+				/>
+				<TwoUp
+					eyebrow="DATA ACCURACY"
+					title="Data you need to make the sale."
+					copy="Copper creates clear and elegant reports that make it easy for everyone on your team to get the insights they need to close a deal: a bird’s eye view, a deep dive or anything in between."
+					imageUrl="/imgs/industry/Tech_UI02.png"
+					imageWidth="540"
+					imageHeight="430"
+					ctaUrl="/blog/onesupport-growth-case-study"
+					ctaText="How OneSupport grew subscribers by 173%"
+					dropRight
+					removeBottomSpacing
+				/>
+			</ProductTwoUp>
 			{/*<Quote></Quote>*/}
 			<CallOut title={"Because you have work to do."} />
 			<NuumbersSection
@@ -176,11 +145,11 @@ export default function SoftwareTechCrm({}) {
 			<FinalPleaHero
 				title={`Goodbye data entry
 Hello, Copper.`}
-				description={`No credit card required. Start your 14-day free trial today.`}
+				copy="No credit card required. Start your 14-day free trial today."
 				imageUrl="/imgs/industry/industry-tech-final-plea@2x.jpg"
 			/>
 
-			<Footer></Footer>
+			<Footer />
 		</>
 	);
 }
