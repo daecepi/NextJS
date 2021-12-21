@@ -19,7 +19,7 @@ export default function Home({ entry, globals }) {
 	console.log("page fields ", entry, globals);
 
 	// Async Wistia importer
-	const wistiaCall = useCallback((url) => {
+	const wistiaCall = useCallback((url, id) => {
 		console.log("Executing");
 		const wistiaLibrary = document.createElement("script");
 		wistiaLibrary.src = "https://fast.wistia.com/assets/external/E-v1.js";
@@ -31,6 +31,15 @@ export default function Home({ entry, globals }) {
 
 		document.body.appendChild(wistiaLibrary);
 		document.body.appendChild(wistiaScript);
+
+		// Making the triggering of the video
+		window._wq = window._wq || [];
+		_wq.push({
+			id: "abcde12345",
+			onReady: function (video) {
+				console.log("I got a handle to the video!", video);
+			},
+		});
 	}, []);
 
 	const callBackTest = useCallback(() => {
@@ -269,6 +278,11 @@ export default function Home({ entry, globals }) {
 											);
 										}}
 									>
+										<Image
+											src="https://copper.objects.frb.io/imgs/homepage/da869d0e3b7d0cf8334cacd2248f9288.jpeg"
+											alt="Video Slide 1"
+											layout="fill"
+										/>
 										{/*<VideoElement
 												url={
 													"https://fast.wistia.com/embed/medias/tihe7k9xsl.jsonp"
@@ -400,6 +414,11 @@ export default function Home({ entry, globals }) {
 											);
 										}}
 									>
+										<Image
+											src="https://copper.objects.frb.io/imgs/homepage/e022cc4c117cf34dfb470ece8cc7daf25dc3f044.jpeg"
+											alt="Video Slide 2"
+											layout="fill"
+										/>
 										{/*<VideoElement
 												url={
 													"https://fast.wistia.com/embed/medias/p24wanuzo7.jsonp"
@@ -531,6 +550,11 @@ export default function Home({ entry, globals }) {
 											);
 										}}
 									>
+										<Image
+											src="https://copper.objects.frb.io/imgs/homepage/765af49b08e3270449d60f296bdcee51.jpeg"
+											alt="Video Slide 1"
+											layout="fill"
+										/>
 										{/*<VideoElement
 												url={
 													"https://fast.wistia.com/embed/medias/2yhihnpbkc.jsonp"
@@ -1202,7 +1226,7 @@ export async function getStaticProps(context) {
 	return {
 		props: {
 			entry: res.entry || {},
-			globals: res.globals || [],
+			globals: res.globalSets || [],
 		}, // will be passed to the page component as props
 		revalidate: 120, // in seconds
 	};

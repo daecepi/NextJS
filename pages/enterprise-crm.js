@@ -9,6 +9,7 @@ import Customers from "../components/Sections/Customers/Customers";
 import CallOut from "../components/SinglesComponents/CallOut/CallOut";
 import FinalPleaHero from "../components/SinglesComponents/FinalPleadHero/FinalPleaHero";
 import NumbersSection from "../components/SinglesComponents/NumbersSection.js/NumbersSection";
+import { getEntryBySectionHandle } from "../lib/api";
 
 export default function EnterpriseCRM() {
 	let companiesLogos = [
@@ -39,7 +40,10 @@ export default function EnterpriseCRM() {
 				ctaTwoUrl="/demos"
 				imageUrl="/imgs/segmentation/segmentation-enterprise-hero.jpg"
 			/>
-			<Customers title="Companies who have joined the Relationship Era." companiesLogos={companiesLogos} />
+			<Customers
+				title="Companies who have joined the Relationship Era."
+				companiesLogos={companiesLogos}
+			/>
 			<ProductTwoUp>
 				<TwoUp
 					eyebrow="RECOMMENDED FOR GOOGLE WORKSPACE"
@@ -82,7 +86,8 @@ export default function EnterpriseCRM() {
 				imageHeight="450"
 				quote={[
 					<span>
-						Since we started using Copper, we've closed upwards of 10% <strong>more customers</strong>.
+						Since we started using Copper, we've closed upwards of 10%{" "}
+						<strong>more customers</strong>.
 					</span>,
 				]}
 				quoteby="AMY PIENTA"
@@ -93,7 +98,10 @@ export default function EnterpriseCRM() {
 				backgroundColor="mint"
 			></CaseStudy>
 
-			<CallOut title="Strengthen your business relationships with Google Workspace + Copper." smallTitle={true} />
+			<CallOut
+				title="Strengthen your business relationships with Google Workspace + Copper."
+				smallTitle={true}
+			/>
 
 			<NumbersSection
 				eyebrow="By The Numbers"
@@ -156,4 +164,15 @@ export default function EnterpriseCRM() {
 			<Footer />
 		</>
 	);
+}
+
+export async function getStaticProps(context) {
+	const res = await getEntryBySectionHandle("segmentation", "enterprise-crm");
+	return {
+		props: {
+			entry: res?.entry || {},
+			globals: res?.globalSets || [],
+		}, // will be passed to the page component as props
+		revalidate: 120, // in seconds
+	};
 }

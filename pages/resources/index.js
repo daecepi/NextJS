@@ -10,7 +10,7 @@ import {
 	getBlogFormats,
 	getBlogEntries,
 	getBlogFeaturedEntries,
-	getEntryByType,
+	getEntryBySectionHandle,
 } from "../../lib/api";
 import Footer from "../../components/Footer/Footer";
 import BlogFeaturedCard from "../../components/Blog/BlogFeaturedCard";
@@ -83,6 +83,14 @@ const resources = (props) => {
 					menuCategories={props.menuCategory || []}
 					menuBlogFormats={props.blogFormats || []}
 				></NavigationBlog>
+
+				<Script
+					src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+					strategy="beforeInteractive	"
+					onLoad={() => {
+						console.log("sdasdad");
+					}}
+				/>
 				<Script
 					strategy="lazyOnload"
 					src="https://assets.sitescdn.net/answers/v1.5/answers.min.js"
@@ -202,6 +210,23 @@ const resources = (props) => {
 						.c-copper-chronicles__top__new.col-xl-6 {
 							padding-left: 15px;
 							padding-right: 15px;
+						}
+
+						@media (max-width: 767.98px) {
+							.c-blog-featured-card:before {
+								background-color: #8a8c8b;
+								content: " ";
+								height: 1px;
+								top: 0px;
+								position: absolute;
+								width: 100%;
+								z-index: 0;
+							}
+
+							.c-blog-featured-card {
+								padding-top: 19px;
+								position: relative;
+							}
 						}
 					`}
 				</style>
@@ -429,7 +454,7 @@ export default resources;
 
 export async function getStaticProps({ params }) {
 	// const blogInformation = await fetch(`copper.com/api/blog${pageNumber}.json`);
-	const entry = await getEntryByType("blogIndex", "blog-index");
+	const entry = await getEntryBySectionHandle("blogIndex", "blog-index");
 	const menuCategory = (await getBlogCategoriesMenu()) || [];
 	const blogFormats = await getBlogFormats();
 	const blogEntries = await getBlogEntries();

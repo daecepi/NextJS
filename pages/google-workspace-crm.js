@@ -3,9 +3,11 @@ import Link from "next/link";
 
 import Script from "next/script";
 import NavigationDefault from "../components/Navigation/NavigationDefault";
+import DefaultPageBase from "../components/PageBase/DefaultPageBase";
+import { getEntryBySectionHandle } from "../lib/api";
 //import styles from "../styles/CrmPage.module.scss";
 
-export default function GoogleWorkspaceCrm({}) {
+export default function GoogleWorkspaceCrm({ entry, globals }) {
 	const cardsData = [
 		{
 			imageWebp:
@@ -62,8 +64,7 @@ export default function GoogleWorkspaceCrm({}) {
 		});
 	};
 	return (
-		<>
-			<NavigationDefault />
+		<DefaultPageBase entry={entry} globals={globals}>
 			<div className="google-workspace-crm">
 				<main className="main">
 					<section className="c-hero--signup-form split-background--light-blue">
@@ -1048,6 +1049,17 @@ export default function GoogleWorkspaceCrm({}) {
 					</section>
 				</main>
 			</div>
-		</>
+		</DefaultPageBase>
 	);
+}
+
+export async function getStaticProps(context) {
+	const res = await getEntryBySectionHandle("product", "google-workspace-crm");
+	return {
+		props: {
+			entry: res?.entry || {},
+			globals: res?.globalSets || [],
+		}, // will be passed to the page component as props
+		revalidate: 120, // in seconds
+	};
 }

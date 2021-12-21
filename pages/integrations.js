@@ -3,23 +3,19 @@ import Link from "next/link";
 import HeroProduct from "../components/Blocks/HeroTypes/HeroProduct";
 import Footer from "../components/Footer/Footer";
 import NavigationDefault from "../components/Navigation/NavigationDefault";
+import DefaultPageBase from "../components/PageBase/DefaultPageBase";
 import CaseStudy from "../components/ProductsComponent/CaseStudy/CaseStudy";
 import FinalCta from "../components/ProductsComponent/FinalCta";
 import ProductTwoUp from "../components/ProductsComponent/ProductTwoUp/ProductTwoUp";
 import TwoUp from "../components/ProductsComponent/ProductTwoUp/TwoUp";
+import { getEntryBySectionHandle } from "../lib/api";
 
-export default function Integrations() {
+export default function Integrations({ entry, globals }) {
 	return (
-		<>
+		<DefaultPageBase entry={entry} globals={globals}>
 			<Head>
 				<title>CRM Integration With Your Favorite Tools | Copper</title>
 			</Head>
-			<NavigationDefault
-				buttons={{
-					option: { text: "Try Free", ulr: "https://www.copper.com/signup" },
-					login: { text: "Login", ulr: "https://app.copper.com/users/sign_in" },
-				}}
-			/>
 			<HeroProduct
 				backgroundColor="midnight"
 				eyebrow="CRM INTEGRATION & MOBILE"
@@ -622,6 +618,17 @@ export default function Integrations() {
 				imageUrl="https://copper.objects.frb.io/imgs/product/integrations/191223_Integrations_finalplea.png"
 			/>
 			<Footer />
-		</>
+		</DefaultPageBase>
 	);
+}
+
+export async function getStaticProps(context) {
+	const res = await getEntryBySectionHandle("product", "integrations");
+	return {
+		props: {
+			entry: res?.entry || {},
+			globals: res?.globalSets || [],
+		}, // will be passed to the page component as props
+		revalidate: 120, // in seconds
+	};
 }

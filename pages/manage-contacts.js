@@ -12,16 +12,17 @@ import TwoUp from "../components/ProductsComponent/ProductTwoUp/TwoUp";
 import ThreeColList from "../components/ProductsComponent/List/ThreeColList";
 import ListItem from "../components/ProductsComponent/List/ListItem";
 import FinalCta from "../components/ProductsComponent/FinalCta";
+import DefaultPageBase from "../components/PageBase/DefaultPageBase";
+import { getEntryBySectionHandle } from "../lib/api";
 
-const ManageContacts = () => {
+const ManageContacts = ({ entry, globals }) => {
 	return (
-		<>
+		<DefaultPageBase entry={entry} globals={globals}>
 			<Head>
 				// Responsive meta tag
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				// bootstrap CDN
 			</Head>
-			<NavigationDefault></NavigationDefault>
 			<HeroProduct
 				backgroundColor="purple"
 				eyebrow="ORGANIZE AND MANAGE CONTACTS"
@@ -220,8 +221,19 @@ const ManageContacts = () => {
 			></FinalCta>
 
 			<Footer></Footer>
-		</>
+		</DefaultPageBase>
 	);
 };
 
 export default ManageContacts;
+
+export async function getStaticProps(context) {
+	const res = await getEntryBySectionHandle("product", "manage-contacts");
+	return {
+		props: {
+			entry: res?.entry || {},
+			globals: res?.globalSets || [],
+		}, // will be passed to the page component as props
+		revalidate: 120, // in seconds
+	};
+}

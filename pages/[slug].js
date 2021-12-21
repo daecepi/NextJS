@@ -1,27 +1,7 @@
-import {
-	getAllPostsWithSlug,
-	getEntryBySectionHandle,
-	getEntriesBySectionHandle,
-	getLandingPageEntry,
-	getPathsBySection,
-} from "../lib/api";
+import { getEntryBySectionHandle, getPathsBySection } from "../lib/api";
 
 // Styles definitions
 import styles from "../styles/Home.module.css";
-
-import TwoColumnComponent from "../components/TwoColumn/TwoColumn";
-
-import Head from "next/head";
-import Link from "next/link";
-import Image from "next/image";
-import ThreeColBlock from "../components/Blocks/ThreeColBlock";
-import TestimonialBlock from "../components/Blocks/TestimonialBlock";
-import TextLink from "../components/CTAS/TextLink";
-import NavigationDefault from "../components/Navigation/NavigationDefault";
-import CtaBlock from "../components/Blocks/CtaBlock";
-import TwoColumnSection from "../components/Sections/TwoColumn";
-import TwoColumn from "../components/TwoColumn/TwoColumn";
-import FooterLanding from "../components/Footer/FooterLanding";
 import Products from "../components/Sections/Products/Products";
 import LegalSelector from "../components/Legal/LegalSelector";
 import DefaultPageBase from "../components/PageBase/DefaultPageBase";

@@ -4,6 +4,7 @@ import Link from "next/link";
 import HeroProduct from "../components/Blocks/HeroTypes/HeroProduct";
 import Footer from "../components/Footer/Footer";
 import NavigationDefault from "../components/Navigation/NavigationDefault";
+import DefaultPageBase from "../components/PageBase/DefaultPageBase";
 import CaseStudy from "../components/ProductsComponent/CaseStudy/CaseStudy";
 import ProductTwoUp from "../components/ProductsComponent/ProductTwoUp/ProductTwoUp";
 import TwoUp from "../components/ProductsComponent/ProductTwoUp/TwoUp";
@@ -12,8 +13,9 @@ import CallOut from "../components/SinglesComponents/CallOut/CallOut";
 import FinalPleaHero from "../components/SinglesComponents/FinalPleadHero/FinalPleaHero";
 import NumbersSection from "../components/SinglesComponents/NumbersSection.js/NumbersSection";
 import RelatedContent from "../components/SinglesComponents/RelatedContent/RelatedContent";
+import { getEntryBySectionHandle } from "../lib/api";
 
-export default function MidMarkeCRM() {
+export default function MidMarkeCRM({ entry, globals }) {
 	let companiesLogos = [
 		{ imageUrl: "/imgs/segmentation/Mailchimp.jpg", width: 180, height: 53 },
 		{ imageUrl: "/imgs/segmentation/mealpal.jpg", width: 180, height: 53 },
@@ -23,7 +25,7 @@ export default function MidMarkeCRM() {
 		{ imageUrl: "/imgs/segmentation/nerdwallet.jpg", width: 180, height: 53 },
 	];
 	return (
-		<>
+		<DefaultPageBase entry={entry} globals={globals}>
 			<Head>
 				<title>Mid Market CRM Software for Fast Growth | Copper</title>
 			</Head>
@@ -204,6 +206,17 @@ export default function MidMarkeCRM() {
 				imageHeight="1200"
 			/>
 			<Footer />
-		</>
+		</DefaultPageBase>
 	);
+}
+
+export async function getStaticProps(context) {
+	const res = await getEntryBySectionHandle("segmentation", "mid-market-crm");
+	return {
+		props: {
+			entry: res?.entry || {},
+			globals: res?.globalSets || [],
+		}, // will be passed to the page component as props
+		revalidate: 120, // in seconds
+	};
 }
