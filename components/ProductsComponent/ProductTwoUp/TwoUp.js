@@ -2,26 +2,42 @@ import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 
-const TwoUp = (props) => {
+const TwoUp = ({
+	videoWebm,
+	videoMp4,
+	videoId,
+	imageUrl,
+	imageWidth,
+	imageHeight,
+	reverse,
+	eyebrow,
+	title,
+	copy,
+	bulletLists,
+	aboutUrl,
+	aboutText,
+}) => {
 	return (
 		<>
 			<div
-				className={`row pb-0 ${
-					props.reverse ? "column-reverse" : "extra-padding--bottom"
+				className={`row mb-5 ${
+					reverse ? "column-reverse" : "extra-padding--bottom"
 				}`}
 			>
-				<div className={`${props.reverse ? "col-md-6" : "col-md-7 order-2"} `}>
+				<div
+					className={`${
+						reverse ? "col-md-6" : "col-md-6 offset-md-1 order-2"
+					} `}
+				>
 					<div
 						className={`${
-							props.reverse
-								? "c-image c-image--left"
-								: "c-image c-image--drop-right"
+							reverse ? "c-image c-image--left" : "c-image c-image--drop-right"
 						} `}
 					>
-						{props.videoWebm && props.videoMp4 ? (
+						{videoWebm && videoMp4 ? (
 							<div className="video-gif-container">
 								<video
-									id={props.videoId}
+									id={videoId}
 									data-cy="video-element"
 									className="video-as-gif onViewport"
 									style={{ maxWidth: "100%" }}
@@ -29,8 +45,8 @@ const TwoUp = (props) => {
 									playsInline
 								>
 									{" "}
-									<source src={props.videoWebm} type="video/webm" />
-									<source src={props.videoMp4} type="video/mp4" />
+									<source src={videoWebm} type="video/webm" />
+									<source src={videoMp4} type="video/mp4" />
 									<p>Su navegador no soporta video HTML5</p>
 								</video>
 								<Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></Script>
@@ -73,12 +89,9 @@ const TwoUp = (props) => {
 										$(document).ready(function () {
 											scrollFunctionality();
 											var myInterval = setInterval(function () {
-												var videoOne = document.getElementById(props.videoId);
+												var videoOne = document.getElementById(videoId);
 												if (videoOne.readyState >= 3 || videoOne.loadStart) {
-													$(`#${props.videoId}-placeholder`).css(
-														"opacity",
-														"0"
-													);
+													$(`#${videoId}-placeholder`).css("opacity", "0");
 													clearInterval(myInterval);
 												}
 											}, 200);
@@ -162,33 +175,33 @@ const TwoUp = (props) => {
 							</div>
 						) : (
 							<Image
-								src={props.imageUrl}
-								width={props.imageWidth}
-								height={props.imageHeight}
+								src={imageUrl}
+								width={imageWidth}
+								height={imageHeight}
 							></Image>
 						)}
 					</div>
 				</div>
 				<div
 					className={` ${
-						props.reverse
+						reverse
 							? "col-md-5 offset-md-1 c-valign--middle"
 							: "col-md-5 c-valign--middle order-1"
 					} `}
 				>
-					<pre className="c-eyebrow c-eyebrow--dark">{props.eyebrow}</pre>
-					<h2>{props.title}</h2>
-					<p>{props.copy}</p>
-					{props.bulletLists ? (
+					<pre className="c-eyebrow c-eyebrow--dark">{eyebrow}</pre>
+					<h2>{title}</h2>
+					<p>{copy}</p>
+					{bulletLists ? (
 						<ul className="bullets--hot-pink">
-							{props.bulletLists.map((item, index) => {
+							{bulletLists.map((item, index) => {
 								return <li key={index}>{item}</li>;
 							})}
 						</ul>
 					) : null}
-					{props.aboutText && props.aboutUrl && (
-						<Link href={props.aboutUrl}>
-							<a className="t-link mt-4">{props.aboutText}</a>
+					{aboutText && aboutUrl && (
+						<Link href={aboutUrl}>
+							<a className="t-link mt-4">{aboutText}</a>
 						</Link>
 					)}
 				</div>
