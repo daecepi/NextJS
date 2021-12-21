@@ -17,12 +17,13 @@ const TwoUp = ({
 	ctaUrl,
 	ctaText,
 	dropRight,
+	removeBottomSpacing,
 }) => {
 	return (
 		<>
 			<div
-				className={`row mb-5 mt- ${
-					reverse ? "column-reverse" : "extra-padding--bottom"
+				className={`row ${removeBottomSpacing ? "pb-0" : "mb-5"} ${
+					reverse && "column-reverse"
 				}`}
 			>
 				<div
@@ -179,7 +180,8 @@ const TwoUp = ({
 								src={imageUrl}
 								width={imageWidth}
 								height={imageHeight}
-							></Image>
+								layout="fixed"
+							/>
 						)}
 					</div>
 				</div>
