@@ -8,6 +8,7 @@ const HeroSinglePages = ({
 	eyebrowLight,
 	title,
 	copy,
+	extendedTitle,
 }) => {
 	return (
 		<section className={`c-hero--split background${pageColorcClass}`}>
@@ -20,11 +21,15 @@ const HeroSinglePages = ({
 			</div>
 			<div className="container ">
 				<div className="row">
-					<div className="col-md-5 c-valign--middle">
+					<div
+						className={`col-md-${extendedTitle ? "6" : "5"} c-valign--middle`}
+					>
 						<pre className={`c-eyebrow ${eyebrowLight && "c-eyebrow--light"}`}>
 							{eyebrow}
 						</pre>
-						<h1 className="t-white">{title}</h1>
+						<h1 className={`t-white ${extendedTitle && "t-long-title h2"}`}>
+							{title}
+						</h1>
 						<p>{copy}</p>
 						<div className="c-hero__buttons">
 							<Link href="https://www.copper.com/signup">
