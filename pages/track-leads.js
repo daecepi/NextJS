@@ -6,14 +6,11 @@ import Link from "next/link";
 
 import HeroProduct from "../components/Blocks/HeroTypes/HeroProduct";
 import CaseStudy from "../components/ProductsComponent/CaseStudy/CaseStudy";
-import ProductOneCol from "../components/ProductsComponent/ProductOneCol";
 import ProductTwoUp from "../components/ProductsComponent/ProductTwoUp/ProductTwoUp";
 import TwoUp from "../components/ProductsComponent/ProductTwoUp/TwoUp";
 
 import ThreeColList from "../components/ProductsComponent/List/ThreeColList";
-import ListItem from "../components/ProductsComponent/List/ListItem";
 import FinalCta from "../components/ProductsComponent/FinalCta";
-import TwoColModule from "../components/Blocks/TwoColModule";
 
 const TrackLeads = () => {
 	return (
@@ -23,7 +20,7 @@ const TrackLeads = () => {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				// bootstrap CDN
 			</Head>
-			<NavigationDefault></NavigationDefault>
+			<NavigationDefault />
 			<HeroProduct
 				backgroundColor="midnight"
 				eyebrow="track leads and deals"
@@ -67,53 +64,39 @@ const TrackLeads = () => {
 					</div>
 				</div>
 			</section>
-			<TwoColModule
-				eyebrow="AUTOMATED FOLLOW-UPS"
-				richText={
-					<div>
-						<h2>Never drop the ball.</h2>
-						<p>
-							Copper speeds up follow-ups with email templates and sets
-							reminders for you to stay on top of hot deals and respond to
-							customers without missing a beat. Say goodbye to lost deals, and
-							hello to keeping customers around longer!
-						</p>
-						<ul className="bullets--hot-pink">
-							<li>Personalized email templates</li>
-							<li>Automatically set reminders based off any trigger</li>
-							<li>Assign time-based tasks without lifting a finger</li>
-						</ul>
-					</div>
-				}
-				image={[
-					{
-						url: "/imgs/product/200309_TrackDeals_UI02.png",
-						title: "Track deals image 4",
-					},
-				]}
-				backgroundColor={[{ slug: "product-page" }]}
-				imageWidth="641"
-				imageHeight="510"
-				imageOrientation="dropRight"
-				slug={"track-leads"}
-				loopIndex={0}
-			/>
+
 			<ProductTwoUp>
 				<TwoUp
-					eyebrow="ISUAL SALES PIPELINES"
+					eyebrow="AUTOMATED FOLLOW-UPS"
+					title="Never drop the ball."
+					copy="Copper speeds up follow-ups with email templates and sets reminders for you to stay on top of hot deals and respond to customers without missing a beat. Say goodbye to lost deals, and hello to keeping customers around longer!"
+					imageUrl="/imgs/product/200309_TrackDeals_UI02.png"
+					imageWidth="635"
+					imageHeight="505"
+					bulletLists={[
+						"Personalized email templates",
+						"Automatically set reminders based off any trigger",
+						"Assign time-based tasks without lifting a finger",
+					]}
+					bulletsColor="indigo"
+				/>
+				<TwoUp
+					eyebrow="VISUAL SALES PIPELINES"
 					title="Make sales more visual."
 					copy="Know where every lead is at in your sales process and move opportunities to the next stage using the customizable drag-and-drop pipelines."
 					imageUrl="/imgs/product/200309_TrackDeals_UI03.png"
-					imageWidth="1144"
-					imageHeight="735"
+					imageWidth="540"
+					imageHeight="347"
 					bulletLists={[
 						"Track and sort deals by their value amounts",
 						"Know the win probability for any deal",
 						"Easily see which deals are slipping",
 					]}
+					bulletsColor="indigo"
 					reverse
-				></TwoUp>
+				/>
 			</ProductTwoUp>
+
 			<CaseStudy
 				eyebrow="Success Story"
 				imageUrl="/imgs/product/191223_TrackDeals_QuotePhoto.png"
@@ -127,35 +110,18 @@ const TrackLeads = () => {
 				backgroundColor="indigo"
 			></CaseStudy>
 
-			<TwoColModule
-				eyebrow="KEEP THINGS MOVING"
-				richText={
-					<div>
-						<h2>
-							Always know
-							<br />
-							your next step.
-						</h2>
-						<p>
-							Stay on top of hot deals and close them faster thanks to Copper’s
-							recommendations, which suggest next steps based on upcoming
-							meetings, tasks, and overdue email responses.
-						</p>
-					</div>
-				}
-				image={[
-					{
-						url: "/imgs/product/200309_TrackDeals_UI04.png",
-						title: "Always know your next step image",
-					},
-				]}
-				backgroundColor={[{ slug: "product-page" }]}
-				imageWidth="540"
-				imageHeight="560"
-				imageOrientation="right"
-				slug={"track-leads"}
-				loopIndex={0}
-			/>
+			<ProductTwoUp>
+				<TwoUp
+					eyebrow="KEEP THINGS MOVING"
+					title="Always know your next step."
+					copy="Stay on top of hot deals and close them faster thanks to Copper’s recommendations, which suggest next steps based on upcoming meetings, tasks, and overdue email responses."
+					imageUrl="/imgs/product/200309_TrackDeals_UI04.png"
+					imageWidth="540"
+					imageHeight="560"
+					removeBottomSpacing
+				/>
+			</ProductTwoUp>
+
 			<ThreeColList
 				title="Know what you need to do to close deals faster."
 				linkUrl="/features"
