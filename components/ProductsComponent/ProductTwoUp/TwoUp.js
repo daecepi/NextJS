@@ -13,11 +13,14 @@ const TwoUp = ({
 	eyebrow,
 	title,
 	copy,
+	titleh3,
 	bulletLists,
+	bulletsColor,
 	ctaUrl,
 	ctaText,
 	dropRight,
 	removeBottomSpacing,
+	bringAssetToText,
 }) => {
 	return (
 		<>
@@ -27,8 +30,8 @@ const TwoUp = ({
 				}`}
 			>
 				<div
-					className={`${
-						reverse ? "col-md-6" : "col-md-6 offset-md-1 order-2"
+					className={`col-md-6 ${
+						reverse ? "" : `${bringAssetToText ? "" : "offset-md-1"} order-2`
 					} `}
 				>
 					<div
@@ -186,17 +189,17 @@ const TwoUp = ({
 					</div>
 				</div>
 				<div
-					className={` ${
+					className={`col-md-5 c-valign--middle ${
 						reverse
-							? "col-md-5 offset-md-1 c-valign--middle"
-							: "col-md-5 c-valign--middle order-1"
+							? "offset-md-1"
+							: `${bringAssetToText ? "offset-md-1" : ""} order-1`
 					} `}
 				>
 					<pre className="c-eyebrow c-eyebrow--dark">{eyebrow}</pre>
-					<h2>{title}</h2>
+					{titleh3 ? <h3>{title}</h3> : <h2>{title}</h2>}
 					<p>{copy}</p>
 					{bulletLists ? (
-						<ul className="bullets--hot-pink">
+						<ul className={`bullets--${bulletsColor || "hot-pink"}`}>
 							{bulletLists.map((item, index) => {
 								return <li key={index}>{item}</li>;
 							})}

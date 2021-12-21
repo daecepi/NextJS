@@ -1,16 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
-import Script from "next/script";
-import styles from "../styles/Home.module.css";
 import { getEntryBySectionHandle } from "../lib/api";
 import HeroHomePage from "../components/Blocks/HeroTypes/HeroHomePage";
-
 import DefaultPageBase from "../components/PageBase/DefaultPageBase";
-
 import LogoComponent from "../components/Blocks/LogosComponent";
 import Footer from "../components/Footer/Footer";
-import VideoElement from "../components/Wistia/VideoElement";
-
 import ProductTwoUp from "../components/ProductsComponent/ProductTwoUp/ProductTwoUp";
 import TwoUp from "../components/ProductsComponent/ProductTwoUp/TwoUp";
 import { useCallback } from "react";
@@ -61,8 +55,8 @@ export default function Home({ entry, globals }) {
 							style={{ width: "calc(100% / 1.3)!important;" }}
 							src="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_IDEO@2x.png"
 							alt="Ideo graphic"
-							width={67}
-							height={16}
+							width={80}
+							height={19}
 						/>
 					</picture>
 				</li>
@@ -82,8 +76,8 @@ export default function Home({ entry, globals }) {
 							style={{ width: "calc(100% / 1.3)!important;" }}
 							src="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_masterclass@2x.png"
 							alt="Masterclass graphic"
-							width={64}
-							height={9}
+							width={80}
+							height={11}
 						/>
 					</picture>
 				</li>
@@ -103,8 +97,8 @@ export default function Home({ entry, globals }) {
 							style={{ width: "calc(100% / 1.3)!important;" }}
 							src="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_swell@2x.png"
 							alt="Swell graphic"
-							width={64}
-							height={20}
+							width={80}
+							height={26}
 						/>
 					</picture>
 				</li>
@@ -124,8 +118,8 @@ export default function Home({ entry, globals }) {
 							style={{ width: "calc(100% / 1.3)!important;" }}
 							src="https://copper.objects.frb.io/imgs/homepage//logos-module/Logo_Mailchimp.png"
 							alt="Bubbles graphic"
-							width={64}
-							height={18}
+							width={80}
+							height={22}
 						/>
 					</picture>
 				</li>
@@ -145,8 +139,8 @@ export default function Home({ entry, globals }) {
 							style={{ width: "calc(100% / 1.3)!important;" }}
 							src="https://copper.objects.frb.io/imgs/homepage/logos-module/Logo_Softbank.png"
 							alt="Bubbles graphic"
-							width={64}
-							height={10}
+							width={80}
+							height={12}
 						/>
 					</picture>
 				</li>
@@ -166,8 +160,8 @@ export default function Home({ entry, globals }) {
 							style={{ width: "calc(100% / 1.3)!important;" }}
 							src="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_zipi@2x.png"
 							alt="Swell graphic"
-							width={64}
-							height={45}
+							width={72}
+							height={51}
 						/>
 					</picture>
 				</li>
@@ -187,8 +181,8 @@ export default function Home({ entry, globals }) {
 							style={{ width: "calc(100% / 1.3)!important;" }}
 							src="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_houwzer2x.png"
 							alt="Bubbles graphic"
-							width={64}
-							height={19}
+							width={80}
+							height={23}
 						/>
 					</picture>
 				</li>
@@ -203,23 +197,35 @@ export default function Home({ entry, globals }) {
 					videoId="vid-2"
 					videoWebm="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Adoption.webm"
 					videoMp4="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Adoption.mp4"
+					ctaText="Learn more"
+					ctaUrl="/g-suite-crm"
+					titleh3
+					removeBottomSpacing
 				/>
 				<TwoUp
-					eyebrow="TOTAL FLEXIBILITY"
-					title="Personalize to fit your special business needs"
-					copy="Adaptable as your business evolves, personalized templates give you the capability to build exactly what you want, without having to ask for help."
+					eyebrow="BUILD BETTER RELATIONSHIPS"
+					title="Never drop an opportunity again."
+					copy="You’ll have perfect visibility into all the activity that goes into closing a deal across your whole team."
 					videoId="vid-3"
 					videoWebm="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Opportunities.webm"
 					videoMp4="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Opportunities.mp4"
+					ctaText="Learn more"
+					ctaUrl="/track-leads"
+					titleh3
+					removeBottomSpacing
+					bringAssetToText
 				/>
 				<TwoUp
-					eyebrow="TOTAL FLEXIBILITY"
-					title="Personalize to fit your special business needs"
-					copy="Adaptable as your business evolves, personalized templates give you the capability to build exactly what you want, without having to ask for help."
+					eyebrow="EASY TO ADOPT"
+					title="The CRM tool your team will actually love."
+					copy="Zero learning curve. Zero data entry. Workflows the way you want them. Copper is the fastest path to your most productive team."
 					reverse
 					videoId="vid-5"
 					videoWebm="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Gsuite.webm"
 					videoMp4="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Gsuite.mp4"
+					ctaText="Learn more"
+					ctaUrl="/manage-contacts"
+					titleh3
 				/>
 			</ProductTwoUp>
 

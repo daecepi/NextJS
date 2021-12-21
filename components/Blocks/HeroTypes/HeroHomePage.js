@@ -95,11 +95,11 @@ const HeroHomePage = (props) => {
 								<p className="disclaimer">
 									By signing up, I agree to Copper’s
 									<Link href="/privacy">
-										<a>privacy policy</a>
+										<a> privacy policy</a>
 									</Link>{" "}
 									&amp;
 									<Link href="/terms">
-										<a>terms of service.</a>
+										<a> terms of service.</a>
 									</Link>
 								</p>
 							</div>
