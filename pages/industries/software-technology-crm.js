@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Link from "next/link";
 import Image from "next/image";
 import HeroSinglePages from "../../components/Blocks/HeroTypes/HeroSinglePages";
 import Jumble from "../../components/SinglesComponents/Jumble/Jumble";
@@ -10,7 +9,6 @@ import RelatedContent from "../../components/SinglesComponents/RelatedContent/Re
 import FinalPleaHero from "../../components/SinglesComponents/FinalPleadHero/FinalPleaHero";
 import NavigationDefault from "../../components/Navigation/NavigationDefault";
 import SingleTwoColCraft from "../../components/SinglesComponents/SingleTwoCol/SingleTwoColCraft";
-import TwoColModule from "../../components/Blocks/TwoColModule";
 import ProductTwoUp from "../../components/ProductsComponent/ProductTwoUp/ProductTwoUp";
 import TwoUp from "../../components/ProductsComponent/ProductTwoUp/TwoUp";
 

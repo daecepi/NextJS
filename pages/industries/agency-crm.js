@@ -89,7 +89,7 @@ const AgencyCrm = () => {
 			</ProductTwoUp>
 			<Quote
 				quote="Copper has created transparency that has resonated throughout our entire company."
-				quoteby="Nicholas Markovitz"
+				quoteBy="Nicholas Markovitz"
 				quotePosition="Managing Director, Creative Brands"
 				ctaUrl="/blog/creative-brands-case-study"
 				ctaText="See how creative brands did it"
@@ -97,8 +97,8 @@ const AgencyCrm = () => {
 				imageWidth="676"
 				imageHeight="880"
 				bgColor="graphite"
-			></Quote>
-			<CallOut title="Create something awesome, together."></CallOut>
+			/>
+			<CallOut title="Create something awesome, together." />
 			<NuumbersSection
 				eyebrow="By The Numbers"
 				title="Copper + Digital Agencies"
