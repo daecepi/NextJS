@@ -11,6 +11,7 @@ const HeroProduct = (props) => {
 					layout="fill"
 					className=" object-cover"
 					src={props.imageUrl}
+					priority
 				></Image>
 			</div>
 			<div className="container">
