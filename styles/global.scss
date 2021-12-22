@@ -4,9 +4,9 @@
 
 @font-face {
 	font-family: "Graphik-Light";
-	src: url("/fonts/Graphik-Light-Web.woff2") format("woff2");
-	src: url("/fonts/Graphik-Light-Web.eot"),
-		url("/fonts/Graphik-Light-Web.eot?#iefix") format("embedded-opentype"),
+	src: url("/fonts/Graphik-Light-Web.eot");
+	src: url("/fonts/Graphik-Light-Web.eot?#iefix") format("embedded-opentype"),
+		url("/fonts/Graphik-Light-Web.woff2") format("woff2"),
 		url("/fonts/Graphik-Light-Web.woff") format("woff");
 	font-weight: 300;
 	font-style: normal;
@@ -15,9 +15,9 @@
 
 @font-face {
 	font-family: "Graphik-Regular";
-	src: url("/fonts/Graphik-Regular-Web.woff2") format("woff2");
-	src: url("/fonts/Graphik-Regular-Web.eot"),
-		url("/fonts/Graphik-Regular-Web.eot?#iefix") format("embedded-opentype"),
+	src: url("/fonts/Graphik-Regular-Web.eot");
+	src: url("/fonts/Graphik-Regular-Web.eot?#iefix") format("embedded-opentype"),
+		url("/fonts/Graphik-Regular-Web.woff2") format("woff2"),
 		url("/fonts/Graphik-Regular-Web.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
@@ -26,9 +26,9 @@
 
 @font-face {
 	font-family: "Graphik-Medium";
-	src: url("/fonts/Graphik-Medium-Web.woff2") format("woff2");
-	src: url("/fonts/Graphik-Medium-Web.eot"),
-		url("/fonts/Graphik-Medium-Web.eot?#iefix") format("embedded-opentype"),
+	src: url("/fonts/Graphik-Medium-Web.eot");
+	src: url("/fonts/Graphik-Medium-Web.eot?#iefix") format("embedded-opentype"),
+		url("/fonts/Graphik-Medium-Web.woff2") format("woff2"),
 		url("/fonts/Graphik-Medium-Web.woff") format("woff");
 	font-weight: 500;
 	font-style: normal;
