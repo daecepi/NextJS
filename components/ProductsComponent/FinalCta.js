@@ -21,26 +21,7 @@ const FinalCta = (props) => {
 					</div>
 					<div className="col-md-5 offset-md-2">
 						<div className="relative">
-							<Image src={props.imageUrl} width="736" height="840"></Image>
-							{/* <picture>
-                  <source
-                    type="image/webp"
-                    srcSet="/imgs/product/191223_Automate_finalplea.webp"
-                    className=""
-                    alt="Automation final image"
-                  />
-                  <source
-                    type="image/png"
-                    srcSet="/imgs/product/191223_Automate_finalplea.png"
-                    className=""
-                    alt="Automation final image"
-                  />
-                  <img
-                    className=""
-                    src="/imgs/product/191223_Automate_finalplea.png"
-                    alt="Automation final image"
-                  />
-                </picture> */}
+							<Image src={props.imageUrl} width="395" height="451"></Image>
 						</div>
 					</div>
 				</div>
