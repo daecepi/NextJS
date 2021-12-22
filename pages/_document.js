@@ -10,7 +10,29 @@ class MyDocument extends Document {
 	render() {
 		return (
 			<Html>
-				<Head />
+				<Head>
+					<link
+						rel="preload"
+						href="/fonts/Graphik-Medium-Web.woff2"
+						as="font"
+						type="font/woff2"
+						crossorigin
+					/>
+					<link
+						rel="preload"
+						href="/fonts/Graphik-Regular-Web.woff2"
+						as="font"
+						type="font/woff2"
+						crossorigin
+					/>
+					<link
+						rel="preload"
+						href="/fonts/Graphik-Light-Web.woff2"
+						as="font"
+						type="font/woff2"
+						crossorigin
+					/>
+				</Head>
 				<body>
 					<Main />
 					<NextScript />
