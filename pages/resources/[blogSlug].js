@@ -18,7 +18,7 @@ import {
 
 const Post = ({
 	entry,
-	globalSets,
+	globals,
 	featuredPosts,
 	blogAd,
 	menuCategory,
@@ -42,6 +42,7 @@ const Post = ({
 		...externalAuthor,
 		...(entry?.author || {}),
 	};
+	console.log("AUTHOR INFORMATION ", authorInformation);
 
 	// JsonLD management
 	const returnJsonLd = (entry, authorInformation) => {
@@ -88,7 +89,7 @@ const Post = ({
 		};
 	};
 
-	console.log("props gotten ", entry, globalSets);
+	console.log("props gotten ", entry, globals);
 	const entryTypeSelector = (entry, authorInformation) => {
 		if (entry?.typeHandle === "blogBuilder") {
 			return (
@@ -170,7 +171,7 @@ const Post = ({
 								target="_blank"
 								style={{ marginLeft: "17px", marginRight: "15px" }}
 							>
-								Try Copper free
+								Try free
 							</a>
 						</Link>
 					</div>
@@ -208,16 +209,16 @@ export default Post;
 export async function getStaticProps(context) {
 	const entry = await getEntryBySectionHandle("blog", context.params.blogSlug);
 	const featuredPosts = await getFeaturedPosts(entry.id || 0);
-	const blogAd = await getEntryBySectionHandle("blogIndex", "/resources");
+	const blogAd = await getEntryBySectionHandle("blogIndex", "resources");
 
 	// Menu related queries
 	const menuCategory = (await getBlogCategoriesMenu()) || [];
 	const blogFormats = (await getBlogFormats()) || [];
-	console.log("Featured posts gotten ", featuredPosts);
+	// console.log("Featured posts gotten ", featuredPosts);
 	return {
 		props: {
-			entry: entry.entry || {},
-			globals: entry.globalSets || {},
+			entry: entry?.entry || {},
+			globals: entry?.globalSets || [],
 			featuredPosts: featuredPosts || [],
 			blogAd,
 

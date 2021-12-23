@@ -1115,6 +1115,7 @@ const NavigationDefault = ({ buttons }) => {
 			</nav>
 			<Script
 				src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+				strategy="beforeInteractive"
 				onLoad={() => {
 					// Desktop Nav Toggle
 					$(".js-dropdown-nav").click(function () {
@@ -1143,6 +1144,7 @@ const NavigationDefault = ({ buttons }) => {
 
 					// Mobile Nav Toggle
 					$("#nav-icon2").click(function () {
+						console.log("YO MERO");
 						$(this).toggleClass("open");
 						$("body").toggleClass("body--stop-scrolling");
 						$(".c-nav--mobile__overlay").toggleClass("open");
@@ -1153,6 +1155,7 @@ const NavigationDefault = ({ buttons }) => {
 					});
 
 					$(".close-mobile-nav").click(function () {
+						console.log("YO MERO2");
 						$("#nav-icon2").removeClass("open");
 						$("body").toggleClass("body--stop-scrolling");
 						$(".c-nav--mobile__overlay").toggleClass("open");

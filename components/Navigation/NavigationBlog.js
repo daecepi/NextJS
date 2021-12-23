@@ -41,7 +41,7 @@ const NavigationBlog = (props) => {
 						target="_blank"
 						style={{ position: "absolute", right: "50px", top: "15px" }}
 					>
-						Try Copper free
+						Try free
 					</a>
 				</Link>
 				<div className="c-nav--mobile__burger">

@@ -251,7 +251,7 @@ const resources = (props) => {
 									target="_blank"
 									style={{ marginLeft: "17px", marginRight: "15px" }}
 								>
-									Try Copper free
+									Try free
 								</a>
 							</Link>
 						</div>

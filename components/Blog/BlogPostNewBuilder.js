@@ -246,6 +246,8 @@ const BlogPostNewBuilder = ({
 							<div id="rail-start"></div>
 							{entry.blogBuilder.map((matrixBlock) => {
 								switch (matrixBlock.typeHandle) {
+									case "tldr":
+										return <Tldr {...matrixBlock} />;
 									case "copyEditor":
 										return <CopyEditor {...matrixBlock} />;
 									case "media":
