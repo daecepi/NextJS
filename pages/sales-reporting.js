@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import HeroProduct from "../components/Blocks/HeroTypes/HeroProduct";
 import Footer from "../components/Footer/Footer";
 import NavigationDefault from "../components/Navigation/NavigationDefault";
@@ -12,7 +13,9 @@ export default function SalesReporting() {
 			<Head>
 				<title>Sales Reporting | Copper</title>
 			</Head>
-			<NavigationDefault />
+			<NavigationDefault
+				buttons={{ option: { text: "Learn More", url: "/demos" } }}
+			/>
 			<HeroProduct
 				backgroundColor="midnight"
 				eyebrow="COPPER REPORTS"
@@ -75,33 +78,7 @@ export default function SalesReporting() {
 											position: "relative",
 											width: "100%",
 										}}
-									>
-										<div
-											className="wistia_swatch"
-											style={{
-												height: "100%",
-												left: "0",
-												opacity: "0",
-												overflow: "hidden",
-												position: "absolute",
-												top: "0",
-												transition: "opacity 200ms",
-												width: "100%",
-											}}
-										>
-											<img
-												src="https://fast.wistia.com/embed/medias/6dyja3az1x/swatch"
-												style={{
-													filter: "blur(5px)",
-													height: "100%",
-													objectFit: "contain",
-													width: "100%",
-												}}
-												alt="Video thumbnail"
-												aria-hidden="true"
-											/>
-										</div>
-									</div>
+									></div>
 								</div>
 							</div>
 						</div>
@@ -131,9 +108,9 @@ export default function SalesReporting() {
 				<div className="container-fluid">
 					<div className="c-quote-carousel__container col-md-11 col-lg-10">
 						<div className="c-quote-carousel__content row background--midnight-important">
-							<div className="container">
+							<div className="container px-5">
 								<div className="row">
-									<div className="c-testimonial__quote col-md-5 offset-md-1">
+									<div className="c-testimonial__quote col-md-4 offset-md-2">
 										<pre
 											className="c-eyebrow c-eyebrow--light extra-bottom-margin--x-small"
 											style={{ top: "0", marginLeft: "0" }}
@@ -169,9 +146,11 @@ export default function SalesReporting() {
 											srcSet="https://copper.objects.frb.io/imgs/product/Group-579.png"
 											alt="Reporting image hero"
 										/>
-										<img
+										<Image
 											src="https://copper.objects.frb.io/imgs/product/Group-579.png"
 											alt="Group 579"
+											width={325}
+											height={353}
 										/>
 									</div>
 								</div>

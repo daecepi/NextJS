@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import Script from "next/script";
-import HeroHomePage from "../components/Blocks/HeroTypes/HeroHomePage";
 import Footer from "../components/Footer/Footer";
 import NavigationDefault from "../components/Navigation/NavigationDefault";
 const PmCRM = () => {
@@ -208,9 +208,12 @@ const PmCRM = () => {
 								srcSet="https://copper.objects.frb.io/imgs/simples/projects-page/section-image_hero@2xupdated.png"
 								alt="Image hero"
 							/>
-							<img
+							<Image
 								src="https://copper.objects.frb.io/imgs/simples/projects-page/section-image_hero@2xupdated.png"
 								alt="Image hero"
+								width={1517}
+								height={1137}
+								layout="responsive"
 							/>
 						</picture>
 					</div>
@@ -440,7 +443,6 @@ const PmCRM = () => {
 							height: 20px !important;
 						}
 						.c-jumble:after {
-							width: 65vw;
 							position: absolute;
 						}
 						.project-first-module-animation img {

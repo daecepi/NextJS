@@ -655,19 +655,20 @@ const NavigationDefault = ({ buttons }) => {
 							})}
 							<li>
 								<Link
-									href={buttons?.option.url || "https://www.copper.com/signup"}
+									href={buttons?.option?.url || "https://www.copper.com/signup"}
 								>
 									<a
 										className="c-button "
 										style={{ color: "white", marginTop: "32px" }}
 										data-cy="general-menu-CTA--mobile"
 									>
-										{buttons?.option.text || "Try Free"}
+										{buttons?.option?.text || "Try Free"}
 									</a>
 								</Link>
 								<Link
 									href={
-										buttons?.login.url || "https://app.copper.com/users/sign_in"
+										buttons?.login?.url ||
+										"https://app.copper.com/users/sign_in"
 									}
 								>
 									<a
@@ -675,7 +676,7 @@ const NavigationDefault = ({ buttons }) => {
 										style={{ color: "#FF3465", marginTop: "32px" }}
 										data-cy="general-menu-CTA--mobile"
 									>
-										{buttons?.login.text || "Login"}
+										{buttons?.login?.text || "Login"}
 									</a>
 								</Link>
 							</li>
@@ -920,19 +921,20 @@ const NavigationDefault = ({ buttons }) => {
 							</div>
 							<ul className="c-nav__utility">
 								<Link
-									href={buttons?.option.url || "https://www.copper.com/signup"}
+									href={buttons?.option?.url || "https://www.copper.com/signup"}
 								>
 									<a
 										id="desktop-nav-main-CTA"
 										className="c-button "
 										data-cy="general-menu-CTA"
 									>
-										<li>{buttons?.option.text || "Try Free"}</li>
+										<li>{buttons?.option?.text || "Try Free"}</li>
 									</a>
 								</Link>
 								<Link
 									href={
-										buttons?.login.url || "https://app.copper.com/users/sign_in"
+										buttons?.login?.url ||
+										"https://app.copper.com/users/sign_in"
 									}
 								>
 									<a
@@ -940,7 +942,7 @@ const NavigationDefault = ({ buttons }) => {
 										className="c-nav__login "
 										data-cy="general-menu-CTA"
 									>
-										<li>{buttons?.login.text || "Login"}</li>
+										<li>{buttons?.login?.text || "Login"}</li>
 									</a>
 								</Link>
 							</ul>
