@@ -152,27 +152,21 @@ export default function ConsultingCrm() {
 						eyebrow: "CASE STUDY",
 						title:
 							"Copper and Google Workspace help RHR International Boost Customer Relations and Sales",
-						url: "/resources/rhr-case-study",
+						ctaUrl: "/resources/rhr-case-study",
 						image: "/imgs/industry/industry-consulting-blog-01@2x.jpg",
-						imageWidth: "354",
-						imageHeight: "190",
 					},
 					{
 						eyebrow: "RELATIONSHIP ERA",
 						title: "The New Wave of Customer Relationship Management",
-						url: "/resources/new-wave-customer-relationship-management",
+						ctaUrl: "/resources/new-wave-customer-relationship-management",
 						image: "/imgs/industry/industry-consulting-blog-02@2x.jpg",
-						imageWidth: "354",
-						imageHeight: "190",
 					},
 					{
 						eyebrow: "CASE STUDY",
 						title:
 							"Zivelo Accelerates Their Sales and BD Efforts by Leveraging Copper’s Deep Integration with Google Apps",
-						url: "/7-ways-to-get-the-most-out-of-your-agencys-crm",
+						ctaUrl: "/7-ways-to-get-the-most-out-of-your-agencys-crm",
 						image: "/imgs/industry/industry-consulting-blog-03@2x.jpg",
-						imageWidth: "354",
-						imageHeight: "190",
 					},
 				]}
 			/>

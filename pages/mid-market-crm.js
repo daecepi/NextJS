@@ -173,29 +173,24 @@ export default function MidMarkeCRM({ entry, globals }) {
 					{
 						eyebrow: "Infographic",
 						title: "ROI Infographic",
-						url: "https://get.copper.com/rs/763-DVL-293/images/infographic_ROI_survey.pdf",
+						ctaUrl:
+							"https://get.copper.com/rs/763-DVL-293/images/infographic_ROI_survey.pdf",
 						image: "/imgs/segmentation/inforgraphic-roi header.jpg",
-						imageWidth: "800",
-						imageHeight: "418",
 					},
 					{
 						eyebrow: "Resources",
 						title: "The CRM Benchmark Report",
-						url: "/blog/crm-benchmark-report",
+						ctaUrl: "/blog/crm-benchmark-report",
 						image: "/imgs/general/segmentation/benchmark_blog_800x400@2x.jpg",
-						imageWidth: "800",
-						imageHeight: "418",
 					},
 					{
 						eyebrow: "CRM & TECH",
 						title: "The New Requirements of CRM",
-						url: "/blog/the-new-requirements-of-crm",
+						ctaUrl: "/blog/the-new-requirements-of-crm",
 						image: "/imgs/general/segmentation/blog_header_C_volt.png",
-						imageWidth: "800",
-						imageHeight: "418",
 					},
 				]}
-			></RelatedContent>
+			/>
 			<FinalPleaHero
 				eyebrow="GOODBYE DATA ENTRY"
 				title="Start scaling faster today."

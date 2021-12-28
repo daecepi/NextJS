@@ -139,7 +139,31 @@ export default function SoftwareTechCrm({}) {
 					},
 				]}
 			/>
-			<RelatedContent />
+			<RelatedContent
+				eyebrow="Resources"
+				cards={[
+					{
+						eyebrow: "RELATIONSHIP ERA",
+						title:
+							"New Research: The State of Customer Management in the Relationship Era",
+						ctaUrl:
+							"/blog/customer-management-relationship-era-research-report",
+						image: "/imgs/industry/industry-tech-blog-01@2x.png",
+					},
+					{
+						eyebrow: "CASE STUDY",
+						title: "LumApps Selects Copper CRM to Manage 2000% Lead Growth",
+						ctaUrl: "/blog/lumapps-case-study",
+						image: "/imgs/industry/industry-tech-blog-02@2x.png",
+					},
+					{
+						eyebrow: "SALES PRODUCTIVITY",
+						title: "How to Turn Your Sales Process into a Money-Making Machine",
+						ctaUrl: "/blog/sales-content-machine",
+						image: "/imgs/industry/industry-tech-blog-03@2x.png",
+					},
+				]}
+			/>
 			<FinalPleaHero
 				title={`Goodbye data entry
 Hello, Copper.`}

@@ -12,7 +12,7 @@ const HeroProduct = (props) => {
 					className=" object-cover"
 					src={props.imageUrl}
 					priority
-				></Image>
+				/>
 			</div>
 			<div className="container">
 				<div className="row">

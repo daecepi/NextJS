@@ -137,26 +137,20 @@ const AgencyCrm = () => {
 					{
 						eyebrow: "Case Study",
 						title: "How an NYC Agency Beats the Competition with Automation",
-						url: "/blog/jump-450-agency-crm-case-study",
+						ctaUrl: "/blog/jump-450-agency-crm-case-study",
 						image: "/imgs/industry/jump-blog-01.png",
-						imageWidth: "899",
-						imageHeight: "581",
 					},
 					{
 						eyebrow: "Copper Blog",
 						title: "How to Build Long-lasting Client/Agency Relationships",
-						url: "/blog/agency-client-relationships",
+						ctaUrl: "/blog/agency-client-relationships",
 						image: "/imgs/industry/industry-agency-blog-02@2x.jpg",
-						imageWidth: "899",
-						imageHeight: "581",
 					},
 					{
 						eyebrow: "BEST PRACTICES",
 						title: "Top 6 Things to Look for in a CRM for Agencies",
-						url: "/blog/crm-agencies",
+						ctaUrl: "/blog/crm-agencies",
 						image: "/imgs/industry/industry-agency-blog-03@2x.jpg",
-						imageWidth: "899",
-						imageHeight: "581",
 					},
 				]}
 			></RelatedContent>

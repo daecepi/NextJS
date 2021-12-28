@@ -423,6 +423,37 @@ export default function GoogleWorkspaceCrm({ entry, globals }) {
 							</div>
 						</div>
 					</section>
+					<section className="c-cols c-cols-alternate no-top-padding disappear-mobile">
+						<div className="container">
+							<div className="row extra-padding--bottom">
+								<div className="col-md-6  order-1">
+									<div className="c-video google-drive-integration c-video--drop-left">
+										<video
+											className="drop-left__vid"
+											playsinline
+											autoplay
+											muted
+											loop
+										>
+											<source
+												src="https://copper.objects.frb.io/videos/product/google-workspace-crm/copper-gmail-spotlight-set-reminder.mp4"
+												type="video/mp4"
+											/>
+										</video>
+									</div>
+								</div>
+								<div className="col-md-6 c-valign--middle order-2">
+									<h2 style={{ maxWidth: "469px", marginLeft: "35px" }}>
+										Get more organized and track your priorities
+									</h2>
+									<p style={{ maxWidth: "430px", marginLeft: "35px" }}>
+										Surface reminders and tasks alongside your inbox or in your
+										calendar; you decide where you want to work.
+									</p>
+								</div>
+							</div>
+						</div>
+					</section>
 
 					<section
 						id=""
