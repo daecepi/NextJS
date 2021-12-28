@@ -11,6 +11,7 @@ import TwoUp from "../components/ProductsComponent/ProductTwoUp/TwoUp";
 
 import ThreeColList from "../components/ProductsComponent/List/ThreeColList";
 import FinalCta from "../components/ProductsComponent/FinalCta";
+import { getEntryBySectionHandle } from "../lib/api";
 
 const TrackLeads = () => {
 	return (
@@ -214,3 +215,14 @@ const TrackLeads = () => {
 };
 
 export default TrackLeads;
+
+export async function getStaticProps(context) {
+	const res = await getEntryBySectionHandle("product", "track-leads");
+	return {
+		props: {
+			entry: res.entry || {},
+			globals: res.globalSets || [],
+		}, // will be passed to the page component as props
+		revalidate: 120, // in seconds
+	};
+}

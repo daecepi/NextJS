@@ -11,6 +11,7 @@ import NavigationDefault from "../../components/Navigation/NavigationDefault";
 import SingleTwoColCraft from "../../components/SinglesComponents/SingleTwoCol/SingleTwoColCraft";
 import ProductTwoUp from "../../components/ProductsComponent/ProductTwoUp/ProductTwoUp";
 import TwoUp from "../../components/ProductsComponent/ProductTwoUp/TwoUp";
+import { getEntryBySectionHandle } from "../../lib/api";
 export default function CorporateDevCrm({}) {
 	return (
 		<>
@@ -207,4 +208,21 @@ export default function CorporateDevCrm({}) {
 			<Footer></Footer>
 		</>
 	);
+}
+
+export async function getStaticProps({ params }) {
+	// const blogInformation = await fetch(`copper.com/api/blog${pageNumber}.json`);
+	const entry = await getEntryBySectionHandle(
+		"industries",
+		"corporate-development-crm"
+	);
+
+	return {
+		props: {
+			entry: entry.entry || {},
+			globals: entry.globalSets || [],
+			// category
+		}, // will be passed to the page component as props
+		revalidate: 120, // In seconds
+	};
 }

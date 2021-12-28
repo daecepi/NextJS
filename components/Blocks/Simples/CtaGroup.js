@@ -2,7 +2,6 @@ import { linkitButtonPropertyGetter } from "../../../helpers/propertyResolver";
 import Link from "next/link";
 
 const CtaGroup = ({ ctas }) => {
-	const numberCtas = ctas.length;
 	// In case the component is called with no params or not array return
 	if (!ctas?.length) return "";
 

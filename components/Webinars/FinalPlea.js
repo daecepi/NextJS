@@ -1,5 +1,9 @@
+import { useRecoilValue } from "recoil";
+import { SyncedAtom } from "../../atoms/SyncAtom";
+
 // Final Plea Hero
 const FinalPlea = () => {
+	const syncedAtom = useRecoilValue(SyncedAtom);
 	return (
 		<section className="c-hero--split background--leavebehind">
 			<div className="c-image">
@@ -35,7 +39,7 @@ const FinalPlea = () => {
 						<div className="c-hero__buttons">
 							<a
 								className="c-button sendUTMsToAmplitude"
-								href="{{ craft.app.config.general.signUpUrl }}"
+								href={syncedAtom.generalSignupUrl}
 							>
 								Try Free
 							</a>

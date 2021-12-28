@@ -932,6 +932,7 @@ export default function Home({ entry, globals }) {
 											className="radio-selector"
 											id="but1"
 											name="sel_button"
+											readOnly
 										/>
 										<label for="but1">
 											<strong>It's quick to launch</strong>
@@ -1014,6 +1015,7 @@ export default function Home({ entry, globals }) {
 											checked
 											className="radio-selector"
 											id="bu1"
+											readOnly
 											name="independent1"
 										/>
 										<label for="bu1">It's quick to launch</label>
@@ -1078,6 +1080,7 @@ export default function Home({ entry, globals }) {
 											checked
 											className="radio-selector"
 											id="bu2"
+											readOnly
 											name="independent2"
 										/>
 										<label for="bu2">There's no busy work</label>
@@ -1142,6 +1145,7 @@ export default function Home({ entry, globals }) {
 											checked
 											className="radio-selector"
 											id="bu3"
+											readOnly
 											name="independent3"
 										/>
 										<label for="bu3">It's made for closing</label>

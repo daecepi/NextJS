@@ -5,6 +5,7 @@ import styles from "../styles/Home.module.css";
 import Products from "../components/Sections/Products/Products";
 import LegalSelector from "../components/Legal/LegalSelector";
 import DefaultPageBase from "../components/PageBase/DefaultPageBase";
+import Content404Page from "../components/404/404";
 
 const Entry = ({ entry, globals }) => {
 	// const returnsTwoColumnComponent = () => {
@@ -20,7 +21,7 @@ const Entry = ({ entry, globals }) => {
 		} else if (entry?.sectionHandle == "legal") {
 			return <LegalSelector entry={entry} />;
 		} else {
-			return <p>building</p>;
+			return <Content404Page />;
 		}
 	};
 	return (

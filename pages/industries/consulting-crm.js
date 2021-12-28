@@ -13,6 +13,7 @@ import NumbersSection from "../../components/SinglesComponents/NumbersSection.js
 import Quote from "../../components/SinglesComponents/Quote/Quote";
 import RelatedContent from "../../components/SinglesComponents/RelatedContent/RelatedContent";
 import SingleTwoColCraft from "../../components/SinglesComponents/SingleTwoCol/SingleTwoColCraft";
+import { getEntryBySectionHandle } from "../../lib/api";
 
 export default function ConsultingCrm() {
 	return (
@@ -180,4 +181,18 @@ export default function ConsultingCrm() {
 			<Footer />
 		</>
 	);
+}
+
+export async function getStaticProps({ params }) {
+	// const blogInformation = await fetch(`copper.com/api/blog${pageNumber}.json`);
+	const entry = await getEntryBySectionHandle("industries", "consulting-crm");
+
+	return {
+		props: {
+			entry: entry.entry || {},
+			globals: entry.globalSets || [],
+			// category
+		}, // will be passed to the page component as props
+		revalidate: 120, // In seconds
+	};
 }

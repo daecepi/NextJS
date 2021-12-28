@@ -192,7 +192,7 @@ const Post = ({
 							"target",
 							"_blank"
 						);
-						// {# Remove height field added by default by redactor #}
+						// Remove height field added by default by redactor
 						$(".c-resource-content__container  img")
 							.removeAttr("height")
 							.removeAttr("width");

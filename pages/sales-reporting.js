@@ -6,6 +6,7 @@ import NavigationDefault from "../components/Navigation/NavigationDefault";
 import ProductTwoUp from "../components/ProductsComponent/ProductTwoUp/ProductTwoUp";
 import TwoUp from "../components/ProductsComponent/ProductTwoUp/TwoUp";
 import FinalHeroFull from "../components/SinglesComponents/FinalHeroFull/FinalHeroFull";
+import { getEntryBySectionHandle } from "../lib/api";
 
 export default function SalesReporting() {
 	return (
@@ -185,4 +186,15 @@ export default function SalesReporting() {
 			<Footer />
 		</>
 	);
+}
+
+export async function getStaticProps(context) {
+	const res = await getEntryBySectionHandle("product", "sales-reporting");
+	return {
+		props: {
+			entry: res.entry || {},
+			globals: res.globalSets || [],
+		}, // will be passed to the page component as props
+		revalidate: 120, // in seconds
+	};
 }

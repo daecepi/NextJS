@@ -4,6 +4,7 @@ import Image from "next/image";
 import Script from "next/script";
 import Footer from "../components/Footer/Footer";
 import NavigationDefault from "../components/Navigation/NavigationDefault";
+import { getEntryBySectionHandle } from "../lib/api";
 const PmCRM = () => {
 	return (
 		<main id="content" role="main" className="no-top-margin">
@@ -1281,3 +1282,17 @@ const PmCRM = () => {
 };
 
 export default PmCRM;
+
+export async function getStaticProps(context) {
+	const res = await getEntryBySectionHandle(
+		"seoPage",
+		"project-management-crm"
+	);
+	return {
+		props: {
+			entry: res.entry || {},
+			globals: res.globalSets || [],
+		}, // will be passed to the page component as props
+		revalidate: 120, // in seconds
+	};
+}
