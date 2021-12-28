@@ -2,11 +2,15 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
+import { useRecoilValue } from "recoil";
+import { SyncedAtom } from "../atoms/SyncAtom";
 import NavigationDefault from "../components/Navigation/NavigationDefault";
 import DefaultPageBase from "../components/PageBase/DefaultPageBase";
 import { getEntryBySectionHandle } from "../lib/api";
 
 const DemosPage = ({ entry, globals }) => {
+	const syncedAtom = useRecoilValue(SyncedAtom);
+
 	const generalScripsValue = `
 	
 	`;
@@ -110,25 +114,25 @@ const DemosPage = ({ entry, globals }) => {
 									</p>
 									<br />
 									<br />
-									<picture>
-										<source
-											type="image/webp"
-											srcSet="imgs/demos/working.webp"
+
+									<style jsx>{`
+										.demo-capsule {
+											position: absolute;
+											top: 5px;
+											bottom: 0;
+											left: -295px;
+										}
+									`}</style>
+									<div className="demo-capsule">
+										<Image
 											className=""
-											alt="Working image"
+											alt="Demo UI image"
+											src="/imgs/demos/working.jpg"
+											height={600}
+											width={569}
+											layout="fixed"
 										/>
-										<source
-											type="image/png"
-											srcSet="imgs/demos/working.jpg"
-											className=""
-											alt="Working image"
-										/>
-										<img
-											className=""
-											alt="Working image"
-											src="imgs/demos/working.jpg"
-										/>
-									</picture>
+									</div>
 								</div>
 							</div>
 							<div className="col-md-7 ">
@@ -287,6 +291,7 @@ const DemosPage = ({ entry, globals }) => {
 						function loadWebinarForm() {
 							// // (1)
 							// old form 1784
+							if (!MktoForms2) return;
 							MktoForms2.loadForm(
 								"//app-sj17.marketo.com",
 								"763-DVL-293",
@@ -316,6 +321,7 @@ const DemosPage = ({ entry, globals }) => {
 										}
 									});
 									form.onSuccess(function () {
+										console.log("RAN ");
 										// Fix GA
 										if (
 											(window.location.pathname === "/demos" ||
@@ -357,6 +363,7 @@ const DemosPage = ({ entry, globals }) => {
 														);
 												}
 											} else {
+												console.log("RAN 2");
 												$("#choose-webinar-section1").addClass("d-none");
 												$("#choose-webinar-option1").removeClass("d-none");
 											}
@@ -591,6 +598,72 @@ const DemosPage = ({ entry, globals }) => {
 					}}
 				/>
 			</div>
+			<section
+				className="c-gate-form c-gate-form--demo c-cols d-none"
+				id="choose-webinar-confrimation"
+			>
+				<div className="container">
+					<div className="row">
+						<div className="col-md-5 c-gate-form__form">
+							<h2 className="t-resource-period--hot-pink">Thank you</h2>
+							<p
+								id="choose-webinar-confrimation-large"
+								className="h-clear-bottom-margin d-none"
+							>
+								Please check your <strong>promotions</strong> tab if you don’t
+								see an email from us.
+								<br />
+								<br />
+								We also recommend checking out
+								<br />{" "}
+								<a
+									className="t-normal-link"
+									style={{ marginTop: "14px" }}
+									onClick={() => {
+										viewDemosPage();
+									}}
+								>
+									our demo video
+								</a>{" "}
+								for an intro to Copper.
+							</p>
+							<div id="choose-webinar-confrimation-medium" className="d-none">
+								<p className="h-clear-bottom-margin">
+									We’re looking forward to seeing you at the live demo. In the
+									meantime, here’s a picture of our beloved copper pup, Frank.
+									<br />
+									<br />
+									We also recommend starting a free trial.
+								</p>
+								<div className="c-hero__buttons">
+									<Link href={syncedAtom.generalSignupUrl}>
+										<a className="c-button sendUTMsToAmplitude">Try Free</a>
+									</Link>
+								</div>
+							</div>
+						</div>
+						<div className="col-md-7 c-gate-form__confirmation-img d-none d-lg-block d-xl-block">
+							<style jsx>{`
+								.confirmation-capsule {
+									position: relative;
+									right: -60px;
+									max-height: 700px;
+									height: 700px;
+									width: 629px;
+								}
+							`}</style>
+							<div className="confirmation-capsule">
+								<Image
+									className=""
+									alt="Demo UI image"
+									src="/imgs/demos/demo-confirmation.jpg"
+									layout="fill"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 		</DefaultPageBase>
 	);
 };
