@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
+import { useEffect, useState } from "react";
 
 const TwoUp = ({
 	videoWebm,
@@ -22,6 +23,18 @@ const TwoUp = ({
 	removeBottomSpacing,
 	bringAssetToText,
 }) => {
+	const [imageLayout, setImageLayout] = useState("fixed");
+
+	useEffect(() => {
+		function handleResize() {
+			console.log("resized to: ", window.innerWidth, "x", window.innerHeight);
+			setImageLayout(window.innerWidth > 768 ? "fixed" : "responsive");
+		}
+
+		window.addEventListener("resize", handleResize);
+		setImageLayout(window.innerWidth > 768 ? "fixed" : "responsive");
+	}, []);
+
 	return (
 		<>
 			<div
@@ -183,7 +196,7 @@ const TwoUp = ({
 								src={imageUrl}
 								width={imageWidth}
 								height={imageHeight}
-								layout="fixed"
+								layout={imageLayout}
 							/>
 						)}
 					</div>

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Script from "next/script";
-import NavigationDefault from "../components/Navigation/NavigationDefault";
+import LogoComponent from "../components/Blocks/LogosComponent";
 import DefaultPageBase from "../components/PageBase/DefaultPageBase";
 import { getEntryBySectionHandle } from "../lib/api";
 //import styles from "../styles/CrmPage.module.scss";
@@ -83,7 +83,7 @@ export default function GoogleWorkspaceCrm({ entry, globals }) {
 											className="signup_form"
 											id="signup_form"
 											action="https://app.copper.com/users"
-											accept-charset="UTF-8"
+											acceptCharset="UTF-8"
 											method="post"
 										>
 											<input name="utf8" type="hidden" value="✓" />
@@ -109,7 +109,7 @@ export default function GoogleWorkspaceCrm({ entry, globals }) {
 											</div>
 											<div className="field">
 												<div className="form_text_field_container">
-													<label for="user[full_name]">Full Name</label>
+													<label htmlFor="user[full_name]">Full Name</label>
 													<input
 														className="text_field"
 														size="30"
@@ -122,7 +122,7 @@ export default function GoogleWorkspaceCrm({ entry, globals }) {
 											</div>
 											<div className="field">
 												<div className="form_text_field_container">
-													<label for="user[email]">Work Email</label>
+													<label htmlFor="user[email]">Work Email</label>
 													<input
 														size="30"
 														className="text_field"
@@ -288,8 +288,8 @@ export default function GoogleWorkspaceCrm({ entry, globals }) {
 										<figure>
 											<video
 												style={{ width: "100%" }}
-												playsinline
-												autoplay
+												playsInline
+												autoPlay
 												muted
 												loop
 												className="video-content"
@@ -430,8 +430,8 @@ export default function GoogleWorkspaceCrm({ entry, globals }) {
 									<div className="c-video google-drive-integration c-video--drop-left">
 										<video
 											className="drop-left__vid"
-											playsinline
-											autoplay
+											playsInline
+											autoPlay
 											muted
 											loop
 										>
@@ -549,176 +549,155 @@ export default function GoogleWorkspaceCrm({ entry, globals }) {
 						</div>
 					</section>
 
-					<section
-						id=""
-						className="c-single-column  bottom-padding-mobile home-proof background--cemento home-logo-module"
-					>
-						<div className="container">
-							<div className="col-md-12">
-								<div className="text-center extra-bottom-margin--small">
-									<p>Over 25,000+ companies trust Copper.</p>
-								</div>
-								<div className="smb-logo-icons ">
-									<ul className="logo-section--one-column">
-										<li
-											id="temp-logo-module--images"
-											className="logo-section--images "
-										>
-											<picture>
-												<source
-													type="image/webp"
-													srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_IDEO@2x.webp"
-													alt="Ideo graphic"
-												/>
-												<source
-													type="image/png"
-													srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_IDEO@2x.png"
-													alt="Ideo graphic"
-												/>
-												<img
-													style={{ width: "calc(100% / 1.3) !important" }}
-													src="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_IDEO@2x.png"
-													alt="Ideo graphic"
-												/>
-											</picture>
-										</li>
-										<li
-											id="temp-logo-module--images"
-											className="logo-section--images "
-										>
-											<picture>
-												<source
-													type="image/webp"
-													srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_masterclass@2x.webp"
-													alt="Masterclass graphic"
-												/>
-												<source
-													type="image/png"
-													srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_masterclass@2x.png"
-													alt="Masterclass graphic"
-												/>
-												<img
-													style={{ width: "calc(100% / 1.3) !important" }}
-													src="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_masterclass@2x.png"
-													alt="Masterclass graphic"
-												/>
-											</picture>
-										</li>
-										<li
-											id="temp-logo-module--images"
-											className="logo-section--images "
-										>
-											<picture>
-												<source
-													type="image/webp"
-													srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_swell@2x.webp"
-													alt="Swell graphic"
-												/>
-												<source
-													type="image/png"
-													srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_swell@2x.png"
-													alt="Swell graphic"
-												/>
-												<img
-													style={{ width: "calc(100% / 1.3) !important" }}
-													src="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_swell@2x.png"
-													alt="Swell graphic"
-												/>
-											</picture>
-										</li>
-										<li
-											id="temp-logo-module--images"
-											className="logo-section--images "
-										>
-											<picture>
-												<source
-													type="image/webp"
-													srcSet="https://copper.objects.frb.io/imgs/homepage//logos-module/Logo_Mailchimp.webp"
-													alt="Bubbles graphic"
-												/>
-												<source
-													type="image/png"
-													srcSet="https://copper.objects.frb.io/imgs/homepage//logos-module/Logo_Mailchimp.png"
-													alt="Bubbles graphic"
-												/>
-												<img
-													style={{ width: "calc(100% / 1.3) !important" }}
-													src="https://copper.objects.frb.io/imgs/homepage//logos-module/Logo_Mailchimp.png"
-													alt="Bubbles graphic"
-												/>
-											</picture>
-										</li>
-										<li
-											id="temp-logo-module--images"
-											className="logo-section--images "
-										>
-											<picture>
-												<source
-													type="image/webp"
-													srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/Logo_Softbank.webp"
-													alt="Bubbles graphic"
-												/>
-												<source
-													type="image/png"
-													srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/Logo_Softbank.png"
-													alt="Bubbles graphic"
-												/>
-												<img
-													style={{ width: "calc(100% / 1.3) !important" }}
-													src="https://copper.objects.frb.io/imgs/homepage/logos-module/Logo_Softbank.png"
-													alt="Bubbles graphic"
-												/>
-											</picture>
-										</li>
-										<li
-											id="temp-logo-module--images"
-											className="logo-section--images "
-										>
-											<picture>
-												<source
-													type="image/webp"
-													srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_zipi@2x.webp"
-													alt="Swell graphic"
-												/>
-												<source
-													type="image/png"
-													srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_zipi@2x.png"
-													alt="Swell graphic"
-												/>
-												<img
-													style={{ width: "calc(100% / 1.3) !important" }}
-													src="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_zipi@2x.png"
-													alt="Swell graphic"
-												/>
-											</picture>
-										</li>
-										<li
-											id="temp-logo-module--images"
-											className="logo-section--images "
-										>
-											<picture>
-												<source
-													type="image/webp"
-													srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_houwzer2x.webp"
-													alt="Bubbles graphic"
-												/>
-												<source
-													type="image/png"
-													srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_houwzer2x.png"
-													alt="Bubbles graphic"
-												/>
-												<img
-													style={{ width: "calc(100% / 1.3) !important" }}
-													src="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_houwzer2x.png"
-													alt="Bubbles graphic"
-												/>
-											</picture>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</section>
+					<LogoComponent title="Over 25,000+ companies trust Copper.">
+						<li id="temp-logo-module--images" className="logo-section--images ">
+							<picture>
+								<source
+									type="image/webp"
+									srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_IDEO@2x.webp"
+									alt="Ideo graphic"
+								/>
+								<source
+									type="image/png"
+									srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_IDEO@2x.png"
+									alt="Ideo graphic"
+								/>
+								<Image
+									style={{ width: "calc(100% / 1.3)!important;" }}
+									src="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_IDEO@2x.png"
+									alt="Ideo graphic"
+									width={80}
+									height={19}
+								/>
+							</picture>
+						</li>
+						<li id="temp-logo-module--images" className="logo-section--images ">
+							<picture>
+								<source
+									type="image/webp"
+									srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_masterclass@2x.webp"
+									alt="Masterclass graphic"
+								/>
+								<source
+									type="image/png"
+									srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_masterclass@2x.png"
+									alt="Masterclass graphic"
+								/>
+								<Image
+									style={{ width: "calc(100% / 1.3)!important;" }}
+									src="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_masterclass@2x.png"
+									alt="Masterclass graphic"
+									width={80}
+									height={11}
+								/>
+							</picture>
+						</li>
+						<li id="temp-logo-module--images" className="logo-section--images ">
+							<picture>
+								<source
+									type="image/webp"
+									srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_swell@2x.webp"
+									alt="Swell graphic"
+								/>
+								<source
+									type="image/png"
+									srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_swell@2x.png"
+									alt="Swell graphic"
+								/>
+								<Image
+									style={{ width: "calc(100% / 1.3)!important;" }}
+									src="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_swell@2x.png"
+									alt="Swell graphic"
+									width={80}
+									height={26}
+								/>
+							</picture>
+						</li>
+						<li id="temp-logo-module--images" className="logo-section--images ">
+							<picture>
+								<source
+									type="image/webp"
+									srcSet="https://copper.objects.frb.io/imgs/homepage//logos-module/Logo_Mailchimp.webp"
+									alt="Bubbles graphic"
+								/>
+								<source
+									type="image/png"
+									srcSet="https://copper.objects.frb.io/imgs/homepage//logos-module/Logo_Mailchimp.png"
+									alt="Bubbles graphic"
+								/>
+								<Image
+									style={{ width: "calc(100% / 1.3)!important;" }}
+									src="https://copper.objects.frb.io/imgs/homepage//logos-module/Logo_Mailchimp.png"
+									alt="Bubbles graphic"
+									width={80}
+									height={22}
+								/>
+							</picture>
+						</li>
+						<li id="temp-logo-module--images" className="logo-section--images ">
+							<picture>
+								<source
+									type="image/webp"
+									srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/Logo_Softbank.webp"
+									alt="Bubbles graphic"
+								/>
+								<source
+									type="image/png"
+									srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/Logo_Softbank.png"
+									alt="Bubbles graphic"
+								/>
+								<Image
+									style={{ width: "calc(100% / 1.3)!important;" }}
+									src="https://copper.objects.frb.io/imgs/homepage/logos-module/Logo_Softbank.png"
+									alt="Bubbles graphic"
+									width={80}
+									height={12}
+								/>
+							</picture>
+						</li>
+						<li id="temp-logo-module--images" className="logo-section--images ">
+							<picture>
+								<source
+									type="image/webp"
+									srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_zipi@2x.webp"
+									alt="Swell graphic"
+								/>
+								<source
+									type="image/png"
+									srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_zipi@2x.png"
+									alt="Swell graphic"
+								/>
+								<Image
+									style={{ width: "calc(100% / 1.3)!important;" }}
+									src="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_zipi@2x.png"
+									alt="Swell graphic"
+									width={72}
+									height={51}
+								/>
+							</picture>
+						</li>
+						<li id="temp-logo-module--images" className="logo-section--images ">
+							<picture>
+								<source
+									type="image/webp"
+									srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_houwzer2x.webp"
+									alt="Bubbles graphic"
+								/>
+								<source
+									type="image/png"
+									srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_houwzer2x.png"
+									alt="Bubbles graphic"
+								/>
+								<Image
+									style={{ width: "calc(100% / 1.3)!important;" }}
+									src="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_houwzer2x.png"
+									alt="Bubbles graphic"
+									width={80}
+									height={23}
+								/>
+							</picture>
+						</li>
+					</LogoComponent>
 
 					<section
 						className="c-list"
