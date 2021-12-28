@@ -29,6 +29,7 @@ export default function CorporateDevCrm({}) {
 					integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
 					crossOrigin="anonymous"
 				></script>
+				<title>Corporate Development CRM</title>
 			</Head>
 			<NavigationDefault />
 			<HeroSinglePages
@@ -143,8 +144,9 @@ export default function CorporateDevCrm({}) {
 					</div>
 				</div>
 			</section>
-			{/*<Quote></Quote>*/}
+
 			<CallOut title={"Because you have deals to close."} />
+
 			<NuumbersSection
 				eyebrow={"BY THE NUMBERS"}
 				title={"Copper +<br/>Real Estate Agents"}
@@ -173,7 +175,29 @@ export default function CorporateDevCrm({}) {
 					},
 				]}
 			/>
-			<RelatedContent />
+			<RelatedContent
+				eyebrow="Resources"
+				cards={[
+					{
+						title: "Why Augmented Productivity Is the Future of Work",
+						ctaUrl: "/resources/relationship-era-rise",
+						image: "/imgs/industry/industry-corp-dev-blog-01@2x.jpg",
+					},
+					{
+						eyebrow: "Video",
+						title: "Copper CRM for Corporate Development",
+						ctaUrl: "/resources/houwzer-case-study",
+						ctaText: "Watch Video",
+						image: "/imgs/industry/industry-corp-dev-blog-02@2x.jpg",
+					},
+					{
+						eyebrow: "Webinar",
+						title: "How Copper CRM is Keeping Your Data Safe",
+						ctaUrl: "/resources/reali-case-study",
+						image: "/imgs/industry/industry-corp-dev-blog-03@2x.jpg",
+					},
+				]}
+			/>
 			<FinalPleaHero
 				title={`Start managing deals with Copper today.`}
 				copy={`No credit card required. Start your 14-day free trial today.`}

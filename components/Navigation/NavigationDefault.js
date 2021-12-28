@@ -654,9 +654,7 @@ const NavigationDefault = ({ buttons }) => {
 								);
 							})}
 							<li>
-								<Link
-									href={buttons?.option?.url || "https://www.copper.com/signup"}
-								>
+								<Link href={buttons?.option?.url || "/signup"}>
 									<a
 										className="c-button "
 										style={{ color: "white", marginTop: "32px" }}

@@ -30,6 +30,7 @@ const RealEstateCrm = () => {
 					integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
 					crossOrigin="anonymous"
 				></script>
+				<title>Real Estate CRM Software for Realtors & Agents | Copper</title>
 			</Head>
 			<NavigationDefault />
 			<HeroSinglePages
@@ -114,7 +115,6 @@ const RealEstateCrm = () => {
 					removeBottomSpacing
 				/>
 			</ProductTwoUp>
-			{/*<Quote></Quote>*/}
 			<CallOut
 				title={"Manage more listings with Copper real estate CRM system."}
 			/>
@@ -140,7 +140,31 @@ const RealEstateCrm = () => {
 					{ number: "4", subText: "additional clients per agent per month" },
 				]}
 			/>
-			<RelatedContent />
+			<RelatedContent
+				eyebrow="Resources"
+				cards={[
+					{
+						eyebrow: "Relationship Era",
+						title: "The Rise of the Relationship Era",
+						ctaUrl: "/resources/relationship-era-rise",
+						image: "/imgs/industry/industry-real-estate-blog-01@2x.png",
+					},
+					{
+						eyebrow: "Case Study",
+						title:
+							"Houwzer Grows Team of Real Estate Agents While Using Copper",
+						ctaUrl: "/resources/houwzer-case-study",
+						image: "/imgs/industry/industry-real-estate-blog-02@2x.png",
+					},
+					{
+						eyebrow: "Case Study",
+						title:
+							"Reali Strengthens Real Estate Relationship Management with Copper",
+						ctaUrl: "/resources/reali-case-study",
+						image: "/imgs/industry/industry-real-estate-blog-03@2x.png",
+					},
+				]}
+			/>
 			<FinalPleaHero
 				title={`Sell more
                 with Copper`}

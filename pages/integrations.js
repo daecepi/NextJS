@@ -29,7 +29,7 @@ export default function Integrations({ entry, globals }) {
 				<div className="container">
 					<div className="c-list-card__header c-align--center">
 						<h2 className="col-sm-10 t-center">Featured Integrations</h2>
-						<p className="col-sm-8 t-center">
+						<p className="col-sm-8">
 							These are just some of the popular tools you can connect to Copper
 							with a single click. We have dozens more.{" "}
 						</p>
@@ -405,10 +405,10 @@ export default function Integrations({ entry, globals }) {
 				</div>
 			</section>
 			<div className="c-list-card__header c-align--center container">
-				<h2 className="col-sm-10 t-center" style={{ maxWidth: "700px" }}>
+				<h2 className="col-sm-10 col-md-7">
 					Need more? No problem. Connect to over 3000 apps with Zapier.
 				</h2>
-				<p className="col-sm-8 t-center" style={{ maxWidth: "700px" }}>
+				<p className="col-sm-7">
 					With Copper, you have the power to build your own app connections to
 					work the way you want using the CRM application for data integration.
 				</p>
