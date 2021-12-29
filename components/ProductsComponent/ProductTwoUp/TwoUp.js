@@ -27,7 +27,6 @@ const TwoUp = ({
 
 	useEffect(() => {
 		function handleResize() {
-			console.log("resized to: ", window.innerWidth, "x", window.innerHeight);
 			setImageLayout(window.innerWidth > 768 ? "fixed" : "responsive");
 		}
 
