@@ -4,8 +4,14 @@ const LogoComponent = (props) => {
 			id=""
 			className="c-single-column  bottom-padding-mobile home-proof background--cemento home-logo-module"
 		>
-			<div className="container">
-				<div className="col-md-12">
+			<div
+				className="container"
+				style={{ paddingLeft: "15px", paddingRight: "15px" }}
+			>
+				<div
+					className="col-md-12"
+					style={{ paddingLeft: "15px", paddingRight: "15px" }}
+				>
 					<div className="text-center extra-bottom-margin--small">
 						<p style={{ fontFamily: "Graphik-Regular" }}>{props.title}</p>
 					</div>
