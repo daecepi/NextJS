@@ -962,7 +962,7 @@ const NavigationDefault = ({ buttons }) => {
 														}`}
 														data-cy="general-nav-dropdown"
 														id={desktopSecondLevel[dropdownItems].dropdowntype}
-														style={{ top: "0px", left: "3px", width: "100vw" }}
+														style={{ top: "0px", left: "0px", width: "100vw" }}
 													>
 														<ul>
 															{desktopSecondLevel[dropdownItems].dropdown.map(

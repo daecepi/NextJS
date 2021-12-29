@@ -8,6 +8,7 @@ import Footer from "../components/Footer/Footer";
 import ProductTwoUp from "../components/ProductsComponent/ProductTwoUp/ProductTwoUp";
 import TwoUp from "../components/ProductsComponent/ProductTwoUp/TwoUp";
 import { useCallback } from "react";
+import FinalHeroFull from "../components/SinglesComponents/FinalHeroFull/FinalHeroFull";
 
 export default function Home({ entry, globals }) {
 	console.log("page fields ", entry, globals);
@@ -41,7 +42,13 @@ export default function Home({ entry, globals }) {
 	}, []);
 
 	return (
-		<DefaultPageBase entry={entry} globals={globals}>
+		<DefaultPageBase
+			entry={entry}
+			globals={globals}
+			navigationButtonsOverride={{
+				option: { text: "Get Demo", url: "/demos" },
+			}}
+		>
 			<HeroHomePage
 				title="Win clients for life with Copper CRM"
 				subtitle="Focus on what matters most: building enduring business relationships. We’ll take care of the rest."
@@ -1226,7 +1233,10 @@ export default function Home({ entry, globals }) {
 					</div>
 				</div>
 			</section>
-
+			<FinalHeroFull
+				title="Try Copper for free"
+				copy="14-day trial. Instant activation, no credit card required. Give the Copper software solution a try today."
+			/>
 			<Footer></Footer>
 		</DefaultPageBase>
 	);

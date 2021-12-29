@@ -67,7 +67,7 @@ $container-max-widths: (
 	lg: 960px,
 	xl: 1140px,
 );
-@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../styles/bootstrap/bootstrap";
 @import "animation";
 @import "mixins";
 @import "_variables";
@@ -76,6 +76,20 @@ $container-max-widths: (
 @import "modules";
 @import "pages";
 @import "redactor-specializatiions";
+main {
+	.container,
+	.container-fluid,
+	.container-sm,
+	.container-md,
+	.container-lg,
+	.container-xl {
+		width: 100%;
+		padding-right: 15px;
+		padding-left: 15px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
 
 // H1
 //
