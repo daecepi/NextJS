@@ -1235,3 +1235,8 @@ section.animation-two-mobile:before {
 	}
 }
 @tailwind utilities;
+
+p,
+address {
+	font-family: $regular-font;
+}

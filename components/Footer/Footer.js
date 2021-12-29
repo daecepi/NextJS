@@ -1,27 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
+import SocialLinks from "./SocialLinks";
 const Footer = () => {
 	return (
 		<footer className="c-footer footer-about">
-			<div
-				className="container 
-//   {% if 'copper.com/blog' in craft.app.request.absoluteUrl or 
-//   'copper.lndo.site/blog' in craft.app.request.absoluteUrl or 
-//   'copper-staging.frb.io/blog' in craft.app.request.absoluteUrl %}
-
-//   c-blog__footer
-
-//   {% endif %}"
-			>
+			<div className="container">
 				<div className="footer-and-social-div">
 					<div className="footer__links__container">
 						<div className="footer__links">
 							<ul>
-								<Image
-									src="/imgs/copper_logo-white-sharp.svg"
-									width="143"
-									height="28s"
-								></Image>
+								<span
+									className="footer__title pb-1 pt-0"
+									style={{ marginTop: "19px" }}
+								>
+									<Image
+										src="/imgs/copper_logo-white-sharp.svg"
+										width="143"
+										height="28"
+									/>
+								</span>
 								<li>
 									<Link href="/about">
 										<a>Company</a>
@@ -288,7 +285,7 @@ const Footer = () => {
 								<Link href="/privacy">
 									<a
 										style={{
-											flexbBsis: "unset",
+											flexBasis: "unset",
 											marginRight: "51px",
 											marginTop: "auto",
 											marginBottom: "20px",
@@ -313,7 +310,7 @@ const Footer = () => {
 									style={{ marginTop: "auto", marginBottom: "3px" }}
 									className="show-social d-none d-sm-none d-md-block"
 								>
-									{/* {% include "/sections/footer/_section-social-footer.html" %} */}
+									<SocialLinks />
 								</div>
 							</div>
 							<div className="legal-info appear-mobile">
@@ -326,7 +323,7 @@ const Footer = () => {
 								</Link>
 							</div>
 							<div className="show-social d-md-none appear-mobile extra-bottom-margin--small">
-								{/* {% include "/sections/footer/_section-social-footer.html" %} */}
+								<SocialLinks />
 							</div>
 						</div>
 					</div>

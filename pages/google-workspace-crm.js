@@ -4,8 +4,8 @@ import Link from "next/link";
 import Script from "next/script";
 import LogoComponent from "../components/Blocks/LogosComponent";
 import DefaultPageBase from "../components/PageBase/DefaultPageBase";
+import Footer from "../components/Footer/Footer";
 import { getEntryBySectionHandle } from "../lib/api";
-//import styles from "../styles/CrmPage.module.scss";
 
 export default function GoogleWorkspaceCrm({ entry, globals }) {
 	const cardsData = [
@@ -1059,6 +1059,7 @@ export default function GoogleWorkspaceCrm({ entry, globals }) {
 					</section>
 				</main>
 			</div>
+			<Footer />
 		</DefaultPageBase>
 	);
 }
