@@ -1234,7 +1234,7 @@ export default function Home({ entry, globals }) {
 				</div>
 			</section>
 			<FinalHeroFull
-				title="Try Copper for free"
+				title="Try Copper software solution for free"
 				copy="14-day trial. Instant activation, no credit card required. Give the Copper software solution a try today."
 			/>
 			<Footer></Footer>

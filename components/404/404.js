@@ -3,7 +3,7 @@ import Footer from "../Footer/Footer";
 const Content404Page = () => {
 	return (
 		<>
-			<style type="text/css" jsx>
+			<style type="text/css" jsx global>
 				{`
 					section.white {
 						padding-top: 100px;

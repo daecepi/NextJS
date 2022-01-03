@@ -28,28 +28,34 @@ const JumbleModule = ({ eyebrow, copy, ctas, image }) => {
 									{contentImage ? (
 										<>
 											{optimizedImages.srcset?.length > 0 ? (
-												<picture>
-													{optimizedImages.srcsetWebP ? (
-														<source
-															srcSet={optimizedImages.srcsetWebP}
-															sizes="100vw"
-															type="image/webp"
-														/>
-													) : (
-														""
-													)}
+												<div
+													style={{
+														boxShadow: "-20px 20px 40px 0 rgb(0 0 0 / 13%)",
+													}}
+												>
+													<picture>
+														{optimizedImages.srcsetWebP ? (
+															<source
+																srcSet={optimizedImages.srcsetWebP}
+																sizes="100vw"
+																type="image/webp"
+															/>
+														) : (
+															""
+														)}
 
-													<img
-														src={optimizedImages.src}
-														srcSet={optimizedImages.srcset}
-														sizes="100vw"
-														alt={
-															contentImage.altText?.length
-																? contentImage.altText
-																: contentImage.title
-														}
-													/>
-												</picture>
+														<img
+															src={optimizedImages.src}
+															srcSet={optimizedImages.srcset}
+															sizes="100vw"
+															alt={
+																contentImage.altText?.length
+																	? contentImage.altText
+																	: contentImage.title
+															}
+														/>
+													</picture>
+												</div>
 											) : (
 												<img
 													src={contentImage.url}
@@ -58,7 +64,7 @@ const JumbleModule = ({ eyebrow, copy, ctas, image }) => {
 															? contentImage.altText
 															: contentImage.title
 													}
-												></img>
+												/>
 											)}
 										</>
 									) : (
