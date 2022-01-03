@@ -12,11 +12,15 @@ const CaseStudy = (props) => {
 									<pre className="c-eyebrow c-eyebrow--light">
 										{props.eyebrow}
 									</pre>
-									<Image
-										src={props.imageUrl}
-										width={props.imageWidth}
-										height={props.imageHeight}
-									/>
+									<div
+										style={{ boxShadow: "-20px 20px 40px 0 rgb(0 0 0 / 13%)" }}
+									>
+										<Image
+											src={props.imageUrl}
+											width={props.imageWidth}
+											height={props.imageHeight}
+										/>
+									</div>
 								</div>
 							</div>
 							<div className="col-md-6">
