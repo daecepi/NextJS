@@ -40,10 +40,7 @@ const HeroHomePage = (props) => {
 											</span>
 										</a>
 									</Link>
-									<div
-										className="signup_form_subtext"
-										style={{ fontSize: "13px", marginBottom: "25px" }}
-									>
+									<div className="signup_form_subtext">
 										or use your email to sign up:
 									</div>
 									<div className="field">
@@ -87,7 +84,7 @@ const HeroHomePage = (props) => {
 										<input
 											type="submit"
 											name="commit"
-											value="Try free"
+											value="Try Free"
 											className="submit_button is-pink with-no-border"
 										/>
 									</div>

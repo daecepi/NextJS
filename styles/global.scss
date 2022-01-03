@@ -76,6 +76,11 @@ $container-max-widths: (
 @import "modules";
 @import "pages";
 @import "redactor-specializatiions";
+
+body {
+	font-family: "Graphik-Regular";
+}
+
 main {
 	.container,
 	.container-fluid,
@@ -89,8 +94,12 @@ main {
 		margin-right: auto;
 		margin-left: auto;
 	}
+	font-family: "Graphik-Regular";
 }
 
+.c-nav__logo a svg {
+	margin-top: 2px;
+}
 // H1
 //
 // Default H1 styling

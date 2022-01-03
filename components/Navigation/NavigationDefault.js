@@ -839,7 +839,7 @@ const NavigationDefault = ({ buttons }) => {
 															{item[itemKey].name}
 															<span
 																className="carrot"
-																style={{ marginLeft: "0.25rem" }}
+																style={{ marginLeft: "0.23rem" }}
 															>
 																<svg
 																	width="6px"
@@ -998,9 +998,11 @@ const NavigationDefault = ({ buttons }) => {
 																							{ditem.description}
 																						</span>
 																						{ditem.tag ? (
-																							<span className="tag--new d-inline-block">
-																								{ditem.tag}
-																							</span>
+																							<div className="tag-container">
+																								<span className="tag--new">
+																									{ditem.tag}
+																								</span>
+																							</div>
 																						) : null}
 																					</div>
 																				</a>
@@ -1044,9 +1046,11 @@ const NavigationDefault = ({ buttons }) => {
 																							{ditem.description}
 																						</span>
 																						{ditem.tag ? (
-																							<span className="tag--new d-inline-block">
-																								{ditem.tag}
-																							</span>
+																							<div className="tag-container">
+																								<span className="tag--new">
+																									{ditem.tag}
+																								</span>
+																							</div>
 																						) : null}
 																					</div>
 																				</a>
@@ -1090,9 +1094,11 @@ const NavigationDefault = ({ buttons }) => {
 																							{ditem.description}
 																						</span>
 																						{ditem.tag ? (
-																							<span className="tag--new d-inline-block">
-																								{ditem.tag}
-																							</span>
+																							<div className="tag-container">
+																								<span className="tag--new">
+																									{ditem.tag}
+																								</span>
+																							</div>
 																						) : null}
 																					</div>
 																				</a>

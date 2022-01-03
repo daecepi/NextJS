@@ -138,7 +138,7 @@ export default function FinalHeroFull({ title, copy }) {
 										className="c-button c-button--outline  section-background-flavor "
 										style={{
 											justifyContent: "center",
-											marginLeft: "5px",
+											marginLeft: "10px",
 											width: "fit-content",
 										}}
 									>
