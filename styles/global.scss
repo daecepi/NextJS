@@ -4,7 +4,10 @@
 
 @font-face {
 	font-family: "Graphik-Light";
-	src: url("/fonts/Graphik-Light-Web.woff2") format("woff2");
+	src: 	local("Graphik Light"),
+				local("Graphik-Light"),
+				url("/fonts/Graphik-Light-Web.woff2") format("woff2"), 
+				url("/fonts/Graphik-Light-Web.woff") format("woff");
 	font-weight: 300;
 	font-style: normal;
 	font-stretch: normal;
@@ -13,7 +16,10 @@
 
 @font-face {
 	font-family: "Graphik-Regular";
-	src: url("/fonts/Graphik-Regular-Web.woff2") format("woff2");
+	src: 	local("Graphik Regular"),
+				local("Graphik-Regular"),
+				url("/fonts/Graphik-Regular-Web.woff2") format("woff2"), 
+				url("/fonts/Graphik-Regular-Web.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
 	font-stretch: normal;
@@ -22,7 +28,10 @@
 
 @font-face {
 	font-family: "Graphik-Medium";
-	src: url("/fonts/Graphik-Medium-Web.woff2") format("woff2");
+	src: 	local("Graphik Medium"),
+				local("Graphik-Medium"),
+				url("/fonts/Graphik-Medium-Web.woff2") format("woff2"), 
+				url("/fonts/Graphik-Medium-Web.woff") format("woff");
 	font-weight: 500;
 	font-style: normal;
 	font-stretch: normal;
