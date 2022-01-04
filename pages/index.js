@@ -80,7 +80,7 @@ export default function Home({ entry, globals }) {
 				<li
 					id="temp-logo-module--images"
 					className="logo-section--images "
-					style={{ paddingBottom: "2px" }}
+					style={{ paddingTop: "5px" }}
 				>
 					<Image
 						style={{ width: "calc(100% / 1.3)!important;" }}
@@ -90,7 +90,11 @@ export default function Home({ entry, globals }) {
 						height={18}
 					/>
 				</li>
-				<li id="temp-logo-module--images" className="logo-section--images ">
+				<li
+					id="temp-logo-module--images"
+					className="logo-section--images "
+					style={{ paddingTop: "4px" }}
+				>
 					<Image
 						style={{ width: "calc(100% / 1.3)!important;" }}
 						src="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_masterclass@2x.png"
@@ -102,7 +106,7 @@ export default function Home({ entry, globals }) {
 				<li
 					id="temp-logo-module--images"
 					className="logo-section--images "
-					style={{ paddingBottom: "2px" }}
+					style={{ paddingTop: "4px" }}
 				>
 					<Image
 						style={{ width: "calc(100% / 1.3)!important;" }}
@@ -147,7 +151,11 @@ export default function Home({ entry, globals }) {
 						height={51}
 					/>
 				</li>
-				<li id="temp-logo-module--images" className="logo-section--images ">
+				<li
+					id="temp-logo-module--images"
+					className="logo-section--images "
+					style={{ marginTop: "4px" }}
+				>
 					<Image
 						style={{ width: "calc(100% / 1.3)!important;" }}
 						src="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_houwzer2x.png"
