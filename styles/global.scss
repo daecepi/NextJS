@@ -1245,8 +1245,6 @@ section.animation-two-mobile:before {
 }
 @tailwind utilities;
 
-p,
-address,
-li {
+p {
 	font-family: $regular-font;
 }

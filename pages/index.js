@@ -9,7 +9,6 @@ import ProductTwoUp from "../components/ProductsComponent/ProductTwoUp/ProductTw
 import TwoUp from "../components/ProductsComponent/ProductTwoUp/TwoUp";
 import { useCallback } from "react";
 import FinalHeroFull from "../components/SinglesComponents/FinalHeroFull/FinalHeroFull";
-import ProductTwoUpVideoMobile from "../components/ProductsComponent/ProductTwoUpVideoMobile/ProductTwoUpVideoMobile";
 
 export default function Home({ entry, globals }) {
 	console.log("page fields ", entry, globals);
@@ -204,8 +203,6 @@ export default function Home({ entry, globals }) {
 					</picture>
 				</li>
 			</LogoComponent>
-
-			{/* <ProductTwoUpVideoMobile /> */}
 
 			<ProductTwoUp
 				fullSectionClass="c-cols-landing sales-reports-special d-flex"
