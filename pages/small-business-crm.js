@@ -82,7 +82,7 @@ export default function SmallBusinessCRM() {
 					</div>
 				</div>
 			</section>
-			<ProductTwoUp>
+			<ProductTwoUp fullSectionClass="no-bottom-padding">
 				<TwoUp
 					eyebrow="ONE CENTRALIZED SYSTEM"
 					title="Finally, everything in one place."
@@ -92,18 +92,32 @@ export default function SmallBusinessCRM() {
 					imageHeight="430"
 					ctaText="Learn More"
 					ctaUrl="/collaboration"
+					imageClass="no-embelleshment"
+					imageSpacingClass="col-md-6"
+					textSpacingClass="col-md-6"
+					titleClass="mb-0"
+					dropLeft
 				/>
+			</ProductTwoUp>
+			<ProductTwoUp fullSectionClass="no-bottom-padding">
 				<TwoUp
-					eyebrow="Copper plus Google Workspace</pre>"
+					eyebrow="Copper plus Google Workspace"
 					title="Work right from Gmail."
 					copy="Through a seamless integration with Gmail, Docs, Sheets, and Hangouts, Copper empowers you to effortlessly track leads, work deals, add tasks, and collaborate together — all from your inbox. You won’t even notice you’re using a CRM."
 					imageUrl="/imgs/segmentation/SMB-Ui04.png"
 					imageWidth="538"
 					imageHeight="464"
-					reverse
 					ctaText="Learn More"
 					ctaUrl="/g-suite-crm"
+					imageClass="no-embelleshment"
+					imageSpacingClass="col-md-6"
+					textSpacingClass="col-md-5 offset-md-1"
+					titleClass="mb-0"
+					dropLeft
+					reverse
 				/>
+			</ProductTwoUp>
+			<ProductTwoUp fullSectionClass="no-bottom-padding">
 				<TwoUp
 					eyebrow="AUTOMATED DATA ENTRY"
 					title="Say goodbye to manual data entry."
@@ -113,6 +127,11 @@ export default function SmallBusinessCRM() {
 					imageHeight="711"
 					ctaText="Eliminate data entry"
 					ctaUrl="/productivity"
+					imageClass="no-embelleshment"
+					imageSpacingClass="col-md-5 offset-md-1"
+					textSpacingClass="col-md-6"
+					titleClass="mb-0"
+					dropLeft
 				/>
 			</ProductTwoUp>
 			<CaseStudy

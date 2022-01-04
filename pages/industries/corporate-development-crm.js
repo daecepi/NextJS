@@ -80,7 +80,7 @@ export default function CorporateDevCrm({}) {
 				imageUrl="/imgs/industry/industry-corp-dev-IMG-01.png"
 			/>
 
-			<ProductTwoUp>
+			<ProductTwoUp fullSectionClass="no-bottom-padding">
 				<TwoUp
 					eyebrow="ZERO DATA ENTRY"
 					title="Spend time on new acquisitions, not data entry."
@@ -90,8 +90,15 @@ export default function CorporateDevCrm({}) {
 					imageHeight="520"
 					ctaUrl="/blog/storm-ventures-case-study"
 					ctaText="How Storm Ventures focused on acquisitions."
+					imageClass="no-embelleshment"
+					imageSpacingClass="col-md-6"
+					textSpacingClass="col-md-5 offset-md-1"
+					titleClass="mb-0"
+					dropLeft
 					reverse
 				/>
+			</ProductTwoUp>
+			<ProductTwoUp fullSectionClass="no-bottom-padding">
 				<TwoUp
 					eyebrow="DEAL TRACKING"
 					title="Manage multiple deal pipelines."
@@ -99,8 +106,14 @@ export default function CorporateDevCrm({}) {
 					imageUrl="/imgs/industry/industry-corp-dev-IMG-03.png"
 					imageWidth="540"
 					imageHeight="369"
+					imageClass="no-embelleshment"
+					imageSpacingClass="col-md-6"
+					textSpacingClass="col-md-6"
+					titleClass="mb-0"
 					dropRight
 				/>
+			</ProductTwoUp>
+			<ProductTwoUp fullSectionClass="">
 				<TwoUp
 					eyebrow="NATIVE GOOGLE WORKSPACE INTEGRATION "
 					title="Manage relationships right from Gmail."
@@ -108,6 +121,10 @@ export default function CorporateDevCrm({}) {
 					imageUrl="/imgs/industry/industry-corp-dev-IMG-04.png"
 					imageWidth="540"
 					imageHeight="426"
+					imageClass="no-embelleshment"
+					imageSpacingClass="col-md-6"
+					textSpacingClass="col-md-5 offset-md-1"
+					titleClass="mb-0"
 					reverse
 				/>
 			</ProductTwoUp>

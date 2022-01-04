@@ -9,6 +9,7 @@ import ProductTwoUp from "../components/ProductsComponent/ProductTwoUp/ProductTw
 import TwoUp from "../components/ProductsComponent/ProductTwoUp/TwoUp";
 import { useCallback } from "react";
 import FinalHeroFull from "../components/SinglesComponents/FinalHeroFull/FinalHeroFull";
+import ProductTwoUpVideoMobile from "../components/ProductsComponent/ProductTwoUpVideoMobile/ProductTwoUpVideoMobile";
 
 export default function Home({ entry, globals }) {
 	console.log("page fields ", entry, globals);
@@ -204,20 +205,37 @@ export default function Home({ entry, globals }) {
 				</li>
 			</LogoComponent>
 
-			<ProductTwoUp>
+			{/* <ProductTwoUpVideoMobile /> */}
+
+			<ProductTwoUp
+				fullSectionClass="c-cols-landing sales-reports-special d-flex"
+				containerClass="c-animation-container"
+				showHiddenH2
+			>
 				<TwoUp
 					eyebrow="THE CRM FOR WORKSPACE"
 					title="We’re known for our Google Workspace integration."
 					copy="Use Google Workspace? Then you already know how to use Copper. Work out of your inbox with the CRM integration for Google Workspace and Chrome."
-					reverse
 					videoId="vid-2"
 					videoWebm="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Adoption.webm"
 					videoMp4="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Adoption.mp4"
 					ctaText="Learn more"
 					ctaUrl="/g-suite-crm"
+					imageClass="c-image--center c-image--shadow h-remove-shadow c-image-special-margin--mobile"
+					imageSpacingClass="col-md-6 d-flex align-items-center"
+					textSpacingClass="col-md-5 offset-md-1"
+					titleClass="mb-0"
+					copyClass="mb-0"
+					reverse
 					titleh3
-					removeBottomSpacing
+					cHeroButtons
 				/>
+			</ProductTwoUp>
+			<ProductTwoUp
+				fullSectionClass="c-cols-landing sales-reports-special"
+				containerClass="c-animation-container"
+				showHiddenH2
+			>
 				<TwoUp
 					eyebrow="BUILD BETTER RELATIONSHIPS"
 					title="Never drop an opportunity again."
@@ -227,21 +245,35 @@ export default function Home({ entry, globals }) {
 					videoMp4="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Opportunities.mp4"
 					ctaText="Learn more"
 					ctaUrl="/track-leads"
+					imageClass="c-image--center c-image--shadow h-remove-shadow c-image-special-margin--mobile"
+					imageSpacingClass="col-md-6 d-flex align-items-center"
+					textSpacingClass="col-md-5 offset-md-1"
+					titleClass="mb-0"
 					titleh3
-					removeBottomSpacing
-					bringAssetToText
+					cHeroButtons
 				/>
+			</ProductTwoUp>
+			<ProductTwoUp
+				fullSectionClass="c-cols-landing sales-reports-special"
+				containerClass="c-animation-container"
+				showHiddenH2
+			>
 				<TwoUp
 					eyebrow="EASY TO ADOPT"
 					title="The CRM tool your team will actually love."
 					copy="Zero learning curve. Zero data entry. Workflows the way you want them. Copper is the fastest path to your most productive team."
-					reverse
 					videoId="vid-5"
 					videoWebm="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Gsuite.webm"
 					videoMp4="https://copper.objects.frb.io/videos/homepage/features/CopperHome-Features-Gsuite.mp4"
 					ctaText="Learn more"
 					ctaUrl="/manage-contacts"
+					imageClass="c-image--center c-image--shadow h-remove-shadow c-image-special-margin--mobile"
+					imageSpacingClass="col-md-6 d-flex align-items-center"
+					textSpacingClass="col-md-5 offset-md-1"
+					titleClass="mb-0"
+					reverse
 					titleh3
+					cHeroButtons
 				/>
 			</ProductTwoUp>
 

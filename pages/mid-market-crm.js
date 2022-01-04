@@ -80,7 +80,7 @@ export default function MidMarkeCRM({ entry, globals }) {
 					</div>
 				</div>
 			</section>
-			<ProductTwoUp>
+			<ProductTwoUp fullSectionClass="no-bottom-padding">
 				<TwoUp
 					eyebrow="SEAMLESS GOOGLE WORKSPACE INTEGRATION"
 					title="Build relationships right in Gmail."
@@ -90,7 +90,14 @@ export default function MidMarkeCRM({ entry, globals }) {
 					imageHeight="452"
 					ctaText="Learn More"
 					ctaUrl="/g-suite-crm"
-				></TwoUp>
+					imageClass="no-embelleshment"
+					imageSpacingClass="col-md-6"
+					textSpacingClass="col-md-6"
+					dropLeft
+					titleClass="mb-0"
+				/>
+			</ProductTwoUp>
+			<ProductTwoUp fullSectionClass="no-bottom-padding">
 				<TwoUp
 					eyebrow="SALES WORKFLOW AUTOMATION"
 					title="No more FOMO on customer interactions."
@@ -101,7 +108,14 @@ export default function MidMarkeCRM({ entry, globals }) {
 					reverse
 					ctaText="Work Together"
 					ctaUrl="/collaboration"
-				></TwoUp>
+					imageClass="no-embelleshment"
+					imageSpacingClass="col-md-6"
+					textSpacingClass="col-md-5 offset-md-1"
+					dropLeft
+					titleClass="mb-0"
+				/>
+			</ProductTwoUp>
+			<ProductTwoUp fullSectionClass="no-bottom-padding">
 				<TwoUp
 					eyebrow="REPORTING AND ANALYTICS"
 					title="Up-to-the-minute business insights."
@@ -111,7 +125,12 @@ export default function MidMarkeCRM({ entry, globals }) {
 					imageHeight="346"
 					ctaText="Learn More"
 					ctaUrl="/insights"
-				></TwoUp>
+					imageClass="no-embelleshment"
+					imageSpacingClass="col-md-5 offset-md-1"
+					textSpacingClass="col-md-6"
+					dropLeft
+					titleClass="mb-0"
+				/>
 			</ProductTwoUp>
 			<CaseStudy
 				eyebrow="Success Story"

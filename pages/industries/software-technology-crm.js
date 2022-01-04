@@ -31,6 +31,7 @@ export default function SoftwareTechCrm({}) {
 					integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
 					crossOrigin="anonymous"
 				></script>
+				<title>Top CRM for SaaS, Software & Tech Companies | Copper</title>
 			</Head>
 			<NavigationDefault />
 			<HeroSinglePages
@@ -85,7 +86,7 @@ export default function SoftwareTechCrm({}) {
 				ctaUrl="/g-suite-crm"
 			/>
 
-			<ProductTwoUp>
+			<ProductTwoUp fullSectionClass="no-bottom-padding">
 				<TwoUp
 					eyebrow="ZERO DATA ENTRY"
 					title="Focus on deals, not on data entry."
@@ -95,8 +96,15 @@ export default function SoftwareTechCrm({}) {
 					imageHeight="521"
 					ctaUrl="/blog/lumapps-case-study"
 					ctaText="LumApps manages 2,000% lead growth with Copper"
+					imageClass="no-embelleshment"
+					imageSpacingClass="col-md-6"
+					textSpacingClass="col-md-5 offset-md-1"
+					titleClass="mb-0"
+					dropLeft
 					reverse
 				/>
+			</ProductTwoUp>
+			<ProductTwoUp fullSectionClass="no-bottom-padding">
 				<TwoUp
 					eyebrow="DATA ACCURACY"
 					title="Data you need to make the sale."
@@ -106,6 +114,10 @@ export default function SoftwareTechCrm({}) {
 					imageHeight="430"
 					ctaUrl="/blog/onesupport-growth-case-study"
 					ctaText="How OneSupport grew subscribers by 173%"
+					imageClass="no-embelleshment"
+					imageSpacingClass="col-md-6"
+					textSpacingClass="col-md-6"
+					titleClass="mb-0"
 					dropRight
 					removeBottomSpacing
 				/>

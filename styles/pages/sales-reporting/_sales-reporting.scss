@@ -1,0 +1,90 @@
+section .sales-color {
+	color: #3b3e3f;
+}
+@media (min-width: 770px) {
+	section h3.sales-font-size {
+		font-size: 52px;
+		line-height: 64px;
+	}
+}
+@media (max-width: 770px) {
+	.c-image.special-hero-background--mobile {
+		background: #d7e0e7;
+	}
+
+	section.c-cols.c-cols-landing.sales-reports-special {
+		padding-top: 30px;
+	}
+
+	section.c-cols.c-cols-landing.h-padding-bottom.sales-reports-special {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	section.c-cols.c-cols-landing .c-image-special-margin--mobile {
+		margin-top: 20px !important;
+		margin-bottom: 0px;
+	}
+}
+
+@media (max-width: 1619px) and (min-width: 768px) {
+	.c-hero--split .c-image {
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		background: #d7e0e7;
+	}
+	.c-hero--split .c-image img {
+		object-fit: unset !important;
+		height: auto !important;
+	}
+}
+
+@media (max-width: 991px) {
+	.sales-reporting .c-hero--split {
+		padding-top: 60px;
+	}
+	.sales-reporting .c-hero--split .container .row .col-md-6 {
+		width: 100%;
+		max-width: 100%;
+		flex: 0 0 100%;
+	}
+	.sales-reporting .c-hero--split .c-image {
+		position: relative;
+		top: 0;
+		left: auto;
+		width: 100%;
+		margin-bottom: 30px;
+		height: 50vh;
+		overflow: hidden;
+		min-height: 500px;
+		max-height: none;
+		display: block;
+	}
+	.sales-reporting .c-hero--split .c-image img {
+		object-fit: cover !important;
+		height: 100% !important;
+	}
+}
+@media (max-width: 515px) {
+	.sales-reporting .c-hero--split .c-image {
+		min-height: unset;
+		height: auto;
+	}
+}
+@media (min-width: 1250px) {
+	#picture-for-short {
+		display: none;
+	}
+	#picture-for-high {
+		display: flex;
+	}
+}
+@media (max-width: 1250px) {
+	#picture-for-short {
+		display: flex;
+	}
+	#picture-for-high {
+		display: none;
+	}
+}

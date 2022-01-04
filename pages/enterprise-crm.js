@@ -44,38 +44,58 @@ export default function EnterpriseCRM() {
 				title="Companies who have joined the Relationship Era."
 				companiesLogos={companiesLogos}
 			/>
-			<ProductTwoUp>
+			<ProductTwoUp fullSectionClass="no-bottom-padding">
 				<TwoUp
 					eyebrow="RECOMMENDED FOR GOOGLE WORKSPACE"
 					title="Manage relationships right in Gmail."
 					copy="Copper is a different kind of CRM. It’s elegantly designed for Google Workspace, so fast-moving enterprises can build the strong relationships that lead to repeat business."
 					imageUrl="/imgs/segmentation/Ent-UI01.png"
+					imageClass="no-embelleshment"
 					imageWidth="534"
 					imageHeight="473"
 					ctaText="Learn More"
 					ctaUrl="/g-suite-crm"
-				></TwoUp>
+					imageSpacingClass="col-md-6"
+					textSpacingClass="col-md-6"
+					titleClass="mb-0"
+					dropLeft
+				/>
+			</ProductTwoUp>
+			<ProductTwoUp fullSectionClass="no-bottom-padding">
 				<TwoUp
 					eyebrow="AUTOMATED DATA ENTRY AND WORKFLOWS"
 					title="Drive team productivity — automagically."
 					copy="Copper eliminates manual data entry, automates every step of your sales process and delivers deal alerts, recommendations right when you need it. Meet the first CRM that drives productivity across the entire organization."
 					imageUrl="/imgs/segmentation/segmentation-enterprise-2.png"
+					imageClass="no-embelleshment"
 					imageWidth="538"
 					imageHeight="770"
 					reverse
 					ctaText="Learn How"
 					ctaUrl="/productivity"
-				></TwoUp>
+					imageSpacingClass="col-md-6"
+					textSpacingClass="col-md-5 offset-md-1"
+					titleClass="mb-0"
+					dropLeft
+				/>
+			</ProductTwoUp>
+			<ProductTwoUp fullSectionClass="no-bottom-padding">
 				<TwoUp
 					eyebrow="POWERFUL INSIGHTS & ANALYTICS"
 					title="Business insights from lead to close."
 					copy="Copper delivers real-time analytics, dashboards and reports that allow you to monitor your entire funnel from lead conversions to pipeline bottlenecks in real time. With Copper, you’ll have all the metrics you need to make make data-driven decisions."
 					imageUrl="/imgs/segmentation/Enterprise-UI03.png"
+					imageClass="no-embelleshment"
 					imageWidth="540"
 					imageHeight="378"
 					ctaText="Work Together"
 					ctaUrl="/insights"
-				></TwoUp>
+					dropRight
+					removeBottomSpacing
+					imageSpacingClass="col-md-6"
+					textSpacingClass="col-md-6"
+					titleClass="mb-0"
+				/>
 			</ProductTwoUp>
 			<CaseStudy
 				eyebrow="Success Story"
@@ -137,12 +157,16 @@ export default function EnterpriseCRM() {
 				<TwoUp
 					eyebrow="CASE STUDY"
 					title="RHR International builds stronger relationships with Copper and Google Workspace."
-					reverse
 					imageUrl="/imgs/segmentation/segmentation-enterprise-4.png"
+					imageClass="no-embelleshment"
 					imageWidth="538"
 					imageHeight="505"
 					ctaText="Read their story"
 					ctaUrl="/blog/rhr-case-study"
+					imageSpacingClass="col-md-6"
+					textSpacingClass="col-md-5 offset-md-1"
+					reverse
+					dropLeft
 				/>
 			</ProductTwoUp>
 

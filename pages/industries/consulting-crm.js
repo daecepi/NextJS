@@ -75,7 +75,7 @@ export default function ConsultingCrm() {
 				imageUrl="/imgs/industry/consulting-02.png"
 			/>
 
-			<ProductTwoUp>
+			<ProductTwoUp fullSectionClass="no-bottom-padding">
 				<TwoUp
 					eyebrow="ZERO DATA ENTRY"
 					title="Less busy work, more revenue."
@@ -86,7 +86,12 @@ export default function ConsultingCrm() {
 					imageHeight="518"
 					ctaText="How RHR manages relationships with Copper."
 					ctaUrl="resources/rhr-case-study"
+					imageSpacingClass="col-md-6"
+					textSpacingClass="col-md-5 offset-md-1"
+					titleClass="mb-0"
 				/>
+			</ProductTwoUp>
+			<ProductTwoUp fullSectionClass="">
 				<TwoUp
 					eyebrow="STREAMLINED WORKFLOWS"
 					title="Multiple funnels: from deals to projects"
@@ -94,6 +99,10 @@ export default function ConsultingCrm() {
 					imageUrl="/imgs/industry/industry-consulting-IMG-03@2x.png"
 					imageWidth="540"
 					imageHeight="433"
+					imageClass="no-embelleshment"
+					imageSpacingClass="col-md-6"
+					textSpacingClass="col-md-6"
+					titleClass="mb-0"
 					dropRight
 				/>
 			</ProductTwoUp>

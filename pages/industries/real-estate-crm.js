@@ -81,7 +81,7 @@ const RealEstateCrm = () => {
 				ctaText="Learn More"
 				ctaUrl="/g-suite-crm"
 			/>
-			<ProductTwoUp>
+			<ProductTwoUp fullSectionClass="no-bottom-padding">
 				<TwoUp
 					eyebrow="GOODBYE DATA ENTRY"
 					title="Move right in—there’s zero data entry with Copper."
@@ -91,8 +91,14 @@ const RealEstateCrm = () => {
 					imageHeight="520"
 					ctaUrl="/blog/houwzer-case-study"
 					ctaText="See how Howzer grew their real estate agent team"
+					imageClass="no-embelleshment"
+					imageSpacingClass="col-md-6"
+					textSpacingClass="col-md-5 offset-md-1"
+					titleClass="mb-0"
 					reverse
 				/>
+			</ProductTwoUp>
+			<ProductTwoUp fullSectionClass="no-bottom-padding">
 				<TwoUp
 					eyebrow="REAL ESTATE PROCESSES"
 					title="Nurture long-term client relationships on their timeline."
@@ -102,7 +108,14 @@ const RealEstateCrm = () => {
 					imageHeight="511"
 					ctaUrl="/blog/reali-case-study"
 					ctaText="Watch how Reali strengthens relationships."
+					imageClass="no-embelleshment"
+					imageSpacingClass="col-md-7"
+					textSpacingClass="col-md-5"
+					titleClass="mb-0"
+					dropRight
 				/>
+			</ProductTwoUp>
+			<ProductTwoUp fullSectionClass="no-bottom-padding">
 				<TwoUp
 					eyebrow="MOBILE CRM"
 					title="Manage your listings from anywhere."
@@ -112,8 +125,12 @@ const RealEstateCrm = () => {
 					imageHeight="653"
 					ctaUrl="/blog/houwzer-case-study"
 					ctaText="How this Remax realtor utilizes Copper on the road"
+					imageClass="no-embelleshment"
+					imageSpacingClass="col-md-6"
+					textSpacingClass="col-md-5 offset-md-1"
+					titleClass="mb-0"
+					dropLeft
 					reverse
-					removeBottomSpacing
 				/>
 			</ProductTwoUp>
 			<CallOut

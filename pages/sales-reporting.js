@@ -86,15 +86,30 @@ export default function SalesReporting() {
 					</div>
 				</div>
 			</section>
-			<ProductTwoUp>
+			<ProductTwoUp
+				fullSectionClass="c-cols-landing sales-reports-special"
+				containerClass="c-animation-container"
+				showHiddenH2
+			>
 				<TwoUp
-					eyebrow="SALES WORKFLOW AUTOMATION"
+					eyebrow="SUPER SIMPLE GROWTH"
 					title="Everything you need to get started in a heartbeat."
 					copy="Ready-to-go templates will have you up and running in one simple click."
 					videoId="vid-1"
 					videoWebm="https://copper.objects.frb.io/videos/sales-reporting/1-Reports-LP-Templates.webm"
 					videoMp4="https://copper.objects.frb.io/videos/sales-reporting/1-Reports-LP-Templates.mp4"
+					imageClass="c-image--center c-image--shadow h-remove-shadow c-image-special-margin--mobile"
+					imageSpacingClass="col-md-6 d-flex align-items-center offset-md-1"
+					textSpacingClass="col-md-5"
+					titleClass="sales-font-size"
+					titleh3
 				/>
+			</ProductTwoUp>
+			<ProductTwoUp
+				fullSectionClass="c-cols-landing h-padding-bottom sales-reports-special"
+				containerClass="c-animation-container"
+				showHiddenH2
+			>
 				<TwoUp
 					eyebrow="TOTAL FLEXIBILITY"
 					title="Personalize to fit your special business needs"
@@ -103,6 +118,11 @@ export default function SalesReporting() {
 					videoId="vid-2"
 					videoWebm="https://copper.objects.frb.io/videos/sales-reporting/2-Reports-Personalize.webm"
 					videoMp4="https://copper.objects.frb.io/videos/sales-reporting/2-Reports-Personalize.mp4"
+					imageClass="c-image--center c-image--shadow h-remove-shadow c-image-special-margin--mobile"
+					imageSpacingClass="col-md-6 d-flex align-items-center"
+					textSpacingClass="col-md-5 offset-md-1"
+					titleClass="sales-font-size mb-0"
+					titleh3
 				/>
 			</ProductTwoUp>
 			<section className="c-quote-carousel js-quote-carousel">
@@ -160,7 +180,11 @@ export default function SalesReporting() {
 					</div>
 				</div>
 			</section>
-			<ProductTwoUp>
+			<ProductTwoUp
+				fullSectionClass="c-cols-landing sales-reports-special"
+				containerClass="c-animation-container"
+				showHiddenH2
+			>
 				<TwoUp
 					eyebrow="BUILD YOUR INSIGHTS"
 					title="Customize and create your own insights"
@@ -168,7 +192,18 @@ export default function SalesReporting() {
 					videoId="vid-3"
 					videoWebm="https://copper.objects.frb.io/videos/sales-reporting/3-Reports-Customize.webm"
 					videoMp4="https://copper.objects.frb.io/videos/sales-reporting/3-Reports-Customize.mp4"
+					imageClass="c-image--center c-image--shadow h-remove-shadow c-image-special-margin--mobile"
+					imageSpacingClass="col-md-6 d-flex align-items-center offset-md-1"
+					textSpacingClass="col-md-5"
+					titleClass="sales-font-size"
+					titleh3
 				/>
+			</ProductTwoUp>
+			<ProductTwoUp
+				fullSectionClass="c-cols-landing h-padding-bottom sales-reports-special"
+				containerClass="c-animation-container"
+				showHiddenH2
+			>
 				<TwoUp
 					eyebrow="EASY COLLABORATION"
 					title="Schedule report delivery"
@@ -177,6 +212,11 @@ export default function SalesReporting() {
 					videoId="vid-4"
 					videoWebm="https://copper.objects.frb.io/videos/sales-reporting/4-Reports-Email-Schedule.webm"
 					videoMp4="https://copper.objects.frb.io/videos/sales-reporting/4-Reports-Email-Schedule.mp4"
+					imageClass="c-image--center c-image--shadow h-remove-shadow c-image-special-margin--mobile"
+					imageSpacingClass="col-md-6 d-flex align-items-center"
+					textSpacingClass="col-md-5 offset-md-1"
+					titleClass="sales-font-size"
+					titleh3
 				/>
 			</ProductTwoUp>
 			<FinalHeroFull

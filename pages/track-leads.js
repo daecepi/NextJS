@@ -80,6 +80,9 @@ const TrackLeads = () => {
 						"Assign time-based tasks without lifting a finger",
 					]}
 					bulletsColor="indigo"
+					imageSpacingClass="col-md-7"
+					textSpacingClass="col-md-5"
+					dropRight
 				/>
 				<TwoUp
 					eyebrow="VISUAL SALES PIPELINES"
@@ -94,6 +97,9 @@ const TrackLeads = () => {
 						"Easily see which deals are slipping",
 					]}
 					bulletsColor="indigo"
+					imageSpacingClass="col-md-6"
+					textSpacingClass="col-md-5 offset-md-1"
+					dropLeft
 					reverse
 				/>
 			</ProductTwoUp>
@@ -119,7 +125,10 @@ const TrackLeads = () => {
 					imageUrl="/imgs/product/200309_TrackDeals_UI04.png"
 					imageWidth="540"
 					imageHeight="560"
-					removeBottomSpacing
+					rowSpacingClass="extra-padding--bottom"
+					imageSpacingClass="col-md-6"
+					textSpacingClass="col-md-5"
+					dropRight
 				/>
 			</ProductTwoUp>
 

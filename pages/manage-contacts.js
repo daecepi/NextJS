@@ -1,5 +1,4 @@
 import Head from "next/head";
-import NavigationDefault from "../components/Navigation/NavigationDefault";
 import Footer from "../components/Footer/Footer";
 import Image from "next/image";
 import Link from "next/link";
@@ -67,34 +66,34 @@ const ManageContacts = ({ entry, globals }) => {
 					</div>
 				</div>
 			</section>
-			{/* <ProductOneCol
-          title="Get more done—by doing less."
-          copy={[
-            "Spend your time on the tasks in your selling",
-            "process that are actually valuable.",
-          ]}
-          imageUrl="https://copper.objects.frb.io/imgs/product/manage-contacts/200309_Organize_UI01.png"
-        /> */}
 			<ProductTwoUp>
 				<TwoUp
 					eyebrow="SKIP MANUAL DATA ENTRY"
 					title="No more wasted time on data entry."
 					copy={
 						<>
-							<p className="mb-4 mt-0">
-								Copper suggests recent contacts you’ve been emailing to be added
-								to your list so that you don’t lose track of anyone.
-							</p>
-							<p>
-								It even automatically pulls in contact details like phone
-								numbers, email addresses, and social media so you can say
-								goodbye to entering that all by hand!
-							</p>
+							<div className="pb-1">
+								<p className="mb-4 mt-0">
+									Copper suggests recent contacts you’ve been emailing to be
+									added to your list so that you don’t lose track of anyone.
+								</p>
+							</div>
+							<div>
+								<p className="mt-1">
+									It even automatically pulls in contact details like phone
+									numbers, email addresses, and social media so you can say
+									goodbye to entering that all by hand!
+								</p>
+							</div>
 						</>
 					}
 					imageUrl="/imgs/product/200309_Organize_UI02.png"
 					imageWidth="635"
 					imageHeight="642"
+					rowSpacingClass="extra-padding--bottom"
+					imageSpacingClass="col-md-7"
+					textSpacingClass="col-md-5"
+					dropRight
 				/>
 				<TwoUp
 					eyebrow="UNDERSTAND YOUR CONTACTS BETTER"
@@ -107,8 +106,11 @@ const ManageContacts = ({ entry, globals }) => {
 						"Save lists of contacts by type, like: current customers, partners, VIP clients, etc.",
 						"Send targeted communications by industry, geography, company size, and more",
 					]}
-					bulletsColor="indigo"
+					bulletsColor="barney-purple"
+					imageSpacingClass="col-md-6"
+					textSpacingClass="col-md-5 offset-md-1"
 					reverse
+					dropLeft
 				/>
 			</ProductTwoUp>
 			<CaseStudy
@@ -131,6 +133,10 @@ const ManageContacts = ({ entry, globals }) => {
 					imageUrl="https://copper.objects.frb.io/imgs/product/manage-contacts/200309_Organize_UI04.png"
 					imageWidth="540"
 					imageHeight="600"
+					imageSpacingClass="col-md-7"
+					textSpacingClass="col-md-5"
+					rowSpacingClass="extra-padding--bottom"
+					dropRight
 				/>
 			</ProductTwoUp>
 			<ThreeColList

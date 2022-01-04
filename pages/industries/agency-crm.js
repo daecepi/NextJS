@@ -19,6 +19,9 @@ const AgencyCrm = () => {
 		<>
 			<Head>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<title>
+					Agency CRM for Advertising, Marketing & Creative Agencies | Copper
+				</title>
 			</Head>
 			<NavigationDefault></NavigationDefault>
 			<HeroSinglePages
@@ -64,7 +67,7 @@ const AgencyCrm = () => {
 				ctaText="Learn More"
 				ctaUrl="/g-suite-crm"
 			/>
-			<ProductTwoUp>
+			<ProductTwoUp fullSectionClass="no-bottom-padding">
 				<TwoUp
 					eyebrow="CENTRALIZE RELATIONSHIPS"
 					title="Every little detail, 100% organized."
@@ -74,8 +77,15 @@ const AgencyCrm = () => {
 					imageHeight="605"
 					ctaText="See how Advoc8 does it."
 					ctaUrl="/blog/advoc8-agency-case-study"
+					imageClass="no-embelleshment"
+					imageSpacingClass="col-md-6"
+					textSpacingClass="col-md-5 offset-md-1"
+					titleClass="mb-0"
+					dropLeft
 					reverse
 				/>
+			</ProductTwoUp>
+			<ProductTwoUp fullSectionClass="">
 				<TwoUp
 					eyebrow="REAL-TIME COLLABORATION"
 					title="Up-to-the-minute insights on everybody you interact with."
@@ -85,7 +95,11 @@ const AgencyCrm = () => {
 					imageHeight="604"
 					ctaText="Learn More"
 					ctaUrl="/collaboration"
-					dropRight
+					imageClass="no-embelleshment"
+					imageSpacingClass="col-md-5 offset-md-1"
+					textSpacingClass="col-md-6"
+					titleClass="mb-0"
+					dropLeft
 				/>
 			</ProductTwoUp>
 			<Quote

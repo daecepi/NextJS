@@ -526,6 +526,11 @@ export default function Integrations({ entry, globals }) {
 					imageHeight="637"
 					ctaText="View the API documentation"
 					ctaUrl="https://developer.copper.com"
+					imageSpacingClass="col-md-7"
+					textSpacingClass="col-md-5"
+					rowSpacingClass="extra-padding--bottom"
+					dropRight
+					cHeroButtons
 				/>
 			</ProductTwoUp>
 			<CaseStudy

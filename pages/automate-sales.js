@@ -47,8 +47,11 @@ const AutomateSells = () => {
 					imageUrl="/imgs/product/200309_Automate_UI02.png"
 					imageWidth="635"
 					imageHeight="561"
-					reverse={false}
-				></TwoUp>
+					imageSpacingClass="col-md-7"
+					textSpacingClass="col-md-5"
+					dropRight
+					rowSpacingClass="extra-padding--bottom"
+				/>
 				<TwoUp
 					eyebrow="EMAIL AUTOMATION"
 					title="More personalized emails, less effort."
@@ -63,8 +66,13 @@ const AutomateSells = () => {
 						"Automate all your key customer communications based on CRM status, website intent signals, email behavior and more",
 					]}
 					bulletsColor="hot-pink"
-					reverse={true}
-				></TwoUp>
+					imageSpacingClass="col-md-6"
+					textSpacingClass="col-md-5 offset-md-1"
+					reverse
+					removeBottomSpacing
+					dropLeft
+					titleClass="mb-0"
+				/>
 			</ProductTwoUp>
 			<CaseStudy
 				eyebrow="Success Story"
@@ -87,8 +95,10 @@ const AutomateSells = () => {
 					imageUrl="/imgs/product/200309_Automate_UI04.png"
 					imageWidth="540"
 					imageHeight="344"
-					reverse={false}
-				></TwoUp>
+					imageSpacingClass="col-md-6"
+					textSpacingClass="col-md-5"
+					dropRight
+				/>
 			</ProductTwoUp>
 			<ThreeColList
 				title="Let Copper do the busywork."
