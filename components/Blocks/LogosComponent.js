@@ -13,7 +13,9 @@ const LogoComponent = (props) => {
 						<p>{props.title}</p>
 					</div>
 					<div className="smb-logo-icons ">
-						<ul className="logo-section--one-column">{props.children}</ul>
+						<ul className="logo-section--one-column shortened">
+							{props.children}
+						</ul>
 					</div>
 				</div>
 			</div>

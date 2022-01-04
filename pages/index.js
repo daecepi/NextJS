@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Script from "next/script";
 import Image from "next/image";
 import { getEntryBySectionHandle } from "../lib/api";
 import HeroHomePage from "../components/Blocks/HeroTypes/HeroHomePage";
@@ -24,21 +25,20 @@ export default function Home({ entry, globals }) {
 		wistiaScript.src = url;
 		wistiaScript.defer = true;
 
-		document.body.appendChild(wistiaLibrary);
-		document.body.appendChild(wistiaScript);
+		const element = document.getElementById(id);
+		if (element) {
+			document.body.appendChild(wistiaLibrary);
+			document.body.appendChild(wistiaScript);
 
-		// Making the triggering of the video
-		window._wq = window._wq || [];
-		_wq.push({
-			id: "abcde12345",
-			onReady: function (video) {
-				console.log("I got a handle to the video!", video);
-			},
-		});
-	}, []);
-
-	const callBackTest = useCallback(() => {
-		console.log("TES CALLBACK");
+			// Making the triggering of the video
+			window._wq = window._wq || [];
+			_wq.push({
+				id: "abcde12345",
+				onReady: function (video) {
+					console.log("I got a handle to the video!", video);
+				},
+			});
+		}
 	}, []);
 
 	return (
@@ -54,153 +54,107 @@ export default function Home({ entry, globals }) {
 				subtitle="Focus on what matters most: building enduring business relationships. We’ll take care of the rest."
 			/>
 
+			<style jsx global>
+				{`
+					.t-link.inverted-arrow {
+						padding-left: 4px;
+						padding-right: 0px;
+					}
+
+					.t-link {
+						font-family: "Graphik-Medium";
+						font-size: 14px;
+						letter-spacing: 0;
+						line-height: 20px;
+						border-bottom: 4px solid #b8ff01;
+						display: inline-block;
+						color: #3c3f40;
+						padding-bottom: 3px;
+						padding-right: 7px;
+						position: relative;
+						cursor: pointer;
+					}
+				`}
+			</style>
 			<LogoComponent title="Over 25,000+ companies trust Copper.">
-				<li id="temp-logo-module--images" className="logo-section--images ">
-					<picture>
-						<source
-							type="image/webp"
-							srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_IDEO@2x.webp"
-							alt="Ideo graphic"
-						/>
-						<source
-							type="image/png"
-							srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_IDEO@2x.png"
-							alt="Ideo graphic"
-						/>
-						<Image
-							style={{ width: "calc(100% / 1.3)!important;" }}
-							src="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_IDEO@2x.png"
-							alt="Ideo graphic"
-							width={80}
-							height={19}
-						/>
-					</picture>
+				<li
+					id="temp-logo-module--images"
+					className="logo-section--images "
+					style={{ paddingBottom: "2px" }}
+				>
+					<Image
+						style={{ width: "calc(100% / 1.3)!important;" }}
+						src="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_IDEO@2x.png"
+						alt="Ideo graphic"
+						width={80}
+						height={18}
+					/>
 				</li>
 				<li id="temp-logo-module--images" className="logo-section--images ">
-					<picture>
-						<source
-							type="image/webp"
-							srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_masterclass@2x.webp"
-							alt="Masterclass graphic"
-						/>
-						<source
-							type="image/png"
-							srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_masterclass@2x.png"
-							alt="Masterclass graphic"
-						/>
-						<Image
-							style={{ width: "calc(100% / 1.3)!important;" }}
-							src="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_masterclass@2x.png"
-							alt="Masterclass graphic"
-							width={80}
-							height={11}
-						/>
-					</picture>
+					<Image
+						style={{ width: "calc(100% / 1.3)!important;" }}
+						src="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_masterclass@2x.png"
+						alt="Masterclass graphic"
+						width={80}
+						height={11}
+					/>
+				</li>
+				<li
+					id="temp-logo-module--images"
+					className="logo-section--images "
+					style={{ paddingBottom: "2px" }}
+				>
+					<Image
+						style={{ width: "calc(100% / 1.3)!important;" }}
+						src="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_swell@2x.png"
+						alt="Swell graphic"
+						width={80}
+						height={25}
+					/>
+				</li>
+				<li
+					id="temp-logo-module--images"
+					className="logo-section--images "
+					style={{ marginBottom: "25px" }}
+				>
+					<Image
+						style={{ width: "calc(100% / 1.3)!important;" }}
+						src="https://copper.objects.frb.io/imgs/homepage//logos-module/Logo_Mailchimp.png"
+						alt="Bubbles graphic"
+						width={81}
+						height={22}
+					/>
+				</li>
+				<li
+					id="temp-logo-module--images"
+					className="logo-section--images "
+					style={{ marginBottom: "25px" }}
+				>
+					<Image
+						style={{ width: "calc(100% / 1.3)!important;" }}
+						src="https://copper.objects.frb.io/imgs/homepage/logos-module/Logo_Softbank.png"
+						alt="Bubbles graphic"
+						width={80}
+						height={12}
+					/>
 				</li>
 				<li id="temp-logo-module--images" className="logo-section--images ">
-					<picture>
-						<source
-							type="image/webp"
-							srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_swell@2x.webp"
-							alt="Swell graphic"
-						/>
-						<source
-							type="image/png"
-							srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_swell@2x.png"
-							alt="Swell graphic"
-						/>
-						<Image
-							style={{ width: "calc(100% / 1.3)!important;" }}
-							src="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_swell@2x.png"
-							alt="Swell graphic"
-							width={80}
-							height={26}
-						/>
-					</picture>
+					<Image
+						style={{ width: "calc(100% / 1.3)!important;" }}
+						src="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_zipi@2x.png"
+						alt="Swell graphic"
+						width={72}
+						height={51}
+					/>
 				</li>
 				<li id="temp-logo-module--images" className="logo-section--images ">
-					<picture>
-						<source
-							type="image/webp"
-							srcSet="https://copper.objects.frb.io/imgs/homepage//logos-module/Logo_Mailchimp.webp"
-							alt="Bubbles graphic"
-						/>
-						<source
-							type="image/png"
-							srcSet="https://copper.objects.frb.io/imgs/homepage//logos-module/Logo_Mailchimp.png"
-							alt="Bubbles graphic"
-						/>
-						<Image
-							style={{ width: "calc(100% / 1.3)!important;" }}
-							src="https://copper.objects.frb.io/imgs/homepage//logos-module/Logo_Mailchimp.png"
-							alt="Bubbles graphic"
-							width={80}
-							height={22}
-						/>
-					</picture>
-				</li>
-				<li id="temp-logo-module--images" className="logo-section--images ">
-					<picture>
-						<source
-							type="image/webp"
-							srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/Logo_Softbank.webp"
-							alt="Bubbles graphic"
-						/>
-						<source
-							type="image/png"
-							srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/Logo_Softbank.png"
-							alt="Bubbles graphic"
-						/>
-						<Image
-							style={{ width: "calc(100% / 1.3)!important;" }}
-							src="https://copper.objects.frb.io/imgs/homepage/logos-module/Logo_Softbank.png"
-							alt="Bubbles graphic"
-							width={80}
-							height={12}
-						/>
-					</picture>
-				</li>
-				<li id="temp-logo-module--images" className="logo-section--images ">
-					<picture>
-						<source
-							type="image/webp"
-							srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_zipi@2x.webp"
-							alt="Swell graphic"
-						/>
-						<source
-							type="image/png"
-							srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_zipi@2x.png"
-							alt="Swell graphic"
-						/>
-						<Image
-							style={{ width: "calc(100% / 1.3)!important;" }}
-							src="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_zipi@2x.png"
-							alt="Swell graphic"
-							width={72}
-							height={51}
-						/>
-					</picture>
-				</li>
-				<li id="temp-logo-module--images" className="logo-section--images ">
-					<picture>
-						<source
-							type="image/webp"
-							srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_houwzer2x.webp"
-							alt="Bubbles graphic"
-						/>
-						<source
-							type="image/png"
-							srcSet="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_houwzer2x.png"
-							alt="Bubbles graphic"
-						/>
-						<Image
-							style={{ width: "calc(100% / 1.3)!important;" }}
-							src="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_houwzer2x.png"
-							alt="Bubbles graphic"
-							width={80}
-							height={23}
-						/>
-					</picture>
+					<Image
+						style={{ width: "calc(100% / 1.3)!important;" }}
+						src="https://copper.objects.frb.io/imgs/homepage/logos-module/customer_logo_houwzer2x.png"
+						alt="Bubbles graphic"
+						width={80}
+						height={23}
+					/>
 				</li>
 			</LogoComponent>
 
@@ -255,13 +209,7 @@ export default function Home({ entry, globals }) {
 						What our clients are saying.
 					</h2>
 
-					<p
-						className="text-center"
-						style={{ color: "white" }}
-						onClick={() => {
-							callBackTest();
-						}}
-					>
+					<p className="text-center" style={{ color: "white" }}>
 						Customer satisfaction, customer retention, and customer loyalty are
 						our top priorities.
 					</p>
@@ -689,6 +637,313 @@ export default function Home({ entry, globals }) {
 					</div>
 				</div>
 			</section>
+			<Script
+				src="/js/Lazyload.min.js"
+				onLoad={() => {
+					LazyLoad.js(
+						[
+							"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js",
+							"//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js",
+							"//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js",
+							"https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js",
+							"https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js",
+							"https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js",
+						],
+						function () {
+							LazyLoad.css([
+								"https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css",
+							]);
+							LazyLoad.js(
+								[
+									"https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js",
+								],
+								function () {
+									$(".three-column-slider .container > .container .row").slick({
+										infinite: false,
+										mobileFirst: true,
+										slidesToShow: 1,
+										slidesToScroll: 1,
+										dots: true,
+										rows: 0,
+										appendDots: ".dots-box",
+										appendArrows: ".buttons-box",
+										prevArrow:
+											'<a id="arrowBack" target="" className="button-slide-change t-link inverted-arrow">Prev</a>',
+										nextArrow:
+											'<a id="arrowNext" target="arrowNext"  className="button-slide-change t-link">Next</a>',
+										// the magic
+										responsive: [
+											{
+												breakpoint: 769,
+												settings: {
+													slidesToShow: 3,
+													slidesToScroll: 1,
+													rows: 0,
+												}, // destroys slick
+											},
+										],
+									});
+									$(window).on("resize", function () {
+										$(
+											".three-column-slider .container > .container .row"
+										).slick("resize");
+									});
+								}
+							);
+
+							$(document).ready(function () {
+								var myInterval = setInterval(function () {
+									var videoOne = document.getElementById("vid-1");
+									if (videoOne.readyState >= 3 || videoOne.loadStart) {
+										$("#vid-1-placeholder").css("opacity", "0");
+										clearInterval(myInterval);
+									}
+								}, 200);
+								/* var videoOne = document.getElementById('vid-1');
+						if(videoOne.readyState >= 3 || videoOne.loadStart){
+							$('#vid-1-placeholder').css('opacity','0')
+						}*/
+
+								// Animations part
+								// init
+								// var controller = new ScrollMagic.Controller();
+								gsap.registerPlugin(ScrollTrigger);
+								// let tlOne = gsap.timeline({
+								// 	scrollTrigger:{
+								// 		// markers:true,
+								// 		trigger:'#theAnimation',
+								// 		scrub:1,
+								// 		pin:true,
+								// 		snap:{
+								// 			snapTo:'labels',
+								// 			duration: {min: 0.2, max: 0.5},
+								// 			delay:1
+								// 		}
+								// 	}
+								// });
+								// $('#theAnimation .c-animation-container.d-none').removeClass('d-none');
+								// tlOne
+								// .addLabel('first')
+								// 	.add(()=>{
+								// 		$('#theAnimation .c-animation-container.theone').css('zIndex','999');
+								// 		$('#theAnimation .c-animation-container.thetwo').css('zIndex','1');
+								// 		$('#theAnimation .c-animation-container.thethree').css('zIndex','1');
+								// 	}
+								// 		,'first')
+								// 	.fromTo("#theAnimation .c-animation-container.theone .col_copy", 1, {opacity: 1, y:0}, {opacity: 0,y:-200, ease: Linear.easeNone,onStart:function(){videoPlayer('1-1')}})  // in from left
+								// 	.fromTo("#theAnimation .c-animation-container.thetwo .col_copy", 1, {autoAlpha: 0,opacity: 0, y:200}, {autoAlpha: 1,opacity: 1,y:0, ease: Linear.easeNone})  // in from left
+								// 	.fromTo("#theAnimation .c-animation-container.theone .c-image", 1, {opacity: 1}, {opacity: 0, ease: Linear.easeNone,onComplete:function(){videoPlayer(2)}})  // in from left
+								// 	.fromTo("#theAnimation .c-animation-container.thetwo .c-image", 1, {autoAlpha: 0,opacity: 0}, {autoAlpha: 1,opacity: 1, ease: Linear.easeNone})
+								// .addLabel('second')
+								// 	.add(()=>{
+								// 		$('#theAnimation .c-animation-container.theone').css('zIndex','1');
+								// 		$('#theAnimation .c-animation-container.thetwo').css('zIndex','999');
+								// 		$('#theAnimation .c-animation-container.thethree').css('zIndex','1');
+								// 	}
+								// 		,'second')
+								// 	.fromTo("#theAnimation .c-animation-container.thetwo .col_copy", 1, {opacity: 1, y:0}, {opacity: 0,y:-200, ease: Linear.easeNone})  // in from left
+								// 	.fromTo("#theAnimation .c-animation-container.thethree .col_copy", 1, {autoAlpha: 0,opacity: 0, y:200}, {autoAlpha: 1,opacity: 1,y:0, ease: Linear.easeNone})
+								// 	.fromTo("#theAnimation .c-animation-container.thetwo .c-image", 1, {opacity: 1}, {opacity: 0, ease: Linear.easeNone,onComplete:function(){videoPlayer(3)}})
+								// 	.fromTo("#theAnimation .c-animation-container.thethree .c-image", 1, {autoAlpha: 0,opacity: 0}, {autoAlpha: 1,opacity: 1, ease: Linear.easeNone})
+								// .addLabel('third')
+								// .add(()=>{
+								// 		$('#theAnimation .c-animation-container.theone').css('zIndex','1');
+								// 		$('#theAnimation .c-animation-container.thetwo').css('zIndex','1');
+								// 		$('#theAnimation .c-animation-container.thethree').css('zIndex','999');
+								// 	}
+								// 		,'third') ;
+								let secondAnomationLength = gsap.utils.toArray(
+									"#theAnimation2 .c-animation-container"
+								);
+								// console.log(secondAnomationLength.length)
+								ScrollTrigger.matchMedia({
+									"(min-width: 768px)": function () {
+										let tlTwo = gsap.timeline({
+											scrollTrigger: {
+												// markers:true,
+												trigger: "#theAnimation2",
+												scrub: 1,
+												end: "=+3000",
+												pin: true,
+												snap: {
+													snapTo: "labels",
+													duration: { min: 0.2, max: 0.5 },
+													delay: 1,
+												},
+											},
+										});
+										$(
+											"#theAnimation2 .c-animation-container.d-none"
+										).removeClass("d-none");
+										tlTwo
+											.addLabel("third")
+											.fromTo("#but1", { checked: false }, { checked: true })
+											.fromTo(
+												"#theAnimation2 .c-animation-container.theone2 .col_copy",
+												1,
+												{ opacity: 1, y: 0 },
+												{
+													opacity: 0,
+													y: -200,
+													ease: Linear.easeNone,
+													onStart: () => {
+														videoPlayer(4);
+													},
+												}
+											) // in from left
+											.fromTo(
+												"#theAnimation2 .thecircle",
+												1,
+												{ y: 0, x: 0 },
+												{ y: -675, x: 75, ease: Linear.easeNone },
+												"-=0.5"
+											) // in from left
+											.fromTo(
+												"#theAnimation2 .c-animation-container.thetwo2 .col_copy",
+												1,
+												{ autoAlpha: 0, opacity: 0, y: 200 },
+												{
+													autoAlpha: 1,
+													opacity: 1,
+													y: 0,
+													ease: Linear.easeNone,
+												}
+											) // in from left
+											.fromTo(
+												"#theAnimation2 .c-animation-container.theone2 .c-image",
+												1,
+												{ opacity: 1 },
+												{
+													opacity: 0,
+													ease: Linear.easeNone,
+													onComplete: () => {
+														videoPlayer(5);
+													},
+												}
+											) // in from left
+											.fromTo(
+												"#theAnimation2 .c-animation-container.thetwo2 .c-image",
+												1,
+												{ autoAlpha: 0, opacity: 0 },
+												{ autoAlpha: 1, opacity: 1, ease: Linear.easeNone }
+											)
+											.fromTo("#but1", { checked: true }, { checked: false })
+											.fromTo("#but2", { checked: false }, { checked: true })
+											.addLabel("fourth")
+											.fromTo(
+												"#theAnimation2 .c-animation-container.thetwo2 .col_copy",
+												1,
+												{ opacity: 1, y: 0 },
+												{ opacity: 0, y: -200, ease: Linear.easeNone }
+											) // in from left
+											.fromTo(
+												"#theAnimation2 .thecircle",
+												1,
+												{ y: -675, x: 75 },
+												{ y: 750, x: 750, ease: Linear.easeNone },
+												"-=0.5"
+											) // in from left
+											.fromTo(
+												"#theAnimation2 .c-animation-container.thethree2 .col_copy",
+												1,
+												{ autoAlpha: 0, opacity: 0, y: 200 },
+												{
+													autoAlpha: 1,
+													opacity: 1,
+													y: 0,
+													ease: Linear.easeNone,
+												}
+											)
+											.fromTo(
+												"#theAnimation2 .c-animation-container.thetwo2 .c-image",
+												1,
+												{ opacity: 1 },
+												{
+													opacity: 0,
+													ease: Linear.easeNone,
+													onComplete: () => {
+														videoPlayer(6);
+													},
+												}
+											)
+											.fromTo(
+												"#theAnimation2 .c-animation-container.thethree2 .c-image",
+												1,
+												{ autoAlpha: 0, opacity: 0 },
+												{ autoAlpha: 1, opacity: 1, ease: Linear.easeNone }
+											)
+											.fromTo("#but2", { checked: true }, { checked: false })
+											.fromTo("#but3", { checked: false }, { checked: true })
+											.addLabel("fifth");
+									},
+								});
+
+								// create scene to pin and link animation
+								function videoPlayer(video) {
+									var videos = $("#vid-" + video);
+
+									// var videoId = document.getElementById(video)
+									// console.log(video)
+									// videoId.play()
+									videos.trigger("play");
+								}
+								// new ScrollMagic.Scene({
+								// 	triggerElement: "#theAnimation2",
+								// 	triggerHook: "onLeave",
+								// 	duration: "300%"
+								// })
+								// .setPin("#theAnimation2")
+								// .setTween(wipeAnimation2)
+								// // .addIndicators({name:'1 - test'}) // add indicators (requires plugin)
+								// .addTo(controller);
+								function getPos(newpos) {
+									var position = $(".flagForAnimation").offset().top;
+									var divHeight = $("#theAnimation2").height() + 240;
+									if (newpos == "#uno") {
+										// $('#but1').attr('checked', '');
+										// $('#but2').removeAttr('checked');
+										// $('#but3').removeAttr('checked');
+										$("html, body").animate(
+											{
+												scrollTop: position,
+											},
+											1000
+										);
+									} else if (newpos == "#dos") {
+										// console.log(newpos)
+										// $('#but1').removeAttr('checked');
+										// $('#but2').attr('checked', '');
+										// $('#but3').removeAttr('checked');
+										$("html, body").animate(
+											{
+												scrollTop: position + divHeight * 1.5,
+											},
+											1000
+										);
+									} else if (newpos == "#tres") {
+										// $('#but1').removeAttr('checked');
+										// $('#but2').removeAttr('checked');
+										// $('#but3').attr('checked', '');
+										$("html, body").animate(
+											{
+												scrollTop: position + 3 * divHeight,
+											},
+											1000
+										);
+									}
+								}
+								$(document).on("click", "a[href^='#']", function (e) {
+									var id = $(this).attr("href");
+									if (id.length > 0) {
+										e.preventDefault();
+										getPos(id);
+									}
+								});
+							});
+						}
+					);
+				}}
+			/>
 
 			<section className="c-single-column bottom-padding-mobile home-proof">
 				<div className="container">
@@ -1233,6 +1488,62 @@ export default function Home({ entry, globals }) {
 					</div>
 				</div>
 			</section>
+
+			<section id="" className="c-cols c-cols-landing   h-padding-bottom">
+				{/* This circles can be added once the video doesnt have white background */}
+				<div className="container c-animation-container">
+					<h2
+						className="extra-bottom-margin--x-small"
+						style={{ textAlign: "center" }}
+					></h2>
+					<div className="row column-reverse">
+						<div className="col-md-6 d-flex align-items-center order-1 ">
+							<div className="c-image c-image--center c-image--shadow h-remove-shadow no-margin">
+								<div className="video-gif-container">
+									<video
+										id="vid-8"
+										data-cy="video-element"
+										className="video-as-gif onViewport"
+										style={{ maxWidth: "100%" }}
+										muted=""
+										playsinline=""
+										poster="https://copper.objects.frb.io/imgs/homepage/thumbnails/productivity/productivity-thumb-1.webp"
+									>
+										{" "}
+										<source
+											src="https://copper.objects.frb.io/videos/homepage/productivity/CopperHome-Productivity.webm"
+											type="video/webm"
+										/>
+										<source
+											src="https://copper.objects.frb.io/videos/homepage/productivity/CopperHome-Productivity.mp4"
+											type="video/mp4"
+										/>
+										<p>Su navegador no soporta video HTML5</p>
+									</video>
+								</div>
+							</div>
+						</div>
+						<div className="col-md-5 offset-md-1 c-valign--middle order-2">
+							<div className="col_copy">
+								<pre className="c-eyebrow c-eyebrow--dark">
+									SALES AUTOMATION & SERVICE
+								</pre>
+								<h2>Make your team wildly productive.</h2>
+								<p>
+									Copper isn't just for sales teams and lead generation. Whether
+									you’re closing deals, partners, vendors or distributors,
+									you’re always winning throughout every stage of the sales
+									pipeline with Copper.
+								</p>
+								<div className="c-hero__buttons">
+									<div className="flex-column"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
 			<FinalHeroFull
 				title="Try Copper software solution for free"
 				copy="14-day trial. Instant activation, no credit card required. Give the Copper software solution a try today."

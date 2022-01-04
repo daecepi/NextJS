@@ -17,6 +17,11 @@ const NavigationSelector = ({ entryType, navigationButtonsOverride }) => {
 		demo: "",
 	};
 
+	/*console.log(
+		"ESTO ES UNA PRUEBA ",
+		specialNavigationDistribution[entryType] === "" ||
+			specialNavigationDistribution[entryType] !== undefined
+	);*/
 	return specialNavigationDistribution[entryType] === "" ||
 		specialNavigationDistribution[entryType] !== undefined ? (
 		specialNavigationDistribution[entryType]

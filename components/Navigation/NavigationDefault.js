@@ -1121,8 +1121,9 @@ const NavigationDefault = ({ buttons }) => {
 			</nav>
 			<Script
 				src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-				strategy="beforeInteractive"
+				strategy="afterInteractive"
 				onLoad={() => {
+					console.log("ESTO PRINTEA");
 					// Desktop Nav Toggle
 					$(".js-dropdown-nav").click(function () {
 						var nav = $(this).attr("dropdown-type");
