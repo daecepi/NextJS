@@ -9,7 +9,7 @@ const ThreeColList = ({ title, copy, children, linkUrl, linkText }) => {
 				</div>
 				<div className="row">{children}</div>
 				{linkUrl ? (
-					<div className="row c-align--center extra-top-margin--small">
+					<div className="row c-align--center extra-top-margin--x-small">
 						<Link href={linkUrl}>
 							<a className="t-link">{linkText}</a>
 						</Link>
