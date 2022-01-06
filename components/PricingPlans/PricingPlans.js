@@ -161,7 +161,7 @@ const PricingPlans = ({
 				</div>
 			</div>
 			<div className="container">
-				<div className="c-pricing-hero__plans-container square--top--left square--hot-pink circle--bottom--right">
+				<div className="c-pricing-hero__plans-container square--top--left square--hot-pink circle--bottom--right extra-top-margin--xx-small">
 					{pricingPlans.map((plan) => {
 						const amountMonthly = Number(plan.billedMonthly.split("$")[1]);
 						const amountAnnually = Number(plan.billedAnnually.split("$")[1]);
