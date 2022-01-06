@@ -22,8 +22,8 @@ export const linkitButtonPropertyGetter = (linkitString) => {
 };
 
 export const getLink = (ancorText) => {
-	const href = ancorText.match(TEXT_INSIDE_TAG_REGEX)[0];
-	const value = ancorText.match(HREF_REGEX)[0];
+	const href = ancorText.match(HREF_REGEX)[0];
+	const value = ancorText.match(TEXT_INSIDE_TAG_REGEX)[0];
 	return { href, value };
 };
 

@@ -1,84 +1,139 @@
-.pricing{
-  .c-pricing-table__info--cornflower{
-    a{
-      text-decoration: underline;
-      color: #3C3F70;
-      border-bottom: #3C3F70;
-    }
-  }
+.pricing {
+	.c-pricing-table__info--cornflower {
+		a {
+			text-decoration: underline;
+			color: #3c3f70;
+			border-bottom: #3c3f70;
+		}
+	}
 
-  @include media-breakpoint-down(sm){
+	@include media-breakpoint-down(sm) {
+		.c-pricing-table--cornflower {
+			h4 {
+				font-size: 20px;
+				line-height: 40px;
+			}
+		}
 
-  .c-pricing-table--cornflower{
-    h4{
-      font-size: 20px;
-      line-height: 40px;
-    }
-  }
+		.c-pricing-hero--cornflower {
+			padding-bottom: 0px;
+		}
+		.c-pricing-hero__billing {
+			.p-sm {
+				margin-top: 0px;
+				margin-bottom: 25px;
+			}
+		}
+		.c-pricing-hero__plans__content {
+			@include media-breakpoint-down(sm) {
+				min-height: 282px !important;
+			}
+		}
+	}
 
-    .c-pricing-hero--cornflower{
-      padding-bottom: 0px;
-    }
-    .c-pricing-hero__billing{
-        .p-sm{
-            margin-top: 0px;
-            margin-bottom: 25px;
-        }
-    }
-    .c-pricing-hero__plans__content{
-        @include media-breakpoint-down(sm){
-            min-height: 282px!important;
-        }
-    }
-  }
-  
-  @include media-breakpoint-up(lg){
-  .c-pricing-table--cornflower{
-    h4{
-      left: 0px;
-    }
-  }
-    .c-pricing-plans__footer{
-        bottom: unset !important;
-    }
-  }
+	@include media-breakpoint-up(lg) {
+		.c-pricing-table--cornflower {
+			h4 {
+				left: 0px;
+			}
+		}
+		.c-pricing-plans__footer {
+			bottom: unset !important;
+		}
+	}
 
-  .c-press-articles{
-    @include media-breakpoint-down(sm){
-      padding-bottom: 10px;
-    }
-    margin-top: 60px;
-    margin-bottom: 120px;
-    @include media-breakpoint-down(sm){
-      margin-top: 30px;
-      margin-bottom: 60px;
-    }
-    .container{
-      .row{
-        .col-md-4{
-          h2{
-            margin-bottom: 24px;
-            font-size: 40px;
-            line-height: 48px;
-          }
-        }
-      }
-    }
-    h3{ 
-      font-size: 28px;
-      line-height: 36px;
-    }
-  }
-  @include media-breakpoint-down(sm){
-    .floating-container--pricing{
-      &.floating-active{
-        position: fixed;
-        top: 50px;
-        width: 100%;
-        background: white;
-        opacity: 1;
-        z-index: 5;
-      }
-    }
-  }
+	.c-press-articles {
+		@include media-breakpoint-down(sm) {
+			padding-bottom: 10px;
+		}
+		margin-top: 60px;
+		margin-bottom: 120px;
+		@include media-breakpoint-down(sm) {
+			margin-top: 30px;
+			margin-bottom: 60px;
+		}
+		.container {
+			.row {
+				.col-md-4 {
+					h2 {
+						margin-bottom: 24px;
+						font-size: 40px;
+						line-height: 48px;
+					}
+				}
+			}
+		}
+		h3 {
+			font-size: 28px;
+			line-height: 36px;
+		}
+	}
+	@include media-breakpoint-down(sm) {
+		.floating-container--pricing {
+			&.floating-active {
+				position: fixed;
+				top: 50px;
+				width: 100%;
+				background: white;
+				opacity: 1;
+				z-index: 5;
+			}
+		}
+	}
+}
+
+.price-table-mobile .c-pricing-table__row--cornflower {
+	position: relative;
+}
+.price-table-mobile
+	.c-pricing-table__tier--cornflower.pricing-table-cat-content {
+	position: absolute;
+	right: 0;
+	width: 50%;
+	text-align: center;
+}
+.price-table-mobile .pricing-table-description {
+	max-width: 50%;
+}
+.price-table-mobile .slick-prev {
+	left: 0px;
+	color: gray;
+	z-index: 99;
+}
+.price-table-mobile .slick-next {
+	right: 0px;
+	color: gray;
+}
+.price-table-mobile .slick-prev:before {
+	color: gray;
+}
+.price-table-mobile .slick-next:before {
+	color: gray;
+}
+
+.pricing-arrow {
+	position: absolute;
+	top: 24%;
+	bottom: unset;
+	z-index: 2;
+	cursor: pointer;
+	opacity: 1;
+}
+
+.pricing-arrow.pricing-prev-arrow {
+	left: 13px;
+}
+.pricing-arrow.slick-disabled {
+	opacity: 0.2;
+}
+
+.pricing-arrow.pricing-forward-arrow {
+	right: 13px;
+}
+
+.container.no-side-space {
+	margin-right: 0px;
+	margin-left: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
 }
