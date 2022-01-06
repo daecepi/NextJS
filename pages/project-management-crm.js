@@ -719,9 +719,9 @@ const PmCRM = () => {
 							automation, and your online CRM project management.
 						</p>
 					</div>
-					<h1>
+					<h2>
 						<br />
-					</h1>
+					</h2>
 					<p>
 						<br />
 					</p>
@@ -982,7 +982,7 @@ const PmCRM = () => {
 						<div className="col-md-5 offset-md-1 c-valign--middle order-2 pb-5 pb-md-0">
 							<div className="col_copy">
 								<pre className="c-eyebrow c-eyebrow--dark">REAL INSIGHTS</pre>
-								<h1>Revenue visibility</h1>
+								<h2>Revenue visibility</h2>
 								<p>
 									The management work you do for your customers using the CRM
 									project management system and software, involving marketing
@@ -1138,7 +1138,7 @@ const PmCRM = () => {
 						</div>
 						<div className="col-md-5 c-valign--middle order-1 ">
 							<pre className="c-eyebrow c-eyebrow--dark">FAMILIARITY</pre>
-							<h1>Google Workspace at the core of Copper’s CRM tool</h1>
+							<h2>Google Workspace at the core of Copper’s CRM tool</h2>
 							<p>
 								Attach files with project management software, see tasks from
 								within Gmail, and use @mentions to collaborate even better in
@@ -1218,7 +1218,7 @@ const PmCRM = () => {
 								management tool
 							</h2>
 							<p></p>
-							<h1></h1>
+							<h2></h2>
 							<p>
 								Your ability to nurture key business relationships, and team
 								collaboration, just got much better, now that your favorite CRM

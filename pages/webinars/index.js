@@ -9,6 +9,7 @@ import DefaultPageBase from "../../components/PageBase/DefaultPageBase";
 import { filterStripTags } from "../../helpers";
 import { getEntryBySectionHandle, getOnDemandWebinar } from "../../lib/api";
 import { addHTTPStoUrl } from "../../helpers/propertyResolver";
+import Footer from "../../components/Footer/Footer";
 
 const WebinarIndex = ({ entry, globals, onDemandWebinars }) => {
 	const syncedAtomInformation = useRecoilValue(SyncedAtom);
@@ -298,6 +299,7 @@ const WebinarIndex = ({ entry, globals, onDemandWebinars }) => {
 					</div>
 				</div>
 			</section>
+			<Footer />
 		</DefaultPageBase>
 	);
 };

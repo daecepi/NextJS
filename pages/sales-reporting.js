@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import HeroProduct from "../components/Blocks/HeroTypes/HeroProduct";
+import HeroProductsSalesReportingVariation from "../components/Blocks/HeroTypes/HeroProductsSalesReportingVariation";
 import Footer from "../components/Footer/Footer";
 import NavigationDefault from "../components/Navigation/NavigationDefault";
 import ProductTwoUp from "../components/ProductsComponent/ProductTwoUp/ProductTwoUp";
@@ -17,7 +18,7 @@ export default function SalesReporting() {
 			<NavigationDefault
 				buttons={{ option: { text: "Learn More", url: "/demos" } }}
 			/>
-			<HeroProduct
+			<HeroProductsSalesReportingVariation
 				backgroundColor="midnight"
 				eyebrow="COPPER REPORTS"
 				title="Read your business like a book."
