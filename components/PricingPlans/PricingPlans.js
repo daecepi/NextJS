@@ -9,8 +9,6 @@ const PricingPlans = ({
 	header,
 	subHeader,
 	pricingPlans,
-	linkToNav,
-	stickyNavName,
 	reducePadding,
 	removeCtas,
 }) => {
@@ -74,58 +72,6 @@ const PricingPlans = ({
 		heroPropertyresetter();
 	}
 
-	const subDescriptionSelector = (plan) => {
-		if (plan.title == "Plan - Business") {
-			return (
-				<>
-					<p className="c-pricing-hero__sub mb-0 mt-4">
-						Per user, per month. Billed annually.
-					</p>
-					<span className="special"></span>
-				</>
-			);
-		} else if (plan.title == "Plan - Basic") {
-			return (
-				<>
-					<p className="c-pricing-hero__sub mb-0 mt-4">
-						Per user, per month. Billed annually.
-					</p>
-					<span
-						style={{ display: "none" }}
-						className="c-pricing-hero__sub billed-monthly"
-					>
-						Billed&nbsp;monthly.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					</span>
-					<p className="c-pricing-hero__sub mt-0 no-bottom-margin">
-						Or $29/user when billed monthly.
-					</p>
-					<span
-						style={{ display: "none" }}
-						className="c-pricing-hero__sub billed-monthly"
-					>
-						Billed&nbsp;monthly.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					</span>
-					{/* <span className="special desc js-pricingannual">Or $24 per user per month up to 3 users. Billed monthly.</span> */}
-				</>
-			);
-		}
-
-		return (
-			<>
-				<p className="c-pricing-hero__sub mb-0 mt-4 no-bottom-margin">
-					Per user, per month. Billed annually.
-				</p>
-				<span
-					style={{ display: "none" }}
-					className="c-pricing-hero__sub billed-monthly"
-				>
-					Billed&nbsp;monthly.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				</span>
-				{/*<span className="special desc js-pricingannual">Save $240/user. Billed annually.</span> */}
-			</>
-		);
-	};
-
 	return (
 		<section
 			className={`c-pricing-hero--cornflower price-hero ${
@@ -174,11 +120,7 @@ const PricingPlans = ({
 								>
 									<div
 										className={`c-pricing-hero__plans__title ${
-											plan.featured
-												? "featured"
-												: plan.planType == "Business"
-												? "background--indigo"
-												: ""
+											plan.featured ? "featured" : ""
 										} text-center`}
 									>
 										{plan.featured ? <p className="p-sm">MOST POPULAR</p> : ""}
@@ -237,8 +179,10 @@ const PricingPlans = ({
 															style={{ minHeight: "36px", padding: "0px 41px" }}
 														>
 															Per user, per month paid monthly with{" "}
-															{plan.title == "Plan - Basic" ? "a" : "an"}{" "}
-															monthly commitment.
+															{plan.title == "Plan - Basic"
+																? "a monthly"
+																: "an annual"}{" "}
+															commitment.
 														</p>
 													</div>
 												</div>
