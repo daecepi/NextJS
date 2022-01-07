@@ -4,7 +4,7 @@ import Link from "next/link";
 const BlogLargeCardImage = (props) => {
 	return (
 		<div className="c-blog-card c-blog-card--large">
-			<Link href={props.url}>
+			<Link href={`/${props.uri || ""}`}>
 				<a className="c-card__clickthrough"></a>
 			</Link>
 			<div className="c-blog-card__image-container">
@@ -24,7 +24,6 @@ const BlogLargeCardImage = (props) => {
 					src={`http:${props.imageUrl}`}
 					width={props.imageWidth}
 					height={props.imageHeight}
-					className="rounded"
 				></Image>
 				{/* <img className="c-blog-card__image" src={props.imageUrl} />  */}
 				{/* // :alt="entry.image[0] && entry.image.altText ? entry.image.altText : entry.title"       */}

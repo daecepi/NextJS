@@ -265,6 +265,7 @@ const resources = (props) => {
 										<BlogLargeCardImage
 											imagegradient={props.blogEntries[0].imagegradient}
 											url={props.blogEntries[0].url}
+											uri={props.blogEntries[0].uri}
 											imageUrl={props.blogEntries[0].featuredImage[0].url}
 											imageWidth={props.blogEntries[0].featuredImage[0].width}
 											imageHeight={props.blogEntries[0].featuredImage[0].height}
@@ -290,6 +291,7 @@ const resources = (props) => {
 											<BlogFeaturedCard
 												title={item.title}
 												url={item.url}
+												uri={item?.uri}
 												image={item.featuredImage[0].url}
 												imageWidth={item.featuredImage[0].width}
 												imageHeight={item.featuredImage[0].height}
@@ -325,6 +327,7 @@ const resources = (props) => {
 													<BlogCardImage
 														imagegradient={item.imagegradient}
 														url={item.url}
+														uri={item.uri}
 														imageUrl={item.featuredImage[0].url}
 														imageWidth={item.featuredImage[0].width}
 														imageHeight={item.featuredImage[0].height}
@@ -340,7 +343,8 @@ const resources = (props) => {
 												) : (
 													<BlogCardText
 														imagegradient={item.imagegradient}
-														url={item.url}
+														url={item?.url}
+														uri={item?.uri}
 														parentCategory={item.parentCategory}
 														readTime={item.readingTime}
 														title={item.title}
@@ -362,7 +366,8 @@ const resources = (props) => {
 												{item.featuredImage[0].url ? (
 													<BlogCardImage
 														imagegradient={item.imagegradient}
-														url={item.url}
+														url={item?.url}
+														uri={item?.uri}
 														imageUrl={item.featuredImage[0].url}
 														imageWidth={item.featuredImage[0].width}
 														imageHeight={item.featuredImage[0].height}
@@ -378,7 +383,8 @@ const resources = (props) => {
 												) : (
 													<BlogCardText
 														imagegradient={item.imagegradient}
-														url={item.url}
+														url={item?.url}
+														uri={item?.uri}
 														parentCategory={item.parentCategory}
 														readTime={item.readingTime}
 														title={item.title}
@@ -401,14 +407,14 @@ const resources = (props) => {
 									{/* <ad :link="adLink" :image="adImage" /> */}
 								</div>
 							</div>
-							<div className="row">
+							{/*<div className="row">
 								<div className="col-md-5 c-copper-chronicles__title">
 									<h3 style={{ fontSize: "20px", lineHeight: "30px" }}>
 										Authors
 									</h3>
 								</div>
 							</div>
-							<div className="row">
+							 <div className="row">
 								<Script
 									onLoad={() => {
 										console.log("IMPRESIVE ", props.entry?.featuredAuthors);
@@ -438,7 +444,7 @@ const resources = (props) => {
 										</div>
 									</div>
 								</div>
-							</div>
+							</div> */}
 						</div>
 					</div>
 

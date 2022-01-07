@@ -1,3 +1,4 @@
+import Footer from "../../components/Footer/Footer";
 import DefaultPageBase from "../../components/PageBase/DefaultPageBase";
 import { getEntryBySectionHandle } from "../../lib/api";
 
@@ -960,6 +961,7 @@ const ParnersPage = ({ entry, globals }) => {
 					</div>
 				</section>
 			</div>
+			<Footer />
 		</DefaultPageBase>
 	);
 };

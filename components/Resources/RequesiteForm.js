@@ -14,7 +14,7 @@ const RequesiteForm = ({ entry }) => {
 		: 2157;
 
 	const eyebrowSelector = (entry) => {
-		if (entry.specialStyle && entry.specialStyle == "inspirationSeries")
+		if (entry?.specialStyle && entry.specialStyle == "inspirationSeries")
 			return (
 				<span className="t-eyebrow t-special-eyebrow t-special-eyebrow--lt-purple t-eyebrow-lg">
 					Copper Inspiration Series <br />
@@ -42,7 +42,7 @@ const RequesiteForm = ({ entry }) => {
 			<div className="c-resource-content__container container ">
 				<div className="c-ebook-gate">
 					<div className="c-e-book-builder__header col-md-12 ">
-						{eyebrowSelector()}
+						{eyebrowSelector(entry)}
 						<div
 							className={
 								entry.specialStyle && entry.specialStyle == "inspirationSeries"

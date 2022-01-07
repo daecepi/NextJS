@@ -1,6 +1,6 @@
 import RequesiteForm from "../../Resources/RequesiteForm";
 
-const Register = (entry) => {
+const Register = ({ entry }) => {
 	const image =
 		(entry.featuredImage?.length && entry.featuredImage[0]) || undefined;
 	return (
