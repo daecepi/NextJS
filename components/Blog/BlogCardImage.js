@@ -5,7 +5,7 @@ const BlogCardImage = (props) => {
 	console.log("SUPER PROPS ", props);
 	return (
 		<div className="c-blog-card">
-			<Link href={props.url}>
+			<Link href={`/${props.uri || ""}`}>
 				<a className="c-card__clickthrough"></a>
 			</Link>
 			<div className="c-blog-card__image-container">
@@ -25,7 +25,6 @@ const BlogCardImage = (props) => {
 					src={`http:${props.imageUrl}`}
 					width={props.imageWidth}
 					height={props.imageHeight}
-					className="rounded"
 				></Image>
 				{/* <img className="c-blog-card__image" src={props.imageUrl} />  */}
 				{/* // :alt="entry.image[0] && entry.image.altText ? entry.image.altText : entry.title"       */}
@@ -63,15 +62,15 @@ const BlogCardImage = (props) => {
 							</div>
 						)}
 						<div className="c-author__meta">
-							<p className="p-sm  no-margin">
+							<p className="p-xtra-sm  no-margin">
 								<strong>
 									{props.authorName} {props.authorLastName}
 								</strong>
 							</p>
 							{props.authorTitle ? (
-								<p className="p-sm no-margin">{props.authorTitle}</p>
+								<p className="p-xtra-sm no-margin">{props.authorTitle}</p>
 							) : (
-								<p className="p-sm no-margin">Contributor</p>
+								<p className="p-xtra-sm no-margin">Contributor</p>
 							)}
 						</div>
 					</div>

@@ -131,11 +131,8 @@ const WebinarIndex = ({ entry, globals, onDemandWebinars }) => {
 													{webinarEntry.eyebrow}
 												</span>
 												<h4 className="c-card__entry-title multiple-2-card-trailer">
-													<Link href={`/${webinarEntry.uri}`}>
-														<a
-															className="underline_from_lefsettt"
-															href={webinarEntry.url}
-														>
+													<Link href={`/${webinarEntry.uri || ""}`}>
+														<a className="underline_from_lefsettt">
 															{webinarEntry.title}
 														</a>
 													</Link>
@@ -145,7 +142,7 @@ const WebinarIndex = ({ entry, globals, onDemandWebinars }) => {
 												</p>
 											</div>
 											<div className="c-card__meta">
-												<Link href={`/${webinarEntry.uri}`}>
+												<Link href={`/${webinarEntry.uri || ""}`}>
 													<a className="c-button">
 														{webinarEntry.handleType == "register"
 															? "Register"
@@ -237,7 +234,7 @@ const WebinarIndex = ({ entry, globals, onDemandWebinars }) => {
 										{onDemandWebinar.duration}
 									</p>
 									<div>
-										<Link href={onDemandWebinar.url}>
+										<Link href={`/${onDemandWebinar.uri || ""}`}>
 											<a className="c-button">Watch Now</a>
 										</Link>
 									</div>

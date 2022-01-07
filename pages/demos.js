@@ -50,7 +50,7 @@ const DemosPage = ({ entry, globals }) => {
 													<div className="h-gdpr" style={{ display: "block" }}>
 														<span>
 															By submitting this form you agree to our terms.
-															See our
+															See our{" "}
 															<Link href="/privacy">
 																<a>privacy policy</a>
 															</Link>{" "}

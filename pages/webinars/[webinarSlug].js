@@ -22,7 +22,7 @@ const WebinarPost = ({ entry, globals }) => {
 
 	return (
 		<DefaultPageBase entry={entry} globals={globals}>
-			{webinarEntryTypeSelector()}
+			{webinarEntryTypeSelector(entry)}
 		</DefaultPageBase>
 	);
 };

@@ -1,8 +1,7 @@
 import { filterStripTags } from ".";
 
 export const obtainWebinarDuration = (durationString) => {
-	let tempString = durationString
-		.filterStripTags()
+	let tempString = filterStripTags(durationString)
 		.toLowerCase()
 		.replace("hours", "H")
 		.replace("min", "M")

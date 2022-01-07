@@ -7,6 +7,7 @@ import RequesiteForm from "../../Resources/RequesiteForm";
 import FinalPlea from "../FinalPlea";
 
 const Webinars = ({ entry, globals, recentWebinars }) => {
+	const finalDefaultAuthorInfo = undefined;
 	const jsonLDImage = (featuredImage) => {
 		const image = (featuredImage?.length && featuredImage[0]) || undefined;
 		if (image) {
@@ -26,7 +27,7 @@ const Webinars = ({ entry, globals, recentWebinars }) => {
 		description: seoDescriptionForJsonLd,
 		thumbnailUrl: [jsonLDImage()],
 		duration: `${obtainWebinarDuration(entry.duration)}`,
-		uploadDate: new Date(entry.postDate).toISOString(),
+
 		interactionStatistic: {
 			"@type": "InteractionCounter",
 			interactionType: { "@type": "http://schema.org/WatchAction" },
@@ -146,7 +147,8 @@ const Webinars = ({ entry, globals, recentWebinars }) => {
 											</>
 										) : (
 											<div className="c-author__detail">
-												{!finalDefaultAuthorInfo?.photo?.url ? (
+												{finalDefaultAuthorInfo &&
+												!finalDefaultAuthorInfo?.photo?.url ? (
 													<div className="circle-img c-author__img background-{{(finalDefaultAuthorInfo.id%2) +1}}">
 														<span className="c-author__img--alt">
 															{finalDefaultAuthorInfo.firstName.split(" ") ||
@@ -157,16 +159,20 @@ const Webinars = ({ entry, globals, recentWebinars }) => {
 													<div
 														className="circle-img c-author__img"
 														style={{
-															backgroundImage: `url('${finalDefaultAuthorInfo.photo.url}')`,
+															backgroundImage: `url('${
+																finalDefaultAuthorInfo?.photo?.url || ""
+															}')`,
 														}}
 													></div>
 												)}
 												<div className="c-author__meta c-author__meta--detail">
 													<p className="p-sm">
-														<strong>{finalDefaultAuthorInfo.name}</strong>
+														<strong>
+															{finalDefaultAuthorInfo?.name || ""}
+														</strong>
 													</p>
 													<p className="p-sm">
-														{finalDefaultAuthorInfo.jobTitle}
+														{finalDefaultAuthorInfo?.jobTitle || ""}
 													</p>
 												</div>
 											</div>
