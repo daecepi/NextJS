@@ -13,7 +13,10 @@ const CaseStudy = (props) => {
 										{props.eyebrow}
 									</pre>
 									<div
-										style={{ boxShadow: "-20px 20px 40px 0 rgb(0 0 0 / 13%)" }}
+										style={{
+											boxShadow: "-20px 20px 40px 0 rgb(0 0 0 / 13%)",
+											fontSize: 0,
+										}}
 									>
 										<Image
 											src={props.imageUrl}

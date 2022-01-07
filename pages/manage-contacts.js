@@ -72,7 +72,7 @@ const ManageContacts = ({ entry, globals }) => {
 					title="No more wasted time on data entry."
 					copy={
 						<>
-							<div className="pb-1">
+							<div className="ppb-1">
 								<p className="mb-4 mt-0">
 									Copper suggests recent contacts you’ve been emailing to be
 									added to your list so that you don’t lose track of anyone.
@@ -94,6 +94,7 @@ const ManageContacts = ({ entry, globals }) => {
 					imageSpacingClass="col-md-7"
 					textSpacingClass="col-md-5"
 					dropRight
+					copyClass="mb-0"
 				/>
 				<TwoUp
 					eyebrow="UNDERSTAND YOUR CONTACTS BETTER"
