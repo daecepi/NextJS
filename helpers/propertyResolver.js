@@ -1,5 +1,6 @@
 const TEXT_INSIDE_TAG_REGEX = /(?<=\>)(?!\<)(.*)(?=\<)(?<!\>)/g;
 const HREF_REGEX = /(?<=href=")([^\'\"]+)/g;
+
 export const linkitButtonPropertyGetter = (linkitString) => {
 	if (!linkitString?.length) return "";
 	// Verifies string structure
@@ -22,8 +23,8 @@ export const linkitButtonPropertyGetter = (linkitString) => {
 };
 
 export const getLink = (ancorText) => {
-	const href = ancorText.match(HREF_REGEX)[0];
-	const value = ancorText.match(TEXT_INSIDE_TAG_REGEX)[0];
+	const href = ancorText.match(TEXT_INSIDE_TAG_REGEX)[0];
+	const value = ancorText.match(HREF_REGEX)[0];
 	return { href, value };
 };
 
@@ -36,4 +37,10 @@ export const addHTTPStoUrl = (url) => {
 	if (!url) return "";
 	if (url.startsWith("//")) return url.replace("//", "https://");
 	return url;
+};
+
+export const urlDomainStripper = (url, domain) => {
+	const domainToUse = domain ? domain : "copper.com";
+	if (!url && !url.indexOf(domainToUse)) return "";
+	return url.replace("https://", "");
 };

@@ -36,7 +36,7 @@ const Products = ({ entry }) => {
 
 			{/* {entry} */}
 
-			{entry.landingBlocks.map((block, id) => {
+			{entry?.landingBlocks?.map((block, id) => {
 				return (
 					<div>
 						<>
@@ -278,7 +278,7 @@ const Products = ({ entry }) => {
 						</>
 					</div>
 				);
-			})}
+			}) || ""}
 
 			{/* <Image
             src={entry.image[0].optimizedLandingImages.srcet}

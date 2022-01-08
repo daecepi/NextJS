@@ -680,305 +680,296 @@ export default function Home({ entry, globals }) {
 					LazyLoad.js(
 						[
 							"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js",
-							"//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js",
-							"//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js",
+							"https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js",
+							"https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js",
 							"https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js",
 							"https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js",
 							"https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js",
+							"https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js",
 						],
 						function () {
-							LazyLoad.css([
-								"https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css",
-							]);
-							LazyLoad.js(
-								[
-									"https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js",
+							$(".three-column-slider .container > .container .row").slick({
+								infinite: false,
+								mobileFirst: true,
+								slidesToShow: 1,
+								slidesToScroll: 1,
+								dots: true,
+								rows: 0,
+								appendDots: ".dots-box",
+								appendArrows: ".buttons-box",
+								prevArrow:
+									'<a id="arrowBack" target="" className="button-slide-change t-link inverted-arrow">Prev</a>',
+								nextArrow:
+									'<a id="arrowNext" target="arrowNext"  className="button-slide-change t-link">Next</a>',
+								// the magic
+								responsive: [
+									{
+										breakpoint: 769,
+										settings: {
+											slidesToShow: 3,
+											slidesToScroll: 1,
+											rows: 0,
+										}, // destroys slick
+									},
 								],
-								function () {
-									$(".three-column-slider .container > .container .row").slick({
-										infinite: false,
-										mobileFirst: true,
-										slidesToShow: 1,
-										slidesToScroll: 1,
-										dots: true,
-										rows: 0,
-										appendDots: ".dots-box",
-										appendArrows: ".buttons-box",
-										prevArrow:
-											'<a id="arrowBack" target="" className="button-slide-change t-link inverted-arrow">Prev</a>',
-										nextArrow:
-											'<a id="arrowNext" target="arrowNext"  className="button-slide-change t-link">Next</a>',
-										// the magic
-										responsive: [
-											{
-												breakpoint: 769,
-												settings: {
-													slidesToShow: 3,
-													slidesToScroll: 1,
-													rows: 0,
-												}, // destroys slick
-											},
-										],
-									});
-									$(window).on("resize", function () {
-										$(
-											".three-column-slider .container > .container .row"
-										).slick("resize");
-									});
-								}
-							);
+							});
+							$(window).on("resize", function () {
+								$(".three-column-slider .container > .container .row").slick(
+									"resize"
+								);
+							});
+						}
+					);
 
-							$(document).ready(function () {
-								var myInterval = setInterval(function () {
-									var videoOne = document.getElementById("vid-1");
-									if (videoOne.readyState >= 3 || videoOne.loadStart) {
-										$("#vid-1-placeholder").css("opacity", "0");
-										clearInterval(myInterval);
-									}
-								}, 200);
-								/* var videoOne = document.getElementById('vid-1');
+					$(document).ready(function () {
+						var myInterval = setInterval(function () {
+							var videoOne = document.getElementById("vid-1");
+							if (videoOne.readyState >= 3 || videoOne.loadStart) {
+								$("#vid-1-placeholder").css("opacity", "0");
+								clearInterval(myInterval);
+							}
+						}, 200);
+						/* var videoOne = document.getElementById('vid-1');
 						if(videoOne.readyState >= 3 || videoOne.loadStart){
 							$('#vid-1-placeholder').css('opacity','0')
 						}*/
 
-								// Animations part
-								// init
-								// var controller = new ScrollMagic.Controller();
-								gsap.registerPlugin(ScrollTrigger);
-								// let tlOne = gsap.timeline({
-								// 	scrollTrigger:{
-								// 		// markers:true,
-								// 		trigger:'#theAnimation',
-								// 		scrub:1,
-								// 		pin:true,
-								// 		snap:{
-								// 			snapTo:'labels',
-								// 			duration: {min: 0.2, max: 0.5},
-								// 			delay:1
-								// 		}
-								// 	}
-								// });
-								// $('#theAnimation .c-animation-container.d-none').removeClass('d-none');
-								// tlOne
-								// .addLabel('first')
-								// 	.add(()=>{
-								// 		$('#theAnimation .c-animation-container.theone').css('zIndex','999');
-								// 		$('#theAnimation .c-animation-container.thetwo').css('zIndex','1');
-								// 		$('#theAnimation .c-animation-container.thethree').css('zIndex','1');
-								// 	}
-								// 		,'first')
-								// 	.fromTo("#theAnimation .c-animation-container.theone .col_copy", 1, {opacity: 1, y:0}, {opacity: 0,y:-200, ease: Linear.easeNone,onStart:function(){videoPlayer('1-1')}})  // in from left
-								// 	.fromTo("#theAnimation .c-animation-container.thetwo .col_copy", 1, {autoAlpha: 0,opacity: 0, y:200}, {autoAlpha: 1,opacity: 1,y:0, ease: Linear.easeNone})  // in from left
-								// 	.fromTo("#theAnimation .c-animation-container.theone .c-image", 1, {opacity: 1}, {opacity: 0, ease: Linear.easeNone,onComplete:function(){videoPlayer(2)}})  // in from left
-								// 	.fromTo("#theAnimation .c-animation-container.thetwo .c-image", 1, {autoAlpha: 0,opacity: 0}, {autoAlpha: 1,opacity: 1, ease: Linear.easeNone})
-								// .addLabel('second')
-								// 	.add(()=>{
-								// 		$('#theAnimation .c-animation-container.theone').css('zIndex','1');
-								// 		$('#theAnimation .c-animation-container.thetwo').css('zIndex','999');
-								// 		$('#theAnimation .c-animation-container.thethree').css('zIndex','1');
-								// 	}
-								// 		,'second')
-								// 	.fromTo("#theAnimation .c-animation-container.thetwo .col_copy", 1, {opacity: 1, y:0}, {opacity: 0,y:-200, ease: Linear.easeNone})  // in from left
-								// 	.fromTo("#theAnimation .c-animation-container.thethree .col_copy", 1, {autoAlpha: 0,opacity: 0, y:200}, {autoAlpha: 1,opacity: 1,y:0, ease: Linear.easeNone})
-								// 	.fromTo("#theAnimation .c-animation-container.thetwo .c-image", 1, {opacity: 1}, {opacity: 0, ease: Linear.easeNone,onComplete:function(){videoPlayer(3)}})
-								// 	.fromTo("#theAnimation .c-animation-container.thethree .c-image", 1, {autoAlpha: 0,opacity: 0}, {autoAlpha: 1,opacity: 1, ease: Linear.easeNone})
-								// .addLabel('third')
-								// .add(()=>{
-								// 		$('#theAnimation .c-animation-container.theone').css('zIndex','1');
-								// 		$('#theAnimation .c-animation-container.thetwo').css('zIndex','1');
-								// 		$('#theAnimation .c-animation-container.thethree').css('zIndex','999');
-								// 	}
-								// 		,'third') ;
-								let secondAnomationLength = gsap.utils.toArray(
-									"#theAnimation2 .c-animation-container"
-								);
-								// console.log(secondAnomationLength.length)
-								ScrollTrigger.matchMedia({
-									"(min-width: 768px)": function () {
-										let tlTwo = gsap.timeline({
-											scrollTrigger: {
-												// markers:true,
-												trigger: "#theAnimation2",
-												scrub: 1,
-												end: "=+3000",
-												pin: true,
-												snap: {
-													snapTo: "labels",
-													duration: { min: 0.2, max: 0.5 },
-													delay: 1,
-												},
-											},
-										});
-										$(
-											"#theAnimation2 .c-animation-container.d-none"
-										).removeClass("d-none");
-										tlTwo
-											.addLabel("third")
-											.fromTo("#but1", { checked: false }, { checked: true })
-											.fromTo(
-												"#theAnimation2 .c-animation-container.theone2 .col_copy",
-												1,
-												{ opacity: 1, y: 0 },
-												{
-													opacity: 0,
-													y: -200,
-													ease: Linear.easeNone,
-													onStart: () => {
-														videoPlayer(4);
-													},
-												}
-											) // in from left
-											.fromTo(
-												"#theAnimation2 .thecircle",
-												1,
-												{ y: 0, x: 0 },
-												{ y: -675, x: 75, ease: Linear.easeNone },
-												"-=0.5"
-											) // in from left
-											.fromTo(
-												"#theAnimation2 .c-animation-container.thetwo2 .col_copy",
-												1,
-												{ autoAlpha: 0, opacity: 0, y: 200 },
-												{
-													autoAlpha: 1,
-													opacity: 1,
-													y: 0,
-													ease: Linear.easeNone,
-												}
-											) // in from left
-											.fromTo(
-												"#theAnimation2 .c-animation-container.theone2 .c-image",
-												1,
-												{ opacity: 1 },
-												{
-													opacity: 0,
-													ease: Linear.easeNone,
-													onComplete: () => {
-														videoPlayer(5);
-													},
-												}
-											) // in from left
-											.fromTo(
-												"#theAnimation2 .c-animation-container.thetwo2 .c-image",
-												1,
-												{ autoAlpha: 0, opacity: 0 },
-												{ autoAlpha: 1, opacity: 1, ease: Linear.easeNone }
-											)
-											.fromTo("#but1", { checked: true }, { checked: false })
-											.fromTo("#but2", { checked: false }, { checked: true })
-											.addLabel("fourth")
-											.fromTo(
-												"#theAnimation2 .c-animation-container.thetwo2 .col_copy",
-												1,
-												{ opacity: 1, y: 0 },
-												{ opacity: 0, y: -200, ease: Linear.easeNone }
-											) // in from left
-											.fromTo(
-												"#theAnimation2 .thecircle",
-												1,
-												{ y: -675, x: 75 },
-												{ y: 750, x: 750, ease: Linear.easeNone },
-												"-=0.5"
-											) // in from left
-											.fromTo(
-												"#theAnimation2 .c-animation-container.thethree2 .col_copy",
-												1,
-												{ autoAlpha: 0, opacity: 0, y: 200 },
-												{
-													autoAlpha: 1,
-													opacity: 1,
-													y: 0,
-													ease: Linear.easeNone,
-												}
-											)
-											.fromTo(
-												"#theAnimation2 .c-animation-container.thetwo2 .c-image",
-												1,
-												{ opacity: 1 },
-												{
-													opacity: 0,
-													ease: Linear.easeNone,
-													onComplete: () => {
-														videoPlayer(6);
-													},
-												}
-											)
-											.fromTo(
-												"#theAnimation2 .c-animation-container.thethree2 .c-image",
-												1,
-												{ autoAlpha: 0, opacity: 0 },
-												{ autoAlpha: 1, opacity: 1, ease: Linear.easeNone }
-											)
-											.fromTo("#but2", { checked: true }, { checked: false })
-											.fromTo("#but3", { checked: false }, { checked: true })
-											.addLabel("fifth");
+						// Animations part
+						// init
+						// var controller = new ScrollMagic.Controller();
+						gsap.registerPlugin(ScrollTrigger);
+						// let tlOne = gsap.timeline({
+						// 	scrollTrigger:{
+						// 		// markers:true,
+						// 		trigger:'#theAnimation',
+						// 		scrub:1,
+						// 		pin:true,
+						// 		snap:{
+						// 			snapTo:'labels',
+						// 			duration: {min: 0.2, max: 0.5},
+						// 			delay:1
+						// 		}
+						// 	}
+						// });
+						// $('#theAnimation .c-animation-container.d-none').removeClass('d-none');
+						// tlOne
+						// .addLabel('first')
+						// 	.add(()=>{
+						// 		$('#theAnimation .c-animation-container.theone').css('zIndex','999');
+						// 		$('#theAnimation .c-animation-container.thetwo').css('zIndex','1');
+						// 		$('#theAnimation .c-animation-container.thethree').css('zIndex','1');
+						// 	}
+						// 		,'first')
+						// 	.fromTo("#theAnimation .c-animation-container.theone .col_copy", 1, {opacity: 1, y:0}, {opacity: 0,y:-200, ease: Linear.easeNone,onStart:function(){videoPlayer('1-1')}})  // in from left
+						// 	.fromTo("#theAnimation .c-animation-container.thetwo .col_copy", 1, {autoAlpha: 0,opacity: 0, y:200}, {autoAlpha: 1,opacity: 1,y:0, ease: Linear.easeNone})  // in from left
+						// 	.fromTo("#theAnimation .c-animation-container.theone .c-image", 1, {opacity: 1}, {opacity: 0, ease: Linear.easeNone,onComplete:function(){videoPlayer(2)}})  // in from left
+						// 	.fromTo("#theAnimation .c-animation-container.thetwo .c-image", 1, {autoAlpha: 0,opacity: 0}, {autoAlpha: 1,opacity: 1, ease: Linear.easeNone})
+						// .addLabel('second')
+						// 	.add(()=>{
+						// 		$('#theAnimation .c-animation-container.theone').css('zIndex','1');
+						// 		$('#theAnimation .c-animation-container.thetwo').css('zIndex','999');
+						// 		$('#theAnimation .c-animation-container.thethree').css('zIndex','1');
+						// 	}
+						// 		,'second')
+						// 	.fromTo("#theAnimation .c-animation-container.thetwo .col_copy", 1, {opacity: 1, y:0}, {opacity: 0,y:-200, ease: Linear.easeNone})  // in from left
+						// 	.fromTo("#theAnimation .c-animation-container.thethree .col_copy", 1, {autoAlpha: 0,opacity: 0, y:200}, {autoAlpha: 1,opacity: 1,y:0, ease: Linear.easeNone})
+						// 	.fromTo("#theAnimation .c-animation-container.thetwo .c-image", 1, {opacity: 1}, {opacity: 0, ease: Linear.easeNone,onComplete:function(){videoPlayer(3)}})
+						// 	.fromTo("#theAnimation .c-animation-container.thethree .c-image", 1, {autoAlpha: 0,opacity: 0}, {autoAlpha: 1,opacity: 1, ease: Linear.easeNone})
+						// .addLabel('third')
+						// .add(()=>{
+						// 		$('#theAnimation .c-animation-container.theone').css('zIndex','1');
+						// 		$('#theAnimation .c-animation-container.thetwo').css('zIndex','1');
+						// 		$('#theAnimation .c-animation-container.thethree').css('zIndex','999');
+						// 	}
+						// 		,'third') ;
+						let secondAnomationLength = gsap.utils.toArray(
+							"#theAnimation2 .c-animation-container"
+						);
+						// console.log(secondAnomationLength.length)
+						ScrollTrigger.matchMedia({
+							"(min-width: 768px)": function () {
+								let tlTwo = gsap.timeline({
+									scrollTrigger: {
+										// markers:true,
+										trigger: "#theAnimation2",
+										scrub: 1,
+										end: "=+3000",
+										pin: true,
+										snap: {
+											snapTo: "labels",
+											duration: { min: 0.2, max: 0.5 },
+											delay: 1,
+										},
 									},
 								});
+								$("#theAnimation2 .c-animation-container.d-none").removeClass(
+									"d-none"
+								);
+								tlTwo
+									.addLabel("third")
+									.fromTo("#but1", { checked: false }, { checked: true })
+									.fromTo(
+										"#theAnimation2 .c-animation-container.theone2 .col_copy",
+										1,
+										{ opacity: 1, y: 0 },
+										{
+											opacity: 0,
+											y: -200,
+											ease: Linear.easeNone,
+											onStart: () => {
+												videoPlayer(4);
+											},
+										}
+									) // in from left
+									.fromTo(
+										"#theAnimation2 .thecircle",
+										1,
+										{ y: 0, x: 0 },
+										{ y: -675, x: 75, ease: Linear.easeNone },
+										"-=0.5"
+									) // in from left
+									.fromTo(
+										"#theAnimation2 .c-animation-container.thetwo2 .col_copy",
+										1,
+										{ autoAlpha: 0, opacity: 0, y: 200 },
+										{
+											autoAlpha: 1,
+											opacity: 1,
+											y: 0,
+											ease: Linear.easeNone,
+										}
+									) // in from left
+									.fromTo(
+										"#theAnimation2 .c-animation-container.theone2 .c-image",
+										1,
+										{ opacity: 1 },
+										{
+											opacity: 0,
+											ease: Linear.easeNone,
+											onComplete: () => {
+												videoPlayer(5);
+											},
+										}
+									) // in from left
+									.fromTo(
+										"#theAnimation2 .c-animation-container.thetwo2 .c-image",
+										1,
+										{ autoAlpha: 0, opacity: 0 },
+										{ autoAlpha: 1, opacity: 1, ease: Linear.easeNone }
+									)
+									.fromTo("#but1", { checked: true }, { checked: false })
+									.fromTo("#but2", { checked: false }, { checked: true })
+									.addLabel("fourth")
+									.fromTo(
+										"#theAnimation2 .c-animation-container.thetwo2 .col_copy",
+										1,
+										{ opacity: 1, y: 0 },
+										{ opacity: 0, y: -200, ease: Linear.easeNone }
+									) // in from left
+									.fromTo(
+										"#theAnimation2 .thecircle",
+										1,
+										{ y: -675, x: 75 },
+										{ y: 750, x: 750, ease: Linear.easeNone },
+										"-=0.5"
+									) // in from left
+									.fromTo(
+										"#theAnimation2 .c-animation-container.thethree2 .col_copy",
+										1,
+										{ autoAlpha: 0, opacity: 0, y: 200 },
+										{
+											autoAlpha: 1,
+											opacity: 1,
+											y: 0,
+											ease: Linear.easeNone,
+										}
+									)
+									.fromTo(
+										"#theAnimation2 .c-animation-container.thetwo2 .c-image",
+										1,
+										{ opacity: 1 },
+										{
+											opacity: 0,
+											ease: Linear.easeNone,
+											onComplete: () => {
+												videoPlayer(6);
+											},
+										}
+									)
+									.fromTo(
+										"#theAnimation2 .c-animation-container.thethree2 .c-image",
+										1,
+										{ autoAlpha: 0, opacity: 0 },
+										{ autoAlpha: 1, opacity: 1, ease: Linear.easeNone }
+									)
+									.fromTo("#but2", { checked: true }, { checked: false })
+									.fromTo("#but3", { checked: false }, { checked: true })
+									.addLabel("fifth");
+							},
+						});
 
-								// create scene to pin and link animation
-								function videoPlayer(video) {
-									var videos = $("#vid-" + video);
+						// create scene to pin and link animation
+						function videoPlayer(video) {
+							var videos = $("#vid-" + video);
 
-									// var videoId = document.getElementById(video)
-									// console.log(video)
-									// videoId.play()
-									videos.trigger("play");
-								}
-								// new ScrollMagic.Scene({
-								// 	triggerElement: "#theAnimation2",
-								// 	triggerHook: "onLeave",
-								// 	duration: "300%"
-								// })
-								// .setPin("#theAnimation2")
-								// .setTween(wipeAnimation2)
-								// // .addIndicators({name:'1 - test'}) // add indicators (requires plugin)
-								// .addTo(controller);
-								function getPos(newpos) {
-									var position = $(".flagForAnimation").offset().top;
-									var divHeight = $("#theAnimation2").height() + 240;
-									if (newpos == "#uno") {
-										// $('#but1').attr('checked', '');
-										// $('#but2').removeAttr('checked');
-										// $('#but3').removeAttr('checked');
-										$("html, body").animate(
-											{
-												scrollTop: position,
-											},
-											1000
-										);
-									} else if (newpos == "#dos") {
-										// console.log(newpos)
-										// $('#but1').removeAttr('checked');
-										// $('#but2').attr('checked', '');
-										// $('#but3').removeAttr('checked');
-										$("html, body").animate(
-											{
-												scrollTop: position + divHeight * 1.5,
-											},
-											1000
-										);
-									} else if (newpos == "#tres") {
-										// $('#but1').removeAttr('checked');
-										// $('#but2').removeAttr('checked');
-										// $('#but3').attr('checked', '');
-										$("html, body").animate(
-											{
-												scrollTop: position + 3 * divHeight,
-											},
-											1000
-										);
-									}
-								}
-								$(document).on("click", "a[href^='#']", function (e) {
-									var id = $(this).attr("href");
-									if (id.length > 0) {
-										e.preventDefault();
-										getPos(id);
-									}
-								});
-							});
+							// var videoId = document.getElementById(video)
+							// console.log(video)
+							// videoId.play()
+							videos.trigger("play");
 						}
-					);
+						// new ScrollMagic.Scene({
+						// 	triggerElement: "#theAnimation2",
+						// 	triggerHook: "onLeave",
+						// 	duration: "300%"
+						// })
+						// .setPin("#theAnimation2")
+						// .setTween(wipeAnimation2)
+						// // .addIndicators({name:'1 - test'}) // add indicators (requires plugin)
+						// .addTo(controller);
+						function getPos(newpos) {
+							var position = $(".flagForAnimation").offset().top;
+							var divHeight = $("#theAnimation2").height() + 240;
+							if (newpos == "#uno") {
+								// $('#but1').attr('checked', '');
+								// $('#but2').removeAttr('checked');
+								// $('#but3').removeAttr('checked');
+								$("html, body").animate(
+									{
+										scrollTop: position,
+									},
+									1000
+								);
+							} else if (newpos == "#dos") {
+								// console.log(newpos)
+								// $('#but1').removeAttr('checked');
+								// $('#but2').attr('checked', '');
+								// $('#but3').removeAttr('checked');
+								$("html, body").animate(
+									{
+										scrollTop: position + divHeight * 1.5,
+									},
+									1000
+								);
+							} else if (newpos == "#tres") {
+								// $('#but1').removeAttr('checked');
+								// $('#but2').removeAttr('checked');
+								// $('#but3').attr('checked', '');
+								$("html, body").animate(
+									{
+										scrollTop: position + 3 * divHeight,
+									},
+									1000
+								);
+							}
+						}
+						$(document).on("click", "a[href^='#']", function (e) {
+							var id = $(this).attr("href");
+							if (id.length > 0) {
+								e.preventDefault();
+								getPos(id);
+							}
+						});
+					});
 				}}
 			/>
 

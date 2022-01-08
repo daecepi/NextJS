@@ -1,4 +1,5 @@
 import Script from "next/script";
+import Link from "next/link";
 import { useRecoilValue } from "recoil";
 import { SyncedAtom } from "../../atoms/SyncAtom";
 
@@ -171,12 +172,6 @@ const RequesiteForm = ({ entry }) => {
 																				var submittedVals = form.vals();
 																				if (submittedVals !== "") {
 																					// Use the entry id so its unique to that entry not just the form
-																					Cookies.set(
-																						`form_gate_${entry.id}`,
-																						true,
-																						{ domain: sndleveldomain },
-																						14
-																					);
 																					const reloadEntries = [
 																						"eBook",
 																						"newEBook",
