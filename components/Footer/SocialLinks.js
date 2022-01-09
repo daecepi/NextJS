@@ -26,9 +26,9 @@ const SocialLinks = () => {
 						<g
 							id="design"
 							stroke="none"
-							stroke-width="1"
+							strokeWidth="1"
 							fill="none"
-							fill-rule="evenodd"
+							fillRule="evenodd"
 						>
 							<g
 								id="190813_footer-desktop"
@@ -58,9 +58,9 @@ const SocialLinks = () => {
 						<g
 							id="design"
 							stroke="none"
-							stroke-width="1"
+							strokeWidth="1"
 							fill="none"
-							fill-rule="evenodd"
+							fillRule="evenodd"
 						>
 							<g
 								id="190813_footer-desktop"
@@ -92,9 +92,9 @@ const SocialLinks = () => {
 						<g
 							id="design"
 							stroke="none"
-							stroke-width="1"
+							strokeWidth="1"
 							fill="none"
-							fill-rule="evenodd"
+							fillRule="evenodd"
 						>
 							<g
 								id="190813_footer-desktop"
@@ -126,9 +126,9 @@ const SocialLinks = () => {
 						<g
 							id="design"
 							stroke="none"
-							stroke-width="1"
+							strokeWidth="1"
 							fill="none"
-							fill-rule="evenodd"
+							fillRule="evenodd"
 						>
 							<g
 								id="190813_footer-desktop"
@@ -160,15 +160,15 @@ const SocialLinks = () => {
 						<g
 							id="design"
 							stroke="none"
-							stroke-width="1"
+							strokeWidth="1"
 							fill="none"
-							fill-rule="evenodd"
+							fillRule="evenodd"
 						>
 							<g
 								id="190813_footer-desktop"
 								transform="translate(-915.000000, -710.000000)"
 								fill="#FFFFFF"
-								fill-rule="nonzero"
+								fillRule="nonzero"
 							>
 								<path
 									d="M933.625623,710.442849 C934.525352,710.686512 935.233844,711.404593 935.474484,712.316105 C935.883167,713.861937 935.909534,716.978883 935.911235,717.374635 L935.911235,717.457923 C935.909534,717.853675 935.883167,720.970621 935.474484,722.516454 C935.233844,723.427965 934.525352,724.146047 933.625623,724.389709 C932.146552,724.791363 926.629722,724.828726 925.616134,724.832202 L925.29505,724.832202 C924.281489,724.828726 918.7648,724.791363 917.28573,724.389709 C916.386,724.146047 915.677508,723.427965 915.437041,722.516454 C915.056392,721.07723 915.007276,718.276126 915.000939,717.577223 L915.000939,717.255335 C915.007276,716.556432 915.056392,713.755328 915.437041,712.316105 C915.677508,711.404593 916.386,710.686512 917.28573,710.442849 C918.726876,710.051494 924.001236,710.005988 925.208346,710.000696 L925.702841,710.000696 C926.909982,710.005988 932.184477,710.051494 933.625623,710.442849 Z M923.262295,714.360465 L923.262295,720.717326 L928.695098,717.538895 L923.262295,714.360465 Z"

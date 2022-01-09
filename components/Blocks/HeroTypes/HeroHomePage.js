@@ -125,7 +125,7 @@ const HeroHomePage = (props) => {
 										data-cy="video-element"
 										className="video-as-gif h-remove-shadow onViewport"
 										style={{ maxWidth: "100%" }}
-										muted="muted"
+										muted
 										playsInline=""
 									>
 										<source

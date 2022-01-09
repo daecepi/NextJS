@@ -67,8 +67,14 @@ const TwoUp = ({
 									<source src={videoMp4} type="video/mp4" />
 									<p>Su navegador no soporta video HTML5</p>
 								</video>
-								<Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></Script>
-								<Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></Script>
+								<Script
+									strategy="beforeInteractive"
+									src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+								></Script>
+								<Script
+									strategy="beforeInteractive"
+									src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"
+								></Script>
 
 								<Script
 									id="video-player"

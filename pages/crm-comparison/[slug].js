@@ -120,7 +120,7 @@ const TYPES = {
 									>
 										{clickthrough && (
 											<Link href={clickthrough.href}>
-												<a class="c-card__clickthrough" target="_blank"></a>
+												<a className="c-card__clickthrough" target="_blank"></a>
 											</Link>
 										)}
 										<div

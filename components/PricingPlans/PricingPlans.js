@@ -93,15 +93,15 @@ const PricingPlans = ({
 				<p>{subHeader ? subHeader : ""}</p>
 			</div>
 			<div className="c-pricing-hero__toggle">
-				<div class="c-pricing-hero__checkbox">
+				<div className="c-pricing-hero__checkbox">
 					<span style={{ marginRight: "5px" }}>Pay monthly </span>
-					<label class="switch">
+					<label className="switch">
 						<input
 							onClick={handlePaymentType}
 							type="checkbox"
 							checked={payAnnually}
 						/>
-						<span id="toggle-control" class="toggle-slider round"></span>
+						<span id="toggle-control" className="toggle-slider round"></span>
 					</label>
 					<span style={{ marginLeft: "5px" }}>Pay annually</span>
 				</div>
@@ -136,25 +136,25 @@ const PricingPlans = ({
 											</p>
 
 											{payAnnually ? (
-												<div class="c-pricing-hero__annual desc js-pricingannual">
+												<div className="c-pricing-hero__annual desc js-pricingannual">
 													<span
-														class="pricing__number-row"
+														className="pricing__number-row"
 														style={{ color: "#FF3465" }}
 													>
-														<span class="previous-price">
+														<span className="previous-price">
 															{plan.billedMonthly}
 														</span>{" "}
 														{plan.billedAnnually}
 														{/* For promo code if Business is the featured plan */}
 														{plan.featured && plan.planType === "Business" && (
-															<span class="promo-code-container">
-																<div class="code">Use code BIZ23X23</div>
+															<span className="promo-code-container">
+																<div className="code">Use code BIZ23X23</div>
 															</span>
 														)}
 													</span>
-													<div class="sub-description extra-bottom-margin--xx-small">
+													<div className="sub-description extra-bottom-margin--xx-small">
 														<p
-															class="c-pricing-hero__sub extra-top-margin--xx-small"
+															className="c-pricing-hero__sub extra-top-margin--xx-small"
 															style={{ minHeight: "36px" }}
 														>
 															Per user, per month paid annually.
@@ -165,17 +165,17 @@ const PricingPlans = ({
 															</span>{" "}
 															${(amountAnnually * 12).toLocaleString()}/year
 														</p>
-														<span class="special"></span>
+														<span className="special"></span>
 													</div>
 												</div>
 											) : (
-												<div class="c-pricing-hero__monthly desc js-pricingmonthly">
-													<span class="pricing__number-row">
+												<div className="c-pricing-hero__monthly desc js-pricingmonthly">
+													<span className="pricing__number-row">
 														{plan.billedMonthly}
 													</span>
-													<div class="sub-description extra-bottom-margin--xx-small">
+													<div className="sub-description extra-bottom-margin--xx-small">
 														<p
-															class="c-pricing-hero__sub extra-top-margin--xx-small"
+															className="c-pricing-hero__sub extra-top-margin--xx-small"
 															style={{ minHeight: "36px", padding: "0px 41px" }}
 														>
 															Per user, per month paid monthly with{" "}

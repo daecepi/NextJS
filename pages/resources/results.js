@@ -17,14 +17,14 @@ const ResourcesResultsPage = ({ entry, globals, query, page, subCategory }) => {
 
 	return (
 		<DefaultPageBase entry={entry} globals={globals}>
-			<div class="c-blog-content__main container">
+			<div className="c-blog-content__main container">
 				{data.length ? (
 					<>
-						<div class="row">
-							<div class="col-md-12">
+						<div className="row">
+							<div className="col-md-12">
 								<h2>
 									Search results for{" "}
-									<span class="t-resource-quotes--hot-pink">{query}</span>
+									<span className="t-resource-quotes--hot-pink">{query}</span>
 								</h2>
 							</div>
 						</div>
@@ -32,12 +32,12 @@ const ResourcesResultsPage = ({ entry, globals, query, page, subCategory }) => {
 						{/* TODO implement VUeJS code for displaying the results */}
 					</>
 				) : (
-					<div class="row">
-						<div class="col-md-12">
-							<h2 class="t-resource-period--hot-pink">We're sorry</h2>
+					<div className="row">
+						<div className="col-md-12">
+							<h2 className="t-resource-period--hot-pink">We're sorry</h2>
 							<p>
 								We couldn't find any matching results for{" "}
-								<span class="t-resource-quotes--hot-pink">{query}</span>
+								<span className="t-resource-quotes--hot-pink">{query}</span>
 							</p>
 						</div>
 					</div>

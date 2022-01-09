@@ -18,7 +18,7 @@ const ProductTwoUp = ({
 					<div className={containerStyle}>
 						{showHiddenH2 && (
 							<h2
-								class="extra-bottom-margin--x-small"
+								className="extra-bottom-margin--x-small"
 								style={{ textAlign: "center" }}
 							></h2>
 						)}
@@ -29,7 +29,7 @@ const ProductTwoUp = ({
 				<>
 					{showHiddenH2 && (
 						<h2
-							class="extra-bottom-margin--x-small"
+							className="extra-bottom-margin--x-small"
 							style={{ textAlign: "center" }}
 						></h2>
 					)}

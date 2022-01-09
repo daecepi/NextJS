@@ -674,12 +674,13 @@ export default function Home({ entry, globals }) {
 					</div>
 				</div>
 			</section>
+
 			<Script
-				src="/js/Lazyload.min.js"
+				src="/js/lazyload.min.js"
+				strategy="LazyOnLoad"
 				onLoad={() => {
 					LazyLoad.js(
 						[
-							"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js",
 							"https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js",
 							"https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js",
 							"https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js",
@@ -972,7 +973,6 @@ export default function Home({ entry, globals }) {
 					});
 				}}
 			/>
-
 			<section className="c-single-column bottom-padding-mobile home-proof">
 				<div className="container">
 					<div className="col-md-8 offset-md-2 c-single-column__container c-align--center no-padding-top">
@@ -1224,7 +1224,7 @@ export default function Home({ entry, globals }) {
 											name="sel_button"
 											readOnly
 										/>
-										<label for="but1">
+										<label htmlFor="but1">
 											<strong>It's quick to launch</strong>
 										</label>
 									</div>
@@ -1239,7 +1239,7 @@ export default function Home({ entry, globals }) {
 											id="but2"
 											name="sel_button"
 										/>
-										<label for="but2">
+										<label htmlFor="but2">
 											<strong>There's no busy work</strong>
 										</label>
 									</div>
@@ -1254,7 +1254,7 @@ export default function Home({ entry, globals }) {
 											id="but3"
 											name="sel_button"
 										/>
-										<label for="but3">
+										<label htmlFor="but3">
 											<strong>It's made for closing</strong>
 										</label>
 									</div>
@@ -1308,7 +1308,7 @@ export default function Home({ entry, globals }) {
 											readOnly
 											name="independent1"
 										/>
-										<label for="bu1">It's quick to launch</label>
+										<label htmlFor="bu1">It's quick to launch</label>
 									</div>
 								</div>
 								<h4>Make Your Mark… Fast!</h4>
@@ -1373,7 +1373,7 @@ export default function Home({ entry, globals }) {
 											readOnly
 											name="independent2"
 										/>
-										<label for="bu2">There's no busy work</label>
+										<label htmlFor="bu2">There's no busy work</label>
 									</div>
 								</div>
 								<h4>Thousands of tasks off your plate.</h4>
@@ -1438,7 +1438,7 @@ export default function Home({ entry, globals }) {
 											readOnly
 											name="independent3"
 										/>
-										<label for="bu3">It's made for closing</label>
+										<label htmlFor="bu3">It's made for closing</label>
 									</div>
 								</div>
 								<h4>The best CRM system for relationship builders</h4>
@@ -1533,8 +1533,8 @@ export default function Home({ entry, globals }) {
 										data-cy="video-element"
 										className="video-as-gif onViewport"
 										style={{ maxWidth: "100%" }}
-										muted=""
-										playsinline=""
+										muted
+										playsInline
 										poster="https://copper.objects.frb.io/imgs/homepage/thumbnails/productivity/productivity-thumb-1.webp"
 									>
 										{" "}

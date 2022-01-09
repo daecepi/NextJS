@@ -1150,35 +1150,6 @@ const NavigationDefault = ({ buttons }) => {
 					});
 
 					// Mobile Nav Toggle
-					$("#nav-icon2").click(function () {
-						console.log("YO MERO");
-						$(this).toggleClass("open");
-						$("body").toggleClass("body--stop-scrolling");
-						$(".c-nav--mobile__overlay").toggleClass("open");
-						$("#nav-icon2 span").removeClass("white");
-						$(".c-nav--mobile").removeClass("z-index");
-						$(".c-nav__dropdown").removeClass("active");
-						$(".js-dropdown-nav").removeClass("active");
-					});
-
-					$(".close-mobile-nav").click(function () {
-						console.log("YO MERO2");
-						$("#nav-icon2").removeClass("open");
-						$("body").toggleClass("body--stop-scrolling");
-						$(".c-nav--mobile__overlay").toggleClass("open");
-						$("#nav-icon2 span").removeClass("white");
-						$(".c-nav--mobile").removeClass("z-index");
-						$(".c-nav__dropdown").removeClass("active");
-						$(".js-dropdown-nav").removeClass("active");
-					});
-
-					$(".js-sub-back").click(function () {
-						$(".c-nav__dropdown").removeClass("active");
-						$("#nav-icon2 span").removeClass("white");
-						$(".js-dropdown-nav").removeClass("active");
-						$(".c-nav--mobile").removeClass("z-index");
-					});
-
 					// Mobile Footer control
 					$("span.footer__title").click(function () {
 						$(this).parent().parent(".footer__links").toggleClass("open");

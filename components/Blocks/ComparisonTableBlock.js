@@ -17,7 +17,7 @@ const ComparisonTableBlock = ({ slug, block }) => {
 						<div className="c-pricing-table__row--cornflower">
 							<div className="container c-pricing-table--cornflower__navigation--container">
 								<div className="c-pricing-table__info--cornflower md"></div>
-								<div class="c-pricing-table__logo__container">
+								<div className="c-pricing-table__logo__container">
 									{headerLogoOne && (
 										<ImageSimple
 											image={block.headerLogoOne}
@@ -32,7 +32,7 @@ const ComparisonTableBlock = ({ slug, block }) => {
 										/>
 									)}
 								</div>
-								<div class="c-pricing-table__logo__container">
+								<div className="c-pricing-table__logo__container">
 									{headerLogoTwo && (
 										<ImageSimple
 											image={block.headerLogoTwo}

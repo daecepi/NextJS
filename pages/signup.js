@@ -42,7 +42,7 @@ const SignupPage = ({ entry, globals }) => {
                 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
               */}
 						<svg
-							class="company-logo"
+							className="company-logo"
 							version="1.1"
 							id="Layer_1"
 							xmlns="http://www.w3.org/2000/svg"

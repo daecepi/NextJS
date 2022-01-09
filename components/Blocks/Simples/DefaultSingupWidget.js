@@ -36,7 +36,7 @@ const DefaultSignupWidget = ({ entryType, title, subTitle }) => {
 					</div>
 					<div className="field">
 						<div className="form_text_field_container">
-							<label for="user[full_name]">Full Name</label>
+							<label htmlFor="user[full_name]">Full Name</label>
 							<input
 								className="text_field"
 								size="30"
@@ -52,7 +52,7 @@ const DefaultSignupWidget = ({ entryType, title, subTitle }) => {
 					</div>
 					<div className="field">
 						<div className="form_text_field_container">
-							<label for="user[email]">Work Email</label>
+							<label htmlFor="user[email]">Work Email</label>
 							<input
 								size="30"
 								className="text_field"
